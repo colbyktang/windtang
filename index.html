@@ -1,66 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>WeGo</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/homePageStyle.css">
-</head>
-<body>
-
-  <nav class="navbar sticky-top navbar-dark bg-dark shadow fixed-top">
-    <a class="navbar-brand" href="index.html">WeGo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="loginPage.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="registerPage.html">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutUsPage.html">The Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="faqPage.html">F.A.Q</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactUsPage.html">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div id="frontBox" class="col-12 text-center">
-          <h1 class="display-1 text-white">WeGo</h1>
-          <p class="lead text-white">Transportation Service For A Better Future</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <link rel="stylesheet" type="text/css" href="stedwards.css"
+    </head>
+    <body>
+        <div class="mainbody" id="my-form">
+            <button onclick="goToPage('index.html')">Landing Page</button>
+            <h3>Login</h3>
+            <form name="myForm">
+                Username: <input type="text" name="fname">
+                <br><br>
+                Password: <input type="password" name="fpass">
+                <br><br>
+                <button name="submit" type="button" onclick="validateForm()">Submit</button>
+            </form>
+            <br><br>
         </div>
-      </div>
-    </div>
-  </header>
+        <div id="Request Content">
+          <script src = "loginPageRequest.js"></script>
 
-  <!-- Page Content -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="font-weight-light">Safe, Fast, Seamless...</h2>
-      <p>We are dedicated to serving you with the best quality of Autonomous Delivery/Tranportation. With our top of the line autonomous vehicle service, you will never have to worry about efficent and time effective matters.</p>
-    </div>
-  </section>
-
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>WeGo™ 2020 - Created By Hudson Smoot</p>
-</div>
-
-</body>
+        </div>
+    </body>
 </html>
+
+<script>	
+    function validateForm() {
+        var name = document.forms["myForm"]["fname"].value;
+
+        if (name == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+
+        var pass = document.forms["myForm"]["fpass"].value
+		
+		/*
+        if (pass == "") {
+            alert("Password must be filled out");
+            return false;
+        }
+		*/
+		
+		var jsonObject = {"username:":fname, "password":fpass}
+		toPython(jsonObject);
+		return false;
+    }
+
+    function goToPage(urlToPage) {
+        window.location.href=urlToPage
+    }
+</script>
