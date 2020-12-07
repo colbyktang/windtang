@@ -23,15 +23,15 @@
   }
   
   h1 {
-    font-size: 3vw;
+    font-size: 3em;
     word-break: break-word;
     text-align: center;
   }
 
   h2 {
     font-style: italic;
-    font-size: 2vw;
-    word-break: break-all;
+    font-size: 2em;
+    word-break: break-word;
     text-align: center;
   }
   
