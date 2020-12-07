@@ -3,7 +3,7 @@
   }
   
   body {
-    background-color: #f1f1f1;
+    background-color: #150b2c;
     padding: 20px;
     font-family: Arial;
   }
@@ -12,6 +12,14 @@
   .main {
     max-width: 1000px;
     margin: auto;
+  }
+
+  /* Center website */
+  .header {
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(211, 239, 252);
+    padding: 10px;
   }
   
   h1 {
@@ -35,6 +43,17 @@
     width: 33.33%;
     display: none; /* Hide columns by default */
   }
+
+  .image {
+    /*float: left;*/
+    width: 100%;
+    margin: auto;
+  }
+
+  .center {
+    margin: auto;
+    width: 40%;
+  }
   
   /* Clear floats after rows */
   .row:after {
@@ -45,8 +64,11 @@
   
   /* Content */
   .content {
-    background-color: rgb(211, 239, 252);
-    padding: 10px;
+    color: rgb(255,255,255);
+    background-color: rgb(21, 61, 80);
+    padding: 40px;
+    line-height: 1.6;
+    text-align: justify;
   }
   
   /* The "show" class is added to the filtered elements */
