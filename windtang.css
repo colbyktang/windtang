@@ -4,6 +4,11 @@
   
   body {
     background-color: #150b2c;
+    background-image: url("images/background.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     padding: 20px;
     font-family: Arial;
   }
@@ -33,6 +38,11 @@
     font-size: 2em;
     word-break: break-word;
     text-align: center;
+  }
+
+  h3 {
+    font-family: Verdana;
+    text-transform: uppercase;
   }
   
   .row {
@@ -122,4 +132,15 @@
   
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  .textbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    background-color: rgb(34, 74, 160);
+    box-shadow: 10px 10px 6px rgb(16, 1, 56);
   }
