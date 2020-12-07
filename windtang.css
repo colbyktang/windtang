@@ -3,7 +3,7 @@
   }
   
   body {
-    background-color: #150b2c;
+    background-color: rgba(21, 11, 44);
     background-image: url("images/background.png");
     background-repeat: repeat;
     background-attachment: fixed;
@@ -23,12 +23,12 @@
   .header {
     max-width: 1000px;
     margin: auto;
-    background-color: rgb(211, 239, 252);
+    background-color: rgb(0, 255, 234);
     padding: 10px;
   }
   
   h1 {
-    font-size: 3em;
+    font-size: 2.75em;
     word-break: break-word;
     text-align: center;
   }
@@ -42,6 +42,8 @@
 
   h3 {
     font-family: Verdana;
+    font-style: bold;
+    font-size: 1em;
     text-transform: uppercase;
   }
   
@@ -83,7 +85,7 @@
   /* Content */
   .content {
     color: rgb(255,255,255);
-    background-color: rgb(46, 57, 105);
+    background-color: rgba(46, 57, 105, 0.95);
     padding: 80px;
     line-height: 1.6;
     text-align: justify;
@@ -141,6 +143,6 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 5px;
-    background-color: rgb(34, 74, 160);
+    background-color: rgb(56, 87, 153);
     box-shadow: 10px 10px 6px rgb(16, 1, 56);
   }
