@@ -33,8 +33,7 @@ import hashlib
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
-from demand_customer import Customer
-from supply_fleet_manager import FleetManager
+from customer import Customer
 
 class CS_Database_Utils:
     def __init__(self, server_type, uri="mongodb://team12:password@localhost:6012/admin"): 

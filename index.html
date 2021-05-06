@@ -42,28 +42,28 @@
 </html>
 
 <script>	
+    // Check if form inputs are valid.
     function validateForm() {
-        var name = document.forms["myForm"]["fname"].value;
 
-        if (name == "") {
-            alert("Name must be filled out");
-            return false;
-        }
+      var name = document.forms["loginForm"]["user"].value;
+      var pass = document.forms["loginForm"]["pass"].value;
 
-        var pass = document.forms["myForm"]["fpass"].value
-		
-		/*
-        if (pass == "") {
-            alert("Password must be filled out");
-            return false;
-        }
-		*/
-		
-		var jsonObject = {"username:":fname, "password":fpass};
-		return false;
+      //checks username and password for empty credentials
+      if (name == "" || pass == "") {
+          alert("Invalid Credentials: Please Fill Out All Inputs");
+          return false;
+      }
+
+        // Store username and password inside a dictionary
+        var login_dictionary = {"username": name, "password": pass};
+
+        // Send username and password to the backend to check against values in the DB
+        send_login(login_dictionary);
+        return false;
     }
 
     function goToPage(urlToPage) {
         window.location.href=urlToPage
     }
+    
 </script>
