@@ -1,5 +1,5 @@
 import json
-from demand_customer import Customer
+from customer import Customer
 
 # from cs_database_utils import CS_Database_Utils
 # from demand_customer import Customer
