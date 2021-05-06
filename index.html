@@ -8,36 +8,40 @@
         <link rel="stylesheet" type="text/css" href="windtang.css"
     </head>
     <body>
-        <div class="mainbody" id="my-form">
-            <button onclick="goToPage('index.html')">Landing Page</button>
-		<h3>Welcome to Windtang!</h3>
-		<h2>This website is being hosted locally by Colby Tang.</h2>
-		<p>Note: the login system does not work yet. Working on implementing this with MongoDB.</p>
-            <h3>Login</h3>
-            <form name="myForm">
-                Username: <input type="text" name="fname">
-                <br><br>
-                Password: <input type="password" name="fpass">
-                <br><br>
-                <button name="submit" type="button" onclick="validateForm()">Submit</button>
-            </form>
-            <br><br>
-        </div>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="tang_portfolio.html">Personal Portfolio</a>
-        <div id="like_button_container"></div>
-        <div id="Request Content">
-          <script src = "js/login_request.js"></script>
-        </div>
+        <div class="main">
+            <div class="content">
+                <div class="mainbody" id="my-form">
+                    <button onclick="goToPage('index.html')">Landing Page</button>
+                <h3>Welcome to Windtang!</h3>
+                <h2>This website is being hosted locally by Colby Tang.</h2>
+                <p>Note: the login system does not work yet. Working on implementing this with MongoDB.</p>
+                    <h3>Login</h3>
+                    <form name="myForm">
+                        Username: <input type="text" name="fname">
+                        <br><br>
+                        Password: <input type="password" name="fpass">
+                        <br><br>
+                        <button name="submit" type="button" onclick="validateForm()">Submit</button>
+                    </form>
+                    <br><br>
+                </div>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="tang_portfolio.html">Personal Portfolio</a>
+                <div id="like_button_container"></div>
+                <div id="Request Content">
+                <script src = "js/login_request.js"></script>
+                </div>
 
-        <!-- Load React. -->
-        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+                <!-- Load React. -->
+                <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+                <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+                <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
-        <!-- Load our React component. -->
-        <script src="like_button.js"></script>
-        </body>
+                <!-- Load our React component. -->
+                <script src="like_button.js"></script>
+            </div>
+        </div>
+    </body>
 </html>
 
 <script>	
