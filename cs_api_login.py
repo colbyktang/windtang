@@ -5,6 +5,7 @@ import os
 from cs_database_utils import CS_Database_Utils
 
 def cs_login(self, dictionary, db_utils):
+    print("cs_login")
     # Grab the username and password from the dictionary and check them
     username = dictionary["username"]
     password = dictionary["password"]
