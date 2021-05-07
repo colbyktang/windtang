@@ -36,7 +36,7 @@ from bson.objectid import ObjectId
 from customer import Customer
 
 class CS_Database_Utils:
-    def __init__(self, uri="mongodb://team12:password@localhost:6012/admin"): 
+    def __init__(self, uri="mongodb://localhost:25522"): 
         # Making a connection to a database with MongoClient from pymongo
         self.uri = uri
         self.client = MongoClient(uri)   
