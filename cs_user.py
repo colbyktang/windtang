@@ -37,11 +37,7 @@ class User:
     @password.setter
     def password(self, password):
         special_character_password = '[@_!#$%^&*()<>?/\|}{~:]'
-        
-        if (len(password) < 6):
-            raise ValueError("Password has less than 6 characters!") 
-        else:
-            self._password = password
+        self._password = password
    
     # getter method for first name
     @property

@@ -105,7 +105,7 @@ class CS_Database_Utils:
             dictionary = user.dictionary
             
             # update the dictionary with a hashed password along with a timestamp
-            dictionary.update( {"password": self.hash(user.password)})
+            #dictionary.update( {"password": self.hash(user.password)})
             dictionary.update( {"timestamp": self.get_timestamp()})
             
             # insert the user dictionary into the db
