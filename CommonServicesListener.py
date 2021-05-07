@@ -33,7 +33,6 @@ class CommonServicesListener(BaseHTTPRequestHandler):
         print ("POST PATH: ", path)
         
         db_utils = self.create_db_object()
-        db_utils.set_collection_users()
         
         # Handling a registration request from POST
         if path == "/api/cs/register":

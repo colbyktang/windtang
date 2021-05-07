@@ -41,6 +41,8 @@ class CS_Database_Utils:
         self.uri = uri
         self.client = MongoClient(uri)   
         self.time_format = "%Y-%m-%d %H:%M:%S"
+        self.db = self.client.users
+        self.set_collection_users()
 
     # Retrieving a collection called fm in the database
     def get_fm_collection(self):
