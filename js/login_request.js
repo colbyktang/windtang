@@ -28,7 +28,7 @@ function send_login(login_dictionary){
       names_dictionary = JSON.parse(request.response);
       document.cookie = "demand_firstname = " + names_dictionary["first_name"];
       document.cookie = "demand_lastname = " + names_dictionary["last_name"];
-      load_page("tang_portfolio.htmtl");
+      load_page("user_page.html");
     }
 
     // Bad Response, error handling
