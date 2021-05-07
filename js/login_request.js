@@ -1,4 +1,3 @@
-<script src = "js/utils.js"></script>
 console.log("Running login_request.js!");
 
 // Sends a JSON Object to the back-end using a dictionary
