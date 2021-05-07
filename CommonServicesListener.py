@@ -121,11 +121,8 @@ class CommonServicesListener(BaseHTTPRequestHandler):
         
     # Establish a database object
     def create_db_object(self):
-        return CS_Database_Utils(self.get_server_type())
-    
-    # Determine which server common services is on
-    def get_server_type(self):
-        return self.headers['host']
+        return CS_Database_Utils()
+
         
 # Execute the web server:
 def main():

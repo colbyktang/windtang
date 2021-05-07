@@ -36,21 +36,10 @@ from bson.objectid import ObjectId
 from customer import Customer
 
 class CS_Database_Utils:
-    def __init__(self, server_type, uri="mongodb://team12:password@localhost:6012/admin"): 
+    def __init__(self, uri="mongodb://team12:password@localhost:6012/admin"): 
         # Making a connection to a database with MongoClient from pymongo
         self.uri = uri
-        self.client = MongoClient(uri)
-        self.server_type = server_type
-        
-        if "demand" in server_type:
-            self.db = self.client.demanddb
-            self.set_collection_users()
-        elif "supply" in server_type:
-            self.db = self.client.supplydb
-            self.set_collection_fm()
-        else:
-            raise Exception("Neither demand or supply!")
-        
+        self.client = MongoClient(uri)   
         self.time_format = "%Y-%m-%d %H:%M:%S"
 
     # Retrieving a collection called fm in the database
