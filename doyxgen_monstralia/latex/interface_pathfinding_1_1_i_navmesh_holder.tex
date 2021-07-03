@@ -1,0 +1,83 @@
+\hypertarget{interface_pathfinding_1_1_i_navmesh_holder}{}\doxysection{Pathfinding.\+I\+Navmesh\+Holder Interface Reference}
+\label{interface_pathfinding_1_1_i_navmesh_holder}\index{Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}}
+
+
+Interface for something that holds a triangle based navmesh  
+
+
+
+
+Inheritance diagram for Pathfinding.\+I\+Navmesh\+Holder\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+I\+Navmesh\+Holder\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder_a2ebf594763f304b0374ffb2e30dbaaef}{Get\+Vertex}} (int i)
+\begin{DoxyCompactList}\small\item\em Position of vertex number i in the world \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder_a00819256724cf58a3521df96cbd62e83}{Get\+Vertex\+In\+Graph\+Space}} (int i)
+\begin{DoxyCompactList}\small\item\em Position of vertex number i in coordinates local to the graph. The up direction is always the +Y axis for these coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_navmesh_holder_a7a047b813a38aff6c698a930dd0f3486}\label{interface_pathfinding_1_1_i_navmesh_holder_a7a047b813a38aff6c698a930dd0f3486}} 
+int {\bfseries Get\+Vertex\+Array\+Index} (int index)
+\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder_ae3ba3fe5c39f02acf30f7db88acd4194}{Get\+Tile\+Coordinates}} (int tile\+Index, out int x, out int z)
+\begin{DoxyCompactList}\small\item\em Transforms coordinates from graph space to world space \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Interface for something that holds a triangle based navmesh 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_navmesh_holder_ae3ba3fe5c39f02acf30f7db88acd4194}\label{interface_pathfinding_1_1_i_navmesh_holder_ae3ba3fe5c39f02acf30f7db88acd4194}} 
+\index{Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}!GetTileCoordinates@{GetTileCoordinates}}
+\index{GetTileCoordinates@{GetTileCoordinates}!Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}}
+\doxysubsubsection{\texorpdfstring{GetTileCoordinates()}{GetTileCoordinates()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Navmesh\+Holder.\+Get\+Tile\+Coordinates (\begin{DoxyParamCaption}\item[{int}]{tile\+Index,  }\item[{out int}]{x,  }\item[{out int}]{z }\end{DoxyParamCaption})}
+
+
+
+Transforms coordinates from graph space to world space 
+
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a94bb1009e0b85246101a48b7911bef63}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile_ac1d5205842b6e1ac51c2a762839ad93e}{Pathfinding.\+Navmesh\+Tile}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_navmesh_holder_a2ebf594763f304b0374ffb2e30dbaaef}\label{interface_pathfinding_1_1_i_navmesh_holder_a2ebf594763f304b0374ffb2e30dbaaef}} 
+\index{Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}}
+\doxysubsubsection{\texorpdfstring{GetVertex()}{GetVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} Pathfinding.\+I\+Navmesh\+Holder.\+Get\+Vertex (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Position of vertex number i in the world 
+
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a912c00fc6b1c578cb7e691bdceaf2314}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile_aa14f97326a8b98251639fac26f60dda3}{Pathfinding.\+Navmesh\+Tile}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_navmesh_holder_a00819256724cf58a3521df96cbd62e83}\label{interface_pathfinding_1_1_i_navmesh_holder_a00819256724cf58a3521df96cbd62e83}} 
+\index{Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}!GetVertexInGraphSpace@{GetVertexInGraphSpace}}
+\index{GetVertexInGraphSpace@{GetVertexInGraphSpace}!Pathfinding.INavmeshHolder@{Pathfinding.INavmeshHolder}}
+\doxysubsubsection{\texorpdfstring{GetVertexInGraphSpace()}{GetVertexInGraphSpace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} Pathfinding.\+I\+Navmesh\+Holder.\+Get\+Vertex\+In\+Graph\+Space (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Position of vertex number i in coordinates local to the graph. The up direction is always the +Y axis for these coordinates. 
+
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_af7562006ceaecf56ef9652db50da36ce}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile_ab2f531d0180d05e7ed8122c25ab7cccc}{Pathfinding.\+Navmesh\+Tile}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Node\+Classes/Triangle\+Mesh\+Node.\+cs\end{DoxyCompactItemize}

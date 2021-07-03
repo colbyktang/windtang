@@ -1,0 +1,7 @@
+<map id="TriangleNet.Geometry.RegionPointer" name="TriangleNet.Geometry.RegionPointer">
+<area shape="rect" id="node1" title="Pointer to a region in the mesh geometry. A region is a well&#45;defined subset of the geomerty (enclosed..." alt="" coords="150,213,342,255"/>
+<area shape="rect" id="node2" href="$class_triangle_net_1_1_geometry_1_1_point.html" title="Represents a 2D point." alt="" coords="155,124,337,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="177,5,315,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="339,5,399,32"/>
+</map>

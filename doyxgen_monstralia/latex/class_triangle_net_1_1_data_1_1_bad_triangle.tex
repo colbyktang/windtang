@@ -1,0 +1,51 @@
+\hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle}{}\doxysection{Triangle\+Net.\+Data.\+Bad\+Triangle Class Reference}
+\label{class_triangle_net_1_1_data_1_1_bad_triangle}\index{TriangleNet.Data.BadTriangle@{TriangleNet.Data.BadTriangle}}
+
+
+A queue used to store bad triangles.  
+
+
+
+
+Collaboration diagram for Triangle\+Net.\+Data.\+Bad\+Triangle\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_a52fcd4c7d49f0a75508a16db17f3c035}\label{class_triangle_net_1_1_data_1_1_bad_triangle_a52fcd4c7d49f0a75508a16db17f3c035}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_a6dad80b9b621b2c7da626a141bac9955}\label{class_triangle_net_1_1_data_1_1_bad_triangle_a6dad80b9b621b2c7da626a141bac9955}} 
+int {\bfseries ID} = 0
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_a4aa798901255e042eb03ea77e1340885}\label{class_triangle_net_1_1_data_1_1_bad_triangle_a4aa798901255e042eb03ea77e1340885}} 
+\mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_otri}{Otri}} {\bfseries poortri}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_ac5aeede35c867790dbb4c745215e1dce}\label{class_triangle_net_1_1_data_1_1_bad_triangle_ac5aeede35c867790dbb4c745215e1dce}} 
+double {\bfseries key}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_a98897980b80147af87f419dda5223e75}\label{class_triangle_net_1_1_data_1_1_bad_triangle_a98897980b80147af87f419dda5223e75}} 
+\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} {\bfseries triangorg}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_a5410b3b1c5fe570f26ab5ed7a03abd90}\label{class_triangle_net_1_1_data_1_1_bad_triangle_a5410b3b1c5fe570f26ab5ed7a03abd90}} 
+\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_triangle}{Bad\+Triangle}} {\bfseries nexttriang}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_bad_triangle_aaebacf516abeebb8a3e82e1105221909}\label{class_triangle_net_1_1_data_1_1_bad_triangle_aaebacf516abeebb8a3e82e1105221909}} 
+static int {\bfseries O\+T\+ID} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A queue used to store bad triangles. 
+
+The key is the square of the cosine of the smallest angle of the triangle. Each triangle\textquotesingle{}s vertices are stored so that one can check whether a triangle is still the same. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Data/Bad\+Triangle.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+
+\begin{DoxyRefList}
+\item[Member \mbox{\hyperlink{class_pathfinding_1_1_path_a55b9edfbb223bc171390817a072d6f25}{Pathfinding.Path.Complete\+State}} ]\label{bug__bug000001}%
+\Hypertarget{bug__bug000001}%
+This may currently be set to Complete before the path has actually been fully calculated. In particular the vector\+Path and path lists may not have been fully constructed. This can lead to race conditions when using multithreading. Try to avoid using this method to check for if the path is calculated right now, use \mbox{\hyperlink{class_pathfinding_1_1_path_aedc88f47f6da4068be44b37bd3e93769}{Is\+Done}} instead.  
+\item[Member \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ac4e55b74eb488c8f7a8e295cd2141efa}{Pathfinding.R\+VO.I\+Agent.Neighbour\+Obstacles}} ]\label{bug__bug000002}%
+\Hypertarget{bug__bug000002}%
+Always returns null 
+\end{DoxyRefList}

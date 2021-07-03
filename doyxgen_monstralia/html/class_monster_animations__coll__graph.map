@@ -1,0 +1,8 @@
+<map id="MonsterAnimations" name="MonsterAnimations">
+<area shape="rect" id="node1" title=" " alt="" coords="36,273,171,300"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,184,116,211"/>
+<area shape="rect" id="node3" href="$class_emotion_data.html" title=" " alt="" coords="140,184,237,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="75,95,193,121"/>
+<area shape="rect" id="node5" href="$struct_emotion_data_1_1_emotion_struct.html" title=" " alt="" coords="218,95,402,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="271,5,349,32"/>
+</map>

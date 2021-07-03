@@ -1,0 +1,90 @@
+\hypertarget{struct_pathfinding_1_1_astar_work_item}{}\doxysection{Pathfinding.\+Astar\+Work\+Item Struct Reference}
+\label{struct_pathfinding_1_1_astar_work_item}\index{Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}}
+
+
+An item of work that can be executed when graphs are safe to update. See\+: \mbox{\hyperlink{class_astar_path_a6d6ca9490291366e24cde5ef10d23c30}{Astar\+Path.\+Update\+Graphs}} See\+: \mbox{\hyperlink{class_astar_path_ae285a59790c68b9b7e0e2964103418f9}{Astar\+Path.\+Add\+Work\+Item}}  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Astar\+Work\+Item\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_a2efe6913731e61e54d962069b2ddbf1d}\label{struct_pathfinding_1_1_astar_work_item_a2efe6913731e61e54d962069b2ddbf1d}} 
+{\bfseries Astar\+Work\+Item} (System.\+Func$<$ bool, bool $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}})
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_a29f82b8b945b80aca13adeb8556ac8fd}\label{struct_pathfinding_1_1_astar_work_item_a29f82b8b945b80aca13adeb8556ac8fd}} 
+{\bfseries Astar\+Work\+Item} (System.\+Func$<$ \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}}, bool, bool $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}})
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_acc101e8d66f7603db3f2cc7cdfe65c09}\label{struct_pathfinding_1_1_astar_work_item_acc101e8d66f7603db3f2cc7cdfe65c09}} 
+{\bfseries Astar\+Work\+Item} (System.\+Action \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_afe42eaef64344051b009405efec572b3}{init}}, System.\+Func$<$ bool, bool $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}=null)
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_a7cf4050e595e0c9ee88e0d4b973dd1d5}\label{struct_pathfinding_1_1_astar_work_item_a7cf4050e595e0c9ee88e0d4b973dd1d5}} 
+{\bfseries Astar\+Work\+Item} (System.\+Action$<$ \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}} $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_afe42eaef64344051b009405efec572b3}{init}}, System.\+Func$<$ \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}}, bool, bool $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+System.\+Action \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_afe42eaef64344051b009405efec572b3}{init}}
+\begin{DoxyCompactList}\small\item\em Init function. May be null if no initialization is needed. Will be called once, right before the first call to \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}. \end{DoxyCompactList}\item 
+System.\+Action$<$ \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}} $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_a799f840eed7a95d60c3db6ee7b9e53cd}{init\+With\+Context}}
+\begin{DoxyCompactList}\small\item\em Init function. May be null if no initialization is needed. Will be called once, right before the first call to \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}. \end{DoxyCompactList}\item 
+System.\+Func$<$ bool, bool $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}
+\begin{DoxyCompactList}\small\item\em Update function, called once per frame when the work item executes. Takes a param force. If that is true, the work item should try to complete the whole item in one go instead of spreading it out over multiple frames. Returns\+: True when the work item is completed. \end{DoxyCompactList}\item 
+System.\+Func$<$ \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}}, bool, bool $>$ \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_a2096249d28049a8817950c94755d8706}{update\+With\+Context}}
+\begin{DoxyCompactList}\small\item\em Update function, called once per frame when the work item executes. Takes a param force. If that is true, the work item should try to complete the whole item in one go instead of spreading it out over multiple frames. Returns\+: True when the work item is completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An item of work that can be executed when graphs are safe to update. See\+: \mbox{\hyperlink{class_astar_path_a6d6ca9490291366e24cde5ef10d23c30}{Astar\+Path.\+Update\+Graphs}} See\+: \mbox{\hyperlink{class_astar_path_ae285a59790c68b9b7e0e2964103418f9}{Astar\+Path.\+Add\+Work\+Item}} 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_afe42eaef64344051b009405efec572b3}\label{struct_pathfinding_1_1_astar_work_item_afe42eaef64344051b009405efec572b3}} 
+\index{Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}!init@{init}}
+\index{init@{init}!Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}}
+\doxysubsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily System.\+Action Pathfinding.\+Astar\+Work\+Item.\+init}
+
+
+
+Init function. May be null if no initialization is needed. Will be called once, right before the first call to \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}. 
+
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_a799f840eed7a95d60c3db6ee7b9e53cd}\label{struct_pathfinding_1_1_astar_work_item_a799f840eed7a95d60c3db6ee7b9e53cd}} 
+\index{Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}!initWithContext@{initWithContext}}
+\index{initWithContext@{initWithContext}!Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}}
+\doxysubsubsection{\texorpdfstring{initWithContext}{initWithContext}}
+{\footnotesize\ttfamily System.\+Action$<$\mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}}$>$ Pathfinding.\+Astar\+Work\+Item.\+init\+With\+Context}
+
+
+
+Init function. May be null if no initialization is needed. Will be called once, right before the first call to \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}{update}}. 
+
+A context object is sent as a parameter. This can be used to for example queue a flood fill that will be executed either when a work item calls Ensure\+Valid\+Flood\+Fill or all work items have been completed. If multiple work items are updating nodes so that they need a flood fill afterwards, using the Queue\+Flood\+Fill method is preferred since then only a single flood fill needs to be performed for all of the work items instead of one per work item.\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}\label{struct_pathfinding_1_1_astar_work_item_ac8b1bcae0c93f59268ee50156e1c7070}} 
+\index{Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}!update@{update}}
+\index{update@{update}!Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}}
+\doxysubsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily System.\+Func$<$bool, bool$>$ Pathfinding.\+Astar\+Work\+Item.\+update}
+
+
+
+Update function, called once per frame when the work item executes. Takes a param force. If that is true, the work item should try to complete the whole item in one go instead of spreading it out over multiple frames. Returns\+: True when the work item is completed. 
+
+\mbox{\Hypertarget{struct_pathfinding_1_1_astar_work_item_a2096249d28049a8817950c94755d8706}\label{struct_pathfinding_1_1_astar_work_item_a2096249d28049a8817950c94755d8706}} 
+\index{Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}!updateWithContext@{updateWithContext}}
+\index{updateWithContext@{updateWithContext}!Pathfinding.AstarWorkItem@{Pathfinding.AstarWorkItem}}
+\doxysubsubsection{\texorpdfstring{updateWithContext}{updateWithContext}}
+{\footnotesize\ttfamily System.\+Func$<$\mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}}, bool, bool$>$ Pathfinding.\+Astar\+Work\+Item.\+update\+With\+Context}
+
+
+
+Update function, called once per frame when the work item executes. Takes a param force. If that is true, the work item should try to complete the whole item in one go instead of spreading it out over multiple frames. Returns\+: True when the work item is completed. 
+
+A context object is sent as a parameter. This can be used to for example queue a flood fill that will be executed either when a work item calls Ensure\+Valid\+Flood\+Fill or all work items have been completed. If multiple work items are updating nodes so that they need a flood fill afterwards, using the Queue\+Flood\+Fill method is preferred since then only a single flood fill needs to be performed for all of the work items instead of one per work item.
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Work\+Item\+Processor.\+cs\end{DoxyCompactItemize}

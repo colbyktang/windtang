@@ -1,0 +1,126 @@
+\hypertarget{class_pathfinding_1_1_astar_color}{}\doxysection{Pathfinding.\+Astar\+Color Class Reference}
+\label{class_pathfinding_1_1_astar_color}\index{Pathfinding.AstarColor@{Pathfinding.AstarColor}}
+
+
+Stores editor colors  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Astar\+Color\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_astar_color_a5ed4409b6d43eaafa302036025ac31df}{Push\+To\+Static}} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} astar)
+\begin{DoxyCompactList}\small\item\em Pushes all local variables out to static ones. This is done because that makes it so much easier to access the colors during Gizmo rendering and it has a positive performance impact as well (gizmo rendering is hot code). It is a bit ugly though, but oh well. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_ae97a694e745acbc45e8434d8cc68d86e}\label{class_pathfinding_1_1_astar_color_ae97a694e745acbc45e8434d8cc68d86e}} 
+static int {\bfseries Color\+Hash} ()
+\item 
+static Color \mbox{\hyperlink{class_pathfinding_1_1_astar_color_ac04df113eda60ea6054b24fd8656e375}{Get\+Area\+Color}} (uint area)
+\begin{DoxyCompactList}\small\item\em Returns an color for an area, uses both user set ones and calculated. If the user has set a color for the area, it is used, but otherwise the color is calculated using Astar\+Math.\+Int\+To\+Color See\+: Remapped\+Area\+Colors \end{DoxyCompactList}\item 
+static Color \mbox{\hyperlink{class_pathfinding_1_1_astar_color_a7ad2923ffd6d2db5ba449ff7ee0c4022}{Get\+Tag\+Color}} (uint tag)
+\begin{DoxyCompactList}\small\item\em Returns an color for a tag, uses both user set ones and calculated. If the user has set a color for the tag, it is used, but otherwise the color is calculated using Astar\+Math.\+Int\+To\+Color See\+: Area\+Colors \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a5fcfc5846740b1eebf7ab7e03f98c26c}\label{class_pathfinding_1_1_astar_color_a5fcfc5846740b1eebf7ab7e03f98c26c}} 
+Color {\bfseries \+\_\+\+Solid\+Color}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a7338b98cfe49bc50af305dde0fd6a400}\label{class_pathfinding_1_1_astar_color_a7338b98cfe49bc50af305dde0fd6a400}} 
+Color {\bfseries \+\_\+\+Unwalkable\+Node}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a1d21ffbc1888e71e67915c5c20b819b5}\label{class_pathfinding_1_1_astar_color_a1d21ffbc1888e71e67915c5c20b819b5}} 
+Color {\bfseries \+\_\+\+Bounds\+Handles}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_ae5f7ee6a57db200fad55302d81dab810}\label{class_pathfinding_1_1_astar_color_ae5f7ee6a57db200fad55302d81dab810}} 
+Color {\bfseries \+\_\+\+Connection\+Low\+Lerp}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a262ce1647a536bff6b6d43a98bceb8f1}\label{class_pathfinding_1_1_astar_color_a262ce1647a536bff6b6d43a98bceb8f1}} 
+Color {\bfseries \+\_\+\+Connection\+High\+Lerp}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a2dbe46dc1d1a4d6f80d12f36a2d480c4}\label{class_pathfinding_1_1_astar_color_a2dbe46dc1d1a4d6f80d12f36a2d480c4}} 
+Color {\bfseries \+\_\+\+Mesh\+Edge\+Color}
+\item 
+Color\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_astar_color_a323e1a7dffc9c40f7b18d219a7289a73}{\+\_\+\+Area\+Colors}}
+\begin{DoxyCompactList}\small\item\em Holds user set area colors. Use Get\+Area\+Color to get an area color \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_aec6c0481083cdf5ddbd2b8c5d5bdc25c}\label{class_pathfinding_1_1_astar_color_aec6c0481083cdf5ddbd2b8c5d5bdc25c}} 
+static Color {\bfseries Solid\+Color} = new Color(30/255f, 102/255f, 201/255f, 0.\+9F)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_aed4f2cc4989f1f1396315fb3a74c3a7a}\label{class_pathfinding_1_1_astar_color_aed4f2cc4989f1f1396315fb3a74c3a7a}} 
+static Color {\bfseries Unwalkable\+Node} = new Color(1, 0, 0, 0.\+5F)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_abc4fc0bc77b98bf7bd3371b5beab7465}\label{class_pathfinding_1_1_astar_color_abc4fc0bc77b98bf7bd3371b5beab7465}} 
+static Color {\bfseries Bounds\+Handles} = new Color(0.\+29F, 0.\+454F, 0.\+741F, 0.\+9F)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_ac1c1ffb7a1c9b3fbe350dcfcd5499894}\label{class_pathfinding_1_1_astar_color_ac1c1ffb7a1c9b3fbe350dcfcd5499894}} 
+static Color {\bfseries Connection\+Low\+Lerp} = new Color(0, 1, 0, 0.\+5F)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_aa55c8a0fff0d8db26b653be849152614}\label{class_pathfinding_1_1_astar_color_aa55c8a0fff0d8db26b653be849152614}} 
+static Color {\bfseries Connection\+High\+Lerp} = new Color(1, 0, 0, 0.\+5F)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_afb98c7ecf1acb10f5c425ecd335e15a2}\label{class_pathfinding_1_1_astar_color_afb98c7ecf1acb10f5c425ecd335e15a2}} 
+static Color {\bfseries Mesh\+Edge\+Color} = new Color(0, 0, 0, 0.\+5F)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores editor colors 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_ac04df113eda60ea6054b24fd8656e375}\label{class_pathfinding_1_1_astar_color_ac04df113eda60ea6054b24fd8656e375}} 
+\index{Pathfinding.AstarColor@{Pathfinding.AstarColor}!GetAreaColor@{GetAreaColor}}
+\index{GetAreaColor@{GetAreaColor}!Pathfinding.AstarColor@{Pathfinding.AstarColor}}
+\doxysubsubsection{\texorpdfstring{GetAreaColor()}{GetAreaColor()}}
+{\footnotesize\ttfamily static Color Pathfinding.\+Astar\+Color.\+Get\+Area\+Color (\begin{DoxyParamCaption}\item[{uint}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns an color for an area, uses both user set ones and calculated. If the user has set a color for the area, it is used, but otherwise the color is calculated using Astar\+Math.\+Int\+To\+Color See\+: Remapped\+Area\+Colors 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a7ad2923ffd6d2db5ba449ff7ee0c4022}\label{class_pathfinding_1_1_astar_color_a7ad2923ffd6d2db5ba449ff7ee0c4022}} 
+\index{Pathfinding.AstarColor@{Pathfinding.AstarColor}!GetTagColor@{GetTagColor}}
+\index{GetTagColor@{GetTagColor}!Pathfinding.AstarColor@{Pathfinding.AstarColor}}
+\doxysubsubsection{\texorpdfstring{GetTagColor()}{GetTagColor()}}
+{\footnotesize\ttfamily static Color Pathfinding.\+Astar\+Color.\+Get\+Tag\+Color (\begin{DoxyParamCaption}\item[{uint}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns an color for a tag, uses both user set ones and calculated. If the user has set a color for the tag, it is used, but otherwise the color is calculated using Astar\+Math.\+Int\+To\+Color See\+: Area\+Colors 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a5ed4409b6d43eaafa302036025ac31df}\label{class_pathfinding_1_1_astar_color_a5ed4409b6d43eaafa302036025ac31df}} 
+\index{Pathfinding.AstarColor@{Pathfinding.AstarColor}!PushToStatic@{PushToStatic}}
+\index{PushToStatic@{PushToStatic}!Pathfinding.AstarColor@{Pathfinding.AstarColor}}
+\doxysubsubsection{\texorpdfstring{PushToStatic()}{PushToStatic()}}
+{\footnotesize\ttfamily void Pathfinding.\+Astar\+Color.\+Push\+To\+Static (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_astar_path}{Astar\+Path}}}]{astar }\end{DoxyParamCaption})}
+
+
+
+Pushes all local variables out to static ones. This is done because that makes it so much easier to access the colors during Gizmo rendering and it has a positive performance impact as well (gizmo rendering is hot code). It is a bit ugly though, but oh well. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_color_a323e1a7dffc9c40f7b18d219a7289a73}\label{class_pathfinding_1_1_astar_color_a323e1a7dffc9c40f7b18d219a7289a73}} 
+\index{Pathfinding.AstarColor@{Pathfinding.AstarColor}!\_AreaColors@{\_AreaColors}}
+\index{\_AreaColors@{\_AreaColors}!Pathfinding.AstarColor@{Pathfinding.AstarColor}}
+\doxysubsubsection{\texorpdfstring{\_AreaColors}{\_AreaColors}}
+{\footnotesize\ttfamily Color \mbox{[}$\,$\mbox{]} Pathfinding.\+Astar\+Color.\+\_\+\+Area\+Colors}
+
+
+
+Holds user set area colors. Use Get\+Area\+Color to get an area color 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/astarclasses.\+cs\end{DoxyCompactItemize}

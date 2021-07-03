@@ -1,0 +1,8 @@
+<map id="InventoryManager" name="InventoryManager">
+<area shape="rect" id="node1" title=" " alt="" coords="241,171,363,197"/>
+<area shape="rect" id="node2" href="$class_singleton.html" title=" " alt="" coords="5,81,207,108"/>
+<area shape="rect" id="node3" title=" " alt="" coords="231,81,373,108"/>
+<area shape="rect" id="node4" href="$class_inventory_item.html" title=" " alt="" coords="470,81,569,108"/>
+<area shape="rect" id="node6" href="$class_inventory_slot.html" title=" " alt="" coords="522,171,618,197"/>
+<area shape="rect" id="node5" title=" " alt="" coords="528,5,639,32"/>
+</map>

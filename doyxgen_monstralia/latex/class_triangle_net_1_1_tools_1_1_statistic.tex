@@ -1,0 +1,398 @@
+\hypertarget{class_triangle_net_1_1_tools_1_1_statistic}{}\doxysection{Triangle\+Net.\+Tools.\+Statistic Class Reference}
+\label{class_triangle_net_1_1_tools_1_1_statistic}\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+
+
+Gather mesh statistics.  
+
+
+
+
+Collaboration diagram for Triangle\+Net.\+Tools.\+Statistic\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_ac37b227b8019a07ba28c7b1d24b6c4f5}{Update}} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} mesh, int sample\+Degrees)
+\begin{DoxyCompactList}\small\item\em Update statistics about the quality of the mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_ab3880d608e654275a7ba8cd8274d7775}{In\+Circle\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of incircle tests performed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ad27a746acd65a5b61cd458577ec4e070}\label{class_triangle_net_1_1_tools_1_1_statistic_ad27a746acd65a5b61cd458577ec4e070}} 
+static long {\bfseries In\+Circle\+Count\+Decimal} = 0
+\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a7abd468a96ddde5475b90b15bb0e2d75}{Counter\+Clockwise\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of counterclockwise tests performed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a5ec36c09692c02929c5cf47b538ebecd}\label{class_triangle_net_1_1_tools_1_1_statistic_a5ec36c09692c02929c5cf47b538ebecd}} 
+static long {\bfseries Counter\+Clockwise\+Count\+Decimal} = 0
+\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a473f59f30e790f542914854472a755c0}{Orient3d\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of 3D orientation tests performed. \end{DoxyCompactList}\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a18c952e5c8907e98e23ff32af7c8bd18}{Hyperbola\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of right-\/of-\/hyperbola tests performed. \end{DoxyCompactList}\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a10a700f438197772d0aa207ace8aa513}{Circumcenter\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em // Number of circumcenter calculations performed. \end{DoxyCompactList}\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_add2430a938db9abce8b5b5ac9afcc231}{Circle\+Top\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of circle top calculations performed. \end{DoxyCompactList}\item 
+static long \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_ae0f26025b3250acbb6e088d49921a9b5}{Relocation\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of vertex relocations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_aa9a348410f3b048db8fba1d73b925a9a}{Shortest\+Edge}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the shortest edge. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a006af05869a7d92023046ab0d9f4ad14}{Longest\+Edge}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the longest edge. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_ae20d8f381694e744df6b0534a11b0d80}{Shortest\+Altitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the shortest altitude. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a2a7c82ad1e2a55f4c64534e83634d072}{Largest\+Aspect\+Ratio}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the largest aspect ratio. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a1fe8020f5668d1e623721d426a9d9280}{Smallest\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the smallest area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_ae157894415e5609b41ecfbc7fab53fc5}{Largest\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the largest area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a87f126a712fef0e1d2365dd45605928d}{Smallest\+Angle}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the smallest angle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a04eef6a21e25500f086784a5748a7fe5}{Largest\+Angle}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the largest angle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_af1b3a70c171fbd99fd05aac78d639219}{Input\+Vertices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input vertices. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_acb4953881acaba1a8555a962ef97f3b9}{Input\+Triangles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input triangles. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_aeb691407fe7deec1c7be9e14902aa124}{Input\+Segments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input segments. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_af75fd859b7f85a06e1b1ae6780f523ed}{Input\+Holes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of input holes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_ad0fec8b1d87a6a0109a682126c104be7}{Vertices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of mesh vertices. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a75a38c69c98d869c0e8cde78b7544dea}{Triangles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of mesh triangles. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_af3466f9df7792b6e8c59148749e43b1c}{Edges}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of mesh edges. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a9c76f73ca2c0a097c9d536d1f095bed7}{Boundary\+Edges}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of exterior boundary edges. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a44f93ae8f212b715ca120af19529dd96}{Interior\+Boundary\+Edges}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of interior boundary edges. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a3bb20c05630733e50198f81e56fa2cc9}{Constrained\+Edges}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of constrained edges. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_af2bc371eaa57ef90949f9b72c055efc8}{Angle\+Histogram}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the angle histogram. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a9467e18f0f7520dd5866fd243079f777}{Min\+Angle\+Histogram}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the min angles histogram. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_statistic_a4af1e037c9396d383c74d3efa0f56550}{Max\+Angle\+Histogram}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the max angles histogram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gather mesh statistics. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ac37b227b8019a07ba28c7b1d24b6c4f5}\label{class_triangle_net_1_1_tools_1_1_statistic_ac37b227b8019a07ba28c7b1d24b6c4f5}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!Update@{Update}}
+\index{Update@{Update}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Tools.\+Statistic.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}}}]{mesh,  }\item[{int}]{sample\+Degrees }\end{DoxyParamCaption})}
+
+
+
+Update statistics about the quality of the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_add2430a938db9abce8b5b5ac9afcc231}\label{class_triangle_net_1_1_tools_1_1_statistic_add2430a938db9abce8b5b5ac9afcc231}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!CircleTopCount@{CircleTopCount}}
+\index{CircleTopCount@{CircleTopCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{CircleTopCount}{CircleTopCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+Circle\+Top\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of circle top calculations performed. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a10a700f438197772d0aa207ace8aa513}\label{class_triangle_net_1_1_tools_1_1_statistic_a10a700f438197772d0aa207ace8aa513}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!CircumcenterCount@{CircumcenterCount}}
+\index{CircumcenterCount@{CircumcenterCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{CircumcenterCount}{CircumcenterCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+Circumcenter\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+// Number of circumcenter calculations performed. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a7abd468a96ddde5475b90b15bb0e2d75}\label{class_triangle_net_1_1_tools_1_1_statistic_a7abd468a96ddde5475b90b15bb0e2d75}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!CounterClockwiseCount@{CounterClockwiseCount}}
+\index{CounterClockwiseCount@{CounterClockwiseCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{CounterClockwiseCount}{CounterClockwiseCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+Counter\+Clockwise\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of counterclockwise tests performed. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a18c952e5c8907e98e23ff32af7c8bd18}\label{class_triangle_net_1_1_tools_1_1_statistic_a18c952e5c8907e98e23ff32af7c8bd18}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!HyperbolaCount@{HyperbolaCount}}
+\index{HyperbolaCount@{HyperbolaCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{HyperbolaCount}{HyperbolaCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+Hyperbola\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of right-\/of-\/hyperbola tests performed. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ab3880d608e654275a7ba8cd8274d7775}\label{class_triangle_net_1_1_tools_1_1_statistic_ab3880d608e654275a7ba8cd8274d7775}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!InCircleCount@{InCircleCount}}
+\index{InCircleCount@{InCircleCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{InCircleCount}{InCircleCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+In\+Circle\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of incircle tests performed. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a473f59f30e790f542914854472a755c0}\label{class_triangle_net_1_1_tools_1_1_statistic_a473f59f30e790f542914854472a755c0}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!Orient3dCount@{Orient3dCount}}
+\index{Orient3dCount@{Orient3dCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{Orient3dCount}{Orient3dCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+Orient3d\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of 3D orientation tests performed. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ae0f26025b3250acbb6e088d49921a9b5}\label{class_triangle_net_1_1_tools_1_1_statistic_ae0f26025b3250acbb6e088d49921a9b5}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!RelocationCount@{RelocationCount}}
+\index{RelocationCount@{RelocationCount}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{RelocationCount}{RelocationCount}}
+{\footnotesize\ttfamily long Triangle\+Net.\+Tools.\+Statistic.\+Relocation\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of vertex relocations. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_af2bc371eaa57ef90949f9b72c055efc8}\label{class_triangle_net_1_1_tools_1_1_statistic_af2bc371eaa57ef90949f9b72c055efc8}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!AngleHistogram@{AngleHistogram}}
+\index{AngleHistogram@{AngleHistogram}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{AngleHistogram}{AngleHistogram}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Triangle\+Net.\+Tools.\+Statistic.\+Angle\+Histogram\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the angle histogram. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a9c76f73ca2c0a097c9d536d1f095bed7}\label{class_triangle_net_1_1_tools_1_1_statistic_a9c76f73ca2c0a097c9d536d1f095bed7}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!BoundaryEdges@{BoundaryEdges}}
+\index{BoundaryEdges@{BoundaryEdges}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{BoundaryEdges}{BoundaryEdges}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Boundary\+Edges\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of exterior boundary edges. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a3bb20c05630733e50198f81e56fa2cc9}\label{class_triangle_net_1_1_tools_1_1_statistic_a3bb20c05630733e50198f81e56fa2cc9}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!ConstrainedEdges@{ConstrainedEdges}}
+\index{ConstrainedEdges@{ConstrainedEdges}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{ConstrainedEdges}{ConstrainedEdges}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Constrained\+Edges\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of constrained edges. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_af3466f9df7792b6e8c59148749e43b1c}\label{class_triangle_net_1_1_tools_1_1_statistic_af3466f9df7792b6e8c59148749e43b1c}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!Edges@{Edges}}
+\index{Edges@{Edges}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{Edges}{Edges}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Edges\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of mesh edges. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_af75fd859b7f85a06e1b1ae6780f523ed}\label{class_triangle_net_1_1_tools_1_1_statistic_af75fd859b7f85a06e1b1ae6780f523ed}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!InputHoles@{InputHoles}}
+\index{InputHoles@{InputHoles}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{InputHoles}{InputHoles}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Input\+Holes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input holes. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_aeb691407fe7deec1c7be9e14902aa124}\label{class_triangle_net_1_1_tools_1_1_statistic_aeb691407fe7deec1c7be9e14902aa124}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!InputSegments@{InputSegments}}
+\index{InputSegments@{InputSegments}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{InputSegments}{InputSegments}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Input\+Segments\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input segments. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_acb4953881acaba1a8555a962ef97f3b9}\label{class_triangle_net_1_1_tools_1_1_statistic_acb4953881acaba1a8555a962ef97f3b9}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!InputTriangles@{InputTriangles}}
+\index{InputTriangles@{InputTriangles}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{InputTriangles}{InputTriangles}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Input\+Triangles\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input triangles. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_af1b3a70c171fbd99fd05aac78d639219}\label{class_triangle_net_1_1_tools_1_1_statistic_af1b3a70c171fbd99fd05aac78d639219}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!InputVertices@{InputVertices}}
+\index{InputVertices@{InputVertices}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{InputVertices}{InputVertices}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Input\+Vertices\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of input vertices. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a44f93ae8f212b715ca120af19529dd96}\label{class_triangle_net_1_1_tools_1_1_statistic_a44f93ae8f212b715ca120af19529dd96}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!InteriorBoundaryEdges@{InteriorBoundaryEdges}}
+\index{InteriorBoundaryEdges@{InteriorBoundaryEdges}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{InteriorBoundaryEdges}{InteriorBoundaryEdges}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Interior\+Boundary\+Edges\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of interior boundary edges. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a04eef6a21e25500f086784a5748a7fe5}\label{class_triangle_net_1_1_tools_1_1_statistic_a04eef6a21e25500f086784a5748a7fe5}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!LargestAngle@{LargestAngle}}
+\index{LargestAngle@{LargestAngle}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{LargestAngle}{LargestAngle}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Largest\+Angle\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the largest angle. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ae157894415e5609b41ecfbc7fab53fc5}\label{class_triangle_net_1_1_tools_1_1_statistic_ae157894415e5609b41ecfbc7fab53fc5}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!LargestArea@{LargestArea}}
+\index{LargestArea@{LargestArea}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{LargestArea}{LargestArea}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Largest\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the largest area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a2a7c82ad1e2a55f4c64534e83634d072}\label{class_triangle_net_1_1_tools_1_1_statistic_a2a7c82ad1e2a55f4c64534e83634d072}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!LargestAspectRatio@{LargestAspectRatio}}
+\index{LargestAspectRatio@{LargestAspectRatio}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{LargestAspectRatio}{LargestAspectRatio}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Largest\+Aspect\+Ratio\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the largest aspect ratio. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a006af05869a7d92023046ab0d9f4ad14}\label{class_triangle_net_1_1_tools_1_1_statistic_a006af05869a7d92023046ab0d9f4ad14}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!LongestEdge@{LongestEdge}}
+\index{LongestEdge@{LongestEdge}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{LongestEdge}{LongestEdge}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Longest\+Edge\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the longest edge. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a4af1e037c9396d383c74d3efa0f56550}\label{class_triangle_net_1_1_tools_1_1_statistic_a4af1e037c9396d383c74d3efa0f56550}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!MaxAngleHistogram@{MaxAngleHistogram}}
+\index{MaxAngleHistogram@{MaxAngleHistogram}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{MaxAngleHistogram}{MaxAngleHistogram}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Triangle\+Net.\+Tools.\+Statistic.\+Max\+Angle\+Histogram\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the max angles histogram. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a9467e18f0f7520dd5866fd243079f777}\label{class_triangle_net_1_1_tools_1_1_statistic_a9467e18f0f7520dd5866fd243079f777}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!MinAngleHistogram@{MinAngleHistogram}}
+\index{MinAngleHistogram@{MinAngleHistogram}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{MinAngleHistogram}{MinAngleHistogram}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Triangle\+Net.\+Tools.\+Statistic.\+Min\+Angle\+Histogram\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the min angles histogram. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ae20d8f381694e744df6b0534a11b0d80}\label{class_triangle_net_1_1_tools_1_1_statistic_ae20d8f381694e744df6b0534a11b0d80}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!ShortestAltitude@{ShortestAltitude}}
+\index{ShortestAltitude@{ShortestAltitude}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{ShortestAltitude}{ShortestAltitude}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Shortest\+Altitude\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the shortest altitude. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_aa9a348410f3b048db8fba1d73b925a9a}\label{class_triangle_net_1_1_tools_1_1_statistic_aa9a348410f3b048db8fba1d73b925a9a}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!ShortestEdge@{ShortestEdge}}
+\index{ShortestEdge@{ShortestEdge}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{ShortestEdge}{ShortestEdge}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Shortest\+Edge\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the shortest edge. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a87f126a712fef0e1d2365dd45605928d}\label{class_triangle_net_1_1_tools_1_1_statistic_a87f126a712fef0e1d2365dd45605928d}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!SmallestAngle@{SmallestAngle}}
+\index{SmallestAngle@{SmallestAngle}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{SmallestAngle}{SmallestAngle}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Smallest\+Angle\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the smallest angle. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a1fe8020f5668d1e623721d426a9d9280}\label{class_triangle_net_1_1_tools_1_1_statistic_a1fe8020f5668d1e623721d426a9d9280}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!SmallestArea@{SmallestArea}}
+\index{SmallestArea@{SmallestArea}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{SmallestArea}{SmallestArea}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Statistic.\+Smallest\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the smallest area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_a75a38c69c98d869c0e8cde78b7544dea}\label{class_triangle_net_1_1_tools_1_1_statistic_a75a38c69c98d869c0e8cde78b7544dea}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!Triangles@{Triangles}}
+\index{Triangles@{Triangles}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{Triangles}{Triangles}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Triangles\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of mesh triangles. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_statistic_ad0fec8b1d87a6a0109a682126c104be7}\label{class_triangle_net_1_1_tools_1_1_statistic_ad0fec8b1d87a6a0109a682126c104be7}} 
+\index{TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}!Vertices@{Vertices}}
+\index{Vertices@{Vertices}!TriangleNet.Tools.Statistic@{TriangleNet.Tools.Statistic}}
+\doxysubsubsection{\texorpdfstring{Vertices}{Vertices}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Statistic.\+Vertices\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of mesh vertices. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Tools/Statistic.\+cs\end{DoxyCompactItemize}

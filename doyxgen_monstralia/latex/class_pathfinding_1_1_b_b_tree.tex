@@ -1,0 +1,136 @@
+\hypertarget{class_pathfinding_1_1_b_b_tree}{}\doxysection{Pathfinding.\+B\+B\+Tree Class Reference}
+\label{class_pathfinding_1_1_b_b_tree}\index{Pathfinding.BBTree@{Pathfinding.BBTree}}
+
+
+Axis Aligned Bounding Box Tree. Holds a bounding box tree of triangles.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+B\+B\+Tree\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+B\+B\+Tree\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree_a7e784183948754d9cf30e2595a23c31b}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the tree. Note that references to old nodes will still be intact so the GC cannot immediately collect them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree_aeb465d3c6c9c788108bf1dbc3707a9b5}{Rebuild\+From}} (\mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}}\mbox{[}$\,$\mbox{]} nodes)
+\begin{DoxyCompactList}\small\item\em Rebuilds the tree using the specified nodes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree_adcc1ddd7031cc77b01c016080cd5f171}{Query\+Closest}} (Vector3 p, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint, out float distance)
+\begin{DoxyCompactList}\small\item\em Queries the tree for the closest node to p constrained by the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. Note that this function will only fill in the constrained node. If you want a node not constrained by any \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}, do an additional search with constraint = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree_a2c800bef9dae4abba481781a3ab6294d}{Query\+Closest\+XZ}} (Vector3 p, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint, ref float distance, \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} previous)
+\begin{DoxyCompactList}\small\item\em Queries the tree for the closest node to p constrained by the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} trying to improve an existing solution. Note that this function will only fill in the constrained node. If you want a node not constrained by any \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}, do an additional search with constraint = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree_a16f4cecd2141ec3e4b3e65e87a7a758d}{Query\+Closest}} (Vector3 p, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint, ref float distance, \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} previous)
+\begin{DoxyCompactList}\small\item\em Queries the tree for the closest node to p constrained by the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} trying to improve an existing solution. Note that this function will only fill in the constrained node. If you want a node not constrained by any \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}, do an additional search with constraint = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree_a9044e64897cb18785f8f408efa9ed666}{Query\+Inside}} (Vector3 p, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint)
+\begin{DoxyCompactList}\small\item\em Searches for a node which contains the specified point. If there are multiple nodes that contain the point any one of them may be returned. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_acbb29368ef3f48a2a43f2a98d8d2f29c}\label{class_pathfinding_1_1_b_b_tree_acbb29368ef3f48a2a43f2a98d8d2f29c}} 
+void {\bfseries On\+Draw\+Gizmos} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_a09ecf29ab1d1af3ea45fd2dcf7ba9db2}\label{class_pathfinding_1_1_b_b_tree_a09ecf29ab1d1af3ea45fd2dcf7ba9db2}} 
+Rect {\bfseries Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Axis Aligned Bounding Box Tree. Holds a bounding box tree of triangles. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_a7e784183948754d9cf30e2595a23c31b}\label{class_pathfinding_1_1_b_b_tree_a7e784183948754d9cf30e2595a23c31b}} 
+\index{Pathfinding.BBTree@{Pathfinding.BBTree}!Clear@{Clear}}
+\index{Clear@{Clear}!Pathfinding.BBTree@{Pathfinding.BBTree}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Pathfinding.\+B\+B\+Tree.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the tree. Note that references to old nodes will still be intact so the GC cannot immediately collect them. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_adcc1ddd7031cc77b01c016080cd5f171}\label{class_pathfinding_1_1_b_b_tree_adcc1ddd7031cc77b01c016080cd5f171}} 
+\index{Pathfinding.BBTree@{Pathfinding.BBTree}!QueryClosest@{QueryClosest}}
+\index{QueryClosest@{QueryClosest}!Pathfinding.BBTree@{Pathfinding.BBTree}}
+\doxysubsubsection{\texorpdfstring{QueryClosest()}{QueryClosest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+B\+B\+Tree.\+Query\+Closest (\begin{DoxyParamCaption}\item[{Vector3}]{p,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint,  }\item[{out float}]{distance }\end{DoxyParamCaption})}
+
+
+
+Queries the tree for the closest node to p constrained by the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. Note that this function will only fill in the constrained node. If you want a node not constrained by any \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}, do an additional search with constraint = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_a16f4cecd2141ec3e4b3e65e87a7a758d}\label{class_pathfinding_1_1_b_b_tree_a16f4cecd2141ec3e4b3e65e87a7a758d}} 
+\index{Pathfinding.BBTree@{Pathfinding.BBTree}!QueryClosest@{QueryClosest}}
+\index{QueryClosest@{QueryClosest}!Pathfinding.BBTree@{Pathfinding.BBTree}}
+\doxysubsubsection{\texorpdfstring{QueryClosest()}{QueryClosest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+B\+B\+Tree.\+Query\+Closest (\begin{DoxyParamCaption}\item[{Vector3}]{p,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint,  }\item[{ref float}]{distance,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}}}]{previous }\end{DoxyParamCaption})}
+
+
+
+Queries the tree for the closest node to p constrained by the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} trying to improve an existing solution. Note that this function will only fill in the constrained node. If you want a node not constrained by any \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}, do an additional search with constraint = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Point to search around\\
+\hline
+{\em constraint} & Optionally set to constrain which nodes to return\\
+\hline
+{\em distance} & The best distance for the previous solution. Will be updated with the best distance after this search. Will be positive infinity if no node could be found. Set to positive infinity if there was no previous solution.\\
+\hline
+{\em previous} & This search will start from the previous \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} and improve it if possible. Even if the search fails on this call, the solution will never be worse than previous.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_a2c800bef9dae4abba481781a3ab6294d}\label{class_pathfinding_1_1_b_b_tree_a2c800bef9dae4abba481781a3ab6294d}} 
+\index{Pathfinding.BBTree@{Pathfinding.BBTree}!QueryClosestXZ@{QueryClosestXZ}}
+\index{QueryClosestXZ@{QueryClosestXZ}!Pathfinding.BBTree@{Pathfinding.BBTree}}
+\doxysubsubsection{\texorpdfstring{QueryClosestXZ()}{QueryClosestXZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+B\+B\+Tree.\+Query\+Closest\+XZ (\begin{DoxyParamCaption}\item[{Vector3}]{p,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint,  }\item[{ref float}]{distance,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}}}]{previous }\end{DoxyParamCaption})}
+
+
+
+Queries the tree for the closest node to p constrained by the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} trying to improve an existing solution. Note that this function will only fill in the constrained node. If you want a node not constrained by any \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}, do an additional search with constraint = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}} 
+
+This method will completely ignore any Y-\/axis differences in positions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Point to search around\\
+\hline
+{\em constraint} & Optionally set to constrain which nodes to return\\
+\hline
+{\em distance} & The best distance for the previous solution. Will be updated with the best distance after this search. Will be positive infinity if no node could be found. Set to positive infinity if there was no previous solution.\\
+\hline
+{\em previous} & This search will start from the previous \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} and improve it if possible. Even if the search fails on this call, the solution will never be worse than previous. Note that the distance parameter need to be configured with the distance for the previous result otherwise it may get overwritten even though it was actually closer.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_a9044e64897cb18785f8f408efa9ed666}\label{class_pathfinding_1_1_b_b_tree_a9044e64897cb18785f8f408efa9ed666}} 
+\index{Pathfinding.BBTree@{Pathfinding.BBTree}!QueryInside@{QueryInside}}
+\index{QueryInside@{QueryInside}!Pathfinding.BBTree@{Pathfinding.BBTree}}
+\doxysubsubsection{\texorpdfstring{QueryInside()}{QueryInside()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}} Pathfinding.\+B\+B\+Tree.\+Query\+Inside (\begin{DoxyParamCaption}\item[{Vector3}]{p,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint }\end{DoxyParamCaption})}
+
+
+
+Searches for a node which contains the specified point. If there are multiple nodes that contain the point any one of them may be returned. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node_a08e2dc047ba4fea4fd49a884874fdbfd}{Triangle\+Mesh\+Node.\+Contains\+Point}}\mbox{\Hypertarget{class_pathfinding_1_1_b_b_tree_aeb465d3c6c9c788108bf1dbc3707a9b5}\label{class_pathfinding_1_1_b_b_tree_aeb465d3c6c9c788108bf1dbc3707a9b5}} 
+\index{Pathfinding.BBTree@{Pathfinding.BBTree}!RebuildFrom@{RebuildFrom}}
+\index{RebuildFrom@{RebuildFrom}!Pathfinding.BBTree@{Pathfinding.BBTree}}
+\doxysubsubsection{\texorpdfstring{RebuildFrom()}{RebuildFrom()}}
+{\footnotesize\ttfamily void Pathfinding.\+B\+B\+Tree.\+Rebuild\+From (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}}\mbox{[}$\,$\mbox{]}}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Rebuilds the tree using the specified nodes 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Utilities/B\+B\+Tree.\+cs\end{DoxyCompactItemize}

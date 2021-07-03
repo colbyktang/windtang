@@ -1,0 +1,105 @@
+\hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53}{}\doxysection{Anima2\+D.\+Animation\+Window\+Impl\+\_\+51\+\_\+52\+\_\+53 Class Reference}
+\label{class_anima2_d_1_1_animation_window_impl__51__52__53}\index{Anima2D.AnimationWindowImpl\_51\_52\_53@{Anima2D.AnimationWindowImpl\_51\_52\_53}}
+
+
+Inheritance diagram for Anima2\+D.\+Animation\+Window\+Impl\+\_\+51\+\_\+52\+\_\+53\+:
+% FIG 0
+
+
+Collaboration diagram for Anima2\+D.\+Animation\+Window\+Impl\+\_\+51\+\_\+52\+\_\+53\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a499a7a7d0516c348115a40549b1e5f00}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a499a7a7d0516c348115a40549b1e5f00}} 
+virtual void {\bfseries Initialize\+Reflection} ()
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a5b2e48d46a762af17e108b06f1ba5d91}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a5b2e48d46a762af17e108b06f1ba5d91}} 
+float {\bfseries Frame\+To\+Time} (int frame)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a64fbc456ff6c2657a303bff5554885b4}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a64fbc456ff6c2657a303bff5554885b4}} 
+float {\bfseries Time\+To\+Frame} (float time)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a0d1dfd498f903861e3021a1214d0bdfb}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a0d1dfd498f903861e3021a1214d0bdfb}} 
+virtual void {\bfseries Create\+Default\+Curve} (Editor\+Curve\+Binding binding)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_ab60baef6f9313612e9ffe14227a3c6e0}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_ab60baef6f9313612e9ffe14227a3c6e0}} 
+virtual void {\bfseries Add\+Key} (Editor\+Curve\+Binding binding, float time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a1b4d36775400dbfb229ebf07045e7c76}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a1b4d36775400dbfb229ebf07045e7c76}} 
+object {\bfseries Animation\+Key\+Time} (float time, float frame\+Rate)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a37f82de264b56ce60c8dbd576a183738}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a37f82de264b56ce60c8dbd576a183738}} 
+Editor\+Curve\+Binding {\bfseries Get\+Binding} (object curve\+Object)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a1466e2ce2b38f8508cf526f9898cf168}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a1466e2ce2b38f8508cf526f9898cf168}} 
+object {\bfseries Get\+Curve} (Editor\+Curve\+Binding binding)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a407d47f15ca4904c5f4f014165f6439e}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a407d47f15ca4904c5f4f014165f6439e}} 
+void {\bfseries Save\+Curve} (object \+\_\+curve)
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_aaa6fd3cdcdf46c98a548ff0d21dec593}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_aaa6fd3cdcdf46c98a548ff0d21dec593}} 
+virtual I\+List {\bfseries Get\+All\+Curves} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a47b9bb5cca1bbb1cedeefe62c90957cd}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a47b9bb5cca1bbb1cedeefe62c90957cd}} 
+Type {\bfseries m\+\_\+\+Animation\+Window\+Type} = typeof(Editor\+Window).Assembly.\+Get\+Type(\char`\"{}Unity\+Editor.\+Animation\+Window\char`\"{})
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a1fe37b7d1c2f63ba6690c849c6b6cd02}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a1fe37b7d1c2f63ba6690c849c6b6cd02}} 
+Type {\bfseries m\+\_\+\+Animation\+Window\+State\+Type} = typeof(Editor\+Window).Assembly.\+Get\+Type(\char`\"{}Unity\+Editor\+Internal.\+Animation\+Window\+State\char`\"{})
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a4cfbbb2632e990004dcc783a166ac970}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a4cfbbb2632e990004dcc783a166ac970}} 
+Type {\bfseries m\+\_\+\+Animation\+Window\+Utility\+Type} = typeof(Editor\+Window).Assembly.\+Get\+Type(\char`\"{}Unity\+Editor\+Internal.\+Animation\+Window\+Utility\char`\"{})
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a91686907ae44169688c8032049ba179d}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a91686907ae44169688c8032049ba179d}} 
+Type {\bfseries m\+\_\+\+Animation\+Window\+Curve\+Type} = typeof(Editor\+Window).Assembly.\+Get\+Type(\char`\"{}Unity\+Editor\+Internal.\+Animation\+Window\+Curve\char`\"{})
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_ab8dcc136b7bb281d6c896036134d7f0f}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_ab8dcc136b7bb281d6c896036134d7f0f}} 
+Type {\bfseries m\+\_\+\+Animation\+Key\+Time\+Type} = typeof(Editor\+Window).Assembly.\+Get\+Type(\char`\"{}Unity\+Editor\+Internal.\+Animation\+Key\+Time\char`\"{})
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a010a03f6e9a2db464151531fef822920}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a010a03f6e9a2db464151531fef822920}} 
+Type {\bfseries m\+\_\+\+Anim\+Editor\+Type} = typeof(Editor\+Window).Assembly.\+Get\+Type(\char`\"{}Unity\+Editor.\+Anim\+Editor\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a3c60915289c28572421e8afd589afff1}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a3c60915289c28572421e8afd589afff1}} 
+Editor\+Window {\bfseries animation\+Window}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a2f7bfdced698a362c74c890cc79adea7}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a2f7bfdced698a362c74c890cc79adea7}} 
+object {\bfseries state}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a06c5e1d8070d0dfd115e5ff9b8e62f40}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a06c5e1d8070d0dfd115e5ff9b8e62f40}} 
+virtual int {\bfseries frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a89b632c0d196dc0082a4c5efc84a5468}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a89b632c0d196dc0082a4c5efc84a5468}} 
+virtual bool {\bfseries recording}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a80c6d184e0f6e873c3da87b6ec0bcf0f}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a80c6d184e0f6e873c3da87b6ec0bcf0f}} 
+Animation\+Clip {\bfseries active\+Animation\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a7c36153dc821807e8865318b17cb73c3}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a7c36153dc821807e8865318b17cb73c3}} 
+Game\+Object {\bfseries active\+Game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_afde6c20f4f3567f6f9dd66c517accded}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_afde6c20f4f3567f6f9dd66c517accded}} 
+Game\+Object {\bfseries root\+Game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a119d895ad7be787db723f4b23640afcf}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a119d895ad7be787db723f4b23640afcf}} 
+int {\bfseries refresh}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a9421cc3682d2545030570f487e778e55}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a9421cc3682d2545030570f487e778e55}} 
+float {\bfseries current\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_anima2_d_1_1_animation_window_impl__51__52__53_a0bdc0414b97c19e8efc98ea1c96d1d78}\label{class_anima2_d_1_1_animation_window_impl__51__52__53_a0bdc0414b97c19e8efc98ea1c96d1d78}} 
+bool {\bfseries playing}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Animation\+Window\+Extra/Animation\+Window\+Impl\+\_\+51\+\_\+52\+\_\+53.\+cs\end{DoxyCompactItemize}

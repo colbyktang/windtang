@@ -1,0 +1,162 @@
+\hypertarget{struct_pathfinding_1_1_graph_mask}{}\doxysection{Pathfinding.\+Graph\+Mask Struct Reference}
+\label{struct_pathfinding_1_1_graph_mask}\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+
+
+Holds a bitmask of graphs. This bitmask can hold up to 32 graphs.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a85bbbb0a586f7f1329766d991865bf43}\label{struct_pathfinding_1_1_graph_mask_a85bbbb0a586f7f1329766d991865bf43}} 
+{\bfseries Graph\+Mask} (int \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_a20699e7f668f7b39d4224abfefe87a76}{value}})
+\item 
+bool \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_ad43d24189202db7022bb38dd9f4596d9}{Contains}} (int graph\+Index)
+\begin{DoxyCompactList}\small\item\em True if this mask contains the graph with the given graph index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a547191c4733df44ae19ffe675bcafbc6}\label{struct_pathfinding_1_1_graph_mask_a547191c4733df44ae19ffe675bcafbc6}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a293656722bd66c3e42a5cce9245b16af}\label{struct_pathfinding_1_1_graph_mask_a293656722bd66c3e42a5cce9245b16af}} 
+static implicit {\bfseries operator int} (\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask)
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_aedd59beb987e2f2e866c2df402a8283d}\label{struct_pathfinding_1_1_graph_mask_aedd59beb987e2f2e866c2df402a8283d}} 
+static implicit {\bfseries operator Graph\+Mask} (int mask)
+\item 
+static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_a15345458240189e349f6fa5aecc3b53a}{operator\&}} (\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} lhs, \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} rhs)
+\begin{DoxyCompactList}\small\item\em Combines two masks to form the intersection between them \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_adf49944758e471099afd49903322b3b3}{operator$\vert$}} (\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} lhs, \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} rhs)
+\begin{DoxyCompactList}\small\item\em Combines two masks to form the union of them \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_a1455b0e135b1d93547586a6e0a00932f}{operator$\sim$}} (\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} lhs)
+\begin{DoxyCompactList}\small\item\em Inverts the mask \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_a3727cd739ffa419d7375c70d45bd6cf8}{From\+Graph}} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} graph)
+\begin{DoxyCompactList}\small\item\em A bitmask containing the given graph \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{From\+Graph\+Name}} (string graph\+Name)
+\begin{DoxyCompactList}\small\item\em A bitmask containing the first graph with the given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_a20699e7f668f7b39d4224abfefe87a76}{value}}
+\begin{DoxyCompactList}\small\item\em Bitmask representing the mask \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_a2e212d93d5d3c1e12e0dfcca6f11dba6}{everything}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A mask containing every graph \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds a bitmask of graphs. This bitmask can hold up to 32 graphs. 
+
+The bitmask can be converted to and from integers implicitly.
+
+{\ttfamily  \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask1 = \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{Graph\+Mask.\+From\+Graph\+Name}}(\char`\"{}\+My Grid Graph\char`\"{}); \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask2 = \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{Graph\+Mask.\+From\+Graph\+Name}}(\char`\"{}\+My Other Grid Graph\char`\"{});}
+
+{\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} nn = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}{N\+N\+Constraint.\+Default}};}
+
+{\ttfamily nn.\+graph\+Mask = mask1 $\vert$ mask2;}
+
+{\ttfamily // Find the node closest to some\+Point which is either in \textquotesingle{}My Grid Graph\textquotesingle{} OR in \textquotesingle{}My Other Grid Graph\textquotesingle{} var info = Astar\+Path.\+active.\+Get\+Nearest(some\+Point, nn); }
+
+See\+: bitmasks (view in online documentation for working links)
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_ad43d24189202db7022bb38dd9f4596d9}\label{struct_pathfinding_1_1_graph_mask_ad43d24189202db7022bb38dd9f4596d9}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!Contains@{Contains}}
+\index{Contains@{Contains}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Mask.\+Contains (\begin{DoxyParamCaption}\item[{int}]{graph\+Index }\end{DoxyParamCaption})}
+
+
+
+True if this mask contains the graph with the given graph index 
+
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a3727cd739ffa419d7375c70d45bd6cf8}\label{struct_pathfinding_1_1_graph_mask_a3727cd739ffa419d7375c70d45bd6cf8}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!FromGraph@{FromGraph}}
+\index{FromGraph@{FromGraph}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{FromGraph()}{FromGraph()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+Graph\+Mask.\+From\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A bitmask containing the given graph 
+
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}\label{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!FromGraphName@{FromGraphName}}
+\index{FromGraphName@{FromGraphName}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{FromGraphName()}{FromGraphName()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+Graph\+Mask.\+From\+Graph\+Name (\begin{DoxyParamCaption}\item[{string}]{graph\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A bitmask containing the first graph with the given name. 
+
+{\ttfamily  \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask1 = \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{Graph\+Mask.\+From\+Graph\+Name}}(\char`\"{}\+My Grid Graph\char`\"{}); \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask2 = \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{Graph\+Mask.\+From\+Graph\+Name}}(\char`\"{}\+My Other Grid Graph\char`\"{});}
+
+{\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} nn = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}{N\+N\+Constraint.\+Default}};}
+
+{\ttfamily nn.\+graph\+Mask = mask1 $\vert$ mask2;}
+
+{\ttfamily // Find the node closest to some\+Point which is either in \textquotesingle{}My Grid Graph\textquotesingle{} OR in \textquotesingle{}My Other Grid Graph\textquotesingle{} var info = Astar\+Path.\+active.\+Get\+Nearest(some\+Point, nn); }\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a15345458240189e349f6fa5aecc3b53a}\label{struct_pathfinding_1_1_graph_mask_a15345458240189e349f6fa5aecc3b53a}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!operator\&@{operator\&}}
+\index{operator\&@{operator\&}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{operator\&()}{operator\&()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+Graph\+Mask.\+operator\& (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}}}]{lhs,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Combines two masks to form the intersection between them 
+
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_adf49944758e471099afd49903322b3b3}\label{struct_pathfinding_1_1_graph_mask_adf49944758e471099afd49903322b3b3}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+Graph\+Mask.\+operator$\vert$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}}}]{lhs,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Combines two masks to form the union of them 
+
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a1455b0e135b1d93547586a6e0a00932f}\label{struct_pathfinding_1_1_graph_mask_a1455b0e135b1d93547586a6e0a00932f}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!operator$\sim$@{operator$\sim$}}
+\index{operator$\sim$@{operator$\sim$}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{operator$\sim$()}{operator~()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+Graph\+Mask.\+operator$\sim$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}}}]{lhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inverts the mask 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a20699e7f668f7b39d4224abfefe87a76}\label{struct_pathfinding_1_1_graph_mask_a20699e7f668f7b39d4224abfefe87a76}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!value@{value}}
+\index{value@{value}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int Pathfinding.\+Graph\+Mask.\+value}
+
+
+
+Bitmask representing the mask 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_graph_mask_a2e212d93d5d3c1e12e0dfcca6f11dba6}\label{struct_pathfinding_1_1_graph_mask_a2e212d93d5d3c1e12e0dfcca6f11dba6}} 
+\index{Pathfinding.GraphMask@{Pathfinding.GraphMask}!everything@{everything}}
+\index{everything@{everything}!Pathfinding.GraphMask@{Pathfinding.GraphMask}}
+\doxysubsubsection{\texorpdfstring{everything}{everything}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+Graph\+Mask.\+everything\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+A mask containing every graph 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/astarclasses.\+cs\end{DoxyCompactItemize}

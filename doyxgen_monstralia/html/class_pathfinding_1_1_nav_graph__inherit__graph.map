@@ -1,0 +1,8 @@
+<map id="Pathfinding.NavGraph" name="Pathfinding.NavGraph">
+<area shape="rect" id="node1" title="Base class for all graphs" alt="" coords="192,80,339,107"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_grid_graph.html" title="Generates a grid of nodes. The GridGraph does exactly what the name implies, generates nodes in a gri..." alt="" coords="5,155,155,181"/>
+<area shape="rect" id="node4" href="$class_pathfinding_1_1_navmesh_base.html" title="Base class for RecastGraph and NavMeshGraph" alt="" coords="179,155,352,181"/>
+<area shape="rect" id="node6" href="$class_pathfinding_1_1_point_graph.html" title="Basic point graph." alt="" coords="376,155,531,181"/>
+<area shape="rect" id="node2" href="$interface_pathfinding_1_1_i_graph_internals.html" title="Exposes internal methods for graphs. This is used to hide methods that should not be used by any user..." alt="" coords="211,5,320,32"/>
+<area shape="rect" id="node5" href="$class_pathfinding_1_1_nav_mesh_graph.html" title="Generates graphs based on navmeshes." alt="" coords="176,229,355,256"/>
+</map>

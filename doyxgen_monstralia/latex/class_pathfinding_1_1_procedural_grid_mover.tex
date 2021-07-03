@@ -1,0 +1,114 @@
+\hypertarget{class_pathfinding_1_1_procedural_grid_mover}{}\doxysection{Pathfinding.\+Procedural\+Grid\+Mover Class Reference}
+\label{class_pathfinding_1_1_procedural_grid_mover}\index{Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}}
+
+
+Moves a grid graph to follow a target.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Procedural\+Grid\+Mover\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Procedural\+Grid\+Mover\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_procedural_grid_mover_aa807067047d3ef5fdbc13c81dbf05c33}{Update\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Updates the graph asynchronously. This will move the graph so that the target\textquotesingle{}s position is the center of the graph. If the graph is already being updated, the call will be ignored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_procedural_grid_mover_a2035c33c5991ed336beb02ab6cea1c08}{update\+Distance}} = 10
+\begin{DoxyCompactList}\small\item\em Graph will be updated if the target is more than this number of nodes from the graph center. Note that this is in nodes, not world units. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_pathfinding_1_1_procedural_grid_mover_a909d4ec8e3e60bcb7719fd73c4cd65fd}{target}}
+\begin{DoxyCompactList}\small\item\em Graph will be moved to follow this target \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_procedural_grid_mover_af7dfc88adbcb5851c573c9c414d3aaaf}{updating\+Graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True while the graph is being updated by this script \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Moves a grid graph to follow a target. 
+
+Attach this to some object in the scene and assign the target to e.\+g the player. Then the graph will follow that object around as it moves.
+
+This is useful if pathfinding is only necessary in a small region around an object (for example the player). It makes it possible to have vast open worlds (maybe procedurally generated) and still be able to use pathfinding on them.
+
+When the graph is moved you may notice an fps drop. If this grows too large you can try a few things\+:
+\begin{DoxyItemize}
+\item Reduce the \mbox{\hyperlink{class_pathfinding_1_1_procedural_grid_mover_a2035c33c5991ed336beb02ab6cea1c08}{update\+Distance}}. This will make the updates smaller but more frequent. This only works to some degree however since an update has an inherent overhead.
+\item Reduce the grid size.
+\item Turn on multithreading (A$\ast$ Inspector -\/$>$ Settings)
+\item Disable the flood\+Fill field. However note the restrictions on when this can be done.
+\item Disable Height Testing or Collision Testing in the grid graph. This can give a performance boost since fewer calls to the physics engine need to be done.
+\item Avoid using any erosion in the grid graph settings. This is relatively slow.
+\end{DoxyItemize}
+
+Make sure you have \textquotesingle{}Show Graphs\textquotesingle{} disabled in the A$\ast$ inspector since gizmos in the scene view can take some time to update when the graph moves and thus make it seem like this script is slower than it actually is.
+
+See\+: Take a look at the example scene called \char`\"{}\+Procedural\char`\"{} for an example of how to use this script
+
+Note\+: This class does not support the erosion setting on grid graphs. You can instead try to increase the \textquotesingle{}diameter\textquotesingle{} setting under the Grid Graph Settings -\/$>$ Collision Testing header to achieve a similar effect. However even if it did support erosion you would most likely not want to use it with this script since erosion would increase the number of nodes that had to be updated when the graph moved by a large amount.
+
+Version\+: Since 3.\+6.\+8 this class can handle graph rotation other options such as isometric angle and aspect ratio. Version\+: After 3.\+6.\+8 this class can also handle layered grid graphs.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_procedural_grid_mover_aa807067047d3ef5fdbc13c81dbf05c33}\label{class_pathfinding_1_1_procedural_grid_mover_aa807067047d3ef5fdbc13c81dbf05c33}} 
+\index{Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}!UpdateGraph@{UpdateGraph}}
+\index{UpdateGraph@{UpdateGraph}!Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}}
+\doxysubsubsection{\texorpdfstring{UpdateGraph()}{UpdateGraph()}}
+{\footnotesize\ttfamily void Pathfinding.\+Procedural\+Grid\+Mover.\+Update\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the graph asynchronously. This will move the graph so that the target\textquotesingle{}s position is the center of the graph. If the graph is already being updated, the call will be ignored. 
+
+The image below shows which nodes will be updated when the graph moves. The whole graph is not recalculated each time it is moved, but only those nodes that have to be updated, the rest will keep their old values. The image is a bit simplified but it shows the main idea. \mbox{[}Open online documentation to see images\mbox{]}
+
+If you want to move the graph synchronously then call {\ttfamily  Astar\+Path.\+active.\+Flush\+Work\+Items(); } Immediately after you have called this method.
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_procedural_grid_mover_a909d4ec8e3e60bcb7719fd73c4cd65fd}\label{class_pathfinding_1_1_procedural_grid_mover_a909d4ec8e3e60bcb7719fd73c4cd65fd}} 
+\index{Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}!target@{target}}
+\index{target@{target}!Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily Transform Pathfinding.\+Procedural\+Grid\+Mover.\+target}
+
+
+
+Graph will be moved to follow this target 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_procedural_grid_mover_a2035c33c5991ed336beb02ab6cea1c08}\label{class_pathfinding_1_1_procedural_grid_mover_a2035c33c5991ed336beb02ab6cea1c08}} 
+\index{Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}!updateDistance@{updateDistance}}
+\index{updateDistance@{updateDistance}!Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}}
+\doxysubsubsection{\texorpdfstring{updateDistance}{updateDistance}}
+{\footnotesize\ttfamily float Pathfinding.\+Procedural\+Grid\+Mover.\+update\+Distance = 10}
+
+
+
+Graph will be updated if the target is more than this number of nodes from the graph center. Note that this is in nodes, not world units. 
+
+Version\+: The unit was changed to nodes instead of world units in 3.\+6.\+8.
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_procedural_grid_mover_af7dfc88adbcb5851c573c9c414d3aaaf}\label{class_pathfinding_1_1_procedural_grid_mover_af7dfc88adbcb5851c573c9c414d3aaaf}} 
+\index{Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}!updatingGraph@{updatingGraph}}
+\index{updatingGraph@{updatingGraph}!Pathfinding.ProceduralGridMover@{Pathfinding.ProceduralGridMover}}
+\doxysubsubsection{\texorpdfstring{updatingGraph}{updatingGraph}}
+{\footnotesize\ttfamily bool Pathfinding.\+Procedural\+Grid\+Mover.\+updating\+Graph\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True while the graph is being updated by this script 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Example\+Scenes/\+Example12\+\_\+\+Procedural/Procedural\+Grid\+Mover.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="EmotionsGameManager" name="EmotionsGameManager">
+<area shape="rect" id="node1" title=" " alt="" coords="332,46,495,73"/>
+<area shape="rect" id="node2" href="$class_abstract_game_director.html" title=" " alt="" coords="23,5,209,47"/>
+<area shape="rect" id="node3" href="$struct_emotions_game_manager_1_1_emotions_level_config.html" title=" " alt="" coords="5,71,227,112"/>
+</map>

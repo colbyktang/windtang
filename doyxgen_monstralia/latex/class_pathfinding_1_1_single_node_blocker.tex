@@ -1,0 +1,96 @@
+\hypertarget{class_pathfinding_1_1_single_node_blocker}{}\doxysection{Pathfinding.\+Single\+Node\+Blocker Class Reference}
+\label{class_pathfinding_1_1_single_node_blocker}\index{Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}}
+
+
+Blocks single nodes in a graph.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Single\+Node\+Blocker\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Single\+Node\+Blocker\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_single_node_blocker_ac767e993fed3f993ea8a8804a2803ef8}{Block\+At\+Current\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Block node closest to the position of this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_single_node_blocker_aabb8d916cf9c08f1c6590208518e630f}{Block\+At}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Block node closest to the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_single_node_blocker_af45802c1fd82d1e4ae0c9d598c9271c3}{Block}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Block specified node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_single_node_blocker_a5d6aa9ca000f1e54b256179848b02645}{Unblock}} ()
+\begin{DoxyCompactList}\small\item\em Unblock the last node that was blocked (if any) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_single_node_blocker_a4b5b772c60241897f2ca5acefeec7a89}\label{class_pathfinding_1_1_single_node_blocker_a4b5b772c60241897f2ca5acefeec7a89}} 
+\mbox{\hyperlink{class_pathfinding_1_1_block_manager}{Block\+Manager}} {\bfseries manager}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_single_node_blocker_a24f2c453d6dad1a9b4795195aa233e18}\label{class_pathfinding_1_1_single_node_blocker_a24f2c453d6dad1a9b4795195aa233e18}} 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} {\bfseries last\+Blocked}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Blocks single nodes in a graph. 
+
+This is useful in turn based games where you want units to avoid all other units while pathfinding but not be blocked by itself.
+
+Note\+: This cannot be used together with any movement script as the nodes are not blocked in the normal way. See\+: Turn\+Based\+AI for example usage
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_block_manager}{Block\+Manager}} See\+: turnbased (view in online documentation for working links)
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_single_node_blocker_af45802c1fd82d1e4ae0c9d598c9271c3}\label{class_pathfinding_1_1_single_node_blocker_af45802c1fd82d1e4ae0c9d598c9271c3}} 
+\index{Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}!Block@{Block}}
+\index{Block@{Block}!Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}}
+\doxysubsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily void Pathfinding.\+Single\+Node\+Blocker.\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})}
+
+
+
+Block specified node. 
+
+Will unblock the last node that was reserved (if any)\mbox{\Hypertarget{class_pathfinding_1_1_single_node_blocker_aabb8d916cf9c08f1c6590208518e630f}\label{class_pathfinding_1_1_single_node_blocker_aabb8d916cf9c08f1c6590208518e630f}} 
+\index{Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}!BlockAt@{BlockAt}}
+\index{BlockAt@{BlockAt}!Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}}
+\doxysubsubsection{\texorpdfstring{BlockAt()}{BlockAt()}}
+{\footnotesize\ttfamily void Pathfinding.\+Single\+Node\+Blocker.\+Block\+At (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+
+
+Block node closest to the specified position. 
+
+Will unblock the last node that was reserved (if any)\mbox{\Hypertarget{class_pathfinding_1_1_single_node_blocker_ac767e993fed3f993ea8a8804a2803ef8}\label{class_pathfinding_1_1_single_node_blocker_ac767e993fed3f993ea8a8804a2803ef8}} 
+\index{Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}!BlockAtCurrentPosition@{BlockAtCurrentPosition}}
+\index{BlockAtCurrentPosition@{BlockAtCurrentPosition}!Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}}
+\doxysubsubsection{\texorpdfstring{BlockAtCurrentPosition()}{BlockAtCurrentPosition()}}
+{\footnotesize\ttfamily void Pathfinding.\+Single\+Node\+Blocker.\+Block\+At\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block node closest to the position of this object. 
+
+Will unblock the last node that was reserved (if any)\mbox{\Hypertarget{class_pathfinding_1_1_single_node_blocker_a5d6aa9ca000f1e54b256179848b02645}\label{class_pathfinding_1_1_single_node_blocker_a5d6aa9ca000f1e54b256179848b02645}} 
+\index{Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}!Unblock@{Unblock}}
+\index{Unblock@{Unblock}!Pathfinding.SingleNodeBlocker@{Pathfinding.SingleNodeBlocker}}
+\doxysubsubsection{\texorpdfstring{Unblock()}{Unblock()}}
+{\footnotesize\ttfamily void Pathfinding.\+Single\+Node\+Blocker.\+Unblock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unblock the last node that was blocked (if any) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Turn\+Based/Single\+Node\+Blocker.\+cs\end{DoxyCompactItemize}

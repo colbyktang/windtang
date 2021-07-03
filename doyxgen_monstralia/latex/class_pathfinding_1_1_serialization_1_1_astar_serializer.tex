@@ -1,0 +1,200 @@
+\hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer}{}\doxysection{Pathfinding.\+Serialization.\+Astar\+Serializer Class Reference}
+\label{class_pathfinding_1_1_serialization_1_1_astar_serializer}\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+
+
+Handles low level serialization and deserialization of graph settings and data. Mostly for internal use. You can use the methods in the \mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}} class for higher level serialization and deserialization.  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Serialization.\+Astar\+Serializer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a3de3f739e5403143bf212953713b2004}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a3de3f739e5403143bf212953713b2004}} 
+{\bfseries Astar\+Serializer} (\mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}} data)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a33d321bfc5beb890abfc2ba12462f76b}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a33d321bfc5beb890abfc2ba12462f76b}} 
+{\bfseries Astar\+Serializer} (\mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}} data, \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_serialize_settings}{Serialize\+Settings}} settings)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a031b208199fe9c6068dc3b373d75afd9}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a031b208199fe9c6068dc3b373d75afd9}} 
+void {\bfseries Set\+Graph\+Index\+Offset} (int offset)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_aa7603c39d23fbbfa6671e29e04f470e5}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_aa7603c39d23fbbfa6671e29e04f470e5}} 
+uint {\bfseries Get\+Checksum} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a747b84f69e5515cb45574ae72041876a}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a747b84f69e5515cb45574ae72041876a}} 
+void {\bfseries Open\+Serialize} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a27103d5e13bc2d092fe9aeba6b88e622}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a27103d5e13bc2d092fe9aeba6b88e622}} 
+byte\mbox{[}$\,$\mbox{]} {\bfseries Close\+Serialize} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a5db4f657a7395ef865064fbffde751b0}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a5db4f657a7395ef865064fbffde751b0}} 
+void {\bfseries Serialize\+Graphs} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}\mbox{[}$\,$\mbox{]} \+\_\+graphs)
+\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_abdd6dc625deca5ed6e08a32fcab7d4be}{Serialize}} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} graph)
+\begin{DoxyCompactList}\small\item\em Serializes the graph settings to J\+S\+ON and returns the data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_ae36412e640cc19cf7ad9c246e47e0115}{Serialize\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Deprecated method to serialize node data. Deprecated\+: Not used anymore \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a5cb4fe92946a4e10e30d85a074001bc3}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a5cb4fe92946a4e10e30d85a074001bc3}} 
+void {\bfseries Serialize\+Extra\+Info} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a3355de62d3c3e1048caf9364832046af}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a3355de62d3c3e1048caf9364832046af}} 
+bool {\bfseries Open\+Deserialize} (byte\mbox{[}$\,$\mbox{]} bytes)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a4489588e9b1f582de3b4f6c230800c7e}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a4489588e9b1f582de3b4f6c230800c7e}} 
+void {\bfseries Close\+Deserialize} ()
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a8a4cae087fd69451bd69efb25fd13c2b}{Deserialize\+Graphs}} (System.\+Type\mbox{[}$\,$\mbox{]} available\+Graph\+Types)
+\begin{DoxyCompactList}\small\item\em Deserializes graph settings. Note\+: Stored in files named \char`\"{}graph$<$see cref=\char`\"{}.json\char`\"{}/$>$\char`\"{} where \# is the graph number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a829a251f3a1df8fc01b34978cde5af4c}{Deserialize\+Extra\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Deserializes extra graph info. Extra graph info is specified by the graph types. See\+: \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}{Pathfinding.\+Nav\+Graph.\+Deserialize\+Extra\+Info}} Note\+: Stored in files named \char`\"{}graph$<$see cref=\char`\"{}\+\_\+extra.\+binary\char`\"{}/$>$\char`\"{} where \# is the graph number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a26f6e4eb854861a10a97ad4d8ca3a695}{Post\+Deserialization}} ()
+\begin{DoxyCompactList}\small\item\em Calls Post\+Deserialization on all loaded graphs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a058faf7af3908c2787027e4fc31be905}{Deserialize\+Editor\+Settings\+Compatibility}} ()
+\begin{DoxyCompactList}\small\item\em Deserializes graph editor settings. For future compatibility this method does not assume that the graph\+Editors array matches the graphs array in order and/or count. It searches for a matching graph (matching if graph\+Editor.\+target == graph) for every graph editor. Multiple graph editors should not refer to the same graph.~\newline
+Note\+: Stored in files named \char`\"{}graph$<$see cref=\char`\"{}\+\_\+editor.\+json\char`\"{}/$>$\char`\"{} where \# is the graph number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a1bff987d085cf07a27ccc547687941ae}{Save\+To\+File}} (string path, byte\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Save the specified data at the specified path \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a82098bdab9d094ac7e565c84f678d49a}{Load\+From\+File}} (string path)
+\begin{DoxyCompactList}\small\item\em Load the specified data from the specified path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly System.\+Version \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a90215c0169de7fad279b46ba19fd6c06}{V3\+\_\+8\+\_\+3}} = new System.\+Version(3, 8, 3)
+\begin{DoxyCompactList}\small\item\em Cached version object for 3.\+8.\+3 \end{DoxyCompactList}\item 
+static readonly System.\+Version \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a23624de309b4e4117399c9b1aaa500f1}{V3\+\_\+9\+\_\+0}} = new System.\+Version(3, 9, 0)
+\begin{DoxyCompactList}\small\item\em Cached version object for 3.\+9.\+0 \end{DoxyCompactList}\item 
+static readonly System.\+Version \mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_astar_serializer_a8fc08a58399e887d61bb51a3b63334fb}{V4\+\_\+1\+\_\+0}} = new System.\+Version(4, 1, 0)
+\begin{DoxyCompactList}\small\item\em Cached version object for 4.\+1.\+0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles low level serialization and deserialization of graph settings and data. Mostly for internal use. You can use the methods in the \mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}} class for higher level serialization and deserialization. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a058faf7af3908c2787027e4fc31be905}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a058faf7af3908c2787027e4fc31be905}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!DeserializeEditorSettingsCompatibility@{DeserializeEditorSettingsCompatibility}}
+\index{DeserializeEditorSettingsCompatibility@{DeserializeEditorSettingsCompatibility}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{DeserializeEditorSettingsCompatibility()}{DeserializeEditorSettingsCompatibility()}}
+{\footnotesize\ttfamily void Pathfinding.\+Serialization.\+Astar\+Serializer.\+Deserialize\+Editor\+Settings\+Compatibility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deserializes graph editor settings. For future compatibility this method does not assume that the graph\+Editors array matches the graphs array in order and/or count. It searches for a matching graph (matching if graph\+Editor.\+target == graph) for every graph editor. Multiple graph editors should not refer to the same graph.~\newline
+Note\+: Stored in files named \char`\"{}graph$<$see cref=\char`\"{}\+\_\+editor.\+json\char`\"{}/$>$\char`\"{} where \# is the graph number. 
+
+Note\+: This method is only used for compatibility, newer versions store everything in the graph.\+serialized\+Editor\+Settings field which is already serialized.\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a829a251f3a1df8fc01b34978cde5af4c}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a829a251f3a1df8fc01b34978cde5af4c}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!DeserializeExtraInfo@{DeserializeExtraInfo}}
+\index{DeserializeExtraInfo@{DeserializeExtraInfo}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{DeserializeExtraInfo()}{DeserializeExtraInfo()}}
+{\footnotesize\ttfamily void Pathfinding.\+Serialization.\+Astar\+Serializer.\+Deserialize\+Extra\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deserializes extra graph info. Extra graph info is specified by the graph types. See\+: \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}{Pathfinding.\+Nav\+Graph.\+Deserialize\+Extra\+Info}} Note\+: Stored in files named \char`\"{}graph$<$see cref=\char`\"{}\+\_\+extra.\+binary\char`\"{}/$>$\char`\"{} where \# is the graph number. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a8a4cae087fd69451bd69efb25fd13c2b}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a8a4cae087fd69451bd69efb25fd13c2b}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!DeserializeGraphs@{DeserializeGraphs}}
+\index{DeserializeGraphs@{DeserializeGraphs}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{DeserializeGraphs()}{DeserializeGraphs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} \mbox{[}$\,$\mbox{]} Pathfinding.\+Serialization.\+Astar\+Serializer.\+Deserialize\+Graphs (\begin{DoxyParamCaption}\item[{System.\+Type\mbox{[}$\,$\mbox{]}}]{available\+Graph\+Types }\end{DoxyParamCaption})}
+
+
+
+Deserializes graph settings. Note\+: Stored in files named \char`\"{}graph$<$see cref=\char`\"{}.json\char`\"{}/$>$\char`\"{} where \# is the graph number. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a82098bdab9d094ac7e565c84f678d49a}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a82098bdab9d094ac7e565c84f678d49a}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!LoadFromFile@{LoadFromFile}}
+\index{LoadFromFile@{LoadFromFile}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{LoadFromFile()}{LoadFromFile()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} Pathfinding.\+Serialization.\+Astar\+Serializer.\+Load\+From\+File (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load the specified data from the specified path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a26f6e4eb854861a10a97ad4d8ca3a695}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a26f6e4eb854861a10a97ad4d8ca3a695}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!PostDeserialization@{PostDeserialization}}
+\index{PostDeserialization@{PostDeserialization}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{PostDeserialization()}{PostDeserialization()}}
+{\footnotesize\ttfamily void Pathfinding.\+Serialization.\+Astar\+Serializer.\+Post\+Deserialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls Post\+Deserialization on all loaded graphs 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a1bff987d085cf07a27ccc547687941ae}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a1bff987d085cf07a27ccc547687941ae}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!SaveToFile@{SaveToFile}}
+\index{SaveToFile@{SaveToFile}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{SaveToFile()}{SaveToFile()}}
+{\footnotesize\ttfamily static void Pathfinding.\+Serialization.\+Astar\+Serializer.\+Save\+To\+File (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Save the specified data at the specified path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_abdd6dc625deca5ed6e08a32fcab7d4be}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_abdd6dc625deca5ed6e08a32fcab7d4be}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Pathfinding.\+Serialization.\+Astar\+Serializer.\+Serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}}]{graph }\end{DoxyParamCaption})}
+
+
+
+Serializes the graph settings to J\+S\+ON and returns the data 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_ae36412e640cc19cf7ad9c246e47e0115}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_ae36412e640cc19cf7ad9c246e47e0115}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!SerializeNodes@{SerializeNodes}}
+\index{SerializeNodes@{SerializeNodes}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{SerializeNodes()}{SerializeNodes()}}
+{\footnotesize\ttfamily void Pathfinding.\+Serialization.\+Astar\+Serializer.\+Serialize\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deprecated method to serialize node data. Deprecated\+: Not used anymore 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a90215c0169de7fad279b46ba19fd6c06}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a90215c0169de7fad279b46ba19fd6c06}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!V3\_8\_3@{V3\_8\_3}}
+\index{V3\_8\_3@{V3\_8\_3}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{V3\_8\_3}{V3\_8\_3}}
+{\footnotesize\ttfamily readonly System.\+Version Pathfinding.\+Serialization.\+Astar\+Serializer.\+V3\+\_\+8\+\_\+3 = new System.\+Version(3, 8, 3)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cached version object for 3.\+8.\+3 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a23624de309b4e4117399c9b1aaa500f1}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a23624de309b4e4117399c9b1aaa500f1}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!V3\_9\_0@{V3\_9\_0}}
+\index{V3\_9\_0@{V3\_9\_0}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{V3\_9\_0}{V3\_9\_0}}
+{\footnotesize\ttfamily readonly System.\+Version Pathfinding.\+Serialization.\+Astar\+Serializer.\+V3\+\_\+9\+\_\+0 = new System.\+Version(3, 9, 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cached version object for 3.\+9.\+0 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_serialization_1_1_astar_serializer_a8fc08a58399e887d61bb51a3b63334fb}\label{class_pathfinding_1_1_serialization_1_1_astar_serializer_a8fc08a58399e887d61bb51a3b63334fb}} 
+\index{Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}!V4\_1\_0@{V4\_1\_0}}
+\index{V4\_1\_0@{V4\_1\_0}!Pathfinding.Serialization.AstarSerializer@{Pathfinding.Serialization.AstarSerializer}}
+\doxysubsubsection{\texorpdfstring{V4\_1\_0}{V4\_1\_0}}
+{\footnotesize\ttfamily readonly System.\+Version Pathfinding.\+Serialization.\+Astar\+Serializer.\+V4\+\_\+1\+\_\+0 = new System.\+Version(4, 1, 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cached version object for 4.\+1.\+0 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Serialization/Json\+Serializer.\+cs\end{DoxyCompactItemize}

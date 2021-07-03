@@ -1,0 +1,299 @@
+\hypertarget{class_pathfinding_1_1_graph_collision}{}\doxysection{Pathfinding.\+Graph\+Collision Class Reference}
+\label{class_pathfinding_1_1_graph_collision}\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+
+
+Handles collision checking for graphs. Mostly used by grid based graphs  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a1ea7975df5a144e7c86945ed204b8278}{Initialize}} (\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} transform, float scale)
+\begin{DoxyCompactList}\small\item\em Sets up several variables using the specified matrix and scale. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a2092b7dfeef286c4f6f1f012e75b85c6}{Graph\+Collision.\+up}} See\+: Graph\+Collision.\+upheight See\+: Graph\+Collision.\+final\+Radius See\+: Graph\+Collision.\+final\+Raycast\+Radius \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_ad6a2be9a0d26176bbfb2a6adc910cd51}{Check}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Returns if the position is obstructed. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a82cd73a68607b602ee0977d8a66259ac}{collision\+Check}} is false, this will always return true.~\newline
+\end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_adc0370916711dcc1ddb9ee63825c2ae5}{Check\+Height}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Returns the position with the correct height. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}{height\+Check}} is false, this will return position. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_aee56f3275b1c5e4f8a0444fd1e7eea31}{Check\+Height}} (Vector3 position, out Raycast\+Hit hit, out bool walkable)
+\begin{DoxyCompactList}\small\item\em Returns the position with the correct height. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}{height\+Check}} is false, this will return position.~\newline
+walkable will be set to false if nothing was hit. The ray will check a tiny bit further than to the grids base to avoid floating point errors when the ground is exactly at the base of the grid \end{DoxyCompactList}\item 
+Raycast\+Hit\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a3feefd373bc2c1f5b3777e64de847ad1}{Check\+Height\+All}} (Vector3 position, out int num\+Hits)
+\begin{DoxyCompactList}\small\item\em Returns all hits when checking height for position. Warning\+: Does not work well with thick raycast, will only return an object a single time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a4a0f654fef68a230c12de274b87890ec}\label{class_pathfinding_1_1_graph_collision_a4a0f654fef68a230c12de274b87890ec}} 
+void {\bfseries Deserialize\+Settings\+Compatibility} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}{Collider\+Type}} \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} = \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a4880c0f12c06dd6d142e7a40b041bf1a}{Collider\+Type.\+Capsule}}
+\begin{DoxyCompactList}\small\item\em Collision shape to use. See\+: \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}{Pathfinding.\+Collider\+Type}} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a8ae28d6c54f96310cb08cafae71e5f9e}{diameter}} = 1F
+\begin{DoxyCompactList}\small\item\em Diameter of capsule or sphere when checking for collision. When checking for collisions the system will check if any colliders overlap a specific shape at the node\textquotesingle{}s position. The shape is determined by the \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} field. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a859db3fd976b694e5973578443c85231}{height}} = 2F
+\begin{DoxyCompactList}\small\item\em Height of capsule or length of ray when checking for collision. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} is set to Sphere, this does not affect anything. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_afca389b2893ff90784c58a18b7519fed}{collision\+Offset}}
+\begin{DoxyCompactList}\small\item\em Height above the ground that collision checks should be done. For example, if the ground was found at y=0, collision\+Offset = 2 type = Capsule and height = 3 then the physics system will be queried to see if there are any colliders in a capsule for which the bottom sphere that is made up of is centered at y=2 and the top sphere has its center at y=2+3=5. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9}{Ray\+Direction}} \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a07c654e0a497e1f155b98a339a93c114}{ray\+Direction}} = \mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a130c5b3473c57faa76e2a1c54e26f88e}{Ray\+Direction.\+Both}}
+\begin{DoxyCompactList}\small\item\em Direction of the ray when checking for collision. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} is not Ray, this does not affect anything \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a7ac6324257cef94ac5b50477475588f0}{mask}}
+\begin{DoxyCompactList}\small\item\em Layers to be treated as obstacles. \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_ace7aa944a6df2350a5eb17a24f5b0064}{height\+Mask}} = -\/1
+\begin{DoxyCompactList}\small\item\em Layers to be included in the height check. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a03caf843f737adc615c5c08660784ff0}{from\+Height}} = 100
+\begin{DoxyCompactList}\small\item\em The height to check from when checking height (\textquotesingle{}ray length\textquotesingle{} in the inspector). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_ad18bfe5dbc7cbf578d19e33f04ee8b84}{thick\+Raycast}}
+\begin{DoxyCompactList}\small\item\em Toggles thick raycast. See\+: \href{https://docs.unity3d.com/ScriptReference/Physics.SphereCast.html}{\texttt{ https\+://docs.\+unity3d.\+com/\+Script\+Reference/\+Physics.\+Sphere\+Cast.\+html}} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_ab4e61e823a7c0680676284faf3e401b7}{thick\+Raycast\+Diameter}} = 1
+\begin{DoxyCompactList}\small\item\em Diameter of the thick raycast in nodes. 1 equals \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size }} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_ad89ceeefc0b65776e2b4771bfdf44b90}{unwalkable\+When\+No\+Ground}} = true
+\begin{DoxyCompactList}\small\item\em Make nodes unwalkable when no ground was found with the height raycast. If height raycast is turned off, this doesn\textquotesingle{}t affect anything. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_aa114601eb82312c61ea928d603009a8a}{use2D}}
+\begin{DoxyCompactList}\small\item\em Use Unity 2D Physics A\+PI. See\+: \href{http://docs.unity3d.com/ScriptReference/Physics2D.html}{\texttt{ http\+://docs.\+unity3d.\+com/\+Script\+Reference/\+Physics2\+D.\+html}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a82cd73a68607b602ee0977d8a66259ac}{collision\+Check}} = true
+\begin{DoxyCompactList}\small\item\em Toggle collision check \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}{height\+Check}} = true
+\begin{DoxyCompactList}\small\item\em Toggle height check. If false, the grid will be flat \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a2092b7dfeef286c4f6f1f012e75b85c6}{up}}
+\begin{DoxyCompactList}\small\item\em Direction to use as UP. See\+: Initialize \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a6c76ec49d3692e6f4705a0822dc8b2aa}{Raycast\+Error\+Margin}} = 0.\+005F
+\begin{DoxyCompactList}\small\item\em Offset to apply after each raycast to make sure we don\textquotesingle{}t hit the same point again in Check\+Height\+All \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles collision checking for graphs. Mostly used by grid based graphs 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_ad6a2be9a0d26176bbfb2a6adc910cd51}\label{class_pathfinding_1_1_graph_collision_ad6a2be9a0d26176bbfb2a6adc910cd51}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!Check@{Check}}
+\index{Check@{Check}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{Check()}{Check()}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Collision.\+Check (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+
+
+Returns if the position is obstructed. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a82cd73a68607b602ee0977d8a66259ac}{collision\+Check}} is false, this will always return true.~\newline
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_adc0370916711dcc1ddb9ee63825c2ae5}\label{class_pathfinding_1_1_graph_collision_adc0370916711dcc1ddb9ee63825c2ae5}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!CheckHeight@{CheckHeight}}
+\index{CheckHeight@{CheckHeight}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{CheckHeight()}{CheckHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Graph\+Collision.\+Check\+Height (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+
+
+Returns the position with the correct height. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}{height\+Check}} is false, this will return position. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_aee56f3275b1c5e4f8a0444fd1e7eea31}\label{class_pathfinding_1_1_graph_collision_aee56f3275b1c5e4f8a0444fd1e7eea31}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!CheckHeight@{CheckHeight}}
+\index{CheckHeight@{CheckHeight}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{CheckHeight()}{CheckHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Graph\+Collision.\+Check\+Height (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{out Raycast\+Hit}]{hit,  }\item[{out bool}]{walkable }\end{DoxyParamCaption})}
+
+
+
+Returns the position with the correct height. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}{height\+Check}} is false, this will return position.~\newline
+walkable will be set to false if nothing was hit. The ray will check a tiny bit further than to the grids base to avoid floating point errors when the ground is exactly at the base of the grid 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a3feefd373bc2c1f5b3777e64de847ad1}\label{class_pathfinding_1_1_graph_collision_a3feefd373bc2c1f5b3777e64de847ad1}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!CheckHeightAll@{CheckHeightAll}}
+\index{CheckHeightAll@{CheckHeightAll}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{CheckHeightAll()}{CheckHeightAll()}}
+{\footnotesize\ttfamily Raycast\+Hit \mbox{[}$\,$\mbox{]} Pathfinding.\+Graph\+Collision.\+Check\+Height\+All (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{out int}]{num\+Hits }\end{DoxyParamCaption})}
+
+
+
+Returns all hits when checking height for position. Warning\+: Does not work well with thick raycast, will only return an object a single time 
+
+Warning\+: The returned array is ephermal. It will be invalidated when this method is called again. If you need persistent results you should copy it.
+
+The returned array may be larger than the actual number of hits, the num\+Hits out parameter indicates how many hits there actually were.\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a1ea7975df5a144e7c86945ed204b8278}\label{class_pathfinding_1_1_graph_collision_a1ea7975df5a144e7c86945ed204b8278}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Pathfinding.\+Graph\+Collision.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}}}]{transform,  }\item[{float}]{scale }\end{DoxyParamCaption})}
+
+
+
+Sets up several variables using the specified matrix and scale. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a2092b7dfeef286c4f6f1f012e75b85c6}{Graph\+Collision.\+up}} See\+: Graph\+Collision.\+upheight See\+: Graph\+Collision.\+final\+Radius See\+: Graph\+Collision.\+final\+Raycast\+Radius 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a82cd73a68607b602ee0977d8a66259ac}\label{class_pathfinding_1_1_graph_collision_a82cd73a68607b602ee0977d8a66259ac}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!collisionCheck@{collisionCheck}}
+\index{collisionCheck@{collisionCheck}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{collisionCheck}{collisionCheck}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Collision.\+collision\+Check = true}
+
+
+
+Toggle collision check 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_afca389b2893ff90784c58a18b7519fed}\label{class_pathfinding_1_1_graph_collision_afca389b2893ff90784c58a18b7519fed}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!collisionOffset@{collisionOffset}}
+\index{collisionOffset@{collisionOffset}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{collisionOffset}{collisionOffset}}
+{\footnotesize\ttfamily float Pathfinding.\+Graph\+Collision.\+collision\+Offset}
+
+
+
+Height above the ground that collision checks should be done. For example, if the ground was found at y=0, collision\+Offset = 2 type = Capsule and height = 3 then the physics system will be queried to see if there are any colliders in a capsule for which the bottom sphere that is made up of is centered at y=2 and the top sphere has its center at y=2+3=5. 
+
+If type = Sphere then the sphere\textquotesingle{}s center would be at y=2 in this case.\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a8ae28d6c54f96310cb08cafae71e5f9e}\label{class_pathfinding_1_1_graph_collision_a8ae28d6c54f96310cb08cafae71e5f9e}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!diameter@{diameter}}
+\index{diameter@{diameter}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{diameter}{diameter}}
+{\footnotesize\ttfamily float Pathfinding.\+Graph\+Collision.\+diameter = 1F}
+
+
+
+Diameter of capsule or sphere when checking for collision. When checking for collisions the system will check if any colliders overlap a specific shape at the node\textquotesingle{}s position. The shape is determined by the \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} field. 
+
+A diameter of 1 means that the shape has a diameter equal to the node\textquotesingle{}s width, or in other words it is equal to \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size }}.
+
+If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} is set to Ray, this does not affect anything.
+
+\mbox{[}Open online documentation to see images\mbox{]}\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a03caf843f737adc615c5c08660784ff0}\label{class_pathfinding_1_1_graph_collision_a03caf843f737adc615c5c08660784ff0}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!fromHeight@{fromHeight}}
+\index{fromHeight@{fromHeight}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{fromHeight}{fromHeight}}
+{\footnotesize\ttfamily float Pathfinding.\+Graph\+Collision.\+from\+Height = 100}
+
+
+
+The height to check from when checking height (\textquotesingle{}ray length\textquotesingle{} in the inspector). 
+
+As the image below visualizes, different ray lengths can make the ray hit different things. The distance is measured up from the graph plane.
+
+\mbox{[}Open online documentation to see images\mbox{]}\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a859db3fd976b694e5973578443c85231}\label{class_pathfinding_1_1_graph_collision_a859db3fd976b694e5973578443c85231}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!height@{height}}
+\index{height@{height}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily float Pathfinding.\+Graph\+Collision.\+height = 2F}
+
+
+
+Height of capsule or length of ray when checking for collision. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} is set to Sphere, this does not affect anything. 
+
+\mbox{[}Open online documentation to see images\mbox{]}\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}\label{class_pathfinding_1_1_graph_collision_a4258f0dc8da27a10ab3f4fdb77b85645}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!heightCheck@{heightCheck}}
+\index{heightCheck@{heightCheck}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{heightCheck}{heightCheck}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Collision.\+height\+Check = true}
+
+
+
+Toggle height check. If false, the grid will be flat 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_ace7aa944a6df2350a5eb17a24f5b0064}\label{class_pathfinding_1_1_graph_collision_ace7aa944a6df2350a5eb17a24f5b0064}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!heightMask@{heightMask}}
+\index{heightMask@{heightMask}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{heightMask}{heightMask}}
+{\footnotesize\ttfamily Layer\+Mask Pathfinding.\+Graph\+Collision.\+height\+Mask = -\/1}
+
+
+
+Layers to be included in the height check. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a7ac6324257cef94ac5b50477475588f0}\label{class_pathfinding_1_1_graph_collision_a7ac6324257cef94ac5b50477475588f0}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!mask@{mask}}
+\index{mask@{mask}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{mask}{mask}}
+{\footnotesize\ttfamily Layer\+Mask Pathfinding.\+Graph\+Collision.\+mask}
+
+
+
+Layers to be treated as obstacles. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a6c76ec49d3692e6f4705a0822dc8b2aa}\label{class_pathfinding_1_1_graph_collision_a6c76ec49d3692e6f4705a0822dc8b2aa}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!RaycastErrorMargin@{RaycastErrorMargin}}
+\index{RaycastErrorMargin@{RaycastErrorMargin}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{RaycastErrorMargin}{RaycastErrorMargin}}
+{\footnotesize\ttfamily const float Pathfinding.\+Graph\+Collision.\+Raycast\+Error\+Margin = 0.\+005F\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Offset to apply after each raycast to make sure we don\textquotesingle{}t hit the same point again in Check\+Height\+All 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a07c654e0a497e1f155b98a339a93c114}\label{class_pathfinding_1_1_graph_collision_a07c654e0a497e1f155b98a339a93c114}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!rayDirection@{rayDirection}}
+\index{rayDirection@{rayDirection}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{rayDirection}{rayDirection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9}{Ray\+Direction}} Pathfinding.\+Graph\+Collision.\+ray\+Direction = \mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a130c5b3473c57faa76e2a1c54e26f88e}{Ray\+Direction.\+Both}}}
+
+
+
+Direction of the ray when checking for collision. If \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}{type}} is not Ray, this does not affect anything 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_ad18bfe5dbc7cbf578d19e33f04ee8b84}\label{class_pathfinding_1_1_graph_collision_ad18bfe5dbc7cbf578d19e33f04ee8b84}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!thickRaycast@{thickRaycast}}
+\index{thickRaycast@{thickRaycast}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{thickRaycast}{thickRaycast}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Collision.\+thick\+Raycast}
+
+
+
+Toggles thick raycast. See\+: \href{https://docs.unity3d.com/ScriptReference/Physics.SphereCast.html}{\texttt{ https\+://docs.\+unity3d.\+com/\+Script\+Reference/\+Physics.\+Sphere\+Cast.\+html}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_ab4e61e823a7c0680676284faf3e401b7}\label{class_pathfinding_1_1_graph_collision_ab4e61e823a7c0680676284faf3e401b7}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!thickRaycastDiameter@{thickRaycastDiameter}}
+\index{thickRaycastDiameter@{thickRaycastDiameter}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{thickRaycastDiameter}{thickRaycastDiameter}}
+{\footnotesize\ttfamily float Pathfinding.\+Graph\+Collision.\+thick\+Raycast\+Diameter = 1}
+
+
+
+Diameter of the thick raycast in nodes. 1 equals \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size }} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}\label{class_pathfinding_1_1_graph_collision_a99ee22c124f171badfb22a33a8372007}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!type@{type}}
+\index{type@{type}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}{Collider\+Type}} Pathfinding.\+Graph\+Collision.\+type = \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a4880c0f12c06dd6d142e7a40b041bf1a}{Collider\+Type.\+Capsule}}}
+
+
+
+Collision shape to use. See\+: \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}{Pathfinding.\+Collider\+Type}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_ad89ceeefc0b65776e2b4771bfdf44b90}\label{class_pathfinding_1_1_graph_collision_ad89ceeefc0b65776e2b4771bfdf44b90}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!unwalkableWhenNoGround@{unwalkableWhenNoGround}}
+\index{unwalkableWhenNoGround@{unwalkableWhenNoGround}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{unwalkableWhenNoGround}{unwalkableWhenNoGround}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Collision.\+unwalkable\+When\+No\+Ground = true}
+
+
+
+Make nodes unwalkable when no ground was found with the height raycast. If height raycast is turned off, this doesn\textquotesingle{}t affect anything. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_a2092b7dfeef286c4f6f1f012e75b85c6}\label{class_pathfinding_1_1_graph_collision_a2092b7dfeef286c4f6f1f012e75b85c6}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!up@{up}}
+\index{up@{up}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Graph\+Collision.\+up}
+
+
+
+Direction to use as UP. See\+: Initialize 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_collision_aa114601eb82312c61ea928d603009a8a}\label{class_pathfinding_1_1_graph_collision_aa114601eb82312c61ea928d603009a8a}} 
+\index{Pathfinding.GraphCollision@{Pathfinding.GraphCollision}!use2D@{use2D}}
+\index{use2D@{use2D}!Pathfinding.GraphCollision@{Pathfinding.GraphCollision}}
+\doxysubsubsection{\texorpdfstring{use2D}{use2D}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Collision.\+use2D}
+
+
+
+Use Unity 2D Physics A\+PI. See\+: \href{http://docs.unity3d.com/ScriptReference/Physics2D.html}{\texttt{ http\+://docs.\+unity3d.\+com/\+Script\+Reference/\+Physics2\+D.\+html}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/Base.\+cs\end{DoxyCompactItemize}

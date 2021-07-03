@@ -1,0 +1,142 @@
+\hypertarget{class_pathfinding_1_1_binary_heap}{}\doxysection{Pathfinding.\+Binary\+Heap Class Reference}
+\label{class_pathfinding_1_1_binary_heap}\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+
+
+Binary heap implementation. Binary heaps are really fast for ordering nodes in a way that makes it possible to get the node with the lowest F score. Also known as a priority queue.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_binary_heap_a284e82b54133c4337a7d46b906d7ca03}{Binary\+Heap}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Create a new heap with the specified initial capacity \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_ab53a39d7d0efdc55404045190c9067d1}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Removes all elements from the heap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_acf1ab1fa7708790191b1a884fb796212}{Add}} (\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Adds a node to the heap \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_afd16ebcd8a058ce1a0ece28ad8571ec3}{Remove}} ()
+\begin{DoxyCompactList}\small\item\em Returns the node with the lowest F score from the heap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_aa8a7926c73a991dcdbcdd961481d449a}{Rebuild}} ()
+\begin{DoxyCompactList}\small\item\em Rebuilds the heap by trickeling down all items. Usually called after the h\+Target on a path has been changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_afa81dc6e3df49059681cb33ac500b521}{number\+Of\+Items}}
+\begin{DoxyCompactList}\small\item\em Number of items in the tree \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_a8df302f1bdb7056eaea4afb999df3af3}{growth\+Factor}} = 2
+\begin{DoxyCompactList}\small\item\em The tree will grow by at least this factor every time it is expanded \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_a221b3a0cc4c7ea4469e039bd68d25f2c}\label{class_pathfinding_1_1_binary_heap_a221b3a0cc4c7ea4469e039bd68d25f2c}} 
+const ushort {\bfseries Not\+In\+Heap} = 0x\+F\+F\+FF
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_binary_heap_a4dd1bd526419f235148844c6dd75fe70}{is\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the heap does not contain any elements \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Binary heap implementation. Binary heaps are really fast for ordering nodes in a way that makes it possible to get the node with the lowest F score. Also known as a priority queue. 
+
+This has actually been rewritten as a 4-\/ary heap for performance, but it\textquotesingle{}s the same principle.
+
+See\+: \href{http://en.wikipedia.org/wiki/Binary_heap}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Binary\+\_\+heap}} See\+: \href{https://en.wikipedia.org/wiki/D-ary_heap}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+D-\/ary\+\_\+heap}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_a284e82b54133c4337a7d46b906d7ca03}\label{class_pathfinding_1_1_binary_heap_a284e82b54133c4337a7d46b906d7ca03}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!BinaryHeap@{BinaryHeap}}
+\index{BinaryHeap@{BinaryHeap}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{BinaryHeap()}{BinaryHeap()}}
+{\footnotesize\ttfamily Pathfinding.\+Binary\+Heap.\+Binary\+Heap (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Create a new heap with the specified initial capacity 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_acf1ab1fa7708790191b1a884fb796212}\label{class_pathfinding_1_1_binary_heap_acf1ab1fa7708790191b1a884fb796212}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!Add@{Add}}
+\index{Add@{Add}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Pathfinding.\+Binary\+Heap.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}}}]{node }\end{DoxyParamCaption})}
+
+
+
+Adds a node to the heap 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_ab53a39d7d0efdc55404045190c9067d1}\label{class_pathfinding_1_1_binary_heap_ab53a39d7d0efdc55404045190c9067d1}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!Clear@{Clear}}
+\index{Clear@{Clear}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Pathfinding.\+Binary\+Heap.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes all elements from the heap 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_aa8a7926c73a991dcdbcdd961481d449a}\label{class_pathfinding_1_1_binary_heap_aa8a7926c73a991dcdbcdd961481d449a}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{Rebuild()}{Rebuild()}}
+{\footnotesize\ttfamily void Pathfinding.\+Binary\+Heap.\+Rebuild (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rebuilds the heap by trickeling down all items. Usually called after the h\+Target on a path has been changed 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_afd16ebcd8a058ce1a0ece28ad8571ec3}\label{class_pathfinding_1_1_binary_heap_afd16ebcd8a058ce1a0ece28ad8571ec3}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!Remove@{Remove}}
+\index{Remove@{Remove}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} Pathfinding.\+Binary\+Heap.\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the node with the lowest F score from the heap 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_a8df302f1bdb7056eaea4afb999df3af3}\label{class_pathfinding_1_1_binary_heap_a8df302f1bdb7056eaea4afb999df3af3}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!growthFactor@{growthFactor}}
+\index{growthFactor@{growthFactor}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{growthFactor}{growthFactor}}
+{\footnotesize\ttfamily float Pathfinding.\+Binary\+Heap.\+growth\+Factor = 2}
+
+
+
+The tree will grow by at least this factor every time it is expanded 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_afa81dc6e3df49059681cb33ac500b521}\label{class_pathfinding_1_1_binary_heap_afa81dc6e3df49059681cb33ac500b521}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!numberOfItems@{numberOfItems}}
+\index{numberOfItems@{numberOfItems}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{numberOfItems}{numberOfItems}}
+{\footnotesize\ttfamily int Pathfinding.\+Binary\+Heap.\+number\+Of\+Items}
+
+
+
+Number of items in the tree 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_binary_heap_a4dd1bd526419f235148844c6dd75fe70}\label{class_pathfinding_1_1_binary_heap_a4dd1bd526419f235148844c6dd75fe70}} 
+\index{Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Pathfinding.BinaryHeap@{Pathfinding.BinaryHeap}}
+\doxysubsubsection{\texorpdfstring{isEmpty}{isEmpty}}
+{\footnotesize\ttfamily bool Pathfinding.\+Binary\+Heap.\+is\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the heap does not contain any elements 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Binary\+Heap.\+cs\end{DoxyCompactItemize}

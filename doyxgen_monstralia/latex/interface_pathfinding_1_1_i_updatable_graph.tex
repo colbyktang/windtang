@@ -1,0 +1,72 @@
+\hypertarget{interface_pathfinding_1_1_i_updatable_graph}{}\doxysection{Pathfinding.\+I\+Updatable\+Graph Interface Reference}
+\label{interface_pathfinding_1_1_i_updatable_graph}\index{Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}}
+
+
+Graphs which can be updated during runtime  
+
+
+
+
+Inheritance diagram for Pathfinding.\+I\+Updatable\+Graph\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_updatable_graph_acc640dd0449a1996f17233e96629ebc6}{Update\+Area}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}} o)
+\begin{DoxyCompactList}\small\item\em Updates an area using the specified \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_updatable_graph_a1c09ad77f0709aee3c1809f22a75463c}{Update\+Area\+Init}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}} o)
+\begin{DoxyCompactList}\small\item\em May be called on the Unity thread before starting the update. See\+: Can\+Update\+Async \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_updatable_graph_a9e9440de2da26d56429d0c9f44b2070d}{Update\+Area\+Post}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}} o)
+\begin{DoxyCompactList}\small\item\em May be called on the Unity thread after executing the update. See\+: Can\+Update\+Async \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_updatable_graph_a0bd4f90c92917024a0b9fb595c5e62d0}\label{interface_pathfinding_1_1_i_updatable_graph_a0bd4f90c92917024a0b9fb595c5e62d0}} 
+\mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8}{Graph\+Update\+Threading}} {\bfseries Can\+Update\+Async} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}} o)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Graphs which can be updated during runtime 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_updatable_graph_acc640dd0449a1996f17233e96629ebc6}\label{interface_pathfinding_1_1_i_updatable_graph_acc640dd0449a1996f17233e96629ebc6}} 
+\index{Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}!UpdateArea@{UpdateArea}}
+\index{UpdateArea@{UpdateArea}!Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateArea()}{UpdateArea()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Updatable\+Graph.\+Update\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}}]{o }\end{DoxyParamCaption})}
+
+
+
+Updates an area using the specified \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}. 
+
+Notes to implementators. This function should (in order)\+:
+\begin{DoxyEnumerate}
+\item Call o.\+Will\+Update\+Node on the G\+UO for every node it will update, it is important that this is called B\+E\+F\+O\+RE any changes are made to the nodes.
+\item Update walkabilty using special settings such as the use\+Physics flag used with the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}}.
+\item Call Apply on the G\+UO for every node which should be updated with the G\+UO.
+\item Update connectivity info if appropriate (Grid\+Graphs updates connectivity, but most other graphs don\textquotesingle{}t since then the connectivity cannot be recovered later).
+\end{DoxyEnumerate}\mbox{\Hypertarget{interface_pathfinding_1_1_i_updatable_graph_a1c09ad77f0709aee3c1809f22a75463c}\label{interface_pathfinding_1_1_i_updatable_graph_a1c09ad77f0709aee3c1809f22a75463c}} 
+\index{Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}!UpdateAreaInit@{UpdateAreaInit}}
+\index{UpdateAreaInit@{UpdateAreaInit}!Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateAreaInit()}{UpdateAreaInit()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Updatable\+Graph.\+Update\+Area\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}}]{o }\end{DoxyParamCaption})}
+
+
+
+May be called on the Unity thread before starting the update. See\+: Can\+Update\+Async 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_updatable_graph_a9e9440de2da26d56429d0c9f44b2070d}\label{interface_pathfinding_1_1_i_updatable_graph_a9e9440de2da26d56429d0c9f44b2070d}} 
+\index{Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}!UpdateAreaPost@{UpdateAreaPost}}
+\index{UpdateAreaPost@{UpdateAreaPost}!Pathfinding.IUpdatableGraph@{Pathfinding.IUpdatableGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateAreaPost()}{UpdateAreaPost()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Updatable\+Graph.\+Update\+Area\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}}]{o }\end{DoxyParamCaption})}
+
+
+
+May be called on the Unity thread after executing the update. See\+: Can\+Update\+Async 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/astarclasses.\+cs\end{DoxyCompactItemize}

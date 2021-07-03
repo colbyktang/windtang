@@ -1,0 +1,73 @@
+\hypertarget{interface_pathfinding_1_1_i_work_item_context}{}\doxysection{Pathfinding.\+I\+Work\+Item\+Context Interface Reference}
+\label{interface_pathfinding_1_1_i_work_item_context}\index{Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}}
+
+
+Interface to expose a subset of the \mbox{\hyperlink{class_pathfinding_1_1_work_item_processor}{Work\+Item\+Processor}} functionality  
+
+
+
+
+Inheritance diagram for Pathfinding.\+I\+Work\+Item\+Context\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context_a345c1c6c34353891d91c256733590bd2}{Queue\+Flood\+Fill}} ()
+\begin{DoxyCompactList}\small\item\em Call during work items to queue a flood fill. An instant flood fill can be done via Flood\+Fill() but this method can be used to batch several updates into one to increase performance. Work\+Items which require a valid Flood Fill in their execution can call Ensure\+Valid\+Flood\+Fill to ensure that a flood fill is done if any earlier work items queued one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context_ac65045355fa80580eae07bc98af4ad54}{Ensure\+Valid\+Flood\+Fill}} ()
+\begin{DoxyCompactList}\small\item\em If a Work\+Item needs to have a valid area information during execution, call this method to ensure there are no pending flood fills. If you are using the \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a954eb66f20422048b8e60b6eec60cbcd}{Pathfinding.\+Graph\+Node.\+Area}} property or the Pathfinding.\+Path\+Utilities.\+Is\+Path\+Possible method in your work items, then you might want to call this method before you use them to ensure that the data is up to date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context_a29056465bc7abb06827341e1490794c6}{Set\+Graph\+Dirty}} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} graph)
+\begin{DoxyCompactList}\small\item\em Trigger a graph modification event. This will cause a Pathfinding.\+Graph\+Modifier.\+Post\+Update event to be issued after all graph updates have finished. Some scripts listen for this event. For example off-\/mesh links listen to it and will recalculate which nodes they are connected to when it it sent. If a graph is dirtied multiple times, or even if multiple graphs are dirtied, the event will only be sent once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to expose a subset of the \mbox{\hyperlink{class_pathfinding_1_1_work_item_processor}{Work\+Item\+Processor}} functionality 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_work_item_context_ac65045355fa80580eae07bc98af4ad54}\label{interface_pathfinding_1_1_i_work_item_context_ac65045355fa80580eae07bc98af4ad54}} 
+\index{Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}!EnsureValidFloodFill@{EnsureValidFloodFill}}
+\index{EnsureValidFloodFill@{EnsureValidFloodFill}!Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}}
+\doxysubsubsection{\texorpdfstring{EnsureValidFloodFill()}{EnsureValidFloodFill()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Work\+Item\+Context.\+Ensure\+Valid\+Flood\+Fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+If a Work\+Item needs to have a valid area information during execution, call this method to ensure there are no pending flood fills. If you are using the \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a954eb66f20422048b8e60b6eec60cbcd}{Pathfinding.\+Graph\+Node.\+Area}} property or the Pathfinding.\+Path\+Utilities.\+Is\+Path\+Possible method in your work items, then you might want to call this method before you use them to ensure that the data is up to date. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Pathfinding.\+Hierarchical\+Graph}}
+
+{\ttfamily  Astar\+Path.\+active.\+Add\+Work\+Item(new \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item}{Astar\+Work\+Item}}((\mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}} ctx) =$>$ \{ ctx.\+Ensure\+Valid\+Flood\+Fill();}
+
+{\ttfamily  // The above call guarantees that this method has up to date information about the graph if (Path\+Utilities.\+Is\+Path\+Possible(some\+Node, some\+Other\+Node)) \{ // Do something \} \})); }
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_work_item_processor_a2550c232024e5412394dd61526948275}{Pathfinding.\+Work\+Item\+Processor}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_work_item_context_a345c1c6c34353891d91c256733590bd2}\label{interface_pathfinding_1_1_i_work_item_context_a345c1c6c34353891d91c256733590bd2}} 
+\index{Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}!QueueFloodFill@{QueueFloodFill}}
+\index{QueueFloodFill@{QueueFloodFill}!Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}}
+\doxysubsubsection{\texorpdfstring{QueueFloodFill()}{QueueFloodFill()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Work\+Item\+Context.\+Queue\+Flood\+Fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call during work items to queue a flood fill. An instant flood fill can be done via Flood\+Fill() but this method can be used to batch several updates into one to increase performance. Work\+Items which require a valid Flood Fill in their execution can call Ensure\+Valid\+Flood\+Fill to ensure that a flood fill is done if any earlier work items queued one. 
+
+Once a flood fill is queued it will be done after all Work\+Items have been executed.
+
+Deprecated\+: Avoid using. This will force a full recalculation of the connected components. In most cases the \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Hierarchical\+Graph}} class takes care of things automatically behind the scenes now. In pretty much all cases you should be able to remove the call to this function.\mbox{\Hypertarget{interface_pathfinding_1_1_i_work_item_context_a29056465bc7abb06827341e1490794c6}\label{interface_pathfinding_1_1_i_work_item_context_a29056465bc7abb06827341e1490794c6}} 
+\index{Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}!SetGraphDirty@{SetGraphDirty}}
+\index{SetGraphDirty@{SetGraphDirty}!Pathfinding.IWorkItemContext@{Pathfinding.IWorkItemContext}}
+\doxysubsubsection{\texorpdfstring{SetGraphDirty()}{SetGraphDirty()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Work\+Item\+Context.\+Set\+Graph\+Dirty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}}]{graph }\end{DoxyParamCaption})}
+
+
+
+Trigger a graph modification event. This will cause a Pathfinding.\+Graph\+Modifier.\+Post\+Update event to be issued after all graph updates have finished. Some scripts listen for this event. For example off-\/mesh links listen to it and will recalculate which nodes they are connected to when it it sent. If a graph is dirtied multiple times, or even if multiple graphs are dirtied, the event will only be sent once. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Work\+Item\+Processor.\+cs\end{DoxyCompactItemize}

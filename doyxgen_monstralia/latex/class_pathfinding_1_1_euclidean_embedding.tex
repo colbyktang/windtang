@@ -1,0 +1,71 @@
+\hypertarget{class_pathfinding_1_1_euclidean_embedding}{}\doxysection{Pathfinding.\+Euclidean\+Embedding Class Reference}
+\label{class_pathfinding_1_1_euclidean_embedding}\index{Pathfinding.EuclideanEmbedding@{Pathfinding.EuclideanEmbedding}}
+
+
+Implements heuristic optimizations.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_acb250efe2c6b8ba280227620fea330a0}\label{class_pathfinding_1_1_euclidean_embedding_acb250efe2c6b8ba280227620fea330a0}} 
+uint {\bfseries Get\+Heuristic} (int node\+Index1, int node\+Index2)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_a959aa2704976db0e08aa9553cff9401f}\label{class_pathfinding_1_1_euclidean_embedding_a959aa2704976db0e08aa9553cff9401f}} 
+void {\bfseries Recalculate\+Pivots} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_ad8528474a8b86ae7e6b312ff8d77c93e}\label{class_pathfinding_1_1_euclidean_embedding_ad8528474a8b86ae7e6b312ff8d77c93e}} 
+void {\bfseries Recalculate\+Costs} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_ab73c9bbed7bc117c735e642f3c9f9f07}\label{class_pathfinding_1_1_euclidean_embedding_ab73c9bbed7bc117c735e642f3c9f9f07}} 
+void {\bfseries On\+Draw\+Gizmos} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Heuristic\+Optimization\+Mode \mbox{\hyperlink{class_pathfinding_1_1_euclidean_embedding_aba81159288caeaaadaa4da612ccbe449}{mode}}
+\begin{DoxyCompactList}\small\item\em If heuristic optimization should be used and how to place the pivot points. See\+: heuristic-\/opt See\+: Game AI Pro -\/ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Architecture Optimizations by Steve Rabin and Nathan R. Sturtevant \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_a36c9742bb64a860c4f3eaf021413284d}\label{class_pathfinding_1_1_euclidean_embedding_a36c9742bb64a860c4f3eaf021413284d}} 
+int {\bfseries seed}
+\item 
+Transform \mbox{\hyperlink{class_pathfinding_1_1_euclidean_embedding_a4925c064b48a51200d72b00117df4dd0}{pivot\+Point\+Root}}
+\begin{DoxyCompactList}\small\item\em All children of this transform will be used as pivot points \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_a2876b0d95879a7ee1f7973fceba47051}\label{class_pathfinding_1_1_euclidean_embedding_a2876b0d95879a7ee1f7973fceba47051}} 
+int {\bfseries spread\+Out\+Count} = 1
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_a2ad23a860dbcb53797bc9e7b0e1c04c8}\label{class_pathfinding_1_1_euclidean_embedding_a2ad23a860dbcb53797bc9e7b0e1c04c8}} 
+bool {\bfseries dirty}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements heuristic optimizations. 
+
+See\+: heuristic-\/opt See\+: Game AI Pro -\/ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Architecture Optimizations by Steve Rabin and Nathan R. Sturtevant
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_aba81159288caeaaadaa4da612ccbe449}\label{class_pathfinding_1_1_euclidean_embedding_aba81159288caeaaadaa4da612ccbe449}} 
+\index{Pathfinding.EuclideanEmbedding@{Pathfinding.EuclideanEmbedding}!mode@{mode}}
+\index{mode@{mode}!Pathfinding.EuclideanEmbedding@{Pathfinding.EuclideanEmbedding}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily Heuristic\+Optimization\+Mode Pathfinding.\+Euclidean\+Embedding.\+mode}
+
+
+
+If heuristic optimization should be used and how to place the pivot points. See\+: heuristic-\/opt See\+: Game AI Pro -\/ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Architecture Optimizations by Steve Rabin and Nathan R. Sturtevant 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_euclidean_embedding_a4925c064b48a51200d72b00117df4dd0}\label{class_pathfinding_1_1_euclidean_embedding_a4925c064b48a51200d72b00117df4dd0}} 
+\index{Pathfinding.EuclideanEmbedding@{Pathfinding.EuclideanEmbedding}!pivotPointRoot@{pivotPointRoot}}
+\index{pivotPointRoot@{pivotPointRoot}!Pathfinding.EuclideanEmbedding@{Pathfinding.EuclideanEmbedding}}
+\doxysubsubsection{\texorpdfstring{pivotPointRoot}{pivotPointRoot}}
+{\footnotesize\ttfamily Transform Pathfinding.\+Euclidean\+Embedding.\+pivot\+Point\+Root}
+
+
+
+All children of this transform will be used as pivot points 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Utilities/Euclidean\+Embedding.\+cs\end{DoxyCompactItemize}

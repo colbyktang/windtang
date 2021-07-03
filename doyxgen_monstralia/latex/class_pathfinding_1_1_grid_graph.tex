@@ -1,0 +1,1304 @@
+\hypertarget{class_pathfinding_1_1_grid_graph}{}\doxysection{Pathfinding.\+Grid\+Graph Class Reference}
+\label{class_pathfinding_1_1_grid_graph}\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+
+
+Generates a grid of nodes. The \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} does exactly what the name implies, generates nodes in a grid pattern.~\newline
+Grid graphs suit well to when you already have a grid based world. Features\+:  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Grid\+Graph\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Grid\+Graph\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a79db0cd43a5ad6287ab9d277c0c115af}{Count\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Number of nodes in the graph. Note that this is, unless the graph type has overriden it, an O(n) operation. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af0e95e6b54153b44a920b57ac3d1a7f2}{Get\+Nodes}} (System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ action)
+\begin{DoxyCompactList}\small\item\em Calls a delegate with all nodes in the graph. This is the primary way of iterating through all nodes in a graph. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_adbfdd7210308f7125ed379980760bce0}{Relocate\+Nodes}} (Matrix4x4 delta\+Matrix)
+\begin{DoxyCompactList}\small\item\em Moves the nodes in this graph. Multiplies all node positions by delta\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af3633c303f6bac2f9b3699f115f6621e}{Relocate\+Nodes}} (Vector3 \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a5ade35875a2ad29c32cd9e7a41ff42b6}{center}}, Quaternion \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a4a2e76afa4f16f4d3dafcb1d10b8f688}{rotation}}, float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}}, float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_afa82db44b4a6819e9191e55e98fbaef0}{aspect\+Ratio}}=1, float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9704f04c143d3d1d08c035f5fc8b6c16}{isometric\+Angle}}=0)
+\begin{DoxyCompactList}\small\item\em Relocate the grid graph using new settings. This will move all nodes in the graph to new positions which matches the new settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a1f3886bcecd0c282a9358e00a084b902}{Graph\+Point\+To\+World}} (int x, int z, float height)
+\begin{DoxyCompactList}\small\item\em Transform a point in graph space to world space. This will give you the node position for the node at the given x and z coordinate if it is at the specified height above the base of the graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ac0faa9063e082e600f9b167e083a92fa}\label{class_pathfinding_1_1_grid_graph_ac0faa9063e082e600f9b167e083a92fa}} 
+uint {\bfseries Get\+Connection\+Cost} (int dir)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a6dc9558d1690afb179f77cc1dfd833c4}\label{class_pathfinding_1_1_grid_graph_a6dc9558d1690afb179f77cc1dfd833c4}} 
+\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} {\bfseries Get\+Node\+Connection} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node, int dir)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_abd422b638a53f54f9ca65e160a5daccd}\label{class_pathfinding_1_1_grid_graph_abd422b638a53f54f9ca65e160a5daccd}} 
+bool {\bfseries Has\+Node\+Connection} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node, int dir)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a18096efc907ef2d20ff8db0db33f00a9}\label{class_pathfinding_1_1_grid_graph_a18096efc907ef2d20ff8db0db33f00a9}} 
+void {\bfseries Set\+Node\+Connection} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node, int dir, bool value)
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ad3c876177bf7f172c85989790d651af1}{Set\+Node\+Connection}} (int index, int x, int z, int dir, bool value)
+\begin{DoxyCompactList}\small\item\em Set if connection in the specified direction should be enabled. Note that bounds checking will still be done when getting the connection value again, so it is not necessarily true that Has\+Node\+Connection will return true just because you used Set\+Node\+Connection on a node to set a connection to true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a599034d7d684b5cab3a43a1288928449}{Has\+Node\+Connection}} (int index, int x, int z, int dir)
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}{Set\+Dimensions}} (int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}}, int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}}, float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}})
+\begin{DoxyCompactList}\small\item\em Updates \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}} from \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} values. Also \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{generates a new matrix }}. Note\+: This does not rescan the graph, that must be done with Scan \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac4199384dc6de8d2ccb860216e5273f5}{Update\+Size\+From\+Width\+Depth}} ()
+\begin{DoxyCompactList}\small\item\em Updates \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}} from \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} values. Deprecated\+: Use \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}{Set\+Dimensions}} instead \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aa7fff21063d196d0dd24dc0505094009}{Generate\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Generates the matrix used for translating nodes from grid coordinates to world coordinates. Deprecated\+: This method has been renamed to \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Updates the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}} field which transforms graph space to world space. In graph space all nodes are laid out in the XZ plane with the first node having a corner in the origin. One unit in graph space is one node so the first node in the graph is at (0.\+5,0) the second one at (1.\+5,0) etc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0a796b8255e4f6a117b6b923099f0085}{Calculate\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Returns a new transform which transforms graph space to world space. Does not update the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}} field. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0e684d7c7b55a01a5d33b8ce15f1267e}{Get\+Nearest}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint, \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} hint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aabcc7ba1ce6301628f2fc9712d35b4ee}{Get\+Nearest\+Force}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{constraint }}. Returns\+: an \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}. This method will only return an empty \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} if there are no nodes which comply with the specified constraint. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aeca9d37d3bbad578ad2e1ea3f0076677}{Set\+Up\+Offsets\+And\+Costs}} ()
+\begin{DoxyCompactList}\small\item\em Sets up \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}{neighbour\+Offsets}} with the current settings. \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}{neighbour\+Offsets}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae46fc94626754e269f5df3a461891b7d}{neighbour\+Costs}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_acf54a32030e6a9db24095c8f67dec3fe}{neighbour\+X\+Offsets}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a04121f0afe8b2b035078b21d4033e0ba}{neighbour\+Z\+Offsets}} are set up.~\newline
+The cost for a non-\/diagonal movement between two adjacent nodes is Round\+To\+Int (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} $\ast$ \mbox{\hyperlink{struct_pathfinding_1_1_int3_a5c7bb8aff7e46881a645be9399a42ee1}{Int3.\+Precision}})~\newline
+The cost for a diagonal movement between two adjacent nodes is Round\+To\+Int (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} $\ast$ Sqrt (2) $\ast$ \mbox{\hyperlink{struct_pathfinding_1_1_int3_a5c7bb8aff7e46881a645be9399a42ee1}{Int3.\+Precision}}) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a4a3697d3c3221a8d60c71459f1bc3a74}{Update\+Node\+Position\+Collision}} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node, int x, int z, bool reset\+Penalty=true)
+\begin{DoxyCompactList}\small\item\em Updates position, walkability and penalty for the node. Assumes that collision.\+Initialize (...) has been called before this function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a18f712af21b48eb877b00c9fed66f554}{Recalculate\+Cell}} (int x, int z, bool reset\+Penalties=true, bool reset\+Tags=true)
+\begin{DoxyCompactList}\small\item\em Recalculates single node in the graph. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a259a9dec4063f976aaf0bf15a0ee0a53}{Erode\+Walkable\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Erodes the walkable area. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}{erode\+Iterations}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_acd26f580c0f68cf06422186e2cd48f54}{Erode\+Walkable\+Area}} (int xmin, int zmin, int xmax, int zmax)
+\begin{DoxyCompactList}\small\item\em Erodes the walkable area. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a97fefcf62d91b29c4ae2130f7fd4f0e4}{Is\+Valid\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} node1, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} node2)
+\begin{DoxyCompactList}\small\item\em Returns true if a connection between the adjacent nodes n1 and n2 is valid. Also takes into account if the nodes are walkable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a71e6787d661d1aebd990b028e18d117a}{Calculate\+Connections\+For\+Cell\+And\+Neighbours}} (int x, int z)
+\begin{DoxyCompactList}\small\item\em Calculates the grid connections for a cell as well as its neighbours. This is a useful utility function if you want to modify the walkability of a single node in the graph. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a08b6a9d0bfe60d71ed723f7e5ddc5bbd}{Calculate\+Connections}} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} node)
+\begin{DoxyCompactList}\small\item\em Calculates the grid connections for a single node. Convenience function, it\textquotesingle{}s slightly faster to use \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_afe1cdb7f6f913aaaa19006182ad3ec96}{Calculate\+Connections(int,int)}} but that will only show when calculating for a large number of nodes. This function will also work for both grid graphs and layered grid graphs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aace905f259f88c1fd5150b3230930810}{Calculate\+Connections}} (int x, int z, \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Calculates the grid connections for a single node. Deprecated\+: Use Calculate\+Connections(x,z) or Calculate\+Connections(node) instead \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_afe1cdb7f6f913aaaa19006182ad3ec96}{Calculate\+Connections}} (int x, int z)
+\begin{DoxyCompactList}\small\item\em Calculates the grid connections for a single node. Note that to ensure that connections are completely up to date after updating a node you have to calculate the connections for both the changed node and its neighbours. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a74b5d55828020e33cc126d5a98d38fac}{On\+Draw\+Gizmos}} (\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos}{Retained\+Gizmos}} gizmos, bool draw\+Nodes)
+\begin{DoxyCompactList}\small\item\em Draw gizmos for the graph \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aa61168b45d637122d6f8cb14862d1a7b}{Get\+Nodes\+In\+Area}} (Bounds bounds)
+\begin{DoxyCompactList}\small\item\em Deprecated\+: This method has been renamed to Get\+Nodes\+In\+Region \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae31df6a187e60b39d9238417c8a9fa5f}{Get\+Nodes\+In\+Area}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}} shape)
+\begin{DoxyCompactList}\small\item\em Deprecated\+: This method has been renamed to Get\+Nodes\+In\+Region \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a641b53930a6a29b34c925366ab50982d}{Get\+Nodes\+In\+Area}} (Bounds bounds, \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}} shape)
+\begin{DoxyCompactList}\small\item\em Deprecated\+: This method has been renamed to Get\+Nodes\+In\+Region \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a4343d54c15aa5c61ebb548c7dce590f2}{Get\+Nodes\+In\+Region}} (Bounds bounds)
+\begin{DoxyCompactList}\small\item\em All nodes inside the bounding box. Note\+: Be nice to the garbage collector and pool the list when you are done with it (optional) See\+: Pathfinding.\+Util.\+List\+Pool \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ab77651edacc00b0aa7368d44266d9062}{Get\+Nodes\+In\+Region}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}} shape)
+\begin{DoxyCompactList}\small\item\em All nodes inside the shape. Note\+: Be nice to the garbage collector and pool the list when you are done with it (optional) See\+: Pathfinding.\+Util.\+List\+Pool \end{DoxyCompactList}\item 
+virtual List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a33ce7df1bd3df86c5340aaa3e3eae3e5}{Get\+Nodes\+In\+Region}} (\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} rect)
+\begin{DoxyCompactList}\small\item\em Get all nodes in a rectangle. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aa94115e2a4d3b2cc7168c9bc223732c3}{Get\+Nodes\+In\+Region}} (\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} rect, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}}\mbox{[}$\,$\mbox{]} buffer)
+\begin{DoxyCompactList}\small\item\em Get all nodes in a rectangle. Returns\+: The number of nodes written to the buffer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0b612dc43efba20fe974711022552a7f}{Get\+Node}} (int x, int z)
+\begin{DoxyCompactList}\small\item\em Node in the specified cell. Returns null if the coordinate is outside the grid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8497820eecae49a240e7990f3e50bcb0}{Check\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node, int dir)
+\begin{DoxyCompactList}\small\item\em Returns if node is connected to it\textquotesingle{}s neighbour in the specified direction. This will also return true if \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}{neighbours}} = Num\+Neighbours.\+Four, the direction is diagonal and one can move through one of the adjacent nodes to the targeted node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a1ce6550d3daf97c1fc1388d00bf64522}\label{class_pathfinding_1_1_grid_graph_a1ce6550d3daf97c1fc1388d00bf64522}} 
+static float {\bfseries Convert\+Hexagon\+Size\+To\+Node\+Size} (\mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Inspector\+Grid\+Hexagon\+Node\+Size}} mode, float value)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_acd60c7e62707061db0f895eca0cb3f72}\label{class_pathfinding_1_1_grid_graph_acd60c7e62707061db0f895eca0cb3f72}} 
+static float {\bfseries Convert\+Node\+Size\+To\+Hexagon\+Size} (\mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Inspector\+Grid\+Hexagon\+Node\+Size}} mode, float value)
+\item 
+static void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a25d18a7cb3baf45d3643f4f1bafbda47}{Calculate\+Connections}} (\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Calculates the grid connections for a single node. Deprecated\+: Use the instance function instead \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}{neighbour\+Offsets}} = new int\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Index offset to get neighbour nodes. Added to a node\textquotesingle{}s index to get a neighbour node index. \end{DoxyCompactList}\item 
+readonly uint\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae46fc94626754e269f5df3a461891b7d}{neighbour\+Costs}} = new uint\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Costs to neighbour nodes \end{DoxyCompactList}\item 
+readonly int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_acf54a32030e6a9db24095c8f67dec3fe}{neighbour\+X\+Offsets}} = new int\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Offsets in the X direction for neighbour nodes. Only 1, 0 or -\/1 \end{DoxyCompactList}\item 
+readonly int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a04121f0afe8b2b035078b21d4033e0ba}{neighbour\+Z\+Offsets}} = new int\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Offsets in the Z direction for neighbour nodes. Only 1, 0 or -\/1 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a6be0a29dca8d4924c265b94b27a4e2a7}{nodes}}
+\begin{DoxyCompactList}\small\item\em All nodes in this graph. Nodes are laid out row by row. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aed6de82443906b7d96a5ae664802c898}{get\+Nearest\+Force\+Overlap}} = 2
+\begin{DoxyCompactList}\small\item\em In Get\+Nearest\+Force, determines how far to search after a valid node has been found \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a03a67751a8063dc101bf1989437e1094}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em This function will be called when this graph is destroyed \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a43fce0cbbcc3630fd2d6353c4aa56275}{Destroy\+All\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Destroys all nodes in the graph. Warning\+: This is an internal method. Unless you have a very good reason, you should probably not call it. \end{DoxyCompactList}\item 
+override I\+Enumerable$<$ \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0c84858f9784131992a7f7696f9d114e}{Scan\+Internal}} ()
+\begin{DoxyCompactList}\small\item\em Internal method to scan the graph. Called from \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}}. Override this function to implement custom scanning logic. \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} objects can be yielded to show progress info in the editor and to split up processing over several frames when using async scanning. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ab5b2c9e0c0dc6eb22021d3100f40465d}{Erosion\+Any\+False\+Connections}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} base\+Node)
+\begin{DoxyCompactList}\small\item\em True if the node has any blocked connections. For 4 and 8 neighbours the 4 axis aligned connections will be checked. For 6 neighbours all 6 neighbours will be checked. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a497b3d314dbedab860da31ec5ee18568}{Get\+Rect\+From\+Bounds}} (Bounds bounds)
+\begin{DoxyCompactList}\small\item\em A rect with all nodes that the bounds could touch. This correctly handles rotated graphs and other transformations. The returned rect is guaranteed to not extend outside the graph bounds. \end{DoxyCompactList}\item 
+virtual List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf927879761f6d77dbbce1ae741a2c4f}{Get\+Nodes\+In\+Region}} (Bounds bounds, \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}} shape)
+\begin{DoxyCompactList}\small\item\em All nodes inside the shape or if null, the bounding box. If a shape is supplied, it is assumed to be contained inside the bounding box. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a13044250d2c926b105bd6dc94a1d4118}{Graph\+Update\+Shape.\+Get\+Bounds}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a2290786c112ac5d0d7c5d8d47b5b62cb}\label{class_pathfinding_1_1_grid_graph_a2290786c112ac5d0d7c5d8d47b5b62cb}} 
+void {\bfseries Calculate\+Affected\+Regions} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}} o, out \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} original\+Rect, out \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} affect\+Rect, out \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} physics\+Rect, out bool will\+Change\+Walkability, out int erosion)
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aee314bb04e71d99439814dfd5303e75c}{Serialize\+Extra\+Info}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Serializes graph type specific node data. This function can be overriden to serialize extra node information (or graph information for that matter) which cannot be serialized using the standard serialization. Serialize the data in any way you want and return a byte array. When loading, the exact same byte array will be passed to the Deserialize\+Extra\+Info function.~\newline
+These functions will only be called if node serialization is enabled.~\newline
+\end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a080bfda69e7f9358282b9af43b207a07}{Deserialize\+Extra\+Info}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Deserializes graph type specific node data. See\+: Serialize\+Extra\+Info \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a059090b1a5e41eb725329979f30e0ebf}{Deserialize\+Settings\+Compatibility}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em An old format for serializing settings. Deprecated\+: This is deprecated now, but the deserialization code is kept to avoid loosing data when upgrading from older versions. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a7071415542fa56b048b44e029f3b4f27}{Post\+Deserialization}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Called after all deserialization has been done for all graphs. Can be used to set up more graph data which is not serialized \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a35d31ab670675db96e5900822ee52edf}{uniform\+Width\+Depth\+Grid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is placed here so generators inheriting from this one can override it and set it to false. If it is true, it means that the nodes array\textquotesingle{}s length will always be equal to width$\ast$depth It is used mainly in the editor to do auto-\/scanning calls, setting it to false for a non-\/uniform grid will reduce the number of scans \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_adcee5cadf900f7717583f919296d5eb2}{Layer\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of layers in the graph. For grid graphs this is always 1, for layered grid graphs it can be higher. The nodes array has the size width$\ast$depth$\ast$layer\+Count. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a081a4ddf53f769c7e8173e657311c161}{size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines how the graph transforms graph space to world space. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a1f8ecf9f25397cf871b4b6a225e1dea0}\label{class_pathfinding_1_1_grid_graph_a1f8ecf9f25397cf871b4b6a225e1dea0}} 
+int {\bfseries Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ad932abe619344385e9b0ce3312fb6730}\label{class_pathfinding_1_1_grid_graph_ad932abe619344385e9b0ce3312fb6730}} 
+int {\bfseries Depth}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Inspector -\/ Settings}
+\label{_amgrp1288d4796cf7025fea5549c90f2ab92b}%
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a393c7bfae9dc94ad24a40768be794802}{use\+Raycast\+Normal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use heigh raycasting normal for max slope calculation. True if \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a33f2289f1a44ed57e8364e6a28fba907}{max\+Slope}} is less than 90 degrees. \end{DoxyCompactList}\item 
+Inspector\+Grid\+Mode \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a29ea38657bb45db4f6d2877518691ef2}{inspector\+Grid\+Mode}} = Inspector\+Grid\+Mode.\+Grid
+\begin{DoxyCompactList}\small\item\em Determines the layout of the grid graph inspector in the Unity Editor. This field is only used in the editor, it has no effect on the rest of the game whatsoever. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Inspector\+Grid\+Hexagon\+Node\+Size}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ada1e1ef584d8ffa45bda10471bae90e4}{inspector\+Hexagon\+Size\+Mode}} = \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fa32954654ac8fe66a1d09be19001de2d4}{Inspector\+Grid\+Hexagon\+Node\+Size.\+Width}}
+\begin{DoxyCompactList}\small\item\em Determines how the size of each hexagon is set in the inspector. For hexagons the normal node\+Size field doesn\textquotesingle{}t really correspond to anything specific on the hexagon\textquotesingle{}s geometry, so this enum is used to give the user the opportunity to adjust more concrete dimensions of the hexagons without having to pull out a calculator to calculate all the square roots and complicated conversion factors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}}
+\begin{DoxyCompactList}\small\item\em Width of the grid in nodes. See\+: Set\+Dimensions \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}}
+\begin{DoxyCompactList}\small\item\em Depth (height) of the grid in nodes. See\+: Set\+Dimensions \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_afa82db44b4a6819e9191e55e98fbaef0}{aspect\+Ratio}} = 1F
+\begin{DoxyCompactList}\small\item\em Scaling of the graph along the X axis. This should be used if you want different scales on the X and Y axis of the grid \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9704f04c143d3d1d08c035f5fc8b6c16}{isometric\+Angle}}
+\begin{DoxyCompactList}\small\item\em Angle to use for the isometric projection. If you are making a 2D isometric game, you may want to use this parameter to adjust the layout of the graph to match your game. This will essentially scale the graph along one of its diagonals to produce something like this\+: \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a34d4e1759146a7641765c37d2f0e784d}{uniform\+Edge\+Costs}}
+\begin{DoxyCompactList}\small\item\em If true, all edge costs will be set to the same value. If false, diagonals will cost more. This is useful for a hexagon graph where the diagonals are actually the same length as the normal edges (since the graph has been skewed) \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a4a2e76afa4f16f4d3dafcb1d10b8f688}{rotation}}
+\begin{DoxyCompactList}\small\item\em Rotation of the grid in degrees \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a5ade35875a2ad29c32cd9e7a41ff42b6}{center}}
+\begin{DoxyCompactList}\small\item\em Center point of the grid \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}}
+\begin{DoxyCompactList}\small\item\em Size of the grid. Might be negative or smaller than \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} = 1
+\begin{DoxyCompactList}\small\item\em Size of one node in world units. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}{Set\+Dimensions}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aa68aecab651cdd42655f50e88a2f535a}{collision}}
+\begin{DoxyCompactList}\small\item\em Settings on how to check for walkability and height \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ad80912d9f7e55e25877ffc0f6a6a21e6}{max\+Climb}} = 0.\+4F
+\begin{DoxyCompactList}\small\item\em The max position difference between two nodes to enable a connection. Set to 0 to ignore the value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a33f2289f1a44ed57e8364e6a28fba907}{max\+Slope}} = 90
+\begin{DoxyCompactList}\small\item\em The max slope in degrees for a node to be walkable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}{erode\+Iterations}}
+\begin{DoxyCompactList}\small\item\em Erosion of the graph. The graph can be eroded after calculation. This means a margin is put around unwalkable nodes or other unwalkable connections. It is really good if your graph contains ledges where the nodes without erosion are walkable too close to the edge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aee904c6fbfe6372283950f0c39248f8f}{erosion\+Use\+Tags}}
+\begin{DoxyCompactList}\small\item\em Use tags instead of walkability for erosion. Tags will be used for erosion instead of marking nodes as unwalkable. The nodes will be marked with tags in an increasing order starting with the tag \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae19f19319bd3fbf06c8649c06d49cebb}{erosion\+First\+Tag}}. Debug with the Tags mode to see the effect. With this enabled you can in effect set how close different A\+Is are allowed to get to walls using the Valid Tags field on the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} component. \mbox{[}Open online documentation to see images\mbox{]} \mbox{[}Open online documentation to see images\mbox{]} See\+: erosion\+First\+Tag \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae19f19319bd3fbf06c8649c06d49cebb}{erosion\+First\+Tag}} = 1
+\begin{DoxyCompactList}\small\item\em Tag to start from when using tags for erosion. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aee904c6fbfe6372283950f0c39248f8f}{erosion\+Use\+Tags}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}{erode\+Iterations}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_pathfinding_ab1e7649c9ea2a478bba166ad5d81a61e}{Num\+Neighbours}} \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}{neighbours}} = Num\+Neighbours.\+Eight
+\begin{DoxyCompactList}\small\item\em Number of neighbours for each node. Either four, six, eight connections per node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a98956923ed0a7c47d4d30298d838ead5}{cut\+Corners}} = true
+\begin{DoxyCompactList}\small\item\em If disabled, will not cut corners on obstacles. If seecref=\char`\"{}neighbours\char`\"{}/$>$connections\textbackslash{}endlinkisEight,obstaclecornersmightbecutbyaconnection,settingthistofalsedisablesthat.\end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a941295b340db9209863a65e314ffcfb8}{penalty\+Position\+Offset}}
+\begin{DoxyCompactList}\small\item\em Offset for the position when calculating penalty. See\+: penalty\+Position \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aeb8fa038296aca58bc2dea25ad2300de}{penalty\+Position}}
+\begin{DoxyCompactList}\small\item\em Use position (y-\/coordinate) to calculate penalty \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a6f44f5b5a866c4e2cc17be51fd5b993b}{penalty\+Position\+Factor}} = 1F
+\begin{DoxyCompactList}\small\item\em Scale factor for penalty when calculating from position. See\+: penalty\+Position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a55a9f887346b1d6a59fdc53de65611e1}\label{class_pathfinding_1_1_grid_graph_a55a9f887346b1d6a59fdc53de65611e1}} 
+bool {\bfseries penalty\+Angle}
+\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a735dced487f5b42036e9ea4161d7926c}{penalty\+Angle\+Factor}} = 100F
+\begin{DoxyCompactList}\small\item\em How much penalty is applied depending on the slope of the terrain. At a 90 degree slope (not that exactly 90 degree slopes can occur, but almost 90 degree), this penalty is applied. At a 45 degree slope, half of this is applied and so on. Note that you may require very large values, a value of 1000 is equivalent to the cost of moving 1 world unit. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0048c3c0e21eb5d54abf19a63c40292e}{penalty\+Angle\+Power}} = 1
+\begin{DoxyCompactList}\small\item\em How much extra to penalize very steep angles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af5336c1ff858d4febe770c7f14d217d8}{show\+Mesh\+Outline}} = true
+\begin{DoxyCompactList}\small\item\em Show an outline of the grid nodes in the Unity Editor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9d63ab42bf4d2df0053c6fe2dc75da40}{show\+Node\+Connections}}
+\begin{DoxyCompactList}\small\item\em Show the connections between the grid nodes in the Unity Editor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a1691b4a94a98abcdc508386a2086f37d}{show\+Mesh\+Surface}} = true
+\begin{DoxyCompactList}\small\item\em Show the surface of the graph. Each node will be drawn as a square (unless e.\+g hexagon graph mode has been enabled). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates a grid of nodes. The \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} does exactly what the name implies, generates nodes in a grid pattern.~\newline
+Grid graphs suit well to when you already have a grid based world. Features\+: 
+
+
+\begin{DoxyItemize}
+\item You can update the graph during runtime (good for e.\+g Tower Defence or R\+TS games)
+\item Throw any scene at it, with minimal configurations you can get a good graph from it.
+\item Supports raycast and the funnel algorithm
+\item Predictable pattern
+\item Can apply penalty and walkability values from a supplied image
+\item Perfect for terrain worlds since it can make areas unwalkable depending on the slope
+\end{DoxyItemize}
+
+\mbox{[}Open online documentation to see images\mbox{]} \mbox{[}Open online documentation to see images\mbox{]}
+
+The {\bfseries{The Snap Size}} button snaps the internal size of the graph to exactly contain the current number of nodes, i.\+e not contain 100.\+3 nodes but exactly 100 nodes.~\newline
+This will make the \char`\"{}center\char`\"{} coordinate more accurate.~\newline
+ {\bfseries{Updating the graph during runtime}}~\newline
+Any graph which implements the \mbox{\hyperlink{interface_pathfinding_1_1_i_updatable_graph}{I\+Updatable\+Graph}} interface can be updated during runtime.~\newline
+For grid graphs this is a great feature since you can update only a small part of the grid without causing any lag like a complete rescan would.~\newline
+If you for example just have instantiated a sphere obstacle in the scene and you want to update the grid where that sphere was instantiated, you can do this\+:~\newline
+{\ttfamily  Astar\+Path.\+active.\+Update\+Graphs (ob.\+collider.\+bounds); } Where ob is the obstacle you just instantiated (a Game\+Object).~\newline
+As you can see, the Update\+Graphs function takes a Bounds parameter and it will send an update call to all updateable graphs.~\newline
+A grid graph will update that area and a small margin around it equal to \mbox{\hyperlink{class_pathfinding_1_1_graph_collision_a8ae28d6c54f96310cb08cafae71e5f9e}{collision testing diameter/2 }} See\+: graph-\/updates (view in online documentation for working links) for more info about updating graphs during runtime
+
+{\bfseries{Hexagon graphs}}~\newline
+The graph can be configured to work like a hexagon graph with some simple settings. Since 4.\+1.\+x the grid graph has a \textquotesingle{}Shape\textquotesingle{} dropdown. If you set it to \textquotesingle{}Hexagonal\textquotesingle{} the graph will behave as a hexagon graph. Often you may want to rotate the graph +45 or -\/45 degrees. \mbox{[}Open online documentation to see images\mbox{]}
+
+Note however that the snapping to the closest node is not exactly as you would expect in a real hexagon graph, but it is close enough that you will likely not notice.
+
+{\bfseries{Configure using code}}~\newline
+{\ttfamily  // This holds all graph data \mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}} data = Astar\+Path.\+active.\+data;}
+
+{\ttfamily // This creates a Grid Graph \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} gg = data.\+Add\+Graph(typeof(\+Grid\+Graph)) as \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}};}
+
+{\ttfamily // Setup a grid graph with some values int width = 50; int depth = 50; float node\+Size = 1;}
+
+{\ttfamily gg.\+center = new Vector3(10, 0, 0);}
+
+{\ttfamily // Updates internal size from the above values gg.\+Set\+Dimensions(width, depth, node\+Size);}
+
+{\ttfamily // Scans all graphs Astar\+Path.\+active.\+Scan(); }
+
+{\bfseries{Tree colliders}}~\newline
+It seems that Unity will only generate tree colliders at runtime when the game is started. For this reason, the grid graph will not pick up tree colliders when outside of play mode but it will pick them up once the game starts. If it still does not pick them up make sure that the trees actually have colliders attached to them and that the tree prefabs are in the correct layer (the layer should be included in the \textquotesingle{}Collision Testing\textquotesingle{} mask).
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Pathfinding.\+Graph\+Collision}} for documentation on the \textquotesingle{}Height Testing\textquotesingle{} and \textquotesingle{}Collision Testing\textquotesingle{} sections of the grid graph settings.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a25d18a7cb3baf45d3643f4f1bafbda47}\label{class_pathfinding_1_1_grid_graph_a25d18a7cb3baf45d3643f4f1bafbda47}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CalculateConnections@{CalculateConnections}}
+\index{CalculateConnections@{CalculateConnections}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateConnections()}{CalculateConnections()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static void Pathfinding.\+Grid\+Graph.\+Calculate\+Connections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the grid connections for a single node. Deprecated\+: Use the instance function instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a08b6a9d0bfe60d71ed723f7e5ddc5bbd}\label{class_pathfinding_1_1_grid_graph_a08b6a9d0bfe60d71ed723f7e5ddc5bbd}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CalculateConnections@{CalculateConnections}}
+\index{CalculateConnections@{CalculateConnections}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateConnections()}{CalculateConnections()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Calculate\+Connections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the grid connections for a single node. Convenience function, it\textquotesingle{}s slightly faster to use \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_afe1cdb7f6f913aaaa19006182ad3ec96}{Calculate\+Connections(int,int)}} but that will only show when calculating for a large number of nodes. This function will also work for both grid graphs and layered grid graphs. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_afe1cdb7f6f913aaaa19006182ad3ec96}\label{class_pathfinding_1_1_grid_graph_afe1cdb7f6f913aaaa19006182ad3ec96}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CalculateConnections@{CalculateConnections}}
+\index{CalculateConnections@{CalculateConnections}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateConnections()}{CalculateConnections()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Calculate\+Connections (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the grid connections for a single node. Note that to ensure that connections are completely up to date after updating a node you have to calculate the connections for both the changed node and its neighbours. 
+
+In a layered grid graph, this will recalculate the connections for all nodes in the (x,z) cell (it may have multiple layers of nodes).
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a08b6a9d0bfe60d71ed723f7e5ddc5bbd}{Calculate\+Connections(\+Grid\+Node\+Base)}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aace905f259f88c1fd5150b3230930810}\label{class_pathfinding_1_1_grid_graph_aace905f259f88c1fd5150b3230930810}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CalculateConnections@{CalculateConnections}}
+\index{CalculateConnections@{CalculateConnections}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateConnections()}{CalculateConnections()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Calculate\+Connections (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the grid connections for a single node. Deprecated\+: Use Calculate\+Connections(x,z) or Calculate\+Connections(node) instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a71e6787d661d1aebd990b028e18d117a}\label{class_pathfinding_1_1_grid_graph_a71e6787d661d1aebd990b028e18d117a}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CalculateConnectionsForCellAndNeighbours@{CalculateConnectionsForCellAndNeighbours}}
+\index{CalculateConnectionsForCellAndNeighbours@{CalculateConnectionsForCellAndNeighbours}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateConnectionsForCellAndNeighbours()}{CalculateConnectionsForCellAndNeighbours()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Calculate\+Connections\+For\+Cell\+And\+Neighbours (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+Calculates the grid connections for a cell as well as its neighbours. This is a useful utility function if you want to modify the walkability of a single node in the graph. 
+
+{\ttfamily  Astar\+Path.\+active.\+Add\+Work\+Item(ctx =$>$ \{ var grid = Astar\+Path.\+active.\+data.\+grid\+Graph; int x = 5; int z = 7;}
+
+{\ttfamily  // Mark a single node as unwalkable grid.\+Get\+Node(x, z).Walkable = false;}
+
+{\ttfamily  // Recalculate the connections for that node as well as its neighbours grid.\+Calculate\+Connections\+For\+Cell\+And\+Neighbours(x, z); \}); }\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a0a796b8255e4f6a117b6b923099f0085}\label{class_pathfinding_1_1_grid_graph_a0a796b8255e4f6a117b6b923099f0085}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CalculateTransform@{CalculateTransform}}
+\index{CalculateTransform@{CalculateTransform}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateTransform()}{CalculateTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} Pathfinding.\+Grid\+Graph.\+Calculate\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a new transform which transforms graph space to world space. Does not update the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}} field. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a8497820eecae49a240e7990f3e50bcb0}\label{class_pathfinding_1_1_grid_graph_a8497820eecae49a240e7990f3e50bcb0}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CheckConnection@{CheckConnection}}
+\index{CheckConnection@{CheckConnection}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CheckConnection()}{CheckConnection()}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+Check\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}}}]{node,  }\item[{int}]{dir }\end{DoxyParamCaption})}
+
+
+
+Returns if node is connected to it\textquotesingle{}s neighbour in the specified direction. This will also return true if \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}{neighbours}} = Num\+Neighbours.\+Four, the direction is diagonal and one can move through one of the adjacent nodes to the targeted node. 
+
+See\+: neighbour\+Offsets\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a79db0cd43a5ad6287ab9d277c0c115af}\label{class_pathfinding_1_1_grid_graph_a79db0cd43a5ad6287ab9d277c0c115af}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!CountNodes@{CountNodes}}
+\index{CountNodes@{CountNodes}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{CountNodes()}{CountNodes()}}
+{\footnotesize\ttfamily override int Pathfinding.\+Grid\+Graph.\+Count\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Number of nodes in the graph. Note that this is, unless the graph type has overriden it, an O(n) operation. 
+
+This is an O(1) operation for grid graphs and point graphs. For layered grid graphs it is an O(n) operation.
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a8a16a2a7653e1420cf4863371782b7e9}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a080bfda69e7f9358282b9af43b207a07}\label{class_pathfinding_1_1_grid_graph_a080bfda69e7f9358282b9af43b207a07}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!DeserializeExtraInfo@{DeserializeExtraInfo}}
+\index{DeserializeExtraInfo@{DeserializeExtraInfo}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{DeserializeExtraInfo()}{DeserializeExtraInfo()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Deserialize\+Extra\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deserializes graph type specific node data. See\+: Serialize\+Extra\+Info 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a059090b1a5e41eb725329979f30e0ebf}\label{class_pathfinding_1_1_grid_graph_a059090b1a5e41eb725329979f30e0ebf}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!DeserializeSettingsCompatibility@{DeserializeSettingsCompatibility}}
+\index{DeserializeSettingsCompatibility@{DeserializeSettingsCompatibility}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{DeserializeSettingsCompatibility()}{DeserializeSettingsCompatibility()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Deserialize\+Settings\+Compatibility (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An old format for serializing settings. Deprecated\+: This is deprecated now, but the deserialization code is kept to avoid loosing data when upgrading from older versions. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a72bf5ffc375940c938f31accb8e1d02a}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a43fce0cbbcc3630fd2d6353c4aa56275}\label{class_pathfinding_1_1_grid_graph_a43fce0cbbcc3630fd2d6353c4aa56275}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!DestroyAllNodes@{DestroyAllNodes}}
+\index{DestroyAllNodes@{DestroyAllNodes}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{DestroyAllNodes()}{DestroyAllNodes()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Destroy\+All\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Destroys all nodes in the graph. Warning\+: This is an internal method. Unless you have a very good reason, you should probably not call it. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_adf427b4cbf495954ba3709b7d1bd4e10}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a259a9dec4063f976aaf0bf15a0ee0a53}\label{class_pathfinding_1_1_grid_graph_a259a9dec4063f976aaf0bf15a0ee0a53}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!ErodeWalkableArea@{ErodeWalkableArea}}
+\index{ErodeWalkableArea@{ErodeWalkableArea}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{ErodeWalkableArea()}{ErodeWalkableArea()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Erode\+Walkable\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Erodes the walkable area. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}{erode\+Iterations}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_acd26f580c0f68cf06422186e2cd48f54}\label{class_pathfinding_1_1_grid_graph_acd26f580c0f68cf06422186e2cd48f54}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!ErodeWalkableArea@{ErodeWalkableArea}}
+\index{ErodeWalkableArea@{ErodeWalkableArea}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{ErodeWalkableArea()}{ErodeWalkableArea()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Erode\+Walkable\+Area (\begin{DoxyParamCaption}\item[{int}]{xmin,  }\item[{int}]{zmin,  }\item[{int}]{xmax,  }\item[{int}]{zmax }\end{DoxyParamCaption})}
+
+
+
+Erodes the walkable area. 
+
+xmin, zmin (inclusive)~\newline
+xmax, zmax (exclusive)
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}{erode\+Iterations}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ab5b2c9e0c0dc6eb22021d3100f40465d}\label{class_pathfinding_1_1_grid_graph_ab5b2c9e0c0dc6eb22021d3100f40465d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!ErosionAnyFalseConnections@{ErosionAnyFalseConnections}}
+\index{ErosionAnyFalseConnections@{ErosionAnyFalseConnections}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{ErosionAnyFalseConnections()}{ErosionAnyFalseConnections()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+Grid\+Graph.\+Erosion\+Any\+False\+Connections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{base\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+True if the node has any blocked connections. For 4 and 8 neighbours the 4 axis aligned connections will be checked. For 6 neighbours all 6 neighbours will be checked. 
+
+Internal method used for erosion.\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aa7fff21063d196d0dd24dc0505094009}\label{class_pathfinding_1_1_grid_graph_aa7fff21063d196d0dd24dc0505094009}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GenerateMatrix@{GenerateMatrix}}
+\index{GenerateMatrix@{GenerateMatrix}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GenerateMatrix()}{GenerateMatrix()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Generate\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates the matrix used for translating nodes from grid coordinates to world coordinates. Deprecated\+: This method has been renamed to \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a0e684d7c7b55a01a5d33b8ce15f1267e}\label{class_pathfinding_1_1_grid_graph_a0e684d7c7b55a01a5d33b8ce15f1267e}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNearest@{GetNearest}}
+\index{GetNearest@{GetNearest}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNearest()}{GetNearest()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Grid\+Graph.\+Get\+Nearest (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to try to find a close node to\\
+\hline
+{\em hint} & Can be passed to enable some graph generators to find the nearest node faster.\\
+\hline
+{\em constraint} & Can for example tell the function to try to return a walkable node. If you do not get a good node back, consider calling Get\+Nearest\+Force.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a75522d1273f1c06c49c1aa951a459b77}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aabcc7ba1ce6301628f2fc9712d35b4ee}\label{class_pathfinding_1_1_grid_graph_aabcc7ba1ce6301628f2fc9712d35b4ee}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNearestForce@{GetNearestForce}}
+\index{GetNearestForce@{GetNearestForce}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNearestForce()}{GetNearestForce()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Grid\+Graph.\+Get\+Nearest\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{constraint }}. Returns\+: an \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}. This method will only return an empty \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} if there are no nodes which comply with the specified constraint. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a7f8d00bf59f014706eabe25c2b0b7ad4}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a0b612dc43efba20fe974711022552a7f}\label{class_pathfinding_1_1_grid_graph_a0b612dc43efba20fe974711022552a7f}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNode()}{GetNode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} Pathfinding.\+Grid\+Graph.\+Get\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Node in the specified cell. Returns null if the coordinate is outside the grid. 
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph; int x = 5; int z = 8; \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} node = gg.\+Get\+Node(x, z); }
+
+If you know the coordinate is inside the grid and you are looking to maximize performance then you can look up the node in the internal array directly which is slightly faster. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a6be0a29dca8d4924c265b94b27a4e2a7}{nodes}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_af0e95e6b54153b44a920b57ac3d1a7f2}\label{class_pathfinding_1_1_grid_graph_af0e95e6b54153b44a920b57ac3d1a7f2}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodes@{GetNodes}}
+\index{GetNodes@{GetNodes}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodes()}{GetNodes()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Get\+Nodes (\begin{DoxyParamCaption}\item[{System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calls a delegate with all nodes in the graph. This is the primary way of iterating through all nodes in a graph. 
+
+Do not change the graph structure inside the delegate.
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph;}
+
+{\ttfamily gg.\+Get\+Nodes(node =$>$ \{ // Here is a node Debug.\+Log(\char`\"{}\+I found a node at position \char`\"{} + (Vector3)node.\+position); \}); }
+
+If you want to store all nodes in a list you can do this
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph;}
+
+{\ttfamily List$<$\+Graph\+Node$>$ nodes = new List$<$\+Graph\+Node$>$(); gg.\+Get\+Nodes((System.\+Action$<$\+Graph\+Node$>$)nodes.\+Add); }
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_astar_data_a21b0e75ff4aa8af66025f06684f4e6df}{Pathfinding.\+Astar\+Data.\+Get\+Nodes}}
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a1f30352703d9a3f192d6e6b44d86c8b3}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aa61168b45d637122d6f8cb14862d1a7b}\label{class_pathfinding_1_1_grid_graph_aa61168b45d637122d6f8cb14862d1a7b}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInArea@{GetNodesInArea}}
+\index{GetNodesInArea@{GetNodesInArea}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInArea()}{GetNodesInArea()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Area (\begin{DoxyParamCaption}\item[{Bounds}]{bounds }\end{DoxyParamCaption})}
+
+
+
+Deprecated\+: This method has been renamed to Get\+Nodes\+In\+Region 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a641b53930a6a29b34c925366ab50982d}\label{class_pathfinding_1_1_grid_graph_a641b53930a6a29b34c925366ab50982d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInArea@{GetNodesInArea}}
+\index{GetNodesInArea@{GetNodesInArea}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInArea()}{GetNodesInArea()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Area (\begin{DoxyParamCaption}\item[{Bounds}]{bounds,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}}}]{shape }\end{DoxyParamCaption})}
+
+
+
+Deprecated\+: This method has been renamed to Get\+Nodes\+In\+Region 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ae31df6a187e60b39d9238417c8a9fa5f}\label{class_pathfinding_1_1_grid_graph_ae31df6a187e60b39d9238417c8a9fa5f}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInArea@{GetNodesInArea}}
+\index{GetNodesInArea@{GetNodesInArea}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInArea()}{GetNodesInArea()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}}}]{shape }\end{DoxyParamCaption})}
+
+
+
+Deprecated\+: This method has been renamed to Get\+Nodes\+In\+Region 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a4343d54c15aa5c61ebb548c7dce590f2}\label{class_pathfinding_1_1_grid_graph_a4343d54c15aa5c61ebb548c7dce590f2}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInRegion@{GetNodesInRegion}}
+\index{GetNodesInRegion@{GetNodesInRegion}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInRegion()}{GetNodesInRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Region (\begin{DoxyParamCaption}\item[{Bounds}]{bounds }\end{DoxyParamCaption})}
+
+
+
+All nodes inside the bounding box. Note\+: Be nice to the garbage collector and pool the list when you are done with it (optional) See\+: Pathfinding.\+Util.\+List\+Pool 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ab77651edacc00b0aa7368d44266d9062}{Get\+Nodes\+In\+Region(\+Graph\+Update\+Shape)}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_abf927879761f6d77dbbce1ae741a2c4f}\label{class_pathfinding_1_1_grid_graph_abf927879761f6d77dbbce1ae741a2c4f}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInRegion@{GetNodesInRegion}}
+\index{GetNodesInRegion@{GetNodesInRegion}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInRegion()}{GetNodesInRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Region (\begin{DoxyParamCaption}\item[{Bounds}]{bounds,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}}}]{shape }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+All nodes inside the shape or if null, the bounding box. If a shape is supplied, it is assumed to be contained inside the bounding box. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a13044250d2c926b105bd6dc94a1d4118}{Graph\+Update\+Shape.\+Get\+Bounds}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ab77651edacc00b0aa7368d44266d9062}\label{class_pathfinding_1_1_grid_graph_ab77651edacc00b0aa7368d44266d9062}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInRegion@{GetNodesInRegion}}
+\index{GetNodesInRegion@{GetNodesInRegion}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInRegion()}{GetNodesInRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Region (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}}}]{shape }\end{DoxyParamCaption})}
+
+
+
+All nodes inside the shape. Note\+: Be nice to the garbage collector and pool the list when you are done with it (optional) See\+: Pathfinding.\+Util.\+List\+Pool 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a4343d54c15aa5c61ebb548c7dce590f2}{Get\+Nodes\+In\+Region(\+Bounds)}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a33ce7df1bd3df86c5340aaa3e3eae3e5}\label{class_pathfinding_1_1_grid_graph_a33ce7df1bd3df86c5340aaa3e3eae3e5}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInRegion@{GetNodesInRegion}}
+\index{GetNodesInRegion@{GetNodesInRegion}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInRegion()}{GetNodesInRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual List$<$\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}$>$ Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Region (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get all nodes in a rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & Region in which to return nodes. It will be clamped to the grid.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aa94115e2a4d3b2cc7168c9bc223732c3}\label{class_pathfinding_1_1_grid_graph_aa94115e2a4d3b2cc7168c9bc223732c3}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetNodesInRegion@{GetNodesInRegion}}
+\index{GetNodesInRegion@{GetNodesInRegion}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodesInRegion()}{GetNodesInRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual int Pathfinding.\+Grid\+Graph.\+Get\+Nodes\+In\+Region (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}}]{rect,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}}\mbox{[}$\,$\mbox{]}}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get all nodes in a rectangle. Returns\+: The number of nodes written to the buffer. 
+
+Note\+: This method is much faster than \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a33ce7df1bd3df86c5340aaa3e3eae3e5}{Get\+Nodes\+In\+Region(\+Int\+Rect)}} which returns a list because this method can make use of the highly optimized System.\+Array.\+Copy method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & Region in which to return nodes. It will be clamped to the grid.\\
+\hline
+{\em buffer} & Buffer in which the nodes will be stored. Should be at least as large as the number of nodes that can exist in that region.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a497b3d314dbedab860da31ec5ee18568}\label{class_pathfinding_1_1_grid_graph_a497b3d314dbedab860da31ec5ee18568}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GetRectFromBounds@{GetRectFromBounds}}
+\index{GetRectFromBounds@{GetRectFromBounds}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GetRectFromBounds()}{GetRectFromBounds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} Pathfinding.\+Grid\+Graph.\+Get\+Rect\+From\+Bounds (\begin{DoxyParamCaption}\item[{Bounds}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A rect with all nodes that the bounds could touch. This correctly handles rotated graphs and other transformations. The returned rect is guaranteed to not extend outside the graph bounds. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a1f3886bcecd0c282a9358e00a084b902}\label{class_pathfinding_1_1_grid_graph_a1f3886bcecd0c282a9358e00a084b902}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!GraphPointToWorld@{GraphPointToWorld}}
+\index{GraphPointToWorld@{GraphPointToWorld}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{GraphPointToWorld()}{GraphPointToWorld()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} Pathfinding.\+Grid\+Graph.\+Graph\+Point\+To\+World (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Transform a point in graph space to world space. This will give you the node position for the node at the given x and z coordinate if it is at the specified height above the base of the graph. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a599034d7d684b5cab3a43a1288928449}\label{class_pathfinding_1_1_grid_graph_a599034d7d684b5cab3a43a1288928449}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!HasNodeConnection@{HasNodeConnection}}
+\index{HasNodeConnection@{HasNodeConnection}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{HasNodeConnection()}{HasNodeConnection()}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+Has\+Node\+Connection (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{x,  }\item[{int}]{z,  }\item[{int}]{dir }\end{DoxyParamCaption})}
+
+T\+O\+DO\+: Mark edge nodes and only do bounds checking for them
+
+T\+O\+DO\+: Modify to get adjacent grid graph here\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a97fefcf62d91b29c4ae2130f7fd4f0e4}\label{class_pathfinding_1_1_grid_graph_a97fefcf62d91b29c4ae2130f7fd4f0e4}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!IsValidConnection@{IsValidConnection}}
+\index{IsValidConnection@{IsValidConnection}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{IsValidConnection()}{IsValidConnection()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+Grid\+Graph.\+Is\+Valid\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}}}]{node1,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}}}]{node2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns true if a connection between the adjacent nodes n1 and n2 is valid. Also takes into account if the nodes are walkable. 
+
+This method may be overriden if you want to customize what connections are valid. It must however hold that Is\+Valid\+Connection(a,b) == Is\+Valid\+Connection(b,a).
+
+This is used for calculating the connections when the graph is scanned or updated.
+
+See\+: Calculate\+Connections\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a03a67751a8063dc101bf1989437e1094}\label{class_pathfinding_1_1_grid_graph_a03a67751a8063dc101bf1989437e1094}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This function will be called when this graph is destroyed 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_aa244cacb06444c24a23935a44383a791}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a74b5d55828020e33cc126d5a98d38fac}\label{class_pathfinding_1_1_grid_graph_a74b5d55828020e33cc126d5a98d38fac}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos}{Retained\+Gizmos}}}]{gizmos,  }\item[{bool}]{draw\+Nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draw gizmos for the graph 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a20c009ff8b9c2de703a2758e6549ef4c}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a7071415542fa56b048b44e029f3b4f27}\label{class_pathfinding_1_1_grid_graph_a7071415542fa56b048b44e029f3b4f27}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!PostDeserialization@{PostDeserialization}}
+\index{PostDeserialization@{PostDeserialization}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{PostDeserialization()}{PostDeserialization()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Post\+Deserialization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called after all deserialization has been done for all graphs. Can be used to set up more graph data which is not serialized 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a4f22c1d0267887f4430686d0015c97c6}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a18f712af21b48eb877b00c9fed66f554}\label{class_pathfinding_1_1_grid_graph_a18f712af21b48eb877b00c9fed66f554}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!RecalculateCell@{RecalculateCell}}
+\index{RecalculateCell@{RecalculateCell}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{RecalculateCell()}{RecalculateCell()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Recalculate\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{bool}]{reset\+Penalties = {\ttfamily true},  }\item[{bool}]{reset\+Tags = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Recalculates single node in the graph. 
+
+For a layered grid graph this will recalculate all nodes at a specific (x,z) cell in the grid. For grid graphs this will simply recalculate the single node at those coordinates.
+
+Note\+: This must only be called when it is safe to update nodes. For example when scanning the graph or during a graph update.
+
+Note\+: This will not recalculate any connections as this method is often run for several adjacent nodes at a time. After you have recalculated all the nodes you will have to recalculate the connections for the changed nodes as well as their neighbours. See\+: Calculate\+Connections
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the cell\\
+\hline
+{\em z} & Z coordinate of the cell\\
+\hline
+{\em reset\+Penalties} & If true, the penalty of the nodes will be reset to the initial value as if the graph had just been scanned (this excludes texture data however which is only done when scanning the graph).\\
+\hline
+{\em reset\+Tags} & If true, the tag will be reset to zero (the default tag).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_adbfdd7210308f7125ed379980760bce0}\label{class_pathfinding_1_1_grid_graph_adbfdd7210308f7125ed379980760bce0}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!RelocateNodes@{RelocateNodes}}
+\index{RelocateNodes@{RelocateNodes}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{RelocateNodes()}{RelocateNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Relocate\+Nodes (\begin{DoxyParamCaption}\item[{Matrix4x4}]{delta\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the nodes in this graph. Multiplies all node positions by delta\+Matrix. 
+
+For example if you want to move all your nodes in e.\+g a point graph 10 units along the X axis from the initial position {\ttfamily  var graph = Astar\+Path.\+data.\+point\+Graph; var m = Matrix4x4.\+T\+RS (new Vector3(10,0,0), Quaternion.\+identity, Vector3.\+one); graph.\+Relocate\+Nodes (m); }
+
+Note\+: For grid graphs, navmesh graphs and recast graphs it is recommended to use their custom overloads of the Relocate\+Nodes method which take parameters for e.\+g center and node\+Size (and additional parameters) instead since they are both easier to use and are less likely to mess up pathfinding.
+
+Warning\+: This method is lossy for Point\+Graphs, so calling it many times may cause node positions to lose precision. For example if you set the scale to 0 in one call then all nodes will be scaled/moved to the same point and you will not be able to recover their original positions. The same thing happens for other -\/ less extreme -\/ values as well, but to a lesser degree.
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_af3633c303f6bac2f9b3699f115f6621e}\label{class_pathfinding_1_1_grid_graph_af3633c303f6bac2f9b3699f115f6621e}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!RelocateNodes@{RelocateNodes}}
+\index{RelocateNodes@{RelocateNodes}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{RelocateNodes()}{RelocateNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Relocate\+Nodes (\begin{DoxyParamCaption}\item[{Vector3}]{center,  }\item[{Quaternion}]{rotation,  }\item[{float}]{node\+Size,  }\item[{float}]{aspect\+Ratio = {\ttfamily 1},  }\item[{float}]{isometric\+Angle = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Relocate the grid graph using new settings. This will move all nodes in the graph to new positions which matches the new settings. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a0c84858f9784131992a7f7696f9d114e}\label{class_pathfinding_1_1_grid_graph_a0c84858f9784131992a7f7696f9d114e}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!ScanInternal@{ScanInternal}}
+\index{ScanInternal@{ScanInternal}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{ScanInternal()}{ScanInternal()}}
+{\footnotesize\ttfamily override I\+Enumerable$<$\mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}}$>$ Pathfinding.\+Grid\+Graph.\+Scan\+Internal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal method to scan the graph. Called from \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}}. Override this function to implement custom scanning logic. \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} objects can be yielded to show progress info in the editor and to split up processing over several frames when using async scanning. 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a98ea7af57e744d11545181ff265c6abe}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aee314bb04e71d99439814dfd5303e75c}\label{class_pathfinding_1_1_grid_graph_aee314bb04e71d99439814dfd5303e75c}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!SerializeExtraInfo@{SerializeExtraInfo}}
+\index{SerializeExtraInfo@{SerializeExtraInfo}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{SerializeExtraInfo()}{SerializeExtraInfo()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph.\+Serialize\+Extra\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Serializes graph type specific node data. This function can be overriden to serialize extra node information (or graph information for that matter) which cannot be serialized using the standard serialization. Serialize the data in any way you want and return a byte array. When loading, the exact same byte array will be passed to the Deserialize\+Extra\+Info function.~\newline
+These functions will only be called if node serialization is enabled.~\newline
+
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_abc97e0461bddc710397f650be9461108}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}\label{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!SetDimensions@{SetDimensions}}
+\index{SetDimensions@{SetDimensions}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{SetDimensions()}{SetDimensions()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Set\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{depth,  }\item[{float}]{node\+Size }\end{DoxyParamCaption})}
+
+
+
+Updates \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}} from \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} values. Also \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{generates a new matrix }}. Note\+: This does not rescan the graph, that must be done with Scan 
+
+You should use this method instead of setting the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}} fields as the grid dimensions are not defined by the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}} variables but by the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a5ade35875a2ad29c32cd9e7a41ff42b6}{center}} variables.
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph; var width = 80; var depth = 60; var node\+Size = 1.\+0f;}
+
+{\ttfamily gg.\+Set\+Dimensions(width, depth, node\+Size);}
+
+{\ttfamily // Recalculate the graph Astar\+Path.\+active.\+Scan(); }\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ad3c876177bf7f172c85989790d651af1}\label{class_pathfinding_1_1_grid_graph_ad3c876177bf7f172c85989790d651af1}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!SetNodeConnection@{SetNodeConnection}}
+\index{SetNodeConnection@{SetNodeConnection}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{SetNodeConnection()}{SetNodeConnection()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Set\+Node\+Connection (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{x,  }\item[{int}]{z,  }\item[{int}]{dir,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Set if connection in the specified direction should be enabled. Note that bounds checking will still be done when getting the connection value again, so it is not necessarily true that Has\+Node\+Connection will return true just because you used Set\+Node\+Connection on a node to set a connection to true. 
+
+Note\+: This is identical to Pathfinding.\+Node.\+Set\+Connection\+Internal
+
+Deprecated\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the node\\
+\hline
+{\em x} & X coordinate of the node\\
+\hline
+{\em z} & Z coordinate of the node\\
+\hline
+{\em dir} & Direction from 0 up to but excluding 8.\\
+\hline
+{\em value} & Enable or disable the connection\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aeca9d37d3bbad578ad2e1ea3f0076677}\label{class_pathfinding_1_1_grid_graph_aeca9d37d3bbad578ad2e1ea3f0076677}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!SetUpOffsetsAndCosts@{SetUpOffsetsAndCosts}}
+\index{SetUpOffsetsAndCosts@{SetUpOffsetsAndCosts}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{SetUpOffsetsAndCosts()}{SetUpOffsetsAndCosts()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Set\+Up\+Offsets\+And\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets up \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}{neighbour\+Offsets}} with the current settings. \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}{neighbour\+Offsets}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae46fc94626754e269f5df3a461891b7d}{neighbour\+Costs}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_acf54a32030e6a9db24095c8f67dec3fe}{neighbour\+X\+Offsets}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a04121f0afe8b2b035078b21d4033e0ba}{neighbour\+Z\+Offsets}} are set up.~\newline
+The cost for a non-\/diagonal movement between two adjacent nodes is Round\+To\+Int (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} $\ast$ \mbox{\hyperlink{struct_pathfinding_1_1_int3_a5c7bb8aff7e46881a645be9399a42ee1}{Int3.\+Precision}})~\newline
+The cost for a diagonal movement between two adjacent nodes is Round\+To\+Int (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} $\ast$ Sqrt (2) $\ast$ \mbox{\hyperlink{struct_pathfinding_1_1_int3_a5c7bb8aff7e46881a645be9399a42ee1}{Int3.\+Precision}}) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a4a3697d3c3221a8d60c71459f1bc3a74}\label{class_pathfinding_1_1_grid_graph_a4a3697d3c3221a8d60c71459f1bc3a74}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!UpdateNodePositionCollision@{UpdateNodePositionCollision}}
+\index{UpdateNodePositionCollision@{UpdateNodePositionCollision}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateNodePositionCollision()}{UpdateNodePositionCollision()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph.\+Update\+Node\+Position\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}}}]{node,  }\item[{int}]{x,  }\item[{int}]{z,  }\item[{bool}]{reset\+Penalty = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates position, walkability and penalty for the node. Assumes that collision.\+Initialize (...) has been called before this function 
+
+Deprecated\+: Use Recalculate\+Cell instead which works both for grid graphs and layered grid graphs.\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ac4199384dc6de8d2ccb860216e5273f5}\label{class_pathfinding_1_1_grid_graph_ac4199384dc6de8d2ccb860216e5273f5}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!UpdateSizeFromWidthDepth@{UpdateSizeFromWidthDepth}}
+\index{UpdateSizeFromWidthDepth@{UpdateSizeFromWidthDepth}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateSizeFromWidthDepth()}{UpdateSizeFromWidthDepth()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Update\+Size\+From\+Width\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}} from \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}{width}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}{depth}} and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} values. Deprecated\+: Use \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}{Set\+Dimensions}} instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}\label{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!UpdateTransform@{UpdateTransform}}
+\index{UpdateTransform@{UpdateTransform}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{UpdateTransform()}{UpdateTransform()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Graph.\+Update\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}} field which transforms graph space to world space. In graph space all nodes are laid out in the XZ plane with the first node having a corner in the origin. One unit in graph space is one node so the first node in the graph is at (0.\+5,0) the second one at (1.\+5,0) etc. 
+
+This takes the current values of the parameters such as position and rotation into account. The transform that was used the last time the graph was scanned is stored in the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}} field.
+
+The \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}{transform}} field is calculated using this method when the graph is scanned. The width, depth variables are also updated based on the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}{unclamped\+Size}} field.
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_afa82db44b4a6819e9191e55e98fbaef0}\label{class_pathfinding_1_1_grid_graph_afa82db44b4a6819e9191e55e98fbaef0}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!aspectRatio@{aspectRatio}}
+\index{aspectRatio@{aspectRatio}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{aspectRatio}{aspectRatio}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+aspect\+Ratio = 1F}
+
+
+
+Scaling of the graph along the X axis. This should be used if you want different scales on the X and Y axis of the grid 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a5ade35875a2ad29c32cd9e7a41ff42b6}\label{class_pathfinding_1_1_grid_graph_a5ade35875a2ad29c32cd9e7a41ff42b6}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!center@{center}}
+\index{center@{center}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Grid\+Graph.\+center}
+
+
+
+Center point of the grid 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aa68aecab651cdd42655f50e88a2f535a}\label{class_pathfinding_1_1_grid_graph_aa68aecab651cdd42655f50e88a2f535a}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!collision@{collision}}
+\index{collision@{collision}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision}} Pathfinding.\+Grid\+Graph.\+collision}
+
+
+
+Settings on how to check for walkability and height 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a98956923ed0a7c47d4d30298d838ead5}\label{class_pathfinding_1_1_grid_graph_a98956923ed0a7c47d4d30298d838ead5}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!cutCorners@{cutCorners}}
+\index{cutCorners@{cutCorners}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{cutCorners}{cutCorners}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+cut\+Corners = true}
+
+
+
+If disabled, will not cut corners on obstacles. If seecref=\char`\"{}neighbours\char`\"{}/$>$connections\textbackslash{}endlinkisEight,obstaclecornersmightbecutbyaconnection,settingthistofalsedisablesthat.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}\label{class_pathfinding_1_1_grid_graph_abf121c3dd3a3b37ed1ad68a68c79f1de}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!depth@{depth}}
+\index{depth@{depth}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Graph.\+depth}
+
+
+
+Depth (height) of the grid in nodes. See\+: Set\+Dimensions 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}\label{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!erodeIterations@{erodeIterations}}
+\index{erodeIterations@{erodeIterations}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{erodeIterations}{erodeIterations}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Graph.\+erode\+Iterations}
+
+
+
+Erosion of the graph. The graph can be eroded after calculation. This means a margin is put around unwalkable nodes or other unwalkable connections. It is really good if your graph contains ledges where the nodes without erosion are walkable too close to the edge. 
+
+Below is an image showing a graph with erode iterations 0, 1 and 2 \mbox{[}Open online documentation to see images\mbox{]}
+
+Note\+: A high number of erode iterations can seriously slow down graph updates during runtime (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}) and should be kept as low as possible. See\+: erosion\+Use\+Tags\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ae19f19319bd3fbf06c8649c06d49cebb}\label{class_pathfinding_1_1_grid_graph_ae19f19319bd3fbf06c8649c06d49cebb}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!erosionFirstTag@{erosionFirstTag}}
+\index{erosionFirstTag@{erosionFirstTag}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{erosionFirstTag}{erosionFirstTag}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Graph.\+erosion\+First\+Tag = 1}
+
+
+
+Tag to start from when using tags for erosion. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aee904c6fbfe6372283950f0c39248f8f}{erosion\+Use\+Tags}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ac1aa7d3f42b5e56b157bd9d5f90dbe4d}{erode\+Iterations}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aee904c6fbfe6372283950f0c39248f8f}\label{class_pathfinding_1_1_grid_graph_aee904c6fbfe6372283950f0c39248f8f}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!erosionUseTags@{erosionUseTags}}
+\index{erosionUseTags@{erosionUseTags}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{erosionUseTags}{erosionUseTags}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+erosion\+Use\+Tags}
+
+
+
+Use tags instead of walkability for erosion. Tags will be used for erosion instead of marking nodes as unwalkable. The nodes will be marked with tags in an increasing order starting with the tag \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_ae19f19319bd3fbf06c8649c06d49cebb}{erosion\+First\+Tag}}. Debug with the Tags mode to see the effect. With this enabled you can in effect set how close different A\+Is are allowed to get to walls using the Valid Tags field on the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} component. \mbox{[}Open online documentation to see images\mbox{]} \mbox{[}Open online documentation to see images\mbox{]} See\+: erosion\+First\+Tag 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aed6de82443906b7d96a5ae664802c898}\label{class_pathfinding_1_1_grid_graph_aed6de82443906b7d96a5ae664802c898}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!getNearestForceOverlap@{getNearestForceOverlap}}
+\index{getNearestForceOverlap@{getNearestForceOverlap}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{getNearestForceOverlap}{getNearestForceOverlap}}
+{\footnotesize\ttfamily const int Pathfinding.\+Grid\+Graph.\+get\+Nearest\+Force\+Overlap = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+In Get\+Nearest\+Force, determines how far to search after a valid node has been found 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a29ea38657bb45db4f6d2877518691ef2}\label{class_pathfinding_1_1_grid_graph_a29ea38657bb45db4f6d2877518691ef2}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!inspectorGridMode@{inspectorGridMode}}
+\index{inspectorGridMode@{inspectorGridMode}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{inspectorGridMode}{inspectorGridMode}}
+{\footnotesize\ttfamily Inspector\+Grid\+Mode Pathfinding.\+Grid\+Graph.\+inspector\+Grid\+Mode = Inspector\+Grid\+Mode.\+Grid}
+
+
+
+Determines the layout of the grid graph inspector in the Unity Editor. This field is only used in the editor, it has no effect on the rest of the game whatsoever. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ada1e1ef584d8ffa45bda10471bae90e4}\label{class_pathfinding_1_1_grid_graph_ada1e1ef584d8ffa45bda10471bae90e4}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!inspectorHexagonSizeMode@{inspectorHexagonSizeMode}}
+\index{inspectorHexagonSizeMode@{inspectorHexagonSizeMode}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{inspectorHexagonSizeMode}{inspectorHexagonSizeMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Inspector\+Grid\+Hexagon\+Node\+Size}} Pathfinding.\+Grid\+Graph.\+inspector\+Hexagon\+Size\+Mode = \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fa32954654ac8fe66a1d09be19001de2d4}{Inspector\+Grid\+Hexagon\+Node\+Size.\+Width}}}
+
+
+
+Determines how the size of each hexagon is set in the inspector. For hexagons the normal node\+Size field doesn\textquotesingle{}t really correspond to anything specific on the hexagon\textquotesingle{}s geometry, so this enum is used to give the user the opportunity to adjust more concrete dimensions of the hexagons without having to pull out a calculator to calculate all the square roots and complicated conversion factors. 
+
+This field is only used in the graph inspector, the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} field will always use the same internal units. If you want to set the node size through code then you can use Convert\+Hexagon\+Size\+To\+Node\+Size.
+
+\mbox{[}Open online documentation to see images\mbox{]}
+
+See\+: \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Inspector\+Grid\+Hexagon\+Node\+Size}} See\+: Convert\+Hexagon\+Size\+To\+Node\+Size See\+: Convert\+Node\+Size\+To\+Hexagon\+Size\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a9704f04c143d3d1d08c035f5fc8b6c16}\label{class_pathfinding_1_1_grid_graph_a9704f04c143d3d1d08c035f5fc8b6c16}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!isometricAngle@{isometricAngle}}
+\index{isometricAngle@{isometricAngle}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{isometricAngle}{isometricAngle}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+isometric\+Angle}
+
+
+
+Angle to use for the isometric projection. If you are making a 2D isometric game, you may want to use this parameter to adjust the layout of the graph to match your game. This will essentially scale the graph along one of its diagonals to produce something like this\+: 
+
+A perspective view of an isometric graph. \mbox{[}Open online documentation to see images\mbox{]}
+
+A top down view of an isometric graph. Note that the graph is entirely 2D, there is no perspective in this image. \mbox{[}Open online documentation to see images\mbox{]}
+
+Usually the angle that you want to use is either 30 degrees (alternatively 90-\/30 = 60 degrees) or atan(1/sqrt(2)) which is approximately 35.\+264 degrees (alternatively 90 -\/ 35.\+264 = 54.\+736 degrees). You might also want to rotate the graph plus or minus 45 degrees around the Y axis to get the oritientation required for your game.
+
+You can read more about it on the wikipedia page linked below.
+
+See\+: \href{http://en.wikipedia.org/wiki/Isometric_projection}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Isometric\+\_\+projection}} See\+: \href{https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Isometric\+\_\+graphics\+\_\+in\+\_\+video\+\_\+games\+\_\+and\+\_\+pixel\+\_\+art}} See\+: rotation\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ad80912d9f7e55e25877ffc0f6a6a21e6}\label{class_pathfinding_1_1_grid_graph_ad80912d9f7e55e25877ffc0f6a6a21e6}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!maxClimb@{maxClimb}}
+\index{maxClimb@{maxClimb}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{maxClimb}{maxClimb}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+max\+Climb = 0.\+4F}
+
+
+
+The max position difference between two nodes to enable a connection. Set to 0 to ignore the value. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a33f2289f1a44ed57e8364e6a28fba907}\label{class_pathfinding_1_1_grid_graph_a33f2289f1a44ed57e8364e6a28fba907}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!maxSlope@{maxSlope}}
+\index{maxSlope@{maxSlope}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{maxSlope}{maxSlope}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+max\+Slope = 90}
+
+
+
+The max slope in degrees for a node to be walkable. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_ae46fc94626754e269f5df3a461891b7d}\label{class_pathfinding_1_1_grid_graph_ae46fc94626754e269f5df3a461891b7d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!neighbourCosts@{neighbourCosts}}
+\index{neighbourCosts@{neighbourCosts}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{neighbourCosts}{neighbourCosts}}
+{\footnotesize\ttfamily readonly uint \mbox{[}$\,$\mbox{]} Pathfinding.\+Grid\+Graph.\+neighbour\+Costs = new uint\mbox{[}8\mbox{]}}
+
+
+
+Costs to neighbour nodes 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}\label{class_pathfinding_1_1_grid_graph_a32e1f80b9cdea22176623cd9ac6a8cda}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!neighbourOffsets@{neighbourOffsets}}
+\index{neighbourOffsets@{neighbourOffsets}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{neighbourOffsets}{neighbourOffsets}}
+{\footnotesize\ttfamily readonly int \mbox{[}$\,$\mbox{]} Pathfinding.\+Grid\+Graph.\+neighbour\+Offsets = new int\mbox{[}8\mbox{]}}
+
+
+
+Index offset to get neighbour nodes. Added to a node\textquotesingle{}s index to get a neighbour node index. 
+
+{\ttfamily  Z $\vert$ $\vert$}
+
+{\ttfamily  6 2 5 \textbackslash{} $\vert$ / -- 3 -\/ X -\/ 1 -\/-\/--- X / $\vert$ \textbackslash{} 7 0 4}
+
+{\ttfamily  $\vert$ $\vert$ }\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}\label{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{neighbours}{neighbours}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_pathfinding_ab1e7649c9ea2a478bba166ad5d81a61e}{Num\+Neighbours}} Pathfinding.\+Grid\+Graph.\+neighbours = Num\+Neighbours.\+Eight}
+
+
+
+Number of neighbours for each node. Either four, six, eight connections per node. 
+
+Six connections is primarily for emulating hexagon graphs.\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_acf54a32030e6a9db24095c8f67dec3fe}\label{class_pathfinding_1_1_grid_graph_acf54a32030e6a9db24095c8f67dec3fe}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!neighbourXOffsets@{neighbourXOffsets}}
+\index{neighbourXOffsets@{neighbourXOffsets}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{neighbourXOffsets}{neighbourXOffsets}}
+{\footnotesize\ttfamily readonly int \mbox{[}$\,$\mbox{]} Pathfinding.\+Grid\+Graph.\+neighbour\+X\+Offsets = new int\mbox{[}8\mbox{]}}
+
+
+
+Offsets in the X direction for neighbour nodes. Only 1, 0 or -\/1 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a04121f0afe8b2b035078b21d4033e0ba}\label{class_pathfinding_1_1_grid_graph_a04121f0afe8b2b035078b21d4033e0ba}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!neighbourZOffsets@{neighbourZOffsets}}
+\index{neighbourZOffsets@{neighbourZOffsets}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{neighbourZOffsets}{neighbourZOffsets}}
+{\footnotesize\ttfamily readonly int \mbox{[}$\,$\mbox{]} Pathfinding.\+Grid\+Graph.\+neighbour\+Z\+Offsets = new int\mbox{[}8\mbox{]}}
+
+
+
+Offsets in the Z direction for neighbour nodes. Only 1, 0 or -\/1 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a6be0a29dca8d4924c265b94b27a4e2a7}\label{class_pathfinding_1_1_grid_graph_a6be0a29dca8d4924c265b94b27a4e2a7}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!nodes@{nodes}}
+\index{nodes@{nodes}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} \mbox{[}$\,$\mbox{]} Pathfinding.\+Grid\+Graph.\+nodes}
+
+
+
+All nodes in this graph. Nodes are laid out row by row. 
+
+The first node has grid coordinates X=0, Z=0, the second one X=1, Z=0~\newline
+the last one has grid coordinates X=width-\/1, Z=depth-\/1.
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph; int x = 5; int z = 8; \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} node = gg.\+nodes\mbox{[}z$\ast$gg.width + x\mbox{]}; }
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0b612dc43efba20fe974711022552a7f}{Get\+Node}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af0e95e6b54153b44a920b57ac3d1a7f2}{Get\+Nodes}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}\label{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!nodeSize@{nodeSize}}
+\index{nodeSize@{nodeSize}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{nodeSize}{nodeSize}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+node\+Size = 1}
+
+
+
+Size of one node in world units. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a02b16e3a21eb3830d5687d4149e5df4e}{Set\+Dimensions}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a735dced487f5b42036e9ea4161d7926c}\label{class_pathfinding_1_1_grid_graph_a735dced487f5b42036e9ea4161d7926c}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!penaltyAngleFactor@{penaltyAngleFactor}}
+\index{penaltyAngleFactor@{penaltyAngleFactor}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{penaltyAngleFactor}{penaltyAngleFactor}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+penalty\+Angle\+Factor = 100F}
+
+
+
+How much penalty is applied depending on the slope of the terrain. At a 90 degree slope (not that exactly 90 degree slopes can occur, but almost 90 degree), this penalty is applied. At a 45 degree slope, half of this is applied and so on. Note that you may require very large values, a value of 1000 is equivalent to the cost of moving 1 world unit. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a0048c3c0e21eb5d54abf19a63c40292e}\label{class_pathfinding_1_1_grid_graph_a0048c3c0e21eb5d54abf19a63c40292e}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!penaltyAnglePower@{penaltyAnglePower}}
+\index{penaltyAnglePower@{penaltyAnglePower}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{penaltyAnglePower}{penaltyAnglePower}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+penalty\+Angle\+Power = 1}
+
+
+
+How much extra to penalize very steep angles 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_aeb8fa038296aca58bc2dea25ad2300de}\label{class_pathfinding_1_1_grid_graph_aeb8fa038296aca58bc2dea25ad2300de}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!penaltyPosition@{penaltyPosition}}
+\index{penaltyPosition@{penaltyPosition}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{penaltyPosition}{penaltyPosition}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+penalty\+Position}
+
+
+
+Use position (y-\/coordinate) to calculate penalty 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a6f44f5b5a866c4e2cc17be51fd5b993b}\label{class_pathfinding_1_1_grid_graph_a6f44f5b5a866c4e2cc17be51fd5b993b}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!penaltyPositionFactor@{penaltyPositionFactor}}
+\index{penaltyPositionFactor@{penaltyPositionFactor}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{penaltyPositionFactor}{penaltyPositionFactor}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+penalty\+Position\+Factor = 1F}
+
+
+
+Scale factor for penalty when calculating from position. See\+: penalty\+Position 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a941295b340db9209863a65e314ffcfb8}\label{class_pathfinding_1_1_grid_graph_a941295b340db9209863a65e314ffcfb8}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!penaltyPositionOffset@{penaltyPositionOffset}}
+\index{penaltyPositionOffset@{penaltyPositionOffset}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{penaltyPositionOffset}{penaltyPositionOffset}}
+{\footnotesize\ttfamily float Pathfinding.\+Grid\+Graph.\+penalty\+Position\+Offset}
+
+
+
+Offset for the position when calculating penalty. See\+: penalty\+Position 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a4a2e76afa4f16f4d3dafcb1d10b8f688}\label{class_pathfinding_1_1_grid_graph_a4a2e76afa4f16f4d3dafcb1d10b8f688}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!rotation@{rotation}}
+\index{rotation@{rotation}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Grid\+Graph.\+rotation}
+
+
+
+Rotation of the grid in degrees 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_af5336c1ff858d4febe770c7f14d217d8}\label{class_pathfinding_1_1_grid_graph_af5336c1ff858d4febe770c7f14d217d8}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!showMeshOutline@{showMeshOutline}}
+\index{showMeshOutline@{showMeshOutline}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{showMeshOutline}{showMeshOutline}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+show\+Mesh\+Outline = true}
+
+
+
+Show an outline of the grid nodes in the Unity Editor 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a1691b4a94a98abcdc508386a2086f37d}\label{class_pathfinding_1_1_grid_graph_a1691b4a94a98abcdc508386a2086f37d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!showMeshSurface@{showMeshSurface}}
+\index{showMeshSurface@{showMeshSurface}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{showMeshSurface}{showMeshSurface}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+show\+Mesh\+Surface = true}
+
+
+
+Show the surface of the graph. Each node will be drawn as a square (unless e.\+g hexagon graph mode has been enabled). 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a9d63ab42bf4d2df0053c6fe2dc75da40}\label{class_pathfinding_1_1_grid_graph_a9d63ab42bf4d2df0053c6fe2dc75da40}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!showNodeConnections@{showNodeConnections}}
+\index{showNodeConnections@{showNodeConnections}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{showNodeConnections}{showNodeConnections}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+show\+Node\+Connections}
+
+
+
+Show the connections between the grid nodes in the Unity Editor 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}\label{class_pathfinding_1_1_grid_graph_a3c5f2e26a1b1c8f1ab661a4104151299}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!unclampedSize@{unclampedSize}}
+\index{unclampedSize@{unclampedSize}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{unclampedSize}{unclampedSize}}
+{\footnotesize\ttfamily Vector2 Pathfinding.\+Grid\+Graph.\+unclamped\+Size}
+
+
+
+Size of the grid. Might be negative or smaller than \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a34d4e1759146a7641765c37d2f0e784d}\label{class_pathfinding_1_1_grid_graph_a34d4e1759146a7641765c37d2f0e784d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!uniformEdgeCosts@{uniformEdgeCosts}}
+\index{uniformEdgeCosts@{uniformEdgeCosts}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{uniformEdgeCosts}{uniformEdgeCosts}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+uniform\+Edge\+Costs}
+
+
+
+If true, all edge costs will be set to the same value. If false, diagonals will cost more. This is useful for a hexagon graph where the diagonals are actually the same length as the normal edges (since the graph has been skewed) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}\label{class_pathfinding_1_1_grid_graph_a378b36129ed27327097685ab63b30c8d}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!width@{width}}
+\index{width@{width}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Graph.\+width}
+
+
+
+Width of the grid in nodes. See\+: Set\+Dimensions 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_adcee5cadf900f7717583f919296d5eb2}\label{class_pathfinding_1_1_grid_graph_adcee5cadf900f7717583f919296d5eb2}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!LayerCount@{LayerCount}}
+\index{LayerCount@{LayerCount}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{LayerCount}{LayerCount}}
+{\footnotesize\ttfamily virtual int Pathfinding.\+Grid\+Graph.\+Layer\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Number of layers in the graph. For grid graphs this is always 1, for layered grid graphs it can be higher. The nodes array has the size width$\ast$depth$\ast$layer\+Count. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a081a4ddf53f769c7e8173e657311c161}\label{class_pathfinding_1_1_grid_graph_a081a4ddf53f769c7e8173e657311c161}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!size@{size}}
+\index{size@{size}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily Vector2 Pathfinding.\+Grid\+Graph.\+size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+
+
+Size of the grid. Will always be positive and larger than \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a8a90724b91f172aa906a0b14d69b3f61}{node\+Size}}. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}}\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}\label{class_pathfinding_1_1_grid_graph_a9ea34e1dc4b79c001726f4831178dea1}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!transform@{transform}}
+\index{transform@{transform}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} Pathfinding.\+Grid\+Graph.\+transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Determines how the graph transforms graph space to world space. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af1a9806f82c8dac7a0c3bf44deafe4e1}{Update\+Transform}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a35d31ab670675db96e5900822ee52edf}\label{class_pathfinding_1_1_grid_graph_a35d31ab670675db96e5900822ee52edf}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!uniformWidthDepthGrid@{uniformWidthDepthGrid}}
+\index{uniformWidthDepthGrid@{uniformWidthDepthGrid}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{uniformWidthDepthGrid}{uniformWidthDepthGrid}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+Grid\+Graph.\+uniform\+Width\+Depth\+Grid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This is placed here so generators inheriting from this one can override it and set it to false. If it is true, it means that the nodes array\textquotesingle{}s length will always be equal to width$\ast$depth It is used mainly in the editor to do auto-\/scanning calls, setting it to false for a non-\/uniform grid will reduce the number of scans 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_a393c7bfae9dc94ad24a40768be794802}\label{class_pathfinding_1_1_grid_graph_a393c7bfae9dc94ad24a40768be794802}} 
+\index{Pathfinding.GridGraph@{Pathfinding.GridGraph}!useRaycastNormal@{useRaycastNormal}}
+\index{useRaycastNormal@{useRaycastNormal}!Pathfinding.GridGraph@{Pathfinding.GridGraph}}
+\doxysubsubsection{\texorpdfstring{useRaycastNormal}{useRaycastNormal}}
+{\footnotesize\ttfamily bool Pathfinding.\+Grid\+Graph.\+use\+Raycast\+Normal\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Use heigh raycasting normal for max slope calculation. True if \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a33f2289f1a44ed57e8364e6a28fba907}{max\+Slope}} is less than 90 degrees. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/Grid\+Generator.\+cs\end{DoxyCompactItemize}

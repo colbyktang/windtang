@@ -1,0 +1,25 @@
+var class_firefly_game_manager =
+[
+    [ "FireflyLevel", "struct_firefly_game_manager_1_1_firefly_level.html", "struct_firefly_game_manager_1_1_firefly_level" ],
+    [ "ActivateHUD", "class_firefly_game_manager.html#a70543674bb9130d6a2f021e9e072bcc4", null ],
+    [ "AllowInput", "class_firefly_game_manager.html#a4981ad127b7a3e639612988fe2ecd749", null ],
+    [ "CatchFirefly", "class_firefly_game_manager.html#a2ca2479a37437c500ce0306b2daa6bbe", null ],
+    [ "Darken", "class_firefly_game_manager.html#af4e3c2302eea91a0888f157d026430ba", null ],
+    [ "GameEnd", "class_firefly_game_manager.html#aeb2e05b2dee7067975a8e382a6c83017", null ],
+    [ "GetLevelConfig", "class_firefly_game_manager.html#af02fdd78e6789566241696e5fbc0be3b", null ],
+    [ "IsGameStarted", "class_firefly_game_manager.html#a4c0ab0ddb3338e6883a2664a5c54bb07", null ],
+    [ "Lighten", "class_firefly_game_manager.html#a88fb2d7f34737f7a92882f057d101094", null ],
+    [ "OnScore", "class_firefly_game_manager.html#a939da7a8308007d2ae9e6d60470e05ab", null ],
+    [ "PregameSetup", "class_firefly_game_manager.html#a166f912ca504dfb1e763e29d78cc20ee", null ],
+    [ "PrepareGame", "class_firefly_game_manager.html#a86f856a19ac9ae17f2e51ee99884a663", null ],
+    [ "SendFlyToJar", "class_firefly_game_manager.html#a54ca6024a99bff8580cd501207dc4a73", null ],
+    [ "background", "class_firefly_game_manager.html#af448b1e6164b9d7d92a2a78cd119799b", null ],
+    [ "currentLevel", "class_firefly_game_manager.html#aa02f481696e32fdf4eb825950f830807", null ],
+    [ "fireflyAnchor", "class_firefly_game_manager.html#a8430996f39fbb672bfac16517f2c88fb", null ],
+    [ "fireflyPrefab", "class_firefly_game_manager.html#a74f42f8e6e32da5ef246bf09935eb954", null ],
+    [ "isCatchingFly", "class_firefly_game_manager.html#a4e6f4823c1827e285e745e240f1cbf74", null ],
+    [ "jarSpawnPos", "class_firefly_game_manager.html#ab9d211c25f846ebfe903de1595439ce4", null ],
+    [ "levelOne", "class_firefly_game_manager.html#a2fb0b6bc30a60efbec6f46e5459d7c78", null ],
+    [ "monsterSpawnPos", "class_firefly_game_manager.html#a1d29184ec7b5e6e439f7cf808948c3ac", null ],
+    [ "voData", "class_firefly_game_manager.html#a7b05b62e05ef67d820fab1a7f1a512b0", null ]
+];

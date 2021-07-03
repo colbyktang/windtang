@@ -1,0 +1,92 @@
+\hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world}{}\doxysection{Pathfinding.\+Examples.\+Procedural\+World Class Reference}
+\label{class_pathfinding_1_1_examples_1_1_procedural_world}\index{Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}}
+
+
+Example script for generating an infinite procedural world  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Examples.\+Procedural\+World\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Examples.\+Procedural\+World\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_examples_1_1_procedural_world_1_1_procedural_prefab}{Procedural\+Prefab}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_a92f653fbd9d9d8fc8b0412042f046ebf}\label{class_pathfinding_1_1_examples_1_1_procedural_world_a92f653fbd9d9d8fc8b0412042f046ebf}} 
+enum {\bfseries Rotation\+Randomness} \{ {\bfseries All\+Axes}, 
+{\bfseries Y}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_aa67e70199efe72e151d1789c309f3106}\label{class_pathfinding_1_1_examples_1_1_procedural_world_aa67e70199efe72e151d1789c309f3106}} 
+Transform {\bfseries target}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_a2129c8df03f7724d05ea664031904ea4}\label{class_pathfinding_1_1_examples_1_1_procedural_world_a2129c8df03f7724d05ea664031904ea4}} 
+\mbox{\hyperlink{class_pathfinding_1_1_examples_1_1_procedural_world_1_1_procedural_prefab}{Procedural\+Prefab}}\mbox{[}$\,$\mbox{]} {\bfseries prefabs}
+\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_examples_1_1_procedural_world_ae405035f0192393b808efc1ce1b16289}{range}} = 1
+\begin{DoxyCompactList}\small\item\em How far away to generate tiles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_a99b0416a57d20542b0425207927ffc87}\label{class_pathfinding_1_1_examples_1_1_procedural_world_a99b0416a57d20542b0425207927ffc87}} 
+int {\bfseries disable\+Async\+Load\+Within\+Range} = 1
+\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_examples_1_1_procedural_world_a32482f6644f8900458e38622fe12156e}{tile\+Size}} = 100
+\begin{DoxyCompactList}\small\item\em World size of tiles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_a698e9647bb47d41f488a1675178374b7}\label{class_pathfinding_1_1_examples_1_1_procedural_world_a698e9647bb47d41f488a1675178374b7}} 
+int {\bfseries sub\+Tiles} = 20
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_examples_1_1_procedural_world_a457422898d8989b1d75f862dc6bc2b5a}{static\+Batching}} = false
+\begin{DoxyCompactList}\small\item\em Enable static batching on generated tiles. Will improve overall F\+PS, but might cause F\+PS drops on some frames when static batching is done \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Example script for generating an infinite procedural world 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_ae405035f0192393b808efc1ce1b16289}\label{class_pathfinding_1_1_examples_1_1_procedural_world_ae405035f0192393b808efc1ce1b16289}} 
+\index{Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}!range@{range}}
+\index{range@{range}!Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}}
+\doxysubsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily int Pathfinding.\+Examples.\+Procedural\+World.\+range = 1}
+
+
+
+How far away to generate tiles 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_a457422898d8989b1d75f862dc6bc2b5a}\label{class_pathfinding_1_1_examples_1_1_procedural_world_a457422898d8989b1d75f862dc6bc2b5a}} 
+\index{Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}!staticBatching@{staticBatching}}
+\index{staticBatching@{staticBatching}!Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}}
+\doxysubsubsection{\texorpdfstring{staticBatching}{staticBatching}}
+{\footnotesize\ttfamily bool Pathfinding.\+Examples.\+Procedural\+World.\+static\+Batching = false}
+
+
+
+Enable static batching on generated tiles. Will improve overall F\+PS, but might cause F\+PS drops on some frames when static batching is done 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_examples_1_1_procedural_world_a32482f6644f8900458e38622fe12156e}\label{class_pathfinding_1_1_examples_1_1_procedural_world_a32482f6644f8900458e38622fe12156e}} 
+\index{Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}!tileSize@{tileSize}}
+\index{tileSize@{tileSize}!Pathfinding.Examples.ProceduralWorld@{Pathfinding.Examples.ProceduralWorld}}
+\doxysubsubsection{\texorpdfstring{tileSize}{tileSize}}
+{\footnotesize\ttfamily float Pathfinding.\+Examples.\+Procedural\+World.\+tile\+Size = 100}
+
+
+
+World size of tiles 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Example\+Scenes/\+Example12\+\_\+\+Procedural/Procedural\+World.\+cs\end{DoxyCompactItemize}

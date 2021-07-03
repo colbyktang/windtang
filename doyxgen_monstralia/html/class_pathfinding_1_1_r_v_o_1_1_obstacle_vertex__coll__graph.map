@@ -1,0 +1,3 @@
+<map id="Pathfinding.RVO.ObstacleVertex" name="Pathfinding.RVO.ObstacleVertex">
+<area shape="rect" id="node1" title="One vertex in an obstacle. This is a linked list and one vertex can therefore be used to reference th..." alt="" coords="5,5,180,47"/>
+</map>

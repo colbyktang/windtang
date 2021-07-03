@@ -1,0 +1,190 @@
+\hypertarget{class_pathfinding_1_1_nav_mesh_graph}{}\doxysection{Pathfinding.\+Nav\+Mesh\+Graph Class Reference}
+\label{class_pathfinding_1_1_nav_mesh_graph}\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+
+
+Generates graphs based on navmeshes.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Nav\+Mesh\+Graph\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Nav\+Mesh\+Graph\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_ac0bd30a379bcf685ba3afcbe840b9727}{Calculate\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Returns a new transform which transforms graph space to world space. Does not update the \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}{transform}} field. See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}{Relocate\+Nodes(\+Graph\+Transform)}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_aa49ade531f39a68100c40de36da3a6ae}{Scan\+Internal}} (string obj\+Mesh\+Path)
+\begin{DoxyCompactList}\small\item\em Scans the graph using the path to an .obj mesh \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_aa49d5bbbdb77d0c0891ad305a1f430c7}\label{class_pathfinding_1_1_nav_mesh_graph_aa49d5bbbdb77d0c0891ad305a1f430c7}} 
+static void {\bfseries Update\+Area} (\mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}} o, \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder}{I\+Navmesh\+Holder}} graph)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mesh \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_a0b1ee8a15aa6da5aa3eed157c83147d6}{source\+Mesh}}
+\begin{DoxyCompactList}\small\item\em Mesh to construct navmesh from \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_a7a198e9bd5431861ab6b4e1fdf3fa34d}{offset}}
+\begin{DoxyCompactList}\small\item\em Offset in world space \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_ad6aa9810f99a7069de748fa4aa80b95d}{rotation}}
+\begin{DoxyCompactList}\small\item\em Rotation in degrees \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_ad8e32156ad90e8de1c7765a0a4efb4cb}{scale}} = 1
+\begin{DoxyCompactList}\small\item\em Scale of the graph \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_a429b06d8fb1f33a1000fd6a152a8eb94}{recalculate\+Normals}} = true
+\begin{DoxyCompactList}\small\item\em Determines how normals are calculated. Disable for spherical graphs or other complicated surfaces that allow the agents to e.\+g walk on walls or ceilings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override I\+Enumerable$<$ \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_a2c7f9a579c4e6bf602d71b8d0b7b98f1}{Scan\+Internal}} ()
+\begin{DoxyCompactList}\small\item\em Internal method to scan the graph. Called from \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}}. Override this function to implement custom scanning logic. \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} objects can be yielded to show progress info in the editor and to split up processing over several frames when using async scanning. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_aeb8ad6d51f348290a88b1a3e61738eb5}{Deserialize\+Settings\+Compatibility}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em An old format for serializing settings. Deprecated\+: This is deprecated now, but the deserialization code is kept to avoid loosing data when upgrading from older versions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a543712d3b57c1cb421062d5c50273052}\label{class_pathfinding_1_1_nav_mesh_graph_a543712d3b57c1cb421062d5c50273052}} 
+override bool {\bfseries Recalculate\+Normals}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a71bceef6f67634a4e77a54f2ef48f179}\label{class_pathfinding_1_1_nav_mesh_graph_a71bceef6f67634a4e77a54f2ef48f179}} 
+override float {\bfseries Tile\+World\+SizeX}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a79662721cec6f69a4339e1f88b764fa1}\label{class_pathfinding_1_1_nav_mesh_graph_a79662721cec6f69a4339e1f88b764fa1}} 
+override float {\bfseries Tile\+World\+SizeZ}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_ac02ced3f7259408675f6b33fc5d65d74}\label{class_pathfinding_1_1_nav_mesh_graph_ac02ced3f7259408675f6b33fc5d65d74}} 
+override float {\bfseries Max\+Tile\+Connection\+Edge\+Distance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Generates graphs based on navmeshes. 
+
+Navmeshes are meshes where each triangle defines a walkable area. These are great because the AI can get so much more information on how it can walk. Polygons instead of points mean that the funnel smoother can produce really nice looking paths and the graphs are also really fast to search and have a low memory footprint because fewer nodes are usually needed to describe the same area compared to grid graphs.
+
+See\+: Pathfinding.\+Recast\+Graph
+
+\mbox{[}Open online documentation to see images\mbox{]} \mbox{[}Open online documentation to see images\mbox{]}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_ac0bd30a379bcf685ba3afcbe840b9727}\label{class_pathfinding_1_1_nav_mesh_graph_ac0bd30a379bcf685ba3afcbe840b9727}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!CalculateTransform@{CalculateTransform}}
+\index{CalculateTransform@{CalculateTransform}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{CalculateTransform()}{CalculateTransform()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} Pathfinding.\+Nav\+Mesh\+Graph.\+Calculate\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a new transform which transforms graph space to world space. Does not update the \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}{transform}} field. See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}{Relocate\+Nodes(\+Graph\+Transform)}} 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Pathfinding.\+Navmesh\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_aeb8ad6d51f348290a88b1a3e61738eb5}\label{class_pathfinding_1_1_nav_mesh_graph_aeb8ad6d51f348290a88b1a3e61738eb5}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!DeserializeSettingsCompatibility@{DeserializeSettingsCompatibility}}
+\index{DeserializeSettingsCompatibility@{DeserializeSettingsCompatibility}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{DeserializeSettingsCompatibility()}{DeserializeSettingsCompatibility()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Nav\+Mesh\+Graph.\+Deserialize\+Settings\+Compatibility (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An old format for serializing settings. Deprecated\+: This is deprecated now, but the deserialization code is kept to avoid loosing data when upgrading from older versions. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a72bf5ffc375940c938f31accb8e1d02a}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a2c7f9a579c4e6bf602d71b8d0b7b98f1}\label{class_pathfinding_1_1_nav_mesh_graph_a2c7f9a579c4e6bf602d71b8d0b7b98f1}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!ScanInternal@{ScanInternal}}
+\index{ScanInternal@{ScanInternal}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{ScanInternal()}{ScanInternal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override I\+Enumerable$<$\mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}}$>$ Pathfinding.\+Nav\+Mesh\+Graph.\+Scan\+Internal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal method to scan the graph. Called from \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}}. Override this function to implement custom scanning logic. \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} objects can be yielded to show progress info in the editor and to split up processing over several frames when using async scanning. 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a98ea7af57e744d11545181ff265c6abe}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_aa49ade531f39a68100c40de36da3a6ae}\label{class_pathfinding_1_1_nav_mesh_graph_aa49ade531f39a68100c40de36da3a6ae}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!ScanInternal@{ScanInternal}}
+\index{ScanInternal@{ScanInternal}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{ScanInternal()}{ScanInternal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Nav\+Mesh\+Graph.\+Scan\+Internal (\begin{DoxyParamCaption}\item[{string}]{obj\+Mesh\+Path }\end{DoxyParamCaption})}
+
+
+
+Scans the graph using the path to an .obj mesh 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a7a198e9bd5431861ab6b4e1fdf3fa34d}\label{class_pathfinding_1_1_nav_mesh_graph_a7a198e9bd5431861ab6b4e1fdf3fa34d}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!offset@{offset}}
+\index{offset@{offset}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Nav\+Mesh\+Graph.\+offset}
+
+
+
+Offset in world space 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a429b06d8fb1f33a1000fd6a152a8eb94}\label{class_pathfinding_1_1_nav_mesh_graph_a429b06d8fb1f33a1000fd6a152a8eb94}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!recalculateNormals@{recalculateNormals}}
+\index{recalculateNormals@{recalculateNormals}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{recalculateNormals}{recalculateNormals}}
+{\footnotesize\ttfamily bool Pathfinding.\+Nav\+Mesh\+Graph.\+recalculate\+Normals = true}
+
+
+
+Determines how normals are calculated. Disable for spherical graphs or other complicated surfaces that allow the agents to e.\+g walk on walls or ceilings. 
+
+By default the normals of the mesh will be flipped so that they point as much as possible in the upwards direction. The normals are important when connecting adjacent nodes. Two adjacent nodes will only be connected if they are oriented the same way. This is particularly important if you have a navmesh on the walls or even on the ceiling of a room. Or if you are trying to make a spherical navmesh. If you do one of those things then you should set disable this setting and make sure the normals in your source mesh are properly set.
+
+If you for example take a look at the image below. In the upper case then the nodes on the bottom half of the mesh haven\textquotesingle{}t been connected with the nodes on the upper half because the normals on the lower half will have been modified to point inwards (as that is the direction that makes them face upwards the most) while the normals on the upper half point outwards. This causes the nodes to not connect properly along the seam. When this option is set to false instead the nodes are connected properly as in the original mesh all normals point outwards. \mbox{[}Open online documentation to see images\mbox{]}
+
+The default value of this field is true to reduce the risk for errors in the common case. If a mesh is supplied that has all normals pointing downwards and this option is false, then some methods like \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ac66ff23d38cb5ae1371aff3b5d49f9fd}{Point\+On\+Navmesh}} will not work correctly as they assume that the normals point upwards. For a more complicated surface like a spherical graph those methods make no sense anyway as there is no clear definition of what it means to be \char`\"{}inside\char`\"{} a triangle when there is no clear up direction.\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_ad6aa9810f99a7069de748fa4aa80b95d}\label{class_pathfinding_1_1_nav_mesh_graph_ad6aa9810f99a7069de748fa4aa80b95d}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!rotation@{rotation}}
+\index{rotation@{rotation}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Nav\+Mesh\+Graph.\+rotation}
+
+
+
+Rotation in degrees 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_ad8e32156ad90e8de1c7765a0a4efb4cb}\label{class_pathfinding_1_1_nav_mesh_graph_ad8e32156ad90e8de1c7765a0a4efb4cb}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!scale@{scale}}
+\index{scale@{scale}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float Pathfinding.\+Nav\+Mesh\+Graph.\+scale = 1}
+
+
+
+Scale of the graph 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_mesh_graph_a0b1ee8a15aa6da5aa3eed157c83147d6}\label{class_pathfinding_1_1_nav_mesh_graph_a0b1ee8a15aa6da5aa3eed157c83147d6}} 
+\index{Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}!sourceMesh@{sourceMesh}}
+\index{sourceMesh@{sourceMesh}!Pathfinding.NavMeshGraph@{Pathfinding.NavMeshGraph}}
+\doxysubsubsection{\texorpdfstring{sourceMesh}{sourceMesh}}
+{\footnotesize\ttfamily Mesh Pathfinding.\+Nav\+Mesh\+Graph.\+source\+Mesh}
+
+
+
+Mesh to construct navmesh from 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/Nav\+Mesh\+Generator.\+cs\end{DoxyCompactItemize}

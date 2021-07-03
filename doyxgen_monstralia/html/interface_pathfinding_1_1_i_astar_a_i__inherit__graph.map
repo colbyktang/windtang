@@ -1,0 +1,7 @@
+<map id="Pathfinding.IAstarAI" name="Pathfinding.IAstarAI">
+<area shape="rect" id="node1" title="Common interface for all movement scripts in the A* Pathfinding Project. See: Pathfinding...." alt="" coords="77,5,213,32"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_a_i_lerp.html" title="Linearly interpolating movement script. This movement script will follow the path exactly,..." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_a_i_path.html" title="AI for following paths. This AI is the default movement script which comes with the A* Pathfinding Pr..." alt="" coords="156,80,285,107"/>
+<area shape="rect" id="node4" href="$class_pathfinding_1_1_examples_1_1_mine_bot_a_i.html" title="AI controller specifically made for the spider robot. Deprecated: This script has been replaced by Pa..." alt="" coords="29,155,209,196"/>
+<area shape="rect" id="node5" href="$class_pathfinding_1_1_legacy_1_1_legacy_a_i_path.html" title="AI for following paths. This AI is the default movement script which comes with the A* Pathfinding Pr..." alt="" coords="234,155,413,196"/>
+</map>

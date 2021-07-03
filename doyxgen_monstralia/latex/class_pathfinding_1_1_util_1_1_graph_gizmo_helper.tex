@@ -1,0 +1,78 @@
+\hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper}{}\doxysection{Pathfinding.\+Util.\+Graph\+Gizmo\+Helper Class Reference}
+\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper}\index{Pathfinding.Util.GraphGizmoHelper@{Pathfinding.Util.GraphGizmoHelper}}
+
+
+Inheritance diagram for Pathfinding.\+Util.\+Graph\+Gizmo\+Helper\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Util.\+Graph\+Gizmo\+Helper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_aee6cbcfc2dd9b26005f27dd3fd865785}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_aee6cbcfc2dd9b26005f27dd3fd865785}} 
+void {\bfseries Init} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} active, \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Retained\+Gizmos.\+Hasher}} hasher, \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos}{Retained\+Gizmos}} gizmos)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a8e3a289b19432400ef6a50a9584d694e}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a8e3a289b19432400ef6a50a9584d694e}} 
+void {\bfseries On\+Enter\+Pool} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a00b0b47e69119c33816795b091e13b3a}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a00b0b47e69119c33816795b091e13b3a}} 
+void {\bfseries Draw\+Connections} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\item 
+Color \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ae3062d7797ea9aa248850546e315027a}{Node\+Color}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Color to use for gizmos. Returns a color to be used for the specified node with the current debug settings (editor only). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_acbae2cc28beda699f8b065183d86d751}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_acbae2cc28beda699f8b065183d86d751}} 
+void {\bfseries Draw\+Wire\+Triangle} (Vector3 a, Vector3 b, Vector3 c, Color color)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a5f481a2ce840d9511a9cb6bcee38ee42}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a5f481a2ce840d9511a9cb6bcee38ee42}} 
+void {\bfseries Draw\+Triangles} (Vector3\mbox{[}$\,$\mbox{]} vertices, Color\mbox{[}$\,$\mbox{]} colors, int num\+Triangles)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ae521837ce4f47729527e89d3e14d0669}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ae521837ce4f47729527e89d3e14d0669}} 
+void {\bfseries Draw\+Wire\+Triangles} (Vector3\mbox{[}$\,$\mbox{]} vertices, Color\mbox{[}$\,$\mbox{]} colors, int num\+Triangles)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ade0b29a5315f6f460dcca69d13bf0480}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ade0b29a5315f6f460dcca69d13bf0480}} 
+void {\bfseries Submit} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a8a3d13eed50117d592a6288a6a6ee83d}{In\+Search\+Tree}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node, \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}} handler, ushort path\+ID)
+\begin{DoxyCompactList}\small\item\em Returns if the node is in the search tree of the path. Only guaranteed to be correct if path is the latest path calculated. Use for gizmo drawing only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_aeb7b76a829dacb3d2c7bcb418687d609}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_aeb7b76a829dacb3d2c7bcb418687d609}} 
+\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Retained\+Gizmos.\+Hasher}} {\bfseries hasher}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a98d90293c50a3625a779b61db8c7da47}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a98d90293c50a3625a779b61db8c7da47}} 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_1_1_builder}{Retained\+Gizmos.\+Builder}} {\bfseries builder}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a8a3d13eed50117d592a6288a6a6ee83d}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_a8a3d13eed50117d592a6288a6a6ee83d}} 
+\index{Pathfinding.Util.GraphGizmoHelper@{Pathfinding.Util.GraphGizmoHelper}!InSearchTree@{InSearchTree}}
+\index{InSearchTree@{InSearchTree}!Pathfinding.Util.GraphGizmoHelper@{Pathfinding.Util.GraphGizmoHelper}}
+\doxysubsubsection{\texorpdfstring{InSearchTree()}{InSearchTree()}}
+{\footnotesize\ttfamily static bool Pathfinding.\+Util.\+Graph\+Gizmo\+Helper.\+In\+Search\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}}}]{handler,  }\item[{ushort}]{path\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns if the node is in the search tree of the path. Only guaranteed to be correct if path is the latest path calculated. Use for gizmo drawing only. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ae3062d7797ea9aa248850546e315027a}\label{class_pathfinding_1_1_util_1_1_graph_gizmo_helper_ae3062d7797ea9aa248850546e315027a}} 
+\index{Pathfinding.Util.GraphGizmoHelper@{Pathfinding.Util.GraphGizmoHelper}!NodeColor@{NodeColor}}
+\index{NodeColor@{NodeColor}!Pathfinding.Util.GraphGizmoHelper@{Pathfinding.Util.GraphGizmoHelper}}
+\doxysubsubsection{\texorpdfstring{NodeColor()}{NodeColor()}}
+{\footnotesize\ttfamily Color Pathfinding.\+Util.\+Graph\+Gizmo\+Helper.\+Node\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})}
+
+
+
+Color to use for gizmos. Returns a color to be used for the specified node with the current debug settings (editor only). 
+
+Version\+: Since 3.\+6.\+1 this method will not handle null nodes
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Utilities/Graph\+Gizmo\+Helper.\+cs\end{DoxyCompactItemize}

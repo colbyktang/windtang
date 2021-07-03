@@ -1,0 +1,55 @@
+\hypertarget{class_triangle_net_1_1_tools_1_1_quad_tree}{}\doxysection{Triangle\+Net.\+Tools.\+Quad\+Tree Class Reference}
+\label{class_triangle_net_1_1_tools_1_1_quad_tree}\index{TriangleNet.Tools.QuadTree@{TriangleNet.Tools.QuadTree}}
+
+
+A Quadtree implementation optimised for triangles.  
+
+
+
+
+Collaboration diagram for Triangle\+Net.\+Tools.\+Quad\+Tree\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quad_tree_acf48d419ff43018932c51469212584f2}{Quad\+Tree}} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} mesh, int max\+Depth=10, int size\+Bound=10)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quad_tree}{Quad\+Tree}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quad_tree_a9f63588934e15d5d2a351c34f9e0f4a0}\label{class_triangle_net_1_1_tools_1_1_quad_tree_a9f63588934e15d5d2a351c34f9e0f4a0}} 
+\mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle}{I\+Triangle}} {\bfseries Query} (double x, double y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Quadtree implementation optimised for triangles. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quad_tree_acf48d419ff43018932c51469212584f2}\label{class_triangle_net_1_1_tools_1_1_quad_tree_acf48d419ff43018932c51469212584f2}} 
+\index{TriangleNet.Tools.QuadTree@{TriangleNet.Tools.QuadTree}!QuadTree@{QuadTree}}
+\index{QuadTree@{QuadTree}!TriangleNet.Tools.QuadTree@{TriangleNet.Tools.QuadTree}}
+\doxysubsubsection{\texorpdfstring{QuadTree()}{QuadTree()}}
+{\footnotesize\ttfamily Triangle\+Net.\+Tools.\+Quad\+Tree.\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}}}]{mesh,  }\item[{int}]{max\+Depth = {\ttfamily 10},  }\item[{int}]{size\+Bound = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quad_tree}{Quad\+Tree}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} containing triangles.\\
+\hline
+{\em max\+Depth} & The maximum depth of the tree.\\
+\hline
+{\em size\+Bound} & The maximum number of triangles contained in a leaf.\\
+\hline
+\end{DoxyParams}
+
+
+The quadtree does not track changes of the mesh. If a mesh is refined or changed in any other way, a new quadtree has to be built to make the point location work.
+
+A node of the tree will be split, if its level if less than the max depth parameter A\+ND the number of triangles in the node is greater than the size bound. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Tools/Quad\+Tree.\+cs\end{DoxyCompactItemize}

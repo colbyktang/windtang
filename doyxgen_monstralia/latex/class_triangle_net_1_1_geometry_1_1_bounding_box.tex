@@ -1,0 +1,197 @@
+\hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box}{}\doxysection{Triangle\+Net.\+Geometry.\+Bounding\+Box Class Reference}
+\label{class_triangle_net_1_1_geometry_1_1_bounding_box}\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+
+
+A simple bounding box class.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a550b5d6609a7cc6c9761f72ce9332b6d}{Bounding\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box}{Bounding\+Box}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a0e2385da8387afa03ca016a38318c40f}{Bounding\+Box}} (double xmin, double ymin, double xmax, double ymax)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box}{Bounding\+Box}} class with predefined bounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a8a91a88a43bbccddabbad7d26151928f}{Update}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Update bounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a6013375c4214c2dcb6e4a26d6a177561}{Scale}} (double dx, double dy)
+\begin{DoxyCompactList}\small\item\em Scale bounds. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a5828ba6b3137b75f56eb61bcad96cb12}{Contains}} (\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} pt)
+\begin{DoxyCompactList}\small\item\em Check if given point is inside bounding box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a60c59c614005b62521f92afaaaa89675}{Xmin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the minimum x value (left boundary). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_ad3805acbca5a181baa8c61fb5f0d6d32}{Ymin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the minimum y value (bottom boundary). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a3423022bd974304ffe5c94fc2c2e7f52}{Xmax}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the maximum x value (right boundary). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a44e65f7d2ea5028acf943329ce2617e2}{Ymax}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the maximum y value (top boundary). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_a714db6a2d689b8f77e350046ede79683}{Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the width of the bounding box. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box_af43cfa77eaead53f4bcf9e0e9ccd6b95}{Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the height of the bounding box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple bounding box class. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a550b5d6609a7cc6c9761f72ce9332b6d}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a550b5d6609a7cc6c9761f72ce9332b6d}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!BoundingBox@{BoundingBox}}
+\index{BoundingBox@{BoundingBox}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{BoundingBox()}{BoundingBox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box}{Bounding\+Box}} class. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a0e2385da8387afa03ca016a38318c40f}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a0e2385da8387afa03ca016a38318c40f}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!BoundingBox@{BoundingBox}}
+\index{BoundingBox@{BoundingBox}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{BoundingBox()}{BoundingBox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Bounding\+Box (\begin{DoxyParamCaption}\item[{double}]{xmin,  }\item[{double}]{ymin,  }\item[{double}]{xmax,  }\item[{double}]{ymax }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box}{Bounding\+Box}} class with predefined bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xmin} & Minimum x value.\\
+\hline
+{\em ymin} & Minimum y value.\\
+\hline
+{\em xmax} & Maximum x value.\\
+\hline
+{\em ymax} & Maximum y value.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a5828ba6b3137b75f56eb61bcad96cb12}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a5828ba6b3137b75f56eb61bcad96cb12}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Contains@{Contains}}
+\index{Contains@{Contains}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}}}]{pt }\end{DoxyParamCaption})}
+
+
+
+Check if given point is inside bounding box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true, if bounding box contains given point.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a6013375c4214c2dcb6e4a26d6a177561}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a6013375c4214c2dcb6e4a26d6a177561}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Scale@{Scale}}
+\index{Scale@{Scale}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Scale (\begin{DoxyParamCaption}\item[{double}]{dx,  }\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Scale bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & Add dx to left and right bounds.\\
+\hline
+{\em dy} & Add dy to top and bottom bounds.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a8a91a88a43bbccddabbad7d26151928f}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a8a91a88a43bbccddabbad7d26151928f}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Update@{Update}}
+\index{Update@{Update}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Update (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Update bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate.\\
+\hline
+{\em y} & Y coordinate.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_af43cfa77eaead53f4bcf9e0e9ccd6b95}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_af43cfa77eaead53f4bcf9e0e9ccd6b95}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Height@{Height}}
+\index{Height@{Height}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the height of the bounding box. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a714db6a2d689b8f77e350046ede79683}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a714db6a2d689b8f77e350046ede79683}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Width@{Width}}
+\index{Width@{Width}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the width of the bounding box. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a3423022bd974304ffe5c94fc2c2e7f52}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a3423022bd974304ffe5c94fc2c2e7f52}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Xmax@{Xmax}}
+\index{Xmax@{Xmax}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Xmax}{Xmax}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Xmax\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the maximum x value (right boundary). 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a60c59c614005b62521f92afaaaa89675}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a60c59c614005b62521f92afaaaa89675}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Xmin@{Xmin}}
+\index{Xmin@{Xmin}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Xmin}{Xmin}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Xmin\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the minimum x value (left boundary). 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_a44e65f7d2ea5028acf943329ce2617e2}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_a44e65f7d2ea5028acf943329ce2617e2}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Ymax@{Ymax}}
+\index{Ymax@{Ymax}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Ymax}{Ymax}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Ymax\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the maximum y value (top boundary). 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_bounding_box_ad3805acbca5a181baa8c61fb5f0d6d32}\label{class_triangle_net_1_1_geometry_1_1_bounding_box_ad3805acbca5a181baa8c61fb5f0d6d32}} 
+\index{TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}!Ymin@{Ymin}}
+\index{Ymin@{Ymin}!TriangleNet.Geometry.BoundingBox@{TriangleNet.Geometry.BoundingBox}}
+\doxysubsubsection{\texorpdfstring{Ymin}{Ymin}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+Bounding\+Box.\+Ymin\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the minimum y value (bottom boundary). 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Geometry/Bounding\+Box.\+cs\end{DoxyCompactItemize}

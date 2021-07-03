@@ -1,0 +1,150 @@
+\hypertarget{class_pathfinding_1_1_path_node}{}\doxysection{Pathfinding.\+Path\+Node Class Reference}
+\label{class_pathfinding_1_1_path_node}\index{Pathfinding.PathNode@{Pathfinding.PathNode}}
+
+
+Stores temporary node data for a single pathfinding request. Every node has one \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} per thread used. It stores e.\+g G score, H score and other temporary variables needed for path calculation, but which are not part of the graph structure.  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Path\+Node\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_a9a3366e391e94a47d7847d06086a43f7}\label{class_pathfinding_1_1_path_node_a9a3366e391e94a47d7847d06086a43f7}} 
+void {\bfseries UpdateG} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_path_node_a019a6ea2d6b02b3360ec5420b8235b96}{node}}
+\begin{DoxyCompactList}\small\item\em Reference to the actual graph node \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_path_node_a57603eacb13a37898c1beb38ce1d4498}{parent}}
+\begin{DoxyCompactList}\small\item\em Parent node in the search tree \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{class_pathfinding_1_1_path_node_ae8bf8ecbffa315b434f2c0374b811a2f}{path\+ID}}
+\begin{DoxyCompactList}\small\item\em The path request (in this thread, if multithreading is used) which last used this node \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{class_pathfinding_1_1_path_node_afee779c0ca79d3e4c2802cd99b6e0901}{heap\+Index}} = Binary\+Heap.\+Not\+In\+Heap
+\begin{DoxyCompactList}\small\item\em Index of the node in the binary heap. The open list in the A$\ast$ algorithm is backed by a binary heap. To support fast \textquotesingle{}decrease key\textquotesingle{} operations, the index of the node is saved here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_aa8ef4c19c3d780d45f67211573665e13}\label{class_pathfinding_1_1_path_node_aa8ef4c19c3d780d45f67211573665e13}} 
+uint {\bfseries cost}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool? \mbox{\hyperlink{class_pathfinding_1_1_path_node_abf8ba859fad1061d8d73436d5999db77}{flag1}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use as temporary flag during pathfinding. Pathfinders (only) can use this during pathfinding to mark nodes. When done, this flag should be reverted to its default state (false) to avoid messing up other pathfinding requests. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_pathfinding_1_1_path_node_a8e37b315c19e2ef2c00cde4cc6cb458d}{flag2}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use as temporary flag during pathfinding. Pathfinders (only) can use this during pathfinding to mark nodes. When done, this flag should be reverted to its default state (false) to avoid messing up other pathfinding requests. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_path_node_a1418184f134de884b17ed7eb7ae1f67b}{G}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em G score, cost to get to this node \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_path_node_ae20a7b90faff8905a6408fd21631efb9}{H}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em H score, estimated cost to get to to the target \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_path_node_ad3531257cb708a34958afcb957a4c276}{F}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em F score. H score + G score \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores temporary node data for a single pathfinding request. Every node has one \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} per thread used. It stores e.\+g G score, H score and other temporary variables needed for path calculation, but which are not part of the graph structure. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Pathfinding.\+Path\+Handler}} See\+: \href{https://en.wikipedia.org/wiki/A}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/A}}$\ast$\+\_\+search\+\_\+algorithm
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_afee779c0ca79d3e4c2802cd99b6e0901}\label{class_pathfinding_1_1_path_node_afee779c0ca79d3e4c2802cd99b6e0901}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!heapIndex@{heapIndex}}
+\index{heapIndex@{heapIndex}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{heapIndex}{heapIndex}}
+{\footnotesize\ttfamily ushort Pathfinding.\+Path\+Node.\+heap\+Index = Binary\+Heap.\+Not\+In\+Heap}
+
+
+
+Index of the node in the binary heap. The open list in the A$\ast$ algorithm is backed by a binary heap. To support fast \textquotesingle{}decrease key\textquotesingle{} operations, the index of the node is saved here. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_a019a6ea2d6b02b3360ec5420b8235b96}\label{class_pathfinding_1_1_path_node_a019a6ea2d6b02b3360ec5420b8235b96}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!node@{node}}
+\index{node@{node}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} Pathfinding.\+Path\+Node.\+node}
+
+
+
+Reference to the actual graph node 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_a57603eacb13a37898c1beb38ce1d4498}\label{class_pathfinding_1_1_path_node_a57603eacb13a37898c1beb38ce1d4498}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!parent@{parent}}
+\index{parent@{parent}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} Pathfinding.\+Path\+Node.\+parent}
+
+
+
+Parent node in the search tree 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_ae8bf8ecbffa315b434f2c0374b811a2f}\label{class_pathfinding_1_1_path_node_ae8bf8ecbffa315b434f2c0374b811a2f}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!pathID@{pathID}}
+\index{pathID@{pathID}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{pathID}{pathID}}
+{\footnotesize\ttfamily ushort Pathfinding.\+Path\+Node.\+path\+ID}
+
+
+
+The path request (in this thread, if multithreading is used) which last used this node 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_ad3531257cb708a34958afcb957a4c276}\label{class_pathfinding_1_1_path_node_ad3531257cb708a34958afcb957a4c276}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!F@{F}}
+\index{F@{F}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{F}{F}}
+{\footnotesize\ttfamily uint Pathfinding.\+Path\+Node.\+F\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+F score. H score + G score 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_abf8ba859fad1061d8d73436d5999db77}\label{class_pathfinding_1_1_path_node_abf8ba859fad1061d8d73436d5999db77}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!flag1@{flag1}}
+\index{flag1@{flag1}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{flag1}{flag1}}
+{\footnotesize\ttfamily bool? Pathfinding.\+Path\+Node.\+flag1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Use as temporary flag during pathfinding. Pathfinders (only) can use this during pathfinding to mark nodes. When done, this flag should be reverted to its default state (false) to avoid messing up other pathfinding requests. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_a8e37b315c19e2ef2c00cde4cc6cb458d}\label{class_pathfinding_1_1_path_node_a8e37b315c19e2ef2c00cde4cc6cb458d}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!flag2@{flag2}}
+\index{flag2@{flag2}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{flag2}{flag2}}
+{\footnotesize\ttfamily bool? Pathfinding.\+Path\+Node.\+flag2\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Use as temporary flag during pathfinding. Pathfinders (only) can use this during pathfinding to mark nodes. When done, this flag should be reverted to its default state (false) to avoid messing up other pathfinding requests. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_a1418184f134de884b17ed7eb7ae1f67b}\label{class_pathfinding_1_1_path_node_a1418184f134de884b17ed7eb7ae1f67b}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!G@{G}}
+\index{G@{G}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily uint Pathfinding.\+Path\+Node.\+G\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+G score, cost to get to this node 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_node_ae20a7b90faff8905a6408fd21631efb9}\label{class_pathfinding_1_1_path_node_ae20a7b90faff8905a6408fd21631efb9}} 
+\index{Pathfinding.PathNode@{Pathfinding.PathNode}!H@{H}}
+\index{H@{H}!Pathfinding.PathNode@{Pathfinding.PathNode}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily uint Pathfinding.\+Path\+Node.\+H\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+H score, estimated cost to get to to the target 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/Path\+Handler.\+cs\end{DoxyCompactItemize}

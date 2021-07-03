@@ -1,0 +1,423 @@
+\hypertarget{interface_pathfinding_1_1_i_astar_a_i}{}\doxysection{Pathfinding.\+I\+Astar\+AI Interface Reference}
+\label{interface_pathfinding_1_1_i_astar_a_i}\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+
+
+Common interface for all movement scripts in the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{Pathfinding.\+A\+I\+Path}} See\+: Pathfinding.\+Rich\+AI See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{Pathfinding.\+A\+I\+Lerp}}  
+
+
+
+
+Inheritance diagram for Pathfinding.\+I\+Astar\+AI\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a87be63a6f35302a9831ec07b6b5fbb84}{Search\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Recalculate the current path. You can for example use this if you want very quick reaction times when you have changed the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} so that the agent does not have to wait until the next automatic path recalculation (see can\+Search). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a86eb322f611af919dad08b78e580edf4}{Set\+Path}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path)
+\begin{DoxyCompactList}\small\item\em Make the AI follow the specified path. In case the path has not been calculated, the script will call seeker.\+Start\+Path to calculate it. This means the AI may not actually start to follow the path until in a few frames when the path has been calculated. The \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}} field will as usual return true while the path is being calculated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a15bd14831e7d86ab76f7487fba64eca7}{Teleport}} (Vector3 new\+Position, bool clear\+Path=true)
+\begin{DoxyCompactList}\small\item\em Instantly move the agent to a new position. This will trigger a path recalculation (if clear\+Path is true, which is the default) so if you want to teleport the agent and change its \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} it is recommended that you set the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} before calling this method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0db3a1e1aa0191657c97f6b81a79dde1}{Move}} (Vector3 delta\+Position)
+\begin{DoxyCompactList}\small\item\em Move the agent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_add2d9c6a1b18fbd036adca4a69608a03}{Movement\+Update}} (float delta\+Time, out Vector3 next\+Position, out Quaternion next\+Rotation)
+\begin{DoxyCompactList}\small\item\em Calculate how the character wants to move during this frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ac89dda522760760c4d0c8cf0cc6ec2f5}{Finalize\+Movement}} (Vector3 next\+Position, Quaternion next\+Rotation)
+\begin{DoxyCompactList}\small\item\em Move the agent. To be called as the last step when you are handling movement manually. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ab49138bf9619f1170be7ec34481c4196}{radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Height of the agent in world units. This is visualized in the scene view as a yellow cylinder around the character. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a31b509a144854e21ad6ae45f76a88e79}{height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Radius of the agent in world units. This is visualized in the scene view as a yellow cylinder around the character. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_afa8f3e5616800d830fce3acae0d5d7a0}{position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position of the agent. In world space. See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ab96dbd00d0573ec30bdee27cd4fb3920}{rotation}} \end{DoxyCompactList}\item 
+Quaternion \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ab96dbd00d0573ec30bdee27cd4fb3920}{rotation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rotation of the agent. In world space. See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_afa8f3e5616800d830fce3acae0d5d7a0}{position}} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a4007191295f0335a580fe44299844f63}{max\+Speed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Max speed in world units per second \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a04ad39dd393409f7b4d77bf35d6f23e0}{velocity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Actual velocity that the agent is moving with. In world units per second. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a72148d95aed692c655190fd7cdfe3db4}{desired\+Velocity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Velocity that this agent wants to move with. Includes gravity and local avoidance if applicable. In world units per second. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a912fe97ee873d1e4a8bdb2217b72fb6c}{remaining\+Distance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Remaining distance along the current path to the end of the path. For the Rich\+AI movement script this may not always be precisely known, especially when far away from the destination. In those cases an approximate distance will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}{reached\+Destination}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the ai has reached the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}}. This is a best effort calculation to see if the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} has been reached. For the A\+I\+Path/\+Rich\+AI scripts, this is when the character is within \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{A\+I\+Path.\+end\+Reached\+Distance}} world units from the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}}. For the \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{A\+I\+Lerp}} script it is when the character is at the destination (±a very small margin). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}{reached\+End\+Of\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the agent has reached the end of the current path. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position in the world that this agent should move to. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8702d653e5bef425bbd6f64d10b1ef82}{can\+Search}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables or disables recalculating the path at regular intervals. Setting this to false does not stop any active path requests from being calculated or stop it from continuing to follow the current path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables or disables movement completely. If you want the agent to stand still, but still react to local avoidance and use gravity\+: use \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}{is\+Stopped}} instead. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ae102e380a9fb694457b7bd87df71664d}{has\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if this agent currently has a path that it follows \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if a path is currently being calculated \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}{is\+Stopped}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets if the agent should stop moving. If this is set to true the agent will immediately start to slow down as quickly as it can to come to a full stop. The agent will still react to local avoidance and gravity (if applicable), but it will not try to move in any particular direction. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adcdddcb7dfcaa7350c94a0ffd9d3532d}{steering\+Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Point on the path which the agent is currently moving towards. This is usually a point a small distance ahead of the agent or the end of the path. \end{DoxyCompactList}\item 
+System.\+Action \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a6aedd0071d0cfc570ec6d69939f0ec59}{on\+Search\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called when the agent recalculates its path. This is called both for automatic path recalculations (see can\+Search) and manual ones (see Search\+Path). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common interface for all movement scripts in the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{Pathfinding.\+A\+I\+Path}} See\+: Pathfinding.\+Rich\+AI See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{Pathfinding.\+A\+I\+Lerp}} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_ac89dda522760760c4d0c8cf0cc6ec2f5}\label{interface_pathfinding_1_1_i_astar_a_i_ac89dda522760760c4d0c8cf0cc6ec2f5}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!FinalizeMovement@{FinalizeMovement}}
+\index{FinalizeMovement@{FinalizeMovement}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{FinalizeMovement()}{FinalizeMovement()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Astar\+A\+I.\+Finalize\+Movement (\begin{DoxyParamCaption}\item[{Vector3}]{next\+Position,  }\item[{Quaternion}]{next\+Rotation }\end{DoxyParamCaption})}
+
+
+
+Move the agent. To be called as the last step when you are handling movement manually. 
+
+The movement will be clamped to the navmesh if applicable (this is done for the Rich\+AI movement script).
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_add2d9c6a1b18fbd036adca4a69608a03}{Movement\+Update}} for a code example.
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp_aef5f8ebf44a72f0fec90a2c6178e2023}{Pathfinding.\+A\+I\+Lerp}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a0db3a1e1aa0191657c97f6b81a79dde1}\label{interface_pathfinding_1_1_i_astar_a_i_a0db3a1e1aa0191657c97f6b81a79dde1}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!Move@{Move}}
+\index{Move@{Move}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Astar\+A\+I.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{delta\+Position }\end{DoxyParamCaption})}
+
+
+
+Move the agent. 
+
+This is intended for external movement forces such as those applied by wind, conveyor belts, knockbacks etc.
+
+Some movement scripts may ignore this completely (notably the \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{A\+I\+Lerp}} script) if it does not have any concept of being moved externally.
+
+The agent will not be moved immediately when calling this method. Instead this offset will be stored and then applied the next time the agent runs its movement calculations (which is usually later this frame or the next frame). If you want to move the agent immediately then call\+: {\ttfamily  ai.\+Move(some\+Vector); ai.\+Finalize\+Movement(ai.\+position, ai.\+rotation); }
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Position} & Direction and distance to move the agent in world space.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_add2d9c6a1b18fbd036adca4a69608a03}\label{interface_pathfinding_1_1_i_astar_a_i_add2d9c6a1b18fbd036adca4a69608a03}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!MovementUpdate@{MovementUpdate}}
+\index{MovementUpdate@{MovementUpdate}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{MovementUpdate()}{MovementUpdate()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Astar\+A\+I.\+Movement\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time,  }\item[{out Vector3}]{next\+Position,  }\item[{out Quaternion}]{next\+Rotation }\end{DoxyParamCaption})}
+
+
+
+Calculate how the character wants to move during this frame. 
+
+Note that this does not actually move the character. You need to call \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ac89dda522760760c4d0c8cf0cc6ec2f5}{Finalize\+Movement}} for that. This is called automatically unless \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}} is false.
+
+To handle movement yourself you can disable \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}} and call this method manually. This code will replicate the normal behavior of the component\+: {\ttfamily  void Update () \{ // Disable the A\+Is own movement code ai.\+can\+Move = false; Vector3 next\+Position; Quaternion next\+Rotation; // Calculate how the AI wants to move ai.\+Movement\+Update(Time.\+delta\+Time, out next\+Position, out next\+Rotation); // Modify next\+Position and next\+Rotation in any way you wish // Actually move the AI ai.\+Finalize\+Movement(next\+Position, next\+Rotation); \} }
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & time to simulate movement for. Usually set to Time.\+delta\+Time.\\
+\hline
+{\em next\+Position} & the position that the agent wants to move to during this frame.\\
+\hline
+{\em next\+Rotation} & the rotation that the agent wants to rotate to during this frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp_ad6bb506514a0504da0fe6d5af1f9e104}{Pathfinding.\+A\+I\+Lerp}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a87be63a6f35302a9831ec07b6b5fbb84}\label{interface_pathfinding_1_1_i_astar_a_i_a87be63a6f35302a9831ec07b6b5fbb84}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!SearchPath@{SearchPath}}
+\index{SearchPath@{SearchPath}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{SearchPath()}{SearchPath()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Astar\+A\+I.\+Search\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recalculate the current path. You can for example use this if you want very quick reaction times when you have changed the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} so that the agent does not have to wait until the next automatic path recalculation (see can\+Search). 
+
+If there is an ongoing path calculation, it will be canceled, so make sure you leave time for the paths to get calculated before calling this function again. A canceled path will show up in the log with the message \char`\"{}\+Canceled by script\char`\"{} (see Seeker.\+Cancel\+Current\+Path\+Request()).
+
+If no \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} has been set yet then nothing will be done.
+
+Note\+: The path result may not become available until after a few frames. During the calculation time the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}} property will return true.
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}}
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp_ad1f1b2665023ea72c67f25c92a4f6a56}{Pathfinding.\+A\+I\+Lerp}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a86eb322f611af919dad08b78e580edf4}\label{interface_pathfinding_1_1_i_astar_a_i_a86eb322f611af919dad08b78e580edf4}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!SetPath@{SetPath}}
+\index{SetPath@{SetPath}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{SetPath()}{SetPath()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Astar\+A\+I.\+Set\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{path }\end{DoxyParamCaption})}
+
+
+
+Make the AI follow the specified path. In case the path has not been calculated, the script will call seeker.\+Start\+Path to calculate it. This means the AI may not actually start to follow the path until in a few frames when the path has been calculated. The \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}} field will as usual return true while the path is being calculated. 
+
+In case the path has already been calculated it will immediately replace the current path the AI is following. This is useful if you want to replace how the AI calculates its paths. Note that if you calculate the path using seeker.\+Start\+Path then this script will already pick it up because it is listening for all paths that the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} finishes calculating. In that case you do not need to call this function.
+
+If you pass null as a parameter then the current path will be cleared and the agent will stop moving. Note than unless you have also disabled \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8702d653e5bef425bbd6f64d10b1ef82}{can\+Search}} then the agent will soon recalculate its path and start moving again.
+
+You can disable the automatic path recalculation by setting the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8702d653e5bef425bbd6f64d10b1ef82}{can\+Search}} field to false.
+
+{\ttfamily  // Disable the automatic path recalculation ai.\+can\+Search = false; var point\+To\+Avoid = enemy.\+position; // Make the AI flee from the enemy. // The path will be about 20 world units long (the default cost of moving 1 world unit is 1000). var path = Flee\+Path.\+Construct(ai.\+position, point\+To\+Avoid, 1000 $\ast$ 20); ai.\+Set\+Path(path);}
+
+{\ttfamily // If you want to make use of properties like ai.\+reached\+Destination or ai.\+remaining\+Distance or similar // you should also set the destination property to something reasonable. // Since the agent\textquotesingle{}s own path recalculation is disabled, setting this will not affect how the paths are calculated. // ai.\+destination = ... }
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp_a533cc9961a309707a72f7f1db70e4d85}{Pathfinding.\+A\+I\+Lerp}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a15bd14831e7d86ab76f7487fba64eca7}\label{interface_pathfinding_1_1_i_astar_a_i_a15bd14831e7d86ab76f7487fba64eca7}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}}
+{\footnotesize\ttfamily void Pathfinding.\+I\+Astar\+A\+I.\+Teleport (\begin{DoxyParamCaption}\item[{Vector3}]{new\+Position,  }\item[{bool}]{clear\+Path = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Instantly move the agent to a new position. This will trigger a path recalculation (if clear\+Path is true, which is the default) so if you want to teleport the agent and change its \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} it is recommended that you set the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} before calling this method. 
+
+The current path will be cleared by default.
+
+See\+: Works similarly to Unity\textquotesingle{}s Navmesh\+Agent.\+Warp. See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a87be63a6f35302a9831ec07b6b5fbb84}{Search\+Path}}
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp_ae9c2251f8c87372828c2090c885456c5}{Pathfinding.\+A\+I\+Lerp}}, and \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6813d572d16802ce0d674faaa44e35ac}{Pathfinding.\+A\+I\+Path}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}\label{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!canMove@{canMove}}
+\index{canMove@{canMove}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{canMove}{canMove}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+can\+Move\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enables or disables movement completely. If you want the agent to stand still, but still react to local avoidance and use gravity\+: use \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}{is\+Stopped}} instead. 
+
+This is also useful if you want to have full control over when the movement calculations run. Take a look at \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_add2d9c6a1b18fbd036adca4a69608a03}{Movement\+Update}}
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8702d653e5bef425bbd6f64d10b1ef82}{can\+Search}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}{is\+Stopped}}\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a8702d653e5bef425bbd6f64d10b1ef82}\label{interface_pathfinding_1_1_i_astar_a_i_a8702d653e5bef425bbd6f64d10b1ef82}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!canSearch@{canSearch}}
+\index{canSearch@{canSearch}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{canSearch}{canSearch}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+can\+Search\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enables or disables recalculating the path at regular intervals. Setting this to false does not stop any active path requests from being calculated or stop it from continuing to follow the current path. 
+
+Note that this only disables automatic path recalculations. If you call the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a87be63a6f35302a9831ec07b6b5fbb84}{Search\+Path()}} method a path will still be calculated.
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}{is\+Stopped}}\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a72148d95aed692c655190fd7cdfe3db4}\label{interface_pathfinding_1_1_i_astar_a_i_a72148d95aed692c655190fd7cdfe3db4}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!desiredVelocity@{desiredVelocity}}
+\index{desiredVelocity@{desiredVelocity}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{desiredVelocity}{desiredVelocity}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+I\+Astar\+A\+I.\+desired\+Velocity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Velocity that this agent wants to move with. Includes gravity and local avoidance if applicable. In world units per second. 
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a04ad39dd393409f7b4d77bf35d6f23e0}{velocity}}\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}\label{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!destination@{destination}}
+\index{destination@{destination}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{destination}{destination}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+I\+Astar\+A\+I.\+destination\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Position in the world that this agent should move to. 
+
+If no destination has been set yet, then (+infinity, +infinity, +infinity) will be returned.
+
+Note that setting this property does not immediately cause the agent to recalculate its path. So it may take some time before the agent starts to move towards this point. Most movement scripts have a repath\+Rate field which indicates how often the agent looks for a new path. You can also call the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a87be63a6f35302a9831ec07b6b5fbb84}{Search\+Path}} method to immediately start to search for a new path. Paths are calculated asynchronously so when an agent starts to search for path it may take a few frames (usually 1 or 2) until the result is available. During this time the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}} property will return true.
+
+If you are setting a destination and then want to know when the agent has reached that destination then you could either use \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}{reached\+Destination}} (recommended) or check both \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}} and \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}{reached\+End\+Of\+Path}}. Check the documentation for the respective fields to learn about their differences.
+
+{\ttfamily  I\+Enumerator Start () \{ ai.\+destination = some\+Point; // Start to search for a path to the destination immediately ai.\+Search\+Path(); // Wait until the agent has reached the destination while (!ai.reached\+Destination) \{ yield return null; \} // The agent has reached the destination now \} } {\ttfamily  I\+Enumerator Start () \{ ai.\+destination = some\+Point; // Start to search for a path to the destination immediately // Note that the result may not become available until after a few frames // ai.\+path\+Pending will be true while the path is being calculated ai.\+Search\+Path(); // Wait until we know for sure that the agent has calculated a path to the destination we set above while (ai.\+path\+Pending $\vert$$\vert$ !ai.reached\+End\+Of\+Path) \{ yield return null; \} // The agent has reached the destination now \} }\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_ae102e380a9fb694457b7bd87df71664d}\label{interface_pathfinding_1_1_i_astar_a_i_ae102e380a9fb694457b7bd87df71664d}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!hasPath@{hasPath}}
+\index{hasPath@{hasPath}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{hasPath}{hasPath}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+has\+Path\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if this agent currently has a path that it follows 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a31b509a144854e21ad6ae45f76a88e79}\label{interface_pathfinding_1_1_i_astar_a_i_a31b509a144854e21ad6ae45f76a88e79}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!height@{height}}
+\index{height@{height}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily float Pathfinding.\+I\+Astar\+A\+I.\+height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Radius of the agent in world units. This is visualized in the scene view as a yellow cylinder around the character. 
+
+Note\+: The \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{Pathfinding.\+A\+I\+Lerp}} script doesn\textquotesingle{}t really have any use of knowing the radius or the height of the character, so this property will always return 0 in that script.\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}\label{interface_pathfinding_1_1_i_astar_a_i_adaf2a74d7f7e08c86987b969431304fb}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!isStopped@{isStopped}}
+\index{isStopped@{isStopped}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{isStopped}{isStopped}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+is\+Stopped\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets if the agent should stop moving. If this is set to true the agent will immediately start to slow down as quickly as it can to come to a full stop. The agent will still react to local avoidance and gravity (if applicable), but it will not try to move in any particular direction. 
+
+The current path of the agent will not be cleared, so when this is set to false again the agent will continue moving along the previous path.
+
+This is a purely user-\/controlled parameter, so for example it is not set automatically when the agent stops moving because it has reached the target. Use \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}{reached\+End\+Of\+Path}} for that.
+
+If this property is set to true while the agent is traversing an off-\/mesh link (Rich\+AI script only), then the agent will continue traversing the link and stop once it has completed it.
+
+Note\+: This is not the same as the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}} setting which some movement scripts have. The \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}} setting disables movement calculations completely (which among other things makes it not be affected by local avoidance or gravity). For the \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{A\+I\+Lerp}} movement script which doesn\textquotesingle{}t use gravity or local avoidance anyway changing this property is very similar to changing \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_aafc061b743ad47c8079cc46a0d854866}{can\+Move}}.
+
+The \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_adcdddcb7dfcaa7350c94a0ffd9d3532d}{steering\+Target}} property will continue to indicate the point which the agent would move towards if it would not be stopped.\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a4007191295f0335a580fe44299844f63}\label{interface_pathfinding_1_1_i_astar_a_i_a4007191295f0335a580fe44299844f63}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!maxSpeed@{maxSpeed}}
+\index{maxSpeed@{maxSpeed}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{maxSpeed}{maxSpeed}}
+{\footnotesize\ttfamily float Pathfinding.\+I\+Astar\+A\+I.\+max\+Speed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Max speed in world units per second 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a6aedd0071d0cfc570ec6d69939f0ec59}\label{interface_pathfinding_1_1_i_astar_a_i_a6aedd0071d0cfc570ec6d69939f0ec59}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!onSearchPath@{onSearchPath}}
+\index{onSearchPath@{onSearchPath}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{onSearchPath}{onSearchPath}}
+{\footnotesize\ttfamily System.\+Action Pathfinding.\+I\+Astar\+A\+I.\+on\+Search\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Called when the agent recalculates its path. This is called both for automatic path recalculations (see can\+Search) and manual ones (see Search\+Path). 
+
+See\+: Take a look at the \mbox{\hyperlink{class_pathfinding_1_1_a_i_destination_setter}{Pathfinding.\+A\+I\+Destination\+Setter}} source code for an example of how it can be used.\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}\label{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!pathPending@{pathPending}}
+\index{pathPending@{pathPending}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{pathPending}{pathPending}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+path\+Pending\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if a path is currently being calculated 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_afa8f3e5616800d830fce3acae0d5d7a0}\label{interface_pathfinding_1_1_i_astar_a_i_afa8f3e5616800d830fce3acae0d5d7a0}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!position@{position}}
+\index{position@{position}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+I\+Astar\+A\+I.\+position\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Position of the agent. In world space. See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_ab96dbd00d0573ec30bdee27cd4fb3920}{rotation}} 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_ab49138bf9619f1170be7ec34481c4196}\label{interface_pathfinding_1_1_i_astar_a_i_ab49138bf9619f1170be7ec34481c4196}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!radius@{radius}}
+\index{radius@{radius}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily float Pathfinding.\+I\+Astar\+A\+I.\+radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Height of the agent in world units. This is visualized in the scene view as a yellow cylinder around the character. 
+
+This value is currently only used if an R\+V\+O\+Controller is attached to the same Game\+Object, otherwise it is only used for drawing nice gizmos in the scene view. However since the height value is used for some things, the radius field is always visible for consistency and easier visualization of the character. That said, it may be used for something in a future release.
+
+Note\+: The \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{Pathfinding.\+A\+I\+Lerp}} script doesn\textquotesingle{}t really have any use of knowing the radius or the height of the character, so this property will always return 0 in that script.\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}\label{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!reachedDestination@{reachedDestination}}
+\index{reachedDestination@{reachedDestination}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{reachedDestination}{reachedDestination}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+reached\+Destination\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the ai has reached the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}}. This is a best effort calculation to see if the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} has been reached. For the A\+I\+Path/\+Rich\+AI scripts, this is when the character is within \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{A\+I\+Path.\+end\+Reached\+Distance}} world units from the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}}. For the \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{A\+I\+Lerp}} script it is when the character is at the destination (±a very small margin). 
+
+This value will be updated immediately when the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} is changed (in contrast to reached\+End\+Of\+Path), however since path requests are asynchronous it will use an approximation until it sees the real path result. What this property does is to check the distance to the end of the current path, and add to that the distance from the end of the path to the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} (i.\+e. is assumes it is possible to move in a straight line between the end of the current path to the destination) and then checks if that total distance is less than end\+Reached\+Distance. This property is therefore only a best effort, but it will work well for almost all use cases.
+
+Furthermore it will not report that the destination is reached if the destination is above the head of the character or more than half the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a31b509a144854e21ad6ae45f76a88e79}{height}} of the character below its feet (so if you have a multilevel building, it is important that you configure the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a31b509a144854e21ad6ae45f76a88e79}{height}} of the character correctly).
+
+The cases which could be problematic are if an agent is standing next to a very thin wall and the destination suddenly changes to the other side of that thin wall. During the time that it takes for the path to be calculated the agent may see itself as alredy having reached the destination because the destination only moved a very small distance (the wall was thin), even though it may actually be quite a long way around the wall to the other side.
+
+In contrast to \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}{reached\+End\+Of\+Path}}, this property is immediately updated when the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} is changed.
+
+{\ttfamily  I\+Enumerator Start () \{ ai.\+destination = some\+Point; // Start to search for a path to the destination immediately ai.\+Search\+Path(); // Wait until the agent has reached the destination while (!ai.reached\+Destination) \{ yield return null; \} // The agent has reached the destination now \} }
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{A\+I\+Path.\+end\+Reached\+Distance}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a912fe97ee873d1e4a8bdb2217b72fb6c}{remaining\+Distance}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}{reached\+End\+Of\+Path}}\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}\label{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!reachedEndOfPath@{reachedEndOfPath}}
+\index{reachedEndOfPath@{reachedEndOfPath}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{reachedEndOfPath}{reachedEndOfPath}}
+{\footnotesize\ttfamily bool Pathfinding.\+I\+Astar\+A\+I.\+reached\+End\+Of\+Path\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the agent has reached the end of the current path. 
+
+Note that setting the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} does not immediately update the path, nor is there any guarantee that the AI will actually be able to reach the destination that you set. The AI will try to get as close as possible. Often you want to use \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}{reached\+Destination}} instead which is easier to work with.
+
+It is very hard to provide a method for detecting if the AI has reached the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}} that works across all different games because the destination may not even lie on the navmesh and how that is handled differs from game to game (see also the code snippet in the docs for destination).
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a912fe97ee873d1e4a8bdb2217b72fb6c}{remaining\+Distance}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}{reached\+Destination}}\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a912fe97ee873d1e4a8bdb2217b72fb6c}\label{interface_pathfinding_1_1_i_astar_a_i_a912fe97ee873d1e4a8bdb2217b72fb6c}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!remainingDistance@{remainingDistance}}
+\index{remainingDistance@{remainingDistance}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{remainingDistance}{remainingDistance}}
+{\footnotesize\ttfamily float Pathfinding.\+I\+Astar\+A\+I.\+remaining\+Distance\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Remaining distance along the current path to the end of the path. For the Rich\+AI movement script this may not always be precisely known, especially when far away from the destination. In those cases an approximate distance will be returned. 
+
+If the agent does not currently have a path, then positive infinity will be returned.
+
+Note\+: This is the distance to the end of the path, which may or may not be at the \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8e9b0c66a663e23b11e7466f6d5ffca3}{destination}}. If the character cannot reach the destination it will try to move as close as possible to it.
+
+Warning\+: Since path requests are asynchronous, there is a small delay between a path request being sent and this value being updated with the new calculated path.
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a9c671f788baec66af6b51c7462a53a60}{reached\+Destination}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a0b4009cade4a25ddc760cacb6669805e}{reached\+End\+Of\+Path}} See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a8be62f7eda28b4111a46484248546e19}{path\+Pending}}\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_ab96dbd00d0573ec30bdee27cd4fb3920}\label{interface_pathfinding_1_1_i_astar_a_i_ab96dbd00d0573ec30bdee27cd4fb3920}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!rotation@{rotation}}
+\index{rotation@{rotation}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily Quaternion Pathfinding.\+I\+Astar\+A\+I.\+rotation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Rotation of the agent. In world space. See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_afa8f3e5616800d830fce3acae0d5d7a0}{position}} 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_adcdddcb7dfcaa7350c94a0ffd9d3532d}\label{interface_pathfinding_1_1_i_astar_a_i_adcdddcb7dfcaa7350c94a0ffd9d3532d}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!steeringTarget@{steeringTarget}}
+\index{steeringTarget@{steeringTarget}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{steeringTarget}{steeringTarget}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+I\+Astar\+A\+I.\+steering\+Target\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Point on the path which the agent is currently moving towards. This is usually a point a small distance ahead of the agent or the end of the path. 
+
+If the agent does not have a path at the moment, then the agent\textquotesingle{}s current position will be returned.\mbox{\Hypertarget{interface_pathfinding_1_1_i_astar_a_i_a04ad39dd393409f7b4d77bf35d6f23e0}\label{interface_pathfinding_1_1_i_astar_a_i_a04ad39dd393409f7b4d77bf35d6f23e0}} 
+\index{Pathfinding.IAstarAI@{Pathfinding.IAstarAI}!velocity@{velocity}}
+\index{velocity@{velocity}!Pathfinding.IAstarAI@{Pathfinding.IAstarAI}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+I\+Astar\+A\+I.\+velocity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Actual velocity that the agent is moving with. In world units per second. 
+
+See\+: \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i_a72148d95aed692c655190fd7cdfe3db4}{desired\+Velocity}}
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+A\+I/I\+Astar\+A\+I.\+cs\end{DoxyCompactItemize}

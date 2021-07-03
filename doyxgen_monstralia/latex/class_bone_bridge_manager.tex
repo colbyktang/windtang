@@ -1,0 +1,147 @@
+\hypertarget{class_bone_bridge_manager}{}\doxysection{Bone\+Bridge\+Manager Class Reference}
+\label{class_bone_bridge_manager}\index{BoneBridgeManager@{BoneBridgeManager}}
+Inheritance diagram for Bone\+Bridge\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bone_bridge_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a0a9cb4f36d979b5c4e4a9baf68d7e44d}\label{class_bone_bridge_manager_a0a9cb4f36d979b5c4e4a9baf68d7e44d}} 
+enum class {\bfseries Bridge\+Phase} \{ \newline
+{\bfseries Start}
+, {\bfseries Countdown}
+, {\bfseries Building}
+, {\bfseries Falling}
+, \newline
+{\bfseries Crossing}
+, {\bfseries Lose}
+, {\bfseries Finish}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a694e28b7ac33722fccac76274aafcb1b}\label{class_bone_bridge_manager_a694e28b7ac33722fccac76274aafcb1b}} 
+delegate void {\bfseries Phase\+Change\+Action} (Bridge\+Phase phase)
+\item 
+override void \mbox{\hyperlink{class_bone_bridge_manager_af126eacde3a86b9cc9ddc69fe64584ec}{Pregame\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em First function called in the Director scripts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_ab2227ebceb3defbc62e707b70e39d1fa}\label{class_bone_bridge_manager_ab2227ebceb3defbc62e707b70e39d1fa}} 
+void {\bfseries Play\+Level} ()
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a40339f44b078baf67fa4b33a6a2e507f}\label{class_bone_bridge_manager_a40339f44b078baf67fa4b33a6a2e507f}} 
+void {\bfseries Game\+Start} ()
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_ae5494f81611a54fb3102ce8814294c13}\label{class_bone_bridge_manager_ae5494f81611a54fb3102ce8814294c13}} 
+bool {\bfseries Get\+Game\+Started} ()
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a48641e2f6a6414b917bc758985a68339}\label{class_bone_bridge_manager_a48641e2f6a6414b917bc758985a68339}} 
+void {\bfseries Game\+End} ()
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_ad128d344ea55c50f9f8b1cc4a0c8471a}\label{class_bone_bridge_manager_ad128d344ea55c50f9f8b1cc4a0c8471a}} 
+void {\bfseries On\+Out\+Of\+Time} ()
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a07d045dd3b9fe30a99dc9d3257559108}\label{class_bone_bridge_manager_a07d045dd3b9fe30a99dc9d3257559108}} 
+void {\bfseries Change\+Phase} (Bridge\+Phase phase)
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a061750ef5be0ec1e884571440b3dd000}\label{class_bone_bridge_manager_a061750ef5be0ec1e884571440b3dd000}} 
+void {\bfseries Camera\+Switch} (Game\+Object obj)
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_ad8b07ef21cf696c71e86e9513f33e1f0}\label{class_bone_bridge_manager_ad8b07ef21cf696c71e86e9513f33e1f0}} 
+void {\bfseries Reset\+Monster} (Vector2 pos, Game\+Object focus)
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a37d5d610ddb499dd9a88b2f0ef3ce5a7}\label{class_bone_bridge_manager_a37d5d610ddb499dd9a88b2f0ef3ce5a7}} 
+void {\bfseries Change\+Progress\+Bar} (float value)
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a7f23b3989b92f106fcb1958a28adaf2d}\label{class_bone_bridge_manager_a7f23b3989b92f106fcb1958a28adaf2d}} 
+void {\bfseries Create\+Prize} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_adfbb3fa820d7c7b57d496d6a67d0f395}\label{class_bone_bridge_manager_adfbb3fa820d7c7b57d496d6a67d0f395}} 
+bool {\bfseries do\+Countdown}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a8adbf066a8d52118efcaf75549b47074}\label{class_bone_bridge_manager_a8adbf066a8d52118efcaf75549b47074}} 
+bool {\bfseries play\+Intro}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a456dcc8890ceee8e24e3c2950cf0fb54}\label{class_bone_bridge_manager_a456dcc8890ceee8e24e3c2950cf0fb54}} 
+bool {\bfseries get\+Level\+From\+Game\+Manager} = true
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a59405ed9af9d8c47d0002f5841ebd7fb}\label{class_bone_bridge_manager_a59405ed9af9d8c47d0002f5841ebd7fb}} 
+bool {\bfseries is\+Tutorial\+Running} = false
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a744d62ffbe3c4780ea6482eda98201db}\label{class_bone_bridge_manager_a744d62ffbe3c4780ea6482eda98201db}} 
+Bridge\+Phase {\bfseries bridge\+Phase}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a1544a5d1a9af0ed7dc4042e72bb78307}\label{class_bone_bridge_manager_a1544a5d1a9af0ed7dc4042e72bb78307}} 
+\mbox{\hyperlink{class_bone_bridge_level}{Bone\+Bridge\+Level}} {\bfseries level\+One}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_aea7f810c81c4ec36807e93d91d848c9a}\label{class_bone_bridge_manager_aea7f810c81c4ec36807e93d91d848c9a}} 
+float {\bfseries level\+One\+Time\+Limit}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a038d804dfa49259b3a2421954c6ba2db}\label{class_bone_bridge_manager_a038d804dfa49259b3a2421954c6ba2db}} 
+\mbox{\hyperlink{class_bone_bridge_level}{Bone\+Bridge\+Level}} {\bfseries current\+Level}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a5662b33178e07377d3c6585d1f91feef}\label{class_bone_bridge_manager_a5662b33178e07377d3c6585d1f91feef}} 
+\mbox{\hyperlink{class_voice_overs_data}{Voice\+Overs\+Data}} {\bfseries vo\+Data}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a9bb1d902f296dccb0710ca32dad74797}\label{class_bone_bridge_manager_a9bb1d902f296dccb0710ca32dad74797}} 
+\mbox{\hyperlink{class_bone_bridge_data}{Bone\+Bridge\+Data}} {\bfseries config}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a0d82f62b3e16dc78c8febe88bd2f555d}\label{class_bone_bridge_manager_a0d82f62b3e16dc78c8febe88bd2f555d}} 
+Timer\+Clock {\bfseries timer\+Object}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a6602757658173b7533239b49472c12bb}\label{class_bone_bridge_manager_a6602757658173b7533239b49472c12bb}} 
+\mbox{\hyperlink{class_bone_bridge_camera}{Bone\+Bridge\+Camera}} {\bfseries bone\+Camera}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a47afdd0e9c3218f77964fd0fc7c93155}\label{class_bone_bridge_manager_a47afdd0e9c3218f77964fd0fc7c93155}} 
+Game\+Object {\bfseries chest\+Prefab}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a730be6a34058bdd36db9ecde5651191f}\label{class_bone_bridge_manager_a730be6a34058bdd36db9ecde5651191f}} 
+\mbox{\hyperlink{class_bone_bridge_monster}{Bone\+Bridge\+Monster}} {\bfseries bridge\+Monster}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a3fc1614247b76dad4d47b3cb507b4a3a}\label{class_bone_bridge_manager_a3fc1614247b76dad4d47b3cb507b4a3a}} 
+\mbox{\hyperlink{class_monster}{Monster}} {\bfseries monster}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_af5304854b913327609212b009172f9df}\label{class_bone_bridge_manager_af5304854b913327609212b009172f9df}} 
+Unity\+Event {\bfseries Phase\+Change\+Event}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a8ce5efe2c47a69df25d48b86cb25750e}\label{class_bone_bridge_manager_a8ce5efe2c47a69df25d48b86cb25750e}} 
+bool {\bfseries Input\+Allowed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_bridge_manager_a9e997c3337ad45f8c6612b615e23e7a0}\label{class_bone_bridge_manager_a9e997c3337ad45f8c6612b615e23e7a0}} 
+static Phase\+Change\+Action {\bfseries Phase\+Change}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bone_bridge_manager_af126eacde3a86b9cc9ddc69fe64584ec}\label{class_bone_bridge_manager_af126eacde3a86b9cc9ddc69fe64584ec}} 
+\index{BoneBridgeManager@{BoneBridgeManager}!PregameSetup@{PregameSetup}}
+\index{PregameSetup@{PregameSetup}!BoneBridgeManager@{BoneBridgeManager}}
+\doxysubsubsection{\texorpdfstring{PregameSetup()}{PregameSetup()}}
+{\footnotesize\ttfamily override void Bone\+Bridge\+Manager.\+Pregame\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+First function called in the Director scripts 
+
+
+
+Implements \mbox{\hyperlink{class_abstract_game_director_af768407a9b41acf28c8be25a06b5ea95}{Abstract\+Game\+Director$<$ Bone\+Bridge\+Manager $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Monstralia/\+Mainframe\+Mountain/\+Bone\+Bridge/Bone\+Bridge\+Manager.\+cs\end{DoxyCompactItemize}

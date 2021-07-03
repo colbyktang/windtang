@@ -1,0 +1,7 @@
+<map id="EndScreen" name="EndScreen">
+<area shape="rect" id="node1" title="Handles the screen that pops up at the end of any game." alt="" coords="111,185,197,212"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node5" href="$class_star_panel.html" title=" " alt="" coords="72,81,151,108"/>
+<area shape="rect" id="node3" title=" " alt="" coords="176,81,223,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="261,81,338,108"/>
+</map>

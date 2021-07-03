@@ -1,0 +1,93 @@
+\hypertarget{struct_pathfinding_1_1_util_1_1_guid}{}\doxysection{Pathfinding.\+Util.\+Guid Struct Reference}
+\label{struct_pathfinding_1_1_util_1_1_guid}\index{Pathfinding.Util.Guid@{Pathfinding.Util.Guid}}
+
+
+Simple implementation of a G\+U\+ID. Version\+: Since 3.\+6.\+4 this struct works properly on platforms with different endianness such as Wii U.  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Util.\+Guid\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a8836c629eace31640629c8656fd17422}\label{struct_pathfinding_1_1_util_1_1_guid_a8836c629eace31640629c8656fd17422}} 
+{\bfseries Guid} (byte\mbox{[}$\,$\mbox{]} bytes)
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_afca24267de02643cca3acdce92dd8301}\label{struct_pathfinding_1_1_util_1_1_guid_afca24267de02643cca3acdce92dd8301}} 
+{\bfseries Guid} (string str)
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_af5f6f10bdaa15c089a0ed233d2018560}\label{struct_pathfinding_1_1_util_1_1_guid_af5f6f10bdaa15c089a0ed233d2018560}} 
+byte\mbox{[}$\,$\mbox{]} {\bfseries To\+Byte\+Array} ()
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_ad64ec7f4ab7277a8a0c569ba3e0b9c0b}\label{struct_pathfinding_1_1_util_1_1_guid_ad64ec7f4ab7277a8a0c569ba3e0b9c0b}} 
+override bool {\bfseries Equals} (System.\+Object \+\_\+rhs)
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_aa91d3d24a2dc7adbe32913ccd3fd5812}\label{struct_pathfinding_1_1_util_1_1_guid_aa91d3d24a2dc7adbe32913ccd3fd5812}} 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_ac89294f78b8c699114ffb0b50779878b}\label{struct_pathfinding_1_1_util_1_1_guid_ac89294f78b8c699114ffb0b50779878b}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a66bbaadcf2285fab1c693a7710327cd6}\label{struct_pathfinding_1_1_util_1_1_guid_a66bbaadcf2285fab1c693a7710327cd6}} 
+static \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} {\bfseries Parse} (string input)
+\item 
+static ulong \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid_afec1e10b27bbe39cb1e26b27f3ee72ad}{Swap\+Endianness}} (ulong value)
+\begin{DoxyCompactList}\small\item\em Swaps between little and big endian \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_ab77c0b783532483457c93bfb7705d91e}\label{struct_pathfinding_1_1_util_1_1_guid_ab77c0b783532483457c93bfb7705d91e}} 
+static \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} {\bfseries New\+Guid} ()
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a1c1ac01629c6b16e15133939ef8a37a5}\label{struct_pathfinding_1_1_util_1_1_guid_a1c1ac01629c6b16e15133939ef8a37a5}} 
+static bool {\bfseries operator==} (\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} lhs, \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} rhs)
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a800c4865f7de0f3da3a5247ad0184ba1}\label{struct_pathfinding_1_1_util_1_1_guid_a800c4865f7de0f3da3a5247ad0184ba1}} 
+static bool {\bfseries operator!=} (\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} lhs, \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a01a9d190a490b876ea2d0d23adc5e5b6}\label{struct_pathfinding_1_1_util_1_1_guid_a01a9d190a490b876ea2d0d23adc5e5b6}} 
+readonly ulong {\bfseries \+\_\+a}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a5118f28f7f634dbaa201c94cd4c25fff}\label{struct_pathfinding_1_1_util_1_1_guid_a5118f28f7f634dbaa201c94cd4c25fff}} 
+readonly ulong {\bfseries \+\_\+b}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a99f7d2b952d412e897986a0efca77919}\label{struct_pathfinding_1_1_util_1_1_guid_a99f7d2b952d412e897986a0efca77919}} 
+const string {\bfseries hex} = \char`\"{}0123456789A\+B\+C\+D\+EF\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_abf6a3fa073d38fe8089a3a0616052da2}\label{struct_pathfinding_1_1_util_1_1_guid_abf6a3fa073d38fe8089a3a0616052da2}} 
+static readonly \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} {\bfseries zero} = new \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}}(new byte\mbox{[}16\mbox{]})
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_a6d6e8c6f0775d1cea4f8832aed57b43c}\label{struct_pathfinding_1_1_util_1_1_guid_a6d6e8c6f0775d1cea4f8832aed57b43c}} 
+static readonly string {\bfseries zero\+String} = new \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}}(new byte\mbox{[}16\mbox{]}).To\+String()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple implementation of a G\+U\+ID. Version\+: Since 3.\+6.\+4 this struct works properly on platforms with different endianness such as Wii U. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_util_1_1_guid_afec1e10b27bbe39cb1e26b27f3ee72ad}\label{struct_pathfinding_1_1_util_1_1_guid_afec1e10b27bbe39cb1e26b27f3ee72ad}} 
+\index{Pathfinding.Util.Guid@{Pathfinding.Util.Guid}!SwapEndianness@{SwapEndianness}}
+\index{SwapEndianness@{SwapEndianness}!Pathfinding.Util.Guid@{Pathfinding.Util.Guid}}
+\doxysubsubsection{\texorpdfstring{SwapEndianness()}{SwapEndianness()}}
+{\footnotesize\ttfamily static ulong Pathfinding.\+Util.\+Guid.\+Swap\+Endianness (\begin{DoxyParamCaption}\item[{ulong}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps between little and big endian 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Utilities/Dot\+Net\+Replacements.\+cs\end{DoxyCompactItemize}

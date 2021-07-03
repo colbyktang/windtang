@@ -1,0 +1,387 @@
+\hypertarget{class_pathfinding_1_1_grid_node_base}{}\doxysection{Pathfinding.\+Grid\+Node\+Base Class Reference}
+\label{class_pathfinding_1_1_grid_node_base}\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+
+
+Base class for \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} and Level\+Grid\+Node  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Grid\+Node\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Grid\+Node\+Base\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a0740ca1d2efef8c719256fba795aa566}{Surface\+Area}} ()
+\begin{DoxyCompactList}\small\item\em The surface area of the node in square world units \end{DoxyCompactList}\item 
+override Vector3 \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ad102443d029a26edfd9ffbb32e85f8ab}{Random\+Point\+On\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em A random point on the surface of the node. For point nodes and other nodes which do not have a surface, this will always return the position of the node. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a035a19b8cf054812f4e80a2403c45857}{Get\+Gizmo\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Hash code used for checking if the gizmos need to be updated. Will change when the gizmos for the node might change. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aed018e0a8fcd9dee9a32dd0530d2f5ca}{Get\+Neighbour\+Along\+Direction}} (int direction)
+\begin{DoxyCompactList}\small\item\em Adjacent grid node in the specified direction. This will return null if the node does not have a connection to a node in that direction. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ac756e2b043d9d8cb9d6be48d17493ad2}{Contains\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Checks if this node has a connection to the specified node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a405d0afb450cfda919c8637c012a0a06}{Clear\+Custom\+Connections}} (bool also\+Reverse)
+\begin{DoxyCompactList}\small\item\em Same as \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aba483328201dd150be89541530a150a1}{Clear\+Connections}}, but does not clear grid connections, only custom ones (e.\+g added by \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}{Add\+Connection}} or a \mbox{\hyperlink{class_pathfinding_1_1_node_link}{Node\+Link}} component) \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aba483328201dd150be89541530a150a1}{Clear\+Connections}} (bool also\+Reverse)
+\begin{DoxyCompactList}\small\item\em Remove all connections from this node. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a3b2821b8904af5a68aee7a178027a083}{Get\+Connections}} (System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ action)
+\begin{DoxyCompactList}\small\item\em Calls the delegate with all connections from this node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a9f3bf87176fa3e2d108407835f0072b7}\label{class_pathfinding_1_1_grid_node_base_a9f3bf87176fa3e2d108407835f0072b7}} 
+override void {\bfseries Update\+RecursiveG} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path, \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} path\+Node, \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}} handler)
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae5558900565a0d4388846335c154cc15}{Open}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path, \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} path\+Node, \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}} handler)
+\begin{DoxyCompactList}\small\item\em Open the node. Used internally for the A$\ast$ algorithm. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}{Add\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node, uint cost)
+\begin{DoxyCompactList}\small\item\em Add a connection from this node to the specified node. If the connection already exists, the cost will simply be updated and no extra connection added. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a1ee06a38e836fbc54fa1cbe8f8967834}{Remove\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Removes any connection from this node to the specified node. If no such connection exists, nothing will be done. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aa7cd8709b1ecbdd97b0658b7f66db07e}{Serialize\+References}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Used to serialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ad73fdd26ff63bcc0cbbfa60be20faee0}{Deserialize\+References}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Used to deserialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_connection}{Connection}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a42858f54a84e96b71c24ea604bc15df6}{connections}}
+\begin{DoxyCompactList}\small\item\em Custon non-\/grid connections from this node. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}{Add\+Connection}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a1ee06a38e836fbc54fa1cbe8f8967834}{Remove\+Connection}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a6fe92a29d86e44e9b0e45bfe7b5b043f}\label{class_pathfinding_1_1_grid_node_base_a6fe92a29d86e44e9b0e45bfe7b5b043f}} 
+{\bfseries Grid\+Node\+Base} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} astar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a995e691c956241a8767d16793252e668}{node\+In\+Grid\+Index}}
+\begin{DoxyCompactList}\small\item\em Bitfield containing the x and z coordinates of the node as well as the layer (for layered grid graphs). See\+: Node\+In\+Grid\+Index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a98ce127f457df7cddf95d4ba5684c28f}\label{class_pathfinding_1_1_grid_node_base_a98ce127f457df7cddf95d4ba5684c28f}} 
+ushort {\bfseries grid\+Flags}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a771ca8c672de8dc6624f6cf254606b8a}\label{class_pathfinding_1_1_grid_node_base_a771ca8c672de8dc6624f6cf254606b8a}} 
+const int {\bfseries Node\+In\+Grid\+Index\+Layer\+Offset} = 24
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a0c546c49e0d2d80d0a736b1d944c2ada}\label{class_pathfinding_1_1_grid_node_base_a0c546c49e0d2d80d0a736b1d944c2ada}} 
+const int {\bfseries Node\+In\+Grid\+Index\+Mask} = 0x\+F\+F\+F\+F\+FF
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a1843a03f102d5dc4033fd9f2f18ccec5}{Node\+In\+Grid\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The index of the node in the grid. This is x + z$\ast$graph.width So you can get the X and Z indices using \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aca6ff27d6c47778f62a5f9bcb3eb4f38}{X\+Coordinate\+In\+Grid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em X coordinate of the node in the grid. The node in the bottom left corner has (x,z) = (0,0) and the one in the opposite corner has (x,z) = (width-\/1, depth-\/1) See\+: Z\+Coord\+In\+Grid See\+: Node\+In\+Grid\+Index \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a9f8fb63fc35a1ccdf4f589bde0612f76}{Z\+Coordinate\+In\+Grid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Z coordinate of the node in the grid. The node in the bottom left corner has (x,z) = (0,0) and the one in the opposite corner has (x,z) = (width-\/1, depth-\/1) See\+: X\+Coord\+In\+Grid See\+: Node\+In\+Grid\+Index \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_abfcf142f206f3f961d4422b9a86be17f}{Walkable\+Erosion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Stores walkability before erosion is applied. Used internally when updating the graph. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a33ebd45ad8c2eb4492e7aba6b6324e1d}{Tmp\+Walkable}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Temporary variable used internally when updating the graph. \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aea22fdaecb4d9a3d45a89fbc828ccd58}{Has\+Connections\+To\+All\+Eight\+Neighbours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the node has grid connections to all its 8 neighbours. Note\+: This will always return false if \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}{Grid\+Graph.\+neighbours}} is set to anything other than Eight. See\+: Get\+Neighbour\+Along\+Direction \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} and Level\+Grid\+Node 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}\label{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!AddConnection@{AddConnection}}
+\index{AddConnection@{AddConnection}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{AddConnection()}{AddConnection()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Add\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node,  }\item[{uint}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a connection from this node to the specified node. If the connection already exists, the cost will simply be updated and no extra connection added. 
+
+Note\+: Only adds a one-\/way connection. Consider calling the same function on the other node to get a two-\/way connection.
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a688c3ba2dba7a37b9d2cd90d067283a8}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_aba483328201dd150be89541530a150a1}\label{class_pathfinding_1_1_grid_node_base_aba483328201dd150be89541530a150a1}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!ClearConnections@{ClearConnections}}
+\index{ClearConnections@{ClearConnections}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{ClearConnections()}{ClearConnections()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Clear\+Connections (\begin{DoxyParamCaption}\item[{bool}]{also\+Reverse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove all connections from this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em also\+Reverse} & if true, neighbours will be requested to remove connections to this node.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a999ec09df07a4672ff9258f6a398c599}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a405d0afb450cfda919c8637c012a0a06}\label{class_pathfinding_1_1_grid_node_base_a405d0afb450cfda919c8637c012a0a06}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!ClearCustomConnections@{ClearCustomConnections}}
+\index{ClearCustomConnections@{ClearCustomConnections}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{ClearCustomConnections()}{ClearCustomConnections()}}
+{\footnotesize\ttfamily void Pathfinding.\+Grid\+Node\+Base.\+Clear\+Custom\+Connections (\begin{DoxyParamCaption}\item[{bool}]{also\+Reverse }\end{DoxyParamCaption})}
+
+
+
+Same as \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aba483328201dd150be89541530a150a1}{Clear\+Connections}}, but does not clear grid connections, only custom ones (e.\+g added by \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}{Add\+Connection}} or a \mbox{\hyperlink{class_pathfinding_1_1_node_link}{Node\+Link}} component) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_ac756e2b043d9d8cb9d6be48d17493ad2}\label{class_pathfinding_1_1_grid_node_base_ac756e2b043d9d8cb9d6be48d17493ad2}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!ContainsConnection@{ContainsConnection}}
+\index{ContainsConnection@{ContainsConnection}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{ContainsConnection()}{ContainsConnection()}}
+{\footnotesize\ttfamily override bool Pathfinding.\+Grid\+Node\+Base.\+Contains\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if this node has a connection to the specified node. 
+
+{\ttfamily  Astar\+Path.\+active.\+Add\+Work\+Item(new \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item}{Astar\+Work\+Item}}(ctx =$>$ \{ // Connect two nodes var node1 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var node2 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position + Vector3.\+right, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var cost = (uint)(node2.\+position -\/ node1.\+position).cost\+Magnitude; node1.\+Add\+Connection(node2, cost); node2.\+Add\+Connection(node1, cost);}
+
+{\ttfamily  node1.\+Contains\+Connection(node2); // True}
+
+{\ttfamily  node1.\+Remove\+Connection(node2); node2.\+Remove\+Connection(node1); \})); }
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2f891ce0c090a589bc8114bf9574c9c1}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_ad73fdd26ff63bcc0cbbfa60be20faee0}\label{class_pathfinding_1_1_grid_node_base_ad73fdd26ff63bcc0cbbfa60be20faee0}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!DeserializeReferences@{DeserializeReferences}}
+\index{DeserializeReferences@{DeserializeReferences}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{DeserializeReferences()}{DeserializeReferences()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Deserialize\+References (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to deserialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. 
+
+Nodes must override this method and serialize their connections. Graph generators do not need to call this method, it will be called automatically on all nodes at the correct time by the serializer.
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_af492477209aff7d5d583e7030901d6e7}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a3b2821b8904af5a68aee7a178027a083}\label{class_pathfinding_1_1_grid_node_base_a3b2821b8904af5a68aee7a178027a083}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!GetConnections@{GetConnections}}
+\index{GetConnections@{GetConnections}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{GetConnections()}{GetConnections()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Get\+Connections (\begin{DoxyParamCaption}\item[{System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calls the delegate with all connections from this node. 
+
+{\ttfamily  node.\+Get\+Connections(connected\+To =$>$ \{ Debug.\+Draw\+Line((Vector3)node.\+position, (Vector3)connected\+To.\+position, Color.\+red); \}); }
+
+You can add all connected nodes to a list like this {\ttfamily  var connections = new List$<$\+Graph\+Node$>$(); node.\+Get\+Connections(connections.\+Add); }
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a7e8d9a2432250d1c430e39ad9c8a6c00}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a035a19b8cf054812f4e80a2403c45857}\label{class_pathfinding_1_1_grid_node_base_a035a19b8cf054812f4e80a2403c45857}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!GetGizmoHashCode@{GetGizmoHashCode}}
+\index{GetGizmoHashCode@{GetGizmoHashCode}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{GetGizmoHashCode()}{GetGizmoHashCode()}}
+{\footnotesize\ttfamily override int Pathfinding.\+Grid\+Node\+Base.\+Get\+Gizmo\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hash code used for checking if the gizmos need to be updated. Will change when the gizmos for the node might change. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0a6a15c6977f267eec85fec23613ab35}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_aed018e0a8fcd9dee9a32dd0530d2f5ca}\label{class_pathfinding_1_1_grid_node_base_aed018e0a8fcd9dee9a32dd0530d2f5ca}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!GetNeighbourAlongDirection@{GetNeighbourAlongDirection}}
+\index{GetNeighbourAlongDirection@{GetNeighbourAlongDirection}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{GetNeighbourAlongDirection()}{GetNeighbourAlongDirection()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}} Pathfinding.\+Grid\+Node\+Base.\+Get\+Neighbour\+Along\+Direction (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adjacent grid node in the specified direction. This will return null if the node does not have a connection to a node in that direction. 
+
+The dir parameter corresponds to directions in the grid as\+: {\ttfamily  Z $\vert$ $\vert$}
+
+{\ttfamily  6 2 5 \textbackslash{} $\vert$ / -- 3 -\/ X -\/ 1 -\/-\/--- X / $\vert$ \textbackslash{} 7 0 4}
+
+{\ttfamily  $\vert$ $\vert$ }
+
+See\+: Get\+Connections
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_node_a6a2aa9b2d5cab4311bcc240841b34235}{Pathfinding.\+Grid\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_ae5558900565a0d4388846335c154cc15}\label{class_pathfinding_1_1_grid_node_base_ae5558900565a0d4388846335c154cc15}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!Open@{Open}}
+\index{Open@{Open}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{path,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}}}]{path\+Node,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Open the node. Used internally for the A$\ast$ algorithm. 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a45faee2e9b37aebc34093ac2de1817c3}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_ad102443d029a26edfd9ffbb32e85f8ab}\label{class_pathfinding_1_1_grid_node_base_ad102443d029a26edfd9ffbb32e85f8ab}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!RandomPointOnSurface@{RandomPointOnSurface}}
+\index{RandomPointOnSurface@{RandomPointOnSurface}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{RandomPointOnSurface()}{RandomPointOnSurface()}}
+{\footnotesize\ttfamily override Vector3 Pathfinding.\+Grid\+Node\+Base.\+Random\+Point\+On\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A random point on the surface of the node. For point nodes and other nodes which do not have a surface, this will always return the position of the node. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2b0bbdba619e80c979ae6e4baf70f153}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a1ee06a38e836fbc54fa1cbe8f8967834}\label{class_pathfinding_1_1_grid_node_base_a1ee06a38e836fbc54fa1cbe8f8967834}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!RemoveConnection@{RemoveConnection}}
+\index{RemoveConnection@{RemoveConnection}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{RemoveConnection()}{RemoveConnection()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Remove\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes any connection from this node to the specified node. If no such connection exists, nothing will be done. 
+
+Note\+: This only removes the connection from this node to the other node. You may want to call the same function on the other node to remove its eventual connection to this node.
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2f242eb56b6cf38b416314c059772128}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_aa7cd8709b1ecbdd97b0658b7f66db07e}\label{class_pathfinding_1_1_grid_node_base_aa7cd8709b1ecbdd97b0658b7f66db07e}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!SerializeReferences@{SerializeReferences}}
+\index{SerializeReferences@{SerializeReferences}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{SerializeReferences()}{SerializeReferences()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Node\+Base.\+Serialize\+References (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to serialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. 
+
+Nodes must override this method and serialize their connections. Graph generators do not need to call this method, it will be called automatically on all nodes at the correct time by the serializer.
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_ae9668b581d682ded1182cc43fe138b09}{Pathfinding.\+Graph\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a0740ca1d2efef8c719256fba795aa566}\label{class_pathfinding_1_1_grid_node_base_a0740ca1d2efef8c719256fba795aa566}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!SurfaceArea@{SurfaceArea}}
+\index{SurfaceArea@{SurfaceArea}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{SurfaceArea()}{SurfaceArea()}}
+{\footnotesize\ttfamily override float Pathfinding.\+Grid\+Node\+Base.\+Surface\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The surface area of the node in square world units 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a38397e222f65563d3db6d66e8aacbbbd}{Pathfinding.\+Graph\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a42858f54a84e96b71c24ea604bc15df6}\label{class_pathfinding_1_1_grid_node_base_a42858f54a84e96b71c24ea604bc15df6}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!connections@{connections}}
+\index{connections@{connections}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{connections}{connections}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_connection}{Connection}} \mbox{[}$\,$\mbox{]} Pathfinding.\+Grid\+Node\+Base.\+connections}
+
+
+
+Custon non-\/grid connections from this node. See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}{Add\+Connection}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a1ee06a38e836fbc54fa1cbe8f8967834}{Remove\+Connection}} 
+
+This field is removed if the A\+S\+T\+A\+R\+\_\+\+G\+R\+I\+D\+\_\+\+N\+O\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS compiler directive is used. Removing it can save a tiny bit of memory. You can enable the define in the Optimizations tab in the A$\ast$ inspector. See\+: compiler-\/directives (view in online documentation for working links)
+
+Note\+: If you modify this array or the contents of it you must call \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0b21806526399565ea57fc4e8e4949b9}{Set\+Connectivity\+Dirty}}.\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a995e691c956241a8767d16793252e668}\label{class_pathfinding_1_1_grid_node_base_a995e691c956241a8767d16793252e668}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!nodeInGridIndex@{nodeInGridIndex}}
+\index{nodeInGridIndex@{nodeInGridIndex}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{nodeInGridIndex}{nodeInGridIndex}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Node\+Base.\+node\+In\+Grid\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bitfield containing the x and z coordinates of the node as well as the layer (for layered grid graphs). See\+: Node\+In\+Grid\+Index 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_aea22fdaecb4d9a3d45a89fbc828ccd58}\label{class_pathfinding_1_1_grid_node_base_aea22fdaecb4d9a3d45a89fbc828ccd58}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!HasConnectionsToAllEightNeighbours@{HasConnectionsToAllEightNeighbours}}
+\index{HasConnectionsToAllEightNeighbours@{HasConnectionsToAllEightNeighbours}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{HasConnectionsToAllEightNeighbours}{HasConnectionsToAllEightNeighbours}}
+{\footnotesize\ttfamily abstract bool Pathfinding.\+Grid\+Node\+Base.\+Has\+Connections\+To\+All\+Eight\+Neighbours\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the node has grid connections to all its 8 neighbours. Note\+: This will always return false if \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a081ebe57e7a813b683abb7a26707ca8d}{Grid\+Graph.\+neighbours}} is set to anything other than Eight. See\+: Get\+Neighbour\+Along\+Direction 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a1843a03f102d5dc4033fd9f2f18ccec5}\label{class_pathfinding_1_1_grid_node_base_a1843a03f102d5dc4033fd9f2f18ccec5}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!NodeInGridIndex@{NodeInGridIndex}}
+\index{NodeInGridIndex@{NodeInGridIndex}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{NodeInGridIndex}{NodeInGridIndex}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Node\+Base.\+Node\+In\+Grid\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The index of the node in the grid. This is x + z$\ast$graph.width So you can get the X and Z indices using 
+
+{\ttfamily  int index = node.\+Node\+In\+Grid\+Index; int x = index \% graph.\+width; int z = index / graph.\+width; // where graph is Grid\+Node.\+Get\+Grid\+Graph (node.\+graph\+Index), i.\+e the graph the nodes are contained in. }\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a33ebd45ad8c2eb4492e7aba6b6324e1d}\label{class_pathfinding_1_1_grid_node_base_a33ebd45ad8c2eb4492e7aba6b6324e1d}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!TmpWalkable@{TmpWalkable}}
+\index{TmpWalkable@{TmpWalkable}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{TmpWalkable}{TmpWalkable}}
+{\footnotesize\ttfamily bool? Pathfinding.\+Grid\+Node\+Base.\+Tmp\+Walkable\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Temporary variable used internally when updating the graph. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_abfcf142f206f3f961d4422b9a86be17f}\label{class_pathfinding_1_1_grid_node_base_abfcf142f206f3f961d4422b9a86be17f}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!WalkableErosion@{WalkableErosion}}
+\index{WalkableErosion@{WalkableErosion}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{WalkableErosion}{WalkableErosion}}
+{\footnotesize\ttfamily bool? Pathfinding.\+Grid\+Node\+Base.\+Walkable\+Erosion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Stores walkability before erosion is applied. Used internally when updating the graph. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_aca6ff27d6c47778f62a5f9bcb3eb4f38}\label{class_pathfinding_1_1_grid_node_base_aca6ff27d6c47778f62a5f9bcb3eb4f38}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!XCoordinateInGrid@{XCoordinateInGrid}}
+\index{XCoordinateInGrid@{XCoordinateInGrid}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{XCoordinateInGrid}{XCoordinateInGrid}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Node\+Base.\+X\+Coordinate\+In\+Grid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+X coordinate of the node in the grid. The node in the bottom left corner has (x,z) = (0,0) and the one in the opposite corner has (x,z) = (width-\/1, depth-\/1) See\+: Z\+Coord\+In\+Grid See\+: Node\+In\+Grid\+Index 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_node_base_a9f8fb63fc35a1ccdf4f589bde0612f76}\label{class_pathfinding_1_1_grid_node_base_a9f8fb63fc35a1ccdf4f589bde0612f76}} 
+\index{Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}!ZCoordinateInGrid@{ZCoordinateInGrid}}
+\index{ZCoordinateInGrid@{ZCoordinateInGrid}!Pathfinding.GridNodeBase@{Pathfinding.GridNodeBase}}
+\doxysubsubsection{\texorpdfstring{ZCoordinateInGrid}{ZCoordinateInGrid}}
+{\footnotesize\ttfamily int Pathfinding.\+Grid\+Node\+Base.\+Z\+Coordinate\+In\+Grid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Z coordinate of the node in the grid. The node in the bottom left corner has (x,z) = (0,0) and the one in the opposite corner has (x,z) = (width-\/1, depth-\/1) See\+: X\+Coord\+In\+Grid See\+: Node\+In\+Grid\+Index 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Node\+Classes/Grid\+Node\+Base.\+cs\end{DoxyCompactItemize}

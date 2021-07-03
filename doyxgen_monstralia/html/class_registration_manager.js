@@ -1,0 +1,26 @@
+var class_registration_manager =
+[
+    [ "OnEditVerifyEmail", "class_registration_manager.html#a2913cd76cf1e3257dfc57f4d31d5a46e", null ],
+    [ "OnEditVerifyFirstName", "class_registration_manager.html#af9970d925d4ac373a8524b538f27f23b", null ],
+    [ "OnEditVerifyLastName", "class_registration_manager.html#a5bdb81792dfa4986f70ab5f222bad8aa", null ],
+    [ "OnEditVerifyReEmail", "class_registration_manager.html#aad6fd6ae72264002f3d4b8e68556e691", null ],
+    [ "OnSubmitVerifyInformation", "class_registration_manager.html#a0edb2c97430e6d5fe0f1fe6810b11e41", null ],
+    [ "doneButton", "class_registration_manager.html#a6d9bfec1922a7e496aacc90cdb0270ee", null ],
+    [ "emailDoesNotMatch", "class_registration_manager.html#a86d0e0996b6039583a6efa3b17a937b2", null ],
+    [ "emailInput", "class_registration_manager.html#a61c8dc7379b3cdc61f02818995d5c8cb", null ],
+    [ "emailIsEmpty", "class_registration_manager.html#a6e758c2af77af57b8ad79e633b919cc9", null ],
+    [ "emailNoAt", "class_registration_manager.html#a1a9814c83e22d3899baad28c78e33a7c", null ],
+    [ "emailNoPeriod", "class_registration_manager.html#ae5913e87c669cc8335b83ed0f3a95752", null ],
+    [ "emailValidText", "class_registration_manager.html#adbd0b548a41dd007159c942ff60ebfca", null ],
+    [ "firstNameInput", "class_registration_manager.html#a1f437c4004719a1af87414ee1fcc5b1e", null ],
+    [ "firstNameIsEmpty", "class_registration_manager.html#adcaaf7ae55088ee9ec4df3553d7f1c05", null ],
+    [ "firstNameValidText", "class_registration_manager.html#a7dd6ef4f955c77b5f1adaf86126f98b9", null ],
+    [ "goBackButton", "class_registration_manager.html#a9acb8e631e8b4338eeb3d2183991d58b", null ],
+    [ "lastNameInput", "class_registration_manager.html#a7e444382ad5caa07060d4170716f1101", null ],
+    [ "lastNameIsEmpty", "class_registration_manager.html#a89783dc9c5b95aeb03f47183d74ca61a", null ],
+    [ "lastNameValidText", "class_registration_manager.html#a882d809828e6f051cbc4f652307a4673", null ],
+    [ "networkText", "class_registration_manager.html#ad73bfe21e861cec4bc856824cc68e6ec", null ],
+    [ "OnSignUpComplete", "class_registration_manager.html#a21a4353d2acde6ba16b6486d6b688d97", null ],
+    [ "reemailInput", "class_registration_manager.html#a50f2b5a899dacb5d7eb193df9753d0b4", null ],
+    [ "reEmailValidText", "class_registration_manager.html#a327ac42764a090a43f4c4d694c25625d", null ]
+];

@@ -1,0 +1,10 @@
+<map id="FireflyGameManager" name="FireflyGameManager">
+<area shape="rect" id="node1" title=" " alt="" coords="560,97,703,123"/>
+<area shape="rect" id="node2" href="$class_abstract_game_director.html" title=" " alt="" coords="263,5,430,47"/>
+<area shape="rect" id="node3" href="$class_score_gauge.html" title=" " alt="" coords="299,71,394,98"/>
+<area shape="rect" id="node4" href="$class_singleton.html" title=" " alt="" coords="9,71,181,98"/>
+<area shape="rect" id="node5" href="$class_voice_overs_data.html" title=" " alt="" coords="289,122,404,149"/>
+<area shape="rect" id="node6" title=" " alt="" coords="35,122,154,149"/>
+<area shape="rect" id="node7" href="$struct_voice_overs_data_1_1_voice_over_dictionary.html" title=" " alt="" coords="5,173,184,215"/>
+<area shape="rect" id="node8" href="$struct_firefly_game_manager_1_1_firefly_level.html" title=" " alt="" coords="256,173,437,215"/>
+</map>

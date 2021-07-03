@@ -1,0 +1,6 @@
+<map id="BrainbowWaterPickup" name="BrainbowWaterPickup">
+<area shape="rect" id="node1" title=" " alt="" coords="25,184,176,211"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node3" href="$class_brainbow_water_manager.html" title=" " alt="" coords="98,95,258,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="140,5,280,32"/>
+</map>

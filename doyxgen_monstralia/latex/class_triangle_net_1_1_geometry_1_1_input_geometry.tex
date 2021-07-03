@@ -1,0 +1,327 @@
+\hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry}{}\doxysection{Triangle\+Net.\+Geometry.\+Input\+Geometry Class Reference}
+\label{class_triangle_net_1_1_geometry_1_1_input_geometry}\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+
+
+The input geometry which will be triangulated. May represent a pointset or a planar straight line graph.  
+
+
+
+
+Collaboration diagram for Triangle\+Net.\+Geometry.\+Input\+Geometry\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_af934f84b61d406fa12c7a40e89227f78}{Input\+Geometry}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry}{Input\+Geometry}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_afa6e45d8b3e8c5e56a24aa9443b78556}{Input\+Geometry}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry}{Input\+Geometry}} class. The point list will be initialized with a given capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a54b7eba01336771c56521a160ccbb774}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear input geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a2eb5cab30e4e8f5e45728a7511315046}{Add\+Point}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Adds a point to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a05cbc14201f1d5c5735c2696609f74a1}{Add\+Point}} (double x, double y, int boundary)
+\begin{DoxyCompactList}\small\item\em Adds a point to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a0265e72ebcfa048d0f412a20c6ef273e}{Add\+Point}} (double x, double y, int boundary, double attribute)
+\begin{DoxyCompactList}\small\item\em Adds a point to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a9cd40e730145e711264283d820d57fea}{Add\+Point}} (double x, double y, int boundary, double\mbox{[}$\,$\mbox{]} attribs)
+\begin{DoxyCompactList}\small\item\em Adds a point to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a670962330a0bc0c8c8e24af5b99a51db}{Add\+Hole}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Adds a hole location to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_aaab5ed36448820bc70e9c67ff9a5368e}{Add\+Region}} (double x, double y, int id)
+\begin{DoxyCompactList}\small\item\em Adds a hole location to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a237a42d5b370435097ded5a39dca4f8b}{Add\+Segment}} (int p0, int p1)
+\begin{DoxyCompactList}\small\item\em Adds a segment to the geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a3b0aba2341e4aada2d9cfbc9da369337}{Add\+Segment}} (int p0, int p1, int boundary)
+\begin{DoxyCompactList}\small\item\em Adds a segment to the geometry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box}{Bounding\+Box}} \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a8767eabb2aa5e8285ed5994050bdf7a7}{Bounds}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the bounding box of the input geometry. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a59dee81168535f1866a81a16c0d259e2}{Has\+Segments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates, whether the geometry should be treated as a P\+S\+LG. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_af891a00b27b995aca2c2aae545e412e1}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of points. \end{DoxyCompactList}\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} $>$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a0aa09471785a9cd67e2fe5b237e6b12f}{Points}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of input points. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_edge}{Edge}} $>$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_aedc28de75a4e2eed1fce16aabb885fa5}{Segments}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of input segments. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} $>$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a38f9add863b3dc1eed7749e5e21ad542}{Holes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of input holes. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_region_pointer}{Region\+Pointer}} $>$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry_a8b4b7f6768612b39ef21255ad12a6ed5}{Regions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the list of regions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The input geometry which will be triangulated. May represent a pointset or a planar straight line graph. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_af934f84b61d406fa12c7a40e89227f78}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_af934f84b61d406fa12c7a40e89227f78}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!InputGeometry@{InputGeometry}}
+\index{InputGeometry@{InputGeometry}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{InputGeometry()}{InputGeometry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Input\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry}{Input\+Geometry}} class. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_afa6e45d8b3e8c5e56a24aa9443b78556}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_afa6e45d8b3e8c5e56a24aa9443b78556}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!InputGeometry@{InputGeometry}}
+\index{InputGeometry@{InputGeometry}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{InputGeometry()}{InputGeometry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Input\+Geometry (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_input_geometry}{Input\+Geometry}} class. The point list will be initialized with a given capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} list capacity.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a670962330a0bc0c8c8e24af5b99a51db}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a670962330a0bc0c8c8e24af5b99a51db}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddHole@{AddHole}}
+\index{AddHole@{AddHole}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddHole()}{AddHole()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Hole (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Adds a hole location to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the hole.\\
+\hline
+{\em y} & Y coordinate of the hole.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a2eb5cab30e4e8f5e45728a7511315046}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a2eb5cab30e4e8f5e45728a7511315046}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddPoint@{AddPoint}}
+\index{AddPoint@{AddPoint}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddPoint()}{AddPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Point (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Adds a point to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate.\\
+\hline
+{\em y} & Y coordinate.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a05cbc14201f1d5c5735c2696609f74a1}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a05cbc14201f1d5c5735c2696609f74a1}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddPoint@{AddPoint}}
+\index{AddPoint@{AddPoint}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddPoint()}{AddPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Point (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{boundary }\end{DoxyParamCaption})}
+
+
+
+Adds a point to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate.\\
+\hline
+{\em y} & Y coordinate.\\
+\hline
+{\em boundary} & Boundary marker.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a0265e72ebcfa048d0f412a20c6ef273e}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a0265e72ebcfa048d0f412a20c6ef273e}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddPoint@{AddPoint}}
+\index{AddPoint@{AddPoint}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddPoint()}{AddPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Point (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{boundary,  }\item[{double}]{attribute }\end{DoxyParamCaption})}
+
+
+
+Adds a point to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate.\\
+\hline
+{\em y} & Y coordinate.\\
+\hline
+{\em boundary} & Boundary marker.\\
+\hline
+{\em attribute} & \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} attribute.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a9cd40e730145e711264283d820d57fea}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a9cd40e730145e711264283d820d57fea}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddPoint@{AddPoint}}
+\index{AddPoint@{AddPoint}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddPoint()}{AddPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Point (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{boundary,  }\item[{double\mbox{[}$\,$\mbox{]}}]{attribs }\end{DoxyParamCaption})}
+
+
+
+Adds a point to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate.\\
+\hline
+{\em y} & Y coordinate.\\
+\hline
+{\em boundary} & Boundary marker.\\
+\hline
+{\em attribs} & \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} attributes.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_aaab5ed36448820bc70e9c67ff9a5368e}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_aaab5ed36448820bc70e9c67ff9a5368e}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddRegion@{AddRegion}}
+\index{AddRegion@{AddRegion}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddRegion()}{AddRegion()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Region (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Adds a hole location to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the hole.\\
+\hline
+{\em y} & Y coordinate of the hole.\\
+\hline
+{\em id} & The region id.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a237a42d5b370435097ded5a39dca4f8b}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a237a42d5b370435097ded5a39dca4f8b}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddSegment@{AddSegment}}
+\index{AddSegment@{AddSegment}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddSegment()}{AddSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Segment (\begin{DoxyParamCaption}\item[{int}]{p0,  }\item[{int}]{p1 }\end{DoxyParamCaption})}
+
+
+
+Adds a segment to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p0} & First endpoint.\\
+\hline
+{\em p1} & Second endpoint.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a3b0aba2341e4aada2d9cfbc9da369337}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a3b0aba2341e4aada2d9cfbc9da369337}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!AddSegment@{AddSegment}}
+\index{AddSegment@{AddSegment}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{AddSegment()}{AddSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Add\+Segment (\begin{DoxyParamCaption}\item[{int}]{p0,  }\item[{int}]{p1,  }\item[{int}]{boundary }\end{DoxyParamCaption})}
+
+
+
+Adds a segment to the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p0} & First endpoint.\\
+\hline
+{\em p1} & Second endpoint.\\
+\hline
+{\em boundary} & Segment marker.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a54b7eba01336771c56521a160ccbb774}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a54b7eba01336771c56521a160ccbb774}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Clear@{Clear}}
+\index{Clear@{Clear}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear input geometry. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a8767eabb2aa5e8285ed5994050bdf7a7}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a8767eabb2aa5e8285ed5994050bdf7a7}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Bounds}{Bounds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_bounding_box}{Bounding\+Box}} Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Bounds\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the bounding box of the input geometry. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_af891a00b27b995aca2c2aae545e412e1}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_af891a00b27b995aca2c2aae545e412e1}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Count@{Count}}
+\index{Count@{Count}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the number of points. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a59dee81168535f1866a81a16c0d259e2}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a59dee81168535f1866a81a16c0d259e2}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!HasSegments@{HasSegments}}
+\index{HasSegments@{HasSegments}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{HasSegments}{HasSegments}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Has\+Segments\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Indicates, whether the geometry should be treated as a P\+S\+LG. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a38f9add863b3dc1eed7749e5e21ad542}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a38f9add863b3dc1eed7749e5e21ad542}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Holes@{Holes}}
+\index{Holes@{Holes}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Holes}{Holes}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}}$>$ Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Holes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of input holes. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a0aa09471785a9cd67e2fe5b237e6b12f}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a0aa09471785a9cd67e2fe5b237e6b12f}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Points@{Points}}
+\index{Points@{Points}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Points}{Points}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}}$>$ Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Points\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of input points. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_a8b4b7f6768612b39ef21255ad12a6ed5}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_a8b4b7f6768612b39ef21255ad12a6ed5}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Regions@{Regions}}
+\index{Regions@{Regions}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Regions}{Regions}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_region_pointer}{Region\+Pointer}}$>$ Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Regions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of regions. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_geometry_1_1_input_geometry_aedc28de75a4e2eed1fce16aabb885fa5}\label{class_triangle_net_1_1_geometry_1_1_input_geometry_aedc28de75a4e2eed1fce16aabb885fa5}} 
+\index{TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}!Segments@{Segments}}
+\index{Segments@{Segments}!TriangleNet.Geometry.InputGeometry@{TriangleNet.Geometry.InputGeometry}}
+\doxysubsubsection{\texorpdfstring{Segments}{Segments}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_edge}{Edge}}$>$ Triangle\+Net.\+Geometry.\+Input\+Geometry.\+Segments\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the list of input segments. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Geometry/Input\+Geometry.\+cs\end{DoxyCompactItemize}

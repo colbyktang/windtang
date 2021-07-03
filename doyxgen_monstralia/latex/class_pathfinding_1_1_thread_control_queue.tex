@@ -1,0 +1,226 @@
+\hypertarget{class_pathfinding_1_1_thread_control_queue}{}\doxysection{Pathfinding.\+Thread\+Control\+Queue Class Reference}
+\label{class_pathfinding_1_1_thread_control_queue}\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+
+
+Queue of paths to be processed by the system  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_1_1_queue_termination_exception}{Queue\+Termination\+Exception}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a2e7b9098ddb9bbbf6fe00b4bdc2df402}{Thread\+Control\+Queue}} (int num\+Receivers)
+\begin{DoxyCompactList}\small\item\em Create a new queue with the specified number of receivers. It is important that the number of receivers is fixed. Properties like All\+Receivers\+Blocked rely on knowing the exact number of receivers using the Pop (or Pop\+No\+Block) methods. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_aac516c524662ba50832d69bc25a3d26c}{Block}} ()
+\begin{DoxyCompactList}\small\item\em Block queue, all calls to Pop will block until Unblock is called \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_aadb8a080df46469027ea4e430f9739f8}{Unblock}} ()
+\begin{DoxyCompactList}\small\item\em Unblock queue. Calls to Pop will not block anymore. See\+: Block \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a62454345c5c350643f4c6b6f199247c0}{Lock}} ()
+\begin{DoxyCompactList}\small\item\em Aquires a lock on this queue. Must be paired with a call to \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a27fa290249e34f4d48a19950e4accc9a}{Unlock}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a27fa290249e34f4d48a19950e4accc9a}{Unlock}} ()
+\begin{DoxyCompactList}\small\item\em Releases the lock on this queue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_aaf81806c8413e372d24f013e59a928f4}{Push\+Front}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path)
+\begin{DoxyCompactList}\small\item\em Push a path to the front of the queue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a25f1bd71c956ad2bee3eefc95cd158ee}{Push}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path)
+\begin{DoxyCompactList}\small\item\em Push a path to the end of the queue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a20f3d6dd34d38dc30d659e4d4efc1e1c}{Terminate\+Receivers}} ()
+\begin{DoxyCompactList}\small\item\em All calls to Pop and Pop\+No\+Block will now generate exceptions \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a9bcf3aa245cf8e515c82e63c4c513062}{Pop}} ()
+\begin{DoxyCompactList}\small\item\em Pops the next item off the queue. This call will block if there are no items in the queue or if the queue is currently blocked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_ab97493268344b8f7806ba5a7fab30af6}{Receiver\+Terminated}} ()
+\begin{DoxyCompactList}\small\item\em Call when a receiver was terminated in other ways than by a \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_1_1_queue_termination_exception}{Queue\+Termination\+Exception}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_acd96f8694dc5279f16739dae2d423247}{Pop\+No\+Block}} (bool blocked\+Before)
+\begin{DoxyCompactList}\small\item\em Pops the next item off the queue, this call will not block. To ensure stability, the caller must follow this pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a9b80a38f0106192a6006a1390cfc7623}{Is\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the queue is empty \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a96be16483fd418af61f80e20e2d94ed3}{Is\+Terminating}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if Terminate\+Receivers has been called \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a544896464f795976ab02333aec66a2bd}{All\+Receivers\+Blocked}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if blocking and all receivers are waiting for unblocking \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Queue of paths to be processed by the system 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a2e7b9098ddb9bbbf6fe00b4bdc2df402}\label{class_pathfinding_1_1_thread_control_queue_a2e7b9098ddb9bbbf6fe00b4bdc2df402}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!ThreadControlQueue@{ThreadControlQueue}}
+\index{ThreadControlQueue@{ThreadControlQueue}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{ThreadControlQueue()}{ThreadControlQueue()}}
+{\footnotesize\ttfamily Pathfinding.\+Thread\+Control\+Queue.\+Thread\+Control\+Queue (\begin{DoxyParamCaption}\item[{int}]{num\+Receivers }\end{DoxyParamCaption})}
+
+
+
+Create a new queue with the specified number of receivers. It is important that the number of receivers is fixed. Properties like All\+Receivers\+Blocked rely on knowing the exact number of receivers using the Pop (or Pop\+No\+Block) methods. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_aac516c524662ba50832d69bc25a3d26c}\label{class_pathfinding_1_1_thread_control_queue_aac516c524662ba50832d69bc25a3d26c}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!Block@{Block}}
+\index{Block@{Block}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block queue, all calls to Pop will block until Unblock is called 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a62454345c5c350643f4c6b6f199247c0}\label{class_pathfinding_1_1_thread_control_queue_a62454345c5c350643f4c6b6f199247c0}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!Lock@{Lock}}
+\index{Lock@{Lock}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{Lock()}{Lock()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aquires a lock on this queue. Must be paired with a call to \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a27fa290249e34f4d48a19950e4accc9a}{Unlock}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a9bcf3aa245cf8e515c82e63c4c513062}\label{class_pathfinding_1_1_thread_control_queue_a9bcf3aa245cf8e515c82e63c4c513062}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!Pop@{Pop}}
+\index{Pop@{Pop}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} Pathfinding.\+Thread\+Control\+Queue.\+Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pops the next item off the queue. This call will block if there are no items in the queue or if the queue is currently blocked. 
+
+Returns\+: A \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} object, guaranteed to be not null. 
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_1_1_queue_termination_exception}{Queue\+Termination\+Exception}}} & if \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a20f3d6dd34d38dc30d659e4d4efc1e1c}{Terminate\+Receivers}} has been called. \\
+\hline
+{\em System.\+Invalid\+Operation\+Exception} & if more receivers get blocked than the fixed count sent to the constructor\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_acd96f8694dc5279f16739dae2d423247}\label{class_pathfinding_1_1_thread_control_queue_acd96f8694dc5279f16739dae2d423247}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!PopNoBlock@{PopNoBlock}}
+\index{PopNoBlock@{PopNoBlock}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{PopNoBlock()}{PopNoBlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} Pathfinding.\+Thread\+Control\+Queue.\+Pop\+No\+Block (\begin{DoxyParamCaption}\item[{bool}]{blocked\+Before }\end{DoxyParamCaption})}
+
+
+
+Pops the next item off the queue, this call will not block. To ensure stability, the caller must follow this pattern. 
+
+
+\begin{DoxyEnumerate}
+\item Call Pop\+No\+Block(false), if a null value is returned, wait for a bit (e.\+g yield return null in a Unity coroutine)
+\item try again with Pop\+No\+Block(true), if still null, wait for a bit
+\item Repeat from step 2.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_1_1_queue_termination_exception}{Queue\+Termination\+Exception}}} & if \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_a20f3d6dd34d38dc30d659e4d4efc1e1c}{Terminate\+Receivers}} has been called. \\
+\hline
+{\em System.\+Invalid\+Operation\+Exception} & if more receivers get blocked than the fixed count sent to the constructor\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a25f1bd71c956ad2bee3eefc95cd158ee}\label{class_pathfinding_1_1_thread_control_queue_a25f1bd71c956ad2bee3eefc95cd158ee}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!Push@{Push}}
+\index{Push@{Push}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{path }\end{DoxyParamCaption})}
+
+
+
+Push a path to the end of the queue 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_aaf81806c8413e372d24f013e59a928f4}\label{class_pathfinding_1_1_thread_control_queue_aaf81806c8413e372d24f013e59a928f4}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!PushFront@{PushFront}}
+\index{PushFront@{PushFront}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{PushFront()}{PushFront()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Push\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{path }\end{DoxyParamCaption})}
+
+
+
+Push a path to the front of the queue 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_ab97493268344b8f7806ba5a7fab30af6}\label{class_pathfinding_1_1_thread_control_queue_ab97493268344b8f7806ba5a7fab30af6}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!ReceiverTerminated@{ReceiverTerminated}}
+\index{ReceiverTerminated@{ReceiverTerminated}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{ReceiverTerminated()}{ReceiverTerminated()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Receiver\+Terminated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call when a receiver was terminated in other ways than by a \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue_1_1_queue_termination_exception}{Queue\+Termination\+Exception}}. 
+
+After this call, the receiver should be dead and not call anything else in this class.\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a20f3d6dd34d38dc30d659e4d4efc1e1c}\label{class_pathfinding_1_1_thread_control_queue_a20f3d6dd34d38dc30d659e4d4efc1e1c}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!TerminateReceivers@{TerminateReceivers}}
+\index{TerminateReceivers@{TerminateReceivers}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{TerminateReceivers()}{TerminateReceivers()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Terminate\+Receivers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+All calls to Pop and Pop\+No\+Block will now generate exceptions 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_aadb8a080df46469027ea4e430f9739f8}\label{class_pathfinding_1_1_thread_control_queue_aadb8a080df46469027ea4e430f9739f8}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!Unblock@{Unblock}}
+\index{Unblock@{Unblock}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{Unblock()}{Unblock()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Unblock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unblock queue. Calls to Pop will not block anymore. See\+: Block 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a27fa290249e34f4d48a19950e4accc9a}\label{class_pathfinding_1_1_thread_control_queue_a27fa290249e34f4d48a19950e4accc9a}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{Unlock()}{Unlock()}}
+{\footnotesize\ttfamily void Pathfinding.\+Thread\+Control\+Queue.\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Releases the lock on this queue 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a544896464f795976ab02333aec66a2bd}\label{class_pathfinding_1_1_thread_control_queue_a544896464f795976ab02333aec66a2bd}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!AllReceiversBlocked@{AllReceiversBlocked}}
+\index{AllReceiversBlocked@{AllReceiversBlocked}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{AllReceiversBlocked}{AllReceiversBlocked}}
+{\footnotesize\ttfamily bool Pathfinding.\+Thread\+Control\+Queue.\+All\+Receivers\+Blocked\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if blocking and all receivers are waiting for unblocking 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a9b80a38f0106192a6006a1390cfc7623}\label{class_pathfinding_1_1_thread_control_queue_a9b80a38f0106192a6006a1390cfc7623}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{IsEmpty}{IsEmpty}}
+{\footnotesize\ttfamily bool Pathfinding.\+Thread\+Control\+Queue.\+Is\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the queue is empty 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_thread_control_queue_a96be16483fd418af61f80e20e2d94ed3}\label{class_pathfinding_1_1_thread_control_queue_a96be16483fd418af61f80e20e2d94ed3}} 
+\index{Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}!IsTerminating@{IsTerminating}}
+\index{IsTerminating@{IsTerminating}!Pathfinding.ThreadControlQueue@{Pathfinding.ThreadControlQueue}}
+\doxysubsubsection{\texorpdfstring{IsTerminating}{IsTerminating}}
+{\footnotesize\ttfamily bool Pathfinding.\+Thread\+Control\+Queue.\+Is\+Terminating\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if Terminate\+Receivers has been called 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Thread\+Control\+Queue.\+cs\end{DoxyCompactItemize}

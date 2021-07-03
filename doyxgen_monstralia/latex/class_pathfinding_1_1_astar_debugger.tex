@@ -1,0 +1,100 @@
+\hypertarget{class_pathfinding_1_1_astar_debugger}{}\doxysection{Pathfinding.\+Astar\+Debugger Class Reference}
+\label{class_pathfinding_1_1_astar_debugger}\index{Pathfinding.AstarDebugger@{Pathfinding.AstarDebugger}}
+
+
+Debugger for the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. This class can be used to profile different parts of the pathfinding system and the whole game as well to some extent.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Astar\+Debugger\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Astar\+Debugger\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a524c15fec36b9711e0169ccfeeb405fa}\label{class_pathfinding_1_1_astar_debugger_a524c15fec36b9711e0169ccfeeb405fa}} 
+void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a05163a4fa5490f9efb6a861e2e2790da}\label{class_pathfinding_1_1_astar_debugger_a05163a4fa5490f9efb6a861e2e2790da}} 
+void {\bfseries Late\+Update} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a33fab70ab225148c3c721069687099df}\label{class_pathfinding_1_1_astar_debugger_a33fab70ab225148c3c721069687099df}} 
+void {\bfseries On\+G\+UI} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a797a5df1619aff312b8cc30794fed060}\label{class_pathfinding_1_1_astar_debugger_a797a5df1619aff312b8cc30794fed060}} 
+int {\bfseries y\+Offset} = 5
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_ad1c3ec42548d3f3610f9425a10163ed1}\label{class_pathfinding_1_1_astar_debugger_ad1c3ec42548d3f3610f9425a10163ed1}} 
+bool {\bfseries show} = true
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a135f12e350b3071b9675147a153f8649}\label{class_pathfinding_1_1_astar_debugger_a135f12e350b3071b9675147a153f8649}} 
+bool {\bfseries show\+In\+Editor} = false
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_ac37b33a8434ad11b1800b2b796be04b0}\label{class_pathfinding_1_1_astar_debugger_ac37b33a8434ad11b1800b2b796be04b0}} 
+bool {\bfseries show\+F\+PS} = false
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_acc9d1c5725641afa44b3b5cd76a88a14}\label{class_pathfinding_1_1_astar_debugger_acc9d1c5725641afa44b3b5cd76a88a14}} 
+bool {\bfseries show\+Path\+Profile} = false
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_ad5383abac45472fd04ba2f55de4abbec}\label{class_pathfinding_1_1_astar_debugger_ad5383abac45472fd04ba2f55de4abbec}} 
+bool {\bfseries show\+Mem\+Profile} = false
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_af083e570701aba3222add6fb45506c34}\label{class_pathfinding_1_1_astar_debugger_af083e570701aba3222add6fb45506c34}} 
+bool {\bfseries show\+Graph} = false
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a12ce7dc89b1ba514874ca0d60f7416c6}\label{class_pathfinding_1_1_astar_debugger_a12ce7dc89b1ba514874ca0d60f7416c6}} 
+int {\bfseries graph\+Buffer\+Size} = 200
+\item 
+Font \mbox{\hyperlink{class_pathfinding_1_1_astar_debugger_a3fabbd6488a64025ad970687e463670d}{font}} = null
+\begin{DoxyCompactList}\small\item\em Font to use. A monospaced font is the best \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a15d731b6f46d55a58a60c5852ca6af0c}\label{class_pathfinding_1_1_astar_debugger_a15d731b6f46d55a58a60c5852ca6af0c}} 
+int {\bfseries font\+Size} = 12
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Debugger for the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. This class can be used to profile different parts of the pathfinding system and the whole game as well to some extent. 
+
+Clarification of the labels shown when enabled. All memory related things profiles {\bfseries{the whole game}} not just the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} System.~\newline
+
+\begin{DoxyItemize}
+\item Currently allocated\+: memory the GC (garbage collector) says the application has allocated right now.
+\item Peak allocated\+: maximum measured value of the above.
+\item Last collect peak\+: the last peak of \textquotesingle{}currently allocated\textquotesingle{}.
+\item Allocation rate\+: how much the \textquotesingle{}currently allocated\textquotesingle{} value increases per second. This value is not as reliable as you can think it is often very random probably depending on how the GC thinks this application is using memory.
+\item Collection frequency\+: how often the GC is called. Again, the GC might decide it is better with many small collections or with a few large collections. So you cannot really trust this variable much.
+\item Last collect fps\+: F\+PS during the last garbage collection, the GC will lower the fps a lot.
+\item F\+PS\+: current F\+PS (not updated every frame for readability)
+\item Lowest F\+PS (last x)\+: As the label says, the lowest fps of the last x frames.
+\item Size\+: Size of the path pool.
+\item Total created\+: Number of paths of that type which has been created. Pooled paths are not counted twice. If this value just keeps on growing and growing without an apparent stop, you are are either not pooling any paths or you have missed to pool some path somewhere in your code.
+\end{DoxyItemize}
+
+See\+: pooling
+
+T\+O\+DO\+: Add field showing how many graph updates are being done right now
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_astar_debugger_a3fabbd6488a64025ad970687e463670d}\label{class_pathfinding_1_1_astar_debugger_a3fabbd6488a64025ad970687e463670d}} 
+\index{Pathfinding.AstarDebugger@{Pathfinding.AstarDebugger}!font@{font}}
+\index{font@{font}!Pathfinding.AstarDebugger@{Pathfinding.AstarDebugger}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily Font Pathfinding.\+Astar\+Debugger.\+font = null}
+
+
+
+Font to use. A monospaced font is the best 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Astar\+Debugger.\+cs\end{DoxyCompactItemize}

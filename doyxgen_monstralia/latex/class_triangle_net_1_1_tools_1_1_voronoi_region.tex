@@ -1,0 +1,86 @@
+\hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region}{}\doxysection{Triangle\+Net.\+Tools.\+Voronoi\+Region Class Reference}
+\label{class_triangle_net_1_1_tools_1_1_voronoi_region}\index{TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}}
+
+
+Represents a region in the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} diagram.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_a6eb92f6389f7285856b02ab864ca83ab}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_a6eb92f6389f7285856b02ab864ca83ab}} 
+{\bfseries Voronoi\+Region} (\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} generator)
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_a87d24486ed816de5521ea1a3996bceee}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_a87d24486ed816de5521ea1a3996bceee}} 
+void {\bfseries Add} (\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} point)
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_ae4f5b306129b7aa0e3be37008c276264}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_ae4f5b306129b7aa0e3be37008c276264}} 
+void {\bfseries Add} (List$<$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} $>$ points)
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_a66a04e0399f286a3e78b636ca27e905a}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_a66a04e0399f286a3e78b636ca27e905a}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi_region_ab884c735158aca4c011a2c948e84cd53}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} region id (which is the same as the generators vertex id). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi_region_a3fc3ef992519d3992dfecd33107e82f5}{Generator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} regions generator. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} $>$ \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi_region_a8b6081b93960ec372e1401c64f306bab}{Vertices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} vertices on the regions boundary. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi_region_ab9e3080ea6a54c866f9a0a942d3a34e8}{Bounded}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets whether the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} region is bounded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a region in the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} diagram. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_ab9e3080ea6a54c866f9a0a942d3a34e8}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_ab9e3080ea6a54c866f9a0a942d3a34e8}} 
+\index{TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}!Bounded@{Bounded}}
+\index{Bounded@{Bounded}!TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}}
+\doxysubsubsection{\texorpdfstring{Bounded}{Bounded}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Tools.\+Voronoi\+Region.\+Bounded\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets whether the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} region is bounded. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_a3fc3ef992519d3992dfecd33107e82f5}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_a3fc3ef992519d3992dfecd33107e82f5}} 
+\index{TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}!Generator@{Generator}}
+\index{Generator@{Generator}!TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}}
+\doxysubsubsection{\texorpdfstring{Generator}{Generator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}} Triangle\+Net.\+Tools.\+Voronoi\+Region.\+Generator\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} regions generator. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_ab884c735158aca4c011a2c948e84cd53}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_ab884c735158aca4c011a2c948e84cd53}} 
+\index{TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}!ID@{ID}}
+\index{ID@{ID}!TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Voronoi\+Region.\+ID\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} region id (which is the same as the generators vertex id). 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_voronoi_region_a8b6081b93960ec372e1401c64f306bab}\label{class_triangle_net_1_1_tools_1_1_voronoi_region_a8b6081b93960ec372e1401c64f306bab}} 
+\index{TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}!Vertices@{Vertices}}
+\index{Vertices@{Vertices}!TriangleNet.Tools.VoronoiRegion@{TriangleNet.Tools.VoronoiRegion}}
+\doxysubsubsection{\texorpdfstring{Vertices}{Vertices}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{class_triangle_net_1_1_geometry_1_1_point}{Point}}$>$ Triangle\+Net.\+Tools.\+Voronoi\+Region.\+Vertices\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_voronoi}{Voronoi}} vertices on the regions boundary. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Tools/Voronoi\+Region.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="ReviewGameDirector" name="ReviewGameDirector">
+<area shape="rect" id="node1" title=" " alt="" coords="273,183,416,209"/>
+<area shape="rect" id="node3" href="$class_catch_the_toxins_review.html" title=" " alt="" coords="485,5,640,32"/>
+<area shape="rect" id="node4" href="$class_debugger_review_game_director.html" title=" " alt="" coords="464,56,661,83"/>
+<area shape="rect" id="node5" href="$class_review_brainbow.html" title=" " alt="" coords="505,107,620,133"/>
+<area shape="rect" id="node6" href="$class_review_brain_maze.html" title=" " alt="" coords="501,157,625,184"/>
+<area shape="rect" id="node7" href="$class_review_emotions_game.html" title=" " alt="" coords="487,208,639,235"/>
+<area shape="rect" id="node8" href="$class_review_memory_match.html" title=" " alt="" coords="490,259,635,285"/>
+<area shape="rect" id="node9" href="$class_review_monster_balance.html" title=" " alt="" coords="485,309,641,336"/>
+<area shape="rect" id="node10" href="$class_review_senses_game.html" title=" " alt="" coords="492,360,633,387"/>
+<area shape="rect" id="node2" href="$class_singleton.html" title=" " alt="" coords="5,183,225,209"/>
+</map>

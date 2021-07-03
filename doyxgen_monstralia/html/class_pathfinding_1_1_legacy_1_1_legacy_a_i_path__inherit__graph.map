@@ -1,0 +1,10 @@
+<map id="Pathfinding.Legacy.LegacyAIPath" name="Pathfinding.Legacy.LegacyAIPath">
+<area shape="rect" id="node1" title="AI for following paths. This AI is the default movement script which comes with the A* Pathfinding Pr..." alt="" coords="194,304,373,345"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_a_i_path.html" title="AI for following paths. This AI is the default movement script which comes with the A* Pathfinding Pr..." alt="" coords="253,229,314,256"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_a_i_base.html" title="Base class for AIPath and RichAI. This class holds various methods and fields that are common to both..." alt="" coords="206,155,270,181"/>
+<area shape="rect" id="node4" href="$class_pathfinding_1_1_versioned_mono_behaviour.html" title="Base class for all components in the package" alt="" coords="154,80,322,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="141,5,335,32"/>
+<area shape="rect" id="node7" href="$interface_pathfinding_1_1_i_versioned_mono_behaviour_internal.html" title="Exposes internal methods from Pathfinding.VersionedMonoBehaviour" alt="" coords="359,5,573,32"/>
+<area shape="rect" id="node8" href="$interface_pathfinding_1_1_i_astar_a_i.html" title="Common interface for all movement scripts in the A* Pathfinding Project. See: Pathfinding...." alt="" coords="295,155,363,181"/>
+</map>

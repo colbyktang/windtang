@@ -1,0 +1,364 @@
+\hypertarget{class_pathfinding_1_1_a_b_path}{}\doxysection{Pathfinding.\+A\+B\+Path Class Reference}
+\label{class_pathfinding_1_1_a_b_path}\index{Pathfinding.ABPath@{Pathfinding.ABPath}}
+
+
+Basic path, finds the shortest path from A to B.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+A\+B\+Path\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+A\+B\+Path\+:
+% FIG 1
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_aaff7892de20d5093add29e4261cdbcb6}{start\+Node}}
+\begin{DoxyCompactList}\small\item\em Start node of the path \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_af2224a3c8c6d88f0bd126f517f2c4423}{end\+Node}}
+\begin{DoxyCompactList}\small\item\em End node of the path \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a10bb6d32a954f66abef58e869b392bcf}{original\+Start\+Point}}
+\begin{DoxyCompactList}\small\item\em Start Point exactly as in the path request \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a536f3ea8d31100fbc1b175d60a27cd51}{original\+End\+Point}}
+\begin{DoxyCompactList}\small\item\em End Point exactly as in the path request \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ad0f423723dbaadab666daf140a31d103}{start\+Point}}
+\begin{DoxyCompactList}\small\item\em Start point of the path. This is the closest point on the \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_aaff7892de20d5093add29e4261cdbcb6}{start\+Node}} to \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a10bb6d32a954f66abef58e869b392bcf}{original\+Start\+Point}} \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a827e651eb03913a614b63f668196821f}{end\+Point}}
+\begin{DoxyCompactList}\small\item\em End point of the path. This is the closest point on the \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_af2224a3c8c6d88f0bd126f517f2c4423}{end\+Node}} to \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a536f3ea8d31100fbc1b175d60a27cd51}{original\+End\+Point}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_ae44b4fcd7f3cf5622ce7372e9c4985de}\label{class_pathfinding_1_1_a_b_path_ae44b4fcd7f3cf5622ce7372e9c4985de}} 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} {\bfseries start\+Int\+Point}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_af1c0ec3bd035ed8a142367ca32d150a2}{calculate\+Partial}}
+\begin{DoxyCompactList}\small\item\em $<$ Start point in integer coordinates \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a890589b44a39dcdc19ced618ed83ec34}{Update\+Start\+End}} (Vector3 start, Vector3 end)
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a238e6f7d6da1d9cec35ec7738f7ac34a}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset all values to their default values. All inheriting path types must implement this function, resetting A\+LL their variables to enable recycling of paths. Call this base function in inheriting types with base.\+Reset (); \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a489105925d89af5221815659605dac6e}{End\+Point\+Grid\+Graph\+Special\+Case}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} closest\+Walkable\+End\+Node)
+\begin{DoxyCompactList}\small\item\em Applies a special case for grid nodes. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a32b0a7284e92314c7734e3a73305302b}{Prepare}} ()
+\begin{DoxyCompactList}\small\item\em Prepares the path. Searches for start and end nodes and does some simple checking if a path is at all possible \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ab10eedd203534d54731fa8a0e9735c91}{Complete\+Path\+If\+Start\+Is\+Valid\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the start node is the target and complete the path if that is the case. This is necessary so that subclasses (e.\+g X\+Path) can override this behaviour. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ac8a684c6dca38cdff12bb55120b4d952}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the path. Sets up the open list and adds the first node to it \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_aad9c77679a4ce2e2543a4e3398fc2c8f}{Cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Always called after the path has been calculated. Guaranteed to be called before other paths have been calculated on the same thread. Use for cleaning up things like node tagging and similar. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_abab67a174bdb58acd7b9ecf09eb962aa}{Calculate\+Step}} (long target\+Tick)
+\begin{DoxyCompactList}\small\item\em Calculates the path until completed or until the time has passed target\+Tick. Usually a check is only done every 500 nodes if the time has passed target\+Tick. Time/\+Ticks are got from System.\+Date\+Time.\+Utc\+Now.\+Ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_abc7ac4415cbc33f04d82e5c5ba7c550e}{partial\+Best\+Target}}
+\begin{DoxyCompactList}\small\item\em Current best target for the partial path. This is the node with the lowest H score. Warning\+: This feature is currently a work in progress and may not work in the current version \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_aaa4764f20c08d2708abefa9fc88e79a3}{end\+Node\+Costs}}
+\begin{DoxyCompactList}\small\item\em Saved original costs for the end node. See\+: Reset\+Costs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ade6b4502dfd8cf16ebe0f976c8a67d2b}{has\+End\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if a search for an end node should be done. Set by different path types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Constructors$<$/summary$>$}
+\label{_amgrp5dca508217734ca6f219d520f8d1d8b9}%
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a9e02a0b07b2fdb9fe5d82ded9af5c101}{A\+B\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Do not use this. Instead use the static Construct method which can handle path pooling. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_pathfinding_1_1_a_b_path}{A\+B\+Path}} \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a6ff2eb7a31f3f1a407f8f5d4b30d92e0}{Construct}} (Vector3 start, Vector3 end, On\+Path\+Delegate \mbox{\hyperlink{class_pathfinding_1_1_path_a93a4787a2041f10ccc33e9da8f97b5e8}{callback}}=null)
+\begin{DoxyCompactList}\small\item\em Construct a path with a start and end point. The delegate will be called when the path has been calculated. Do not confuse it with the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} callback as they are sent at different times. If you are using a \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} to start the path you can set callback to null. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_pathfinding_1_1_a_b_path}{A\+B\+Path}} \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ae0abcb1ed0acab5635ced85fee38266a}{Fake\+Path}} (List$<$ Vector3 $>$ \mbox{\hyperlink{class_pathfinding_1_1_path_a846af2488f875406518c0045f9a32fa1}{vector\+Path}}, List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ node\+Path=null)
+\begin{DoxyCompactList}\small\item\em Creates a fake path. Creates a path that looks almost exactly like it would if the pathfinding system had calculated it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a2e0851cd8f6c761858187ae1a268ca84}\label{class_pathfinding_1_1_a_b_path_a2e0851cd8f6c761858187ae1a268ca84}} 
+void {\bfseries Setup} (Vector3 start, Vector3 end, On\+Path\+Delegate callback\+Delegate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Basic path, finds the shortest path from A to B. 
+
+This is the most basic path object it will try to find the shortest path between two points.~\newline
+Many other path types inherit from this type. See\+: \mbox{\hyperlink{class_pathfinding_1_1_seeker_af03d3f47e6b3180ab13f78c709f42ed5}{Seeker.\+Start\+Path}} See\+: calling-\/pathfinding (view in online documentation for working links) See\+: getstarted (view in online documentation for working links)
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a9e02a0b07b2fdb9fe5d82ded9af5c101}\label{class_pathfinding_1_1_a_b_path_a9e02a0b07b2fdb9fe5d82ded9af5c101}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!ABPath@{ABPath}}
+\index{ABPath@{ABPath}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{ABPath()}{ABPath()}}
+{\footnotesize\ttfamily Pathfinding.\+A\+B\+Path.\+A\+B\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. Do not use this. Instead use the static Construct method which can handle path pooling. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_abab67a174bdb58acd7b9ecf09eb962aa}\label{class_pathfinding_1_1_a_b_path_abab67a174bdb58acd7b9ecf09eb962aa}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!CalculateStep@{CalculateStep}}
+\index{CalculateStep@{CalculateStep}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{CalculateStep()}{CalculateStep()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+B\+Path.\+Calculate\+Step (\begin{DoxyParamCaption}\item[{long}]{target\+Tick }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the path until completed or until the time has passed target\+Tick. Usually a check is only done every 500 nodes if the time has passed target\+Tick. Time/\+Ticks are got from System.\+Date\+Time.\+Utc\+Now.\+Ticks. 
+
+Basic outline of what the function does for the standard path (\mbox{\hyperlink{class_pathfinding_1_1_a_b_path}{Pathfinding.\+A\+B\+Path}}). {\ttfamily  while the end has not been found and no error has occurred check if we have reached the end if so, exit and return the path}
+
+{\ttfamily open the current node, i.\+e loop through its neighbours, mark them as visited and put them on a heap}
+
+{\ttfamily check if there are still nodes left to process (or have we searched the whole graph) if there are none, flag error and exit}
+
+{\ttfamily pop the next node of the heap and set it as current}
+
+{\ttfamily check if the function has exceeded the time limit if so, return and wait for the function to get called again }
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_path_aaffdbbb94f23ca35262133301fd7cb79}{Pathfinding.\+Path}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_aad9c77679a4ce2e2543a4e3398fc2c8f}\label{class_pathfinding_1_1_a_b_path_aad9c77679a4ce2e2543a4e3398fc2c8f}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+B\+Path.\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Always called after the path has been calculated. Guaranteed to be called before other paths have been calculated on the same thread. Use for cleaning up things like node tagging and similar. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_path_aab8873974809a74047fab67f03472756}{Pathfinding.\+Path}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_ab10eedd203534d54731fa8a0e9735c91}\label{class_pathfinding_1_1_a_b_path_ab10eedd203534d54731fa8a0e9735c91}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!CompletePathIfStartIsValidTarget@{CompletePathIfStartIsValidTarget}}
+\index{CompletePathIfStartIsValidTarget@{CompletePathIfStartIsValidTarget}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{CompletePathIfStartIsValidTarget()}{CompletePathIfStartIsValidTarget()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+A\+B\+Path.\+Complete\+Path\+If\+Start\+Is\+Valid\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the start node is the target and complete the path if that is the case. This is necessary so that subclasses (e.\+g X\+Path) can override this behaviour. 
+
+If the start node is a valid target point, this method should set Complete\+State to Complete and trace the path.\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a6ff2eb7a31f3f1a407f8f5d4b30d92e0}\label{class_pathfinding_1_1_a_b_path_a6ff2eb7a31f3f1a407f8f5d4b30d92e0}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!Construct@{Construct}}
+\index{Construct@{Construct}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_pathfinding_1_1_a_b_path}{A\+B\+Path}} Pathfinding.\+A\+B\+Path.\+Construct (\begin{DoxyParamCaption}\item[{Vector3}]{start,  }\item[{Vector3}]{end,  }\item[{On\+Path\+Delegate}]{callback = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Construct a path with a start and end point. The delegate will be called when the path has been calculated. Do not confuse it with the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} callback as they are sent at different times. If you are using a \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} to start the path you can set callback to null. 
+
+Returns\+: The constructed path object\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a489105925d89af5221815659605dac6e}\label{class_pathfinding_1_1_a_b_path_a489105925d89af5221815659605dac6e}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!EndPointGridGraphSpecialCase@{EndPointGridGraphSpecialCase}}
+\index{EndPointGridGraphSpecialCase@{EndPointGridGraphSpecialCase}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{EndPointGridGraphSpecialCase()}{EndPointGridGraphSpecialCase()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+A\+B\+Path.\+End\+Point\+Grid\+Graph\+Special\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{closest\+Walkable\+End\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Applies a special case for grid nodes. 
+
+Assume the closest walkable node is a grid node. We will now apply a special case only for grid graphs. In tile based games, an obstacle often occupies a whole node. When a path is requested to the position of an obstacle (single unwalkable node) the closest walkable node will be one of the 8 nodes surrounding that unwalkable node but that node is not neccessarily the one that is most optimal to walk to so in this special case we mark all nodes around the unwalkable node as targets and when we search and find any one of them we simply exit and set that first node we found to be the \textquotesingle{}real\textquotesingle{} end node because that will be the optimal node (this does not apply in general unless the heuristic is set to None, but for a single unwalkable node it does). This also applies if the nearest node cannot be traversed for some other reason like restricted tags.
+
+Returns\+: True if the workaround was applied. If this happens the end\+Point, end\+Node, h\+Target and h\+Target\+Node fields will be modified.
+
+Image below shows paths when this special case is applied. The path goes from the white sphere to the orange box. \mbox{[}Open online documentation to see images\mbox{]}
+
+Image below shows paths when this special case has been disabled \mbox{[}Open online documentation to see images\mbox{]}\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_ae0abcb1ed0acab5635ced85fee38266a}\label{class_pathfinding_1_1_a_b_path_ae0abcb1ed0acab5635ced85fee38266a}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!FakePath@{FakePath}}
+\index{FakePath@{FakePath}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{FakePath()}{FakePath()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_pathfinding_1_1_a_b_path}{A\+B\+Path}} Pathfinding.\+A\+B\+Path.\+Fake\+Path (\begin{DoxyParamCaption}\item[{List$<$ Vector3 $>$}]{vector\+Path,  }\item[{List$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$}]{node\+Path = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a fake path. Creates a path that looks almost exactly like it would if the pathfinding system had calculated it. 
+
+This is useful if you want your agents to follow some known path that cannot be calculated using the pathfinding system for some reason.
+
+{\ttfamily  var path = \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ae0abcb1ed0acab5635ced85fee38266a}{A\+B\+Path.\+Fake\+Path}}(new List$<$\+Vector3$>$ \{ new Vector3(1, 2, 3), new Vector3(4, 5, 6) \});}
+
+{\ttfamily ai.\+Set\+Path(path); }
+
+You can use it to combine existing paths like this\+:
+
+{\ttfamily  var a = Vector3.\+zero; var b = new Vector3(1, 2, 3); var c = new Vector3(2, 3, 4); var path1 = A\+B\+Path.\+Construct(a, b); var path2 = A\+B\+Path.\+Construct(b, c);}
+
+{\ttfamily Astar\+Path.\+Start\+Path(path1); Astar\+Path.\+Start\+Path(path2); path1.\+Block\+Until\+Calculated(); path2.\+Block\+Until\+Calculated();}
+
+{\ttfamily // Combine the paths // Note\+: Skip the first element in the second path as that will likely be the last element in the first path var new\+Vector\+Path = path1.\+vector\+Path.\+Concat(path2.\+vector\+Path.\+Skip(1)).To\+List(); var new\+Node\+Path = path1.\+path.\+Concat(path2.\+path.\+Skip(1)).To\+List(); var combined\+Path = A\+B\+Path.\+Fake\+Path(new\+Vector\+Path, new\+Node\+Path); }\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_ac8a684c6dca38cdff12bb55120b4d952}\label{class_pathfinding_1_1_a_b_path_ac8a684c6dca38cdff12bb55120b4d952}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+B\+Path.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the path. Sets up the open list and adds the first node to it 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_path_ad64b559136b6d9f61ceebf9fbbc99730}{Pathfinding.\+Path}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a32b0a7284e92314c7734e3a73305302b}\label{class_pathfinding_1_1_a_b_path_a32b0a7284e92314c7734e3a73305302b}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!Prepare@{Prepare}}
+\index{Prepare@{Prepare}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{Prepare()}{Prepare()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+B\+Path.\+Prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Prepares the path. Searches for start and end nodes and does some simple checking if a path is at all possible 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_path_ad2f52f0307b2b89a57b1cff02d4d0766}{Pathfinding.\+Path}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a238e6f7d6da1d9cec35ec7738f7ac34a}\label{class_pathfinding_1_1_a_b_path_a238e6f7d6da1d9cec35ec7738f7ac34a}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!Reset@{Reset}}
+\index{Reset@{Reset}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+B\+Path.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reset all values to their default values. All inheriting path types must implement this function, resetting A\+LL their variables to enable recycling of paths. Call this base function in inheriting types with base.\+Reset (); 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_path_a15e1bfd2b7fec2acf4d19b6249cd3dbf}{Pathfinding.\+Path}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a890589b44a39dcdc19ced618ed83ec34}\label{class_pathfinding_1_1_a_b_path_a890589b44a39dcdc19ced618ed83ec34}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!UpdateStartEnd@{UpdateStartEnd}}
+\index{UpdateStartEnd@{UpdateStartEnd}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{UpdateStartEnd()}{UpdateStartEnd()}}
+{\footnotesize\ttfamily void Pathfinding.\+A\+B\+Path.\+Update\+Start\+End (\begin{DoxyParamCaption}\item[{Vector3}]{start,  }\item[{Vector3}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+Sets the start and end points. Sets \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a10bb6d32a954f66abef58e869b392bcf}{original\+Start\+Point}}, \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a536f3ea8d31100fbc1b175d60a27cd51}{original\+End\+Point}}, \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_ad0f423723dbaadab666daf140a31d103}{start\+Point}}, \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a827e651eb03913a614b63f668196821f}{end\+Point}}, start\+Int\+Point and \mbox{\hyperlink{class_pathfinding_1_1_path_a4578bf07cab3f02365d1c3bf9bbff0f9}{h\+Target}} (to end )
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_af1c0ec3bd035ed8a142367ca32d150a2}\label{class_pathfinding_1_1_a_b_path_af1c0ec3bd035ed8a142367ca32d150a2}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!calculatePartial@{calculatePartial}}
+\index{calculatePartial@{calculatePartial}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{calculatePartial}{calculatePartial}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+B\+Path.\+calculate\+Partial}
+
+
+
+$<$ Start point in integer coordinates 
+
+Calculate partial path if the target node cannot be reached. If the target node cannot be reached, the node which was closest (given by heuristic) will be chosen as target node and a partial path will be returned. This only works if a heuristic is used (which is the default). If a partial path is found, Complete\+State is set to Partial. Note\+: It is not required by other path types to respect this setting
+
+Warning\+: This feature is currently a work in progress and may not work in the current version\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_af2224a3c8c6d88f0bd126f517f2c4423}\label{class_pathfinding_1_1_a_b_path_af2224a3c8c6d88f0bd126f517f2c4423}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!endNode@{endNode}}
+\index{endNode@{endNode}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{endNode}{endNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} Pathfinding.\+A\+B\+Path.\+end\+Node}
+
+
+
+End node of the path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_aaa4764f20c08d2708abefa9fc88e79a3}\label{class_pathfinding_1_1_a_b_path_aaa4764f20c08d2708abefa9fc88e79a3}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!endNodeCosts@{endNodeCosts}}
+\index{endNodeCosts@{endNodeCosts}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{endNodeCosts}{endNodeCosts}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Pathfinding.\+A\+B\+Path.\+end\+Node\+Costs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Saved original costs for the end node. See\+: Reset\+Costs 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a827e651eb03913a614b63f668196821f}\label{class_pathfinding_1_1_a_b_path_a827e651eb03913a614b63f668196821f}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!endPoint@{endPoint}}
+\index{endPoint@{endPoint}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{endPoint}{endPoint}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+A\+B\+Path.\+end\+Point}
+
+
+
+End point of the path. This is the closest point on the \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_af2224a3c8c6d88f0bd126f517f2c4423}{end\+Node}} to \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a536f3ea8d31100fbc1b175d60a27cd51}{original\+End\+Point}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a536f3ea8d31100fbc1b175d60a27cd51}\label{class_pathfinding_1_1_a_b_path_a536f3ea8d31100fbc1b175d60a27cd51}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!originalEndPoint@{originalEndPoint}}
+\index{originalEndPoint@{originalEndPoint}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{originalEndPoint}{originalEndPoint}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+A\+B\+Path.\+original\+End\+Point}
+
+
+
+End Point exactly as in the path request 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_a10bb6d32a954f66abef58e869b392bcf}\label{class_pathfinding_1_1_a_b_path_a10bb6d32a954f66abef58e869b392bcf}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!originalStartPoint@{originalStartPoint}}
+\index{originalStartPoint@{originalStartPoint}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{originalStartPoint}{originalStartPoint}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+A\+B\+Path.\+original\+Start\+Point}
+
+
+
+Start Point exactly as in the path request 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_abc7ac4415cbc33f04d82e5c5ba7c550e}\label{class_pathfinding_1_1_a_b_path_abc7ac4415cbc33f04d82e5c5ba7c550e}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!partialBestTarget@{partialBestTarget}}
+\index{partialBestTarget@{partialBestTarget}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{partialBestTarget}{partialBestTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} Pathfinding.\+A\+B\+Path.\+partial\+Best\+Target\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Current best target for the partial path. This is the node with the lowest H score. Warning\+: This feature is currently a work in progress and may not work in the current version 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_aaff7892de20d5093add29e4261cdbcb6}\label{class_pathfinding_1_1_a_b_path_aaff7892de20d5093add29e4261cdbcb6}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!startNode@{startNode}}
+\index{startNode@{startNode}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{startNode}{startNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} Pathfinding.\+A\+B\+Path.\+start\+Node}
+
+
+
+Start node of the path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_ad0f423723dbaadab666daf140a31d103}\label{class_pathfinding_1_1_a_b_path_ad0f423723dbaadab666daf140a31d103}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!startPoint@{startPoint}}
+\index{startPoint@{startPoint}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{startPoint}{startPoint}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+A\+B\+Path.\+start\+Point}
+
+
+
+Start point of the path. This is the closest point on the \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_aaff7892de20d5093add29e4261cdbcb6}{start\+Node}} to \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_a10bb6d32a954f66abef58e869b392bcf}{original\+Start\+Point}} 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_b_path_ade6b4502dfd8cf16ebe0f976c8a67d2b}\label{class_pathfinding_1_1_a_b_path_ade6b4502dfd8cf16ebe0f976c8a67d2b}} 
+\index{Pathfinding.ABPath@{Pathfinding.ABPath}!hasEndPoint@{hasEndPoint}}
+\index{hasEndPoint@{hasEndPoint}!Pathfinding.ABPath@{Pathfinding.ABPath}}
+\doxysubsubsection{\texorpdfstring{hasEndPoint}{hasEndPoint}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+A\+B\+Path.\+has\+End\+Point\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Determines if a search for an end node should be done. Set by different path types. 
+
+\begin{DoxySince}{Since}
+Added in 3.\+0.\+8.\+3
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Pathfinders/A\+B\+Path.\+cs\end{DoxyCompactItemize}

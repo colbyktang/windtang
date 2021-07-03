@@ -1,0 +1,86 @@
+\hypertarget{class_triangle_net_1_1_bad_tri_queue}{}\doxysection{Triangle\+Net.\+Bad\+Tri\+Queue Class Reference}
+\label{class_triangle_net_1_1_bad_tri_queue}\index{TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}}
+
+
+A (priority) queue for bad triangles.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_bad_tri_queue_a7ae12cfe5e4dfd0f6dd1ccdb8ff0d80f}{Enqueue}} (\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_triangle}{Bad\+Triangle}} badtri)
+\begin{DoxyCompactList}\small\item\em Add a bad triangle data structure to the end of a queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_bad_tri_queue_ae783580921ac6afc8f50da9d79fbe6f6}{Enqueue}} (ref \mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_otri}{Otri}} enqtri, double minedge, \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} enqapex, \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} enqorg, \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} enqdest)
+\begin{DoxyCompactList}\small\item\em Add a bad triangle to the end of a queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_triangle}{Bad\+Triangle}} \mbox{\hyperlink{class_triangle_net_1_1_bad_tri_queue_acef8ad58280b16126e7461a035464379}{Dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Remove a triangle from the front of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_bad_tri_queue_add35c05ab2cc311580bd0a1739d87c21}\label{class_triangle_net_1_1_bad_tri_queue_add35c05ab2cc311580bd0a1739d87c21}} 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A (priority) queue for bad triangles. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_bad_tri_queue_acef8ad58280b16126e7461a035464379}\label{class_triangle_net_1_1_bad_tri_queue_acef8ad58280b16126e7461a035464379}} 
+\index{TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}!Dequeue@{Dequeue}}
+\index{Dequeue@{Dequeue}!TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}}
+\doxysubsubsection{\texorpdfstring{Dequeue()}{Dequeue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_triangle}{Bad\+Triangle}} Triangle\+Net.\+Bad\+Tri\+Queue.\+Dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove a triangle from the front of the queue. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_triangle_net_1_1_bad_tri_queue_a7ae12cfe5e4dfd0f6dd1ccdb8ff0d80f}\label{class_triangle_net_1_1_bad_tri_queue_a7ae12cfe5e4dfd0f6dd1ccdb8ff0d80f}} 
+\index{TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}}
+\doxysubsubsection{\texorpdfstring{Enqueue()}{Enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Bad\+Tri\+Queue.\+Enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_triangle}{Bad\+Triangle}}}]{badtri }\end{DoxyParamCaption})}
+
+
+
+Add a bad triangle data structure to the end of a queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em badtri} & The bad triangle to enqueue.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_bad_tri_queue_ae783580921ac6afc8f50da9d79fbe6f6}\label{class_triangle_net_1_1_bad_tri_queue_ae783580921ac6afc8f50da9d79fbe6f6}} 
+\index{TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!TriangleNet.BadTriQueue@{TriangleNet.BadTriQueue}}
+\doxysubsubsection{\texorpdfstring{Enqueue()}{Enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Bad\+Tri\+Queue.\+Enqueue (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_otri}{Otri}}}]{enqtri,  }\item[{double}]{minedge,  }\item[{\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}}}]{enqapex,  }\item[{\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}}}]{enqorg,  }\item[{\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}}}]{enqdest }\end{DoxyParamCaption})}
+
+
+
+Add a bad triangle to the end of a queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enqtri} & \\
+\hline
+{\em minedge} & \\
+\hline
+{\em enqapex} & \\
+\hline
+{\em enqorg} & \\
+\hline
+{\em enqdest} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/Bad\+Tri\+Queue.\+cs\end{DoxyCompactItemize}

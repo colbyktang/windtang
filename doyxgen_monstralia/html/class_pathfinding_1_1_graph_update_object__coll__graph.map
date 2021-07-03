@@ -1,0 +1,7 @@
+<map id="Pathfinding.GraphUpdateObject" name="Pathfinding.GraphUpdateObject">
+<area shape="rect" id="node1" title="Represents a collection of settings used to update nodes in a specific region of a graph...." alt="" coords="621,56,825,83"/>
+<area shape="rect" id="node2" title=" " alt="" coords="281,5,481,32"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_graph_update_shape.html" title="Defines a shape for a Pathfinding.GraphUpdateObject. The shape consists of a number of points which i..." alt="" coords="280,56,483,83"/>
+<area shape="rect" id="node4" href="$class_pathfinding_1_1_n_n_constraint.html" title="Nearest node constraint. Constrains which nodes will be returned by the AstarPath...." alt="" coords="298,107,465,133"/>
+<area shape="rect" id="node5" href="$struct_pathfinding_1_1_graph_mask.html" title="Holds a bitmask of graphs. This bitmask can hold up to 32 graphs." alt="" coords="5,107,163,133"/>
+</map>

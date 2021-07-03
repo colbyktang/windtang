@@ -1,0 +1,12 @@
+<map id="SensesLevelManager" name="SensesLevelManager">
+<area shape="rect" id="node1" title=" " alt="" coords="208,496,353,523"/>
+<area shape="rect" id="node2" title=" " alt="" coords="245,184,356,211"/>
+<area shape="rect" id="node3" href="$class_monster_creator.html" title=" " alt="" coords="5,317,116,344"/>
+<area shape="rect" id="node7" href="$class_monster.html" title=" " alt="" coords="318,407,387,433"/>
+<area shape="rect" id="node8" href="$class_monster_animations.html" title=" " alt="" coords="369,317,504,344"/>
+<area shape="rect" id="node4" href="$class_monster_data.html" title=" " alt="" coords="117,184,213,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="271,95,389,121"/>
+<area shape="rect" id="node9" href="$class_emotion_data.html" title=" " alt="" coords="388,184,485,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="503,5,581,32"/>
+<area shape="rect" id="node10" href="$struct_emotion_data_1_1_emotion_struct.html" title=" " alt="" coords="579,95,763,121"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Pathfinding.PathNNConstraint" name="Pathfinding.PathNNConstraint">
+<area shape="rect" id="node1" title="A special NNConstraint which can use different logic for the start node and end node in a path...." alt="" coords="5,171,200,197"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_n_n_constraint.html" title="Nearest node constraint. Constrains which nodes will be returned by the AstarPath...." alt="" coords="53,95,152,121"/>
+<area shape="rect" id="node3" href="$struct_pathfinding_1_1_graph_mask.html" title="Holds a bitmask of graphs. This bitmask can hold up to 32 graphs." alt="" coords="24,5,181,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="VinesGameDirector" name="VinesGameDirector">
+<area shape="rect" id="node1" title=" " alt="" coords="72,185,207,212"/>
+<area shape="rect" id="node2" href="$class_abstract_game_director.html" title=" " alt="" coords="5,81,164,123"/>
+<area shape="rect" id="node3" href="$class_vines_tutorial_manager.html" title=" " alt="" coords="189,89,335,115"/>
+<area shape="rect" id="node4" title=" " alt="" coords="207,5,317,32"/>
+</map>

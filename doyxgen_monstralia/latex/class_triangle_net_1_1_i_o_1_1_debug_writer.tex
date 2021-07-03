@@ -1,0 +1,76 @@
+\hypertarget{class_triangle_net_1_1_i_o_1_1_debug_writer}{}\doxysection{Triangle\+Net.\+I\+O.\+Debug\+Writer Class Reference}
+\label{class_triangle_net_1_1_i_o_1_1_debug_writer}\index{TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}}
+
+
+Writes a the current mesh into a text file.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_debug_writer_a94187ab1adf3f797d7ef077aceced9e8}{Start}} (string session)
+\begin{DoxyCompactList}\small\item\em Start a new session with given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_debug_writer_a5fc14f23a2380c43740c034d2568602e}{Write}} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} mesh, bool skip=false)
+\begin{DoxyCompactList}\small\item\em Write complete mesh to file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_debug_writer_a1801c5d802c09b3b87ee39346d881790}{Finish}} ()
+\begin{DoxyCompactList}\small\item\em Finish this session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_i_o_1_1_debug_writer_a5a424b6dac36df53d352ad6fbba45717}\label{class_triangle_net_1_1_i_o_1_1_debug_writer_a5a424b6dac36df53d352ad6fbba45717}} 
+static \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_debug_writer}{Debug\+Writer}} {\bfseries Session}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Writes a the current mesh into a text file. 
+
+File format\+:
+
+num\+\_\+nodes id\+\_\+1 nx ny mark ... id\+\_\+n nx ny mark
+
+num\+\_\+segs id\+\_\+1 p1 p2 mark ... id\+\_\+n p1 p2 mark
+
+num\+\_\+tris id\+\_\+1 p1 p2 p3 n1 n2 n3 ... id\+\_\+n p1 p2 p3 n1 n2 n3 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_i_o_1_1_debug_writer_a1801c5d802c09b3b87ee39346d881790}\label{class_triangle_net_1_1_i_o_1_1_debug_writer_a1801c5d802c09b3b87ee39346d881790}} 
+\index{TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}!Finish@{Finish}}
+\index{Finish@{Finish}!TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}}
+\doxysubsubsection{\texorpdfstring{Finish()}{Finish()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+I\+O.\+Debug\+Writer.\+Finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finish this session. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_i_o_1_1_debug_writer_a94187ab1adf3f797d7ef077aceced9e8}\label{class_triangle_net_1_1_i_o_1_1_debug_writer_a94187ab1adf3f797d7ef077aceced9e8}} 
+\index{TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}!Start@{Start}}
+\index{Start@{Start}!TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+I\+O.\+Debug\+Writer.\+Start (\begin{DoxyParamCaption}\item[{string}]{session }\end{DoxyParamCaption})}
+
+
+
+Start a new session with given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the session (and output files).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_i_o_1_1_debug_writer_a5fc14f23a2380c43740c034d2568602e}\label{class_triangle_net_1_1_i_o_1_1_debug_writer_a5fc14f23a2380c43740c034d2568602e}} 
+\index{TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}!Write@{Write}}
+\index{Write@{Write}!TriangleNet.IO.DebugWriter@{TriangleNet.IO.DebugWriter}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+I\+O.\+Debug\+Writer.\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}}}]{mesh,  }\item[{bool}]{skip = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Write complete mesh to file. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+I\+O/Debug\+Writer.\+cs\end{DoxyCompactItemize}

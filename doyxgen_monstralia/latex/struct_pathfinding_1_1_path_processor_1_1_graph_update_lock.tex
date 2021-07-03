@@ -1,0 +1,69 @@
+\hypertarget{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock}{}\doxysection{Pathfinding.\+Path\+Processor.\+Graph\+Update\+Lock Struct Reference}
+\label{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock}\index{Pathfinding.PathProcessor.GraphUpdateLock@{Pathfinding.PathProcessor.GraphUpdateLock}}
+
+
+Prevents pathfinding from running while held  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Path\+Processor.\+Graph\+Update\+Lock\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_a9db01489c5dfe1f4454389da78a0d720}\label{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_a9db01489c5dfe1f4454389da78a0d720}} 
+{\bfseries Graph\+Update\+Lock} (\mbox{\hyperlink{class_pathfinding_1_1_path_processor}{Path\+Processor}} path\+Processor, bool block)
+\item 
+void \mbox{\hyperlink{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_ae0c269413a27d6aefbfd07328cdc3c78}{Release}} ()
+\begin{DoxyCompactList}\small\item\em Allow pathfinding to start running again if no other locks are still held \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_afbb1c1c7097cff01210aae22c74554ec}\label{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_afbb1c1c7097cff01210aae22c74554ec}} 
+\mbox{\hyperlink{class_pathfinding_1_1_path_processor}{Path\+Processor}} {\bfseries path\+Processor}
+\item 
+\mbox{\Hypertarget{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_add601b857dff7720e0be0d28ed620310}\label{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_add601b857dff7720e0be0d28ed620310}} 
+int {\bfseries id}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_ae405e9c49c2217c5f14a6d12cf5cbd15}{Held}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True while this lock is preventing the pathfinding threads from processing more paths. Note that the pathfinding threads may not be paused yet (if this lock was obtained using Pause\+Pathfinding(false)). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Prevents pathfinding from running while held 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_ae0c269413a27d6aefbfd07328cdc3c78}\label{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_ae0c269413a27d6aefbfd07328cdc3c78}} 
+\index{Pathfinding.PathProcessor.GraphUpdateLock@{Pathfinding.PathProcessor.GraphUpdateLock}!Release@{Release}}
+\index{Release@{Release}!Pathfinding.PathProcessor.GraphUpdateLock@{Pathfinding.PathProcessor.GraphUpdateLock}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Pathfinding.\+Path\+Processor.\+Graph\+Update\+Lock.\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allow pathfinding to start running again if no other locks are still held 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_ae405e9c49c2217c5f14a6d12cf5cbd15}\label{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock_ae405e9c49c2217c5f14a6d12cf5cbd15}} 
+\index{Pathfinding.PathProcessor.GraphUpdateLock@{Pathfinding.PathProcessor.GraphUpdateLock}!Held@{Held}}
+\index{Held@{Held}!Pathfinding.PathProcessor.GraphUpdateLock@{Pathfinding.PathProcessor.GraphUpdateLock}}
+\doxysubsubsection{\texorpdfstring{Held}{Held}}
+{\footnotesize\ttfamily bool Pathfinding.\+Path\+Processor.\+Graph\+Update\+Lock.\+Held\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True while this lock is preventing the pathfinding threads from processing more paths. Note that the pathfinding threads may not be paused yet (if this lock was obtained using Pause\+Pathfinding(false)). 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Path\+Processor.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+<map id="TriangleNet.Data.Osub" name="TriangleNet.Data.Osub">
+<area shape="rect" id="node1" title="An oriented subsegment." alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node2" href="$class_triangle_net_1_1_data_1_1_segment.html" title="The subsegment data structure." alt="" coords="96,407,271,433"/>
+<area shape="rect" id="node5" href="$class_triangle_net_1_1_data_1_1_triangle.html" title="The triangle data structure." alt="" coords="227,124,393,151"/>
+<area shape="rect" id="node3" href="$interface_triangle_net_1_1_geometry_1_1_i_segment.html" title="Interface for segment geometry." alt="" coords="445,317,522,344"/>
+<area shape="rect" id="node4" href="$struct_triangle_net_1_1_data_1_1_otri.html" title="An oriented triangle." alt="" coords="164,228,307,255"/>
+<area shape="rect" id="node8" href="$class_triangle_net_1_1_data_1_1_vertex.html" title="The vertex data structure." alt="" coords="261,317,421,344"/>
+<area shape="rect" id="node6" href="$interface_triangle_net_1_1_geometry_1_1_i_triangle.html" title="Triangle interface." alt="" coords="233,5,304,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="328,5,388,32"/>
+<area shape="rect" id="node9" href="$class_triangle_net_1_1_geometry_1_1_point.html" title="Represents a 2D point." alt="" coords="455,124,507,151"/>
+<area shape="rect" id="node10" title=" " alt="" coords="573,5,721,32"/>
+<area shape="rect" id="node11" title=" " alt="" coords="412,5,549,32"/>
+<area shape="rect" id="node12" title=" " alt="" coords="120,124,175,151"/>
+</map>

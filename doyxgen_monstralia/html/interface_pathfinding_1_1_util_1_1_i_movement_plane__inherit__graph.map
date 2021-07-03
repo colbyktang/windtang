@@ -1,0 +1,4 @@
+<map id="Pathfinding.Util.IMovementPlane" name="Pathfinding.Util.IMovementPlane">
+<area shape="rect" id="node1" title="Transforms to and from world space to a 2D movement plane. The transformation is guaranteed to be pur..." alt="" coords="21,5,195,47"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_util_1_1_graph_transform.html" title="Defines a transformation from graph space to world space. This is essentially just a simple wrapper a..." alt="" coords="5,95,211,121"/>
+</map>

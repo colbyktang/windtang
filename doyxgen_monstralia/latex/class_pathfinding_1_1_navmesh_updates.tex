@@ -1,0 +1,50 @@
+\hypertarget{class_pathfinding_1_1_navmesh_updates}{}\doxysection{Pathfinding.\+Navmesh\+Updates Class Reference}
+\label{class_pathfinding_1_1_navmesh_updates}\index{Pathfinding.NavmeshUpdates@{Pathfinding.NavmeshUpdates}}
+
+
+Helper for navmesh cut objects. Responsible for keeping track of which navmesh cuts have moved and coordinating graph updates to account for those changes.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Navmesh\+Update\+Settings}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_navmesh_updates_a540cced7845e8dbbd4118848896a6a4b}{update\+Interval}}
+\begin{DoxyCompactList}\small\item\em How often to check if an update needs to be done (real seconds between checks). For worlds with a very large number of Navmesh\+Cut objects, it might be bad for performance to do this check every frame. If you think this is a performance penalty, increase this number to check less often. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper for navmesh cut objects. Responsible for keeping track of which navmesh cuts have moved and coordinating graph updates to account for those changes. 
+
+See\+: navmeshcutting (view in online documentation for working links) See\+: \mbox{\hyperlink{class_astar_path_a0279865ec95c609c1a4aef71a04c448d}{Astar\+Path.\+navmesh\+Updates}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ad7826294caea4db9ab925d489d551167}{Pathfinding.\+Navmesh\+Base.\+enable\+Navmesh\+Cutting}}
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_updates_a540cced7845e8dbbd4118848896a6a4b}\label{class_pathfinding_1_1_navmesh_updates_a540cced7845e8dbbd4118848896a6a4b}} 
+\index{Pathfinding.NavmeshUpdates@{Pathfinding.NavmeshUpdates}!updateInterval@{updateInterval}}
+\index{updateInterval@{updateInterval}!Pathfinding.NavmeshUpdates@{Pathfinding.NavmeshUpdates}}
+\doxysubsubsection{\texorpdfstring{updateInterval}{updateInterval}}
+{\footnotesize\ttfamily float Pathfinding.\+Navmesh\+Updates.\+update\+Interval}
+
+
+
+How often to check if an update needs to be done (real seconds between checks). For worlds with a very large number of Navmesh\+Cut objects, it might be bad for performance to do this check every frame. If you think this is a performance penalty, increase this number to check less often. 
+
+For almost all games, this can be kept at 0.
+
+If negative, no updates will be done. They must be manually triggered using Force\+Update.
+
+{\ttfamily  // Check every frame (the default) Astar\+Path.\+active.\+navmesh\+Updates.\+update\+Interval = 0;}
+
+{\ttfamily // Check every 0.\+1 seconds Astar\+Path.\+active.\+navmesh\+Updates.\+update\+Interval = 0.\+1f;}
+
+{\ttfamily // Never check for changes Astar\+Path.\+active.\+navmesh\+Updates.\+update\+Interval = -\/1; // You will have to schedule updates manually using Astar\+Path.\+active.\+navmesh\+Updates.\+Force\+Update(); }
+
+You can also find this in the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} inspector under Settings. \mbox{[}Open online documentation to see images\mbox{]}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Navmesh/Navmesh\+Updates.\+cs\end{DoxyCompactItemize}

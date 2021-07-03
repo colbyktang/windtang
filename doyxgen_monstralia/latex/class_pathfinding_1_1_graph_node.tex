@@ -1,0 +1,520 @@
+\hypertarget{class_pathfinding_1_1_graph_node}{}\doxysection{Pathfinding.\+Graph\+Node Class Reference}
+\label{class_pathfinding_1_1_graph_node}\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+
+
+Base class for all nodes  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Graph\+Node\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Graph\+Node\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a160a03e9db5d58ce63892c038abbbe03}{Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the node. Cleans up any temporary pathfinding data used for this node. The graph is responsible for calling this method on nodes when they are destroyed, including when the whole graph is destoyed. Otherwise memory leaks might present themselves. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0b21806526399565ea57fc4e8e4949b9}{Set\+Connectivity\+Dirty}} ()
+\begin{DoxyCompactList}\small\item\em Inform the system that the node\textquotesingle{}s connectivity has changed. This is used for recalculating the connected components of the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a327dc1e2c2388f48754c7030a78c661f}{Recalculate\+Connection\+Costs}} ()
+\begin{DoxyCompactList}\small\item\em Recalculates a node\textquotesingle{}s connection costs. Deprecated\+: This method is deprecated because it never did anything, you can safely remove any calls to this method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a9e5e2e673a11016ec3b380b9899a411e}\label{class_pathfinding_1_1_graph_node_a9e5e2e673a11016ec3b380b9899a411e}} 
+virtual void {\bfseries Update\+RecursiveG} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path, \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} path\+Node, \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}} handler)
+\item 
+abstract void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a7e8d9a2432250d1c430e39ad9c8a6c00}{Get\+Connections}} (System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ action)
+\begin{DoxyCompactList}\small\item\em Calls the delegate with all connections from this node. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a688c3ba2dba7a37b9d2cd90d067283a8}{Add\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node, uint cost)
+\begin{DoxyCompactList}\small\item\em Add a connection from this node to the specified node. If the connection already exists, the cost will simply be updated and no extra connection added. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2f242eb56b6cf38b416314c059772128}{Remove\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Removes any connection from this node to the specified node. If no such connection exists, nothing will be done. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a999ec09df07a4672ff9258f6a398c599}{Clear\+Connections}} (bool also\+Reverse)
+\begin{DoxyCompactList}\small\item\em Remove all connections from this node. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2f891ce0c090a589bc8114bf9574c9c1}{Contains\+Connection}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Checks if this node has a connection to the specified node. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a9e8778d8d325e8440595e8c128c1864b}{Get\+Portal}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} other, List$<$ Vector3 $>$ left, List$<$ Vector3 $>$ right, bool backwards)
+\begin{DoxyCompactList}\small\item\em Add a portal from this node to the specified node. This function should add a portal to the left and right lists which is connecting the two nodes (this and other). \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a45faee2e9b37aebc34093ac2de1817c3}{Open}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} path, \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} path\+Node, \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}} handler)
+\begin{DoxyCompactList}\small\item\em Open the node. Used internally for the A$\ast$ algorithm. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a38397e222f65563d3db6d66e8aacbbbd}{Surface\+Area}} ()
+\begin{DoxyCompactList}\small\item\em The surface area of the node in square world units \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2b0bbdba619e80c979ae6e4baf70f153}{Random\+Point\+On\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em A random point on the surface of the node. For point nodes and other nodes which do not have a surface, this will always return the position of the node. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0a6a15c6977f267eec85fec23613ab35}{Get\+Gizmo\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Hash code used for checking if the gizmos need to be updated. Will change when the gizmos for the node might change. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a7983947d7419ce8ba66f559066cd4c12}{Serialize\+Node}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Serialized the node data to a byte array \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a2d9a1efad94d02c762334bb805aed713}{Deserialize\+Node}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Deserializes the node data from a byte array \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_ae9668b581d682ded1182cc43fe138b09}{Serialize\+References}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Used to serialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_graph_node_af492477209aff7d5d583e7030901d6e7}{Deserialize\+References}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Used to deserialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aff994a04d550ce1759b606ed9a0db269}{position}}
+\begin{DoxyCompactList}\small\item\em Position of the node in world space. Note\+: The position is stored as an \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}, not a Vector3. You can convert an \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} to a Vector3 using an explicit conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a1285ddb4cd350013e2a37124522ef940}\label{class_pathfinding_1_1_graph_node_a1285ddb4cd350013e2a37124522ef940}} 
+const uint {\bfseries Max\+Hierarchical\+Node\+Index} = Hierarchical\+Index\+Mask $>$$>$ Flags\+Hierarchical\+Index\+Offset
+\item 
+const uint \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a5df127766886471837430570186a6daa}{Max\+Graph\+Index}} = Flags\+Graph\+Mask $>$$>$ Flags\+Graph\+Offset
+\begin{DoxyCompactList}\small\item\em Max number of graphs-\/1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node_a51df21da8bad03df5d1d829419422c2c}{Graph\+Node}} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} astar)
+\begin{DoxyCompactList}\small\item\em Constructor for a graph node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a726eea57757b7e50012bd61b5434cca7}{flags}}
+\begin{DoxyCompactList}\small\item\em Bitpacked field holding several pieces of data. See\+: Walkable See\+: Area See\+: Graph\+Index See\+: Tag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}? \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0b534d78dbe2883face936a71cd76634}{Graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Graph which this node belongs to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a0e681d54324f147d10ea1bf379dd73f8}\label{class_pathfinding_1_1_graph_node_a0e681d54324f147d10ea1bf379dd73f8}} 
+bool {\bfseries Destroyed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_graph_node_ae2f0243f076e6a212b70abae94666175}{Node\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal unique index. Every node will get a unique index. This index is not necessarily correlated with e.\+g the position of the node in the graph. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aea3e237be205202e9764fd1799a24be1}{Flags}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Holds various bitpacked variables. \end{DoxyCompactList}\item 
+uint? \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aa55adf306c0b410368fdd6b0e5523e28}{Penalty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Penalty cost for walking on this node. This can be used to make it harder/slower to walk over certain nodes. A cost of 1000 (\mbox{\hyperlink{struct_pathfinding_1_1_int3_a5c7bb8aff7e46881a645be9399a42ee1}{Pathfinding.\+Int3.\+Precision}}) corresponds to the cost of moving 1 world unit. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a4c9eb8e60edf09274b43bd45b8b4766e}{Walkable}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the node is traversable. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a954eb66f20422048b8e60b6eec60cbcd}{Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Connected component that contains the node. This is visualized in the scene view as differently colored nodes (if the graph coloring mode is set to \textquotesingle{}Areas\textquotesingle{}). Each area represents a set of nodes such that there is no valid path between nodes of different colors. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a3c9a563bf5d4cd4b66cf75bc60e86cbf}{Graph\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Graph which contains this node. See\+: \mbox{\hyperlink{class_pathfinding_1_1_astar_data_a265fb9535907c9ec56ec6113543e52ff}{Pathfinding.\+Astar\+Data.\+graphs}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0b534d78dbe2883face936a71cd76634}{Graph}} \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aa3ea1603a2bca1ac9694c79bde764fab}{Tag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Node tag. See\+: tags (view in online documentation for working links) See\+: graph-\/updates (view in online documentation for working links) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all nodes 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a51df21da8bad03df5d1d829419422c2c}\label{class_pathfinding_1_1_graph_node_a51df21da8bad03df5d1d829419422c2c}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!GraphNode@{GraphNode}}
+\index{GraphNode@{GraphNode}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{GraphNode()}{GraphNode()}}
+{\footnotesize\ttfamily Pathfinding.\+Graph\+Node.\+Graph\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_astar_path}{Astar\+Path}}}]{astar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor for a graph node. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a688c3ba2dba7a37b9d2cd90d067283a8}\label{class_pathfinding_1_1_graph_node_a688c3ba2dba7a37b9d2cd90d067283a8}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!AddConnection@{AddConnection}}
+\index{AddConnection@{AddConnection}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{AddConnection()}{AddConnection()}}
+{\footnotesize\ttfamily abstract void Pathfinding.\+Graph\+Node.\+Add\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node,  }\item[{uint}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Add a connection from this node to the specified node. If the connection already exists, the cost will simply be updated and no extra connection added. 
+
+Note\+: Only adds a one-\/way connection. Consider calling the same function on the other node to get a two-\/way connection.
+
+{\ttfamily  Astar\+Path.\+active.\+Add\+Work\+Item(new \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item}{Astar\+Work\+Item}}(ctx =$>$ \{ // Connect two nodes var node1 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var node2 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position + Vector3.\+right, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var cost = (uint)(node2.\+position -\/ node1.\+position).cost\+Magnitude; node1.\+Add\+Connection(node2, cost); node2.\+Add\+Connection(node1, cost);}
+
+{\ttfamily  node1.\+Contains\+Connection(node2); // True}
+
+{\ttfamily  node1.\+Remove\+Connection(node2); node2.\+Remove\+Connection(node1); \})); }
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_aa5f7bc44a848e67cae598559bd0bb78d}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae492952cdd5b0fad5f42d56d59538623}{Pathfinding.\+Grid\+Node\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_aa11a6a4f935560e774dccfc519038231}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a999ec09df07a4672ff9258f6a398c599}\label{class_pathfinding_1_1_graph_node_a999ec09df07a4672ff9258f6a398c599}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!ClearConnections@{ClearConnections}}
+\index{ClearConnections@{ClearConnections}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{ClearConnections()}{ClearConnections()}}
+{\footnotesize\ttfamily abstract void Pathfinding.\+Graph\+Node.\+Clear\+Connections (\begin{DoxyParamCaption}\item[{bool}]{also\+Reverse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove all connections from this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em also\+Reverse} & if true, neighbours will be requested to remove connections to this node.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_ac0ea40adfe254180d8d8fdc4d23fef67}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aba483328201dd150be89541530a150a1}{Pathfinding.\+Grid\+Node\+Base}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_ad692e1c9f50cb4ede64a3c6d1fded9b5}{Pathfinding.\+Grid\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_a603c73db2f8146010178d8984d8b8cac}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a2f891ce0c090a589bc8114bf9574c9c1}\label{class_pathfinding_1_1_graph_node_a2f891ce0c090a589bc8114bf9574c9c1}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!ContainsConnection@{ContainsConnection}}
+\index{ContainsConnection@{ContainsConnection}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{ContainsConnection()}{ContainsConnection()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+Graph\+Node.\+Contains\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if this node has a connection to the specified node. 
+
+{\ttfamily  Astar\+Path.\+active.\+Add\+Work\+Item(new \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item}{Astar\+Work\+Item}}(ctx =$>$ \{ // Connect two nodes var node1 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var node2 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position + Vector3.\+right, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var cost = (uint)(node2.\+position -\/ node1.\+position).cost\+Magnitude; node1.\+Add\+Connection(node2, cost); node2.\+Add\+Connection(node1, cost);}
+
+{\ttfamily  node1.\+Contains\+Connection(node2); // True}
+
+{\ttfamily  node1.\+Remove\+Connection(node2); node2.\+Remove\+Connection(node1); \})); }
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_a4bac94bac5454bed09248a19785b9b06}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ac756e2b043d9d8cb9d6be48d17493ad2}{Pathfinding.\+Grid\+Node\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_a5eb4eb56906c8936176960bc44d12f3f}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a2d9a1efad94d02c762334bb805aed713}\label{class_pathfinding_1_1_graph_node_a2d9a1efad94d02c762334bb805aed713}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!DeserializeNode@{DeserializeNode}}
+\index{DeserializeNode@{DeserializeNode}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{DeserializeNode()}{DeserializeNode()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Graph\+Node.\+Deserialize\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deserializes the node data from a byte array 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node_a80af6a1ed040a3657bf7263ab8fbcd4c}{Pathfinding.\+Triangle\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_aebdd13d75b8fd58bfbfb870b09d6eef8}{Pathfinding.\+Grid\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_ab2e4cf58a207faf3a9bbb9da1c7b7d2e}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_af492477209aff7d5d583e7030901d6e7}\label{class_pathfinding_1_1_graph_node_af492477209aff7d5d583e7030901d6e7}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!DeserializeReferences@{DeserializeReferences}}
+\index{DeserializeReferences@{DeserializeReferences}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{DeserializeReferences()}{DeserializeReferences()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Graph\+Node.\+Deserialize\+References (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to deserialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. 
+
+Nodes must override this method and serialize their connections. Graph generators do not need to call this method, it will be called automatically on all nodes at the correct time by the serializer.
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_aa750b4edd2d9625a515209677fc25f20}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ad73fdd26ff63bcc0cbbfa60be20faee0}{Pathfinding.\+Grid\+Node\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_aea0d650c70292be6bcc5a691c01ec390}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a160a03e9db5d58ce63892c038abbbe03}\label{class_pathfinding_1_1_graph_node_a160a03e9db5d58ce63892c038abbbe03}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Pathfinding.\+Graph\+Node.\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the node. Cleans up any temporary pathfinding data used for this node. The graph is responsible for calling this method on nodes when they are destroyed, including when the whole graph is destoyed. Otherwise memory leaks might present themselves. 
+
+Once called the Destroyed property will return true and subsequent calls to this method will not do anything.
+
+Note\+: Assumes the current active \mbox{\hyperlink{class_astar_path}{Astar\+Path}} instance is the same one that created this node.
+
+Warning\+: Should only be called by graph classes on their own nodes\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a7e8d9a2432250d1c430e39ad9c8a6c00}\label{class_pathfinding_1_1_graph_node_a7e8d9a2432250d1c430e39ad9c8a6c00}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!GetConnections@{GetConnections}}
+\index{GetConnections@{GetConnections}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{GetConnections()}{GetConnections()}}
+{\footnotesize\ttfamily abstract void Pathfinding.\+Graph\+Node.\+Get\+Connections (\begin{DoxyParamCaption}\item[{System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calls the delegate with all connections from this node. 
+
+{\ttfamily  node.\+Get\+Connections(connected\+To =$>$ \{ Debug.\+Draw\+Line((Vector3)node.\+position, (Vector3)connected\+To.\+position, Color.\+red); \}); }
+
+You can add all connected nodes to a list like this {\ttfamily  var connections = new List$<$\+Graph\+Node$>$(); node.\+Get\+Connections(connections.\+Add); }
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_a89e339901bf19a22babc201f16fa892e}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a3b2821b8904af5a68aee7a178027a083}{Pathfinding.\+Grid\+Node\+Base}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_a4771b2c276fcbf73df84273a94e95ef6}{Pathfinding.\+Grid\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_a27a7fa7e6dbfc2f405d470142d58042b}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a0a6a15c6977f267eec85fec23613ab35}\label{class_pathfinding_1_1_graph_node_a0a6a15c6977f267eec85fec23613ab35}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!GetGizmoHashCode@{GetGizmoHashCode}}
+\index{GetGizmoHashCode@{GetGizmoHashCode}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{GetGizmoHashCode()}{GetGizmoHashCode()}}
+{\footnotesize\ttfamily virtual int Pathfinding.\+Graph\+Node.\+Get\+Gizmo\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hash code used for checking if the gizmos need to be updated. Will change when the gizmos for the node might change. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_a7bfa6bf9f14771a9b58ca9082fbd151e}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_point_node_a8c62ed8704847af7dff09181d9d1b5bf}{Pathfinding.\+Point\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a035a19b8cf054812f4e80a2403c45857}{Pathfinding.\+Grid\+Node\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a9e8778d8d325e8440595e8c128c1864b}\label{class_pathfinding_1_1_graph_node_a9e8778d8d325e8440595e8c128c1864b}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!GetPortal@{GetPortal}}
+\index{GetPortal@{GetPortal}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{GetPortal()}{GetPortal()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+Graph\+Node.\+Get\+Portal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{other,  }\item[{List$<$ Vector3 $>$}]{left,  }\item[{List$<$ Vector3 $>$}]{right,  }\item[{bool}]{backwards }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a portal from this node to the specified node. This function should add a portal to the left and right lists which is connecting the two nodes (this and other). 
+
+Returns\+: True if the call was deemed successful. False if some unknown case was encountered and no portal could be added. If both calls to node1.\+Get\+Portal (node2,...) and node2.\+Get\+Portal (node1,...) return false, the funnel modifier will fall back to adding to the path the positions of the node.
+
+The default implementation simply returns false.
+
+This function may add more than one portal if necessary.
+
+See\+: \href{http://digestingduck.blogspot.se/2010/03/simple-stupid-funnel-algorithm.html}{\texttt{ http\+://digestingduck.\+blogspot.\+se/2010/03/simple-\/stupid-\/funnel-\/algorithm.\+html}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The node which is on the other side of the portal (strictly speaking it does not actually have to be on the other side of the portal though).\\
+\hline
+{\em left} & List of portal points on the left side of the funnel\\
+\hline
+{\em right} & List of portal points on the right side of the funnel\\
+\hline
+{\em backwards} & If this is true, the call was made on a node with the other node as the node before this one in the path. In this case you may choose to do nothing since a similar call will be made to the other node with this node referenced as other (but then with backwards = true). You do not have to care about switching the left and right lists, that is done for you already.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_node_a23e4014a6228cc5d6e20a3a36dce0d25}{Pathfinding.\+Grid\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_node_link3_node_a3d61c72ae111e14ac98e60dc627f2733}{Pathfinding.\+Node\+Link3\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a45faee2e9b37aebc34093ac2de1817c3}\label{class_pathfinding_1_1_graph_node_a45faee2e9b37aebc34093ac2de1817c3}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Open@{Open}}
+\index{Open@{Open}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily abstract void Pathfinding.\+Graph\+Node.\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{path,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}}}]{path\+Node,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Open the node. Used internally for the A$\ast$ algorithm. 
+
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_node_ab6e2e1798dd9a8e6613fdd94e2ec4b26}{Pathfinding.\+Grid\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node_a158b1289002f25fe58441af07cd34466}{Pathfinding.\+Triangle\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ae5558900565a0d4388846335c154cc15}{Pathfinding.\+Grid\+Node\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_a11069cef0bb77ad983390343542faefa}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a2b0bbdba619e80c979ae6e4baf70f153}\label{class_pathfinding_1_1_graph_node_a2b0bbdba619e80c979ae6e4baf70f153}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!RandomPointOnSurface@{RandomPointOnSurface}}
+\index{RandomPointOnSurface@{RandomPointOnSurface}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{RandomPointOnSurface()}{RandomPointOnSurface()}}
+{\footnotesize\ttfamily virtual Vector3 Pathfinding.\+Graph\+Node.\+Random\+Point\+On\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A random point on the surface of the node. For point nodes and other nodes which do not have a surface, this will always return the position of the node. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node_a7b9a6cdff08e22c28d06ea853deebf6c}{Pathfinding.\+Triangle\+Mesh\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_ad102443d029a26edfd9ffbb32e85f8ab}{Pathfinding.\+Grid\+Node\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a327dc1e2c2388f48754c7030a78c661f}\label{class_pathfinding_1_1_graph_node_a327dc1e2c2388f48754c7030a78c661f}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!RecalculateConnectionCosts@{RecalculateConnectionCosts}}
+\index{RecalculateConnectionCosts@{RecalculateConnectionCosts}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{RecalculateConnectionCosts()}{RecalculateConnectionCosts()}}
+{\footnotesize\ttfamily void Pathfinding.\+Graph\+Node.\+Recalculate\+Connection\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recalculates a node\textquotesingle{}s connection costs. Deprecated\+: This method is deprecated because it never did anything, you can safely remove any calls to this method. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a2f242eb56b6cf38b416314c059772128}\label{class_pathfinding_1_1_graph_node_a2f242eb56b6cf38b416314c059772128}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!RemoveConnection@{RemoveConnection}}
+\index{RemoveConnection@{RemoveConnection}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{RemoveConnection()}{RemoveConnection()}}
+{\footnotesize\ttfamily abstract void Pathfinding.\+Graph\+Node.\+Remove\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Removes any connection from this node to the specified node. If no such connection exists, nothing will be done. 
+
+Note\+: This only removes the connection from this node to the other node. You may want to call the same function on the other node to remove its possible connection to this node.
+
+{\ttfamily  Astar\+Path.\+active.\+Add\+Work\+Item(new \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item}{Astar\+Work\+Item}}(ctx =$>$ \{ // Connect two nodes var node1 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var node2 = Astar\+Path.\+active.\+Get\+Nearest(transform.\+position + Vector3.\+right, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{N\+N\+Constraint.\+None}}).node; var cost = (uint)(node2.\+position -\/ node1.\+position).cost\+Magnitude; node1.\+Add\+Connection(node2, cost); node2.\+Add\+Connection(node1, cost);}
+
+{\ttfamily  node1.\+Contains\+Connection(node2); // True}
+
+{\ttfamily  node1.\+Remove\+Connection(node2); node2.\+Remove\+Connection(node1); \})); }
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_ac0088e13e0738b2dadc30ed84bc5285e}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a1ee06a38e836fbc54fa1cbe8f8967834}{Pathfinding.\+Grid\+Node\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_a60b670c37b9a74b1f27312b7daae336b}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a7983947d7419ce8ba66f559066cd4c12}\label{class_pathfinding_1_1_graph_node_a7983947d7419ce8ba66f559066cd4c12}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!SerializeNode@{SerializeNode}}
+\index{SerializeNode@{SerializeNode}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{SerializeNode()}{SerializeNode()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Graph\+Node.\+Serialize\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialized the node data to a byte array 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node_a7f0fe1535e7591d828f231cd29d12482}{Pathfinding.\+Triangle\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_a09f82d16aa6f3733d9a52fe4d2bf3db2}{Pathfinding.\+Grid\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_a47d40a141e8a5f70bbce8cfb4ac47bd7}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_ae9668b581d682ded1182cc43fe138b09}\label{class_pathfinding_1_1_graph_node_ae9668b581d682ded1182cc43fe138b09}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!SerializeReferences@{SerializeReferences}}
+\index{SerializeReferences@{SerializeReferences}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{SerializeReferences()}{SerializeReferences()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Graph\+Node.\+Serialize\+References (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to serialize references to other nodes e.\+g connections. Use the Graph\+Serialization\+Context.\+Get\+Node\+Identifier and Graph\+Serialization\+Context.\+Get\+Node\+From\+Identifier methods for serialization and deserialization respectively. 
+
+Nodes must override this method and serialize their connections. Graph generators do not need to call this method, it will be called automatically on all nodes at the correct time by the serializer.
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_a3c7633816e8ea7a5a7d7c1e1192c537a}{Pathfinding.\+Mesh\+Node}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_aa7cd8709b1ecbdd97b0658b7f66db07e}{Pathfinding.\+Grid\+Node\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_node_ac5d2c1d0605cf0a4d144f10df4e245bb}{Pathfinding.\+Point\+Node}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a0b21806526399565ea57fc4e8e4949b9}\label{class_pathfinding_1_1_graph_node_a0b21806526399565ea57fc4e8e4949b9}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!SetConnectivityDirty@{SetConnectivityDirty}}
+\index{SetConnectivityDirty@{SetConnectivityDirty}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{SetConnectivityDirty()}{SetConnectivityDirty()}}
+{\footnotesize\ttfamily void Pathfinding.\+Graph\+Node.\+Set\+Connectivity\+Dirty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inform the system that the node\textquotesingle{}s connectivity has changed. This is used for recalculating the connected components of the graph. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Pathfinding.\+Hierarchical\+Graph}}
+
+You must call this method if you change the connectivity or walkability of the node without going through the high level methods such as the \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a4c9eb8e60edf09274b43bd45b8b4766e}{Walkable}} property or the \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a688c3ba2dba7a37b9d2cd90d067283a8}{Add\+Connection}} method. For example if your manually change the \mbox{\hyperlink{class_pathfinding_1_1_mesh_node_ae2ff2da1b57b05418933fec03ceb68a0}{Pathfinding.\+Mesh\+Node.\+connections}} array you need to call this method.\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a38397e222f65563d3db6d66e8aacbbbd}\label{class_pathfinding_1_1_graph_node_a38397e222f65563d3db6d66e8aacbbbd}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!SurfaceArea@{SurfaceArea}}
+\index{SurfaceArea@{SurfaceArea}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{SurfaceArea()}{SurfaceArea()}}
+{\footnotesize\ttfamily virtual float Pathfinding.\+Graph\+Node.\+Surface\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The surface area of the node in square world units 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node_afdca2207b50ccd113ce55642eb9dd086}{Pathfinding.\+Triangle\+Mesh\+Node}}, and \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base_a0740ca1d2efef8c719256fba795aa566}{Pathfinding.\+Grid\+Node\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a726eea57757b7e50012bd61b5434cca7}\label{class_pathfinding_1_1_graph_node_a726eea57757b7e50012bd61b5434cca7}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!flags@{flags}}
+\index{flags@{flags}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily uint Pathfinding.\+Graph\+Node.\+flags\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bitpacked field holding several pieces of data. See\+: Walkable See\+: Area See\+: Graph\+Index See\+: Tag 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a5df127766886471837430570186a6daa}\label{class_pathfinding_1_1_graph_node_a5df127766886471837430570186a6daa}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!MaxGraphIndex@{MaxGraphIndex}}
+\index{MaxGraphIndex@{MaxGraphIndex}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{MaxGraphIndex}{MaxGraphIndex}}
+{\footnotesize\ttfamily const uint Pathfinding.\+Graph\+Node.\+Max\+Graph\+Index = Flags\+Graph\+Mask $>$$>$ Flags\+Graph\+Offset\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Max number of graphs-\/1 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_aff994a04d550ce1759b606ed9a0db269}\label{class_pathfinding_1_1_graph_node_aff994a04d550ce1759b606ed9a0db269}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!position@{position}}
+\index{position@{position}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} Pathfinding.\+Graph\+Node.\+position}
+
+
+
+Position of the node in world space. Note\+: The position is stored as an \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}, not a Vector3. You can convert an \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} to a Vector3 using an explicit conversion. 
+
+{\ttfamily  var v3 = (Vector3)node.\+position; }
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a954eb66f20422048b8e60b6eec60cbcd}\label{class_pathfinding_1_1_graph_node_a954eb66f20422048b8e60b6eec60cbcd}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Area@{Area}}
+\index{Area@{Area}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Area}{Area}}
+{\footnotesize\ttfamily uint Pathfinding.\+Graph\+Node.\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Connected component that contains the node. This is visualized in the scene view as differently colored nodes (if the graph coloring mode is set to \textquotesingle{}Areas\textquotesingle{}). Each area represents a set of nodes such that there is no valid path between nodes of different colors. 
+
+See\+: \href{https://en.wikipedia.org/wiki/Connected_component_(graph_theory)}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Connected\+\_\+component\+\_\+(graph\+\_\+theory)}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Pathfinding.\+Hierarchical\+Graph}}\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_aea3e237be205202e9764fd1799a24be1}\label{class_pathfinding_1_1_graph_node_aea3e237be205202e9764fd1799a24be1}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Flags@{Flags}}
+\index{Flags@{Flags}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily uint Pathfinding.\+Graph\+Node.\+Flags\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Holds various bitpacked variables. 
+
+Bit 0\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a4c9eb8e60edf09274b43bd45b8b4766e}{Walkable}} Bits 1 through 17\+: Hierarchical\+Node\+Index Bit 18\+: Is\+Hierarchical\+Node\+Dirty Bits 19 through 23\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aa3ea1603a2bca1ac9694c79bde764fab}{Tag}} Bits 24 through 31\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a3c9a563bf5d4cd4b66cf75bc60e86cbf}{Graph\+Index}}
+
+Warning\+: You should pretty much never modify this property directly. Use the other properties instead.\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a0b534d78dbe2883face936a71cd76634}\label{class_pathfinding_1_1_graph_node_a0b534d78dbe2883face936a71cd76634}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Graph@{Graph}}
+\index{Graph@{Graph}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Graph}{Graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}? Pathfinding.\+Graph\+Node.\+Graph\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Graph which this node belongs to. 
+
+If you know the node belongs to a particular graph type, you can cast it to that type\+: {\ttfamily  \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node = ...; \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph = node.\+Graph as \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}}; }
+
+Will return null if the node has been destroyed.\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a3c9a563bf5d4cd4b66cf75bc60e86cbf}\label{class_pathfinding_1_1_graph_node_a3c9a563bf5d4cd4b66cf75bc60e86cbf}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!GraphIndex@{GraphIndex}}
+\index{GraphIndex@{GraphIndex}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{GraphIndex}{GraphIndex}}
+{\footnotesize\ttfamily uint Pathfinding.\+Graph\+Node.\+Graph\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Graph which contains this node. See\+: \mbox{\hyperlink{class_pathfinding_1_1_astar_data_a265fb9535907c9ec56ec6113543e52ff}{Pathfinding.\+Astar\+Data.\+graphs}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a0b534d78dbe2883face936a71cd76634}{Graph}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_ae2f0243f076e6a212b70abae94666175}\label{class_pathfinding_1_1_graph_node_ae2f0243f076e6a212b70abae94666175}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!NodeIndex@{NodeIndex}}
+\index{NodeIndex@{NodeIndex}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{NodeIndex}{NodeIndex}}
+{\footnotesize\ttfamily int Pathfinding.\+Graph\+Node.\+Node\+Index\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Internal unique index. Every node will get a unique index. This index is not necessarily correlated with e.\+g the position of the node in the graph. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_aa55adf306c0b410368fdd6b0e5523e28}\label{class_pathfinding_1_1_graph_node_aa55adf306c0b410368fdd6b0e5523e28}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Penalty@{Penalty}}
+\index{Penalty@{Penalty}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Penalty}{Penalty}}
+{\footnotesize\ttfamily uint? Pathfinding.\+Graph\+Node.\+Penalty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Penalty cost for walking on this node. This can be used to make it harder/slower to walk over certain nodes. A cost of 1000 (\mbox{\hyperlink{struct_pathfinding_1_1_int3_a5c7bb8aff7e46881a645be9399a42ee1}{Pathfinding.\+Int3.\+Precision}}) corresponds to the cost of moving 1 world unit. 
+
+See\+: graph-\/updates (view in online documentation for working links)\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_aa3ea1603a2bca1ac9694c79bde764fab}\label{class_pathfinding_1_1_graph_node_aa3ea1603a2bca1ac9694c79bde764fab}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Tag@{Tag}}
+\index{Tag@{Tag}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Tag}{Tag}}
+{\footnotesize\ttfamily uint Pathfinding.\+Graph\+Node.\+Tag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Node tag. See\+: tags (view in online documentation for working links) See\+: graph-\/updates (view in online documentation for working links) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_node_a4c9eb8e60edf09274b43bd45b8b4766e}\label{class_pathfinding_1_1_graph_node_a4c9eb8e60edf09274b43bd45b8b4766e}} 
+\index{Pathfinding.GraphNode@{Pathfinding.GraphNode}!Walkable@{Walkable}}
+\index{Walkable@{Walkable}!Pathfinding.GraphNode@{Pathfinding.GraphNode}}
+\doxysubsubsection{\texorpdfstring{Walkable}{Walkable}}
+{\footnotesize\ttfamily bool? Pathfinding.\+Graph\+Node.\+Walkable\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+True if the node is traversable. 
+
+See\+: graph-\/updates (view in online documentation for working links)
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Nodes/Graph\+Node.\+cs\end{DoxyCompactItemize}

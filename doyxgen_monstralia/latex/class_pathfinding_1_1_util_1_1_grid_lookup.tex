@@ -1,0 +1,113 @@
+\hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup}{}\doxysection{Pathfinding.\+Util.\+Grid\+Lookup$<$ T $>$ Class Template Reference}
+\label{class_pathfinding_1_1_util_1_1_grid_lookup}\index{Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}}
+
+
+Holds a lookup datastructure to quickly find objects inside rectangles. Objects of type T occupy an integer rectangle in the grid and they can be moved efficiently. You can query for all objects that touch a specified rectangle that runs in O(m$\ast$k+r) time where m is the number of objects that the query returns, k is the average number of cells that an object occupies and r is the area of the rectangle query.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Item}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_1_1_root}{Root}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a2f2b0835dab88a41c05397d317b6dcb2}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a2f2b0835dab88a41c05397d317b6dcb2}} 
+{\bfseries Grid\+Lookup} (\mbox{\hyperlink{struct_pathfinding_1_1_int2}{Int2}} size)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_afa8e5dc991bed851e311d3aaa64be2e2}\label{class_pathfinding_1_1_util_1_1_grid_lookup_afa8e5dc991bed851e311d3aaa64be2e2}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a241a0f7d179f302a7584255815b7a9af}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a241a0f7d179f302a7584255815b7a9af}} 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_1_1_root}{Root}} {\bfseries Get\+Root} (T item)
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_1_1_root}{Root}} \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_a1a69d97eccb61abb5bcc4b0e1a50ba9f}{Add}} (T item, \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} bounds)
+\begin{DoxyCompactList}\small\item\em Add an object to the lookup data structure. Returns\+: A handle which can be used for Move operations \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_a726288ce85c9e9728dc3ba8582ab868e}{Remove}} (T item)
+\begin{DoxyCompactList}\small\item\em Removes an item from the lookup data structure \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_a6b253f02568dfbefa26e7d3275497054}{Move}} (T item, \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} bounds)
+\begin{DoxyCompactList}\small\item\em Move an object to occupy a new set of cells \end{DoxyCompactList}\item 
+List$<$ U $>$ \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_a539de22c8cf41f1c616d77e68befd593}{Query\+Rect$<$ U $>$}} (\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} r)
+\begin{DoxyCompactList}\small\item\em Returns all objects of a specific type inside the cells marked by the rectangle. Note\+: For better memory usage, consider pooling the list using Pathfinding.\+Util.\+List\+Pool after you are done with it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_1_1_root}{Root}} \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_a9ef1d623fd71864ed273797862c97ed0}{All\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Linked list of all items \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds a lookup datastructure to quickly find objects inside rectangles. Objects of type T occupy an integer rectangle in the grid and they can be moved efficiently. You can query for all objects that touch a specified rectangle that runs in O(m$\ast$k+r) time where m is the number of objects that the query returns, k is the average number of cells that an object occupies and r is the area of the rectangle query. 
+
+All objects must be contained within a rectangle with one point at the origin (inclusive) and one at size (exclusive) that is specified in the constructor.\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a1a69d97eccb61abb5bcc4b0e1a50ba9f}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a1a69d97eccb61abb5bcc4b0e1a50ba9f}} 
+\index{Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_1_1_root}{Root}} \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup}{Pathfinding.\+Util.\+Grid\+Lookup}}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{T}]{item,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}}]{bounds }\end{DoxyParamCaption})}
+
+
+
+Add an object to the lookup data structure. Returns\+: A handle which can be used for Move operations 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a6b253f02568dfbefa26e7d3275497054}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a6b253f02568dfbefa26e7d3275497054}} 
+\index{Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}!Move@{Move}}
+\index{Move@{Move}!Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup}{Pathfinding.\+Util.\+Grid\+Lookup}}$<$ T $>$.Move (\begin{DoxyParamCaption}\item[{T}]{item,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}}]{bounds }\end{DoxyParamCaption})}
+
+
+
+Move an object to occupy a new set of cells 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a539de22c8cf41f1c616d77e68befd593}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a539de22c8cf41f1c616d77e68befd593}} 
+\index{Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}!QueryRect$<$ U $>$@{QueryRect$<$ U $>$}}
+\index{QueryRect$<$ U $>$@{QueryRect$<$ U $>$}!Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{QueryRect$<$ U $>$()}{QueryRect< U >()}}
+{\footnotesize\ttfamily List$<$U$>$ \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup}{Pathfinding.\+Util.\+Grid\+Lookup}}$<$ T $>$.Query\+Rect$<$ U $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Returns all objects of a specific type inside the cells marked by the rectangle. Note\+: For better memory usage, consider pooling the list using Pathfinding.\+Util.\+List\+Pool after you are done with it 
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em U} : {\em class}]\item[{\em U} : {\em T}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a726288ce85c9e9728dc3ba8582ab868e}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a726288ce85c9e9728dc3ba8582ab868e}} 
+\index{Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup}{Pathfinding.\+Util.\+Grid\+Lookup}}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})}
+
+
+
+Removes an item from the lookup data structure 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_grid_lookup_a9ef1d623fd71864ed273797862c97ed0}\label{class_pathfinding_1_1_util_1_1_grid_lookup_a9ef1d623fd71864ed273797862c97ed0}} 
+\index{Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}!AllItems@{AllItems}}
+\index{AllItems@{AllItems}!Pathfinding.Util.GridLookup$<$ T $>$@{Pathfinding.Util.GridLookup$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AllItems}{AllItems}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup_1_1_root}{Root}} \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_grid_lookup}{Pathfinding.\+Util.\+Grid\+Lookup}}$<$ T $>$.All\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Linked list of all items 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Utilities/Grid\+Lookup.\+cs\end{DoxyCompactItemize}

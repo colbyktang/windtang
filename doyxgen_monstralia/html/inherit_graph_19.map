@@ -1,0 +1,37 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,684,61,711"/>
+<area shape="rect" id="node2" href="$class_anima2_d_1_1_bone2_d_editor.html" title=" " alt="" coords="157,5,316,32"/>
+<area shape="rect" id="node3" href="$class_anima2_d_1_1_ik2_d_editor.html" title=" " alt="" coords="167,56,306,83"/>
+<area shape="rect" id="node6" href="$class_anima2_d_1_1_ik_group_editor.html" title=" " alt="" coords="157,107,316,133"/>
+<area shape="rect" id="node7" href="$class_anima2_d_1_1_pose_manager_editor.html" title=" " alt="" coords="140,157,333,184"/>
+<area shape="rect" id="node8" href="$class_anima2_d_1_1_sprite_mesh_animation_editor.html" title=" " alt="" coords="135,209,338,250"/>
+<area shape="rect" id="node9" href="$class_anima2_d_1_1_sprite_mesh_editor.html" title=" " alt="" coords="147,275,326,301"/>
+<area shape="rect" id="node10" href="$class_anima2_d_1_1_sprite_mesh_instance_editor.html" title=" " alt="" coords="139,326,334,367"/>
+<area shape="rect" id="node11" href="$class_food_manager_editor.html" title=" " alt="" coords="169,392,304,419"/>
+<area shape="rect" id="node12" href="$class_pathfinding_1_1_animation_link_editor.html" title=" " alt="" coords="151,443,323,485"/>
+<area shape="rect" id="node13" href="$class_pathfinding_1_1_astar_path_editor.html" title=" " alt="" coords="145,509,328,536"/>
+<area shape="rect" id="node14" href="$class_pathfinding_1_1_editor_base.html" title="Helper for creating editors" alt="" coords="159,560,314,587"/>
+<area shape="rect" id="node22" href="$class_unity_standard_assets_1_1_image_effects_1_1_antialiasing_editor.html" title=" " alt="" coords="145,611,329,653"/>
+<area shape="rect" id="node23" href="$class_unity_standard_assets_1_1_image_effects_1_1_bloom_and_flares_editor.html" title=" " alt="" coords="139,677,335,718"/>
+<area shape="rect" id="node24" href="$class_unity_standard_assets_1_1_image_effects_1_1_bloom_editor.html" title=" " alt="" coords="145,742,329,783"/>
+<area shape="rect" id="node25" href="$class_unity_standard_assets_1_1_image_effects_1_1_camera_motion_blur_editor.html" title=" " alt="" coords="133,807,340,849"/>
+<area shape="rect" id="node26" href="$class_unity_standard_assets_1_1_image_effects_1_1_color_correction_curves_editor.html" title=" " alt="" coords="123,873,351,914"/>
+<area shape="rect" id="node27" href="$class_unity_standard_assets_1_1_image_effects_1_1_color_correction_lookup_editor.html" title=" " alt="" coords="121,938,352,979"/>
+<area shape="rect" id="node28" href="$class_unity_standard_assets_1_1_image_effects_1_1_crease_shading_editor.html" title=" " alt="" coords="143,1003,331,1045"/>
+<area shape="rect" id="node29" href="$class_unity_standard_assets_1_1_image_effects_1_1_depth_of_field_deprecated_editor.html" title=" " alt="" coords="133,1069,340,1125"/>
+<area shape="rect" id="node30" href="$class_unity_standard_assets_1_1_image_effects_1_1_depth_of_field_editor.html" title=" " alt="" coords="145,1150,329,1191"/>
+<area shape="rect" id="node31" href="$class_unity_standard_assets_1_1_image_effects_1_1_edge_detection_editor.html" title=" " alt="" coords="144,1215,329,1257"/>
+<area shape="rect" id="node32" href="$class_unity_standard_assets_1_1_image_effects_1_1_noise_and_grain_editor.html" title=" " alt="" coords="143,1281,330,1322"/>
+<area shape="rect" id="node33" href="$class_unity_standard_assets_1_1_image_effects_1_1_sun_shafts_editor.html" title=" " alt="" coords="145,1346,329,1387"/>
+<area shape="rect" id="node34" href="$class_unity_standard_assets_1_1_image_effects_1_1_tonemapping_editor.html" title=" " alt="" coords="145,1411,329,1453"/>
+<area shape="rect" id="node35" href="$class_unity_standard_assets_1_1_image_effects_1_1_vignette_and_chromatic_aberration_editor.html" title=" " alt="" coords="109,1477,364,1533"/>
+<area shape="rect" id="node4" href="$class_anima2_d_1_1_ik_c_c_d2_d_editor.html" title=" " alt="" coords="430,31,597,57"/>
+<area shape="rect" id="node5" href="$class_anima2_d_1_1_ik_limb2_d_editor.html" title=" " alt="" coords="430,81,597,108"/>
+<area shape="rect" id="node15" href="$class_pathfinding_1_1_a_i_lerp_editor.html" title=" " alt="" coords="433,419,594,445"/>
+<area shape="rect" id="node16" href="$class_pathfinding_1_1_base_a_i_editor.html" title=" " alt="" coords="430,469,597,496"/>
+<area shape="rect" id="node18" href="$class_pathfinding_1_1_graph_update_scene_editor.html" title="Editor for GraphUpdateScene" alt="" coords="412,521,615,562"/>
+<area shape="rect" id="node19" href="$class_pathfinding_1_1_raycast_modifier_editor.html" title=" " alt="" coords="422,586,605,627"/>
+<area shape="rect" id="node20" href="$class_pathfinding_1_1_seeker_editor.html" title=" " alt="" coords="431,652,596,679"/>
+<area shape="rect" id="node21" href="$class_pathfinding_1_1_smooth_modifier_editor.html" title=" " alt="" coords="423,703,603,745"/>
+<area shape="rect" id="node17" href="$class_pathfinding_1_1_legacy_1_1_legacy_a_i_path_editor.html" title=" " alt="" coords="663,462,841,503"/>
+</map>

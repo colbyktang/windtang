@@ -1,0 +1,14 @@
+<map id="Maze" name="Maze">
+<area shape="rect" id="node1" title=" " alt="" coords="945,216,1000,243"/>
+<area shape="rect" id="node2" href="$class_singleton.html" title=" " alt="" coords="675,32,807,59"/>
+<area shape="rect" id="node3" href="$class_maze_cell.html" title=" " alt="" coords="236,161,312,188"/>
+<area shape="rect" id="node6" href="$class_maze_cell_edge.html" title=" " alt="" coords="402,61,509,88"/>
+<area shape="rect" id="node9" href="$class_maze_door.html" title=" " alt="" coords="415,399,496,425"/>
+<area shape="rect" id="node12" href="$class_b_maze_finishline.html" title=" " alt="" coords="396,241,515,268"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,268,116,295"/>
+<area shape="rect" id="node10" href="$class_factory.html" title=" " alt="" coords="707,303,774,329"/>
+<area shape="rect" id="node5" href="$class_maze_passage.html" title=" " alt="" coords="688,133,793,160"/>
+<area shape="rect" id="node8" href="$class_maze_wall.html" title=" " alt="" coords="701,83,781,109"/>
+<area shape="rect" id="node7" href="$struct_int_vector2.html" title=" " alt="" coords="20,5,101,32"/>
+<area shape="rect" id="node11" title=" " alt="" coords="385,348,525,375"/>
+</map>

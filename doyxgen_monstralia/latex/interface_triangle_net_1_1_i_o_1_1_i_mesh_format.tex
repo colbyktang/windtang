@@ -1,0 +1,74 @@
+\hypertarget{interface_triangle_net_1_1_i_o_1_1_i_mesh_format}{}\doxysection{Triangle\+Net.\+I\+O.\+I\+Mesh\+Format Interface Reference}
+\label{interface_triangle_net_1_1_i_o_1_1_i_mesh_format}\index{TriangleNet.IO.IMeshFormat@{TriangleNet.IO.IMeshFormat}}
+
+
+Interface for mesh I/O.  
+
+
+
+
+Inheritance diagram for Triangle\+Net.\+I\+O.\+I\+Mesh\+Format\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} \mbox{\hyperlink{interface_triangle_net_1_1_i_o_1_1_i_mesh_format_a389d505e09ca2dcb554b5658de274a57}{Import}} (string filename)
+\begin{DoxyCompactList}\small\item\em Read a file containing a mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_triangle_net_1_1_i_o_1_1_i_mesh_format_af1348255bfa8f587b3aba7e0f8f21b48}{Write}} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} mesh, string filename)
+\begin{DoxyCompactList}\small\item\em Save a mesh to disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for mesh I/O. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_triangle_net_1_1_i_o_1_1_i_mesh_format_a389d505e09ca2dcb554b5658de274a57}\label{interface_triangle_net_1_1_i_o_1_1_i_mesh_format_a389d505e09ca2dcb554b5658de274a57}} 
+\index{TriangleNet.IO.IMeshFormat@{TriangleNet.IO.IMeshFormat}!Import@{Import}}
+\index{Import@{Import}!TriangleNet.IO.IMeshFormat@{TriangleNet.IO.IMeshFormat}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} Triangle\+Net.\+I\+O.\+I\+Mesh\+Format.\+Import (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Read a file containing a mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path of the file to read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the \mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} class.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_triangle_format_a1c0655ae086c1a8f3d8b276e46cfac6b}{Triangle\+Net.\+I\+O.\+Triangle\+Format}}.
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_i_o_1_1_i_mesh_format_af1348255bfa8f587b3aba7e0f8f21b48}\label{interface_triangle_net_1_1_i_o_1_1_i_mesh_format_af1348255bfa8f587b3aba7e0f8f21b48}} 
+\index{TriangleNet.IO.IMeshFormat@{TriangleNet.IO.IMeshFormat}!Write@{Write}}
+\index{Write@{Write}!TriangleNet.IO.IMeshFormat@{TriangleNet.IO.IMeshFormat}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+I\+O.\+I\+Mesh\+Format.\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}}}]{mesh,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Save a mesh to disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & An instance of the \mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} class.\\
+\hline
+{\em filename} & The path of the file to save.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_triangle_format_a8f1a5231c3f7357571f8c83517283a7b}{Triangle\+Net.\+I\+O.\+Triangle\+Format}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+I\+O/I\+Mesh\+Format.\+cs\end{DoxyCompactItemize}

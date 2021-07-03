@@ -1,0 +1,71 @@
+\hypertarget{class_monster_balance_controller}{}\doxysection{Monster\+Balance\+Controller Class Reference}
+\label{class_monster_balance_controller}\index{MonsterBalanceController@{MonsterBalanceController}}
+Inheritance diagram for Monster\+Balance\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_monster_balance_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monster_balance_controller_a318f26cb3eebf64960e7b0a3dbfec7f7}\label{class_monster_balance_controller_a318f26cb3eebf64960e7b0a3dbfec7f7}} 
+void {\bfseries Set\+Tilt\+Speed\+Modifier} (float modifier)
+\item 
+void \mbox{\hyperlink{class_monster_balance_controller_a1cfb0b0ee212fb715cafc2eed7b81a49}{Straighten\+Monster\+Out}} (float direction)
+\begin{DoxyCompactList}\small\item\em Rotates the mosnter based on player input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_monster_balance_controller_a4035435663d166689c020e77e9f2eb08}\label{class_monster_balance_controller_a4035435663d166689c020e77e9f2eb08}} 
+void {\bfseries Set\+Tilt\+Warning\+Slider} (Slider slider)
+\item 
+void \mbox{\hyperlink{class_monster_balance_controller_aa8cc6eb51d4ac2d82975e8586ee52c08}{Apply\+Wind\+Force}} (float dir)
+\begin{DoxyCompactList}\small\item\em adds the wind force to the player \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monster_balance_controller_a6b20e86e30d269e85b3c2f7d36343993}\label{class_monster_balance_controller_a6b20e86e30d269e85b3c2f7d36343993}} 
+float {\bfseries tilt\+Direction}
+\item 
+\mbox{\Hypertarget{class_monster_balance_controller_a0c9241e9faf9a1aa1777cbb400e6e492}\label{class_monster_balance_controller_a0c9241e9faf9a1aa1777cbb400e6e492}} 
+float {\bfseries tilt\+Speed}
+\item 
+\mbox{\Hypertarget{class_monster_balance_controller_a5898be3a3e9f77352873df81a7d95630}\label{class_monster_balance_controller_a5898be3a3e9f77352873df81a7d95630}} 
+bool {\bfseries is\+Main\+Game} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monster_balance_controller_aa8cc6eb51d4ac2d82975e8586ee52c08}\label{class_monster_balance_controller_aa8cc6eb51d4ac2d82975e8586ee52c08}} 
+\index{MonsterBalanceController@{MonsterBalanceController}!ApplyWindForce@{ApplyWindForce}}
+\index{ApplyWindForce@{ApplyWindForce}!MonsterBalanceController@{MonsterBalanceController}}
+\doxysubsubsection{\texorpdfstring{ApplyWindForce()}{ApplyWindForce()}}
+{\footnotesize\ttfamily void Monster\+Balance\+Controller.\+Apply\+Wind\+Force (\begin{DoxyParamCaption}\item[{float}]{dir }\end{DoxyParamCaption})}
+
+
+
+adds the wind force to the player 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The direction of the wind force\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monster_balance_controller_a1cfb0b0ee212fb715cafc2eed7b81a49}\label{class_monster_balance_controller_a1cfb0b0ee212fb715cafc2eed7b81a49}} 
+\index{MonsterBalanceController@{MonsterBalanceController}!StraightenMonsterOut@{StraightenMonsterOut}}
+\index{StraightenMonsterOut@{StraightenMonsterOut}!MonsterBalanceController@{MonsterBalanceController}}
+\doxysubsubsection{\texorpdfstring{StraightenMonsterOut()}{StraightenMonsterOut()}}
+{\footnotesize\ttfamily void Monster\+Balance\+Controller.\+Straighten\+Monster\+Out (\begin{DoxyParamCaption}\item[{float}]{direction }\end{DoxyParamCaption})}
+
+
+
+Rotates the mosnter based on player input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction the player input\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Monstralia/\+Mainframe\+Mountain/\+Monster\+Balance/Monster\+Balance\+Controller.\+cs\end{DoxyCompactItemize}

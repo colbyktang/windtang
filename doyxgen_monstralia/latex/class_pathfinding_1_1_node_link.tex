@@ -1,0 +1,140 @@
+\hypertarget{class_pathfinding_1_1_node_link}{}\doxysection{Pathfinding.\+Node\+Link Class Reference}
+\label{class_pathfinding_1_1_node_link}\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+
+
+Connects two nodes with a direct connection. It is not possible to detect this link when following a path (which may be good or bad), for that you can use \mbox{\hyperlink{class_pathfinding_1_1_node_link2}{Node\+Link2}}.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Node\+Link\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Node\+Link\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_node_link_afda5d8d4e6261c2b577cdbd13005df38}{On\+Post\+Scan}} ()
+\begin{DoxyCompactList}\small\item\em Called right after all graphs have been scanned. Flood\+Fill and other post processing has not been done. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_ade6c2f7c0d8665bae1790e8583f27a6f}\label{class_pathfinding_1_1_node_link_ade6c2f7c0d8665bae1790e8583f27a6f}} 
+void {\bfseries Internal\+On\+Post\+Scan} ()
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_node_link_a55f5c257d08608a2411127e98b6e1928}{On\+Graphs\+Post\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Called after graphs have been updated using Graph\+Update\+Objects. Eventual flood filling has been done \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a47d23e8abb3d9dc71c8b556958048544}\label{class_pathfinding_1_1_node_link_a47d23e8abb3d9dc71c8b556958048544}} 
+virtual void {\bfseries Apply} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a818502bbea56e5503f35a672f97a1ba3}\label{class_pathfinding_1_1_node_link_a818502bbea56e5503f35a672f97a1ba3}} 
+void {\bfseries On\+Draw\+Gizmos} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_pathfinding_1_1_node_link_a88d3f6ffb7e9e1af596f8371af23d536}{end}}
+\begin{DoxyCompactList}\small\item\em End position of the link \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_node_link_ad7fb10715290fa49f940176b9fbfad73}{cost\+Factor}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The connection will be this times harder/slower to traverse. Note that values lower than one will not always make the pathfinder choose this path instead of another path even though this one should lead to a lower total cost unless you also adjust the Heuristic Scale in A$\ast$ Inspector -\/$>$ Settings -\/$>$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} or disable the heuristic altogether. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_node_link_a4d2986a7665d1d4721d30d238d0f9805}{one\+Way}} = false
+\begin{DoxyCompactList}\small\item\em Make a one-\/way connection \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_node_link_ad7f4c37ece28d016effc7754df163f28}{delete\+Connection}} = false
+\begin{DoxyCompactList}\small\item\em Delete existing connection instead of adding one \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a72caac2fbcfeace3bbbdde456f31741b}\label{class_pathfinding_1_1_node_link_a72caac2fbcfeace3bbbdde456f31741b}} 
+Transform {\bfseries Start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a8237db4a179d4ae0105eac1ca68d1cfd}\label{class_pathfinding_1_1_node_link_a8237db4a179d4ae0105eac1ca68d1cfd}} 
+Transform {\bfseries End}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Connects two nodes with a direct connection. It is not possible to detect this link when following a path (which may be good or bad), for that you can use \mbox{\hyperlink{class_pathfinding_1_1_node_link2}{Node\+Link2}}. 
+
+\mbox{[}Open online documentation to see images\mbox{]}
+
+See\+: editing-\/graphs (view in online documentation for working links)
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a55f5c257d08608a2411127e98b6e1928}\label{class_pathfinding_1_1_node_link_a55f5c257d08608a2411127e98b6e1928}} 
+\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}!OnGraphsPostUpdate@{OnGraphsPostUpdate}}
+\index{OnGraphsPostUpdate@{OnGraphsPostUpdate}!Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+\doxysubsubsection{\texorpdfstring{OnGraphsPostUpdate()}{OnGraphsPostUpdate()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Node\+Link.\+On\+Graphs\+Post\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called after graphs have been updated using Graph\+Update\+Objects. Eventual flood filling has been done 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_modifier_a4110ce1b23206e5425c910c25b7d56df}{Pathfinding.\+Graph\+Modifier}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_afda5d8d4e6261c2b577cdbd13005df38}\label{class_pathfinding_1_1_node_link_afda5d8d4e6261c2b577cdbd13005df38}} 
+\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}!OnPostScan@{OnPostScan}}
+\index{OnPostScan@{OnPostScan}!Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+\doxysubsubsection{\texorpdfstring{OnPostScan()}{OnPostScan()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Node\+Link.\+On\+Post\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called right after all graphs have been scanned. Flood\+Fill and other post processing has not been done. 
+
+Warning\+: Since On\+Enable and Awake are called roughly in the same time, the only way to ensure that these scripts get this call when scanning in Awake is to set the Script Execution Order for \mbox{\hyperlink{class_astar_path}{Astar\+Path}} to some time later than default time (see Edit -\/$>$ Project Settings -\/$>$ Script Execution Order). T\+O\+DO\+: Is this still relevant? A call to Find\+All\+Modifiers should have before this method is called so the above warning is probably not relevant anymore.
+
+See\+: On\+Late\+Post\+Scan
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_modifier_ae670bdb303bee98e9efc94bab57230cf}{Pathfinding.\+Graph\+Modifier}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_ad7fb10715290fa49f940176b9fbfad73}\label{class_pathfinding_1_1_node_link_ad7fb10715290fa49f940176b9fbfad73}} 
+\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}!costFactor@{costFactor}}
+\index{costFactor@{costFactor}!Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+\doxysubsubsection{\texorpdfstring{costFactor}{costFactor}}
+{\footnotesize\ttfamily float Pathfinding.\+Node\+Link.\+cost\+Factor = 1.\+0f}
+
+
+
+The connection will be this times harder/slower to traverse. Note that values lower than one will not always make the pathfinder choose this path instead of another path even though this one should lead to a lower total cost unless you also adjust the Heuristic Scale in A$\ast$ Inspector -\/$>$ Settings -\/$>$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} or disable the heuristic altogether. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_ad7f4c37ece28d016effc7754df163f28}\label{class_pathfinding_1_1_node_link_ad7f4c37ece28d016effc7754df163f28}} 
+\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}!deleteConnection@{deleteConnection}}
+\index{deleteConnection@{deleteConnection}!Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+\doxysubsubsection{\texorpdfstring{deleteConnection}{deleteConnection}}
+{\footnotesize\ttfamily bool Pathfinding.\+Node\+Link.\+delete\+Connection = false}
+
+
+
+Delete existing connection instead of adding one 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a88d3f6ffb7e9e1af596f8371af23d536}\label{class_pathfinding_1_1_node_link_a88d3f6ffb7e9e1af596f8371af23d536}} 
+\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}!end@{end}}
+\index{end@{end}!Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily Transform Pathfinding.\+Node\+Link.\+end}
+
+
+
+End position of the link 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link_a4d2986a7665d1d4721d30d238d0f9805}\label{class_pathfinding_1_1_node_link_a4d2986a7665d1d4721d30d238d0f9805}} 
+\index{Pathfinding.NodeLink@{Pathfinding.NodeLink}!oneWay@{oneWay}}
+\index{oneWay@{oneWay}!Pathfinding.NodeLink@{Pathfinding.NodeLink}}
+\doxysubsubsection{\texorpdfstring{oneWay}{oneWay}}
+{\footnotesize\ttfamily bool Pathfinding.\+Node\+Link.\+one\+Way = false}
+
+
+
+Make a one-\/way connection 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Node\+Link.\+cs\end{DoxyCompactItemize}

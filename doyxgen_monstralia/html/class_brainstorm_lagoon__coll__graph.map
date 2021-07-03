@@ -1,0 +1,12 @@
+<map id="BrainstormLagoon" name="BrainstormLagoon">
+<area shape="rect" id="node1" title=" " alt="" coords="5,540,132,567"/>
+<area shape="rect" id="node2" href="$class_island_section.html" title=" " alt="" coords="19,464,119,491"/>
+<area shape="rect" id="node3" title=" " alt="" coords="63,184,173,211"/>
+<area shape="rect" id="node5" href="$class_monster.html" title=" " alt="" coords="245,375,314,401"/>
+<area shape="rect" id="node8" href="$class_monster_animations.html" title=" " alt="" coords="107,285,241,312"/>
+<area shape="rect" id="node4" title=" " alt="" coords="133,5,210,32"/>
+<area shape="rect" id="node10" href="$struct_emotion_data_1_1_emotion_struct.html" title=" " alt="" coords="79,95,263,121"/>
+<area shape="rect" id="node6" href="$class_monster_data.html" title=" " alt="" coords="299,235,395,261"/>
+<area shape="rect" id="node7" title=" " alt="" coords="288,95,407,121"/>
+<area shape="rect" id="node9" href="$class_emotion_data.html" title=" " alt="" coords="197,184,295,211"/>
+</map>

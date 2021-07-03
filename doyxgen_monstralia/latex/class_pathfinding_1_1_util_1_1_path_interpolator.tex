@@ -1,0 +1,164 @@
+\hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator}{}\doxysection{Pathfinding.\+Util.\+Path\+Interpolator Class Reference}
+\label{class_pathfinding_1_1_util_1_1_path_interpolator}\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+
+
+Interpolates along a sequence of points  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a8f0602315ad2d3d8e17fd18c0793c6bd}{Set\+Path}} (List$<$ Vector3 $>$ path)
+\begin{DoxyCompactList}\small\item\em Set the path to interpolate along. This will reset all interpolation variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_aca7a093e9c16f9b57eac39803c1394ec}{Move\+To\+Segment}} (int index, float fraction\+Along\+Segment)
+\begin{DoxyCompactList}\small\item\em Move to the specified segment and move a fraction of the way to the next segment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a9bf33cb59455d4f813c1c8affb8572c0}{Move\+To\+Closest\+Point}} (Vector3 point)
+\begin{DoxyCompactList}\small\item\em Move as close as possible to the specified point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a8fb79ba89f3f175f52e21e55295057a2}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a8fb79ba89f3f175f52e21e55295057a2}} 
+void {\bfseries Move\+To\+Locally\+Closest\+Point} (Vector3 point, bool allow\+Forwards=true, bool allow\+Backwards=true)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_aa880939d45124405831b2b80fcb1d870}\label{class_pathfinding_1_1_util_1_1_path_interpolator_aa880939d45124405831b2b80fcb1d870}} 
+void {\bfseries Move\+To\+Circle\+Intersection2D} (Vector3 circle\+Center3D, float radius, \mbox{\hyperlink{interface_pathfinding_1_1_util_1_1_i_movement_plane}{I\+Movement\+Plane}} transform)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a2fbcd02499198b80377559bdad37dead}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a2fbcd02499198b80377559bdad37dead}} 
+virtual void {\bfseries Prev\+Segment} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_aeb62ab4e609d4a2f4a9692bf69a60a71}\label{class_pathfinding_1_1_util_1_1_path_interpolator_aeb62ab4e609d4a2f4a9692bf69a60a71}} 
+virtual void {\bfseries Next\+Segment} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual Vector3? \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a70895b1fb5f32b6810d10c0c59f039e2}{position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current position \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_ab14cc92ee40b05a3d3bc90607b1b5390}{end\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last point in the path \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a5eadb3d9d0b02ba3f5183f5d7a0cd611}{tangent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tangent of the curve at the current position \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a1993b0c7bd72fc988e936bd4fe1c2080}{remaining\+Distance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Remaining distance until the end of the path \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a210aa8a13504e1345a45ab050b9e3661}{distance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Traversed distance from the start of the path \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_aeb12a5c807e69481eed3bd058dd3d1d7}{segment\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current segment. The start and end points of the segment are path\mbox{[}value\mbox{]} and path\mbox{[}value+1\mbox{]}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator_a40d67c93c528a50482f6264890097c2b}{valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if this instance has a path set. See\+: Set\+Path \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interpolates along a sequence of points 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a9bf33cb59455d4f813c1c8affb8572c0}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a9bf33cb59455d4f813c1c8affb8572c0}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!MoveToClosestPoint@{MoveToClosestPoint}}
+\index{MoveToClosestPoint@{MoveToClosestPoint}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{MoveToClosestPoint()}{MoveToClosestPoint()}}
+{\footnotesize\ttfamily void Pathfinding.\+Util.\+Path\+Interpolator.\+Move\+To\+Closest\+Point (\begin{DoxyParamCaption}\item[{Vector3}]{point }\end{DoxyParamCaption})}
+
+
+
+Move as close as possible to the specified point 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_aca7a093e9c16f9b57eac39803c1394ec}\label{class_pathfinding_1_1_util_1_1_path_interpolator_aca7a093e9c16f9b57eac39803c1394ec}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!MoveToSegment@{MoveToSegment}}
+\index{MoveToSegment@{MoveToSegment}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{MoveToSegment()}{MoveToSegment()}}
+{\footnotesize\ttfamily void Pathfinding.\+Util.\+Path\+Interpolator.\+Move\+To\+Segment (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{float}]{fraction\+Along\+Segment }\end{DoxyParamCaption})}
+
+
+
+Move to the specified segment and move a fraction of the way to the next segment 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a8f0602315ad2d3d8e17fd18c0793c6bd}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a8f0602315ad2d3d8e17fd18c0793c6bd}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!SetPath@{SetPath}}
+\index{SetPath@{SetPath}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{SetPath()}{SetPath()}}
+{\footnotesize\ttfamily void Pathfinding.\+Util.\+Path\+Interpolator.\+Set\+Path (\begin{DoxyParamCaption}\item[{List$<$ Vector3 $>$}]{path }\end{DoxyParamCaption})}
+
+
+
+Set the path to interpolate along. This will reset all interpolation variables. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a210aa8a13504e1345a45ab050b9e3661}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a210aa8a13504e1345a45ab050b9e3661}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!distance@{distance}}
+\index{distance@{distance}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily float Pathfinding.\+Util.\+Path\+Interpolator.\+distance\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Traversed distance from the start of the path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_ab14cc92ee40b05a3d3bc90607b1b5390}\label{class_pathfinding_1_1_util_1_1_path_interpolator_ab14cc92ee40b05a3d3bc90607b1b5390}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!endPoint@{endPoint}}
+\index{endPoint@{endPoint}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{endPoint}{endPoint}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Util.\+Path\+Interpolator.\+end\+Point\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Last point in the path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a70895b1fb5f32b6810d10c0c59f039e2}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a70895b1fb5f32b6810d10c0c59f039e2}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!position@{position}}
+\index{position@{position}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily virtual Vector3? Pathfinding.\+Util.\+Path\+Interpolator.\+position\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Current position 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a1993b0c7bd72fc988e936bd4fe1c2080}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a1993b0c7bd72fc988e936bd4fe1c2080}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!remainingDistance@{remainingDistance}}
+\index{remainingDistance@{remainingDistance}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{remainingDistance}{remainingDistance}}
+{\footnotesize\ttfamily float Pathfinding.\+Util.\+Path\+Interpolator.\+remaining\+Distance\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Remaining distance until the end of the path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_aeb12a5c807e69481eed3bd058dd3d1d7}\label{class_pathfinding_1_1_util_1_1_path_interpolator_aeb12a5c807e69481eed3bd058dd3d1d7}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!segmentIndex@{segmentIndex}}
+\index{segmentIndex@{segmentIndex}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{segmentIndex}{segmentIndex}}
+{\footnotesize\ttfamily int Pathfinding.\+Util.\+Path\+Interpolator.\+segment\+Index\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Current segment. The start and end points of the segment are path\mbox{[}value\mbox{]} and path\mbox{[}value+1\mbox{]}. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a5eadb3d9d0b02ba3f5183f5d7a0cd611}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a5eadb3d9d0b02ba3f5183f5d7a0cd611}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!tangent@{tangent}}
+\index{tangent@{tangent}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{tangent}{tangent}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Util.\+Path\+Interpolator.\+tangent\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Tangent of the curve at the current position 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_path_interpolator_a40d67c93c528a50482f6264890097c2b}\label{class_pathfinding_1_1_util_1_1_path_interpolator_a40d67c93c528a50482f6264890097c2b}} 
+\index{Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}!valid@{valid}}
+\index{valid@{valid}!Pathfinding.Util.PathInterpolator@{Pathfinding.Util.PathInterpolator}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily bool Pathfinding.\+Util.\+Path\+Interpolator.\+valid\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if this instance has a path set. See\+: Set\+Path 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Path\+Interpolator.\+cs\end{DoxyCompactItemize}

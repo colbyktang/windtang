@@ -1,0 +1,85 @@
+\hypertarget{class_pathfinding_1_1_fade_area}{}\doxysection{Pathfinding.\+Fade\+Area Class Reference}
+\label{class_pathfinding_1_1_fade_area}\index{Pathfinding.FadeArea@{Pathfinding.FadeArea}}
+
+
+Editor helper for hiding and showing a group of G\+UI elements. Call order in On\+Inspector\+G\+UI should be\+:  
+
+
+
+
+Collaboration diagram for Pathfinding.\+Fade\+Area\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_ad76d00dcae96e76b80d0a823409be2f3}\label{class_pathfinding_1_1_fade_area_ad76d00dcae96e76b80d0a823409be2f3}} 
+{\bfseries Fade\+Area} (bool \mbox{\hyperlink{class_pathfinding_1_1_fade_area_a11d5ba0587deef9bc0a27006f9b240e4}{open}}, Editor editor, G\+U\+I\+Style area\+Style, G\+U\+I\+Style label\+Style=null)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_aaf309a7da27d7579b40c14f05fbed30c}\label{class_pathfinding_1_1_fade_area_aaf309a7da27d7579b40c14f05fbed30c}} 
+void {\bfseries Begin} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_a00b3e6ad47760c9a958cd72049214755}\label{class_pathfinding_1_1_fade_area_a00b3e6ad47760c9a958cd72049214755}} 
+void {\bfseries Header\+Label} (string label)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_acf9e7c2ef0effdcb1af7cd20dec76a32}\label{class_pathfinding_1_1_fade_area_acf9e7c2ef0effdcb1af7cd20dec76a32}} 
+void {\bfseries Header} (string label)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_af312ac8ef8f4417696b3ec5aead118d9}\label{class_pathfinding_1_1_fade_area_af312ac8ef8f4417696b3ec5aead118d9}} 
+void {\bfseries Header} (string label, ref bool \mbox{\hyperlink{class_pathfinding_1_1_fade_area_a11d5ba0587deef9bc0a27006f9b240e4}{open}})
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_aa8b050e254af393b84213d1c26f1cd95}\label{class_pathfinding_1_1_fade_area_aa8b050e254af393b84213d1c26f1cd95}} 
+bool {\bfseries Begin\+Fade} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_a13820462282ab7eaeb3586e604700048}\label{class_pathfinding_1_1_fade_area_a13820462282ab7eaeb3586e604700048}} 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_fade_area_a11d5ba0587deef9bc0a27006f9b240e4}{open}}
+\begin{DoxyCompactList}\small\item\em Is this area open. This is not the same as if any contents are visible, use Begin\+Fade for that. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_pathfinding_1_1_fade_area_af9eb696d54c1547d97c6556075212f04}{fancy\+Effects}}
+\begin{DoxyCompactList}\small\item\em Animate dropdowns when they open and close \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Editor helper for hiding and showing a group of G\+UI elements. Call order in On\+Inspector\+G\+UI should be\+: 
+
+
+\begin{DoxyItemize}
+\item Begin
+\item Header/\+Header\+Label (optional)
+\item Begin\+Fade
+\item \mbox{[}your gui elements\mbox{]} (if Begin\+Fade returns true)
+\item End
+\end{DoxyItemize}
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_af9eb696d54c1547d97c6556075212f04}\label{class_pathfinding_1_1_fade_area_af9eb696d54c1547d97c6556075212f04}} 
+\index{Pathfinding.FadeArea@{Pathfinding.FadeArea}!fancyEffects@{fancyEffects}}
+\index{fancyEffects@{fancyEffects}!Pathfinding.FadeArea@{Pathfinding.FadeArea}}
+\doxysubsubsection{\texorpdfstring{fancyEffects}{fancyEffects}}
+{\footnotesize\ttfamily bool Pathfinding.\+Fade\+Area.\+fancy\+Effects\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Animate dropdowns when they open and close 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_fade_area_a11d5ba0587deef9bc0a27006f9b240e4}\label{class_pathfinding_1_1_fade_area_a11d5ba0587deef9bc0a27006f9b240e4}} 
+\index{Pathfinding.FadeArea@{Pathfinding.FadeArea}!open@{open}}
+\index{open@{open}!Pathfinding.FadeArea@{Pathfinding.FadeArea}}
+\doxysubsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily bool Pathfinding.\+Fade\+Area.\+open}
+
+
+
+Is this area open. This is not the same as if any contents are visible, use Begin\+Fade for that. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Package\+Tools/\+Editor/Editor\+G\+U\+Ix.\+cs\end{DoxyCompactItemize}

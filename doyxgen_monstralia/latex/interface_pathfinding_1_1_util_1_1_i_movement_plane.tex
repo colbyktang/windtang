@@ -1,0 +1,33 @@
+\hypertarget{interface_pathfinding_1_1_util_1_1_i_movement_plane}{}\doxysection{Pathfinding.\+Util.\+I\+Movement\+Plane Interface Reference}
+\label{interface_pathfinding_1_1_util_1_1_i_movement_plane}\index{Pathfinding.Util.IMovementPlane@{Pathfinding.Util.IMovementPlane}}
+
+
+Transforms to and from world space to a 2D movement plane. The transformation is guaranteed to be purely a rotation so no scale or offset is used. This interface is primarily used to make it easier to write movement scripts which can handle movement both in the XZ plane and in the XY plane.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Util.\+I\+Movement\+Plane\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_pathfinding_1_1_util_1_1_i_movement_plane_aff3aacb0ba35349b114a7155dfe96188}\label{interface_pathfinding_1_1_util_1_1_i_movement_plane_aff3aacb0ba35349b114a7155dfe96188}} 
+Vector2 {\bfseries To\+Plane} (Vector3 p)
+\item 
+\mbox{\Hypertarget{interface_pathfinding_1_1_util_1_1_i_movement_plane_a18f84398ee5efd52b25398ad2d5903c4}\label{interface_pathfinding_1_1_util_1_1_i_movement_plane_a18f84398ee5efd52b25398ad2d5903c4}} 
+Vector2 {\bfseries To\+Plane} (Vector3 p, out float elevation)
+\item 
+\mbox{\Hypertarget{interface_pathfinding_1_1_util_1_1_i_movement_plane_a52f4a7f32937253930cd4b9eaee70e2b}\label{interface_pathfinding_1_1_util_1_1_i_movement_plane_a52f4a7f32937253930cd4b9eaee70e2b}} 
+Vector3 {\bfseries To\+World} (Vector2 p, float elevation=0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Transforms to and from world space to a 2D movement plane. The transformation is guaranteed to be purely a rotation so no scale or offset is used. This interface is primarily used to make it easier to write movement scripts which can handle movement both in the XZ plane and in the XY plane. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Pathfinding.\+Util.\+Graph\+Transform}}
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Utilities/Graph\+Transform.\+cs\end{DoxyCompactItemize}

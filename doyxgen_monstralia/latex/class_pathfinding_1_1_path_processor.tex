@@ -1,0 +1,148 @@
+\hypertarget{class_pathfinding_1_1_path_processor}{}\doxysection{Pathfinding.\+Path\+Processor Class Reference}
+\label{class_pathfinding_1_1_path_processor}\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+
+
+Collaboration diagram for Pathfinding.\+Path\+Processor\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock}{Graph\+Update\+Lock}}
+\begin{DoxyCompactList}\small\item\em Prevents pathfinding from running while held \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock}{Graph\+Update\+Lock}} \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a40d2b12a184b101f7d505651ad7ab1b7}{Pause\+Pathfinding}} (bool block)
+\begin{DoxyCompactList}\small\item\em Prevents pathfinding threads from starting to calculate any new paths. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_ac6b274be424a403afd2b2c9b85b5820d}\label{class_pathfinding_1_1_path_processor_ac6b274be424a403afd2b2c9b85b5820d}} 
+void {\bfseries Tick\+Non\+Multithreaded} ()
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a5c3dd6eb7bc7fc1fbc745f0f79eb40b2}{Join\+Threads}} ()
+\begin{DoxyCompactList}\small\item\em Calls \textquotesingle{}Join\textquotesingle{} on each of the threads to block until they have completed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a780e9819149aeb543177a09a068f5ae1}{Abort\+Threads}} ()
+\begin{DoxyCompactList}\small\item\em Calls \textquotesingle{}Abort\textquotesingle{} on each of the threads \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a101569e5b72e0c0f6c250a335346c778}{Get\+New\+Node\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Returns a new global node index. Warning\+: This method should not be called directly. It is used by the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a19b59025ab44f809c6095a8cdb6d718d}{Initialize\+Node}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Initializes temporary path data for a node. Warning\+: This method should not be called directly. It is used by the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a6cd64e0f395db7543d03b3875d8cdc37}{Destroy\+Node}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Destroyes the given node. This is to be called after the node has been disconnected from the graph so that it cannot be reached from any other nodes. It should only be called during graph updates, that is when the pathfinding threads are either not running or paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_path_processor_ad0ec825db6da722a6cc85356af02b528}{Num\+Threads}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of parallel pathfinders. Returns the number of concurrent processes which can calculate paths at once. When using multithreading, this will be the number of threads, if not using multithreading it is always 1 (since only 1 coroutine is used). See\+: thread\+Infos See\+: Is\+Using\+Multithreading \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_path_processor_a531ad5a015ff5dcc38e6be74af4de835}{Is\+Using\+Multithreading}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns whether or not multithreading is used \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a078b82609abfc90842707dd1bde04027}\label{class_pathfinding_1_1_path_processor_a078b82609abfc90842707dd1bde04027}} 
+System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} $>$ {\bfseries On\+Path\+Pre\+Search}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_aaa44c02fed1177c573fcbfcbf25f1b42}\label{class_pathfinding_1_1_path_processor_aaa44c02fed1177c573fcbfcbf25f1b42}} 
+System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} $>$ {\bfseries On\+Path\+Post\+Search}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_ae9b88c4fbab22af3fa09e4a13b7614ff}\label{class_pathfinding_1_1_path_processor_ae9b88c4fbab22af3fa09e4a13b7614ff}} 
+System.\+Action {\bfseries On\+Queue\+Unblocked}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a780e9819149aeb543177a09a068f5ae1}\label{class_pathfinding_1_1_path_processor_a780e9819149aeb543177a09a068f5ae1}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!AbortThreads@{AbortThreads}}
+\index{AbortThreads@{AbortThreads}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{AbortThreads()}{AbortThreads()}}
+{\footnotesize\ttfamily void Pathfinding.\+Path\+Processor.\+Abort\+Threads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls \textquotesingle{}Abort\textquotesingle{} on each of the threads 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a6cd64e0f395db7543d03b3875d8cdc37}\label{class_pathfinding_1_1_path_processor_a6cd64e0f395db7543d03b3875d8cdc37}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!DestroyNode@{DestroyNode}}
+\index{DestroyNode@{DestroyNode}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{DestroyNode()}{DestroyNode()}}
+{\footnotesize\ttfamily void Pathfinding.\+Path\+Processor.\+Destroy\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})}
+
+
+
+Destroyes the given node. This is to be called after the node has been disconnected from the graph so that it cannot be reached from any other nodes. It should only be called during graph updates, that is when the pathfinding threads are either not running or paused. 
+
+Warning\+: This method should not be called by user code. It is used internally by the system.\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a101569e5b72e0c0f6c250a335346c778}\label{class_pathfinding_1_1_path_processor_a101569e5b72e0c0f6c250a335346c778}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!GetNewNodeIndex@{GetNewNodeIndex}}
+\index{GetNewNodeIndex@{GetNewNodeIndex}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{GetNewNodeIndex()}{GetNewNodeIndex()}}
+{\footnotesize\ttfamily int Pathfinding.\+Path\+Processor.\+Get\+New\+Node\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a new global node index. Warning\+: This method should not be called directly. It is used by the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} constructor. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a19b59025ab44f809c6095a8cdb6d718d}\label{class_pathfinding_1_1_path_processor_a19b59025ab44f809c6095a8cdb6d718d}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!InitializeNode@{InitializeNode}}
+\index{InitializeNode@{InitializeNode}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{InitializeNode()}{InitializeNode()}}
+{\footnotesize\ttfamily void Pathfinding.\+Path\+Processor.\+Initialize\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})}
+
+
+
+Initializes temporary path data for a node. Warning\+: This method should not be called directly. It is used by the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} constructor. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a5c3dd6eb7bc7fc1fbc745f0f79eb40b2}\label{class_pathfinding_1_1_path_processor_a5c3dd6eb7bc7fc1fbc745f0f79eb40b2}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!JoinThreads@{JoinThreads}}
+\index{JoinThreads@{JoinThreads}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{JoinThreads()}{JoinThreads()}}
+{\footnotesize\ttfamily void Pathfinding.\+Path\+Processor.\+Join\+Threads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls \textquotesingle{}Join\textquotesingle{} on each of the threads to block until they have completed 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a40d2b12a184b101f7d505651ad7ab1b7}\label{class_pathfinding_1_1_path_processor_a40d2b12a184b101f7d505651ad7ab1b7}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!PausePathfinding@{PausePathfinding}}
+\index{PausePathfinding@{PausePathfinding}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{PausePathfinding()}{PausePathfinding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_path_processor_1_1_graph_update_lock}{Graph\+Update\+Lock}} Pathfinding.\+Path\+Processor.\+Pause\+Pathfinding (\begin{DoxyParamCaption}\item[{bool}]{block }\end{DoxyParamCaption})}
+
+
+
+Prevents pathfinding threads from starting to calculate any new paths. 
+
+Returns\+: A lock object. You need to call Unlock on that object to allow pathfinding to resume.
+
+Note\+: In most cases this should not be called from user code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & If true, this call will block until all pathfinding threads are paused. otherwise the threads will be paused as soon as they are done with what they are currently doing.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_a531ad5a015ff5dcc38e6be74af4de835}\label{class_pathfinding_1_1_path_processor_a531ad5a015ff5dcc38e6be74af4de835}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!IsUsingMultithreading@{IsUsingMultithreading}}
+\index{IsUsingMultithreading@{IsUsingMultithreading}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{IsUsingMultithreading}{IsUsingMultithreading}}
+{\footnotesize\ttfamily bool Pathfinding.\+Path\+Processor.\+Is\+Using\+Multithreading\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns whether or not multithreading is used 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_path_processor_ad0ec825db6da722a6cc85356af02b528}\label{class_pathfinding_1_1_path_processor_ad0ec825db6da722a6cc85356af02b528}} 
+\index{Pathfinding.PathProcessor@{Pathfinding.PathProcessor}!NumThreads@{NumThreads}}
+\index{NumThreads@{NumThreads}!Pathfinding.PathProcessor@{Pathfinding.PathProcessor}}
+\doxysubsubsection{\texorpdfstring{NumThreads}{NumThreads}}
+{\footnotesize\ttfamily int Pathfinding.\+Path\+Processor.\+Num\+Threads\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Number of parallel pathfinders. Returns the number of concurrent processes which can calculate paths at once. When using multithreading, this will be the number of threads, if not using multithreading it is always 1 (since only 1 coroutine is used). See\+: thread\+Infos See\+: Is\+Using\+Multithreading 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Path\+Processor.\+cs\end{DoxyCompactItemize}

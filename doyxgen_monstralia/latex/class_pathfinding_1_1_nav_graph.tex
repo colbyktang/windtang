@@ -1,0 +1,525 @@
+\hypertarget{class_pathfinding_1_1_nav_graph}{}\doxysection{Pathfinding.\+Nav\+Graph Class Reference}
+\label{class_pathfinding_1_1_nav_graph}\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+
+
+Base class for all graphs  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Nav\+Graph\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Nav\+Graph\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a8a16a2a7653e1420cf4863371782b7e9}{Count\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Number of nodes in the graph. Note that this is, unless the graph type has overriden it, an O(n) operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a362fe9b5f2b34ce2072cd2fe3ae9df41}{Get\+Nodes}} (System.\+Func$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}, bool $>$ action)
+\begin{DoxyCompactList}\small\item\em Calls a delegate with all nodes in the graph until the delegate returns false \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a1f30352703d9a3f192d6e6b44d86c8b3}{Get\+Nodes}} (System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ action)
+\begin{DoxyCompactList}\small\item\em Calls a delegate with all nodes in the graph. This is the primary way of iterating through all nodes in a graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a3049ffffe5710620b2dc6c1455ad4491}{Set\+Matrix}} (Matrix4x4 m)
+\begin{DoxyCompactList}\small\item\em Use to set both matrix and inverse\+Matrix at the same time. Deprecated\+: Use the transform field (only available on some graph types) instead \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_ace6ed1b78ad47b8d70203c7800a4c500}{Relocate\+Nodes}} (Matrix4x4 old\+Matrix, Matrix4x4 new\+Matrix)
+\begin{DoxyCompactList}\small\item\em Moves nodes in this graph. Deprecated\+: Use \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}{Relocate\+Nodes(\+Matrix4x4)}} instead. To keep the same behavior you can call Relocate\+Nodes(new\+Matrix $\ast$ old\+Matrix.\+inverse). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}{Relocate\+Nodes}} (Matrix4x4 delta\+Matrix)
+\begin{DoxyCompactList}\small\item\em Moves the nodes in this graph. Multiplies all node positions by delta\+Matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a919cd71cd3aaf31a376954ccd242a0fc}{Get\+Nearest}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position. See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{Pathfinding.\+N\+N\+Constraint.\+None}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a7be6716afaa120d12a3a46ab643d66aa}{Get\+Nearest}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a75522d1273f1c06c49c1aa951a459b77}{Get\+Nearest}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint, \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} hint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a7f8d00bf59f014706eabe25c2b0b7ad4}{Get\+Nearest\+Force}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{constraint }}. Returns\+: an \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}. This method will only return an empty \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} if there are no nodes which comply with the specified constraint. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_ad8260c48f069abefb9255f6b2c4ad57f}{Scan\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Scan the graph. Deprecated\+: Use \mbox{\hyperlink{class_astar_path_a9751550dc6954212dcb2e03aecafbcf6}{Astar\+Path.\+Scan()}} instead \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a39f2705caa347e4614d2b46fd0ac5f27}{Scan}} ()
+\begin{DoxyCompactList}\small\item\em Scan the graph. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a20c009ff8b9c2de703a2758e6549ef4c}{On\+Draw\+Gizmos}} (\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos}{Retained\+Gizmos}} gizmos, bool draw\+Nodes)
+\begin{DoxyCompactList}\small\item\em Draw gizmos for the graph \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_astar_path}{Astar\+Path}} \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a5233a2d9372945ba27bbbe8400b7e31f}{active}}
+\begin{DoxyCompactList}\small\item\em Reference to the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} object in the scene \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_ad9ab35eb4097d1fc510ca48f973a0b94}{guid}}
+\begin{DoxyCompactList}\small\item\em Used as an ID of the graph, considered to be unique. Note\+: This is \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Pathfinding.\+Util.\+Guid}} not System.\+Guid. A replacement for System.\+Guid was coded for better compatibility with i\+OS \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_aeafaa83e8122bd51e4315e750c4e9e90}{initial\+Penalty}}
+\begin{DoxyCompactList}\small\item\em Default penalty to apply to all nodes \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a06e1e5395ad7d2a028a9d8d26e00b737}{open}}
+\begin{DoxyCompactList}\small\item\em Is the graph open in the editor \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a3ea8b91c832336eef1e29480bc14446f}{graph\+Index}}
+\begin{DoxyCompactList}\small\item\em Index of the graph, used for identification purposes \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_af75534eb58417a570acdfc34a1996ea1}{name}}
+\begin{DoxyCompactList}\small\item\em Name of the graph. Can be set in the unity editor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a32e9110ba205546aa55308d92d376efc}{draw\+Gizmos}} = true
+\begin{DoxyCompactList}\small\item\em Enable to draw gizmos in the Unity scene view. In the inspector this value corresponds to the state of the \textquotesingle{}eye\textquotesingle{} icon in the top left corner of every graph inspector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a0529eac361e580f3c5c6a51d2e2b42ca}{info\+Screen\+Open}}
+\begin{DoxyCompactList}\small\item\em Used in the editor to check if the info screen is open. Should be inside U\+N\+I\+T\+Y\+\_\+\+E\+D\+I\+T\+OR only $<$see cref=\char`\"{}ifs\char`\"{}/$>$ but just in case anyone tries to serialize a \mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} instance using Unity, I have left it like this as it would otherwise cause a crash when building. Version 3.\+0.\+8.\+1 was released because of this bug only \end{DoxyCompactList}\item 
+Matrix4x4 \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a00f3348e5c7a4e145cb9cf19bd3439b8}{matrix}} = Matrix4x4.\+identity
+\begin{DoxyCompactList}\small\item\em A matrix for translating/rotating/scaling the graph. Deprecated\+: Use the transform field (only available on some graph types) instead \end{DoxyCompactList}\item 
+Matrix4x4 \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_aabd3773bb3c827621a85425a76636b55}{inverse\+Matrix}} = Matrix4x4.\+identity
+\begin{DoxyCompactList}\small\item\em Inverse of matrix. Deprecated\+: Use the transform field (only available on some graph types) instead \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_aa244cacb06444c24a23935a44383a791}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Function for cleaning up references. This will be called on the same time as On\+Disable on the game\+Object which the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} script is attached to (remember, not in the editor). Use for any cleanup code such as cleaning up static variables which otherwise might prevent resources from being collected. Use by creating a function overriding this one in a graph class, but always call base.\+On\+Destroy () in that function. All nodes should be destroyed in this function otherwise a memory leak will arise. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_adf427b4cbf495954ba3709b7d1bd4e10}{Destroy\+All\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Destroys all nodes in the graph. Warning\+: This is an internal method. Unless you have a very good reason, you should probably not call it. \end{DoxyCompactList}\item 
+abstract I\+Enumerable$<$ \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} $>$ \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a98ea7af57e744d11545181ff265c6abe}{Scan\+Internal}} ()
+\begin{DoxyCompactList}\small\item\em Internal method to scan the graph. Called from \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}}. Override this function to implement custom scanning logic. \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} objects can be yielded to show progress info in the editor and to split up processing over several frames when using async scanning. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_abc97e0461bddc710397f650be9461108}{Serialize\+Extra\+Info}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Serializes graph type specific node data. This function can be overriden to serialize extra node information (or graph information for that matter) which cannot be serialized using the standard serialization. Serialize the data in any way you want and return a byte array. When loading, the exact same byte array will be passed to the Deserialize\+Extra\+Info function.~\newline
+These functions will only be called if node serialization is enabled.~\newline
+\end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}{Deserialize\+Extra\+Info}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Deserializes graph type specific node data. See\+: Serialize\+Extra\+Info \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a4f22c1d0267887f4430686d0015c97c6}{Post\+Deserialization}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Called after all deserialization has been done for all graphs. Can be used to set up more graph data which is not serialized \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a72bf5ffc375940c938f31accb8e1d02a}{Deserialize\+Settings\+Compatibility}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em An old format for serializing settings. Deprecated\+: This is deprecated now, but the deserialization code is kept to avoid loosing data when upgrading from older versions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a3d2718502f87cfaac57bb10bb20d199f}\label{class_pathfinding_1_1_nav_graph_a3d2718502f87cfaac57bb10bb20d199f}} 
+void {\bfseries Draw\+Unwalkable\+Nodes} (float size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for all graphs 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a8a16a2a7653e1420cf4863371782b7e9}\label{class_pathfinding_1_1_nav_graph_a8a16a2a7653e1420cf4863371782b7e9}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!CountNodes@{CountNodes}}
+\index{CountNodes@{CountNodes}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{CountNodes()}{CountNodes()}}
+{\footnotesize\ttfamily virtual int Pathfinding.\+Nav\+Graph.\+Count\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Number of nodes in the graph. Note that this is, unless the graph type has overriden it, an O(n) operation. 
+
+This is an O(1) operation for grid graphs and point graphs. For layered grid graphs it is an O(n) operation.
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a79db0cd43a5ad6287ab9d277c0c115af}{Pathfinding.\+Grid\+Graph}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_a2d35175cb678b8fc306e7102c0dc256e}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}\label{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!DeserializeExtraInfo@{DeserializeExtraInfo}}
+\index{DeserializeExtraInfo@{DeserializeExtraInfo}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{DeserializeExtraInfo()}{DeserializeExtraInfo()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+Deserialize\+Extra\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deserializes graph type specific node data. See\+: Serialize\+Extra\+Info 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a080bfda69e7f9358282b9af43b207a07}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a3f6ef6c01d28438e3b883d08bef8561a}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_ae7e7ab04e795f2d57b830d174c1c9a3f}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a72bf5ffc375940c938f31accb8e1d02a}\label{class_pathfinding_1_1_nav_graph_a72bf5ffc375940c938f31accb8e1d02a}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!DeserializeSettingsCompatibility@{DeserializeSettingsCompatibility}}
+\index{DeserializeSettingsCompatibility@{DeserializeSettingsCompatibility}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{DeserializeSettingsCompatibility()}{DeserializeSettingsCompatibility()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+Deserialize\+Settings\+Compatibility (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An old format for serializing settings. Deprecated\+: This is deprecated now, but the deserialization code is kept to avoid loosing data when upgrading from older versions. 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a059090b1a5e41eb725329979f30e0ebf}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_point_graph_a565b855a95b4f7bdeb20411ae086aa59}{Pathfinding.\+Point\+Graph}}, and \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_aeb8ad6d51f348290a88b1a3e61738eb5}{Pathfinding.\+Nav\+Mesh\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_adf427b4cbf495954ba3709b7d1bd4e10}\label{class_pathfinding_1_1_nav_graph_adf427b4cbf495954ba3709b7d1bd4e10}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!DestroyAllNodes@{DestroyAllNodes}}
+\index{DestroyAllNodes@{DestroyAllNodes}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{DestroyAllNodes()}{DestroyAllNodes()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+Destroy\+All\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Destroys all nodes in the graph. Warning\+: This is an internal method. Unless you have a very good reason, you should probably not call it. 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a43fce0cbbcc3630fd2d6353c4aa56275}{Pathfinding.\+Grid\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a919cd71cd3aaf31a376954ccd242a0fc}\label{class_pathfinding_1_1_nav_graph_a919cd71cd3aaf31a376954ccd242a0fc}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!GetNearest@{GetNearest}}
+\index{GetNearest@{GetNearest}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{GetNearest()}{GetNearest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Nav\+Graph.\+Get\+Nearest (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+
+
+Returns the nearest node to a position. See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{Pathfinding.\+N\+N\+Constraint.\+None}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to try to find a close node to\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a7be6716afaa120d12a3a46ab643d66aa}\label{class_pathfinding_1_1_nav_graph_a7be6716afaa120d12a3a46ab643d66aa}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!GetNearest@{GetNearest}}
+\index{GetNearest@{GetNearest}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{GetNearest()}{GetNearest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Nav\+Graph.\+Get\+Nearest (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint }\end{DoxyParamCaption})}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to try to find a close node to\\
+\hline
+{\em constraint} & Can for example tell the function to try to return a walkable node. If you do not get a good node back, consider calling Get\+Nearest\+Force.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a75522d1273f1c06c49c1aa951a459b77}\label{class_pathfinding_1_1_nav_graph_a75522d1273f1c06c49c1aa951a459b77}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!GetNearest@{GetNearest}}
+\index{GetNearest@{GetNearest}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{GetNearest()}{GetNearest()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Nav\+Graph.\+Get\+Nearest (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to try to find a close node to\\
+\hline
+{\em hint} & Can be passed to enable some graph generators to find the nearest node faster.\\
+\hline
+{\em constraint} & Can for example tell the function to try to return a walkable node. If you do not get a good node back, consider calling Get\+Nearest\+Force.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0e684d7c7b55a01a5d33b8ce15f1267e}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ac6c85c481af42079c73e34f7dd8afba0}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_a4a989410543a8366adf36101e22b24a4}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a7f8d00bf59f014706eabe25c2b0b7ad4}\label{class_pathfinding_1_1_nav_graph_a7f8d00bf59f014706eabe25c2b0b7ad4}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!GetNearestForce@{GetNearestForce}}
+\index{GetNearestForce@{GetNearestForce}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{GetNearestForce()}{GetNearestForce()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Nav\+Graph.\+Get\+Nearest\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{constraint }}. Returns\+: an \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}. This method will only return an empty \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} if there are no nodes which comply with the specified constraint. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aabcc7ba1ce6301628f2fc9712d35b4ee}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a52cc86c1628ef1a502363eaa50ccecf9}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_a2aa1aa946b287fc7862018ea55dd434d}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a1f30352703d9a3f192d6e6b44d86c8b3}\label{class_pathfinding_1_1_nav_graph_a1f30352703d9a3f192d6e6b44d86c8b3}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!GetNodes@{GetNodes}}
+\index{GetNodes@{GetNodes}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodes()}{GetNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily abstract void Pathfinding.\+Nav\+Graph.\+Get\+Nodes (\begin{DoxyParamCaption}\item[{System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calls a delegate with all nodes in the graph. This is the primary way of iterating through all nodes in a graph. 
+
+Do not change the graph structure inside the delegate.
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph;}
+
+{\ttfamily gg.\+Get\+Nodes(node =$>$ \{ // Here is a node Debug.\+Log(\char`\"{}\+I found a node at position \char`\"{} + (Vector3)node.\+position); \}); }
+
+If you want to store all nodes in a list you can do this
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph;}
+
+{\ttfamily List$<$\+Graph\+Node$>$ nodes = new List$<$\+Graph\+Node$>$(); gg.\+Get\+Nodes((System.\+Action$<$\+Graph\+Node$>$)nodes.\+Add); }
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_astar_data_a21b0e75ff4aa8af66025f06684f4e6df}{Pathfinding.\+Astar\+Data.\+Get\+Nodes}}
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a31cc47413a70213976e1f6fbbb06b162}{Pathfinding.\+Navmesh\+Base}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_af0e95e6b54153b44a920b57ac3d1a7f2}{Pathfinding.\+Grid\+Graph}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_af0a3689dc42b26bcfeb7f0128caebdc9}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a362fe9b5f2b34ce2072cd2fe3ae9df41}\label{class_pathfinding_1_1_nav_graph_a362fe9b5f2b34ce2072cd2fe3ae9df41}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!GetNodes@{GetNodes}}
+\index{GetNodes@{GetNodes}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{GetNodes()}{GetNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Nav\+Graph.\+Get\+Nodes (\begin{DoxyParamCaption}\item[{System.\+Func$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}, bool $>$}]{action }\end{DoxyParamCaption})}
+
+
+
+Calls a delegate with all nodes in the graph until the delegate returns false 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_aa244cacb06444c24a23935a44383a791}\label{class_pathfinding_1_1_nav_graph_aa244cacb06444c24a23935a44383a791}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function for cleaning up references. This will be called on the same time as On\+Disable on the game\+Object which the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} script is attached to (remember, not in the editor). Use for any cleanup code such as cleaning up static variables which otherwise might prevent resources from being collected. Use by creating a function overriding this one in a graph class, but always call base.\+On\+Destroy () in that function. All nodes should be destroyed in this function otherwise a memory leak will arise. 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a9839b26d7e60f9a49678ffe9765ea0e8}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a03a67751a8063dc101bf1989437e1094}{Pathfinding.\+Grid\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a20c009ff8b9c2de703a2758e6549ef4c}\label{class_pathfinding_1_1_nav_graph_a20c009ff8b9c2de703a2758e6549ef4c}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos}{Retained\+Gizmos}}}]{gizmos,  }\item[{bool}]{draw\+Nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draw gizmos for the graph 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a74b5d55828020e33cc126d5a98d38fac}{Pathfinding.\+Grid\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a4f22c1d0267887f4430686d0015c97c6}\label{class_pathfinding_1_1_nav_graph_a4f22c1d0267887f4430686d0015c97c6}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!PostDeserialization@{PostDeserialization}}
+\index{PostDeserialization@{PostDeserialization}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{PostDeserialization()}{PostDeserialization()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+Post\+Deserialization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called after all deserialization has been done for all graphs. Can be used to set up more graph data which is not serialized 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a7071415542fa56b048b44e029f3b4f27}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a8c980346a8d7e8a5ea0b7dd925542762}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_ab1a971495a3f3638b5253e125d217657}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}\label{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!RelocateNodes@{RelocateNodes}}
+\index{RelocateNodes@{RelocateNodes}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{RelocateNodes()}{RelocateNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+Relocate\+Nodes (\begin{DoxyParamCaption}\item[{Matrix4x4}]{delta\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the nodes in this graph. Multiplies all node positions by delta\+Matrix. 
+
+For example if you want to move all your nodes in e.\+g a point graph 10 units along the X axis from the initial position {\ttfamily  var graph = Astar\+Path.\+data.\+point\+Graph; var m = Matrix4x4.\+T\+RS (new Vector3(10,0,0), Quaternion.\+identity, Vector3.\+one); graph.\+Relocate\+Nodes (m); }
+
+Note\+: For grid graphs, navmesh graphs and recast graphs it is recommended to use their custom overloads of the Relocate\+Nodes method which take parameters for e.\+g center and node\+Size (and additional parameters) instead since they are both easier to use and are less likely to mess up pathfinding.
+
+Warning\+: This method is lossy for Point\+Graphs, so calling it many times may cause node positions to lose precision. For example if you set the scale to 0 in one call then all nodes will be scaled/moved to the same point and you will not be able to recover their original positions. The same thing happens for other -\/ less extreme -\/ values as well, but to a lesser degree.
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_point_graph_a68b9cde25f35de4629d26b0aaea10324}{Pathfinding.\+Point\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_adbfdd7210308f7125ed379980760bce0}{Pathfinding.\+Grid\+Graph}}, and \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ad1d35f59863772a1d6d7ca59a2ba518a}{Pathfinding.\+Navmesh\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_ace6ed1b78ad47b8d70203c7800a4c500}\label{class_pathfinding_1_1_nav_graph_ace6ed1b78ad47b8d70203c7800a4c500}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!RelocateNodes@{RelocateNodes}}
+\index{RelocateNodes@{RelocateNodes}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{RelocateNodes()}{RelocateNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Nav\+Graph.\+Relocate\+Nodes (\begin{DoxyParamCaption}\item[{Matrix4x4}]{old\+Matrix,  }\item[{Matrix4x4}]{new\+Matrix }\end{DoxyParamCaption})}
+
+
+
+Moves nodes in this graph. Deprecated\+: Use \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}{Relocate\+Nodes(\+Matrix4x4)}} instead. To keep the same behavior you can call Relocate\+Nodes(new\+Matrix $\ast$ old\+Matrix.\+inverse). 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a39f2705caa347e4614d2b46fd0ac5f27}\label{class_pathfinding_1_1_nav_graph_a39f2705caa347e4614d2b46fd0ac5f27}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!Scan@{Scan}}
+\index{Scan@{Scan}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{Scan()}{Scan()}}
+{\footnotesize\ttfamily void Pathfinding.\+Nav\+Graph.\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Scan the graph. 
+
+Consider using \mbox{\hyperlink{class_astar_path_a9751550dc6954212dcb2e03aecafbcf6}{Astar\+Path.\+Scan()}} instead since this function only scans this graph and if you are using multiple graphs with connections between them, then it is better to scan all graphs at once.\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_ad8260c48f069abefb9255f6b2c4ad57f}\label{class_pathfinding_1_1_nav_graph_ad8260c48f069abefb9255f6b2c4ad57f}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!ScanGraph@{ScanGraph}}
+\index{ScanGraph@{ScanGraph}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{ScanGraph()}{ScanGraph()}}
+{\footnotesize\ttfamily void Pathfinding.\+Nav\+Graph.\+Scan\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Scan the graph. Deprecated\+: Use \mbox{\hyperlink{class_astar_path_a9751550dc6954212dcb2e03aecafbcf6}{Astar\+Path.\+Scan()}} instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a98ea7af57e744d11545181ff265c6abe}\label{class_pathfinding_1_1_nav_graph_a98ea7af57e744d11545181ff265c6abe}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!ScanInternal@{ScanInternal}}
+\index{ScanInternal@{ScanInternal}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{ScanInternal()}{ScanInternal()}}
+{\footnotesize\ttfamily abstract I\+Enumerable$<$\mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}}$>$ Pathfinding.\+Nav\+Graph.\+Scan\+Internal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Internal method to scan the graph. Called from \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}}. Override this function to implement custom scanning logic. \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} objects can be yielded to show progress info in the editor and to split up processing over several frames when using async scanning. 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_a0c84858f9784131992a7f7696f9d114e}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_point_graph_a2ace5ae862dbc7d461b6c7c9fbc1b37b}{Pathfinding.\+Point\+Graph}}, and \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_a2c7f9a579c4e6bf602d71b8d0b7b98f1}{Pathfinding.\+Nav\+Mesh\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_abc97e0461bddc710397f650be9461108}\label{class_pathfinding_1_1_nav_graph_abc97e0461bddc710397f650be9461108}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!SerializeExtraInfo@{SerializeExtraInfo}}
+\index{SerializeExtraInfo@{SerializeExtraInfo}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{SerializeExtraInfo()}{SerializeExtraInfo()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Nav\+Graph.\+Serialize\+Extra\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Serializes graph type specific node data. This function can be overriden to serialize extra node information (or graph information for that matter) which cannot be serialized using the standard serialization. Serialize the data in any way you want and return a byte array. When loading, the exact same byte array will be passed to the Deserialize\+Extra\+Info function.~\newline
+These functions will only be called if node serialization is enabled.~\newline
+
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{Pathfinding.\+I\+Graph\+Internals}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_aee314bb04e71d99439814dfd5303e75c}{Pathfinding.\+Grid\+Graph}}, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aa51fb5b0af58689d2eddc54fcc8eca83}{Pathfinding.\+Navmesh\+Base}}, and \mbox{\hyperlink{class_pathfinding_1_1_point_graph_acc10dd8e03e6c34debff2df840ae4a4c}{Pathfinding.\+Point\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a3049ffffe5710620b2dc6c1455ad4491}\label{class_pathfinding_1_1_nav_graph_a3049ffffe5710620b2dc6c1455ad4491}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!SetMatrix@{SetMatrix}}
+\index{SetMatrix@{SetMatrix}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{SetMatrix()}{SetMatrix()}}
+{\footnotesize\ttfamily void Pathfinding.\+Nav\+Graph.\+Set\+Matrix (\begin{DoxyParamCaption}\item[{Matrix4x4}]{m }\end{DoxyParamCaption})}
+
+
+
+Use to set both matrix and inverse\+Matrix at the same time. Deprecated\+: Use the transform field (only available on some graph types) instead 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a5233a2d9372945ba27bbbe8400b7e31f}\label{class_pathfinding_1_1_nav_graph_a5233a2d9372945ba27bbbe8400b7e31f}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!active@{active}}
+\index{active@{active}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_astar_path}{Astar\+Path}} Pathfinding.\+Nav\+Graph.\+active}
+
+
+
+Reference to the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} object in the scene 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a32e9110ba205546aa55308d92d376efc}\label{class_pathfinding_1_1_nav_graph_a32e9110ba205546aa55308d92d376efc}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!drawGizmos@{drawGizmos}}
+\index{drawGizmos@{drawGizmos}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{drawGizmos}{drawGizmos}}
+{\footnotesize\ttfamily bool Pathfinding.\+Nav\+Graph.\+draw\+Gizmos = true}
+
+
+
+Enable to draw gizmos in the Unity scene view. In the inspector this value corresponds to the state of the \textquotesingle{}eye\textquotesingle{} icon in the top left corner of every graph inspector. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a3ea8b91c832336eef1e29480bc14446f}\label{class_pathfinding_1_1_nav_graph_a3ea8b91c832336eef1e29480bc14446f}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!graphIndex@{graphIndex}}
+\index{graphIndex@{graphIndex}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{graphIndex}{graphIndex}}
+{\footnotesize\ttfamily uint Pathfinding.\+Nav\+Graph.\+graph\+Index}
+
+
+
+Index of the graph, used for identification purposes 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_ad9ab35eb4097d1fc510ca48f973a0b94}\label{class_pathfinding_1_1_nav_graph_ad9ab35eb4097d1fc510ca48f973a0b94}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!guid@{guid}}
+\index{guid@{guid}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{guid}{guid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Guid}} Pathfinding.\+Nav\+Graph.\+guid}
+
+
+
+Used as an ID of the graph, considered to be unique. Note\+: This is \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_guid}{Pathfinding.\+Util.\+Guid}} not System.\+Guid. A replacement for System.\+Guid was coded for better compatibility with i\+OS 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a0529eac361e580f3c5c6a51d2e2b42ca}\label{class_pathfinding_1_1_nav_graph_a0529eac361e580f3c5c6a51d2e2b42ca}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!infoScreenOpen@{infoScreenOpen}}
+\index{infoScreenOpen@{infoScreenOpen}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{infoScreenOpen}{infoScreenOpen}}
+{\footnotesize\ttfamily bool Pathfinding.\+Nav\+Graph.\+info\+Screen\+Open}
+
+
+
+Used in the editor to check if the info screen is open. Should be inside U\+N\+I\+T\+Y\+\_\+\+E\+D\+I\+T\+OR only $<$see cref=\char`\"{}ifs\char`\"{}/$>$ but just in case anyone tries to serialize a \mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} instance using Unity, I have left it like this as it would otherwise cause a crash when building. Version 3.\+0.\+8.\+1 was released because of this bug only 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_aeafaa83e8122bd51e4315e750c4e9e90}\label{class_pathfinding_1_1_nav_graph_aeafaa83e8122bd51e4315e750c4e9e90}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!initialPenalty@{initialPenalty}}
+\index{initialPenalty@{initialPenalty}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{initialPenalty}{initialPenalty}}
+{\footnotesize\ttfamily uint Pathfinding.\+Nav\+Graph.\+initial\+Penalty}
+
+
+
+Default penalty to apply to all nodes 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_aabd3773bb3c827621a85425a76636b55}\label{class_pathfinding_1_1_nav_graph_aabd3773bb3c827621a85425a76636b55}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!inverseMatrix@{inverseMatrix}}
+\index{inverseMatrix@{inverseMatrix}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{inverseMatrix}{inverseMatrix}}
+{\footnotesize\ttfamily Matrix4x4 Pathfinding.\+Nav\+Graph.\+inverse\+Matrix = Matrix4x4.\+identity}
+
+
+
+Inverse of matrix. Deprecated\+: Use the transform field (only available on some graph types) instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a00f3348e5c7a4e145cb9cf19bd3439b8}\label{class_pathfinding_1_1_nav_graph_a00f3348e5c7a4e145cb9cf19bd3439b8}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!matrix@{matrix}}
+\index{matrix@{matrix}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily Matrix4x4 Pathfinding.\+Nav\+Graph.\+matrix = Matrix4x4.\+identity}
+
+
+
+A matrix for translating/rotating/scaling the graph. Deprecated\+: Use the transform field (only available on some graph types) instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_af75534eb58417a570acdfc34a1996ea1}\label{class_pathfinding_1_1_nav_graph_af75534eb58417a570acdfc34a1996ea1}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!name@{name}}
+\index{name@{name}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Pathfinding.\+Nav\+Graph.\+name}
+
+
+
+Name of the graph. Can be set in the unity editor 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_nav_graph_a06e1e5395ad7d2a028a9d8d26e00b737}\label{class_pathfinding_1_1_nav_graph_a06e1e5395ad7d2a028a9d8d26e00b737}} 
+\index{Pathfinding.NavGraph@{Pathfinding.NavGraph}!open@{open}}
+\index{open@{open}!Pathfinding.NavGraph@{Pathfinding.NavGraph}}
+\doxysubsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily bool Pathfinding.\+Nav\+Graph.\+open}
+
+
+
+Is the graph open in the editor 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/Base.\+cs\end{DoxyCompactItemize}

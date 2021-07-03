@@ -1,0 +1,225 @@
+\hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle}{}\doxysection{Triangle\+Net.\+Geometry.\+I\+Triangle Interface Reference}
+\label{interface_triangle_net_1_1_geometry_1_1_i_triangle}\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+
+
+Triangle interface.  
+
+
+
+
+Inheritance diagram for Triangle\+Net.\+Geometry.\+I\+Triangle\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_a9751848c78e51ee53dccc9a9c4436b17}{Get\+Vertex}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets a triangles vertex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle}{I\+Triangle}} \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_ad9d2ca58846e6d501745d63acc54bc5e}{Get\+Neighbor}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets a triangles neighbor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_segment}{I\+Segment}} \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_aacff3b07f472ef1f60fb3decd5e1667c}{Get\+Segment}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets a triangles segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_afd40f1aa3bc9bbfbb8bd7cb6d32c4b73}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The triangle id. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_abf4aee81bb46a228383fafb5b7f1921f}{P0}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em First vertex id of the triangle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_ae26f66bb94044fe91c7a28d74ec0b2b5}{P1}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Second vertex id of the triangle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_a4e658600a1922d04560142bc8881e657}{P2}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Third vertex id of the triangle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_ac6fb3303ac4171cd71288f86040b0598}{Supports\+Neighbors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the triangle implementation contains neighbor information. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_a73a9c18926212f1637cfb2a5b6724042}{N0}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em First neighbor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_adb663ad2289cafcbafa4729d2bd0edeb}{N1}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Second neighbor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_a5f1aea78ce620ecfb6796de445734cbf}{N2}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Third neighbor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_a36ca836b3bdd3a82fc8f6388a072e63b}{Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Triangle area constraint. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle_aa6ba4809ce39ab8736f79204aeafa422}{Region}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Region ID the triangle belongs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Triangle interface. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_ad9d2ca58846e6d501745d63acc54bc5e}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_ad9d2ca58846e6d501745d63acc54bc5e}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!GetNeighbor@{GetNeighbor}}
+\index{GetNeighbor@{GetNeighbor}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{GetNeighbor()}{GetNeighbor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle}{I\+Triangle}} Triangle\+Net.\+Geometry.\+I\+Triangle.\+Get\+Neighbor (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets a triangles neighbor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The vertex index (0, 1 or 2).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The neigbbor opposite of vertex with given index.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_triangle_a1a689fecced7ab7aa67f5956bc12f70d}{Triangle\+Net.\+Data.\+Triangle}}, and \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_input_triangle_a4222fd8556b88b7e8e012242c27d9eba}{Triangle\+Net.\+I\+O.\+Input\+Triangle}}.
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_aacff3b07f472ef1f60fb3decd5e1667c}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_aacff3b07f472ef1f60fb3decd5e1667c}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!GetSegment@{GetSegment}}
+\index{GetSegment@{GetSegment}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{GetSegment()}{GetSegment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_segment}{I\+Segment}} Triangle\+Net.\+Geometry.\+I\+Triangle.\+Get\+Segment (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets a triangles segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The vertex index (0, 1 or 2).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The segment opposite of vertex with given index.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_triangle_ad06257dd6d17ff2ba74f710da5ad0e4d}{Triangle\+Net.\+Data.\+Triangle}}, and \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_input_triangle_ab44982ed58bb6008f479efc08dde2f5e}{Triangle\+Net.\+I\+O.\+Input\+Triangle}}.
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_a9751848c78e51ee53dccc9a9c4436b17}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_a9751848c78e51ee53dccc9a9c4436b17}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{GetVertex()}{GetVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} Triangle\+Net.\+Geometry.\+I\+Triangle.\+Get\+Vertex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets a triangles vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The vertex index (0, 1 or 2).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vertex of the specified corner index.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_triangle_a9602d0459aa209dc36b29d80c944285b}{Triangle\+Net.\+Data.\+Triangle}}, and \mbox{\hyperlink{class_triangle_net_1_1_i_o_1_1_input_triangle_a58275f0f2bf11937432edb3088e76d25}{Triangle\+Net.\+I\+O.\+Input\+Triangle}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_a36ca836b3bdd3a82fc8f6388a072e63b}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_a36ca836b3bdd3a82fc8f6388a072e63b}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!Area@{Area}}
+\index{Area@{Area}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{Area}{Area}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Geometry.\+I\+Triangle.\+Area\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Triangle area constraint. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_afd40f1aa3bc9bbfbb8bd7cb6d32c4b73}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_afd40f1aa3bc9bbfbb8bd7cb6d32c4b73}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!ID@{ID}}
+\index{ID@{ID}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+ID\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The triangle id. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_a73a9c18926212f1637cfb2a5b6724042}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_a73a9c18926212f1637cfb2a5b6724042}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!N0@{N0}}
+\index{N0@{N0}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{N0}{N0}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+N0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+First neighbor. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_adb663ad2289cafcbafa4729d2bd0edeb}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_adb663ad2289cafcbafa4729d2bd0edeb}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!N1@{N1}}
+\index{N1@{N1}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{N1}{N1}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+N1\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Second neighbor. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_a5f1aea78ce620ecfb6796de445734cbf}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_a5f1aea78ce620ecfb6796de445734cbf}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!N2@{N2}}
+\index{N2@{N2}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{N2}{N2}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+N2\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Third neighbor. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_abf4aee81bb46a228383fafb5b7f1921f}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_abf4aee81bb46a228383fafb5b7f1921f}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!P0@{P0}}
+\index{P0@{P0}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{P0}{P0}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+P0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+First vertex id of the triangle. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_ae26f66bb94044fe91c7a28d74ec0b2b5}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_ae26f66bb94044fe91c7a28d74ec0b2b5}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!P1@{P1}}
+\index{P1@{P1}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{P1}{P1}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+P1\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Second vertex id of the triangle. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_a4e658600a1922d04560142bc8881e657}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_a4e658600a1922d04560142bc8881e657}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!P2@{P2}}
+\index{P2@{P2}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{P2}{P2}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+P2\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Third vertex id of the triangle. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_aa6ba4809ce39ab8736f79204aeafa422}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_aa6ba4809ce39ab8736f79204aeafa422}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!Region@{Region}}
+\index{Region@{Region}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{Region}{Region}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Geometry.\+I\+Triangle.\+Region\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Region ID the triangle belongs to. 
+
+\mbox{\Hypertarget{interface_triangle_net_1_1_geometry_1_1_i_triangle_ac6fb3303ac4171cd71288f86040b0598}\label{interface_triangle_net_1_1_geometry_1_1_i_triangle_ac6fb3303ac4171cd71288f86040b0598}} 
+\index{TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}!SupportsNeighbors@{SupportsNeighbors}}
+\index{SupportsNeighbors@{SupportsNeighbors}!TriangleNet.Geometry.ITriangle@{TriangleNet.Geometry.ITriangle}}
+\doxysubsubsection{\texorpdfstring{SupportsNeighbors}{SupportsNeighbors}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Geometry.\+I\+Triangle.\+Supports\+Neighbors\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the triangle implementation contains neighbor information. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Geometry/I\+Triangle.\+cs\end{DoxyCompactItemize}

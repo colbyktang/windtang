@@ -1,0 +1,125 @@
+\hypertarget{namespace_triangle_net}{}\doxysection{Triangle\+Net Namespace Reference}
+\label{namespace_triangle_net}\index{TriangleNet@{TriangleNet}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_bad_tri_queue}{Bad\+Tri\+Queue}}
+\begin{DoxyCompactList}\small\item\em A (priority) queue for bad triangles. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_behavior}{Behavior}}
+\begin{DoxyCompactList}\small\item\em Controls the behavior of the meshing software. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_carver}{Carver}}
+\begin{DoxyCompactList}\small\item\em Carves holes into the triangulation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} data structure. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_new_location}{New\+Location}}
+\begin{DoxyCompactList}\small\item\em Find new Steiner Point locations. \end{DoxyCompactList}\item 
+class {\bfseries Primitives}
+\begin{DoxyCompactList}\small\item\em Provides some primitives regularly used in computational geometry. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_quality}{Quality}}
+\begin{DoxyCompactList}\small\item\em Provides methods for mesh quality enforcement and testing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_sampler}{Sampler}}
+\begin{DoxyCompactList}\small\item\em Used for triangle sampling in the Mesh.\+Locate method. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_triangle_net_1_1_triangle_locator}{Triangle\+Locator}}
+\begin{DoxyCompactList}\small\item\em T\+O\+DO\+: Update summary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_triangle_net_a592807b0cee4298f6142183122c013e8}{Triangulation\+Algorithm}} \{ {\bfseries Dwyer}, 
+{\bfseries Incremental}, 
+{\bfseries Sweep\+Line}
+ \}
+\begin{DoxyCompactList}\small\item\em Implemented triangulation algorithms. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_triangle_net_afcdb09657c747becce43023a65a831b8}{Locate\+Result}} \{ {\bfseries In\+Triangle}, 
+{\bfseries On\+Edge}, 
+{\bfseries On\+Vertex}, 
+{\bfseries Outside}
+ \}
+\begin{DoxyCompactList}\small\item\em Labels that signify the result of point location. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_triangle_net_a5488bef582d45079c284f1f0f3ed284c}{Insert\+Vertex\+Result}} \{ {\bfseries Successful}, 
+{\bfseries Encroaching}, 
+{\bfseries Violating}, 
+{\bfseries Duplicate}
+ \}
+\begin{DoxyCompactList}\small\item\em Labels that signify the result of vertex insertion. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_triangle_net_a89d1d40669cd4590d5c4b5608f6ee0ab}{Find\+Direction\+Result}} \{ {\bfseries Within}, 
+{\bfseries Leftcollinear}, 
+{\bfseries Rightcollinear}
+ \}
+\begin{DoxyCompactList}\small\item\em Labels that signify the result of direction finding. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_triangle_net_a748cc686585a54dcbea6958a44194f8b}{Vertex\+Type}} \{ \newline
+{\bfseries Input\+Vertex}, 
+{\bfseries Segment\+Vertex}, 
+{\bfseries Free\+Vertex}, 
+{\bfseries Dead\+Vertex}, 
+\newline
+{\bfseries Undead\+Vertex}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of the mesh vertex. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_triangle_net_a01f28148618a2635c8cb521db7908d3b}{Node\+Numbering}} \{ {\bfseries None}, 
+{\bfseries Linear}, 
+{\bfseries Cuthill\+Mc\+Kee}
+ \}
+\begin{DoxyCompactList}\small\item\em Node renumbering algorithms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_triangle_net_a89d1d40669cd4590d5c4b5608f6ee0ab}\label{namespace_triangle_net_a89d1d40669cd4590d5c4b5608f6ee0ab}} 
+\index{TriangleNet@{TriangleNet}!FindDirectionResult@{FindDirectionResult}}
+\index{FindDirectionResult@{FindDirectionResult}!TriangleNet@{TriangleNet}}
+\doxysubsubsection{\texorpdfstring{FindDirectionResult}{FindDirectionResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_triangle_net_a89d1d40669cd4590d5c4b5608f6ee0ab}{Triangle\+Net.\+Find\+Direction\+Result}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Labels that signify the result of direction finding. 
+
+The result indicates that a segment connecting the two query points falls within the direction triangle, along the left edge of the direction triangle, or along the right edge of the direction triangle. \mbox{\Hypertarget{namespace_triangle_net_a5488bef582d45079c284f1f0f3ed284c}\label{namespace_triangle_net_a5488bef582d45079c284f1f0f3ed284c}} 
+\index{TriangleNet@{TriangleNet}!InsertVertexResult@{InsertVertexResult}}
+\index{InsertVertexResult@{InsertVertexResult}!TriangleNet@{TriangleNet}}
+\doxysubsubsection{\texorpdfstring{InsertVertexResult}{InsertVertexResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_triangle_net_a5488bef582d45079c284f1f0f3ed284c}{Triangle\+Net.\+Insert\+Vertex\+Result}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Labels that signify the result of vertex insertion. 
+
+The result indicates that the vertex was inserted with complete success, was inserted but encroaches upon a subsegment, was not inserted because it lies on a segment, or was not inserted because another vertex occupies the same location. \mbox{\Hypertarget{namespace_triangle_net_afcdb09657c747becce43023a65a831b8}\label{namespace_triangle_net_afcdb09657c747becce43023a65a831b8}} 
+\index{TriangleNet@{TriangleNet}!LocateResult@{LocateResult}}
+\index{LocateResult@{LocateResult}!TriangleNet@{TriangleNet}}
+\doxysubsubsection{\texorpdfstring{LocateResult}{LocateResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_triangle_net_afcdb09657c747becce43023a65a831b8}{Triangle\+Net.\+Locate\+Result}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Labels that signify the result of point location. 
+
+The result of a search indicates that the point falls in the interior of a triangle, on an edge, on a vertex, or outside the mesh. \mbox{\Hypertarget{namespace_triangle_net_a01f28148618a2635c8cb521db7908d3b}\label{namespace_triangle_net_a01f28148618a2635c8cb521db7908d3b}} 
+\index{TriangleNet@{TriangleNet}!NodeNumbering@{NodeNumbering}}
+\index{NodeNumbering@{NodeNumbering}!TriangleNet@{TriangleNet}}
+\doxysubsubsection{\texorpdfstring{NodeNumbering}{NodeNumbering}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_triangle_net_a01f28148618a2635c8cb521db7908d3b}{Triangle\+Net.\+Node\+Numbering}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Node renumbering algorithms. 
+
+\mbox{\Hypertarget{namespace_triangle_net_a592807b0cee4298f6142183122c013e8}\label{namespace_triangle_net_a592807b0cee4298f6142183122c013e8}} 
+\index{TriangleNet@{TriangleNet}!TriangulationAlgorithm@{TriangulationAlgorithm}}
+\index{TriangulationAlgorithm@{TriangulationAlgorithm}!TriangleNet@{TriangleNet}}
+\doxysubsubsection{\texorpdfstring{TriangulationAlgorithm}{TriangulationAlgorithm}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_triangle_net_a592807b0cee4298f6142183122c013e8}{Triangle\+Net.\+Triangulation\+Algorithm}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Implemented triangulation algorithms. 
+
+\mbox{\Hypertarget{namespace_triangle_net_a748cc686585a54dcbea6958a44194f8b}\label{namespace_triangle_net_a748cc686585a54dcbea6958a44194f8b}} 
+\index{TriangleNet@{TriangleNet}!VertexType@{VertexType}}
+\index{VertexType@{VertexType}!TriangleNet@{TriangleNet}}
+\doxysubsubsection{\texorpdfstring{VertexType}{VertexType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_triangle_net_a748cc686585a54dcbea6958a44194f8b}{Triangle\+Net.\+Vertex\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of the mesh vertex. 
+

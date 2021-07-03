@@ -1,0 +1,4 @@
+<map id="DishObject" name="DishObject">
+<area shape="rect" id="node1" title="Defines the behavior of the dishes in the MemoryMatch game." alt="" coords="17,80,104,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
+</map>

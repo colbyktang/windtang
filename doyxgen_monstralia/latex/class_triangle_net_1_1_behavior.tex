@@ -1,0 +1,249 @@
+\hypertarget{class_triangle_net_1_1_behavior}{}\doxysection{Triangle\+Net.\+Behavior Class Reference}
+\label{class_triangle_net_1_1_behavior}\index{TriangleNet.Behavior@{TriangleNet.Behavior}}
+
+
+Controls the behavior of the meshing software.  
+
+
+
+
+Collaboration diagram for Triangle\+Net.\+Behavior\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_behavior_ade6275cecce7270b7629034ae409deaa}{Behavior}} (bool quality=false, double min\+Angle=20.\+0)
+\begin{DoxyCompactList}\small\item\em Creates an instance of the \mbox{\hyperlink{class_triangle_net_1_1_behavior}{Behavior}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a3dbbed620309bc1fad57b7927d8eee1f}{No\+Exact}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em No exact arithmetic. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a86d259379e3767d1d4e6d8a178a724a9}{Verbose}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_triangle_net_1_1_log}{Log}} detailed information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a9c254e89fab726d322265487ea21e6ef}{Quality}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_triangle_net_1_1_quality}{Quality}} mesh generation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_behavior_a5f1eb607bfdd09d97336fe8bb946ed63}{Min\+Angle}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum angle constraint. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_behavior_a8064fc792d417b5b5486b7169453b998}{Max\+Angle}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum angle constraint. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_behavior_acfbb35eb863be1b27bd0993d249f02e4}{Max\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum area constraint. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a0177cae4e55f79a2ecc726eb5e489787}{Var\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Apply a maximum triangle area constraint. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a56d7f665e39206dab5fb581972f84f7a}{Poly}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Input is a Planar Straight Line Graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a6dd2f7ce41dd69c47a5dc290f589487c}{Usertest}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Apply a user-\/defined triangle constraint. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a698ad85fddcf5fc08d2dd38ddb8cbff9}{Convex}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enclose the convex hull with segments. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_afe5adfbd2daeb35b823685dc9ba29ff1}{Conforming\+Delaunay}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Conforming Delaunay (all triangles are truly Delaunay). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_triangle_net_a592807b0cee4298f6142183122c013e8}{Triangulation\+Algorithm}} \mbox{\hyperlink{class_triangle_net_1_1_behavior_ab1e795d701d3f0159392db4b85fbfeaf}{Algorithm}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_triangle_net_1_1_algorithm}{Algorithm}} to use for triangulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_behavior_afc51134a07dca8d5c6be4e04ebc806e8}{No\+Bisect}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Suppresses boundary segment splitting. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_behavior_a54e56b19e50d3f8c259bd2ddb991d1f6}{Steiner\+Points}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use maximum number of Steiner points. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_aed3bbd2e770b6573ba3d06929c0c3eab}{Use\+Boundary\+Markers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute boundary information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_ac21c5d6023f804ac43aa91d6c9badd93}{No\+Holes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ignores holes in polygons. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_behavior_a2276568e517cfc818b24dcf02b982c04}{Jettison}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Jettison unused vertices from output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the behavior of the meshing software. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_ade6275cecce7270b7629034ae409deaa}\label{class_triangle_net_1_1_behavior_ade6275cecce7270b7629034ae409deaa}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Behavior@{Behavior}}
+\index{Behavior@{Behavior}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Behavior()}{Behavior()}}
+{\footnotesize\ttfamily Triangle\+Net.\+Behavior.\+Behavior (\begin{DoxyParamCaption}\item[{bool}]{quality = {\ttfamily false},  }\item[{double}]{min\+Angle = {\ttfamily 20.0} }\end{DoxyParamCaption})}
+
+
+
+Creates an instance of the \mbox{\hyperlink{class_triangle_net_1_1_behavior}{Behavior}} class. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_ab1e795d701d3f0159392db4b85fbfeaf}\label{class_triangle_net_1_1_behavior_ab1e795d701d3f0159392db4b85fbfeaf}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Algorithm@{Algorithm}}
+\index{Algorithm@{Algorithm}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Algorithm}{Algorithm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_triangle_net_a592807b0cee4298f6142183122c013e8}{Triangulation\+Algorithm}} Triangle\+Net.\+Behavior.\+Algorithm\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{namespace_triangle_net_1_1_algorithm}{Algorithm}} to use for triangulation. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_afe5adfbd2daeb35b823685dc9ba29ff1}\label{class_triangle_net_1_1_behavior_afe5adfbd2daeb35b823685dc9ba29ff1}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!ConformingDelaunay@{ConformingDelaunay}}
+\index{ConformingDelaunay@{ConformingDelaunay}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{ConformingDelaunay}{ConformingDelaunay}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Conforming\+Delaunay\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Conforming Delaunay (all triangles are truly Delaunay). 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a698ad85fddcf5fc08d2dd38ddb8cbff9}\label{class_triangle_net_1_1_behavior_a698ad85fddcf5fc08d2dd38ddb8cbff9}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Convex@{Convex}}
+\index{Convex@{Convex}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Convex}{Convex}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Convex\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enclose the convex hull with segments. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a2276568e517cfc818b24dcf02b982c04}\label{class_triangle_net_1_1_behavior_a2276568e517cfc818b24dcf02b982c04}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Jettison@{Jettison}}
+\index{Jettison@{Jettison}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Jettison}{Jettison}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Jettison\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Jettison unused vertices from output. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a8064fc792d417b5b5486b7169453b998}\label{class_triangle_net_1_1_behavior_a8064fc792d417b5b5486b7169453b998}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!MaxAngle@{MaxAngle}}
+\index{MaxAngle@{MaxAngle}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{MaxAngle}{MaxAngle}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Behavior.\+Max\+Angle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum angle constraint. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_acfbb35eb863be1b27bd0993d249f02e4}\label{class_triangle_net_1_1_behavior_acfbb35eb863be1b27bd0993d249f02e4}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!MaxArea@{MaxArea}}
+\index{MaxArea@{MaxArea}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{MaxArea}{MaxArea}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Behavior.\+Max\+Area\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum area constraint. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a5f1eb607bfdd09d97336fe8bb946ed63}\label{class_triangle_net_1_1_behavior_a5f1eb607bfdd09d97336fe8bb946ed63}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!MinAngle@{MinAngle}}
+\index{MinAngle@{MinAngle}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{MinAngle}{MinAngle}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Behavior.\+Min\+Angle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Minimum angle constraint. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_afc51134a07dca8d5c6be4e04ebc806e8}\label{class_triangle_net_1_1_behavior_afc51134a07dca8d5c6be4e04ebc806e8}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!NoBisect@{NoBisect}}
+\index{NoBisect@{NoBisect}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{NoBisect}{NoBisect}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Behavior.\+No\+Bisect\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Suppresses boundary segment splitting. 
+
+0 = split segments 1 = no new vertices on the boundary 2 = prevent all segment splitting, including internal boundaries \mbox{\Hypertarget{class_triangle_net_1_1_behavior_a3dbbed620309bc1fad57b7927d8eee1f}\label{class_triangle_net_1_1_behavior_a3dbbed620309bc1fad57b7927d8eee1f}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!NoExact@{NoExact}}
+\index{NoExact@{NoExact}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{NoExact}{NoExact}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+No\+Exact\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+No exact arithmetic. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_ac21c5d6023f804ac43aa91d6c9badd93}\label{class_triangle_net_1_1_behavior_ac21c5d6023f804ac43aa91d6c9badd93}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!NoHoles@{NoHoles}}
+\index{NoHoles@{NoHoles}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{NoHoles}{NoHoles}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+No\+Holes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ignores holes in polygons. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a56d7f665e39206dab5fb581972f84f7a}\label{class_triangle_net_1_1_behavior_a56d7f665e39206dab5fb581972f84f7a}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Poly@{Poly}}
+\index{Poly@{Poly}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Poly}{Poly}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Poly\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Input is a Planar Straight Line Graph. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a9c254e89fab726d322265487ea21e6ef}\label{class_triangle_net_1_1_behavior_a9c254e89fab726d322265487ea21e6ef}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Quality@{Quality}}
+\index{Quality@{Quality}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Quality}{Quality}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Quality\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{class_triangle_net_1_1_quality}{Quality}} mesh generation. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a54e56b19e50d3f8c259bd2ddb991d1f6}\label{class_triangle_net_1_1_behavior_a54e56b19e50d3f8c259bd2ddb991d1f6}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!SteinerPoints@{SteinerPoints}}
+\index{SteinerPoints@{SteinerPoints}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{SteinerPoints}{SteinerPoints}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Behavior.\+Steiner\+Points\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Use maximum number of Steiner points. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_aed3bbd2e770b6573ba3d06929c0c3eab}\label{class_triangle_net_1_1_behavior_aed3bbd2e770b6573ba3d06929c0c3eab}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!UseBoundaryMarkers@{UseBoundaryMarkers}}
+\index{UseBoundaryMarkers@{UseBoundaryMarkers}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{UseBoundaryMarkers}{UseBoundaryMarkers}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Use\+Boundary\+Markers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Compute boundary information. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a6dd2f7ce41dd69c47a5dc290f589487c}\label{class_triangle_net_1_1_behavior_a6dd2f7ce41dd69c47a5dc290f589487c}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Usertest@{Usertest}}
+\index{Usertest@{Usertest}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Usertest}{Usertest}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Usertest\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Apply a user-\/defined triangle constraint. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a0177cae4e55f79a2ecc726eb5e489787}\label{class_triangle_net_1_1_behavior_a0177cae4e55f79a2ecc726eb5e489787}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!VarArea@{VarArea}}
+\index{VarArea@{VarArea}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{VarArea}{VarArea}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Var\+Area\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Apply a maximum triangle area constraint. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_behavior_a86d259379e3767d1d4e6d8a178a724a9}\label{class_triangle_net_1_1_behavior_a86d259379e3767d1d4e6d8a178a724a9}} 
+\index{TriangleNet.Behavior@{TriangleNet.Behavior}!Verbose@{Verbose}}
+\index{Verbose@{Verbose}!TriangleNet.Behavior@{TriangleNet.Behavior}}
+\doxysubsubsection{\texorpdfstring{Verbose}{Verbose}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Behavior.\+Verbose\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{namespace_triangle_net_1_1_log}{Log}} detailed information. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/Behavior.\+cs\end{DoxyCompactItemize}

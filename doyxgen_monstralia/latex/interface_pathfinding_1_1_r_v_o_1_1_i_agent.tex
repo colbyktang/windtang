@@ -1,0 +1,303 @@
+\hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent}{}\doxysection{Pathfinding.\+R\+V\+O.\+I\+Agent Interface Reference}
+\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent}\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+
+
+Exposes properties of an Agent class.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+R\+V\+O.\+I\+Agent\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ae8a665f4f902ca1ce24d87da07ff3e7f}{Set\+Target}} (Vector2 target\+Point, float desired\+Speed, float max\+Speed)
+\begin{DoxyCompactList}\small\item\em Point towards which the agent should move. Usually you set this once per frame. The agent will try move as close to the target point as possible. Will take effect at the next simulation step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a5b29198a1fcad6b80cb9125d3bd7f77f}{Set\+Collision\+Normal}} (Vector2 normal)
+\begin{DoxyCompactList}\small\item\em Set the normal of a wall (or something else) the agent is currently colliding with. This is used to make the \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} system aware of things like physics or an agent being clamped to the navmesh. The velocity of this agent that other agents observe will be modified so that there is no component into the wall. The agent will however not start to avoid the wall, for that you will need to add \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} obstacles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a6dc99b6c31bf9422a575a60359c770bd}{Force\+Set\+Velocity}} (Vector2 velocity)
+\begin{DoxyCompactList}\small\item\em Set the current velocity of the agent. This will override the local avoidance input completely. It is useful if you have a player controlled character and want other agents to avoid it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a1fd7540e5876c8a66afa5ee83b164ef0}{Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position of the agent. The agent does not move by itself, a movement script has to be responsible for reading the Calculated\+Target\+Point and Calculated\+Speed properties and move towards that point with that speed. This property should ideally be set every frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a658d7e62fe018e8e6680720864f221d1}{Elevation\+Coordinate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Coordinate which separates characters in the height direction. Since \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} can be used either in 2D or 3D, it is not as simple as just using the y coordinate of the 3D position. In 3D this will most likely be set to the y coordinate, but in 2D (top down) it should in most cases be set to 0 since all characters are always in the same plane, however it may be set to some other value, for example if the game is 2D isometric. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a39a9310f859f8825ff7cfcc98d68b886}{Calculated\+Target\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optimal point to move towards to avoid collisions. The movement script should move towards this point with a speed of \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a559f0aaa9514f06295017003d8b2a99a}{Calculated\+Speed}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a559f0aaa9514f06295017003d8b2a99a}{Calculated\+Speed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optimal speed of the agent to avoid collisions. The movement script should move towards \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a39a9310f859f8825ff7cfcc98d68b886}{Calculated\+Target\+Point}} with this speed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a262a28ea22061ff4f68ff406fd8fd277}{Locked}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Locked agents will be assumed not to move \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a969e5087d9acb25f5b6d26c2e9a6ec5f}{Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Radius of the agent in world units. Agents are modelled as circles/cylinders. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ada541fdc97a1fc8c3f77eaa988859613}{Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Height of the agent in world units. Agents are modelled as circles/cylinders. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_afcee6790bb166876d6cc6b9d4b3dc0f3}{Agent\+Time\+Horizon}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Max number of estimated seconds to look into the future for collisions with agents. As it turns out, this variable is also very good for controling agent avoidance priorities. Agents with lower values will avoid other agents less and thus you can make \textquotesingle{}high priority agents\textquotesingle{} by giving them a lower value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a7958d1008b90f077c4cd88e314e57b6a}{Obstacle\+Time\+Horizon}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Max number of estimated seconds to look into the future for collisions with obstacles \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a7322f311063ecc2f0fe712acd1d97651}{Max\+Neighbours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Max number of agents to take into account. Decreasing this value can lead to better performance, increasing it can lead to better quality of the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a794b67f44f1eb309a0e43d7d1791d714}{Neighbour\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of neighbours that the agent took into account during the last simulation step \end{DoxyCompactList}\item 
+R\+V\+O\+Layer \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ad12eddb3b56c2cf9dcb60e6eac94b41e}{Layer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the avoidance layer for this agent. The \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a2660a3495b80302e1291711f1487716d}{Collides\+With}} mask on other agents will determine if they will avoid this agent. \end{DoxyCompactList}\item 
+R\+V\+O\+Layer \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a2660a3495b80302e1291711f1487716d}{Collides\+With}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Layer mask specifying which layers this agent will avoid. You can set it as Collides\+With = R\+V\+O\+Layer.\+Default\+Agent $\vert$ R\+V\+O\+Layer.\+Layer3 $\vert$ R\+V\+O\+Layer.\+Layer6 ... \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a0211db2e17e8a4760eab0bf1d185ea71}{Debug\+Draw}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Draw debug information. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_pathfinding_1_1_r_v_o_1_1_obstacle_vertex}{Obstacle\+Vertex}} $>$ \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ac4e55b74eb488c8f7a8e295cd2141efa}{Neighbour\+Obstacles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of obstacle segments which were close to the agent during the last simulation step. Can be used to apply additional wall avoidance forces for example. Segments are formed by the obstacle vertex and its .next property. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_aac40343e627d1bcbe94142448c30c874}{Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em How strongly other agents will avoid this agent. Usually a value between 0 and 1. Agents with similar priorities will avoid each other with an equal strength. If an agent sees another agent with a higher priority than itself it will avoid that agent more strongly. In the extreme case (e.\+g this agent has a priority of 0 and the other agent has a priority of 1) it will treat the other agent as being a moving obstacle. Similarly if an agent sees another agent with a lower priority than itself it will avoid that agent less. \end{DoxyCompactList}\item 
+System.\+Action \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a5755caa67a6bf970676350d5262130ab}{Pre\+Calculation\+Callback}}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Callback which will be called right before avoidance calculations are started. Used to update the other properties with the most up to date values \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exposes properties of an Agent class. 
+
+See\+: R\+V\+O\+Controller See\+: R\+V\+O\+Simulator
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a6dc99b6c31bf9422a575a60359c770bd}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a6dc99b6c31bf9422a575a60359c770bd}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!ForceSetVelocity@{ForceSetVelocity}}
+\index{ForceSetVelocity@{ForceSetVelocity}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{ForceSetVelocity()}{ForceSetVelocity()}}
+{\footnotesize\ttfamily void Pathfinding.\+R\+V\+O.\+I\+Agent.\+Force\+Set\+Velocity (\begin{DoxyParamCaption}\item[{Vector2}]{velocity }\end{DoxyParamCaption})}
+
+
+
+Set the current velocity of the agent. This will override the local avoidance input completely. It is useful if you have a player controlled character and want other agents to avoid it. 
+
+Calling this method will mark the agent as being externally controlled for 1 simulation step. Local avoidance calculations will be skipped for the next simulation step but will be resumed after that unless this method is called again.
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_r_v_o_1_1_sampled_1_1_agent_a3e911cc310e4a4ee1990e78cef7822fd}{Pathfinding.\+R\+V\+O.\+Sampled.\+Agent}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a5b29198a1fcad6b80cb9125d3bd7f77f}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a5b29198a1fcad6b80cb9125d3bd7f77f}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!SetCollisionNormal@{SetCollisionNormal}}
+\index{SetCollisionNormal@{SetCollisionNormal}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{SetCollisionNormal()}{SetCollisionNormal()}}
+{\footnotesize\ttfamily void Pathfinding.\+R\+V\+O.\+I\+Agent.\+Set\+Collision\+Normal (\begin{DoxyParamCaption}\item[{Vector2}]{normal }\end{DoxyParamCaption})}
+
+
+
+Set the normal of a wall (or something else) the agent is currently colliding with. This is used to make the \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} system aware of things like physics or an agent being clamped to the navmesh. The velocity of this agent that other agents observe will be modified so that there is no component into the wall. The agent will however not start to avoid the wall, for that you will need to add \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} obstacles. 
+
+This value will be cleared after the next simulation step, normally it should be set every frame when the collision is still happening.
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_r_v_o_1_1_sampled_1_1_agent_ac6ca794835dc968d6a56e8496fabfe67}{Pathfinding.\+R\+V\+O.\+Sampled.\+Agent}}.
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ae8a665f4f902ca1ce24d87da07ff3e7f}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ae8a665f4f902ca1ce24d87da07ff3e7f}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!SetTarget@{SetTarget}}
+\index{SetTarget@{SetTarget}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{SetTarget()}{SetTarget()}}
+{\footnotesize\ttfamily void Pathfinding.\+R\+V\+O.\+I\+Agent.\+Set\+Target (\begin{DoxyParamCaption}\item[{Vector2}]{target\+Point,  }\item[{float}]{desired\+Speed,  }\item[{float}]{max\+Speed }\end{DoxyParamCaption})}
+
+
+
+Point towards which the agent should move. Usually you set this once per frame. The agent will try move as close to the target point as possible. Will take effect at the next simulation step. 
+
+Note\+: The system assumes that the agent will stop when it reaches the target point so if you just want to move the agent in a particular direction, make sure that you set the target point a good distance in front of the character as otherwise the system may not avoid colisions that well. What would happen is that the system (in simplified terms) would think that the agents would stop before the collision and thus it wouldn\textquotesingle{}t slow down or change course. See the image below. In the image the desired\+Speed is the length of the blue arrow and the target point is the point where the black arrows point to. In the upper case the agent does not avoid the red agent (you can assume that the red agent has a very small velocity for simplicity) while in the lower case it does.~\newline
+If you are following a path a good way to pick the target point is to set it to {\ttfamily  target\+Point = direction\+To\+Next\+Waypoint.\+normalized $\ast$ remaining\+Path\+Distance } Where remaining\+Path\+Distance is the distance until the character would reach the end of the path. This works well because at the end of the path the direction to the next waypoint will just be the direction to the last point on the path and remaining\+Path\+Distance will be the distance to the last point in the path, so target\+Point will be set to simply the last point in the path. However when remaining\+Path\+Distance is large the target point will be so far away that the agent will essentially be told to move in a particular direction, which is precisely what we want. \mbox{[}Open online documentation to see images\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Point} & Target point in world space (XZ plane or XY plane depending on if the simulation is configured for 2D or 3D). Note that this is a Vector2, not a Vector3 since the system simulates everything internally in 2D. So if your agents move in the XZ plane you will have to supply it as a Vector2 with (x,z) coordinates.\\
+\hline
+{\em desired\+Speed} & Desired speed of the agent. In world units per second. The agent will try to move with this speed if possible.\\
+\hline
+{\em max\+Speed} & Max speed of the agent. In world units per second. If necessary (for example if another agent is on a collision trajectory towards this agent) the agent can move at this speed. Should be at least as high as desired\+Speed, but it is recommended to use a slightly higher value than desired\+Speed (for example desired\+Speed$\ast$1.2).\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_r_v_o_1_1_sampled_1_1_agent_a32ba9614e75f719a4a8c998f84b97257}{Pathfinding.\+R\+V\+O.\+Sampled.\+Agent}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_afcee6790bb166876d6cc6b9d4b3dc0f3}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_afcee6790bb166876d6cc6b9d4b3dc0f3}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!AgentTimeHorizon@{AgentTimeHorizon}}
+\index{AgentTimeHorizon@{AgentTimeHorizon}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{AgentTimeHorizon}{AgentTimeHorizon}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Agent\+Time\+Horizon\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Max number of estimated seconds to look into the future for collisions with agents. As it turns out, this variable is also very good for controling agent avoidance priorities. Agents with lower values will avoid other agents less and thus you can make \textquotesingle{}high priority agents\textquotesingle{} by giving them a lower value. 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a559f0aaa9514f06295017003d8b2a99a}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a559f0aaa9514f06295017003d8b2a99a}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!CalculatedSpeed@{CalculatedSpeed}}
+\index{CalculatedSpeed@{CalculatedSpeed}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{CalculatedSpeed}{CalculatedSpeed}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Calculated\+Speed\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Optimal speed of the agent to avoid collisions. The movement script should move towards \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a39a9310f859f8825ff7cfcc98d68b886}{Calculated\+Target\+Point}} with this speed. 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a39a9310f859f8825ff7cfcc98d68b886}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a39a9310f859f8825ff7cfcc98d68b886}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!CalculatedTargetPoint@{CalculatedTargetPoint}}
+\index{CalculatedTargetPoint@{CalculatedTargetPoint}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{CalculatedTargetPoint}{CalculatedTargetPoint}}
+{\footnotesize\ttfamily Vector2 Pathfinding.\+R\+V\+O.\+I\+Agent.\+Calculated\+Target\+Point\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Optimal point to move towards to avoid collisions. The movement script should move towards this point with a speed of \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a559f0aaa9514f06295017003d8b2a99a}{Calculated\+Speed}}. 
+
+Note\+: This is a Vector2, not a Vector3 as that is what the \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ae8a665f4f902ca1ce24d87da07ff3e7f}{Set\+Target}} method accepts.
+
+See\+: R\+V\+O\+Controller.\+Calculate\+Movement\+Delta.\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a2660a3495b80302e1291711f1487716d}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a2660a3495b80302e1291711f1487716d}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!CollidesWith@{CollidesWith}}
+\index{CollidesWith@{CollidesWith}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{CollidesWith}{CollidesWith}}
+{\footnotesize\ttfamily R\+V\+O\+Layer Pathfinding.\+R\+V\+O.\+I\+Agent.\+Collides\+With\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Layer mask specifying which layers this agent will avoid. You can set it as Collides\+With = R\+V\+O\+Layer.\+Default\+Agent $\vert$ R\+V\+O\+Layer.\+Layer3 $\vert$ R\+V\+O\+Layer.\+Layer6 ... 
+
+See\+: \href{http://en.wikipedia.org/wiki/Mask_(computing)}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Mask\+\_\+(computing)}}\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a0211db2e17e8a4760eab0bf1d185ea71}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a0211db2e17e8a4760eab0bf1d185ea71}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!DebugDraw@{DebugDraw}}
+\index{DebugDraw@{DebugDraw}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{DebugDraw}{DebugDraw}}
+{\footnotesize\ttfamily bool Pathfinding.\+R\+V\+O.\+I\+Agent.\+Debug\+Draw\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Draw debug information. 
+
+Note\+: Will always draw debug info in the XZ plane even if \mbox{\hyperlink{class_pathfinding_1_1_r_v_o_1_1_simulator_a4cf9a326388f56afaec5bd7a0a943d50}{Pathfinding.\+R\+V\+O.\+Simulator.\+movement\+Plane}} is set to XY. Note\+: Ignored if multithreading on the simulator component has been enabled since Unity\textquotesingle{}s Debug A\+PI can only be called from the main thread.\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a658d7e62fe018e8e6680720864f221d1}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a658d7e62fe018e8e6680720864f221d1}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!ElevationCoordinate@{ElevationCoordinate}}
+\index{ElevationCoordinate@{ElevationCoordinate}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{ElevationCoordinate}{ElevationCoordinate}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Elevation\+Coordinate\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Coordinate which separates characters in the height direction. Since \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} can be used either in 2D or 3D, it is not as simple as just using the y coordinate of the 3D position. In 3D this will most likely be set to the y coordinate, but in 2D (top down) it should in most cases be set to 0 since all characters are always in the same plane, however it may be set to some other value, for example if the game is 2D isometric. 
+
+The position is assumed to be at the base of the character (near the feet).\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ada541fdc97a1fc8c3f77eaa988859613}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ada541fdc97a1fc8c3f77eaa988859613}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!Height@{Height}}
+\index{Height@{Height}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Height of the agent in world units. Agents are modelled as circles/cylinders. 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ad12eddb3b56c2cf9dcb60e6eac94b41e}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ad12eddb3b56c2cf9dcb60e6eac94b41e}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!Layer@{Layer}}
+\index{Layer@{Layer}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{Layer}{Layer}}
+{\footnotesize\ttfamily R\+V\+O\+Layer Pathfinding.\+R\+V\+O.\+I\+Agent.\+Layer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the avoidance layer for this agent. The \mbox{\hyperlink{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a2660a3495b80302e1291711f1487716d}{Collides\+With}} mask on other agents will determine if they will avoid this agent. 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a262a28ea22061ff4f68ff406fd8fd277}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a262a28ea22061ff4f68ff406fd8fd277}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!Locked@{Locked}}
+\index{Locked@{Locked}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{Locked}{Locked}}
+{\footnotesize\ttfamily bool Pathfinding.\+R\+V\+O.\+I\+Agent.\+Locked\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Locked agents will be assumed not to move 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a7322f311063ecc2f0fe712acd1d97651}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a7322f311063ecc2f0fe712acd1d97651}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!MaxNeighbours@{MaxNeighbours}}
+\index{MaxNeighbours@{MaxNeighbours}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{MaxNeighbours}{MaxNeighbours}}
+{\footnotesize\ttfamily int Pathfinding.\+R\+V\+O.\+I\+Agent.\+Max\+Neighbours\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Max number of agents to take into account. Decreasing this value can lead to better performance, increasing it can lead to better quality of the simulation. 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a794b67f44f1eb309a0e43d7d1791d714}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a794b67f44f1eb309a0e43d7d1791d714}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!NeighbourCount@{NeighbourCount}}
+\index{NeighbourCount@{NeighbourCount}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{NeighbourCount}{NeighbourCount}}
+{\footnotesize\ttfamily int Pathfinding.\+R\+V\+O.\+I\+Agent.\+Neighbour\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Number of neighbours that the agent took into account during the last simulation step 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ac4e55b74eb488c8f7a8e295cd2141efa}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_ac4e55b74eb488c8f7a8e295cd2141efa}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!NeighbourObstacles@{NeighbourObstacles}}
+\index{NeighbourObstacles@{NeighbourObstacles}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{NeighbourObstacles}{NeighbourObstacles}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_pathfinding_1_1_r_v_o_1_1_obstacle_vertex}{Obstacle\+Vertex}}$>$ Pathfinding.\+R\+V\+O.\+I\+Agent.\+Neighbour\+Obstacles\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of obstacle segments which were close to the agent during the last simulation step. Can be used to apply additional wall avoidance forces for example. Segments are formed by the obstacle vertex and its .next property. 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]Always returns null \end{DoxyRefDesc}
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a7958d1008b90f077c4cd88e314e57b6a}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a7958d1008b90f077c4cd88e314e57b6a}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!ObstacleTimeHorizon@{ObstacleTimeHorizon}}
+\index{ObstacleTimeHorizon@{ObstacleTimeHorizon}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{ObstacleTimeHorizon}{ObstacleTimeHorizon}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Obstacle\+Time\+Horizon\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Max number of estimated seconds to look into the future for collisions with obstacles 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a1fd7540e5876c8a66afa5ee83b164ef0}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a1fd7540e5876c8a66afa5ee83b164ef0}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!Position@{Position}}
+\index{Position@{Position}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily Vector2 Pathfinding.\+R\+V\+O.\+I\+Agent.\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Position of the agent. The agent does not move by itself, a movement script has to be responsible for reading the Calculated\+Target\+Point and Calculated\+Speed properties and move towards that point with that speed. This property should ideally be set every frame. 
+
+Note that this is a Vector2, not a Vector3 since the \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}} simulates everything internally in 2D. So if your agents move in the XZ plane you may have to convert it to a Vector3 like this.
+
+{\ttfamily  Vector3 position3D = new Vector3(agent.\+Position.\+x, agent.\+Elevation\+Coordinate, agent.\+Position.\+y); }\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a5755caa67a6bf970676350d5262130ab}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a5755caa67a6bf970676350d5262130ab}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!PreCalculationCallback@{PreCalculationCallback}}
+\index{PreCalculationCallback@{PreCalculationCallback}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{PreCalculationCallback}{PreCalculationCallback}}
+{\footnotesize\ttfamily System.\+Action Pathfinding.\+R\+V\+O.\+I\+Agent.\+Pre\+Calculation\+Callback\hspace{0.3cm}{\ttfamily [set]}}
+
+
+
+Callback which will be called right before avoidance calculations are started. Used to update the other properties with the most up to date values 
+
+\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_aac40343e627d1bcbe94142448c30c874}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_aac40343e627d1bcbe94142448c30c874}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!Priority@{Priority}}
+\index{Priority@{Priority}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{Priority}{Priority}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Priority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+How strongly other agents will avoid this agent. Usually a value between 0 and 1. Agents with similar priorities will avoid each other with an equal strength. If an agent sees another agent with a higher priority than itself it will avoid that agent more strongly. In the extreme case (e.\+g this agent has a priority of 0 and the other agent has a priority of 1) it will treat the other agent as being a moving obstacle. Similarly if an agent sees another agent with a lower priority than itself it will avoid that agent less. 
+
+In general the avoidance strength for this agent is\+: {\ttfamily  if this.\+priority $>$ 0 or other.\+priority $>$ 0\+: avoidance\+Strength = other.\+priority / (this.\+priority + other.\+priority); else\+: avoidance\+Strength = 0.\+5 }\mbox{\Hypertarget{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a969e5087d9acb25f5b6d26c2e9a6ec5f}\label{interface_pathfinding_1_1_r_v_o_1_1_i_agent_a969e5087d9acb25f5b6d26c2e9a6ec5f}} 
+\index{Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}!Radius@{Radius}}
+\index{Radius@{Radius}!Pathfinding.RVO.IAgent@{Pathfinding.RVO.IAgent}}
+\doxysubsubsection{\texorpdfstring{Radius}{Radius}}
+{\footnotesize\ttfamily float Pathfinding.\+R\+V\+O.\+I\+Agent.\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Radius of the agent in world units. Agents are modelled as circles/cylinders. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+R\+V\+O/R\+V\+O\+Core\+Simulator.\+cs\end{DoxyCompactItemize}

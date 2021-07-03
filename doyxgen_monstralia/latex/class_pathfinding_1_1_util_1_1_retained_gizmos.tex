@@ -1,0 +1,135 @@
+\hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos}{}\doxysection{Pathfinding.\+Util.\+Retained\+Gizmos Class Reference}
+\label{class_pathfinding_1_1_util_1_1_retained_gizmos}\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+
+
+Helper for drawing Gizmos in a performant way. This is a replacement for the Unity Gizmos class as that is not very performant when drawing very large amounts of geometry (for example a large grid graph). These gizmos can be persistent, so if the data does not change, the gizmos do not need to be updated.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_1_1_builder}{Builder}}
+\begin{DoxyCompactList}\small\item\em Helper for drawing gizmos \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}}
+\begin{DoxyCompactList}\small\item\em Combines hashes into a single hash value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_a7c8f4847422008f00a970ff92f73908a}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_a7c8f4847422008f00a970ff92f73908a}} 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_gizmo_helper}{Graph\+Gizmo\+Helper}} {\bfseries Get\+Single\+Frame\+Gizmo\+Helper} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} active)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_adc600eca04a7e459993b9500878745e2}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_adc600eca04a7e459993b9500878745e2}} 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_gizmo_helper}{Graph\+Gizmo\+Helper}} {\bfseries Get\+Gizmo\+Helper} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} active, \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}} hasher)
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_abc780b93c5dcb32ae9f6f21a56b665c5}{Has\+Cached\+Mesh}} (\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}} hasher)
+\begin{DoxyCompactList}\small\item\em True if there already is a mesh with the specified hash \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_a97c3e3ef7ca763e7486cb8f88f65ebfe}{Draw}} (\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}} hasher)
+\begin{DoxyCompactList}\small\item\em Schedules the meshes for the specified hash to be drawn. Returns\+: False if there is no cached mesh for this hash, you may want to submit one in that case. The draw command will be issued regardless of the return value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_a07c7771c103af51fa33c863631f07335}{Draw\+Existing}} ()
+\begin{DoxyCompactList}\small\item\em Schedules all meshes that were drawn the last frame (last time Finalize\+Draw was called) to be drawn again. Also draws any new meshes that have been added since Finalize\+Draw was last called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_aff371039e1dd45c5ab77332e1ce3cd5f}{Finalize\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Call after all \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_draw}{Draw}} commands for the frame have been done to draw everything \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_ad0d18ab6ac3c53dd7c5437501f96c1de}{Clear\+Cache}} ()
+\begin{DoxyCompactList}\small\item\em Destroys all cached meshes. Used to make sure that no memory leaks happen in the Unity Editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Material \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_ac64e393547913c94d06f9a229b43164a}{surface\+Material}}
+\begin{DoxyCompactList}\small\item\em Material to use for the navmesh in the editor \end{DoxyCompactList}\item 
+Material \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_a14cd07ddbe6d2a24703e159fc1f1c712}{line\+Material}}
+\begin{DoxyCompactList}\small\item\em Material to use for the navmesh outline in the editor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper for drawing Gizmos in a performant way. This is a replacement for the Unity Gizmos class as that is not very performant when drawing very large amounts of geometry (for example a large grid graph). These gizmos can be persistent, so if the data does not change, the gizmos do not need to be updated. 
+
+How to use
+\begin{DoxyItemize}
+\item Create a \mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}} object and hash whatever data you will be using to draw the gizmos Could be for example the positions of the vertices or something. Just as long as if the gizmos should change, then the hash changes as well.
+\item Check if a cached mesh exists for that hash
+\item If not, then create a \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos_1_1_builder}{Builder}} object and call the drawing methods until you are done and then call Finalize with a reference to a gizmos class and the hash you calculated before.
+\item Call gizmos.\+Draw with the hash.
+\item When you are done with drawing gizmos for this frame, call gizmos.\+Finalize\+Draw
+\end{DoxyItemize}
+
+{\ttfamily  var a = Vector3.\+zero; var b = Vector3.\+one; var color = Color.\+red; var hasher = new Retained\+Gizmos.\+Hasher(); hasher.\+Add\+Hash(a.\+Get\+Hash\+Code()); hasher.\+Add\+Hash(b.\+Get\+Hash\+Code()); hasher.\+Add\+Hash(color.\+Get\+Hash\+Code()); if (!gizmos.Draw(hasher)) \{ using (var helper = gizmos.\+Get\+Gizmo\+Helper(active, hasher)) \{ builder.\+Draw\+Line(a, b, color); builder.\+Finalize(gizmos, hasher); \} \} }
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_ad0d18ab6ac3c53dd7c5437501f96c1de}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_ad0d18ab6ac3c53dd7c5437501f96c1de}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!ClearCache@{ClearCache}}
+\index{ClearCache@{ClearCache}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{ClearCache()}{ClearCache()}}
+{\footnotesize\ttfamily void Pathfinding.\+Util.\+Retained\+Gizmos.\+Clear\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys all cached meshes. Used to make sure that no memory leaks happen in the Unity Editor. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_a97c3e3ef7ca763e7486cb8f88f65ebfe}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_a97c3e3ef7ca763e7486cb8f88f65ebfe}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!Draw@{Draw}}
+\index{Draw@{Draw}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool Pathfinding.\+Util.\+Retained\+Gizmos.\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}}}]{hasher }\end{DoxyParamCaption})}
+
+
+
+Schedules the meshes for the specified hash to be drawn. Returns\+: False if there is no cached mesh for this hash, you may want to submit one in that case. The draw command will be issued regardless of the return value. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_a07c7771c103af51fa33c863631f07335}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_a07c7771c103af51fa33c863631f07335}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!DrawExisting@{DrawExisting}}
+\index{DrawExisting@{DrawExisting}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{DrawExisting()}{DrawExisting()}}
+{\footnotesize\ttfamily void Pathfinding.\+Util.\+Retained\+Gizmos.\+Draw\+Existing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Schedules all meshes that were drawn the last frame (last time Finalize\+Draw was called) to be drawn again. Also draws any new meshes that have been added since Finalize\+Draw was last called. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_aff371039e1dd45c5ab77332e1ce3cd5f}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_aff371039e1dd45c5ab77332e1ce3cd5f}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!FinalizeDraw@{FinalizeDraw}}
+\index{FinalizeDraw@{FinalizeDraw}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{FinalizeDraw()}{FinalizeDraw()}}
+{\footnotesize\ttfamily void Pathfinding.\+Util.\+Retained\+Gizmos.\+Finalize\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call after all \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_draw}{Draw}} commands for the frame have been done to draw everything 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_abc780b93c5dcb32ae9f6f21a56b665c5}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_abc780b93c5dcb32ae9f6f21a56b665c5}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!HasCachedMesh@{HasCachedMesh}}
+\index{HasCachedMesh@{HasCachedMesh}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{HasCachedMesh()}{HasCachedMesh()}}
+{\footnotesize\ttfamily bool Pathfinding.\+Util.\+Retained\+Gizmos.\+Has\+Cached\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_util_1_1_retained_gizmos_1_1_hasher}{Hasher}}}]{hasher }\end{DoxyParamCaption})}
+
+
+
+True if there already is a mesh with the specified hash 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_a14cd07ddbe6d2a24703e159fc1f1c712}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_a14cd07ddbe6d2a24703e159fc1f1c712}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!lineMaterial@{lineMaterial}}
+\index{lineMaterial@{lineMaterial}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{lineMaterial}{lineMaterial}}
+{\footnotesize\ttfamily Material Pathfinding.\+Util.\+Retained\+Gizmos.\+line\+Material}
+
+
+
+Material to use for the navmesh outline in the editor 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_retained_gizmos_ac64e393547913c94d06f9a229b43164a}\label{class_pathfinding_1_1_util_1_1_retained_gizmos_ac64e393547913c94d06f9a229b43164a}} 
+\index{Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}!surfaceMaterial@{surfaceMaterial}}
+\index{surfaceMaterial@{surfaceMaterial}!Pathfinding.Util.RetainedGizmos@{Pathfinding.Util.RetainedGizmos}}
+\doxysubsubsection{\texorpdfstring{surfaceMaterial}{surfaceMaterial}}
+{\footnotesize\ttfamily Material Pathfinding.\+Util.\+Retained\+Gizmos.\+surface\+Material}
+
+
+
+Material to use for the navmesh in the editor 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Utilities/Retained\+Gizmos.\+cs\end{DoxyCompactItemize}

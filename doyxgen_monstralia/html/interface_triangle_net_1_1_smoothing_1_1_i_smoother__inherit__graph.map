@@ -1,0 +1,4 @@
+<map id="TriangleNet.Smoothing.ISmoother" name="TriangleNet.Smoothing.ISmoother">
+<area shape="rect" id="node1" title="Interface for mesh smoothers." alt="" coords="5,5,221,32"/>
+<area shape="rect" id="node2" href="$class_triangle_net_1_1_smoothing_1_1_simple_smoother.html" title="Simple mesh smoother implementation." alt="" coords="15,80,212,121"/>
+</map>

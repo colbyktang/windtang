@@ -1,0 +1,26 @@
+<map id="UnityStandardAssets.ImageEffects.PostEffectsBase" name="UnityStandardAssets.ImageEffects.PostEffectsBase">
+<area shape="rect" id="node1" title=" " alt="" coords="164,692,348,733"/>
+<area shape="rect" id="node3" href="$class_unity_standard_assets_1_1_image_effects_1_1_antialiasing.html" title=" " alt="" coords="435,5,619,47"/>
+<area shape="rect" id="node4" href="$class_unity_standard_assets_1_1_image_effects_1_1_bloom.html" title=" " alt="" coords="435,71,619,112"/>
+<area shape="rect" id="node5" href="$class_unity_standard_assets_1_1_image_effects_1_1_bloom_and_flares.html" title=" " alt="" coords="435,136,619,177"/>
+<area shape="rect" id="node6" href="$class_unity_standard_assets_1_1_image_effects_1_1_bloom_optimized.html" title=" " alt="" coords="435,201,619,243"/>
+<area shape="rect" id="node7" href="$class_unity_standard_assets_1_1_image_effects_1_1_blur_optimized.html" title=" " alt="" coords="435,267,619,308"/>
+<area shape="rect" id="node8" href="$class_unity_standard_assets_1_1_image_effects_1_1_camera_motion_blur.html" title=" " alt="" coords="435,332,619,373"/>
+<area shape="rect" id="node9" href="$class_unity_standard_assets_1_1_image_effects_1_1_color_correction_curves.html" title=" " alt="" coords="430,397,625,439"/>
+<area shape="rect" id="node10" href="$class_unity_standard_assets_1_1_image_effects_1_1_color_correction_lookup.html" title=" " alt="" coords="429,463,626,504"/>
+<area shape="rect" id="node11" href="$class_unity_standard_assets_1_1_image_effects_1_1_contrast_enhance.html" title=" " alt="" coords="435,528,619,569"/>
+<area shape="rect" id="node12" href="$class_unity_standard_assets_1_1_image_effects_1_1_crease_shading.html" title=" " alt="" coords="435,593,619,635"/>
+<area shape="rect" id="node13" href="$class_unity_standard_assets_1_1_image_effects_1_1_depth_of_field.html" title=" " alt="" coords="435,659,619,700"/>
+<area shape="rect" id="node14" href="$class_unity_standard_assets_1_1_image_effects_1_1_depth_of_field_deprecated.html" title=" " alt="" coords="424,724,631,765"/>
+<area shape="rect" id="node15" href="$class_unity_standard_assets_1_1_image_effects_1_1_edge_detection.html" title=" " alt="" coords="435,789,619,831"/>
+<area shape="rect" id="node16" href="$class_unity_standard_assets_1_1_image_effects_1_1_fisheye.html" title=" " alt="" coords="435,855,619,896"/>
+<area shape="rect" id="node17" href="$class_unity_standard_assets_1_1_image_effects_1_1_global_fog.html" title=" " alt="" coords="435,920,619,961"/>
+<area shape="rect" id="node18" href="$class_unity_standard_assets_1_1_image_effects_1_1_noise_and_grain.html" title=" " alt="" coords="435,985,619,1027"/>
+<area shape="rect" id="node19" href="$class_unity_standard_assets_1_1_image_effects_1_1_screen_overlay.html" title=" " alt="" coords="435,1051,619,1092"/>
+<area shape="rect" id="node20" href="$class_unity_standard_assets_1_1_image_effects_1_1_screen_space_ambient_obscurance.html" title=" " alt="" coords="396,1116,659,1157"/>
+<area shape="rect" id="node21" href="$class_unity_standard_assets_1_1_image_effects_1_1_sun_shafts.html" title=" " alt="" coords="435,1181,619,1223"/>
+<area shape="rect" id="node22" href="$class_unity_standard_assets_1_1_image_effects_1_1_tilt_shift.html" title=" " alt="" coords="435,1247,619,1288"/>
+<area shape="rect" id="node23" href="$class_unity_standard_assets_1_1_image_effects_1_1_tonemapping.html" title=" " alt="" coords="435,1312,619,1353"/>
+<area shape="rect" id="node24" href="$class_unity_standard_assets_1_1_image_effects_1_1_vignette_and_chromatic_aberration.html" title=" " alt="" coords="400,1377,655,1419"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,699,116,726"/>
+</map>

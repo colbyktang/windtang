@@ -1,0 +1,5 @@
+<map id="BMazePickup" name="BMazePickup">
+<area shape="rect" id="node1" title=" " alt="" coords="9,80,112,107"/>
+<area shape="rect" id="node3" href="$class_b_maze_water.html" title=" " alt="" coords="11,155,110,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
+</map>

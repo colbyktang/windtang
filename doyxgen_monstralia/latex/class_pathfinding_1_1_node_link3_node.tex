@@ -1,0 +1,75 @@
+\hypertarget{class_pathfinding_1_1_node_link3_node}{}\doxysection{Pathfinding.\+Node\+Link3\+Node Class Reference}
+\label{class_pathfinding_1_1_node_link3_node}\index{Pathfinding.NodeLink3Node@{Pathfinding.NodeLink3Node}}
+
+
+Inheritance diagram for Pathfinding.\+Node\+Link3\+Node\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Node\+Link3\+Node\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link3_node_a5779e9228261ba09e20cb610ee8f3d7f}\label{class_pathfinding_1_1_node_link3_node_a5779e9228261ba09e20cb610ee8f3d7f}} 
+{\bfseries Node\+Link3\+Node} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} active)
+\item 
+override bool \mbox{\hyperlink{class_pathfinding_1_1_node_link3_node_a3d61c72ae111e14ac98e60dc627f2733}{Get\+Portal}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} other, List$<$ Vector3 $>$ left, List$<$ Vector3 $>$ right, bool backwards)
+\begin{DoxyCompactList}\small\item\em Add a portal from this node to the specified node. This function should add a portal to the left and right lists which is connecting the two nodes (this and other). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link3_node_adabd8e6f65f61729dfc3ea7cf4c6bec7}\label{class_pathfinding_1_1_node_link3_node_adabd8e6f65f61729dfc3ea7cf4c6bec7}} 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} {\bfseries Get\+Other} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} a)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link3_node_ad58b4f112004cbc68e37960ae4498e2f}\label{class_pathfinding_1_1_node_link3_node_ad58b4f112004cbc68e37960ae4498e2f}} 
+\mbox{\hyperlink{class_pathfinding_1_1_node_link3}{Node\+Link3}} {\bfseries link}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link3_node_a5feceb0ac571a0b2563e587c9d84bf1a}\label{class_pathfinding_1_1_node_link3_node_a5feceb0ac571a0b2563e587c9d84bf1a}} 
+Vector3 {\bfseries portalA}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link3_node_a5b4f4f976d044260f90b02dd4eb7cae0}\label{class_pathfinding_1_1_node_link3_node_a5b4f4f976d044260f90b02dd4eb7cae0}} 
+Vector3 {\bfseries portalB}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_node_link3_node_a3d61c72ae111e14ac98e60dc627f2733}\label{class_pathfinding_1_1_node_link3_node_a3d61c72ae111e14ac98e60dc627f2733}} 
+\index{Pathfinding.NodeLink3Node@{Pathfinding.NodeLink3Node}!GetPortal@{GetPortal}}
+\index{GetPortal@{GetPortal}!Pathfinding.NodeLink3Node@{Pathfinding.NodeLink3Node}}
+\doxysubsubsection{\texorpdfstring{GetPortal()}{GetPortal()}}
+{\footnotesize\ttfamily override bool Pathfinding.\+Node\+Link3\+Node.\+Get\+Portal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{other,  }\item[{List$<$ Vector3 $>$}]{left,  }\item[{List$<$ Vector3 $>$}]{right,  }\item[{bool}]{backwards }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a portal from this node to the specified node. This function should add a portal to the left and right lists which is connecting the two nodes (this and other). 
+
+Returns\+: True if the call was deemed successful. False if some unknown case was encountered and no portal could be added. If both calls to node1.\+Get\+Portal (node2,...) and node2.\+Get\+Portal (node1,...) return false, the funnel modifier will fall back to adding to the path the positions of the node.
+
+The default implementation simply returns false.
+
+This function may add more than one portal if necessary.
+
+See\+: \href{http://digestingduck.blogspot.se/2010/03/simple-stupid-funnel-algorithm.html}{\texttt{ http\+://digestingduck.\+blogspot.\+se/2010/03/simple-\/stupid-\/funnel-\/algorithm.\+html}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The node which is on the other side of the portal (strictly speaking it does not actually have to be on the other side of the portal though).\\
+\hline
+{\em left} & List of portal points on the left side of the funnel\\
+\hline
+{\em right} & List of portal points on the right side of the funnel\\
+\hline
+{\em backwards} & If this is true, the call was made on a node with the other node as the node before this one in the path. In this case you may choose to do nothing since a similar call will be made to the other node with this node referenced as other (but then with backwards = true). You do not have to care about switching the left and right lists, that is done for you already.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_node_a9e8778d8d325e8440595e8c128c1864b}{Pathfinding.\+Graph\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+Misc/Node\+Link3.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Pathfinding.Util.GraphTransform" name="Pathfinding.Util.GraphTransform">
+<area shape="rect" id="node1" title="Defines a transformation from graph space to world space. This is essentially just a simple wrapper a..." alt="" coords="23,80,228,107"/>
+<area shape="rect" id="node2" href="$interface_pathfinding_1_1_util_1_1_i_movement_plane.html" title="Transforms to and from world space to a 2D movement plane. The transformation is guaranteed to be pur..." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node3" href="$interface_pathfinding_1_1_util_1_1_i_transform.html" title="Generic 3D coordinate transformation" alt="" coords="147,5,229,32"/>
+</map>

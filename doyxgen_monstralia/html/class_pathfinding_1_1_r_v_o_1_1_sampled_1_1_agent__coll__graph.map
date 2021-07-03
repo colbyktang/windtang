@@ -1,0 +1,6 @@
+<map id="Pathfinding.RVO.Sampled.Agent" name="Pathfinding.RVO.Sampled.Agent">
+<area shape="rect" id="node1" title="Internal agent for the RVO system. Usually you will interface with the IAgent interface instead." alt="" coords="5,199,183,240"/>
+<area shape="rect" id="node2" href="$interface_pathfinding_1_1_r_v_o_1_1_i_agent.html" title="Exposes properties of an Agent class." alt="" coords="18,109,77,136"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_r_v_o_1_1_simulator.html" title="Local Avoidance Simulator. This class handles local avoidance simulation for a number of agents using..." alt="" coords="101,109,279,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="87,5,293,47"/>
+</map>

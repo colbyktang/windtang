@@ -1,0 +1,13 @@
+<map id="SensesTutorialManager" name="SensesTutorialManager">
+<area shape="rect" id="node1" title=" " alt="" coords="284,483,443,509"/>
+<area shape="rect" id="node2" title=" " alt="" coords="447,81,557,108"/>
+<area shape="rect" id="node3" href="$class_monster_creator.html" title=" " alt="" coords="89,215,200,241"/>
+<area shape="rect" id="node8" href="$class_factory.html" title=" " alt="" coords="330,304,397,331"/>
+<area shape="rect" id="node10" href="$class_senses_spawnpoint.html" title=" " alt="" coords="435,304,569,331"/>
+<area shape="rect" id="node11" href="$class_senses_item.html" title=" " alt="" coords="457,215,547,241"/>
+<area shape="rect" id="node4" href="$class_monster_data.html" title=" " alt="" coords="17,81,113,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="214,81,291,108"/>
+<area shape="rect" id="node7" href="$class_senses_factory.html" title=" " alt="" coords="308,393,419,420"/>
+<area shape="rect" id="node9" title=" " alt="" coords="227,215,367,241"/>
+</map>

@@ -1,0 +1,48 @@
+\hypertarget{class_triangle_net_1_1_algorithm_1_1_dwyer}{}\doxysection{Triangle\+Net.\+Algorithm.\+Dwyer Class Reference}
+\label{class_triangle_net_1_1_algorithm_1_1_dwyer}\index{TriangleNet.Algorithm.Dwyer@{TriangleNet.Algorithm.Dwyer}}
+
+
+Builds a delaunay triangulation using the divide-\/and-\/conquer algorithm.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_algorithm_1_1_dwyer_ab09c1eadfbe8b094daefc8c0b2635f92}{Triangulate}} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} m)
+\begin{DoxyCompactList}\small\item\em Form a Delaunay triangulation by the divide-\/and-\/conquer method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Builds a delaunay triangulation using the divide-\/and-\/conquer algorithm. 
+
+The divide-\/and-\/conquer bounding box
+
+I originally implemented the divide-\/and-\/conquer and incremental Delaunay triangulations using the edge-\/based data structure presented by Guibas and Stolfi. Switching to a triangle-\/based data structure doubled the speed. However, I had to think of a few extra tricks to maintain the elegance of the original algorithms.
+
+The \char`\"{}bounding box\char`\"{} used by my variant of the divide-\/and-\/conquer algorithm uses one triangle for each edge of the convex hull of the triangulation. These bounding triangles all share a common apical vertex, which is represented by N\+U\+LL and which represents nothing. The bounding triangles are linked in a circular fan about this N\+U\+LL vertex, and the edges on the convex hull of the triangulation appear opposite the N\+U\+LL vertex. You might find it easiest to imagine that the N\+U\+LL vertex is a point in 3D space behind the center of the triangulation, and that the bounding triangles form a sort of cone.
+
+This bounding box makes it easy to represent degenerate cases. For instance, the triangulation of two vertices is a single edge. This edge is represented by two bounding box triangles, one on each \char`\"{}side\char`\"{} of the edge. These triangles are also linked together in a fan about the N\+U\+LL vertex.
+
+The bounding box also makes it easy to traverse the convex hull, as the divide-\/and-\/conquer algorithm needs to do. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_algorithm_1_1_dwyer_ab09c1eadfbe8b094daefc8c0b2635f92}\label{class_triangle_net_1_1_algorithm_1_1_dwyer_ab09c1eadfbe8b094daefc8c0b2635f92}} 
+\index{TriangleNet.Algorithm.Dwyer@{TriangleNet.Algorithm.Dwyer}!Triangulate@{Triangulate}}
+\index{Triangulate@{Triangulate}!TriangleNet.Algorithm.Dwyer@{TriangleNet.Algorithm.Dwyer}}
+\doxysubsubsection{\texorpdfstring{Triangulate()}{Triangulate()}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Algorithm.\+Dwyer.\+Triangulate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Form a Delaunay triangulation by the divide-\/and-\/conquer method. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Sorts the vertices, calls a recursive procedure to triangulate them, and removes the bounding box, setting boundary markers as appropriate. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Algorithm/Dwyer.\+cs\end{DoxyCompactItemize}

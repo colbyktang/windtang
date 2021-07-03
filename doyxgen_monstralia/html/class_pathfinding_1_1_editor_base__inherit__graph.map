@@ -1,0 +1,11 @@
+<map id="Pathfinding.EditorBase" name="Pathfinding.EditorBase">
+<area shape="rect" id="node1" title="Helper for creating editors" alt="" coords="109,148,264,175"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_a_i_lerp_editor.html" title=" " alt="" coords="333,5,494,32"/>
+<area shape="rect" id="node4" href="$class_pathfinding_1_1_base_a_i_editor.html" title=" " alt="" coords="330,56,497,83"/>
+<area shape="rect" id="node6" href="$class_pathfinding_1_1_graph_update_scene_editor.html" title="Editor for GraphUpdateScene" alt="" coords="312,107,515,149"/>
+<area shape="rect" id="node7" href="$class_pathfinding_1_1_raycast_modifier_editor.html" title=" " alt="" coords="322,173,505,214"/>
+<area shape="rect" id="node8" href="$class_pathfinding_1_1_seeker_editor.html" title=" " alt="" coords="331,239,496,265"/>
+<area shape="rect" id="node9" href="$class_pathfinding_1_1_smooth_modifier_editor.html" title=" " alt="" coords="323,290,503,331"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,148,61,175"/>
+<area shape="rect" id="node5" href="$class_pathfinding_1_1_legacy_1_1_legacy_a_i_path_editor.html" title=" " alt="" coords="563,49,741,90"/>
+</map>

@@ -1,0 +1,73 @@
+\hypertarget{class_inventory_manager}{}\doxysection{Inventory\+Manager Class Reference}
+\label{class_inventory_manager}\index{InventoryManager@{InventoryManager}}
+Inheritance diagram for Inventory\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inventory_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_afc59740483c4c249a15ec93e27993917}\label{class_inventory_manager_afc59740483c4c249a15ec93e27993917}} 
+delegate void {\bfseries Inventory\+Action} ()
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a5a90fbd02a6fabfb08359566d838d0c7}\label{class_inventory_manager_a5a90fbd02a6fabfb08359566d838d0c7}} 
+bool {\bfseries Insert\+Item} (Inventory\+Item item)
+\item 
+\mbox{\Hypertarget{class_inventory_manager_aa20af6f0a21f63ea8e6b8b28d24799f4}\label{class_inventory_manager_aa20af6f0a21f63ea8e6b8b28d24799f4}} 
+Inventory\+Item {\bfseries Remove\+Item} (int item\+Index)
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a5678e5ca983db63efedab3e781087d11}\label{class_inventory_manager_a5678e5ca983db63efedab3e781087d11}} 
+void {\bfseries Add\+To\+Food\+Inventory} (\mbox{\hyperlink{class_food_data}{Food\+Data}} food, int count)
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a8e2fed19b418d55ae7f34563a999f06e}\label{class_inventory_manager_a8e2fed19b418d55ae7f34563a999f06e}} 
+void {\bfseries Remove\+From\+Food\+Inventory} (\mbox{\hyperlink{class_food_data}{Food\+Data}} food, int count)
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a938a03eec5643ba4618bf96b62ac7abe}\label{class_inventory_manager_a938a03eec5643ba4618bf96b62ac7abe}} 
+void {\bfseries Add\+To\+Seedbag\+Inventory} (\mbox{\hyperlink{class_seed_bag_object}{Seed\+Bag\+Object}} seedbag, int count)
+\item 
+\mbox{\Hypertarget{class_inventory_manager_ac0bcebb259308a51b754183a81132e11}\label{class_inventory_manager_ac0bcebb259308a51b754183a81132e11}} 
+void {\bfseries Remove\+From\+Seed\+Bag\+Inventory} (\mbox{\hyperlink{class_seed_bag_object}{Seed\+Bag\+Object}} seedbag, int count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a4b7120f576665ca4902b703f302e9d33}\label{class_inventory_manager_a4b7120f576665ca4902b703f302e9d33}} 
+List$<$ Inventory\+Item $>$ {\bfseries inventory\+List} = new List$<$Inventory\+Item$>$()
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a2b12118b6fd320e546145f799f5889f0}\label{class_inventory_manager_a2b12118b6fd320e546145f799f5889f0}} 
+Dictionary$<$ \mbox{\hyperlink{class_food_data}{Food\+Data}}, int $>$ {\bfseries food\+Inventory} = new Dictionary$<$\mbox{\hyperlink{class_food_data}{Food\+Data}}, int$>$()
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a0a82f3c295d30385f5316cfe9c9b8b8c}\label{class_inventory_manager_a0a82f3c295d30385f5316cfe9c9b8b8c}} 
+Dictionary$<$ \mbox{\hyperlink{class_seed_bag_object}{Seed\+Bag\+Object}}, int $>$ {\bfseries seed\+Bag\+Inventory} = new Dictionary$<$\mbox{\hyperlink{class_seed_bag_object}{Seed\+Bag\+Object}}, int$>$()
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a9bd8e0f9f55eb1d27de79ab8ee6231dc}\label{class_inventory_manager_a9bd8e0f9f55eb1d27de79ab8ee6231dc}} 
+List$<$ string $>$ {\bfseries inventory}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_ab203b3869803610da48ae9ab69ecdbda}\label{class_inventory_manager_ab203b3869803610da48ae9ab69ecdbda}} 
+Inventory\+Item {\bfseries seed\+Prefab}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a01733a7e79da764eb7056c060de6f2ff}\label{class_inventory_manager_a01733a7e79da764eb7056c060de6f2ff}} 
+int {\bfseries inventory\+Size\+Limit} = 24
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a7009f05e4d484109ed283d4a86640a67}\label{class_inventory_manager_a7009f05e4d484109ed283d4a86640a67}} 
+bool? {\bfseries Is\+Inventory\+Full}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a1371f1f686c17b7cb475672d580e8c83}\label{class_inventory_manager_a1371f1f686c17b7cb475672d580e8c83}} 
+bool? {\bfseries Is\+Inventory\+Empty}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_inventory_manager_a650f33d560699ae278e65350eb6d87c5}\label{class_inventory_manager_a650f33d560699ae278e65350eb6d87c5}} 
+static Inventory\+Action {\bfseries On\+Item\+Insert}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Managers/Inventory\+Manager.\+cs\end{DoxyCompactItemize}

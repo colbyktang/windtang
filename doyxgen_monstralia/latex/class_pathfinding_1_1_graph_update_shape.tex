@@ -1,0 +1,111 @@
+\hypertarget{class_pathfinding_1_1_graph_update_shape}{}\doxysection{Pathfinding.\+Graph\+Update\+Shape Class Reference}
+\label{class_pathfinding_1_1_graph_update_shape}\index{Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}}
+
+
+Defines a shape for a \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Pathfinding.\+Graph\+Update\+Object}}. The shape consists of a number of points which it can either calculate the convex hull of or use as a polygon directly.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a41cc2c78d9cf0c6ac8fa9cf14315b269}{Graph\+Update\+Shape}} (Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a40bfdc7e97c753a6d74621b35e932a20}{points}}, bool \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}{convex}}, Matrix4x4 matrix, float minimum\+Height)
+\begin{DoxyCompactList}\small\item\em Construct a shape. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}{convex}} \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a13044250d2c926b105bd6dc94a1d4118}{Get\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em World space bounding box of this shape \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_a51c08c6659badc61ff007a72ae7a1ec7}\label{class_pathfinding_1_1_graph_update_shape_a51c08c6659badc61ff007a72ae7a1ec7}} 
+bool {\bfseries Contains} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_adf5685e77f6501f6f79bd2dd4fb0fb0e}\label{class_pathfinding_1_1_graph_update_shape_adf5685e77f6501f6f79bd2dd4fb0fb0e}} 
+bool {\bfseries Contains} (Vector3 point)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_aa3a0746379b0e1ea4e851d8a34012f8d}\label{class_pathfinding_1_1_graph_update_shape_aa3a0746379b0e1ea4e851d8a34012f8d}} 
+static Bounds {\bfseries Get\+Bounds} (Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a40bfdc7e97c753a6d74621b35e932a20}{points}}, Matrix4x4 matrix, float minimum\+Height)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_a62d129f03580894338a7499fa4ffab3b}\label{class_pathfinding_1_1_graph_update_shape_a62d129f03580894338a7499fa4ffab3b}} 
+float {\bfseries minimum\+Height}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_a40bfdc7e97c753a6d74621b35e932a20}{points}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the points of the polygon in the shape. These points should be specified in clockwise order. Will automatically calculate the convex hull if \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}{convex}} is set to true \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}{convex}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets if the convex hull of the points should be calculated. Convex hulls are faster but non-\/convex hulls can be used to specify more complicated shapes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a shape for a \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Pathfinding.\+Graph\+Update\+Object}}. The shape consists of a number of points which it can either calculate the convex hull of or use as a polygon directly. 
+
+A shape is essentially a 2D shape however it can be rotated arbitrarily. When a matrix and a list of points is specified in the constructor the matrix decides what direction is the \textquotesingle{}up\textquotesingle{} direction. When checking if a point is contained in the shape, the point will be projected down on a plane where the \textquotesingle{}up\textquotesingle{} direction is the normal and then it will check if the shape contains the point.
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object_a9e2846ea4388ef12159cabcdc3a6bb28}{Pathfinding.\+Graph\+Update\+Object.\+shape}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_a41cc2c78d9cf0c6ac8fa9cf14315b269}\label{class_pathfinding_1_1_graph_update_shape_a41cc2c78d9cf0c6ac8fa9cf14315b269}} 
+\index{Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}!GraphUpdateShape@{GraphUpdateShape}}
+\index{GraphUpdateShape@{GraphUpdateShape}!Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}}
+\doxysubsubsection{\texorpdfstring{GraphUpdateShape()}{GraphUpdateShape()}}
+{\footnotesize\ttfamily Pathfinding.\+Graph\+Update\+Shape.\+Graph\+Update\+Shape (\begin{DoxyParamCaption}\item[{Vector3\mbox{[}$\,$\mbox{]}}]{points,  }\item[{bool}]{convex,  }\item[{Matrix4x4}]{matrix,  }\item[{float}]{minimum\+Height }\end{DoxyParamCaption})}
+
+
+
+Construct a shape. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}{convex}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Contour of the shape in local space with respect to the matrix (i.\+e the shape should be in the XZ plane, the Y coordinate will only affect the bounds)\\
+\hline
+{\em convex} & If true, the convex hull of the points will be calculated.\\
+\hline
+{\em matrix} & local to world space matrix for the points. The matrix determines the up direction of the shape.\\
+\hline
+{\em minimum\+Height} & If the points would be in the XZ plane only, the shape would not have a height and then it might not include any points inside it (as testing for inclusion is done in 3D space when updating graphs). This ensures that the shape has at least the minimum height (in the up direction that the matrix specifies).\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_a13044250d2c926b105bd6dc94a1d4118}\label{class_pathfinding_1_1_graph_update_shape_a13044250d2c926b105bd6dc94a1d4118}} 
+\index{Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}!GetBounds@{GetBounds}}
+\index{GetBounds@{GetBounds}!Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}}
+\doxysubsubsection{\texorpdfstring{GetBounds()}{GetBounds()}}
+{\footnotesize\ttfamily Bounds Pathfinding.\+Graph\+Update\+Shape.\+Get\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+World space bounding box of this shape 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}\label{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}} 
+\index{Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}!convex@{convex}}
+\index{convex@{convex}!Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}}
+\doxysubsubsection{\texorpdfstring{convex}{convex}}
+{\footnotesize\ttfamily bool Pathfinding.\+Graph\+Update\+Shape.\+convex\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sets if the convex hull of the points should be calculated. Convex hulls are faster but non-\/convex hulls can be used to specify more complicated shapes. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_graph_update_shape_a40bfdc7e97c753a6d74621b35e932a20}\label{class_pathfinding_1_1_graph_update_shape_a40bfdc7e97c753a6d74621b35e932a20}} 
+\index{Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}!points@{points}}
+\index{points@{points}!Pathfinding.GraphUpdateShape@{Pathfinding.GraphUpdateShape}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily Vector3 \mbox{[}$\,$\mbox{]} Pathfinding.\+Graph\+Update\+Shape.\+points\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the points of the polygon in the shape. These points should be specified in clockwise order. Will automatically calculate the convex hull if \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape_af34bd813378be725de574a821bac2e9c}{convex}} is set to true 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/Graph\+Update\+Shape.\+cs\end{DoxyCompactItemize}

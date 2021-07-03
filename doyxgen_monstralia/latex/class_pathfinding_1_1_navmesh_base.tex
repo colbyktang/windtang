@@ -1,0 +1,767 @@
+\hypertarget{class_pathfinding_1_1_navmesh_base}{}\doxysection{Pathfinding.\+Navmesh\+Base Class Reference}
+\label{class_pathfinding_1_1_navmesh_base}\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+
+
+Base class for Recast\+Graph and \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph}{Nav\+Mesh\+Graph}}  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Navmesh\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Navmesh\+Base\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Calculate\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Returns a new transform which transforms graph space to world space. Does not update the \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}{transform}} field. See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}{Relocate\+Nodes(\+Graph\+Transform)}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a094a688eca1058704e16baf815f7b022}{Get\+Tile}} (int x, int z)
+\begin{DoxyCompactList}\small\item\em Tile at the specified x, z coordinate pair. The first tile is at (0,0), the last tile at (tile\+X\+Count-\/1, tile\+Z\+Count-\/1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a912c00fc6b1c578cb7e691bdceaf2314}{Get\+Vertex}} (int index)
+\begin{DoxyCompactList}\small\item\em Vertex coordinate for the specified vertex index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_af7562006ceaecf56ef9652db50da36ce}{Get\+Vertex\+In\+Graph\+Space}} (int index)
+\begin{DoxyCompactList}\small\item\em Vertex coordinate in graph space for the specified vertex index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ab27fde9a5a5998adaeb6fc719b01cada}\label{class_pathfinding_1_1_navmesh_base_ab27fde9a5a5998adaeb6fc719b01cada}} 
+int {\bfseries Get\+Vertex\+Array\+Index} (int index)
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a94bb1009e0b85246101a48b7911bef63}{Get\+Tile\+Coordinates}} (int tile\+Index, out int x, out int z)
+\begin{DoxyCompactList}\small\item\em Tile coordinates from a tile index \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a845474ef7fbfe6884359021c1c4b3745}{Get\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em All tiles. Warning\+: Do not modify this array \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a9781dc844fc0fbed044f3cdbd3a46443}{Get\+Tile\+Bounds}} (\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} rect)
+\begin{DoxyCompactList}\small\item\em Returns a bounds object with the bounding box of a group of tiles. The bounding box is defined in world space. \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aead149b42d271686c33f6de780b82f61}{Get\+Tile\+Bounds}} (int x, int z, int width=1, int depth=1)
+\begin{DoxyCompactList}\small\item\em Returns a bounds object with the bounding box of a group of tiles. The bounding box is defined in world space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ad03da2bd2b0e03d3e4be64840dee1cc6}\label{class_pathfinding_1_1_navmesh_base_ad03da2bd2b0e03d3e4be64840dee1cc6}} 
+Bounds {\bfseries Get\+Tile\+Bounds\+In\+Graph\+Space} (\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} rect)
+\item 
+Bounds \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a527c3066ee00a2df32d3405c2807c47b}{Get\+Tile\+Bounds\+In\+Graph\+Space}} (int x, int z, int width=1, int depth=1)
+\begin{DoxyCompactList}\small\item\em Returns an XZ bounds object with the bounds of a group of tiles in graph space \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int2}{Int2}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aacfff3e0cd8d19c0c781bec372c8c6e6}{Get\+Tile\+Coordinates}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Returns the tile coordinate which contains the specified position. It is not necessarily a valid tile (i.\+e it could be out of bounds). \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ad1d35f59863772a1d6d7ca59a2ba518a}{Relocate\+Nodes}} (Matrix4x4 delta\+Matrix)
+\begin{DoxyCompactList}\small\item\em Moves the nodes in this graph. Multiplies all node positions by delta\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}{Relocate\+Nodes}} (\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} new\+Transform)
+\begin{DoxyCompactList}\small\item\em Moves the nodes in this graph. Moves all the nodes in such a way that the specified transform is the new graph space to world space transformation for the graph. You usually use this together with the \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Calculate\+Transform}} method. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a31cc47413a70213976e1f6fbbb06b162}{Get\+Nodes}} (System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$ action)
+\begin{DoxyCompactList}\small\item\em Calls a delegate with all nodes in the graph. This is the primary way of iterating through all nodes in a graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a6b84a12b1f615372c34c56606751455b}{Get\+Touching\+Tiles}} (Bounds bounds, float margin=0)
+\begin{DoxyCompactList}\small\item\em Returns a rect containing the indices of all tiles touching the specified bounds. If a margin is passed, the bounding box in graph space is expanded by that amount in every direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aae4ff06c3fe88df0de5109ac97f1c2a6}{Get\+Touching\+Tiles\+In\+Graph\+Space}} (Rect rect)
+\begin{DoxyCompactList}\small\item\em Returns a rect containing the indices of all tiles touching the specified bounds. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_adb77a3881bee0fd65645f8ac0668cee0}{Get\+Touching\+Tiles\+Round}} (Bounds bounds)
+\begin{DoxyCompactList}\small\item\em Returns a rect containing the indices of all tiles by rounding the specified bounds to tile borders. This is different from Get\+Touching\+Tiles in that the tiles inside the rectangle returned from this method may not contain the whole bounds, while that is guaranteed for Get\+Touching\+Tiles. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ac6c85c481af42079c73e34f7dd8afba0}{Get\+Nearest}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint, \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} hint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a52cc86c1628ef1a502363eaa50ccecf9}{Get\+Nearest\+Force}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint)
+\begin{DoxyCompactList}\small\item\em Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{constraint }}. Returns\+: an \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}. This method will only return an empty \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} if there are no nodes which comply with the specified constraint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ac66ff23d38cb5ae1371aff3b5d49f9fd}{Point\+On\+Navmesh}} (Vector3 position, \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} constraint)
+\begin{DoxyCompactList}\small\item\em Finds the first node which contains position. \char`\"{}\+Contains\char`\"{} is defined as position is inside the triangle node when seen from above. So only XZ space matters. In case of a multilayered environment, which node of the possibly several nodes containing the point is undefined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a7e77d6f00532ad555b2ff4bc97638446}{Start\+Batch\+Tile\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Start batch updating of tiles. During batch updating, tiles will not be connected if they are updating with Replace\+Tile. When ending batching, all affected tiles will be connected. This is faster than not using batching. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a7891aebbf6d5a825d4c1160353e78549}{End\+Batch\+Tile\+Update}} ()
+\begin{DoxyCompactList}\small\item\em End batch updating of tiles. During batch updating, tiles will not be connected if they are updating with Replace\+Tile. When ending batching, all affected tiles will be connected. This is faster than not using batching. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aed5ae5c1121b584e35226893a89e6632}{Replace\+Tile}} (int x, int z, \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}\mbox{[}$\,$\mbox{]} verts, int\mbox{[}$\,$\mbox{]} tris)
+\begin{DoxyCompactList}\small\item\em Replace tile at index with nodes created from specified navmesh. This will create new nodes and link them to the adjacent tile (unless batching has been started in which case that will be done when batching ends). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a4b48f45f5a90e21df23d2636919a765c}\label{class_pathfinding_1_1_navmesh_base_a4b48f45f5a90e21df23d2636919a765c}} 
+override void {\bfseries On\+Draw\+Gizmos} (\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_retained_gizmos}{Pathfinding.\+Util.\+Retained\+Gizmos}} gizmos, bool draw\+Nodes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a4dfc0fd5c5365ed96560203c7590effd}{Get\+Tile\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Tile index from a vertex index \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a52162381bad80eb59d090cbea3be09ec}{forced\+Bounds\+Size}} = new Vector3(100, 40, 100)
+\begin{DoxyCompactList}\small\item\em Size of the bounding box. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a3348fd851757f6d11c82b4c427f0314a}{show\+Mesh\+Outline}} = true
+\begin{DoxyCompactList}\small\item\em Show an outline of the polygons in the Unity Editor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef39d84b8f8653f08edaf519526a0c8d}{show\+Node\+Connections}}
+\begin{DoxyCompactList}\small\item\em Show the connections between the polygons in the Unity Editor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a1cfed59f41a1ddf2b5b917cc2cf8fa9b}{show\+Mesh\+Surface}} = true
+\begin{DoxyCompactList}\small\item\em Show the surface of the navmesh \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a5f8cf157b2ce03c0cec8201cd9bbd5b1}{tile\+X\+Count}}
+\begin{DoxyCompactList}\small\item\em Number of tiles along the X-\/axis \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a75fe6795ba5b34bd3771bcf79030a7d2}{tile\+Z\+Count}}
+\begin{DoxyCompactList}\small\item\em Number of tiles along the Z-\/axis \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a8247471c6dba57c8427abf5069451a5a}{nearest\+Search\+Only\+XZ}}
+\begin{DoxyCompactList}\small\item\em Perform nearest node searches in XZ space only. Recomended for single-\/layered environments. Faster but can be inaccurate esp. in multilayered contexts. You should not use this if the graph is rotated since then the XZ plane no longer corresponds to the ground plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_ad7826294caea4db9ab925d489d551167}{enable\+Navmesh\+Cutting}} = true
+\begin{DoxyCompactList}\small\item\em Should navmesh cuts affect this graph. See\+: navmesh\+Update\+Data \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}{transform}} = new \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}}(Matrix4x4.\+identity)
+\begin{DoxyCompactList}\small\item\em Determines how the graph transforms graph space to world space. See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Calculate\+Transform}} \end{DoxyCompactList}\item 
+System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a29da6dff16373e306cccbe42fcdeed79}{On\+Recalculated\+Tiles}}
+\begin{DoxyCompactList}\small\item\em Called when tiles have been completely recalculated. This is called after scanning the graph and after performing graph updates that completely recalculate tiles (not ones that simply modify e.\+g penalties). It is not called after Navmesh\+Cut updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ae2b01e98847732b2ca4b57bf1cdbd903}\label{class_pathfinding_1_1_navmesh_base_ae2b01e98847732b2ca4b57bf1cdbd903}} 
+const int {\bfseries Vertex\+Index\+Mask} = 0x\+F\+FF
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a8babb89153cf4d84f3db93e899fd49ce}\label{class_pathfinding_1_1_navmesh_base_a8babb89153cf4d84f3db93e899fd49ce}} 
+const int {\bfseries Tile\+Index\+Mask} = 0x7\+F\+F\+FF
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a2c61e2b9e218ea32732c6b44a9514b37}\label{class_pathfinding_1_1_navmesh_base_a2c61e2b9e218ea32732c6b44a9514b37}} 
+const int {\bfseries Tile\+Index\+Offset} = 12
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a9839b26d7e60f9a49678ffe9765ea0e8}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Function for cleaning up references. This will be called on the same time as On\+Disable on the game\+Object which the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} script is attached to (remember, not in the editor). Use for any cleanup code such as cleaning up static variables which otherwise might prevent resources from being collected. Use by creating a function overriding this one in a graph class, but always call base.\+On\+Destroy () in that function. All nodes should be destroyed in this function otherwise a memory leak will arise. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a287ea83d3cd67829b66147a2337a3a8e}{New\+Empty\+Tile}} (int x, int z)
+\begin{DoxyCompactList}\small\item\em Creates a single new empty tile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a924d411949aba2cccded95e42b71e17f}\label{class_pathfinding_1_1_navmesh_base_a924d411949aba2cccded95e42b71e17f}} 
+void {\bfseries Connect\+Tile\+With\+Neighbours} (\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} tile, bool only\+Unflagged=false)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a8b1ecf9495ebd8fbf23dd6585a2161cd}\label{class_pathfinding_1_1_navmesh_base_a8b1ecf9495ebd8fbf23dd6585a2161cd}} 
+void {\bfseries Remove\+Connections\+From\+Tile} (\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} tile)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aad332d817b5cb732f82181996301757f}\label{class_pathfinding_1_1_navmesh_base_aad332d817b5cb732f82181996301757f}} 
+void {\bfseries Remove\+Connections\+From\+To} (\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} a, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} b)
+\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a954b3ca6dc1a3c69bf447b3ac17d2d93}{Fill\+With\+Empty\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Fills graph with tiles created by New\+Empty\+Tile \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a3b6ee85c95783f23469e4d8260cc153f}{Connect\+Tiles}} (\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} tile1, \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} tile2)
+\begin{DoxyCompactList}\small\item\em Generate connections between the two tiles. The tiles must be adjacent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_addab4398a19adde10541e1d7e4ad0d0c}{Clear\+Tile}} (int x, int z)
+\begin{DoxyCompactList}\small\item\em Clear the tile at the specified coordinate. Must be called during a batch update, see \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a7e77d6f00532ad555b2ff4bc97638446}{Start\+Batch\+Tile\+Update}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a868c36693f7ec918c0a3b4d9fc7fc049}\label{class_pathfinding_1_1_navmesh_base_a868c36693f7ec918c0a3b4d9fc7fc049}} 
+void {\bfseries Create\+Nodes} (\mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}}\mbox{[}$\,$\mbox{]} buffer, int\mbox{[}$\,$\mbox{]} tris, int tile\+Index, uint \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a3ea8b91c832336eef1e29480bc14446f}{graph\+Index}})
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aa51fb5b0af58689d2eddc54fcc8eca83}{Serialize\+Extra\+Info}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Serializes Node Info. Should serialize\+: \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a3f6ef6c01d28438e3b883d08bef8561a}{Deserialize\+Extra\+Info}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Deserializes graph type specific node data. See\+: Serialize\+Extra\+Info \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a8c980346a8d7e8a5ea0b7dd925542762}{Post\+Deserialization}} (\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}} ctx)
+\begin{DoxyCompactList}\small\item\em Called after all deserialization has been done for all graphs. Can be used to set up more graph data which is not serialized \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aa31b0470c2876550d0bdfcafb907adb2}{Create\+Node\+Connections}} (\mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}}\mbox{[}$\,$\mbox{]} nodes)
+\begin{DoxyCompactList}\small\item\em Create connections between all nodes. Version\+: Since 3.\+7.\+6 the implementation is thread safe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a93783594f9138269d738ab5898978357}{tiles}}
+\begin{DoxyCompactList}\small\item\em All tiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+abstract float \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a29c93f6e4087bdbf993ff6c34afd4468}{Tile\+World\+SizeX}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of a tile in world units along the X axis \end{DoxyCompactList}\item 
+abstract float \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a5145945d300f60d5b1cf3bb400084b24}{Tile\+World\+SizeZ}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of a tile in world units along the Z axis \end{DoxyCompactList}\item 
+abstract float \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a533c57767711062170b905b69f779298}{Max\+Tile\+Connection\+Edge\+Distance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum (vertical) distance between the sides of two nodes for them to be connected across a tile edge. When tiles are connected to each other, the nodes sometimes do not line up perfectly so some allowance must be made to allow tiles that do not match exactly to be connected with each other. \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a9c77ccda4dc1a4b05e61f969140418b0}{Recalculate\+Normals}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for Recast\+Graph and \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph}{Nav\+Mesh\+Graph}} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}\label{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!CalculateTransform@{CalculateTransform}}
+\index{CalculateTransform@{CalculateTransform}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{CalculateTransform()}{CalculateTransform()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} Pathfinding.\+Navmesh\+Base.\+Calculate\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a new transform which transforms graph space to world space. Does not update the \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}{transform}} field. See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}{Relocate\+Nodes(\+Graph\+Transform)}} 
+
+
+
+Implemented in \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_ac0bd30a379bcf685ba3afcbe840b9727}{Pathfinding.\+Nav\+Mesh\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_addab4398a19adde10541e1d7e4ad0d0c}\label{class_pathfinding_1_1_navmesh_base_addab4398a19adde10541e1d7e4ad0d0c}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!ClearTile@{ClearTile}}
+\index{ClearTile@{ClearTile}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{ClearTile()}{ClearTile()}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Clear\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clear the tile at the specified coordinate. Must be called during a batch update, see \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a7e77d6f00532ad555b2ff4bc97638446}{Start\+Batch\+Tile\+Update}}. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a3b6ee85c95783f23469e4d8260cc153f}\label{class_pathfinding_1_1_navmesh_base_a3b6ee85c95783f23469e4d8260cc153f}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!ConnectTiles@{ConnectTiles}}
+\index{ConnectTiles@{ConnectTiles}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{ConnectTiles()}{ConnectTiles()}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Connect\+Tiles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}}]{tile1,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}}]{tile2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generate connections between the two tiles. The tiles must be adjacent. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aa31b0470c2876550d0bdfcafb907adb2}\label{class_pathfinding_1_1_navmesh_base_aa31b0470c2876550d0bdfcafb907adb2}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!CreateNodeConnections@{CreateNodeConnections}}
+\index{CreateNodeConnections@{CreateNodeConnections}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{CreateNodeConnections()}{CreateNodeConnections()}}
+{\footnotesize\ttfamily static void Pathfinding.\+Navmesh\+Base.\+Create\+Node\+Connections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}}\mbox{[}$\,$\mbox{]}}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Create connections between all nodes. Version\+: Since 3.\+7.\+6 the implementation is thread safe 
+
+T\+O\+DO\+: This will fail on edges which are only partially shared\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a3f6ef6c01d28438e3b883d08bef8561a}\label{class_pathfinding_1_1_navmesh_base_a3f6ef6c01d28438e3b883d08bef8561a}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!DeserializeExtraInfo@{DeserializeExtraInfo}}
+\index{DeserializeExtraInfo@{DeserializeExtraInfo}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{DeserializeExtraInfo()}{DeserializeExtraInfo()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Navmesh\+Base.\+Deserialize\+Extra\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deserializes graph type specific node data. See\+: Serialize\+Extra\+Info 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a744eaabc0d215427dbaa72cb431ac635}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a7891aebbf6d5a825d4c1160353e78549}\label{class_pathfinding_1_1_navmesh_base_a7891aebbf6d5a825d4c1160353e78549}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!EndBatchTileUpdate@{EndBatchTileUpdate}}
+\index{EndBatchTileUpdate@{EndBatchTileUpdate}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{EndBatchTileUpdate()}{EndBatchTileUpdate()}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+End\+Batch\+Tile\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+End batch updating of tiles. During batch updating, tiles will not be connected if they are updating with Replace\+Tile. When ending batching, all affected tiles will be connected. This is faster than not using batching. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a954b3ca6dc1a3c69bf447b3ac17d2d93}\label{class_pathfinding_1_1_navmesh_base_a954b3ca6dc1a3c69bf447b3ac17d2d93}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!FillWithEmptyTiles@{FillWithEmptyTiles}}
+\index{FillWithEmptyTiles@{FillWithEmptyTiles}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{FillWithEmptyTiles()}{FillWithEmptyTiles()}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Fill\+With\+Empty\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Fills graph with tiles created by New\+Empty\+Tile 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ac6c85c481af42079c73e34f7dd8afba0}\label{class_pathfinding_1_1_navmesh_base_ac6c85c481af42079c73e34f7dd8afba0}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetNearest@{GetNearest}}
+\index{GetNearest@{GetNearest}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetNearest()}{GetNearest()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Navmesh\+Base.\+Get\+Nearest (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to try to find a close node to\\
+\hline
+{\em hint} & Can be passed to enable some graph generators to find the nearest node faster.\\
+\hline
+{\em constraint} & Can for example tell the function to try to return a walkable node. If you do not get a good node back, consider calling Get\+Nearest\+Force.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a75522d1273f1c06c49c1aa951a459b77}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a52cc86c1628ef1a502363eaa50ccecf9}\label{class_pathfinding_1_1_navmesh_base_a52cc86c1628ef1a502363eaa50ccecf9}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetNearestForce@{GetNearestForce}}
+\index{GetNearestForce@{GetNearestForce}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetNearestForce()}{GetNearestForce()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}} Pathfinding.\+Navmesh\+Base.\+Get\+Nearest\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the nearest node to a position using the specified \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{constraint }}. Returns\+: an \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}. This method will only return an empty \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} if there are no nodes which comply with the specified constraint. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a7f8d00bf59f014706eabe25c2b0b7ad4}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a31cc47413a70213976e1f6fbbb06b162}\label{class_pathfinding_1_1_navmesh_base_a31cc47413a70213976e1f6fbbb06b162}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetNodes@{GetNodes}}
+\index{GetNodes@{GetNodes}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetNodes()}{GetNodes()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Navmesh\+Base.\+Get\+Nodes (\begin{DoxyParamCaption}\item[{System.\+Action$<$ \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calls a delegate with all nodes in the graph. This is the primary way of iterating through all nodes in a graph. 
+
+Do not change the graph structure inside the delegate.
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph;}
+
+{\ttfamily gg.\+Get\+Nodes(node =$>$ \{ // Here is a node Debug.\+Log(\char`\"{}\+I found a node at position \char`\"{} + (Vector3)node.\+position); \}); }
+
+If you want to store all nodes in a list you can do this
+
+{\ttfamily  var gg = Astar\+Path.\+active.\+data.\+grid\+Graph;}
+
+{\ttfamily List$<$\+Graph\+Node$>$ nodes = new List$<$\+Graph\+Node$>$(); gg.\+Get\+Nodes((System.\+Action$<$\+Graph\+Node$>$)nodes.\+Add); }
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_astar_data_a21b0e75ff4aa8af66025f06684f4e6df}{Pathfinding.\+Astar\+Data.\+Get\+Nodes}}
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a1f30352703d9a3f192d6e6b44d86c8b3}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a094a688eca1058704e16baf815f7b022}\label{class_pathfinding_1_1_navmesh_base_a094a688eca1058704e16baf815f7b022}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTile@{GetTile}}
+\index{GetTile@{GetTile}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTile()}{GetTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} Pathfinding.\+Navmesh\+Base.\+Get\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+Tile at the specified x, z coordinate pair. The first tile is at (0,0), the last tile at (tile\+X\+Count-\/1, tile\+Z\+Count-\/1). 
+
+{\ttfamily  var graph = Astar\+Path.\+active.\+data.\+recast\+Graph; int tileX = 5; int tileZ = 8; \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} tile = graph.\+Get\+Tile(tile\+X, tile\+Z);}
+
+{\ttfamily for (int i = 0; i $<$ tile.\+nodes.\+Length; i++) \{ // ... \} // or you can access the nodes like this\+: tile.\+Get\+Nodes(node =$>$ \{ // ... \}); }\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aead149b42d271686c33f6de780b82f61}\label{class_pathfinding_1_1_navmesh_base_aead149b42d271686c33f6de780b82f61}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTileBounds@{GetTileBounds}}
+\index{GetTileBounds@{GetTileBounds}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTileBounds()}{GetTileBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bounds Pathfinding.\+Navmesh\+Base.\+Get\+Tile\+Bounds (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{int}]{width = {\ttfamily 1},  }\item[{int}]{depth = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Returns a bounds object with the bounding box of a group of tiles. The bounding box is defined in world space. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a9781dc844fc0fbed044f3cdbd3a46443}\label{class_pathfinding_1_1_navmesh_base_a9781dc844fc0fbed044f3cdbd3a46443}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTileBounds@{GetTileBounds}}
+\index{GetTileBounds@{GetTileBounds}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTileBounds()}{GetTileBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bounds Pathfinding.\+Navmesh\+Base.\+Get\+Tile\+Bounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}}]{rect }\end{DoxyParamCaption})}
+
+
+
+Returns a bounds object with the bounding box of a group of tiles. The bounding box is defined in world space. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a527c3066ee00a2df32d3405c2807c47b}\label{class_pathfinding_1_1_navmesh_base_a527c3066ee00a2df32d3405c2807c47b}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTileBoundsInGraphSpace@{GetTileBoundsInGraphSpace}}
+\index{GetTileBoundsInGraphSpace@{GetTileBoundsInGraphSpace}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTileBoundsInGraphSpace()}{GetTileBoundsInGraphSpace()}}
+{\footnotesize\ttfamily Bounds Pathfinding.\+Navmesh\+Base.\+Get\+Tile\+Bounds\+In\+Graph\+Space (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{int}]{width = {\ttfamily 1},  }\item[{int}]{depth = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Returns an XZ bounds object with the bounds of a group of tiles in graph space 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a94bb1009e0b85246101a48b7911bef63}\label{class_pathfinding_1_1_navmesh_base_a94bb1009e0b85246101a48b7911bef63}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTileCoordinates@{GetTileCoordinates}}
+\index{GetTileCoordinates@{GetTileCoordinates}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTileCoordinates()}{GetTileCoordinates()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Get\+Tile\+Coordinates (\begin{DoxyParamCaption}\item[{int}]{tile\+Index,  }\item[{out int}]{x,  }\item[{out int}]{z }\end{DoxyParamCaption})}
+
+
+
+Tile coordinates from a tile index 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder_ae3ba3fe5c39f02acf30f7db88acd4194}{Pathfinding.\+I\+Navmesh\+Holder}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aacfff3e0cd8d19c0c781bec372c8c6e6}\label{class_pathfinding_1_1_navmesh_base_aacfff3e0cd8d19c0c781bec372c8c6e6}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTileCoordinates@{GetTileCoordinates}}
+\index{GetTileCoordinates@{GetTileCoordinates}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTileCoordinates()}{GetTileCoordinates()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int2}{Int2}} Pathfinding.\+Navmesh\+Base.\+Get\+Tile\+Coordinates (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+
+
+Returns the tile coordinate which contains the specified position. It is not necessarily a valid tile (i.\+e it could be out of bounds). 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a4dfc0fd5c5365ed96560203c7590effd}\label{class_pathfinding_1_1_navmesh_base_a4dfc0fd5c5365ed96560203c7590effd}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTileIndex@{GetTileIndex}}
+\index{GetTileIndex@{GetTileIndex}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTileIndex()}{GetTileIndex()}}
+{\footnotesize\ttfamily static int Pathfinding.\+Navmesh\+Base.\+Get\+Tile\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tile index from a vertex index 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a845474ef7fbfe6884359021c1c4b3745}\label{class_pathfinding_1_1_navmesh_base_a845474ef7fbfe6884359021c1c4b3745}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTiles@{GetTiles}}
+\index{GetTiles@{GetTiles}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTiles()}{GetTiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} \mbox{[}$\,$\mbox{]} Pathfinding.\+Navmesh\+Base.\+Get\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+All tiles. Warning\+: Do not modify this array 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a6b84a12b1f615372c34c56606751455b}\label{class_pathfinding_1_1_navmesh_base_a6b84a12b1f615372c34c56606751455b}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTouchingTiles@{GetTouchingTiles}}
+\index{GetTouchingTiles@{GetTouchingTiles}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTouchingTiles()}{GetTouchingTiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} Pathfinding.\+Navmesh\+Base.\+Get\+Touching\+Tiles (\begin{DoxyParamCaption}\item[{Bounds}]{bounds,  }\item[{float}]{margin = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Returns a rect containing the indices of all tiles touching the specified bounds. If a margin is passed, the bounding box in graph space is expanded by that amount in every direction. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aae4ff06c3fe88df0de5109ac97f1c2a6}\label{class_pathfinding_1_1_navmesh_base_aae4ff06c3fe88df0de5109ac97f1c2a6}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTouchingTilesInGraphSpace@{GetTouchingTilesInGraphSpace}}
+\index{GetTouchingTilesInGraphSpace@{GetTouchingTilesInGraphSpace}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTouchingTilesInGraphSpace()}{GetTouchingTilesInGraphSpace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} Pathfinding.\+Navmesh\+Base.\+Get\+Touching\+Tiles\+In\+Graph\+Space (\begin{DoxyParamCaption}\item[{Rect}]{rect }\end{DoxyParamCaption})}
+
+
+
+Returns a rect containing the indices of all tiles touching the specified bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & Graph space rectangle (in graph space all tiles are on the XZ plane regardless of graph rotation and other transformations, the first tile has a corner at the origin)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_adb77a3881bee0fd65645f8ac0668cee0}\label{class_pathfinding_1_1_navmesh_base_adb77a3881bee0fd65645f8ac0668cee0}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetTouchingTilesRound@{GetTouchingTilesRound}}
+\index{GetTouchingTilesRound@{GetTouchingTilesRound}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetTouchingTilesRound()}{GetTouchingTilesRound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}} Pathfinding.\+Navmesh\+Base.\+Get\+Touching\+Tiles\+Round (\begin{DoxyParamCaption}\item[{Bounds}]{bounds }\end{DoxyParamCaption})}
+
+
+
+Returns a rect containing the indices of all tiles by rounding the specified bounds to tile borders. This is different from Get\+Touching\+Tiles in that the tiles inside the rectangle returned from this method may not contain the whole bounds, while that is guaranteed for Get\+Touching\+Tiles. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a912c00fc6b1c578cb7e691bdceaf2314}\label{class_pathfinding_1_1_navmesh_base_a912c00fc6b1c578cb7e691bdceaf2314}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetVertex()}{GetVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} Pathfinding.\+Navmesh\+Base.\+Get\+Vertex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Vertex coordinate for the specified vertex index. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Index\+Out\+Of\+Range\+Exception} & if the vertex index is invalid. \\
+\hline
+{\em Null\+Reference\+Exception} & if the tile the vertex is in is not calculated.\\
+\hline
+\end{DoxyExceptions}
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile_aa14f97326a8b98251639fac26f60dda3}{Navmesh\+Tile.\+Get\+Vertex}}
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder_a2ebf594763f304b0374ffb2e30dbaaef}{Pathfinding.\+I\+Navmesh\+Holder}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_af7562006ceaecf56ef9652db50da36ce}\label{class_pathfinding_1_1_navmesh_base_af7562006ceaecf56ef9652db50da36ce}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!GetVertexInGraphSpace@{GetVertexInGraphSpace}}
+\index{GetVertexInGraphSpace@{GetVertexInGraphSpace}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{GetVertexInGraphSpace()}{GetVertexInGraphSpace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} Pathfinding.\+Navmesh\+Base.\+Get\+Vertex\+In\+Graph\+Space (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Vertex coordinate in graph space for the specified vertex index 
+
+
+
+Implements \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder_a00819256724cf58a3521df96cbd62e83}{Pathfinding.\+I\+Navmesh\+Holder}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a287ea83d3cd67829b66147a2337a3a8e}\label{class_pathfinding_1_1_navmesh_base_a287ea83d3cd67829b66147a2337a3a8e}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!NewEmptyTile@{NewEmptyTile}}
+\index{NewEmptyTile@{NewEmptyTile}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{NewEmptyTile()}{NewEmptyTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} Pathfinding.\+Navmesh\+Base.\+New\+Empty\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates a single new empty tile 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a9839b26d7e60f9a49678ffe9765ea0e8}\label{class_pathfinding_1_1_navmesh_base_a9839b26d7e60f9a49678ffe9765ea0e8}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Navmesh\+Base.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function for cleaning up references. This will be called on the same time as On\+Disable on the game\+Object which the \mbox{\hyperlink{class_astar_path}{Astar\+Path}} script is attached to (remember, not in the editor). Use for any cleanup code such as cleaning up static variables which otherwise might prevent resources from being collected. Use by creating a function overriding this one in a graph class, but always call base.\+On\+Destroy () in that function. All nodes should be destroyed in this function otherwise a memory leak will arise. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_aa244cacb06444c24a23935a44383a791}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ac66ff23d38cb5ae1371aff3b5d49f9fd}\label{class_pathfinding_1_1_navmesh_base_ac66ff23d38cb5ae1371aff3b5d49f9fd}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!PointOnNavmesh@{PointOnNavmesh}}
+\index{PointOnNavmesh@{PointOnNavmesh}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{PointOnNavmesh()}{PointOnNavmesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} Pathfinding.\+Navmesh\+Base.\+Point\+On\+Navmesh (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}}]{constraint }\end{DoxyParamCaption})}
+
+
+
+Finds the first node which contains position. \char`\"{}\+Contains\char`\"{} is defined as position is inside the triangle node when seen from above. So only XZ space matters. In case of a multilayered environment, which node of the possibly several nodes containing the point is undefined. 
+
+Returns null if there was no node containing the point. This serves as a quick check for \char`\"{}is this point on the navmesh or not\char`\"{}.
+
+Note that the behaviour of this method is distinct from the Get\+Nearest method. The Get\+Nearest method will return the closest node to a point, which is not necessarily the one which contains it in XZ space.
+
+See\+: Get\+Nearest\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a8c980346a8d7e8a5ea0b7dd925542762}\label{class_pathfinding_1_1_navmesh_base_a8c980346a8d7e8a5ea0b7dd925542762}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!PostDeserialization@{PostDeserialization}}
+\index{PostDeserialization@{PostDeserialization}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{PostDeserialization()}{PostDeserialization()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Navmesh\+Base.\+Post\+Deserialization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called after all deserialization has been done for all graphs. Can be used to set up more graph data which is not serialized 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a4f22c1d0267887f4430686d0015c97c6}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}\label{class_pathfinding_1_1_navmesh_base_a2f50df9fd87866ef75fb2cf58b5e8d97}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!RelocateNodes@{RelocateNodes}}
+\index{RelocateNodes@{RelocateNodes}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{RelocateNodes()}{RelocateNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Relocate\+Nodes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}}}]{new\+Transform }\end{DoxyParamCaption})}
+
+
+
+Moves the nodes in this graph. Moves all the nodes in such a way that the specified transform is the new graph space to world space transformation for the graph. You usually use this together with the \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Calculate\+Transform}} method. 
+
+So for example if you want to move and rotate all your nodes in e.\+g a recast graph you can do {\ttfamily  var graph = Astar\+Path.\+data.\+recast\+Graph; graph.\+rotation = new Vector3(45, 0, 0); graph.\+forced\+Bounds\+Center = new Vector3(20, 10, 10); var transform = graph.\+Calculate\+Transform(); graph.\+Relocate\+Nodes(transform); } This will move all the nodes to new positions as if the new graph settings had been there from the start.
+
+Note\+: Relocate\+Nodes(delta\+Matrix) is not equivalent to Relocate\+Nodes(new Graph\+Transform(delta\+Matrix)). The overload which takes a matrix multiplies all existing node positions with the matrix while this overload does not take into account the current positions of the nodes.
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Calculate\+Transform}}\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ad1d35f59863772a1d6d7ca59a2ba518a}\label{class_pathfinding_1_1_navmesh_base_ad1d35f59863772a1d6d7ca59a2ba518a}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!RelocateNodes@{RelocateNodes}}
+\index{RelocateNodes@{RelocateNodes}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{RelocateNodes()}{RelocateNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override void Pathfinding.\+Navmesh\+Base.\+Relocate\+Nodes (\begin{DoxyParamCaption}\item[{Matrix4x4}]{delta\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the nodes in this graph. Multiplies all node positions by delta\+Matrix. 
+
+For example if you want to move all your nodes in e.\+g a point graph 10 units along the X axis from the initial position {\ttfamily  var graph = Astar\+Path.\+data.\+point\+Graph; var m = Matrix4x4.\+T\+RS (new Vector3(10,0,0), Quaternion.\+identity, Vector3.\+one); graph.\+Relocate\+Nodes (m); }
+
+Note\+: For grid graphs, navmesh graphs and recast graphs it is recommended to use their custom overloads of the Relocate\+Nodes method which take parameters for e.\+g center and node\+Size (and additional parameters) instead since they are both easier to use and are less likely to mess up pathfinding.
+
+Warning\+: This method is lossy for Point\+Graphs, so calling it many times may cause node positions to lose precision. For example if you set the scale to 0 in one call then all nodes will be scaled/moved to the same point and you will not be able to recover their original positions. The same thing happens for other -\/ less extreme -\/ values as well, but to a lesser degree.
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_a9418ded2d0b1003b001cecd12da8a73a}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aed5ae5c1121b584e35226893a89e6632}\label{class_pathfinding_1_1_navmesh_base_aed5ae5c1121b584e35226893a89e6632}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!ReplaceTile@{ReplaceTile}}
+\index{ReplaceTile@{ReplaceTile}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{ReplaceTile()}{ReplaceTile()}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Replace\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}\mbox{[}$\,$\mbox{]}}]{verts,  }\item[{int\mbox{[}$\,$\mbox{]}}]{tris }\end{DoxyParamCaption})}
+
+
+
+Replace tile at index with nodes created from specified navmesh. This will create new nodes and link them to the adjacent tile (unless batching has been started in which case that will be done when batching ends). 
+
+The vertices are assumed to be in \textquotesingle{}tile space\textquotesingle{}, that is being in a rectangle with one corner at the origin and one at (\mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a29c93f6e4087bdbf993ff6c34afd4468}{Tile\+World\+SizeX}}, 0, Tile\+World\+Size\+Z).
+
+Note\+: The vertex and triangle arrays may be modified and will be stored with the tile data. do not modify them after this method has been called.
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a7e77d6f00532ad555b2ff4bc97638446}{Start\+Batch\+Tile\+Update}}\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aa51fb5b0af58689d2eddc54fcc8eca83}\label{class_pathfinding_1_1_navmesh_base_aa51fb5b0af58689d2eddc54fcc8eca83}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!SerializeExtraInfo@{SerializeExtraInfo}}
+\index{SerializeExtraInfo@{SerializeExtraInfo}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{SerializeExtraInfo()}{SerializeExtraInfo()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Navmesh\+Base.\+Serialize\+Extra\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_serialization_1_1_graph_serialization_context}{Graph\+Serialization\+Context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Serializes Node Info. Should serialize\+: 
+
+
+\begin{DoxyItemize}
+\item Base
+\begin{DoxyItemize}
+\item Node Flags
+\item Node Penalties
+\item Node
+\end{DoxyItemize}
+\item Node Positions (if applicable)
+\item Any other information necessary to load the graph in-\/game All settings marked with json attributes (e.\+g Json\+Member) have already been saved as graph settings and do not need to be handled here.
+\end{DoxyItemize}
+
+It is not necessary for this implementation to be forward or backwards compatible.
+
+See\+:
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_nav_graph_abc97e0461bddc710397f650be9461108}{Pathfinding.\+Nav\+Graph}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a7e77d6f00532ad555b2ff4bc97638446}\label{class_pathfinding_1_1_navmesh_base_a7e77d6f00532ad555b2ff4bc97638446}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!StartBatchTileUpdate@{StartBatchTileUpdate}}
+\index{StartBatchTileUpdate@{StartBatchTileUpdate}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{StartBatchTileUpdate()}{StartBatchTileUpdate()}}
+{\footnotesize\ttfamily void Pathfinding.\+Navmesh\+Base.\+Start\+Batch\+Tile\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start batch updating of tiles. During batch updating, tiles will not be connected if they are updating with Replace\+Tile. When ending batching, all affected tiles will be connected. This is faster than not using batching. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_ad7826294caea4db9ab925d489d551167}\label{class_pathfinding_1_1_navmesh_base_ad7826294caea4db9ab925d489d551167}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!enableNavmeshCutting@{enableNavmeshCutting}}
+\index{enableNavmeshCutting@{enableNavmeshCutting}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{enableNavmeshCutting}{enableNavmeshCutting}}
+{\footnotesize\ttfamily bool Pathfinding.\+Navmesh\+Base.\+enable\+Navmesh\+Cutting = true}
+
+
+
+Should navmesh cuts affect this graph. See\+: navmesh\+Update\+Data 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a52162381bad80eb59d090cbea3be09ec}\label{class_pathfinding_1_1_navmesh_base_a52162381bad80eb59d090cbea3be09ec}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!forcedBoundsSize@{forcedBoundsSize}}
+\index{forcedBoundsSize@{forcedBoundsSize}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{forcedBoundsSize}{forcedBoundsSize}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+Navmesh\+Base.\+forced\+Bounds\+Size = new Vector3(100, 40, 100)}
+
+
+
+Size of the bounding box. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a8247471c6dba57c8427abf5069451a5a}\label{class_pathfinding_1_1_navmesh_base_a8247471c6dba57c8427abf5069451a5a}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!nearestSearchOnlyXZ@{nearestSearchOnlyXZ}}
+\index{nearestSearchOnlyXZ@{nearestSearchOnlyXZ}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{nearestSearchOnlyXZ}{nearestSearchOnlyXZ}}
+{\footnotesize\ttfamily bool Pathfinding.\+Navmesh\+Base.\+nearest\+Search\+Only\+XZ}
+
+
+
+Perform nearest node searches in XZ space only. Recomended for single-\/layered environments. Faster but can be inaccurate esp. in multilayered contexts. You should not use this if the graph is rotated since then the XZ plane no longer corresponds to the ground plane. 
+
+This can be important on sloped surfaces. See the image below in which the closest point for each blue point is queried for\+: \mbox{[}Open online documentation to see images\mbox{]}
+
+You can also control this using a Pathfinding.\+N\+N\+Constraint.\+distance\+X\+Z field on an N\+N\+Constraint.\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a29da6dff16373e306cccbe42fcdeed79}\label{class_pathfinding_1_1_navmesh_base_a29da6dff16373e306cccbe42fcdeed79}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!OnRecalculatedTiles@{OnRecalculatedTiles}}
+\index{OnRecalculatedTiles@{OnRecalculatedTiles}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{OnRecalculatedTiles}{OnRecalculatedTiles}}
+{\footnotesize\ttfamily System.\+Action$<$\mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}\mbox{[}$\,$\mbox{]}$>$ Pathfinding.\+Navmesh\+Base.\+On\+Recalculated\+Tiles}
+
+
+
+Called when tiles have been completely recalculated. This is called after scanning the graph and after performing graph updates that completely recalculate tiles (not ones that simply modify e.\+g penalties). It is not called after Navmesh\+Cut updates. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a3348fd851757f6d11c82b4c427f0314a}\label{class_pathfinding_1_1_navmesh_base_a3348fd851757f6d11c82b4c427f0314a}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!showMeshOutline@{showMeshOutline}}
+\index{showMeshOutline@{showMeshOutline}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{showMeshOutline}{showMeshOutline}}
+{\footnotesize\ttfamily bool Pathfinding.\+Navmesh\+Base.\+show\+Mesh\+Outline = true}
+
+
+
+Show an outline of the polygons in the Unity Editor 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a1cfed59f41a1ddf2b5b917cc2cf8fa9b}\label{class_pathfinding_1_1_navmesh_base_a1cfed59f41a1ddf2b5b917cc2cf8fa9b}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!showMeshSurface@{showMeshSurface}}
+\index{showMeshSurface@{showMeshSurface}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{showMeshSurface}{showMeshSurface}}
+{\footnotesize\ttfamily bool Pathfinding.\+Navmesh\+Base.\+show\+Mesh\+Surface = true}
+
+
+
+Show the surface of the navmesh 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_aef39d84b8f8653f08edaf519526a0c8d}\label{class_pathfinding_1_1_navmesh_base_aef39d84b8f8653f08edaf519526a0c8d}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!showNodeConnections@{showNodeConnections}}
+\index{showNodeConnections@{showNodeConnections}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{showNodeConnections}{showNodeConnections}}
+{\footnotesize\ttfamily bool Pathfinding.\+Navmesh\+Base.\+show\+Node\+Connections}
+
+
+
+Show the connections between the polygons in the Unity Editor 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a93783594f9138269d738ab5898978357}\label{class_pathfinding_1_1_navmesh_base_a93783594f9138269d738ab5898978357}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!tiles@{tiles}}
+\index{tiles@{tiles}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{tiles}{tiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}} \mbox{[}$\,$\mbox{]} Pathfinding.\+Navmesh\+Base.\+tiles\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+All tiles. 
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a094a688eca1058704e16baf815f7b022}{Get\+Tile}}\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a5f8cf157b2ce03c0cec8201cd9bbd5b1}\label{class_pathfinding_1_1_navmesh_base_a5f8cf157b2ce03c0cec8201cd9bbd5b1}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!tileXCount@{tileXCount}}
+\index{tileXCount@{tileXCount}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{tileXCount}{tileXCount}}
+{\footnotesize\ttfamily int Pathfinding.\+Navmesh\+Base.\+tile\+X\+Count}
+
+
+
+Number of tiles along the X-\/axis 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a75fe6795ba5b34bd3771bcf79030a7d2}\label{class_pathfinding_1_1_navmesh_base_a75fe6795ba5b34bd3771bcf79030a7d2}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!tileZCount@{tileZCount}}
+\index{tileZCount@{tileZCount}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{tileZCount}{tileZCount}}
+{\footnotesize\ttfamily int Pathfinding.\+Navmesh\+Base.\+tile\+Z\+Count}
+
+
+
+Number of tiles along the Z-\/axis 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}\label{class_pathfinding_1_1_navmesh_base_a19f57e17fef900a3423919a00869cab1}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!transform@{transform}}
+\index{transform@{transform}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} Pathfinding.\+Navmesh\+Base.\+transform = new \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}}(Matrix4x4.\+identity)}
+
+
+
+Determines how the graph transforms graph space to world space. See\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_aef3bf39c8622d6761a7fb75a29677609}{Calculate\+Transform}} 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a533c57767711062170b905b69f779298}\label{class_pathfinding_1_1_navmesh_base_a533c57767711062170b905b69f779298}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!MaxTileConnectionEdgeDistance@{MaxTileConnectionEdgeDistance}}
+\index{MaxTileConnectionEdgeDistance@{MaxTileConnectionEdgeDistance}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{MaxTileConnectionEdgeDistance}{MaxTileConnectionEdgeDistance}}
+{\footnotesize\ttfamily abstract float Pathfinding.\+Navmesh\+Base.\+Max\+Tile\+Connection\+Edge\+Distance\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Maximum (vertical) distance between the sides of two nodes for them to be connected across a tile edge. When tiles are connected to each other, the nodes sometimes do not line up perfectly so some allowance must be made to allow tiles that do not match exactly to be connected with each other. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a9c77ccda4dc1a4b05e61f969140418b0}\label{class_pathfinding_1_1_navmesh_base_a9c77ccda4dc1a4b05e61f969140418b0}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!RecalculateNormals@{RecalculateNormals}}
+\index{RecalculateNormals@{RecalculateNormals}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{RecalculateNormals}{RecalculateNormals}}
+{\footnotesize\ttfamily abstract bool Pathfinding.\+Navmesh\+Base.\+Recalculate\+Normals\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a29c93f6e4087bdbf993ff6c34afd4468}\label{class_pathfinding_1_1_navmesh_base_a29c93f6e4087bdbf993ff6c34afd4468}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!TileWorldSizeX@{TileWorldSizeX}}
+\index{TileWorldSizeX@{TileWorldSizeX}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{TileWorldSizeX}{TileWorldSizeX}}
+{\footnotesize\ttfamily abstract float Pathfinding.\+Navmesh\+Base.\+Tile\+World\+SizeX\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Size of a tile in world units along the X axis 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_navmesh_base_a5145945d300f60d5b1cf3bb400084b24}\label{class_pathfinding_1_1_navmesh_base_a5145945d300f60d5b1cf3bb400084b24}} 
+\index{Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}!TileWorldSizeZ@{TileWorldSizeZ}}
+\index{TileWorldSizeZ@{TileWorldSizeZ}!Pathfinding.NavmeshBase@{Pathfinding.NavmeshBase}}
+\doxysubsubsection{\texorpdfstring{TileWorldSizeZ}{TileWorldSizeZ}}
+{\footnotesize\ttfamily abstract float Pathfinding.\+Navmesh\+Base.\+Tile\+World\+SizeZ\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Size of a tile in world units along the Z axis 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/Navmesh\+Base.\+cs\end{DoxyCompactItemize}

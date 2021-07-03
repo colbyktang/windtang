@@ -1,0 +1,6 @@
+<map id="Pathfinding.Legacy.LegacyAIPathEditor" name="Pathfinding.Legacy.LegacyAIPathEditor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,184,271"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_base_a_i_editor.html" title=" " alt="" coords="45,155,144,181"/>
+<area shape="rect" id="node3" href="$class_pathfinding_1_1_editor_base.html" title="Helper for creating editors" alt="" coords="51,80,138,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="67,5,123,32"/>
+</map>

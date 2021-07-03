@@ -1,0 +1,10 @@
+<map id="UnityStandardAssets.ImageEffects.ImageEffectBase" name="UnityStandardAssets.ImageEffects.ImageEffectBase">
+<area shape="rect" id="node1" title=" " alt="" coords="164,169,348,211"/>
+<area shape="rect" id="node3" href="$class_unity_standard_assets_1_1_image_effects_1_1_color_correction_ramp.html" title=" " alt="" coords="396,5,585,47"/>
+<area shape="rect" id="node4" href="$class_unity_standard_assets_1_1_image_effects_1_1_grayscale.html" title=" " alt="" coords="399,71,583,112"/>
+<area shape="rect" id="node5" href="$class_unity_standard_assets_1_1_image_effects_1_1_motion_blur.html" title=" " alt="" coords="399,136,583,177"/>
+<area shape="rect" id="node6" href="$class_unity_standard_assets_1_1_image_effects_1_1_sepia_tone.html" title=" " alt="" coords="399,201,583,243"/>
+<area shape="rect" id="node7" href="$class_unity_standard_assets_1_1_image_effects_1_1_twirl.html" title=" " alt="" coords="399,267,583,308"/>
+<area shape="rect" id="node8" href="$class_unity_standard_assets_1_1_image_effects_1_1_vortex.html" title=" " alt="" coords="399,332,583,373"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,177,116,203"/>
+</map>

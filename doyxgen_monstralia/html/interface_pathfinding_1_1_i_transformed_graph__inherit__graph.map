@@ -1,0 +1,8 @@
+<map id="Pathfinding.ITransformedGraph" name="Pathfinding.ITransformedGraph">
+<area shape="rect" id="node1" title="Graph which has a well defined transformation from graph space to world space" alt="" coords="110,5,274,47"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_grid_graph.html" title="Generates a grid of nodes. The GridGraph does exactly what the name implies, generates nodes in a gri..." alt="" coords="5,95,155,121"/>
+<area shape="rect" id="node3" href="$interface_pathfinding_1_1_i_navmesh_holder.html" title="Interface for something that holds a triangle based navmesh" alt="" coords="230,95,413,121"/>
+<area shape="rect" id="node4" href="$class_pathfinding_1_1_navmesh_base.html" title="Base class for RecastGraph and NavMeshGraph" alt="" coords="105,169,279,196"/>
+<area shape="rect" id="node6" href="$class_pathfinding_1_1_navmesh_tile.html" title=" " alt="" coords="303,169,465,196"/>
+<area shape="rect" id="node5" href="$class_pathfinding_1_1_nav_mesh_graph.html" title="Generates graphs based on navmeshes." alt="" coords="103,244,281,271"/>
+</map>

@@ -1,0 +1,106 @@
+\hypertarget{class_pathfinding_1_1_util_1_1_graph_transform}{}\doxysection{Pathfinding.\+Util.\+Graph\+Transform Class Reference}
+\label{class_pathfinding_1_1_util_1_1_graph_transform}\index{Pathfinding.Util.GraphTransform@{Pathfinding.Util.GraphTransform}}
+
+
+Defines a transformation from graph space to world space. This is essentially just a simple wrapper around a matrix, but it has several utilities that are useful.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Util.\+Graph\+Transform\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Util.\+Graph\+Transform\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a6a5f3e41a343813eda5088ccb88cd171}\label{class_pathfinding_1_1_util_1_1_graph_transform_a6a5f3e41a343813eda5088ccb88cd171}} 
+{\bfseries Graph\+Transform} (Matrix4x4 matrix)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a2a69a2cd7ec836499c545921844c63fa}\label{class_pathfinding_1_1_util_1_1_graph_transform_a2a69a2cd7ec836499c545921844c63fa}} 
+Vector3 {\bfseries World\+Up\+At\+Graph\+Position} (Vector3 point)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_af26be808c7c189c8237275d2b454aacd}\label{class_pathfinding_1_1_util_1_1_graph_transform_af26be808c7c189c8237275d2b454aacd}} 
+Vector3 {\bfseries Transform} (Vector3 point)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_ad8e18b3a1a89a5c4c430b17e3dd48291}\label{class_pathfinding_1_1_util_1_1_graph_transform_ad8e18b3a1a89a5c4c430b17e3dd48291}} 
+Vector3 {\bfseries Transform\+Vector} (Vector3 point)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a1c43eba450c2370abb173298b75c8d59}\label{class_pathfinding_1_1_util_1_1_graph_transform_a1c43eba450c2370abb173298b75c8d59}} 
+void {\bfseries Transform} (\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}\mbox{[}$\,$\mbox{]} arr)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a115d9569311b364892e164ee2c8fa547}\label{class_pathfinding_1_1_util_1_1_graph_transform_a115d9569311b364892e164ee2c8fa547}} 
+void {\bfseries Transform} (Vector3\mbox{[}$\,$\mbox{]} arr)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_ae3791cfca06b658d720204e8d01194e6}\label{class_pathfinding_1_1_util_1_1_graph_transform_ae3791cfca06b658d720204e8d01194e6}} 
+Vector3 {\bfseries Inverse\+Transform} (Vector3 point)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a9f58def843028d62e29afa3a98c261ad}\label{class_pathfinding_1_1_util_1_1_graph_transform_a9f58def843028d62e29afa3a98c261ad}} 
+\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} {\bfseries Inverse\+Transform} (\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}} point)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a6bf43900529966f5bf47721422d92c23}\label{class_pathfinding_1_1_util_1_1_graph_transform_a6bf43900529966f5bf47721422d92c23}} 
+void {\bfseries Inverse\+Transform} (\mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}\mbox{[}$\,$\mbox{]} arr)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a87c36b37d982cd55c0cf8c1a94ecdf2d}\label{class_pathfinding_1_1_util_1_1_graph_transform_a87c36b37d982cd55c0cf8c1a94ecdf2d}} 
+Bounds {\bfseries Transform} (Bounds bounds)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a18799d35bde1a9b74a6eb6e864a6c951}\label{class_pathfinding_1_1_util_1_1_graph_transform_a18799d35bde1a9b74a6eb6e864a6c951}} 
+Bounds {\bfseries Inverse\+Transform} (Bounds bounds)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a6d21d2ec8731744da9f8a5f64aa41d1c}\label{class_pathfinding_1_1_util_1_1_graph_transform_a6d21d2ec8731744da9f8a5f64aa41d1c}} 
+static \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} {\bfseries operator$\ast$} (\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} lhs, Matrix4x4 rhs)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a56f2c23e18d067b3fc8a96b4696a8664}\label{class_pathfinding_1_1_util_1_1_graph_transform_a56f2c23e18d067b3fc8a96b4696a8664}} 
+static \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} {\bfseries operator$\ast$} (Matrix4x4 lhs, \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly bool \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform_afd3732a571d099575184d78f38a0dc8b}{identity}}
+\begin{DoxyCompactList}\small\item\em True if this transform is the identity transform (i.\+e it does not do anything) \end{DoxyCompactList}\item 
+readonly bool \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform_ab63572f356bc7b9632395de62b27a682}{only\+Translational}}
+\begin{DoxyCompactList}\small\item\em True if this transform is a pure translation without any scaling or rotation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_a96d2313711c3dff0f2efd364a91c7448}\label{class_pathfinding_1_1_util_1_1_graph_transform_a96d2313711c3dff0f2efd364a91c7448}} 
+static readonly \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}} {\bfseries identity\+Transform} = new \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_graph_transform}{Graph\+Transform}}(Matrix4x4.\+identity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a transformation from graph space to world space. This is essentially just a simple wrapper around a matrix, but it has several utilities that are useful. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_afd3732a571d099575184d78f38a0dc8b}\label{class_pathfinding_1_1_util_1_1_graph_transform_afd3732a571d099575184d78f38a0dc8b}} 
+\index{Pathfinding.Util.GraphTransform@{Pathfinding.Util.GraphTransform}!identity@{identity}}
+\index{identity@{identity}!Pathfinding.Util.GraphTransform@{Pathfinding.Util.GraphTransform}}
+\doxysubsubsection{\texorpdfstring{identity}{identity}}
+{\footnotesize\ttfamily readonly bool Pathfinding.\+Util.\+Graph\+Transform.\+identity}
+
+
+
+True if this transform is the identity transform (i.\+e it does not do anything) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_util_1_1_graph_transform_ab63572f356bc7b9632395de62b27a682}\label{class_pathfinding_1_1_util_1_1_graph_transform_ab63572f356bc7b9632395de62b27a682}} 
+\index{Pathfinding.Util.GraphTransform@{Pathfinding.Util.GraphTransform}!onlyTranslational@{onlyTranslational}}
+\index{onlyTranslational@{onlyTranslational}!Pathfinding.Util.GraphTransform@{Pathfinding.Util.GraphTransform}}
+\doxysubsubsection{\texorpdfstring{onlyTranslational}{onlyTranslational}}
+{\footnotesize\ttfamily readonly bool Pathfinding.\+Util.\+Graph\+Transform.\+only\+Translational}
+
+
+
+True if this transform is a pure translation without any scaling or rotation 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Generators/\+Utilities/Graph\+Transform.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{class_review_manager}{}\doxysection{Review\+Manager Class Reference}
+\label{class_review_manager}\index{ReviewManager@{ReviewManager}}
+Inheritance diagram for Review\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_review_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_review_manager_aff68b727258c2227862d432941afafea}\label{class_review_manager_aff68b727258c2227862d432941afafea}} 
+delegate void {\bfseries Review\+Action} ()
+\item 
+\mbox{\Hypertarget{class_review_manager_a37107e7b8aa197aae7d918bc835e53de}\label{class_review_manager_a37107e7b8aa197aae7d918bc835e53de}} 
+void {\bfseries Add\+Review\+Game\+To\+List} (Data\+Type.\+Minigame minigame)
+\item 
+\mbox{\Hypertarget{class_review_manager_ab8961c5cb6ceb3d81521e3b2608d87cb}\label{class_review_manager_ab8961c5cb6ceb3d81521e3b2608d87cb}} 
+void {\bfseries Start\+Review} ()
+\item 
+\mbox{\Hypertarget{class_review_manager_aa788873d8df36ae26eea7d187e4bdb90}\label{class_review_manager_aa788873d8df36ae26eea7d187e4bdb90}} 
+void {\bfseries Set\+Player\+Needs\+Review} ()
+\item 
+\mbox{\Hypertarget{class_review_manager_aa27ae1215900b1d75d1d4e17e3d7481b}\label{class_review_manager_aa27ae1215900b1d75d1d4e17e3d7481b}} 
+void {\bfseries Create\+Review} (Data\+Type.\+Minigame minigame)
+\item 
+\mbox{\Hypertarget{class_review_manager_a600942b2bcf4ff6b0d6682c8f12f4762}\label{class_review_manager_a600942b2bcf4ff6b0d6682c8f12f4762}} 
+void {\bfseries Complete\+Review} ()
+\item 
+\mbox{\Hypertarget{class_review_manager_aa2c8dd38d6f323b7471df3d982262b54}\label{class_review_manager_aa2c8dd38d6f323b7471df3d982262b54}} 
+void {\bfseries End\+Review} (float time=3.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_review_manager_a103da11f406b6b6726b5c8a3ead7e7e4}\label{class_review_manager_a103da11f406b6b6726b5c8a3ead7e7e4}} 
+bool {\bfseries is\+Review\+System\+Activated} = true
+\item 
+\mbox{\Hypertarget{class_review_manager_aba63ff4ec248abc3d84af4b524048b41}\label{class_review_manager_aba63ff4ec248abc3d84af4b524048b41}} 
+List$<$ Data\+Type.\+Minigame $>$ {\bfseries review\+Games\+List} = new List$<$Data\+Type.\+Minigame$>$ ()
+\item 
+\mbox{\Hypertarget{class_review_manager_a947f9eee9344ef0837d0c8e1e0c001d2}\label{class_review_manager_a947f9eee9344ef0837d0c8e1e0c001d2}} 
+Dictionary$<$ Data\+Type.\+Minigame, \mbox{\hyperlink{class_review_game}{Review\+Game}} $>$ {\bfseries review\+Games\+Data} = new Dictionary$<$Data\+Type.\+Minigame, \mbox{\hyperlink{class_review_game}{Review\+Game}}$>$ ()
+\item 
+\mbox{\Hypertarget{class_review_manager_a64a782c47a4afdb1ad4ef2949d5ad39d}\label{class_review_manager_a64a782c47a4afdb1ad4ef2949d5ad39d}} 
+bool {\bfseries review\+Game\+Handles\+Monster} = false
+\item 
+\mbox{\Hypertarget{class_review_manager_a2575b5a1e69d9558a1f78c41089a5272}\label{class_review_manager_a2575b5a1e69d9558a1f78c41089a5272}} 
+Transform {\bfseries review\+Start\+Position}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_review_manager_ae55bc375e66e6d1a971f79bc58ab6fe6}\label{class_review_manager_ae55bc375e66e6d1a971f79bc58ab6fe6}} 
+bool {\bfseries is\+Review\+Running}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_review_manager_a8003b7d93784c3c0d212b0ed31b51536}\label{class_review_manager_a8003b7d93784c3c0d212b0ed31b51536}} 
+\mbox{\hyperlink{class_monster}{Monster}} {\bfseries Player\+Monster}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_review_manager_a4489369fb5de9e9857daab06a1ea4896}\label{class_review_manager_a4489369fb5de9e9857daab06a1ea4896}} 
+\mbox{\hyperlink{class_review_game_director}{Review\+Game\+Director}} {\bfseries Review\+Game\+Director}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_review_manager_a2607aa08a46ab46b9f2e0f463aa83ffd}\label{class_review_manager_a2607aa08a46ab46b9f2e0f463aa83ffd}} 
+bool {\bfseries Does\+Player\+Need\+Review}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_review_manager_a613f5ac75d2bc1d4a0d9cad53054f9e6}\label{class_review_manager_a613f5ac75d2bc1d4a0d9cad53054f9e6}} 
+static Review\+Action {\bfseries On\+Finish\+Review}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Review\+System/Review\+Manager.\+cs\end{DoxyCompactItemize}

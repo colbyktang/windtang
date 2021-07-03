@@ -1,0 +1,348 @@
+\hypertarget{class_sound_manager}{}\doxysection{Sound\+Manager Class Reference}
+\label{class_sound_manager}\index{SoundManager@{SoundManager}}
+
+
+This is the class that manages all sounds in the game.  
+
+
+Inheritance diagram for Sound\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sound_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sound_manager_a407fb62494991c3e31806e21dfa00662}\label{class_sound_manager_a407fb62494991c3e31806e21dfa00662}} 
+void \mbox{\hyperlink{class_sound_manager_a407fb62494991c3e31806e21dfa00662}{Mute}} ()
+\begin{DoxyCompactList}\small\item\em Mute the game music. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a21c64ad5e1a9b4abf46f795c244a64f8}\label{class_sound_manager_a21c64ad5e1a9b4abf46f795c244a64f8}} 
+void \mbox{\hyperlink{class_sound_manager_a21c64ad5e1a9b4abf46f795c244a64f8}{Stop\+Background\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Stop the background music. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_abdb93e4917b55c35d60ae8462909e7a2}\label{class_sound_manager_abdb93e4917b55c35d60ae8462909e7a2}} 
+void \mbox{\hyperlink{class_sound_manager_abdb93e4917b55c35d60ae8462909e7a2}{Play\+Background\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Play the background music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a20b9a7766b276ff9813dda93087bc679}{Change\+And\+Play\+Music}} (Audio\+Clip new\+Music)
+\begin{DoxyCompactList}\small\item\em Change the background music to a new clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a271f8d0a3e47f7ae06fc9ae55c70b7fd}\label{class_sound_manager_a271f8d0a3e47f7ae06fc9ae55c70b7fd}} 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a271f8d0a3e47f7ae06fc9ae55c70b7fd}{Get\+Music\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Return the background music Audio\+Source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a69dea2a279c0b72e38ad2ba019053739}{Change\+Background\+Volume}} (float new\+Volume)
+\begin{DoxyCompactList}\small\item\em Change the background music volume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a72bfc52f0cc895203a45739e57e81699}\label{class_sound_manager_a72bfc52f0cc895203a45739e57e81699}} 
+void \mbox{\hyperlink{class_sound_manager_a72bfc52f0cc895203a45739e57e81699}{Play\+Ambient\+Sound}} ()
+\begin{DoxyCompactList}\small\item\em Play the ambient sound. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_ad3cea606b9ff0be29b3cad3561960f35}\label{class_sound_manager_ad3cea606b9ff0be29b3cad3561960f35}} 
+void \mbox{\hyperlink{class_sound_manager_ad3cea606b9ff0be29b3cad3561960f35}{Change\+And\+Play\+Ambient\+Sound}} (Audio\+Clip new\+Ambient\+Sound)
+\begin{DoxyCompactList}\small\item\em Play the ambient sound. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a67ab1d9a20b1ffe08bfa2c659dfb56e8}\label{class_sound_manager_a67ab1d9a20b1ffe08bfa2c659dfb56e8}} 
+void \mbox{\hyperlink{class_sound_manager_a67ab1d9a20b1ffe08bfa2c659dfb56e8}{Stop\+Ambient\+Sound}} ()
+\begin{DoxyCompactList}\small\item\em Stop the ambient sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_afaff2c0b11c4ddd5efacb79289f0984c}{Change\+Ambient\+Sound}} (Audio\+Clip new\+Ambient\+Sound)
+\begin{DoxyCompactList}\small\item\em Change the ambient sound to a new clip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a093875a5055d92f0fb61d371b00361e6}{Change\+Ambient\+Volume}} (float new\+Volume)
+\begin{DoxyCompactList}\small\item\em Change the ambient sound volume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a22730e627e8572a15412638f88cf96fd}\label{class_sound_manager_a22730e627e8572a15412638f88cf96fd}} 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a22730e627e8572a15412638f88cf96fd}{Get\+Ambient\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Return the ambient sound Audio\+Source. \end{DoxyCompactList}\item 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a4a5ba097b7261566eaed9de7807eba1a}{Play\+SFXClip}} (Audio\+Clip clip)
+\begin{DoxyCompactList}\small\item\em Activates a SFX Source and play a single Audio\+Clip through it. Only allows certain amount of sources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_ab2875c9a1c9aeb6a97a9d4ab316e87cc}\label{class_sound_manager_ab2875c9a1c9aeb6a97a9d4ab316e87cc}} 
+void {\bfseries Play\+SFXSource} (Audio\+Source source)
+\item 
+\mbox{\Hypertarget{class_sound_manager_a6bf45b9ff38a844463e14a6ad35c46a8}\label{class_sound_manager_a6bf45b9ff38a844463e14a6ad35c46a8}} 
+void {\bfseries Stop\+SFXSource} (Audio\+Source source)
+\item 
+\mbox{\Hypertarget{class_sound_manager_a1483af764415bc92ab5746a1d993c483}\label{class_sound_manager_a1483af764415bc92ab5746a1d993c483}} 
+Audio\+Source {\bfseries Create\+Looping\+Source} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_a653cf3084ffbf34012cf45fa20d4f0d3}\label{class_sound_manager_a653cf3084ffbf34012cf45fa20d4f0d3}} 
+Audio\+Source {\bfseries Create\+Looping\+Source} (Audio\+Clip clip)
+\item 
+void \mbox{\hyperlink{class_sound_manager_a2af787f0292fcd4d889a79a5bb910fcb}{Change\+SFXVolume}} (float new\+Volume)
+\begin{DoxyCompactList}\small\item\em Change the volume of the sound effect source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a91b3718cb3ca966144cd79f0b74bb545}\label{class_sound_manager_a91b3718cb3ca966144cd79f0b74bb545}} 
+void {\bfseries Match\+Helper\+Volume} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_a989f4ac15cc64b60dfef2d604c1408f3}\label{class_sound_manager_a989f4ac15cc64b60dfef2d604c1408f3}} 
+void {\bfseries Play\+Volume\+Helper} (Audio\+Clip test\+Clip)
+\item 
+\mbox{\Hypertarget{class_sound_manager_a8f6f7ad836503a73a1d42ca724c6d69e}\label{class_sound_manager_a8f6f7ad836503a73a1d42ca724c6d69e}} 
+bool {\bfseries Is\+Volume\+Helper\+Playing} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_a1ce5a42638ca905cceca8b6359c3b51f}\label{class_sound_manager_a1ce5a42638ca905cceca8b6359c3b51f}} 
+bool {\bfseries Is\+SFXSource\+Playing} (Audio\+Source source)
+\item 
+void \mbox{\hyperlink{class_sound_manager_ad6449d807650b44c24f964ff0f019890}{Play\+Voice\+Over\+Clip}} (Audio\+Clip clip)
+\begin{DoxyCompactList}\small\item\em Play a single Audio\+Clip through the SFXsource with a coroutine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a90de5e8029bb07df8dc4a273e0f1f4a5}\label{class_sound_manager_a90de5e8029bb07df8dc4a273e0f1f4a5}} 
+void \mbox{\hyperlink{class_sound_manager_a90de5e8029bb07df8dc4a273e0f1f4a5}{Stop\+Playing\+Voice\+Over}} ()
+\begin{DoxyCompactList}\small\item\em If a voice over is playing then stop it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a0c99bb99de3c2c99f80c11a102ea1a1f}\label{class_sound_manager_a0c99bb99de3c2c99f80c11a102ea1a1f}} 
+bool {\bfseries Get\+Is\+Playing\+Voice\+Over} ()
+\item 
+void \mbox{\hyperlink{class_sound_manager_a46b2e61ff767b8e2d06c56d1284afd68}{Change\+Voice\+Over\+Volume}} (float new\+Volume)
+\begin{DoxyCompactList}\small\item\em Change the voice over volume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a5b9e16102d8b625e86cfe1d8fa03436c}\label{class_sound_manager_a5b9e16102d8b625e86cfe1d8fa03436c}} 
+void {\bfseries Play\+Voice\+Over\+Volume\+Helper} (Audio\+Clip test\+Clip)
+\item 
+\mbox{\Hypertarget{class_sound_manager_a0062049ba0142e13acd9aa5678f62ec3}\label{class_sound_manager_a0062049ba0142e13acd9aa5678f62ec3}} 
+void \mbox{\hyperlink{class_sound_manager_a0062049ba0142e13acd9aa5678f62ec3}{Add\+To\+VOQueue}} (Audio\+Clip clip)
+\begin{DoxyCompactList}\small\item\em Play the next voice over in the queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a86fbb48793b4d610240f158e36fc6d66}\label{class_sound_manager_a86fbb48793b4d610240f158e36fc6d66}} 
+void {\bfseries Stop\+VOQueue} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_adc35fa728d2b81d1f9371836e72fcf44}\label{class_sound_manager_adc35fa728d2b81d1f9371836e72fcf44}} 
+bool {\bfseries Get\+Is\+Queue\+Playing} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_a4a93457ab862240498a4da69c4ddac96}\label{class_sound_manager_a4a93457ab862240498a4da69c4ddac96}} 
+float {\bfseries Get\+Queue\+Duration} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_a9f6d98b42c742cdcb10bed32c36351c7}\label{class_sound_manager_a9f6d98b42c742cdcb10bed32c36351c7}} 
+Audio\+Source {\bfseries Get\+Voice\+Over\+Source} ()
+\item 
+\mbox{\Hypertarget{class_sound_manager_aa1e0d98eafb224a2ac054a892fe11373}\label{class_sound_manager_aa1e0d98eafb224a2ac054a892fe11373}} 
+bool {\bfseries Does\+Queue\+Contain\+Clip} (Audio\+Clip clip)
+\item 
+\mbox{\Hypertarget{class_sound_manager_a5db60ae601e1a4b95f0634031a26e78f}\label{class_sound_manager_a5db60ae601e1a4b95f0634031a26e78f}} 
+void \mbox{\hyperlink{class_sound_manager_a5db60ae601e1a4b95f0634031a26e78f}{Play\+Unlock\+Sticker\+VO}} ()
+\begin{DoxyCompactList}\small\item\em Play the voice over associated with unlocking a sticker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_a868f3f8e17e6daa0ff95aa38d65862e6}\label{class_sound_manager_a868f3f8e17e6daa0ff95aa38d65862e6}} 
+void \mbox{\hyperlink{class_sound_manager_a868f3f8e17e6daa0ff95aa38d65862e6}{Play\+Review\+VO}} ()
+\begin{DoxyCompactList}\small\item\em Play the voice over associated with starting a review game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_aa5fea3446557ab09a53ebfe46f1abc24}\label{class_sound_manager_aa5fea3446557ab09a53ebfe46f1abc24}} 
+void \mbox{\hyperlink{class_sound_manager_aa5fea3446557ab09a53ebfe46f1abc24}{Play\+Correct\+SFX}} ()
+\begin{DoxyCompactList}\small\item\em Play a generic sound effect for when something is correct. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_aeaeea396e931c33c2534ef3ba6a4693f}\label{class_sound_manager_aeaeea396e931c33c2534ef3ba6a4693f}} 
+void \mbox{\hyperlink{class_sound_manager_aeaeea396e931c33c2534ef3ba6a4693f}{Play\+Incorrect\+SFX}} ()
+\begin{DoxyCompactList}\small\item\em Play a generic sound effect for when something is incorrect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_manager_abac3be814fdc08a09c10db0ec123e004}\label{class_sound_manager_abac3be814fdc08a09c10db0ec123e004}} 
+Audio\+Clip {\bfseries Get\+Clip\+From\+Library} (string clip\+Name)
+\item 
+\mbox{\Hypertarget{class_sound_manager_a7188b1a15551d461624c79ba4173b814}\label{class_sound_manager_a7188b1a15551d461624c79ba4173b814}} 
+Audio\+Clip {\bfseries Play\+Clip\+From\+Library} (string clip\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a173b7c95fdd6796d7c1f268e23fcfc84}{music\+Source}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a4a8eb19f55f994be018dbbc2a7647c69}{ambient\+Source}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a060fe04b5419d667baacc923b15e908a}{sfx\+Source}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a18bcf2401072e3c2d3557e62ddb017d2}{voice\+Over\+Source}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a4dbece2648ff8d45f580bd99ce08654f}{game\+Background\+Music}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_abb0d537966f37c15c4b2f77510b33bbc}{voice\+Test\+Clip}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a28368579124d91274560ae2a7260b9f3}{sticker\+VO}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a7dddee41787c2beea438b5f60914f2a6}{correct\+Sfx}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a2710aa687aba1c73f9b3963ed01ada79}{correct\+Sfx2}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a5ee0dbfe81502f31aa78cf7439b02740}{review\+VO}}
+\item 
+\mbox{\Hypertarget{class_sound_manager_a6cc57b64587d51014ceb0de0a23fcb93}\label{class_sound_manager_a6cc57b64587d51014ceb0de0a23fcb93}} 
+\mbox{\hyperlink{class_sound_library}{Sound\+Library}} {\bfseries sound\+Library}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is the class that manages all sounds in the game. 
+
+A singleton class that will manipulate all sounds in the game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sound_manager_afaff2c0b11c4ddd5efacb79289f0984c}\label{class_sound_manager_afaff2c0b11c4ddd5efacb79289f0984c}} 
+\index{SoundManager@{SoundManager}!ChangeAmbientSound@{ChangeAmbientSound}}
+\index{ChangeAmbientSound@{ChangeAmbientSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ChangeAmbientSound()}{ChangeAmbientSound()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Change\+Ambient\+Sound (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{new\+Ambient\+Sound }\end{DoxyParamCaption})}
+
+
+
+Change the ambient sound to a new clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Ambient\+Sound} & the Audio\+Clip of the new ambient sound. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_a093875a5055d92f0fb61d371b00361e6}\label{class_sound_manager_a093875a5055d92f0fb61d371b00361e6}} 
+\index{SoundManager@{SoundManager}!ChangeAmbientVolume@{ChangeAmbientVolume}}
+\index{ChangeAmbientVolume@{ChangeAmbientVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ChangeAmbientVolume()}{ChangeAmbientVolume()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Change\+Ambient\+Volume (\begin{DoxyParamCaption}\item[{float}]{new\+Volume }\end{DoxyParamCaption})}
+
+
+
+Change the ambient sound volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Volume} & the float value of the new volume. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_a20b9a7766b276ff9813dda93087bc679}\label{class_sound_manager_a20b9a7766b276ff9813dda93087bc679}} 
+\index{SoundManager@{SoundManager}!ChangeAndPlayMusic@{ChangeAndPlayMusic}}
+\index{ChangeAndPlayMusic@{ChangeAndPlayMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ChangeAndPlayMusic()}{ChangeAndPlayMusic()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Change\+And\+Play\+Music (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{new\+Music }\end{DoxyParamCaption})}
+
+
+
+Change the background music to a new clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Background\+Music} & the Audio\+Clip of the new background music. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_a69dea2a279c0b72e38ad2ba019053739}\label{class_sound_manager_a69dea2a279c0b72e38ad2ba019053739}} 
+\index{SoundManager@{SoundManager}!ChangeBackgroundVolume@{ChangeBackgroundVolume}}
+\index{ChangeBackgroundVolume@{ChangeBackgroundVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ChangeBackgroundVolume()}{ChangeBackgroundVolume()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Change\+Background\+Volume (\begin{DoxyParamCaption}\item[{float}]{new\+Volume }\end{DoxyParamCaption})}
+
+
+
+Change the background music volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Volume} & the float value of the new volume. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_a2af787f0292fcd4d889a79a5bb910fcb}\label{class_sound_manager_a2af787f0292fcd4d889a79a5bb910fcb}} 
+\index{SoundManager@{SoundManager}!ChangeSFXVolume@{ChangeSFXVolume}}
+\index{ChangeSFXVolume@{ChangeSFXVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ChangeSFXVolume()}{ChangeSFXVolume()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Change\+SFXVolume (\begin{DoxyParamCaption}\item[{float}]{new\+Volume }\end{DoxyParamCaption})}
+
+
+
+Change the volume of the sound effect source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Volume} & the float value of the new volume. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_a46b2e61ff767b8e2d06c56d1284afd68}\label{class_sound_manager_a46b2e61ff767b8e2d06c56d1284afd68}} 
+\index{SoundManager@{SoundManager}!ChangeVoiceOverVolume@{ChangeVoiceOverVolume}}
+\index{ChangeVoiceOverVolume@{ChangeVoiceOverVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ChangeVoiceOverVolume()}{ChangeVoiceOverVolume()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Change\+Voice\+Over\+Volume (\begin{DoxyParamCaption}\item[{float}]{new\+Volume }\end{DoxyParamCaption})}
+
+
+
+Change the voice over volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Volume} & the float value of the new volume. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_a4a5ba097b7261566eaed9de7807eba1a}\label{class_sound_manager_a4a5ba097b7261566eaed9de7807eba1a}} 
+\index{SoundManager@{SoundManager}!PlaySFXClip@{PlaySFXClip}}
+\index{PlaySFXClip@{PlaySFXClip}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlaySFXClip()}{PlaySFXClip()}}
+{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+Play\+SFXClip (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip }\end{DoxyParamCaption})}
+
+
+
+Activates a SFX Source and play a single Audio\+Clip through it. Only allows certain amount of sources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & the sound effect Audio\+Clip to be played. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sound_manager_ad6449d807650b44c24f964ff0f019890}\label{class_sound_manager_ad6449d807650b44c24f964ff0f019890}} 
+\index{SoundManager@{SoundManager}!PlayVoiceOverClip@{PlayVoiceOverClip}}
+\index{PlayVoiceOverClip@{PlayVoiceOverClip}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayVoiceOverClip()}{PlayVoiceOverClip()}}
+{\footnotesize\ttfamily void Sound\+Manager.\+Play\+Voice\+Over\+Clip (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip }\end{DoxyParamCaption})}
+
+
+
+Play a single Audio\+Clip through the SFXsource with a coroutine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & the sound effect Audio\+Clip to be played. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sound_manager_a4a8eb19f55f994be018dbbc2a7647c69}\label{class_sound_manager_a4a8eb19f55f994be018dbbc2a7647c69}} 
+\index{SoundManager@{SoundManager}!ambientSource@{ambientSource}}
+\index{ambientSource@{ambientSource}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{ambientSource}{ambientSource}}
+{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+ambient\+Source}
+
+The Audio\+Source for the ambient sound \mbox{\Hypertarget{class_sound_manager_a7dddee41787c2beea438b5f60914f2a6}\label{class_sound_manager_a7dddee41787c2beea438b5f60914f2a6}} 
+\index{SoundManager@{SoundManager}!correctSfx@{correctSfx}}
+\index{correctSfx@{correctSfx}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{correctSfx}{correctSfx}}
+{\footnotesize\ttfamily Audio\+Clip Sound\+Manager.\+correct\+Sfx}
+
+Audio\+Clip used to tell the player they are correct \mbox{\Hypertarget{class_sound_manager_a2710aa687aba1c73f9b3963ed01ada79}\label{class_sound_manager_a2710aa687aba1c73f9b3963ed01ada79}} 
+\index{SoundManager@{SoundManager}!correctSfx2@{correctSfx2}}
+\index{correctSfx2@{correctSfx2}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{correctSfx2}{correctSfx2}}
+{\footnotesize\ttfamily Audio\+Clip Sound\+Manager.\+correct\+Sfx2}
+
+Audio\+Clip used to tell the player they are correct \mbox{\Hypertarget{class_sound_manager_a4dbece2648ff8d45f580bd99ce08654f}\label{class_sound_manager_a4dbece2648ff8d45f580bd99ce08654f}} 
+\index{SoundManager@{SoundManager}!gameBackgroundMusic@{gameBackgroundMusic}}
+\index{gameBackgroundMusic@{gameBackgroundMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{gameBackgroundMusic}{gameBackgroundMusic}}
+{\footnotesize\ttfamily Audio\+Clip Sound\+Manager.\+game\+Background\+Music}
+
+The game\textquotesingle{}s main background music \mbox{\Hypertarget{class_sound_manager_a173b7c95fdd6796d7c1f268e23fcfc84}\label{class_sound_manager_a173b7c95fdd6796d7c1f268e23fcfc84}} 
+\index{SoundManager@{SoundManager}!musicSource@{musicSource}}
+\index{musicSource@{musicSource}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{musicSource}{musicSource}}
+{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+music\+Source}
+
+The Audio\+Source for the background music \mbox{\Hypertarget{class_sound_manager_a5ee0dbfe81502f31aa78cf7439b02740}\label{class_sound_manager_a5ee0dbfe81502f31aa78cf7439b02740}} 
+\index{SoundManager@{SoundManager}!reviewVO@{reviewVO}}
+\index{reviewVO@{reviewVO}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{reviewVO}{reviewVO}}
+{\footnotesize\ttfamily Audio\+Clip Sound\+Manager.\+review\+VO}
+
+Audio\+Clip used to tell the player they are reviewing \mbox{\Hypertarget{class_sound_manager_a060fe04b5419d667baacc923b15e908a}\label{class_sound_manager_a060fe04b5419d667baacc923b15e908a}} 
+\index{SoundManager@{SoundManager}!sfxSource@{sfxSource}}
+\index{sfxSource@{sfxSource}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{sfxSource}{sfxSource}}
+{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+sfx\+Source}
+
+The Audio\+Source for the sound effects \mbox{\Hypertarget{class_sound_manager_a28368579124d91274560ae2a7260b9f3}\label{class_sound_manager_a28368579124d91274560ae2a7260b9f3}} 
+\index{SoundManager@{SoundManager}!stickerVO@{stickerVO}}
+\index{stickerVO@{stickerVO}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{stickerVO}{stickerVO}}
+{\footnotesize\ttfamily Audio\+Clip Sound\+Manager.\+sticker\+VO}
+
+Audio\+Clip used to tell the player they unlocked a sticker \mbox{\Hypertarget{class_sound_manager_a18bcf2401072e3c2d3557e62ddb017d2}\label{class_sound_manager_a18bcf2401072e3c2d3557e62ddb017d2}} 
+\index{SoundManager@{SoundManager}!voiceOverSource@{voiceOverSource}}
+\index{voiceOverSource@{voiceOverSource}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{voiceOverSource}{voiceOverSource}}
+{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+voice\+Over\+Source}
+
+The Audio\+Source for the voice-\/overs \mbox{\Hypertarget{class_sound_manager_abb0d537966f37c15c4b2f77510b33bbc}\label{class_sound_manager_abb0d537966f37c15c4b2f77510b33bbc}} 
+\index{SoundManager@{SoundManager}!voiceTestClip@{voiceTestClip}}
+\index{voiceTestClip@{voiceTestClip}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{voiceTestClip}{voiceTestClip}}
+{\footnotesize\ttfamily Audio\+Clip Sound\+Manager.\+voice\+Test\+Clip}
+
+Audio\+Clip used to test Change\+Voice\+Over\+Volume 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Managers/Sound\+Manager.\+cs\end{DoxyCompactItemize}

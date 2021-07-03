@@ -1,0 +1,732 @@
+\hypertarget{namespace_pathfinding}{}\doxysection{Pathfinding Namespace Reference}
+\label{namespace_pathfinding}\index{Pathfinding@{Pathfinding}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_pathfinding_1_1_r_v_o}{R\+VO}}
+\begin{DoxyCompactList}\small\item\em Local avoidance related classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_a_b_path}{A\+B\+Path}}
+\begin{DoxyCompactList}\small\item\em Basic path, finds the shortest path from A to B. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_a_i_base}{A\+I\+Base}}
+\begin{DoxyCompactList}\small\item\em Base class for \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{A\+I\+Path}} and Rich\+AI. This class holds various methods and fields that are common to both \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{A\+I\+Path}} and Rich\+AI. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_a_i_destination_setter}{A\+I\+Destination\+Setter}}
+\begin{DoxyCompactList}\small\item\em Sets the destination of an AI to the position of a specified object. This component should be attached to a Game\+Object together with a movement script such as \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{A\+I\+Path}}, Rich\+AI or \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{A\+I\+Lerp}}. This component will then make the AI move towards the \mbox{\hyperlink{class_pathfinding_1_1_a_i_destination_setter_a1900baa74155c2c1c2f1d09f4db009c7}{target}} set on this component. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{A\+I\+Lerp}}
+\begin{DoxyCompactList}\small\item\em Linearly interpolating movement script. This movement script will follow the path exactly, it uses linear interpolation to move between the waypoints in the path. This is desirable for some types of games. It also works in 2D. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp_editor}{A\+I\+Lerp\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{A\+I\+Path}}
+\begin{DoxyCompactList}\small\item\em AI for following paths. This AI is the default movement script which comes with the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. It is in no way required by the rest of the system, so feel free to write your own. But I hope this script will make it easier to set up movement for the characters in your game. This script works well for many types of units, but if you need the highest performance (for example if you are moving hundreds of characters) you may want to customize this script or write a custom movement script to be able to optimize it specifically for your game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_alternative_path}{Alternative\+Path}}
+\begin{DoxyCompactList}\small\item\em Applies penalty to the paths it processes telling other units to avoid choosing the same path. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_animation_link}{Animation\+Link}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_animation_link_editor}{Animation\+Link\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_astar_color}{Astar\+Color}}
+\begin{DoxyCompactList}\small\item\em Stores editor colors \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_astar_data}{Astar\+Data}}
+\begin{DoxyCompactList}\small\item\em Stores the navigation graphs for the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} System. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_astar_debugger}{Astar\+Debugger}}
+\begin{DoxyCompactList}\small\item\em Debugger for the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. This class can be used to profile different parts of the pathfinding system and the whole game as well to some extent. \end{DoxyCompactList}\item 
+class {\bfseries Astar\+Math}
+\begin{DoxyCompactList}\small\item\em Utility functions for working with numbers and strings. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_astar_path_editor}{Astar\+Path\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_astar_profiler}{Astar\+Profiler}}
+\item 
+class {\bfseries Astar\+Splines}
+\begin{DoxyCompactList}\small\item\em Contains various spline functions. \end{DoxyCompactList}\item 
+class {\bfseries Astar\+Update\+Checker}
+\begin{DoxyCompactList}\small\item\em Handles update checking for the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_astar_update_window}{Astar\+Update\+Window}}
+\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_astar_work_item}{Astar\+Work\+Item}}
+\begin{DoxyCompactList}\small\item\em An item of work that can be executed when graphs are safe to update. See\+: \mbox{\hyperlink{class_astar_path_a6d6ca9490291366e24cde5ef10d23c30}{Astar\+Path.\+Update\+Graphs}} See\+: \mbox{\hyperlink{class_astar_path_ae285a59790c68b9b7e0e2964103418f9}{Astar\+Path.\+Add\+Work\+Item}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_base_a_i_editor}{Base\+A\+I\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_b_b_tree}{B\+B\+Tree}}
+\begin{DoxyCompactList}\small\item\em Axis Aligned Bounding Box Tree. Holds a bounding box tree of triangles. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_binary_heap}{Binary\+Heap}}
+\begin{DoxyCompactList}\small\item\em Binary heap implementation. Binary heaps are really fast for ordering nodes in a way that makes it possible to get the node with the lowest F score. Also known as a priority queue. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_block_manager}{Block\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manager for blocker scripts such as \mbox{\hyperlink{class_pathfinding_1_1_single_node_blocker}{Single\+Node\+Blocker}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_connection}{Connection}}
+\begin{DoxyCompactList}\small\item\em Represents a connection to another node \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_custom_graph_editor_attribute}{Custom\+Graph\+Editor\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Added to editors of custom graph types \end{DoxyCompactList}\item 
+class {\bfseries Default\+I\+Traversal\+Provider}
+\begin{DoxyCompactList}\small\item\em Convenience class to access the default implementation of the \mbox{\hyperlink{interface_pathfinding_1_1_i_traversal_provider}{I\+Traversal\+Provider}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_dynamic_grid_obstacle}{Dynamic\+Grid\+Obstacle}}
+\begin{DoxyCompactList}\small\item\em Attach this script to any obstacle with a collider to enable dynamic updates of the graphs around it. When the object has moved a certain distance (or actually when it\textquotesingle{}s bounding box has changed by a certain amount) defined by \mbox{\hyperlink{class_pathfinding_1_1_dynamic_grid_obstacle_a5e662a596d1fa65c7d9d79c42ea76416}{update\+Error}} it will call \mbox{\hyperlink{class_astar_path_a6d6ca9490291366e24cde5ef10d23c30}{Astar\+Path.\+Update\+Graphs}} and update the graph around it. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_editor_base}{Editor\+Base}}
+\begin{DoxyCompactList}\small\item\em Helper for creating editors \end{DoxyCompactList}\item 
+class {\bfseries Editor\+G\+U\+I\+Layoutx}
+\begin{DoxyCompactList}\small\item\em Handles fading effects and also some custom G\+UI functions such as Layer\+Mask\+Field \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_enum_flag_attribute}{Enum\+Flag\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_enum_flag_drawer}{Enum\+Flag\+Drawer}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_euclidean_embedding}{Euclidean\+Embedding}}
+\begin{DoxyCompactList}\small\item\em Implements heuristic optimizations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_fade_area}{Fade\+Area}}
+\begin{DoxyCompactList}\small\item\em Editor helper for hiding and showing a group of G\+UI elements. Call order in On\+Inspector\+G\+UI should be\+: \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_funnel}{Funnel}}
+\begin{DoxyCompactList}\small\item\em Implements the funnel algorithm as well as various related methods. See\+: \href{http://digestingduck.blogspot.se/2010/03/simple-stupid-funnel-algorithm.html}{\texttt{ http\+://digestingduck.\+blogspot.\+se/2010/03/simple-\/stupid-\/funnel-\/algorithm.\+html}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_funnel_modifier}{Funnel\+Modifier}} for the component that you can attach to objects to use the funnel algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_funnel_modifier}{Funnel\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Simplifies paths on navmesh graphs using the funnel algorithm. The funnel algorithm is an algorithm which can, given a path corridor with nodes in the path where the nodes have an area, like triangles, it can find the shortest path inside it. This makes paths on navmeshes look much cleaner and smoother. \mbox{[}Open online documentation to see images\mbox{]} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision}}
+\begin{DoxyCompactList}\small\item\em Handles collision checking for graphs. Mostly used by grid based graphs \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_editor}{Graph\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_editor_base}{Graph\+Editor\+Base}}
+\begin{DoxyCompactList}\small\item\em Defined here only so non-\/editor classes can use the \mbox{\hyperlink{class_pathfinding_1_1_graph_editor_base_a37b7ace5b71ec34bd089eae747ec9c29}{target}} field \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_graph_hit_info}{Graph\+Hit\+Info}}
+\begin{DoxyCompactList}\small\item\em Returned by graph ray-\/ or linecasts containing info about the hit. This is the return value by the Pathfinding.\+I\+Raycastable\+Graph.\+Linecast methods. Some members will also be initialized even if nothing was hit, see the individual member descriptions for more info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}}
+\begin{DoxyCompactList}\small\item\em Holds a bitmask of graphs. This bitmask can hold up to 32 graphs. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_modifier}{Graph\+Modifier}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pathfinding_1_1_graph_modifier}{Graph\+Modifier}} is used for modifying graphs or processing graph data based on events. This class is a simple container for a number of events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}
+\begin{DoxyCompactList}\small\item\em Base class for all nodes \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Graph\+Update\+Object}}
+\begin{DoxyCompactList}\small\item\em Represents a collection of settings used to update nodes in a specific region of a graph. See\+: \mbox{\hyperlink{class_astar_path_a6d6ca9490291366e24cde5ef10d23c30}{Astar\+Path.\+Update\+Graphs}} See\+: graph-\/updates (view in online documentation for working links) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_update_processor}{Graph\+Update\+Processor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_update_scene}{Graph\+Update\+Scene}}
+\begin{DoxyCompactList}\small\item\em Helper class for easily updating graphs. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_update_scene_editor}{Graph\+Update\+Scene\+Editor}}
+\begin{DoxyCompactList}\small\item\em Editor for \mbox{\hyperlink{class_pathfinding_1_1_graph_update_scene}{Graph\+Update\+Scene}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_graph_update_shape}{Graph\+Update\+Shape}}
+\begin{DoxyCompactList}\small\item\em Defines a shape for a \mbox{\hyperlink{class_pathfinding_1_1_graph_update_object}{Pathfinding.\+Graph\+Update\+Object}}. The shape consists of a number of points which it can either calculate the convex hull of or use as a polygon directly. \end{DoxyCompactList}\item 
+class {\bfseries Graph\+Update\+Utilities}
+\begin{DoxyCompactList}\small\item\em Contains useful functions for updating graphs. This class works a lot with the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} class, a useful function to get nodes is \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}}. \end{DoxyCompactList}\item 
+class {\bfseries Graph\+Utilities}
+\begin{DoxyCompactList}\small\item\em Contains utility methods for getting useful information out of graph. This class works a lot with the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Pathfinding.\+Graph\+Node}} class, a useful function to get nodes is \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}}
+\begin{DoxyCompactList}\small\item\em Generates a grid of nodes. The \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} does exactly what the name implies, generates nodes in a grid pattern.~\newline
+Grid graphs suit well to when you already have a grid based world. Features\+: \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_editor}{Grid\+Graph\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}}
+\begin{DoxyCompactList}\small\item\em Node used for the \mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_grid_node_base}{Grid\+Node\+Base}}
+\begin{DoxyCompactList}\small\item\em Base class for \mbox{\hyperlink{class_pathfinding_1_1_grid_node}{Grid\+Node}} and Level\+Grid\+Node \end{DoxyCompactList}\item 
+class {\bfseries G\+U\+I\+Utilityx}
+\begin{DoxyCompactList}\small\item\em Simple G\+UI utility functions \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Hierarchical\+Graph}}
+\begin{DoxyCompactList}\small\item\em Holds a hierarchical graph to speed up certain pathfinding queries. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_astar_a_i}{I\+Astar\+AI}}
+\begin{DoxyCompactList}\small\item\em Common interface for all movement scripts in the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_path}{Pathfinding.\+A\+I\+Path}} See\+: Pathfinding.\+Rich\+AI See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{Pathfinding.\+A\+I\+Lerp}} \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_graph_internals}{I\+Graph\+Internals}}
+\begin{DoxyCompactList}\small\item\em Exposes internal methods for graphs. This is used to hide methods that should not be used by any user code but still have to be \textquotesingle{}public\textquotesingle{} or \textquotesingle{}internal\textquotesingle{} (which is pretty much the same as \textquotesingle{}public\textquotesingle{} as this library is distributed with source code). \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh}{I\+Navmesh}}
+\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_navmesh_holder}{I\+Navmesh\+Holder}}
+\begin{DoxyCompactList}\small\item\em Interface for something that holds a triangle based navmesh \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_int2}{Int2}}
+\begin{DoxyCompactList}\small\item\em Two Dimensional Integer Coordinate Pair \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_int3}{Int3}}
+\begin{DoxyCompactList}\small\item\em Holds a coordinate in integers \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_int_rect}{Int\+Rect}}
+\begin{DoxyCompactList}\small\item\em Integer Rectangle. Works almost like Unity\+Engine.\+Rect but with integer coordinates \end{DoxyCompactList}\item 
+interface {\bfseries I\+Path\+Internals}
+\begin{DoxyCompactList}\small\item\em Used for hiding internal methods of the \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} class \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_path_modifier}{I\+Path\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Base for all path modifiers. See\+: \mbox{\hyperlink{class_pathfinding_1_1_mono_modifier}{Mono\+Modifier}} Modifier \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_raycastable_graph}{I\+Raycastable\+Graph}}
+\begin{DoxyCompactList}\small\item\em Graph which supports the Linecast method \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_transformed_graph}{I\+Transformed\+Graph}}
+\begin{DoxyCompactList}\small\item\em Graph which has a well defined transformation from graph space to world space \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_traversal_provider}{I\+Traversal\+Provider}}
+\begin{DoxyCompactList}\small\item\em Provides additional traversal information to a path request. See\+: turnbased (view in online documentation for working links) \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_updatable_graph}{I\+Updatable\+Graph}}
+\begin{DoxyCompactList}\small\item\em Graphs which can be updated during runtime \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_versioned_mono_behaviour_internal}{I\+Versioned\+Mono\+Behaviour\+Internal}}
+\begin{DoxyCompactList}\small\item\em Exposes internal methods from \mbox{\hyperlink{class_pathfinding_1_1_versioned_mono_behaviour}{Pathfinding.\+Versioned\+Mono\+Behaviour}} \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_pathfinding_1_1_i_work_item_context}{I\+Work\+Item\+Context}}
+\begin{DoxyCompactList}\small\item\em Interface to expose a subset of the \mbox{\hyperlink{class_pathfinding_1_1_work_item_processor}{Work\+Item\+Processor}} functionality \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_mesh_node}{Mesh\+Node}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_mono_modifier}{Mono\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Base class for path modifiers which can be attached to Game\+Objects. See\+: Menubar -\/$>$ Component -\/$>$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} -\/$>$ Modifiers \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}
+\begin{DoxyCompactList}\small\item\em Base class for all graphs \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base}{Navmesh\+Base}}
+\begin{DoxyCompactList}\small\item\em Base class for Recast\+Graph and \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph}{Nav\+Mesh\+Graph}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph}{Nav\+Mesh\+Graph}}
+\begin{DoxyCompactList}\small\item\em Generates graphs based on navmeshes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_nav_mesh_graph_editor}{Nav\+Mesh\+Graph\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_navmesh_tile}{Navmesh\+Tile}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_navmesh_updates}{Navmesh\+Updates}}
+\begin{DoxyCompactList}\small\item\em Helper for navmesh cut objects. Responsible for keeping track of which navmesh cuts have moved and coordinating graph updates to account for those changes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}
+\begin{DoxyCompactList}\small\item\em Nearest node constraint. Constrains which nodes will be returned by the \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} function \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}}
+\begin{DoxyCompactList}\small\item\em Result of a nearest node query \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info_internal}{N\+N\+Info\+Internal}}
+\begin{DoxyCompactList}\small\item\em Internal result of a nearest node query. See\+: \mbox{\hyperlink{struct_pathfinding_1_1_n_n_info}{N\+N\+Info}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_node_link}{Node\+Link}}
+\begin{DoxyCompactList}\small\item\em Connects two nodes with a direct connection. It is not possible to detect this link when following a path (which may be good or bad), for that you can use \mbox{\hyperlink{class_pathfinding_1_1_node_link2}{Node\+Link2}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_node_link2}{Node\+Link2}}
+\begin{DoxyCompactList}\small\item\em Connects two nodes via two intermediate point nodes. In contrast to the \mbox{\hyperlink{class_pathfinding_1_1_node_link}{Node\+Link}} component, this link type will not connect the nodes directly instead it will create two point nodes at the start and end position of this link and connect through those nodes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_node_link3}{Node\+Link3}}
+\begin{DoxyCompactList}\small\item\em Connects two Triangle\+Mesh\+Nodes (recast/navmesh graphs) as if they had shared an edge. Note\+: Usually you do not want to use this type of link, you want to use \mbox{\hyperlink{class_pathfinding_1_1_node_link2}{Node\+Link2}} or \mbox{\hyperlink{class_pathfinding_1_1_node_link}{Node\+Link}} (sorry for the not so descriptive names). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_node_link3_node}{Node\+Link3\+Node}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_obj_importer}{Obj\+Importer}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}
+\begin{DoxyCompactList}\small\item\em Base class for all path types \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path_handler}{Path\+Handler}}
+\begin{DoxyCompactList}\small\item\em Handles thread specific path data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path_modifier}{Path\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Base class for path modifiers which are not attached to Game\+Objects. See\+: \mbox{\hyperlink{class_pathfinding_1_1_mono_modifier}{Mono\+Modifier}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path_n_n_constraint}{Path\+N\+N\+Constraint}}
+\begin{DoxyCompactList}\small\item\em A special \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} which can use different logic for the start node and end node in a path. A \mbox{\hyperlink{class_pathfinding_1_1_path_n_n_constraint}{Path\+N\+N\+Constraint}} can be assigned to the \mbox{\hyperlink{class_pathfinding_1_1_path_a0fecce33ad5424d6e0bf0ec4b58bbac5}{Path.\+nn\+Constraint}} field, the path will first search for the start node, then it will call \mbox{\hyperlink{class_pathfinding_1_1_path_n_n_constraint_a5eea657d76f45567e849c2405055786a}{Set\+Start}} and proceed with searching for the end node (nodes in the case of a Multi\+Target\+Path).~\newline
+The default \mbox{\hyperlink{class_pathfinding_1_1_path_n_n_constraint}{Path\+N\+N\+Constraint}} will constrain the end point to lie inside the same area as the start point. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}}
+\begin{DoxyCompactList}\small\item\em Stores temporary node data for a single pathfinding request. Every node has one \mbox{\hyperlink{class_pathfinding_1_1_path_node}{Path\+Node}} per thread used. It stores e.\+g G score, H score and other temporary variables needed for path calculation, but which are not part of the graph structure. \end{DoxyCompactList}\item 
+class {\bfseries Path\+Pool}
+\begin{DoxyCompactList}\small\item\em Pools path objects to reduce load on the garbage collector \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path_processor}{Path\+Processor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_path_return_queue}{Path\+Return\+Queue}}
+\item 
+class {\bfseries Path\+Utilities}
+\begin{DoxyCompactList}\small\item\em Contains useful functions for working with paths and nodes. This class works a lot with the \mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Pathfinding.\+Graph\+Node}} class, a useful function to get nodes is \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}}. See\+: \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} See\+: Pathfinding.\+Graph\+Update\+Utilities See\+: Pathfinding.\+Graph\+Utilities \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_patrol}{Patrol}}
+\begin{DoxyCompactList}\small\item\em Simple patrol behavior. This will set the destination on the agent so that it moves through the sequence of objects in the \mbox{\hyperlink{class_pathfinding_1_1_patrol_aea3421a930eb0a0c593db78e4c335f33}{targets}} array. Upon reaching a target it will wait for \mbox{\hyperlink{class_pathfinding_1_1_patrol_a09684a4ebf5c5cd155a47c6d3193b405}{delay}} seconds. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_point_graph}{Point\+Graph}}
+\begin{DoxyCompactList}\small\item\em Basic point graph. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_point_graph_editor}{Point\+Graph\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_point_k_d_tree}{Point\+K\+D\+Tree}}
+\begin{DoxyCompactList}\small\item\em Represents a collection of Graph\+Nodes. It allows for fast lookups of the closest node to a point. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_point_node}{Point\+Node}}
+\begin{DoxyCompactList}\small\item\em Node used for the \mbox{\hyperlink{class_pathfinding_1_1_point_graph}{Point\+Graph}}. This is just a simple point with a list of connections (and associated costs) to other nodes. It does not have any concept of a surface like many other node types. \end{DoxyCompactList}\item 
+class {\bfseries Polygon}
+\begin{DoxyCompactList}\small\item\em Utility functions for working with polygons, lines, and other vector math. All functions which accepts Vector3s but work in 2D space uses the XZ space if nothing else is said. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_procedural_grid_mover}{Procedural\+Grid\+Mover}}
+\begin{DoxyCompactList}\small\item\em Moves a grid graph to follow a target. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_profile}{Profile}}
+\item 
+struct \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} info for e.\+g a progressbar. Used by the scan functions in the project See\+: \mbox{\hyperlink{class_astar_path_ace889f7d491b7100be4db339466880e4}{Astar\+Path.\+Scan\+Async}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_raycast_modifier}{Raycast\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Simplifies a path using raycasting. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_raycast_modifier_editor}{Raycast\+Modifier\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_relevant_graph_surface}{Relevant\+Graph\+Surface}}
+\begin{DoxyCompactList}\small\item\em Pruning of recast navmesh regions. A \mbox{\hyperlink{class_pathfinding_1_1_relevant_graph_surface}{Relevant\+Graph\+Surface}} component placed in the scene specifies that the navmesh region it is inside should be included in the navmesh. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}}
+\begin{DoxyCompactList}\small\item\em Handles path calls for a single unit. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_seeker_editor}{Seeker\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_simple_smooth_modifier}{Simple\+Smooth\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Modifier which smooths the path. This modifier can smooth a path by either moving the points closer together (Simple) or using Bezier curves (Bezier).~\newline
+\end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_single_node_blocker}{Single\+Node\+Blocker}}
+\begin{DoxyCompactList}\small\item\em Blocks single nodes in a graph. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_smooth_modifier_editor}{Smooth\+Modifier\+Editor}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_start_end_modifier}{Start\+End\+Modifier}}
+\begin{DoxyCompactList}\small\item\em Adjusts start and end points of a path. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_target_mover}{Target\+Mover}}
+\begin{DoxyCompactList}\small\item\em Moves the target in example scenes. This is a simple script which has the sole purpose of moving the target point of agents in the example scenes for the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_thread_control_queue}{Thread\+Control\+Queue}}
+\begin{DoxyCompactList}\small\item\em Queue of paths to be processed by the system \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_triangle_mesh_node}{Triangle\+Mesh\+Node}}
+\begin{DoxyCompactList}\small\item\em Node represented by a triangle \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_unique_component_attribute}{Unique\+Component\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_unity_reference_helper}{Unity\+Reference\+Helper}}
+\begin{DoxyCompactList}\small\item\em Helper class to keep track of references to Game\+Objects. Does nothing more than to hold a G\+U\+ID value. \end{DoxyCompactList}\item 
+class {\bfseries Vector\+Math}
+\begin{DoxyCompactList}\small\item\em Various vector math utility functions. Version\+: A lot of functions in the Polygon class have been moved to this class the names have changed slightly and everything now consistently assumes a left handed coordinate system now instead of sometimes using a left handed one and sometimes using a right handed one. This is why the \textquotesingle{}Left\textquotesingle{} methods in the Polygon class redirect to methods named \textquotesingle{}Right\textquotesingle{}. The functionality is exactly the same. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_versioned_mono_behaviour}{Versioned\+Mono\+Behaviour}}
+\begin{DoxyCompactList}\small\item\em Base class for all components in the package \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pathfinding_1_1_work_item_processor}{Work\+Item\+Processor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_pathfinding_adee097b3dc2d352e199d27619ca19371}\label{namespace_pathfinding_adee097b3dc2d352e199d27619ca19371}} 
+using {\bfseries Thread} = System.\+Threading.\+Thread
+\item 
+\mbox{\Hypertarget{namespace_pathfinding_ab5619889d46c581c9d3f28254ef257e8}\label{namespace_pathfinding_ab5619889d46c581c9d3f28254ef257e8}} 
+using {\bfseries Math} = System.\+Math
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8}{Graph\+Update\+Threading}} \{ \newline
+\mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a3b3f76d17174b9c9e79537254414367c}{Graph\+Update\+Threading.\+Unity\+Thread}} = 0, 
+\mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a19a17596cf7d91444deba9e37689a79d}{Graph\+Update\+Threading.\+Separate\+Thread}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a80a99ff24bb0400e15548b132ae90a93}{Graph\+Update\+Threading.\+Unity\+Init}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8aa3509d318f64418e4bb6980b0fe33232}{Graph\+Update\+Threading.\+Unity\+Post}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a30f752a1265bed6ebe204e2625c54f3e}{Graph\+Update\+Threading.\+Separate\+And\+Unity\+Init}} = Separate\+Thread $\vert$ Unity\+Init
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291a}{Path\+Log}} \{ \newline
+\mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa6adf97f83acf6453d4a6a4b1070f3754}{Path\+Log.\+None}}, 
+\mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa960b44c579bc2f6818d2daaf9e4c16f0}{Path\+Log.\+Normal}}, 
+\mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aaf9ffe67a20da9cbff56b420fca4bd491}{Path\+Log.\+Heavy}}, 
+\mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa7f3d370e94c8b1fea09838572013d8ec}{Path\+Log.\+In\+Game}}, 
+\newline
+\mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa40eec2d627d0e5863322c532f18b6125}{Path\+Log.\+Only\+Errors}}
+ \}
+\begin{DoxyCompactList}\small\item\em How path results are logged by the system \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337}{Heuristic}} \{ \mbox{\hyperlink{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a1834cdf9bf35ea1d737c15eef72e18c7}{Heuristic.\+Manhattan}}, 
+\mbox{\hyperlink{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a95491120d4d72077bbdd4d8a24e09941}{Heuristic.\+Diagonal\+Manhattan}}, 
+\mbox{\hyperlink{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a3e43207685247008d9e1ae53ecf8cab3}{Heuristic.\+Euclidean}}, 
+\mbox{\hyperlink{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a6adf97f83acf6453d4a6a4b1070f3754}{Heuristic.\+None}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to estimate the cost of moving to the destination during pathfinding. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5}{Graph\+Debug\+Mode}} \{ \newline
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a63af9903673bdc27b881a7444b1f9854}{Graph\+Debug\+Mode.\+Solid\+Color}}, 
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5adfcf28d0734569a6a693bc8194de62bf}{Graph\+Debug\+Mode.\+G}}, 
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5ac1d9f50f86825a1a2302ec2449c17196}{Graph\+Debug\+Mode.\+H}}, 
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a800618943025315f869e4e1f09471012}{Graph\+Debug\+Mode.\+F}}, 
+\newline
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a78676254cca7a779014dc1960efb47e2}{Graph\+Debug\+Mode.\+Penalty}}, 
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a7eb1f1bbaf31ea92b0c7272b2b363ee1}{Graph\+Debug\+Mode.\+Areas}}, 
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a189f63f277cd73395561651753563065}{Graph\+Debug\+Mode.\+Tags}}, 
+\mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a02ed4393e1c2b75071284645135330c4}{Graph\+Debug\+Mode.\+Hierarchical\+Node}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to visualize the graphs in the editor \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a33b42c17d7961b7f4eabf463d566f3d8}{Thread\+Count}} \{ \newline
+{\bfseries Automatic\+Low\+Load} = -\/1, 
+{\bfseries Automatic\+High\+Load} = -\/2, 
+{\bfseries None} = 0, 
+{\bfseries One} = 1, 
+\newline
+{\bfseries Two}, 
+{\bfseries Three}, 
+{\bfseries Four}, 
+{\bfseries Five}, 
+\newline
+{\bfseries Six}, 
+{\bfseries Seven}, 
+{\bfseries Eight}
+ \}
+\begin{DoxyCompactList}\small\item\em Number of threads to use \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a4870557cba09d9ea4213551666479b6c}{Path\+State}} \{ \newline
+{\bfseries Created} = 0, 
+{\bfseries Path\+Queue} = 1, 
+{\bfseries Processing} = 2, 
+{\bfseries Return\+Queue} = 3, 
+\newline
+{\bfseries Returned} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Internal state of a path in the pipeline \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcce}{Path\+Complete\+State}} \{ \mbox{\hyperlink{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea90a0ffb1cc27df7493c875b893d923bb}{Path\+Complete\+State.\+Not\+Calculated}} = 0, 
+\mbox{\hyperlink{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea902b0d55fddef6f8d651fe1035b7d4bd}{Path\+Complete\+State.\+Error}} = 1, 
+\mbox{\hyperlink{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcceaae94f80b3ce82062a5dd7815daa04f9d}{Path\+Complete\+State.\+Complete}} = 2, 
+\mbox{\hyperlink{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea44ffd38a6dea695cbe2b34efdcc6cf27}{Path\+Complete\+State.\+Partial}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em State of a path request \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbb}{Close\+To\+Destination\+Mode}} \{ \mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba11a755d598c0c417f9a36758c3da7481}{Close\+To\+Destination\+Mode.\+Stop}}, 
+\mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba67236328d592413dd9ae678f38abc742}{Close\+To\+Destination\+Mode.\+Continue\+To\+Exact\+Destination}}
+ \}
+\begin{DoxyCompactList}\small\item\em What to do when the character is close to the destination \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831}{Side}} \+: byte \{ \mbox{\hyperlink{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831aa3b4c37725a0edfb81d4c14c3946079b}{Side.\+Colinear}} = 0, 
+\mbox{\hyperlink{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831a945d5e233cf7d6240f6b783b36a374ff}{Side.\+Left}} = 1, 
+\mbox{\hyperlink{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831a92b09c7c48c520c3c55e497875da437c}{Side.\+Right}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Indicates the side of a line that a point lies on \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Inspector\+Grid\+Hexagon\+Node\+Size}} \{ \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fa32954654ac8fe66a1d09be19001de2d4}{Inspector\+Grid\+Hexagon\+Node\+Size.\+Width}}, 
+\mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fab5f694488326076ff200c7ab955c0455}{Inspector\+Grid\+Hexagon\+Node\+Size.\+Diameter}}, 
+\mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0faddba5d75d5703023e2e30e8eb0c54022}{Inspector\+Grid\+Hexagon\+Node\+Size.\+Node\+Size}}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_pathfinding_acb661843591b81455401036ba2a6e11d}\label{namespace_pathfinding_acb661843591b81455401036ba2a6e11d}} 
+enum {\bfseries Inspector\+Grid\+Mode} \{ {\bfseries Grid}, 
+{\bfseries Isometric\+Grid}, 
+{\bfseries Hexagonal}, 
+{\bfseries Advanced}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a2cc38b0a1376006b5afc67f669d48e27}{Orientation\+Mode}} \{ {\bfseries Z\+Axis\+Forward}, 
+{\bfseries Y\+Axis\+Forward}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines which direction the agent moves in. For 3D games you most likely want the Z\+Axis\+Is\+Forward option as that is the convention for 3D games. For 2D games you most likely want the Y\+Axis\+Is\+Forward option as that is the convention for 2D games. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}{Collider\+Type}} \{ \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310ab7095f057db3fefa7325ad93a04e14fd}{Collider\+Type.\+Sphere}}, 
+\mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a4880c0f12c06dd6d142e7a40b041bf1a}{Collider\+Type.\+Capsule}}, 
+\mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a9406e3c325bfc9873426e5eda4ba6e18}{Collider\+Type.\+Ray}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines collision check shape. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Pathfinding.\+Graph\+Collision}} \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9}{Ray\+Direction}} \{ {\bfseries Up}, 
+\mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a08a38277b0309070706f6652eeae9a53}{Ray\+Direction.\+Down}}, 
+\mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a130c5b3473c57faa76e2a1c54e26f88e}{Ray\+Direction.\+Both}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines collision check ray direction \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pathfinding_ab1e7649c9ea2a478bba166ad5d81a61e}{Num\+Neighbours}} \{ {\bfseries Four}, 
+{\bfseries Eight}, 
+{\bfseries Six}
+ \}
+\begin{DoxyCompactList}\small\item\em Number of neighbours for a single grid node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_pathfinding_a1d2af9df5513ff5b147ec35285544b5d}\label{namespace_pathfinding_a1d2af9df5513ff5b147ec35285544b5d}} 
+enum {\bfseries Heuristic\+Optimization\+Mode} \{ {\bfseries None}, 
+{\bfseries Random}, 
+{\bfseries Random\+Spread\+Out}, 
+{\bfseries Custom}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_pathfinding_a19d5002496f8d4b124dd533c80ad803e}\label{namespace_pathfinding_a19d5002496f8d4b124dd533c80ad803e}} 
+delegate void {\bfseries On\+Path\+Delegate} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} p)
+\item 
+\mbox{\Hypertarget{namespace_pathfinding_a8cae862bfe7693b9bb936f8174443ed5}\label{namespace_pathfinding_a8cae862bfe7693b9bb936f8174443ed5}} 
+delegate void {\bfseries On\+Graph\+Delegate} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{namespace_pathfinding_aa79f52f4790ea5d41e4fd88ccf1ec46c}\label{namespace_pathfinding_aa79f52f4790ea5d41e4fd88ccf1ec46c}} 
+delegate void {\bfseries On\+Scan\+Delegate} (\mbox{\hyperlink{class_astar_path}{Astar\+Path}} script)
+\item 
+delegate void \mbox{\hyperlink{namespace_pathfinding_af2253649a7ef3d6d829781602030a49a}{On\+Scan\+Status}} (\mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}} progress)
+\begin{DoxyCompactList}\small\item\em Deprecated\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbb}\label{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbb}} 
+\index{Pathfinding@{Pathfinding}!CloseToDestinationMode@{CloseToDestinationMode}}
+\index{CloseToDestinationMode@{CloseToDestinationMode}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{CloseToDestinationMode}{CloseToDestinationMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbb}{Pathfinding.\+Close\+To\+Destination\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+What to do when the character is close to the destination 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stop@{Stop}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Stop@{Stop}}}\mbox{\Hypertarget{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba11a755d598c0c417f9a36758c3da7481}\label{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba11a755d598c0c417f9a36758c3da7481}} 
+Stop&The character will stop as quickly as possible when within end\+Reached\+Distance (field that exist on most movement scripts) units from the destination \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ContinueToExactDestination@{ContinueToExactDestination}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!ContinueToExactDestination@{ContinueToExactDestination}}}\mbox{\Hypertarget{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba67236328d592413dd9ae678f38abc742}\label{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba67236328d592413dd9ae678f38abc742}} 
+Continue\+To\+Exact\+Destination&The character will continue to the exact position of the destination \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}\label{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}} 
+\index{Pathfinding@{Pathfinding}!ColliderType@{ColliderType}}
+\index{ColliderType@{ColliderType}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{ColliderType}{ColliderType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310}{Pathfinding.\+Collider\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Determines collision check shape. See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Pathfinding.\+Graph\+Collision}} 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sphere@{Sphere}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Sphere@{Sphere}}}\mbox{\Hypertarget{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310ab7095f057db3fefa7325ad93a04e14fd}\label{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310ab7095f057db3fefa7325ad93a04e14fd}} 
+Sphere&Uses a Sphere, Physics.\+Check\+Sphere. In 2D this is a circle instead. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Capsule@{Capsule}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Capsule@{Capsule}}}\mbox{\Hypertarget{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a4880c0f12c06dd6d142e7a40b041bf1a}\label{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a4880c0f12c06dd6d142e7a40b041bf1a}} 
+Capsule&Uses a Capsule, Physics.\+Check\+Capsule. This will behave identically to the Sphere mode in 2D. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ray@{Ray}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Ray@{Ray}}}\mbox{\Hypertarget{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a9406e3c325bfc9873426e5eda4ba6e18}\label{namespace_pathfinding_a9ac9303d14a39335ad237bd23aa57310a9406e3c325bfc9873426e5eda4ba6e18}} 
+Ray&Uses a Ray, Physics.\+Linecast. In 2D this is a single point instead. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5}} 
+\index{Pathfinding@{Pathfinding}!GraphDebugMode@{GraphDebugMode}}
+\index{GraphDebugMode@{GraphDebugMode}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{GraphDebugMode}{GraphDebugMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5}{Pathfinding.\+Graph\+Debug\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+How to visualize the graphs in the editor 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SolidColor@{SolidColor}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!SolidColor@{SolidColor}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a63af9903673bdc27b881a7444b1f9854}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a63af9903673bdc27b881a7444b1f9854}} 
+Solid\+Color&Draw the graphs with a single solid color \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G@{G}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!G@{G}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5adfcf28d0734569a6a693bc8194de62bf}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5adfcf28d0734569a6a693bc8194de62bf}} 
+G&Use the G score of the last calculated paths to color the graph. The G score is the cost from the start node to the given node. See\+: \href{https://en.wikipedia.org/wiki/A}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/A}}$\ast$\+\_\+search\+\_\+algorithm \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H@{H}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!H@{H}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5ac1d9f50f86825a1a2302ec2449c17196}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5ac1d9f50f86825a1a2302ec2449c17196}} 
+H&Use the H score (heuristic) of the last calculated paths to color the graph. The H score is the estimated cost from the current node to the target. See\+: \href{https://en.wikipedia.org/wiki/A}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/A}}$\ast$\+\_\+search\+\_\+algorithm \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F@{F}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!F@{F}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a800618943025315f869e4e1f09471012}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a800618943025315f869e4e1f09471012}} 
+F&Use the F score of the last calculated paths to color the graph. The F score is the G score + the H score, or in other words the estimated cost total cost of the path. See\+: \href{https://en.wikipedia.org/wiki/A}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/A}}$\ast$\+\_\+search\+\_\+algorithm \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Penalty@{Penalty}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Penalty@{Penalty}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a78676254cca7a779014dc1960efb47e2}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a78676254cca7a779014dc1960efb47e2}} 
+Penalty&Use the penalty of each node to color the graph. This does not show penalties added by tags. See\+: graph-\/updates (view in online documentation for working links) See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aa55adf306c0b410368fdd6b0e5523e28}{Pathfinding.\+Graph\+Node.\+Penalty}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Areas@{Areas}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Areas@{Areas}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a7eb1f1bbaf31ea92b0c7272b2b363ee1}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a7eb1f1bbaf31ea92b0c7272b2b363ee1}} 
+Areas&Visualize the connected components of the graph. A node with a given color can reach any other node with the same color. See\+: \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Pathfinding.\+Hierarchical\+Graph}} See\+: \href{https://en.wikipedia.org/wiki/Connected_component_(graph_theory)}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Connected\+\_\+component\+\_\+(graph\+\_\+theory)}}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tags@{Tags}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Tags@{Tags}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a189f63f277cd73395561651753563065}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a189f63f277cd73395561651753563065}} 
+Tags&Use the tag of each node to color the graph. See\+: tags (view in online documentation for working links) See\+: \mbox{\hyperlink{class_pathfinding_1_1_graph_node_aa3ea1603a2bca1ac9694c79bde764fab}{Pathfinding.\+Graph\+Node.\+Tag}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HierarchicalNode@{HierarchicalNode}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!HierarchicalNode@{HierarchicalNode}}}\mbox{\Hypertarget{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a02ed4393e1c2b75071284645135330c4}\label{namespace_pathfinding_a82503f49480f1775c06bf7ce4b0d11b5a02ed4393e1c2b75071284645135330c4}} 
+Hierarchical\+Node&Visualize the hierarchical graph structure of the graph. This is mostly for internal use. See\+: \mbox{\hyperlink{class_pathfinding_1_1_hierarchical_graph}{Pathfinding.\+Hierarchical\+Graph}} \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8}\label{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8}} 
+\index{Pathfinding@{Pathfinding}!GraphUpdateThreading@{GraphUpdateThreading}}
+\index{GraphUpdateThreading@{GraphUpdateThreading}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{GraphUpdateThreading}{GraphUpdateThreading}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8}{Pathfinding.\+Graph\+Update\+Threading}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnityThread@{UnityThread}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!UnityThread@{UnityThread}}}\mbox{\Hypertarget{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a3b3f76d17174b9c9e79537254414367c}\label{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a3b3f76d17174b9c9e79537254414367c}} 
+Unity\+Thread&Call Update\+Area in the unity thread. This is the default value. Not compatible with Separate\+Thread. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SeparateThread@{SeparateThread}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!SeparateThread@{SeparateThread}}}\mbox{\Hypertarget{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a19a17596cf7d91444deba9e37689a79d}\label{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a19a17596cf7d91444deba9e37689a79d}} 
+Separate\+Thread&Call Update\+Area in a separate thread. Not compatible with Unity\+Thread. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnityInit@{UnityInit}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!UnityInit@{UnityInit}}}\mbox{\Hypertarget{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a80a99ff24bb0400e15548b132ae90a93}\label{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a80a99ff24bb0400e15548b132ae90a93}} 
+Unity\+Init&Calls Update\+Area\+Init in the Unity thread before everything else \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnityPost@{UnityPost}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!UnityPost@{UnityPost}}}\mbox{\Hypertarget{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8aa3509d318f64418e4bb6980b0fe33232}\label{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8aa3509d318f64418e4bb6980b0fe33232}} 
+Unity\+Post&Calls Update\+Area\+Post in the Unity thread after everything else. This is used together with Separate\+Thread to apply the result of the multithreaded calculations to the graph without modifying it at the same time as some other script might be using it (e.\+g calling Get\+Nearest). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SeparateAndUnityInit@{SeparateAndUnityInit}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!SeparateAndUnityInit@{SeparateAndUnityInit}}}\mbox{\Hypertarget{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a30f752a1265bed6ebe204e2625c54f3e}\label{namespace_pathfinding_a474a99f12901055cb7cd3fdbfcef81d8a30f752a1265bed6ebe204e2625c54f3e}} 
+Separate\+And\+Unity\+Init&Combination of Separate\+Thread and Unity\+Init \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337}\label{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337}} 
+\index{Pathfinding@{Pathfinding}!Heuristic@{Heuristic}}
+\index{Heuristic@{Heuristic}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{Heuristic}{Heuristic}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337}{Pathfinding.\+Heuristic}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+How to estimate the cost of moving to the destination during pathfinding. 
+
+The heuristic is the estimated cost from the current node to the target. The different heuristics have roughly the same performance except not using any heuristic at all (None) which is usually significantly slower.
+
+In the image below you can see a comparison of the different heuristic options for an 8-\/connected grid and for a 4-\/connected grid. Note that all paths within the green area will all have the same length. The only difference between the heuristics is which of those paths of the same length that will be chosen. Note that while the Diagonal Manhattan and Manhattan options seem to behave very differently on an 8-\/connected grid they only do it in this case because of very small rounding errors. Usually they behave almost identically on 8-\/connected grids.
+
+\mbox{[}Open online documentation to see images\mbox{]}
+
+Generally for a 4-\/connected grid graph the Manhattan option should be used as it is the true distance on a 4-\/connected grid. For an 8-\/connected grid graph the Diagonal Manhattan option is the mathematically most correct option, however the Euclidean option is often preferred, especially if you are simplifying the path afterwards using modifiers.
+
+For any graph that is not grid based the Euclidean option is the best one to use.
+
+See\+: \href{https://en.wikipedia.org/wiki/A*_search_algorithm}{\texttt{ Wikipedia\+: A$\ast$ search\+\_\+algorithm}}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Manhattan@{Manhattan}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Manhattan@{Manhattan}}}\mbox{\Hypertarget{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a1834cdf9bf35ea1d737c15eef72e18c7}\label{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a1834cdf9bf35ea1d737c15eef72e18c7}} 
+Manhattan&Manhattan distance. See\+: \href{https://en.wikipedia.org/wiki/Taxicab_geometry}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Taxicab\+\_\+geometry}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DiagonalManhattan@{DiagonalManhattan}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!DiagonalManhattan@{DiagonalManhattan}}}\mbox{\Hypertarget{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a95491120d4d72077bbdd4d8a24e09941}\label{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a95491120d4d72077bbdd4d8a24e09941}} 
+Diagonal\+Manhattan&Manhattan distance, but allowing diagonal movement as well. Note\+: This option is currently hard coded for the XZ plane. It will be equivalent to Manhattan distance if you try to use it in the XY plane (i.\+e for a 2D game). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Euclidean@{Euclidean}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Euclidean@{Euclidean}}}\mbox{\Hypertarget{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a3e43207685247008d9e1ae53ecf8cab3}\label{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a3e43207685247008d9e1ae53ecf8cab3}} 
+Euclidean&Ordinary distance. See\+: \href{https://en.wikipedia.org/wiki/Euclidean_distance}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Euclidean\+\_\+distance}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!None@{None}}}\mbox{\Hypertarget{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_pathfinding_aff9b4bf6116e67ab569fed7ab61f8337a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Use no heuristic at all. This reduces the pathfinding algorithm to Dijkstra\textquotesingle{}s algorithm. This is usually significantly slower compared to using a heuristic, which is why the A$\ast$ algorithm is usually preferred over Dijkstra\textquotesingle{}s algorithm. You may have to use this if you have a very non-\/standard graph. For example a world with a \href{https://en.wikipedia.org/wiki/Wraparound_(video_games)}{\texttt{ wraparound playfield}} (think Civilization or Asteroids) and you have custom links with a zero cost from one end of the map to the other end. Usually the A$\ast$ algorithm wouldn\textquotesingle{}t find the wraparound links because it wouldn\textquotesingle{}t think to look in that direction. See\+: \href{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Dijkstra\%27s\+\_\+algorithm}} \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}\label{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}} 
+\index{Pathfinding@{Pathfinding}!InspectorGridHexagonNodeSize@{InspectorGridHexagonNodeSize}}
+\index{InspectorGridHexagonNodeSize@{InspectorGridHexagonNodeSize}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{InspectorGridHexagonNodeSize}{InspectorGridHexagonNodeSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_ace4caa857a18023f57712158dee08c0f}{Pathfinding.\+Inspector\+Grid\+Hexagon\+Node\+Size}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Width@{Width}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Width@{Width}}}\mbox{\Hypertarget{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fa32954654ac8fe66a1d09be19001de2d4}\label{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fa32954654ac8fe66a1d09be19001de2d4}} 
+Width&Value is the distance between two opposing sides in the hexagon \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Diameter@{Diameter}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Diameter@{Diameter}}}\mbox{\Hypertarget{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fab5f694488326076ff200c7ab955c0455}\label{namespace_pathfinding_ace4caa857a18023f57712158dee08c0fab5f694488326076ff200c7ab955c0455}} 
+Diameter&Value is the distance between two opposing vertices in the hexagon \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NodeSize@{NodeSize}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!NodeSize@{NodeSize}}}\mbox{\Hypertarget{namespace_pathfinding_ace4caa857a18023f57712158dee08c0faddba5d75d5703023e2e30e8eb0c54022}\label{namespace_pathfinding_ace4caa857a18023f57712158dee08c0faddba5d75d5703023e2e30e8eb0c54022}} 
+Node\+Size&Value is the raw node size of the grid \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_ab1e7649c9ea2a478bba166ad5d81a61e}\label{namespace_pathfinding_ab1e7649c9ea2a478bba166ad5d81a61e}} 
+\index{Pathfinding@{Pathfinding}!NumNeighbours@{NumNeighbours}}
+\index{NumNeighbours@{NumNeighbours}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{NumNeighbours}{NumNeighbours}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_ab1e7649c9ea2a478bba166ad5d81a61e}{Pathfinding.\+Num\+Neighbours}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Number of neighbours for a single grid node. 
+
+\begin{DoxySince}{Since}
+The \textquotesingle{}Six\textquotesingle{} item was added in 3.\+6.\+1
+\end{DoxySince}
+\mbox{\Hypertarget{namespace_pathfinding_a2cc38b0a1376006b5afc67f669d48e27}\label{namespace_pathfinding_a2cc38b0a1376006b5afc67f669d48e27}} 
+\index{Pathfinding@{Pathfinding}!OrientationMode@{OrientationMode}}
+\index{OrientationMode@{OrientationMode}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{OrientationMode}{OrientationMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a2cc38b0a1376006b5afc67f669d48e27}{Pathfinding.\+Orientation\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Determines which direction the agent moves in. For 3D games you most likely want the Z\+Axis\+Is\+Forward option as that is the convention for 3D games. For 2D games you most likely want the Y\+Axis\+Is\+Forward option as that is the convention for 2D games. 
+
+\mbox{\Hypertarget{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcce}\label{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcce}} 
+\index{Pathfinding@{Pathfinding}!PathCompleteState@{PathCompleteState}}
+\index{PathCompleteState@{PathCompleteState}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{PathCompleteState}{PathCompleteState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcce}{Pathfinding.\+Path\+Complete\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+State of a path request 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotCalculated@{NotCalculated}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!NotCalculated@{NotCalculated}}}\mbox{\Hypertarget{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea90a0ffb1cc27df7493c875b893d923bb}\label{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea90a0ffb1cc27df7493c875b893d923bb}} 
+Not\+Calculated&The path has not been calculated yet. See\+: \mbox{\hyperlink{class_pathfinding_1_1_path_aedc88f47f6da4068be44b37bd3e93769}{Pathfinding.\+Path.\+Is\+Done()}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Error@{Error}}}\mbox{\Hypertarget{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea902b0d55fddef6f8d651fe1035b7d4bd}\label{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea902b0d55fddef6f8d651fe1035b7d4bd}} 
+Error&The path calculation is done, but it failed. See\+: \mbox{\hyperlink{class_pathfinding_1_1_path_af99ae2da4f9f190a602aff8e640c1da0}{Pathfinding.\+Path.\+error}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Complete@{Complete}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Complete@{Complete}}}\mbox{\Hypertarget{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcceaae94f80b3ce82062a5dd7815daa04f9d}\label{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fcceaae94f80b3ce82062a5dd7815daa04f9d}} 
+Complete&The path has been successfully calculated \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Partial@{Partial}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Partial@{Partial}}}\mbox{\Hypertarget{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea44ffd38a6dea695cbe2b34efdcc6cf27}\label{namespace_pathfinding_a28617c0e4bd64c220f56abb4eb79fccea44ffd38a6dea695cbe2b34efdcc6cf27}} 
+Partial&The path has been calculated, but only a partial path could be found. See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_b_path_af1c0ec3bd035ed8a142367ca32d150a2}{Pathfinding.\+A\+B\+Path.\+calculate\+Partial}} \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291a}\label{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291a}} 
+\index{Pathfinding@{Pathfinding}!PathLog@{PathLog}}
+\index{PathLog@{PathLog}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{PathLog}{PathLog}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291a}{Pathfinding.\+Path\+Log}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+How path results are logged by the system 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!None@{None}}}\mbox{\Hypertarget{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Does not log anything. This is recommended for release since logging path results has a performance overhead. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Normal@{Normal}}}\mbox{\Hypertarget{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa960b44c579bc2f6818d2daaf9e4c16f0}\label{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa960b44c579bc2f6818d2daaf9e4c16f0}} 
+Normal&Logs basic info about the paths \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Heavy@{Heavy}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Heavy@{Heavy}}}\mbox{\Hypertarget{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aaf9ffe67a20da9cbff56b420fca4bd491}\label{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aaf9ffe67a20da9cbff56b420fca4bd491}} 
+Heavy&Includes additional info \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InGame@{InGame}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!InGame@{InGame}}}\mbox{\Hypertarget{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa7f3d370e94c8b1fea09838572013d8ec}\label{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa7f3d370e94c8b1fea09838572013d8ec}} 
+In\+Game&Same as heavy, but displays the info in-\/game using G\+UI \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnlyErrors@{OnlyErrors}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!OnlyErrors@{OnlyErrors}}}\mbox{\Hypertarget{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa40eec2d627d0e5863322c532f18b6125}\label{namespace_pathfinding_a424c750d8981da1dbb002c0482dc291aa40eec2d627d0e5863322c532f18b6125}} 
+Only\+Errors&Same as normal, but logs only paths which returned an error \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a4870557cba09d9ea4213551666479b6c}\label{namespace_pathfinding_a4870557cba09d9ea4213551666479b6c}} 
+\index{Pathfinding@{Pathfinding}!PathState@{PathState}}
+\index{PathState@{PathState}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{PathState}{PathState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a4870557cba09d9ea4213551666479b6c}{Pathfinding.\+Path\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Internal state of a path in the pipeline 
+
+\mbox{\Hypertarget{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9}\label{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9}} 
+\index{Pathfinding@{Pathfinding}!RayDirection@{RayDirection}}
+\index{RayDirection@{RayDirection}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{RayDirection}{RayDirection}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9}{Pathfinding.\+Ray\+Direction}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Determines collision check ray direction 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Down@{Down}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Down@{Down}}}\mbox{\Hypertarget{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a08a38277b0309070706f6652eeae9a53}\label{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a08a38277b0309070706f6652eeae9a53}} 
+Down&$<$ Casts the ray from the bottom upwards \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Both@{Both}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Both@{Both}}}\mbox{\Hypertarget{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a130c5b3473c57faa76e2a1c54e26f88e}\label{namespace_pathfinding_aa1fd75929ae2738e7a2a94579e7318e9a130c5b3473c57faa76e2a1c54e26f88e}} 
+Both&$<$ Casts the ray from the top downwards $<$ Casts two rays in both directions \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831}\label{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831}} 
+\index{Pathfinding@{Pathfinding}!Side@{Side}}
+\index{Side@{Side}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{Side}{Side}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831}{Pathfinding.\+Side}} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Indicates the side of a line that a point lies on 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Colinear@{Colinear}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Colinear@{Colinear}}}\mbox{\Hypertarget{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831aa3b4c37725a0edfb81d4c14c3946079b}\label{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831aa3b4c37725a0edfb81d4c14c3946079b}} 
+Colinear&The point lies exactly on the line \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Left@{Left}}}\mbox{\Hypertarget{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831a945d5e233cf7d6240f6b783b36a374ff}\label{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831a945d5e233cf7d6240f6b783b36a374ff}} 
+Left&The point lies on the left side of the line \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!Pathfinding@{Pathfinding}}\index{Pathfinding@{Pathfinding}!Right@{Right}}}\mbox{\Hypertarget{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831a92b09c7c48c520c3c55e497875da437c}\label{namespace_pathfinding_a41b21610b2aea20573d8665e11bd3831a92b09c7c48c520c3c55e497875da437c}} 
+Right&The point lies on the right side of the line \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_pathfinding_a33b42c17d7961b7f4eabf463d566f3d8}\label{namespace_pathfinding_a33b42c17d7961b7f4eabf463d566f3d8}} 
+\index{Pathfinding@{Pathfinding}!ThreadCount@{ThreadCount}}
+\index{ThreadCount@{ThreadCount}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{ThreadCount}{ThreadCount}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pathfinding_a33b42c17d7961b7f4eabf463d566f3d8}{Pathfinding.\+Thread\+Count}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Number of threads to use 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_pathfinding_af2253649a7ef3d6d829781602030a49a}\label{namespace_pathfinding_af2253649a7ef3d6d829781602030a49a}} 
+\index{Pathfinding@{Pathfinding}!OnScanStatus@{OnScanStatus}}
+\index{OnScanStatus@{OnScanStatus}!Pathfinding@{Pathfinding}}
+\doxysubsubsection{\texorpdfstring{OnScanStatus()}{OnScanStatus()}}
+{\footnotesize\ttfamily delegate void Pathfinding.\+On\+Scan\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pathfinding_1_1_progress}{Progress}}}]{progress }\end{DoxyParamCaption})}
+
+
+
+Deprecated\+: 
+

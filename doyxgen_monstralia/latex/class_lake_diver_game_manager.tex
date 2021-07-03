@@ -1,0 +1,120 @@
+\hypertarget{class_lake_diver_game_manager}{}\doxysection{Lake\+Diver\+Game\+Manager Class Reference}
+\label{class_lake_diver_game_manager}\index{LakeDiverGameManager@{LakeDiverGameManager}}
+Inheritance diagram for Lake\+Diver\+Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lake_diver_game_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a0315c74d8d51cf507e3fc856bdf5eaea}\label{class_lake_diver_game_manager_a0315c74d8d51cf507e3fc856bdf5eaea}} 
+delegate void {\bfseries Game\+Action} ()
+\item 
+override void \mbox{\hyperlink{class_lake_diver_game_manager_aeacb3386e5df7d08be97576033941a35}{Pregame\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em First function called in the Director scripts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_aab68f6b3d7f287af1df1581d36627673}\label{class_lake_diver_game_manager_aab68f6b3d7f287af1df1581d36627673}} 
+void {\bfseries Start\+Game} ()
+\item 
+void \mbox{\hyperlink{class_lake_diver_game_manager_af90b888bd6572966a748f3e7371cd748}{Set\+Current\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Gets(and sets) the Current Level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_ae9232778af7ec97d91f83f52270a00c4}\label{class_lake_diver_game_manager_ae9232778af7ec97d91f83f52270a00c4}} 
+Data\+Type.\+Level {\bfseries Get\+Current\+Level} ()
+\item 
+void \mbox{\hyperlink{class_lake_diver_game_manager_acf8bc8c9735142b2a6cbe6c9ce8adcc5}{Get\+Target}} ()
+\begin{DoxyCompactList}\small\item\em collects a treasure and checks if the game is over in the main game, moves the tutorial to the enxt stage in the tutorial \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_ae286414f5771131df6883133b5a12c5c}\label{class_lake_diver_game_manager_ae286414f5771131df6883133b5a12c5c}} 
+void {\bfseries Reset\+Score} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a3f0e2cc0780cffeb190fc4ae493cae63}\label{class_lake_diver_game_manager_a3f0e2cc0780cffeb190fc4ae493cae63}} 
+\mbox{\hyperlink{class_lake_diver_tutorial_manager}{Lake\+Diver\+Tutorial\+Manager}} {\bfseries tutorial\+Manager}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_acc8df245e13b59568765ed3d6c4317cc}\label{class_lake_diver_game_manager_acc8df245e13b59568765ed3d6c4317cc}} 
+float {\bfseries restart\+Delay} = 1f
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_ac821f3c5341d5d0c2496bd836746b036}\label{class_lake_diver_game_manager_ac821f3c5341d5d0c2496bd836746b036}} 
+Game\+Object {\bfseries complete\+Level\+UI}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_ad42ee23a7e2329e57b05a4ab55f79ebd}\label{class_lake_diver_game_manager_ad42ee23a7e2329e57b05a4ab55f79ebd}} 
+Audio\+Clip {\bfseries congrats\+SFX}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a29888a15defb0c4717b75f6a6953d9de}\label{class_lake_diver_game_manager_a29888a15defb0c4717b75f6a6953d9de}} 
+bool {\bfseries is\+Tutorial\+Running} = false
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a269bd4ab1802b486643d0a103876b874}\label{class_lake_diver_game_manager_a269bd4ab1802b486643d0a103876b874}} 
+Audio\+Clip {\bfseries get\+Treaure}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a622836cb52405827eae931d9a615ae25}\label{class_lake_diver_game_manager_a622836cb52405827eae931d9a615ae25}} 
+Audio\+Clip {\bfseries pop\+Bubble}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a52bf2713deff6db5ad9199ce2705d5ef}\label{class_lake_diver_game_manager_a52bf2713deff6db5ad9199ce2705d5ef}} 
+Audio\+Clip {\bfseries hit\+Fish}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a40735ec827a7a203dd7d46b4dfafbadc}\label{class_lake_diver_game_manager_a40735ec827a7a203dd7d46b4dfafbadc}} 
+\mbox{\hyperlink{class_monster}{Monster}} {\bfseries monster\+Object}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a3cae0267d93228da6bdc02999c12cec7}\label{class_lake_diver_game_manager_a3cae0267d93228da6bdc02999c12cec7}} 
+int\mbox{[}$\,$\mbox{]} {\bfseries Level\+Times} = \{ 60, 60, 60 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a13f5812b77d93c04424cb714ac5bfd37}\label{class_lake_diver_game_manager_a13f5812b77d93c04424cb714ac5bfd37}} 
+bool {\bfseries Input\+Allowed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lake_diver_game_manager_a10ed6a7220e0b9374f07470c7aacf5c9}\label{class_lake_diver_game_manager_a10ed6a7220e0b9374f07470c7aacf5c9}} 
+static Game\+Action {\bfseries On\+Game\+Start}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lake_diver_game_manager_acf8bc8c9735142b2a6cbe6c9ce8adcc5}\label{class_lake_diver_game_manager_acf8bc8c9735142b2a6cbe6c9ce8adcc5}} 
+\index{LakeDiverGameManager@{LakeDiverGameManager}!GetTarget@{GetTarget}}
+\index{GetTarget@{GetTarget}!LakeDiverGameManager@{LakeDiverGameManager}}
+\doxysubsubsection{\texorpdfstring{GetTarget()}{GetTarget()}}
+{\footnotesize\ttfamily void Lake\+Diver\+Game\+Manager.\+Get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+collects a treasure and checks if the game is over in the main game, moves the tutorial to the enxt stage in the tutorial 
+
+\mbox{\Hypertarget{class_lake_diver_game_manager_aeacb3386e5df7d08be97576033941a35}\label{class_lake_diver_game_manager_aeacb3386e5df7d08be97576033941a35}} 
+\index{LakeDiverGameManager@{LakeDiverGameManager}!PregameSetup@{PregameSetup}}
+\index{PregameSetup@{PregameSetup}!LakeDiverGameManager@{LakeDiverGameManager}}
+\doxysubsubsection{\texorpdfstring{PregameSetup()}{PregameSetup()}}
+{\footnotesize\ttfamily override void Lake\+Diver\+Game\+Manager.\+Pregame\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+First function called in the Director scripts 
+
+
+
+Implements \mbox{\hyperlink{class_abstract_game_director_af768407a9b41acf28c8be25a06b5ea95}{Abstract\+Game\+Director$<$ Lake\+Diver\+Game\+Manager $>$}}.
+
+\mbox{\Hypertarget{class_lake_diver_game_manager_af90b888bd6572966a748f3e7371cd748}\label{class_lake_diver_game_manager_af90b888bd6572966a748f3e7371cd748}} 
+\index{LakeDiverGameManager@{LakeDiverGameManager}!SetCurrentLevel@{SetCurrentLevel}}
+\index{SetCurrentLevel@{SetCurrentLevel}!LakeDiverGameManager@{LakeDiverGameManager}}
+\doxysubsubsection{\texorpdfstring{SetCurrentLevel()}{SetCurrentLevel()}}
+{\footnotesize\ttfamily void Lake\+Diver\+Game\+Manager.\+Set\+Current\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets(and sets) the Current Level 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Monstralia/\+Pump Paradise/\+Lake\+Diver/Lake\+Diver\+Game\+Manager.\+cs\end{DoxyCompactItemize}

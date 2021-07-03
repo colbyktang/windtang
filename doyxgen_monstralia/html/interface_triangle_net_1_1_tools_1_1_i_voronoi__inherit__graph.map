@@ -1,0 +1,5 @@
+<map id="TriangleNet.Tools.IVoronoi" name="TriangleNet.Tools.IVoronoi">
+<area shape="rect" id="node1" title="TODO: Update summary." alt="" coords="106,5,279,32"/>
+<area shape="rect" id="node2" href="$class_triangle_net_1_1_tools_1_1_bounded_voronoi.html" title="The Bounded Voronoi Diagram is the dual of a PSLG triangulation." alt="" coords="5,80,183,121"/>
+<area shape="rect" id="node3" href="$class_triangle_net_1_1_tools_1_1_voronoi.html" title="The Voronoi Diagram is the dual of a pointset triangulation." alt="" coords="207,87,378,114"/>
+</map>

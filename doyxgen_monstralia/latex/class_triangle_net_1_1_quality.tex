@@ -1,0 +1,122 @@
+\hypertarget{class_triangle_net_1_1_quality}{}\doxysection{Triangle\+Net.\+Quality Class Reference}
+\label{class_triangle_net_1_1_quality}\index{TriangleNet.Quality@{TriangleNet.Quality}}
+
+
+Provides methods for mesh quality enforcement and testing.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_quality_a180c35d29c9ac70b6ee4206720f0a79d}\label{class_triangle_net_1_1_quality_a180c35d29c9ac70b6ee4206720f0a79d}} 
+{\bfseries Quality} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} mesh)
+\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_quality_afb1d7a62024754e863ae89aa6ceea449}{Add\+Bad\+Subseg}} (\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_subseg}{Bad\+Subseg}} badseg)
+\begin{DoxyCompactList}\small\item\em Add a bad subsegment to the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_quality_a0748311339f5e9b7135862b4fbad81b3}{Check\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Test the mesh for topological consistency. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_triangle_net_1_1_quality_ac430a2bf88a5ec84d4d6346357b7ebd5}{Check\+Delaunay}} ()
+\begin{DoxyCompactList}\small\item\em Ensure that the mesh is (constrained) Delaunay. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_quality_a4aee904d5fb7db5ac46fa729627f78f1}{Check\+Seg4\+Encroach}} (ref \mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_osub}{Osub}} testsubseg)
+\begin{DoxyCompactList}\small\item\em Check a subsegment to see if it is encroached; add it to the list if it is. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_quality_a0d9bd229ae73a8cbae92e81b03705af7}{Test\+Triangle}} (ref \mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_otri}{Otri}} testtri)
+\begin{DoxyCompactList}\small\item\em Test a triangle for quality and size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_net_1_1_quality_a1081a82553e7481bb34c86b9a02d6fd3}{Enforce\+Quality}} ()
+\begin{DoxyCompactList}\small\item\em Remove all the encroached subsegments and bad triangles from the triangulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides methods for mesh quality enforcement and testing. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_quality_afb1d7a62024754e863ae89aa6ceea449}\label{class_triangle_net_1_1_quality_afb1d7a62024754e863ae89aa6ceea449}} 
+\index{TriangleNet.Quality@{TriangleNet.Quality}!AddBadSubseg@{AddBadSubseg}}
+\index{AddBadSubseg@{AddBadSubseg}!TriangleNet.Quality@{TriangleNet.Quality}}
+\doxysubsubsection{\texorpdfstring{AddBadSubseg()}{AddBadSubseg()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Quality.\+Add\+Bad\+Subseg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_bad_subseg}{Bad\+Subseg}}}]{badseg }\end{DoxyParamCaption})}
+
+
+
+Add a bad subsegment to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em badseg} & Bad subsegment.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_net_1_1_quality_ac430a2bf88a5ec84d4d6346357b7ebd5}\label{class_triangle_net_1_1_quality_ac430a2bf88a5ec84d4d6346357b7ebd5}} 
+\index{TriangleNet.Quality@{TriangleNet.Quality}!CheckDelaunay@{CheckDelaunay}}
+\index{CheckDelaunay@{CheckDelaunay}!TriangleNet.Quality@{TriangleNet.Quality}}
+\doxysubsubsection{\texorpdfstring{CheckDelaunay()}{CheckDelaunay()}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Quality.\+Check\+Delaunay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ensure that the mesh is (constrained) Delaunay. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_quality_a0748311339f5e9b7135862b4fbad81b3}\label{class_triangle_net_1_1_quality_a0748311339f5e9b7135862b4fbad81b3}} 
+\index{TriangleNet.Quality@{TriangleNet.Quality}!CheckMesh@{CheckMesh}}
+\index{CheckMesh@{CheckMesh}!TriangleNet.Quality@{TriangleNet.Quality}}
+\doxysubsubsection{\texorpdfstring{CheckMesh()}{CheckMesh()}}
+{\footnotesize\ttfamily bool Triangle\+Net.\+Quality.\+Check\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the mesh for topological consistency. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_quality_a4aee904d5fb7db5ac46fa729627f78f1}\label{class_triangle_net_1_1_quality_a4aee904d5fb7db5ac46fa729627f78f1}} 
+\index{TriangleNet.Quality@{TriangleNet.Quality}!CheckSeg4Encroach@{CheckSeg4Encroach}}
+\index{CheckSeg4Encroach@{CheckSeg4Encroach}!TriangleNet.Quality@{TriangleNet.Quality}}
+\doxysubsubsection{\texorpdfstring{CheckSeg4Encroach()}{CheckSeg4Encroach()}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Quality.\+Check\+Seg4\+Encroach (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_osub}{Osub}}}]{testsubseg }\end{DoxyParamCaption})}
+
+
+
+Check a subsegment to see if it is encroached; add it to the list if it is. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em testsubseg} & The subsegment to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a nonzero value if the subsegment is encroached.
+\end{DoxyReturn}
+
+
+A subsegment is encroached if there is a vertex in its diametral lens. For Ruppert\textquotesingle{}s algorithm (-\/D switch), the \char`\"{}diametral lens\char`\"{} is the diametral circle. For Chew\textquotesingle{}s algorithm (default), the diametral lens is just big enough to enclose two isosceles triangles whose bases are the subsegment. Each of the two isosceles triangles has two angles equal to \textquotesingle{}b.\+minangle\textquotesingle{}.
+
+Chew\textquotesingle{}s algorithm does not require diametral lenses at all--but they save time. Any vertex inside a subsegment\textquotesingle{}s diametral lens implies that the triangle adjoining the subsegment will be too skinny, so it\textquotesingle{}s only a matter of time before the encroaching vertex is deleted by Chew\textquotesingle{}s algorithm. It\textquotesingle{}s faster to simply not insert the doomed vertex in the first place, which is why I use diametral lenses with Chew\textquotesingle{}s algorithm. \mbox{\Hypertarget{class_triangle_net_1_1_quality_a1081a82553e7481bb34c86b9a02d6fd3}\label{class_triangle_net_1_1_quality_a1081a82553e7481bb34c86b9a02d6fd3}} 
+\index{TriangleNet.Quality@{TriangleNet.Quality}!EnforceQuality@{EnforceQuality}}
+\index{EnforceQuality@{EnforceQuality}!TriangleNet.Quality@{TriangleNet.Quality}}
+\doxysubsubsection{\texorpdfstring{EnforceQuality()}{EnforceQuality()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Quality.\+Enforce\+Quality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all the encroached subsegments and bad triangles from the triangulation. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_quality_a0d9bd229ae73a8cbae92e81b03705af7}\label{class_triangle_net_1_1_quality_a0d9bd229ae73a8cbae92e81b03705af7}} 
+\index{TriangleNet.Quality@{TriangleNet.Quality}!TestTriangle@{TestTriangle}}
+\index{TestTriangle@{TestTriangle}!TriangleNet.Quality@{TriangleNet.Quality}}
+\doxysubsubsection{\texorpdfstring{TestTriangle()}{TestTriangle()}}
+{\footnotesize\ttfamily void Triangle\+Net.\+Quality.\+Test\+Triangle (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_triangle_net_1_1_data_1_1_otri}{Otri}}}]{testtri }\end{DoxyParamCaption})}
+
+
+
+Test a triangle for quality and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em testtri} & Triangle to check.\\
+\hline
+\end{DoxyParams}
+
+
+Tests a triangle to see if it satisfies the minimum angle condition and the maximum area condition. Triangles that aren\textquotesingle{}t up to spec are added to the bad triangle queue. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/Quality.\+cs\end{DoxyCompactItemize}

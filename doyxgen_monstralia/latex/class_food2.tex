@@ -1,0 +1,88 @@
+\hypertarget{class_food2}{}\doxysection{Food2 Class Reference}
+\label{class_food2}\index{Food2@{Food2}}
+Inheritance diagram for Food2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_food2}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_food2_a83371c7d38f734af3f106af2a47c24b5}\label{class_food2_a83371c7d38f734af3f106af2a47c24b5}} 
+enum class {\bfseries Type\+Of\+Food} \{ \newline
+{\bfseries Fruit}
+, {\bfseries Vegetable}
+, {\bfseries Dairy}
+, {\bfseries Meat}
+, \newline
+{\bfseries Misc}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_food2_ac0e443e75f43b835e006f47810ba03b1}\label{class_food2_ac0e443e75f43b835e006f47810ba03b1}} 
+virtual void {\bfseries Spawn} (Transform spawn\+Pos, Transform parent=null, float scale=1.\+0f)
+\item 
+\mbox{\Hypertarget{class_food2_a56578bbfdd945590996e054bdba3b2aa}\label{class_food2_a56578bbfdd945590996e054bdba3b2aa}} 
+void {\bfseries Eat\+Food} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_food2_aa1106cf27356e6942feb6371520d457a}\label{class_food2_aa1106cf27356e6942feb6371520d457a}} 
+\mbox{\hyperlink{class_food_data}{Food\+Data}} {\bfseries food\+Data}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_food2_aebeb891fc0dc7eca3176ce83b54bdec8}{coll}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Data\+Type.\+Color \mbox{\hyperlink{class_food2_a390805b4999c10806a9a774759223631}{type\+Of\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type\+Of\+Food \mbox{\hyperlink{class_food2_a81ffbf9b32bd30f857a68ad12b05d445}{food\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_food2_a72fcbf739f2246a66110cdd62ffdaf55}{food\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_food2_a7e478709923445771f9d8c11c5e422c3}\label{class_food2_a7e478709923445771f9d8c11c5e422c3}} 
+Audio\+Clip {\bfseries clip\+Of\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_food2_a9563ae0ec9120c905bcd2ec9fc80a3d7}\label{class_food2_a9563ae0ec9120c905bcd2ec9fc80a3d7}} 
+Audio\+Clip {\bfseries eat\+Sound}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_food2_aebeb891fc0dc7eca3176ce83b54bdec8}\label{class_food2_aebeb891fc0dc7eca3176ce83b54bdec8}} 
+\index{Food2@{Food2}!coll@{coll}}
+\index{coll@{coll}!Food2@{Food2}}
+\doxysubsubsection{\texorpdfstring{coll}{coll}}
+{\footnotesize\ttfamily Rigidbody2D Food2.\+coll}
+
+$<$ \mbox{\hyperlink{class_food}{Food}} property for sorting into lists 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_food2_a72fcbf739f2246a66110cdd62ffdaf55}\label{class_food2_a72fcbf739f2246a66110cdd62ffdaf55}} 
+\index{Food2@{Food2}!foodName@{foodName}}
+\index{foodName@{foodName}!Food2@{Food2}}
+\doxysubsubsection{\texorpdfstring{foodName}{foodName}}
+{\footnotesize\ttfamily string Food2.\+food\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+Voiceover clip of the food\textquotesingle{}s name to be used with subtitles \mbox{\Hypertarget{class_food2_a81ffbf9b32bd30f857a68ad12b05d445}\label{class_food2_a81ffbf9b32bd30f857a68ad12b05d445}} 
+\index{Food2@{Food2}!foodType@{foodType}}
+\index{foodType@{foodType}!Food2@{Food2}}
+\doxysubsubsection{\texorpdfstring{foodType}{foodType}}
+{\footnotesize\ttfamily Type\+Of\+Food Food2.\+food\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\hyperlink{class_food}{Food}}\textquotesingle{}s name to be used with subtitles \mbox{\Hypertarget{class_food2_a390805b4999c10806a9a774759223631}\label{class_food2_a390805b4999c10806a9a774759223631}} 
+\index{Food2@{Food2}!typeOfColor@{typeOfColor}}
+\index{typeOfColor@{typeOfColor}!Food2@{Food2}}
+\doxysubsubsection{\texorpdfstring{typeOfColor}{typeOfColor}}
+{\footnotesize\ttfamily Data\+Type.\+Color Food2.\+type\+Of\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\hyperlink{class_food}{Food}} property variable to set manually in inspector 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Food/Food 2.\+cs\end{DoxyCompactItemize}

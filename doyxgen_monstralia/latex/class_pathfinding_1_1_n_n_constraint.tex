@@ -1,0 +1,226 @@
+\hypertarget{class_pathfinding_1_1_n_n_constraint}{}\doxysection{Pathfinding.\+N\+N\+Constraint Class Reference}
+\label{class_pathfinding_1_1_n_n_constraint}\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+
+
+Nearest node constraint. Constrains which nodes will be returned by the \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} function  
+
+
+
+
+Inheritance diagram for Pathfinding.\+N\+N\+Constraint\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+N\+N\+Constraint\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a571052cad50a9bcae6c491c40bd9f1e7}{Suitable\+Graph}} (int graph\+Index, \mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} graph)
+\begin{DoxyCompactList}\small\item\em Returns whether or not the graph conforms to this \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}\textquotesingle{}s rules. Note that only the first 31 graphs are considered using this function. If the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}{graph\+Mask}} has bit 31 set (i.\+e the last graph possible to fit in the mask), all graphs above index 31 will also be considered suitable. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a380d177f1c47afa513bd7c2e730c6618}{Suitable}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}} node)
+\begin{DoxyCompactList}\small\item\em Returns whether or not the node conforms to this \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}\textquotesingle{}s rules \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ab23e0eff6eb09b7f74c98568a76bc889}{N\+N\+Constraint}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Equals to the property \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}{Default}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}{graph\+Mask}} = -\/1
+\begin{DoxyCompactList}\small\item\em Graphs treated as valid to search on. This is a bitmask meaning that bit 0 specifies whether or not the first graph in the graphs list should be able to be included in the search, bit 1 specifies whether or not the second graph should be included and so on. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_aca55b45dcb0426ab294c097ceb7990bf}{constrain\+Area}}
+\begin{DoxyCompactList}\small\item\em Only treat nodes in the area \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}{area}} as suitable. Does not affect anything if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}{area}} is less than 0 (zero) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}{area}} = -\/1
+\begin{DoxyCompactList}\small\item\em Area ID to constrain to. Will not affect anything if less than 0 (zero) or if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_aca55b45dcb0426ab294c097ceb7990bf}{constrain\+Area}} is false \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}{constrain\+Walkability}} = true
+\begin{DoxyCompactList}\small\item\em Constrain the search to only walkable or unwalkable nodes depending on \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a023572e4c1bfd24bfd2e685fcc6f0b0e}{walkable}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a023572e4c1bfd24bfd2e685fcc6f0b0e}{walkable}} = true
+\begin{DoxyCompactList}\small\item\em Only search for walkable or unwalkable nodes if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}{constrain\+Walkability}} is enabled. If true, only walkable nodes will be searched for, otherwise only unwalkable nodes will be searched for. Does not affect anything if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}{constrain\+Walkability}} if false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a5bf8143fe7fa47bf1520164350503bbf}{distance\+XZ}}
+\begin{DoxyCompactList}\small\item\em if available, do an XZ check instead of checking on all axes. The navmesh/recast graph supports this. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ac5a7da127041411d5da10eaf47fb74c5}{constrain\+Tags}} = true
+\begin{DoxyCompactList}\small\item\em Sets if tags should be constrained. See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a1c6c5ffed93b73d491914f82e62adfd1}{tags}} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a1c6c5ffed93b73d491914f82e62adfd1}{tags}} = -\/1
+\begin{DoxyCompactList}\small\item\em Nodes which have any of these tags set are suitable. This is a bitmask, i.\+e bit 0 indicates that tag 0 is good, bit 3 indicates tag 3 is good etc. See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ac5a7da127041411d5da10eaf47fb74c5}{constrain\+Tags}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}{graph\+Mask}} See\+: bitmasks (view in online documentation for working links) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a28ca974d3a0b168eaa7c4a90dea8a485}{constrain\+Distance}} = true
+\begin{DoxyCompactList}\small\item\em Constrain distance to node. Uses distance from \mbox{\hyperlink{class_astar_path_ab89f27ed76854e06c3f7185aae892c55}{Astar\+Path.\+max\+Nearest\+Node\+Distance}}. If this is false, it will completely ignore the distance limit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}{Default}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The default \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. Equivalent to new \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} (). This \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} has settings which works for most, it only finds walkable nodes and it constrains distance set by A$\ast$ Inspector -\/$>$ Settings -\/$>$ Max Nearest Node Distance \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}{None}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a constraint which does not filter the results \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Nearest node constraint. Constrains which nodes will be returned by the \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} function 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_ab23e0eff6eb09b7f74c98568a76bc889}\label{class_pathfinding_1_1_n_n_constraint_ab23e0eff6eb09b7f74c98568a76bc889}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!NNConstraint@{NNConstraint}}
+\index{NNConstraint@{NNConstraint}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{NNConstraint()}{NNConstraint()}}
+{\footnotesize\ttfamily Pathfinding.\+N\+N\+Constraint.\+N\+N\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. Equals to the property \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}{Default}} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a380d177f1c47afa513bd7c2e730c6618}\label{class_pathfinding_1_1_n_n_constraint_a380d177f1c47afa513bd7c2e730c6618}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!Suitable@{Suitable}}
+\index{Suitable@{Suitable}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{Suitable()}{Suitable()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+N\+N\+Constraint.\+Suitable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_node}{Graph\+Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether or not the node conforms to this \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}\textquotesingle{}s rules 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a571052cad50a9bcae6c491c40bd9f1e7}\label{class_pathfinding_1_1_n_n_constraint_a571052cad50a9bcae6c491c40bd9f1e7}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!SuitableGraph@{SuitableGraph}}
+\index{SuitableGraph@{SuitableGraph}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{SuitableGraph()}{SuitableGraph()}}
+{\footnotesize\ttfamily virtual bool Pathfinding.\+N\+N\+Constraint.\+Suitable\+Graph (\begin{DoxyParamCaption}\item[{int}]{graph\+Index,  }\item[{\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether or not the graph conforms to this \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}\textquotesingle{}s rules. Note that only the first 31 graphs are considered using this function. If the \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}{graph\+Mask}} has bit 31 set (i.\+e the last graph possible to fit in the mask), all graphs above index 31 will also be considered suitable. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}\label{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!area@{area}}
+\index{area@{area}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{area}{area}}
+{\footnotesize\ttfamily int Pathfinding.\+N\+N\+Constraint.\+area = -\/1}
+
+
+
+Area ID to constrain to. Will not affect anything if less than 0 (zero) or if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_aca55b45dcb0426ab294c097ceb7990bf}{constrain\+Area}} is false 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_aca55b45dcb0426ab294c097ceb7990bf}\label{class_pathfinding_1_1_n_n_constraint_aca55b45dcb0426ab294c097ceb7990bf}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!constrainArea@{constrainArea}}
+\index{constrainArea@{constrainArea}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{constrainArea}{constrainArea}}
+{\footnotesize\ttfamily bool Pathfinding.\+N\+N\+Constraint.\+constrain\+Area}
+
+
+
+Only treat nodes in the area \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}{area}} as suitable. Does not affect anything if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a6bee0b42498b44caccd0a776eb0fee4b}{area}} is less than 0 (zero) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a28ca974d3a0b168eaa7c4a90dea8a485}\label{class_pathfinding_1_1_n_n_constraint_a28ca974d3a0b168eaa7c4a90dea8a485}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!constrainDistance@{constrainDistance}}
+\index{constrainDistance@{constrainDistance}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{constrainDistance}{constrainDistance}}
+{\footnotesize\ttfamily bool Pathfinding.\+N\+N\+Constraint.\+constrain\+Distance = true}
+
+
+
+Constrain distance to node. Uses distance from \mbox{\hyperlink{class_astar_path_ab89f27ed76854e06c3f7185aae892c55}{Astar\+Path.\+max\+Nearest\+Node\+Distance}}. If this is false, it will completely ignore the distance limit. 
+
+If there are no suitable nodes within the distance limit then the search will terminate with a null node as a result. Note\+: This value is not used in this class, it is used by the \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} function.\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_ac5a7da127041411d5da10eaf47fb74c5}\label{class_pathfinding_1_1_n_n_constraint_ac5a7da127041411d5da10eaf47fb74c5}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!constrainTags@{constrainTags}}
+\index{constrainTags@{constrainTags}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{constrainTags}{constrainTags}}
+{\footnotesize\ttfamily bool Pathfinding.\+N\+N\+Constraint.\+constrain\+Tags = true}
+
+
+
+Sets if tags should be constrained. See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a1c6c5ffed93b73d491914f82e62adfd1}{tags}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}\label{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!constrainWalkability@{constrainWalkability}}
+\index{constrainWalkability@{constrainWalkability}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{constrainWalkability}{constrainWalkability}}
+{\footnotesize\ttfamily bool Pathfinding.\+N\+N\+Constraint.\+constrain\+Walkability = true}
+
+
+
+Constrain the search to only walkable or unwalkable nodes depending on \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a023572e4c1bfd24bfd2e685fcc6f0b0e}{walkable}}. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a5bf8143fe7fa47bf1520164350503bbf}\label{class_pathfinding_1_1_n_n_constraint_a5bf8143fe7fa47bf1520164350503bbf}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!distanceXZ@{distanceXZ}}
+\index{distanceXZ@{distanceXZ}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{distanceXZ}{distanceXZ}}
+{\footnotesize\ttfamily bool Pathfinding.\+N\+N\+Constraint.\+distance\+XZ}
+
+
+
+if available, do an XZ check instead of checking on all axes. The navmesh/recast graph supports this. 
+
+This can be important on sloped surfaces. See the image below in which the closest point for each blue point is queried for\+: \mbox{[}Open online documentation to see images\mbox{]}
+
+The navmesh/recast graphs also contain a global option for this\+: \mbox{\hyperlink{class_pathfinding_1_1_navmesh_base_a8247471c6dba57c8427abf5069451a5a}{Pathfinding.\+Navmesh\+Base.\+nearest\+Search\+Only\+XZ}}.\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}\label{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!graphMask@{graphMask}}
+\index{graphMask@{graphMask}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{graphMask}{graphMask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} Pathfinding.\+N\+N\+Constraint.\+graph\+Mask = -\/1}
+
+
+
+Graphs treated as valid to search on. This is a bitmask meaning that bit 0 specifies whether or not the first graph in the graphs list should be able to be included in the search, bit 1 specifies whether or not the second graph should be included and so on. 
+
+{\ttfamily  // Enables the first and third graphs to be included, but not the rest my\+N\+N\+Constraint.\+graph\+Mask = (1 $<$$<$ 0) $\vert$ (1 $<$$<$ 2); } {\ttfamily  \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask1 = \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{Graph\+Mask.\+From\+Graph\+Name}}(\char`\"{}\+My Grid Graph\char`\"{}); \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask}{Graph\+Mask}} mask2 = \mbox{\hyperlink{struct_pathfinding_1_1_graph_mask_aa3cbffd72929638b6338ad703980dfff}{Graph\+Mask.\+From\+Graph\+Name}}(\char`\"{}\+My Other Grid Graph\char`\"{});}
+
+{\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} nn = \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}{N\+N\+Constraint.\+Default}};}
+
+{\ttfamily nn.\+graph\+Mask = mask1 $\vert$ mask2;}
+
+{\ttfamily // Find the node closest to some\+Point which is either in \textquotesingle{}My Grid Graph\textquotesingle{} OR in \textquotesingle{}My Other Grid Graph\textquotesingle{} var info = Astar\+Path.\+active.\+Get\+Nearest(some\+Point, nn); }
+
+Note\+: This does only affect which nodes are returned from a \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} call, if a valid graph is connected to an invalid graph using a node link then it might be searched anyway.
+
+See\+: \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a571052cad50a9bcae6c491c40bd9f1e7}{Suitable\+Graph}} See\+: bitmasks (view in online documentation for working links)\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a1c6c5ffed93b73d491914f82e62adfd1}\label{class_pathfinding_1_1_n_n_constraint_a1c6c5ffed93b73d491914f82e62adfd1}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!tags@{tags}}
+\index{tags@{tags}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{tags}{tags}}
+{\footnotesize\ttfamily int Pathfinding.\+N\+N\+Constraint.\+tags = -\/1}
+
+
+
+Nodes which have any of these tags set are suitable. This is a bitmask, i.\+e bit 0 indicates that tag 0 is good, bit 3 indicates tag 3 is good etc. See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ac5a7da127041411d5da10eaf47fb74c5}{constrain\+Tags}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_a08683785a870fde552c21fcfd348901d}{graph\+Mask}} See\+: bitmasks (view in online documentation for working links) 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a023572e4c1bfd24bfd2e685fcc6f0b0e}\label{class_pathfinding_1_1_n_n_constraint_a023572e4c1bfd24bfd2e685fcc6f0b0e}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!walkable@{walkable}}
+\index{walkable@{walkable}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{walkable}{walkable}}
+{\footnotesize\ttfamily bool Pathfinding.\+N\+N\+Constraint.\+walkable = true}
+
+
+
+Only search for walkable or unwalkable nodes if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}{constrain\+Walkability}} is enabled. If true, only walkable nodes will be searched for, otherwise only unwalkable nodes will be searched for. Does not affect anything if \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint_ae2f8272dce8505746970fdb9b5cf3f23}{constrain\+Walkability}} if false. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}\label{class_pathfinding_1_1_n_n_constraint_a291331904058c3a43f45d5660ca3c011}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!Default@{Default}}
+\index{Default@{Default}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{Default}{Default}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} Pathfinding.\+N\+N\+Constraint.\+Default\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The default \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}}. Equivalent to new \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} (). This \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} has settings which works for most, it only finds walkable nodes and it constrains distance set by A$\ast$ Inspector -\/$>$ Settings -\/$>$ Max Nearest Node Distance 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}\label{class_pathfinding_1_1_n_n_constraint_a0ad46dba5349d91af6887be4e27ea23f}} 
+\index{Pathfinding.NNConstraint@{Pathfinding.NNConstraint}!None@{None}}
+\index{None@{None}!Pathfinding.NNConstraint@{Pathfinding.NNConstraint}}
+\doxysubsubsection{\texorpdfstring{None}{None}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_n_n_constraint}{N\+N\+Constraint}} Pathfinding.\+N\+N\+Constraint.\+None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Returns a constraint which does not filter the results 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/astarclasses.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\hypertarget{class_pathfinding_1_1_funnel_modifier}{}\doxysection{Pathfinding.\+Funnel\+Modifier Class Reference}
+\label{class_pathfinding_1_1_funnel_modifier}\index{Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}}
+
+
+Simplifies paths on navmesh graphs using the funnel algorithm. The funnel algorithm is an algorithm which can, given a path corridor with nodes in the path where the nodes have an area, like triangles, it can find the shortest path inside it. This makes paths on navmeshes look much cleaner and smoother. \mbox{[}Open online documentation to see images\mbox{]}  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Funnel\+Modifier\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Funnel\+Modifier\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_funnel_modifier_aec5cacb1c3543e6683bea67b9dba2f30}{Apply}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} p)
+\begin{DoxyCompactList}\small\item\em Called for each path that the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} calculates after the calculation has finished \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_funnel_modifier_a01e517457a43758bc49d92f4a16e3430}{unwrap}} = true
+\begin{DoxyCompactList}\small\item\em Determines if twists and bends should be straightened out before running the funnel algorithm. If the unwrap option is disabled the funnel will simply be projected onto the XZ plane. If the unwrap option is enabled then the funnel may be oriented arbitrarily and may have twists and bends. This makes it possible to support the funnel algorithm in XY space as well as in more complicated cases, such as on curved worlds. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_funnel_modifier_af7836aecb7f32833f46856b0b5d9752b}{split\+At\+Every\+Portal}}
+\begin{DoxyCompactList}\small\item\em Insert a vertex every time the path crosses a portal instead of only at the corners of the path. The resulting path will have exactly one vertex per portal if this is enabled. This may introduce vertices with the same position in the output (esp. in corners where many portals meet). \mbox{[}Open online documentation to see images\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_funnel_modifier_abbf178ed65ed4d7e7870e91df920cb2c}\label{class_pathfinding_1_1_funnel_modifier_abbf178ed65ed4d7e7870e91df920cb2c}} 
+override int {\bfseries Order}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Simplifies paths on navmesh graphs using the funnel algorithm. The funnel algorithm is an algorithm which can, given a path corridor with nodes in the path where the nodes have an area, like triangles, it can find the shortest path inside it. This makes paths on navmeshes look much cleaner and smoother. \mbox{[}Open online documentation to see images\mbox{]} 
+
+The funnel modifier also works on grid graphs however since it only simplifies the paths within the nodes which the original path visited it may not always simplify the path as much as you would like it to. The \mbox{\hyperlink{class_pathfinding_1_1_raycast_modifier}{Pathfinding.\+Raycast\+Modifier}} can be a better fit for grid graphs. \mbox{[}Open online documentation to see images\mbox{]}
+
+See\+: \href{http://digestingduck.blogspot.se/2010/03/simple-stupid-funnel-algorithm.html}{\texttt{ http\+://digestingduck.\+blogspot.\+se/2010/03/simple-\/stupid-\/funnel-\/algorithm.\+html}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_funnel_modifier_aec5cacb1c3543e6683bea67b9dba2f30}\label{class_pathfinding_1_1_funnel_modifier_aec5cacb1c3543e6683bea67b9dba2f30}} 
+\index{Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}!Apply@{Apply}}
+\index{Apply@{Apply}!Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}}
+\doxysubsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Funnel\+Modifier.\+Apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called for each path that the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Seeker}} calculates after the calculation has finished 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_mono_modifier_a261fb0010014780bf6f0b6e59f1ed4de}{Pathfinding.\+Mono\+Modifier}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_funnel_modifier_af7836aecb7f32833f46856b0b5d9752b}\label{class_pathfinding_1_1_funnel_modifier_af7836aecb7f32833f46856b0b5d9752b}} 
+\index{Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}!splitAtEveryPortal@{splitAtEveryPortal}}
+\index{splitAtEveryPortal@{splitAtEveryPortal}!Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}}
+\doxysubsubsection{\texorpdfstring{splitAtEveryPortal}{splitAtEveryPortal}}
+{\footnotesize\ttfamily bool Pathfinding.\+Funnel\+Modifier.\+split\+At\+Every\+Portal}
+
+
+
+Insert a vertex every time the path crosses a portal instead of only at the corners of the path. The resulting path will have exactly one vertex per portal if this is enabled. This may introduce vertices with the same position in the output (esp. in corners where many portals meet). \mbox{[}Open online documentation to see images\mbox{]} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_funnel_modifier_a01e517457a43758bc49d92f4a16e3430}\label{class_pathfinding_1_1_funnel_modifier_a01e517457a43758bc49d92f4a16e3430}} 
+\index{Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!Pathfinding.FunnelModifier@{Pathfinding.FunnelModifier}}
+\doxysubsubsection{\texorpdfstring{unwrap}{unwrap}}
+{\footnotesize\ttfamily bool Pathfinding.\+Funnel\+Modifier.\+unwrap = true}
+
+
+
+Determines if twists and bends should be straightened out before running the funnel algorithm. If the unwrap option is disabled the funnel will simply be projected onto the XZ plane. If the unwrap option is enabled then the funnel may be oriented arbitrarily and may have twists and bends. This makes it possible to support the funnel algorithm in XY space as well as in more complicated cases, such as on curved worlds. 
+
+Note\+: This has a performance overhead, so if you do not need it you can disable it to improve performance.
+
+\mbox{[}Open online documentation to see images\mbox{]}
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_funnel_ae4a5bbbee178499b04554cfa9fb275e3}{Pathfinding.\+Funnel.\+Unwrap}} for more example images.
+
+Note\+: This is required if you want to use the funnel modifier for 2D games (i.\+e in the XY plane).
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Modifiers/Funnel\+Modifier.\+cs\end{DoxyCompactItemize}

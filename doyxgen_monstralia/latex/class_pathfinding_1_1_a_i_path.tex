@@ -1,0 +1,479 @@
+\hypertarget{class_pathfinding_1_1_a_i_path}{}\doxysection{Pathfinding.\+A\+I\+Path Class Reference}
+\label{class_pathfinding_1_1_a_i_path}\index{Pathfinding.AIPath@{Pathfinding.AIPath}}
+
+
+AI for following paths. This AI is the default movement script which comes with the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. It is in no way required by the rest of the system, so feel free to write your own. But I hope this script will make it easier to set up movement for the characters in your game. This script works well for many types of units, but if you need the highest performance (for example if you are moving hundreds of characters) you may want to customize this script or write a custom movement script to be able to optimize it specifically for your game.  
+
+
+
+
+Inheritance diagram for Pathfinding.\+A\+I\+Path\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+A\+I\+Path\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6813d572d16802ce0d674faaa44e35ac}{Teleport}} (Vector3 new\+Position, bool clear\+Path=true)
+\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a75a059d14c92b6b5b3854c6f7db23b16}{On\+Target\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em The end of the path has been reached. If you want custom logic for when the AI has reached it\textquotesingle{}s destination add it here. You can also create a new script which inherits from this one and override the function in that script. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_adf691c8497062bac0bd52918f0a2a4b0}{Calculate\+Velocity}} (Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a11f9fced4a7fac3f1ce4aa144a9e9873}{position}})
+\begin{DoxyCompactList}\small\item\em Current desired velocity of the agent (excluding physics and local avoidance but it includes gravity). Deprecated\+: This method no longer calculates the velocity. Use the \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a8ccd3c47fb9acedc0f7dbfce3615470c}{desired\+Velocity}} property instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a4985c6c940ed975653746a4141acdddc}{max\+Acceleration}} = -\/2.\+5f
+\begin{DoxyCompactList}\small\item\em How quickly the agent accelerates. Positive values represent an acceleration in world units per second squared. Negative values are interpreted as an inverse time of how long it should take for the agent to reach its max speed. For example if it should take roughly 0.\+4 seconds for the agent to reach its max speed then this field should be set to -\/1/0.\+4 = -\/2.\+5. For a negative value the final acceleration will be\+: -\/acceleration$\ast$max\+Speed. This behaviour exists mostly for compatibility reasons. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7b098446f4a5661897899513e20b233e}{rotation\+Speed}} = 360
+\begin{DoxyCompactList}\small\item\em Rotation speed in degrees per second. Rotation is calculated using Quaternion.\+Rotate\+Towards. This variable represents the rotation speed in degrees per second. The higher it is, the faster the character will be able to rotate. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6e7ea1154c5523c0767aca0d8e1938b8}{slowdown\+Distance}} = 0.\+6F
+\begin{DoxyCompactList}\small\item\em Distance from the end of the path where the AI will start to slow down \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_adabb6114c1087142079534f593bfae82}{pick\+Next\+Waypoint\+Dist}} = 2
+\begin{DoxyCompactList}\small\item\em How far the AI looks ahead along the path to determine the point it moves to. In world units. If you enable the \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_afd4a7b7a3dca7790d4b6c496d0a27b53}{always\+Draw\+Gizmos}} toggle this value will be visualized in the scene view as a blue circle around the agent. \mbox{[}Open online documentation to see images\mbox{]} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{end\+Reached\+Distance}} = 0.\+2F
+\begin{DoxyCompactList}\small\item\em Distance to the end point to consider the end of path to be reached. When the end is within this distance then \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a75a059d14c92b6b5b3854c6f7db23b16}{On\+Target\+Reached}} will be called and \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}{reached\+End\+Of\+Path}} will return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_afd4a7b7a3dca7790d4b6c496d0a27b53}{always\+Draw\+Gizmos}}
+\begin{DoxyCompactList}\small\item\em Draws detailed gizmos constantly in the scene view instead of only when the agent is selected and settings are being modified \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a442b8733f10ecc53c0bd82205c8ccacc}{slow\+When\+Not\+Facing\+Target}} = true
+\begin{DoxyCompactList}\small\item\em Slow down when not facing the target direction. Incurs at a small performance overhead. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbb}{Close\+To\+Destination\+Mode}} \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a25c41de8e5f07cadf691cd03060a8974}{when\+Close\+To\+Destination}} = \mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba11a755d598c0c417f9a36758c3da7481}{Close\+To\+Destination\+Mode.\+Stop}}
+\begin{DoxyCompactList}\small\item\em What to do when within \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{end\+Reached\+Distance}} units from the destination. The character can either stop immediately when it comes within that distance, which is useful for e.\+g archers or other ranged units that want to fire on a target. Or the character can continue to try to reach the exact destination point and come to a full stop there. This is useful if you want the character to reach the exact point that you specified. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a3a74e67c2f867f062595c26a804dc573}{constrain\+Inside\+Graph}} = false
+\begin{DoxyCompactList}\small\item\em Ensure that the character is always on the traversable surface of the navmesh. When this option is enabled a \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} query will be done every frame to find the closest node that the agent can walk on and if the agent is not inside that node, then the agent will be moved to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_ae788776bfca1bf2fdab249e4f6505555}\label{class_pathfinding_1_1_a_i_path_ae788776bfca1bf2fdab249e4f6505555}} 
+override void {\bfseries On\+Disable} ()
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7713dd3f6c48e79e7198158ce1a434aa}{On\+Path\+Complete}} (\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} new\+Path)
+\begin{DoxyCompactList}\small\item\em Called when a requested path has been calculated. A path is first requested by Update\+Path, it is then calculated, probably in the same or the next frame. Finally it is returned to the seeker which forwards it to this function. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a64da8087d444f8588ed335afe482ee19}{Clear\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Clears the current path of the agent. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a1f40dff024eec267709e0a63dbf06ea8}{Movement\+Update\+Internal}} (float delta\+Time, out Vector3 next\+Position, out Quaternion next\+Rotation)
+\begin{DoxyCompactList}\small\item\em Called during either Update or Fixed\+Update depending on if rigidbodies are used for movement or not \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a6aba1c0d5a6cd9b544e60ec9ba53af9b}\label{class_pathfinding_1_1_a_i_path_a6aba1c0d5a6cd9b544e60ec9ba53af9b}} 
+virtual void {\bfseries Calculate\+Next\+Rotation} (float slowdown, out Quaternion next\+Rotation)
+\item 
+override Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a8a8cebeb2dfa733f23c82a21327bc13f}{Clamp\+To\+Navmesh}} (Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a11f9fced4a7fac3f1ce4aa144a9e9873}{position}}, out bool position\+Changed)
+\begin{DoxyCompactList}\small\item\em Constrains the character\textquotesingle{}s position to lie on the navmesh. Not all movement scripts have support for this. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6e1dd68e2b8aac8c0cf3496d6ec02c88}{On\+Upgrade\+Serialized\+Data}} (int version, bool unity\+Thread)
+\begin{DoxyCompactList}\small\item\em Handle serialization backwards compatibility \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ad31e771cb3593826023bf51298d605eb}{path}}
+\begin{DoxyCompactList}\small\item\em Current path which is followed \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator}{Path\+Interpolator}} \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a8057325c1ee9b38cdd47bee814810314}{interpolator}} = new \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator}{Path\+Interpolator}}()
+\begin{DoxyCompactList}\small\item\em Helper which calculates points along the current path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float? \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a02284c131da2c74634e3f217af7a9fe1}{remaining\+Distance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a33ce2449a28395790b95fc39172601d9}{reached\+Destination}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}{reached\+End\+Of\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a560bb2b92b2966d094bb9071c0865279}{has\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_abc387689843908f652115be3e7400e99}{path\+Pending}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Vector3? \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6317497174b6c9551cfbbec0692f6326}{steering\+Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae12bc82c135a05f2fef21c65e7cdb996}{Target\+Reached}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the end of the path has been reached. Deprecated\+: When unifying the interfaces for different movement scripts, this property has been renamed to \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}{reached\+End\+Of\+Path}} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a8317d4e58df83590992509206de72cf4}{turning\+Speed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rotation speed. Deprecated\+: This field has been renamed to \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7b098446f4a5661897899513e20b233e}{rotation\+Speed}} and is now in degrees per second instead of a damping factor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a29c6d53922982d64832941d00d52d517}{speed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum speed in world units per second. Deprecated\+: Use max\+Speed instead \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a2117fe9777ba13a3546e2ed93e35ee8e}{target\+Direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Direction that the agent wants to move in (excluding physics and local avoidance). Deprecated\+: Only exists for compatibility reasons. Use \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a8ccd3c47fb9acedc0f7dbfce3615470c}{desired\+Velocity}} or \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6317497174b6c9551cfbbec0692f6326}{steering\+Target}} instead instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+AI for following paths. This AI is the default movement script which comes with the A$\ast$ \mbox{\hyperlink{namespace_pathfinding}{Pathfinding}} Project. It is in no way required by the rest of the system, so feel free to write your own. But I hope this script will make it easier to set up movement for the characters in your game. This script works well for many types of units, but if you need the highest performance (for example if you are moving hundreds of characters) you may want to customize this script or write a custom movement script to be able to optimize it specifically for your game. 
+
+This script will try to move to a given \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_adc4e4d26d791e66ecebfc00fbb03328f}{destination}}. At repath\+Rate regular, the path to the destination will be recalculated. If you want to make the AI to follow a particular object you can attach the \mbox{\hyperlink{class_pathfinding_1_1_a_i_destination_setter}{Pathfinding.\+A\+I\+Destination\+Setter}} component. Take a look at the getstarted (view in online documentation for working links) tutorial for more instructions on how to configure this script.
+
+Here is a video of this script being used move an agent around (technically it uses the \mbox{\hyperlink{class_pathfinding_1_1_examples_1_1_mine_bot_a_i}{Pathfinding.\+Examples.\+Mine\+Bot\+AI}} script that inherits from this one but adds a bit of animation support for the example scenes)\+: \mbox{[}Open online documentation to see videos\mbox{]}\hypertarget{class_pathfinding_1_1_legacy_1_1_legacy_a_i_path_variables}{}\doxysubsection{Quick overview of the variables}\label{class_pathfinding_1_1_legacy_1_1_legacy_a_i_path_variables}
+In the inspector in Unity, you will see a bunch of variables. You can view detailed information further down, but here\textquotesingle{}s a quick overview.
+
+The \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_afa4d04fa3ca0dab9efd337f4137aaee1}{repath\+Rate}} determines how often it will search for new paths, if you have fast moving targets, you might want to set it to a lower value. The \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_adc4e4d26d791e66ecebfc00fbb03328f}{destination}} field is where the AI will try to move, it can be a point on the ground where the player has clicked in an R\+TS for example. Or it can be the player object in a zombie game. The max\+Speed is self-\/explanatory, as is \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7b098446f4a5661897899513e20b233e}{rotation\+Speed}}. however \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6e7ea1154c5523c0767aca0d8e1938b8}{slowdown\+Distance}} might require some explanation\+: It is the approximate distance from the target where the AI will start to slow down. Setting it to a large value will make the AI slow down very gradually. \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_adabb6114c1087142079534f593bfae82}{pick\+Next\+Waypoint\+Dist}} determines the distance to the point the AI will move to (see image below).
+
+Below is an image illustrating several variables that are exposed by this class (\mbox{\hyperlink{class_pathfinding_1_1_a_i_path_adabb6114c1087142079534f593bfae82}{pick\+Next\+Waypoint\+Dist}}, \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6317497174b6c9551cfbbec0692f6326}{steering\+Target}}, desired\+Velocity) \mbox{[}Open online documentation to see images\mbox{]}
+
+This script has many movement fallbacks. If it finds an R\+V\+O\+Controller attached to the same Game\+Object as this component, it will use that. If it finds a character controller it will also use that. If it finds a rigidbody it will use that. Lastly it will fall back to simply modifying Transform.\+position which is guaranteed to always work and is also the most performant option.\hypertarget{class_pathfinding_1_1_a_i_path_how-aipath-works}{}\doxysubsection{How it works}\label{class_pathfinding_1_1_a_i_path_how-aipath-works}
+In this section I\textquotesingle{}m going to go over how this script is structured and how information flows. This is useful if you want to make changes to this script or if you just want to understand how it works a bit more deeply. However you do not need to read this section if you are just going to use the script as-\/is.
+
+This script inherits from the \mbox{\hyperlink{class_pathfinding_1_1_a_i_base}{A\+I\+Base}} class. The movement happens either in Unity\textquotesingle{}s standard \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a942fc9185cd8c810e9421c0b5ea2b510}{Update}} or \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_ae97d5e5c84ee58146b9a6c5fdfaf206a}{Fixed\+Update}} method. They are both defined in the \mbox{\hyperlink{class_pathfinding_1_1_a_i_base}{A\+I\+Base}} class. Which one is actually used depends on if a rigidbody is used for movement or not. Rigidbody movement has to be done inside the Fixed\+Update method while otherwise it is better to do it in Update.
+
+From there a call is made to the \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a3db178e3286c1cdf6c43d146797df942}{Movement\+Update}} method (which in turn calls Movement\+Update\+Internal). This method contains the main bulk of the code and calculates how the AI {\itshape wants} to move. However it doesn\textquotesingle{}t do any movement itself. Instead it returns the position and rotation it wants the AI to move to have at the end of the frame. The \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a942fc9185cd8c810e9421c0b5ea2b510}{Update}} (or Fixed\+Update) method then passes these values to the \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_aebdae01932608c6e0a429a1de2c98089}{Finalize\+Movement}} method which is responsible for actually moving the character. That method also handles things like making sure the AI doesn\textquotesingle{}t fall through the ground using raycasting.
+
+The AI recalculates its path regularly. This happens in the Update method which checks \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a98a6be29702d08fdd2f006b4662b45c2}{should\+Recalculate\+Path}} and if that returns true it will call \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a26afcddbffa25240e2a0919b34c186a3}{Search\+Path}}. The \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a26afcddbffa25240e2a0919b34c186a3}{Search\+Path}} method will prepare a path request and send it to the \mbox{\hyperlink{class_pathfinding_1_1_seeker}{Pathfinding.\+Seeker}} component which should be attached to the same Game\+Object as this script. Since this script will when waking up register to the \mbox{\hyperlink{class_pathfinding_1_1_seeker_ae27c1c3ddc0f49a7a5992421757141ac}{Pathfinding.\+Seeker.\+path\+Callback}} delegate this script will be notified every time a new path is calculated by the \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7713dd3f6c48e79e7198158ce1a434aa}{On\+Path\+Complete}} method being called. It may take one or sometimes multiple frames for the path to be calculated, but finally the \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7713dd3f6c48e79e7198158ce1a434aa}{On\+Path\+Complete}} method will be called and the current path that the AI is following will be replaced.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_adf691c8497062bac0bd52918f0a2a4b0}\label{class_pathfinding_1_1_a_i_path_adf691c8497062bac0bd52918f0a2a4b0}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!CalculateVelocity@{CalculateVelocity}}
+\index{CalculateVelocity@{CalculateVelocity}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{CalculateVelocity()}{CalculateVelocity()}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+A\+I\+Path.\+Calculate\+Velocity (\begin{DoxyParamCaption}\item[{Vector3}]{position }\end{DoxyParamCaption})}
+
+
+
+Current desired velocity of the agent (excluding physics and local avoidance but it includes gravity). Deprecated\+: This method no longer calculates the velocity. Use the \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a8ccd3c47fb9acedc0f7dbfce3615470c}{desired\+Velocity}} property instead. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a8a8cebeb2dfa733f23c82a21327bc13f}\label{class_pathfinding_1_1_a_i_path_a8a8cebeb2dfa733f23c82a21327bc13f}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!ClampToNavmesh@{ClampToNavmesh}}
+\index{ClampToNavmesh@{ClampToNavmesh}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{ClampToNavmesh()}{ClampToNavmesh()}}
+{\footnotesize\ttfamily override Vector3 Pathfinding.\+A\+I\+Path.\+Clamp\+To\+Navmesh (\begin{DoxyParamCaption}\item[{Vector3}]{position,  }\item[{out bool}]{position\+Changed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Constrains the character\textquotesingle{}s position to lie on the navmesh. Not all movement scripts have support for this. 
+
+Returns\+: New position of the character that has been clamped to the navmesh.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Current position of the character.\\
+\hline
+{\em position\+Changed} & True if the character\textquotesingle{}s position was modified by this method.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_af4dad2058562181cb4833c49fd5467cc}{Pathfinding.\+A\+I\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a64da8087d444f8588ed335afe482ee19}\label{class_pathfinding_1_1_a_i_path_a64da8087d444f8588ed335afe482ee19}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!ClearPath@{ClearPath}}
+\index{ClearPath@{ClearPath}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{ClearPath()}{ClearPath()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+I\+Path.\+Clear\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Clears the current path of the agent. 
+
+Usually invoked using Set\+Path(null)
+
+See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a402f0c93b5fff9e7012a28f89e4ad635}{Set\+Path}} See\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_aa1a09167d34af0d943a1b63b0b0a54c6}{is\+Stopped}}
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a6cd38e6b4420ad5d9f0303a0439162a7}{Pathfinding.\+A\+I\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a1f40dff024eec267709e0a63dbf06ea8}\label{class_pathfinding_1_1_a_i_path_a1f40dff024eec267709e0a63dbf06ea8}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!MovementUpdateInternal@{MovementUpdateInternal}}
+\index{MovementUpdateInternal@{MovementUpdateInternal}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{MovementUpdateInternal()}{MovementUpdateInternal()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+I\+Path.\+Movement\+Update\+Internal (\begin{DoxyParamCaption}\item[{float}]{delta\+Time,  }\item[{out Vector3}]{next\+Position,  }\item[{out Quaternion}]{next\+Rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called during either Update or Fixed\+Update depending on if rigidbodies are used for movement or not 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a9066a4f8d1edc6e996ef70fbb332daec}{Pathfinding.\+A\+I\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a7713dd3f6c48e79e7198158ce1a434aa}\label{class_pathfinding_1_1_a_i_path_a7713dd3f6c48e79e7198158ce1a434aa}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!OnPathComplete@{OnPathComplete}}
+\index{OnPathComplete@{OnPathComplete}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{OnPathComplete()}{OnPathComplete()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+I\+Path.\+On\+Path\+Complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_path}{Path}}}]{new\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when a requested path has been calculated. A path is first requested by Update\+Path, it is then calculated, probably in the same or the next frame. Finally it is returned to the seeker which forwards it to this function. 
+
+
+
+Implements \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a100debb9b4c842b422885ee47d87110f}{Pathfinding.\+A\+I\+Base}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pathfinding_1_1_legacy_1_1_legacy_a_i_path_a0ff842a858296aa82eb4e3ae7cac6b17}{Pathfinding.\+Legacy.\+Legacy\+A\+I\+Path}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a75a059d14c92b6b5b3854c6f7db23b16}\label{class_pathfinding_1_1_a_i_path_a75a059d14c92b6b5b3854c6f7db23b16}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!OnTargetReached@{OnTargetReached}}
+\index{OnTargetReached@{OnTargetReached}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{OnTargetReached()}{OnTargetReached()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+A\+I\+Path.\+On\+Target\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The end of the path has been reached. If you want custom logic for when the AI has reached it\textquotesingle{}s destination add it here. You can also create a new script which inherits from this one and override the function in that script. 
+
+This method will be called again if a new path is calculated as the destination may have changed. So when the agent is close to the destination this method will typically be called every \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_afa4d04fa3ca0dab9efd337f4137aaee1}{repath\+Rate}} seconds.\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a6e1dd68e2b8aac8c0cf3496d6ec02c88}\label{class_pathfinding_1_1_a_i_path_a6e1dd68e2b8aac8c0cf3496d6ec02c88}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!OnUpgradeSerializedData@{OnUpgradeSerializedData}}
+\index{OnUpgradeSerializedData@{OnUpgradeSerializedData}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{OnUpgradeSerializedData()}{OnUpgradeSerializedData()}}
+{\footnotesize\ttfamily override int Pathfinding.\+A\+I\+Path.\+On\+Upgrade\+Serialized\+Data (\begin{DoxyParamCaption}\item[{int}]{version,  }\item[{bool}]{unity\+Thread }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handle serialization backwards compatibility 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_ab0a1e798e6425b6bca1f17bbbe706a56}{Pathfinding.\+A\+I\+Base}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a6813d572d16802ce0d674faaa44e35ac}\label{class_pathfinding_1_1_a_i_path_a6813d572d16802ce0d674faaa44e35ac}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}}
+{\footnotesize\ttfamily override void Pathfinding.\+A\+I\+Path.\+Teleport (\begin{DoxyParamCaption}\item[{Vector3}]{new\+Position,  }\item[{bool}]{clear\+Path = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a98c40fd55db58750a77e3b1fe796f3fd}{Pathfinding.\+A\+I\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_afd4a7b7a3dca7790d4b6c496d0a27b53}\label{class_pathfinding_1_1_a_i_path_afd4a7b7a3dca7790d4b6c496d0a27b53}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!alwaysDrawGizmos@{alwaysDrawGizmos}}
+\index{alwaysDrawGizmos@{alwaysDrawGizmos}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{alwaysDrawGizmos}{alwaysDrawGizmos}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+always\+Draw\+Gizmos}
+
+
+
+Draws detailed gizmos constantly in the scene view instead of only when the agent is selected and settings are being modified 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a3a74e67c2f867f062595c26a804dc573}\label{class_pathfinding_1_1_a_i_path_a3a74e67c2f867f062595c26a804dc573}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!constrainInsideGraph@{constrainInsideGraph}}
+\index{constrainInsideGraph@{constrainInsideGraph}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{constrainInsideGraph}{constrainInsideGraph}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+constrain\+Inside\+Graph = false}
+
+
+
+Ensure that the character is always on the traversable surface of the navmesh. When this option is enabled a \mbox{\hyperlink{class_astar_path_a7d49736e7a25f4cf9fc24bdbec862359}{Astar\+Path.\+Get\+Nearest}} query will be done every frame to find the closest node that the agent can walk on and if the agent is not inside that node, then the agent will be moved to it. 
+
+This is especially useful together with local avoidance in order to avoid agents pushing each other into walls. See\+: local-\/avoidance (view in online documentation for working links) for more info about this.
+
+This option also integrates with local avoidance so that if the agent is say forced into a wall by other agents the local avoidance system will be informed about that wall and can take that into account.
+
+Enabling this has some performance impact depending on the graph type (pretty fast for grid graphs, slightly slower for navmesh/recast graphs). If you are using a navmesh/recast graph you may want to switch to the Pathfinding.\+Rich\+AI movement script which is specifically written for navmesh/recast graphs and does this kind of clamping out of the box. In many cases it can also follow the path more smoothly around sharp bends in the path.
+
+It is not recommended that you use this option together with the funnel modifier on grid graphs because the funnel modifier will make the path go very close to the border of the graph and this script has a tendency to try to cut corners a bit. This may cause it to try to go slightly outside the traversable surface near corners and that will look bad if this option is enabled.
+
+Warning\+: This option makes no sense to use on point graphs because point graphs do not have a surface. Enabling this option when using a point graph will lead to the agent being snapped to the closest node every frame which is likely not what you want.
+
+Below you can see an image where several agents using local avoidance were ordered to go to the same point in a corner. When not constraining the agents to the graph they are easily pushed inside obstacles. \mbox{[}Open online documentation to see images\mbox{]}\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}\label{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!endReachedDistance@{endReachedDistance}}
+\index{endReachedDistance@{endReachedDistance}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{endReachedDistance}{endReachedDistance}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+end\+Reached\+Distance = 0.\+2F}
+
+
+
+Distance to the end point to consider the end of path to be reached. When the end is within this distance then \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a75a059d14c92b6b5b3854c6f7db23b16}{On\+Target\+Reached}} will be called and \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}{reached\+End\+Of\+Path}} will return true. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a8057325c1ee9b38cdd47bee814810314}\label{class_pathfinding_1_1_a_i_path_a8057325c1ee9b38cdd47bee814810314}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!interpolator@{interpolator}}
+\index{interpolator@{interpolator}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{interpolator}{interpolator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator}{Path\+Interpolator}} Pathfinding.\+A\+I\+Path.\+interpolator = new \mbox{\hyperlink{class_pathfinding_1_1_util_1_1_path_interpolator}{Path\+Interpolator}}()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper which calculates points along the current path 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a4985c6c940ed975653746a4141acdddc}\label{class_pathfinding_1_1_a_i_path_a4985c6c940ed975653746a4141acdddc}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!maxAcceleration@{maxAcceleration}}
+\index{maxAcceleration@{maxAcceleration}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{maxAcceleration}{maxAcceleration}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+max\+Acceleration = -\/2.\+5f}
+
+
+
+How quickly the agent accelerates. Positive values represent an acceleration in world units per second squared. Negative values are interpreted as an inverse time of how long it should take for the agent to reach its max speed. For example if it should take roughly 0.\+4 seconds for the agent to reach its max speed then this field should be set to -\/1/0.\+4 = -\/2.\+5. For a negative value the final acceleration will be\+: -\/acceleration$\ast$max\+Speed. This behaviour exists mostly for compatibility reasons. 
+
+In the Unity inspector there are two modes\+: Default and Custom. In the Default mode this field is set to -\/2.\+5 which means that it takes about 0.\+4 seconds for the agent to reach its top speed. In the Custom mode you can set the acceleration to any positive value.\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_ad31e771cb3593826023bf51298d605eb}\label{class_pathfinding_1_1_a_i_path_ad31e771cb3593826023bf51298d605eb}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!path@{path}}
+\index{path@{path}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pathfinding_1_1_path}{Path}} Pathfinding.\+A\+I\+Path.\+path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Current path which is followed 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_adabb6114c1087142079534f593bfae82}\label{class_pathfinding_1_1_a_i_path_adabb6114c1087142079534f593bfae82}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!pickNextWaypointDist@{pickNextWaypointDist}}
+\index{pickNextWaypointDist@{pickNextWaypointDist}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{pickNextWaypointDist}{pickNextWaypointDist}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+pick\+Next\+Waypoint\+Dist = 2}
+
+
+
+How far the AI looks ahead along the path to determine the point it moves to. In world units. If you enable the \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_afd4a7b7a3dca7790d4b6c496d0a27b53}{always\+Draw\+Gizmos}} toggle this value will be visualized in the scene view as a blue circle around the agent. \mbox{[}Open online documentation to see images\mbox{]} 
+
+Here are a few example videos showing some typical outcomes with good values as well as how it looks when this value is too low and too high. \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\mbox{[}Open online documentation to see videos\mbox{]}& A too low value and a too low acceleration will result in the agent overshooting a lot and not managing to follow the path well. \\\cline{1-2}
+\mbox{[}Open online documentation to see videos\mbox{]}& A low value but a high acceleration works decently to make the AI follow the path more closely. Note that the \mbox{\hyperlink{class_pathfinding_1_1_a_i_lerp}{Pathfinding.\+A\+I\+Lerp}} component is better suited if you want the agent to follow the path without any deviations. \\\cline{1-2}
+\mbox{[}Open online documentation to see videos\mbox{]}& A reasonable value in this example. \\\cline{1-2}
+\mbox{[}Open online documentation to see videos\mbox{]}& A reasonable value in this example, but the path is followed slightly more loosely than in the previous video. \\\cline{1-2}
+\mbox{[}Open online documentation to see videos\mbox{]}& A too high value will make the agent follow the path too loosely and may cause it to try to move through obstacles. \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a7b098446f4a5661897899513e20b233e}\label{class_pathfinding_1_1_a_i_path_a7b098446f4a5661897899513e20b233e}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!rotationSpeed@{rotationSpeed}}
+\index{rotationSpeed@{rotationSpeed}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{rotationSpeed}{rotationSpeed}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+rotation\+Speed = 360}
+
+
+
+Rotation speed in degrees per second. Rotation is calculated using Quaternion.\+Rotate\+Towards. This variable represents the rotation speed in degrees per second. The higher it is, the faster the character will be able to rotate. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a6e7ea1154c5523c0767aca0d8e1938b8}\label{class_pathfinding_1_1_a_i_path_a6e7ea1154c5523c0767aca0d8e1938b8}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!slowdownDistance@{slowdownDistance}}
+\index{slowdownDistance@{slowdownDistance}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{slowdownDistance}{slowdownDistance}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+slowdown\+Distance = 0.\+6F}
+
+
+
+Distance from the end of the path where the AI will start to slow down 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a442b8733f10ecc53c0bd82205c8ccacc}\label{class_pathfinding_1_1_a_i_path_a442b8733f10ecc53c0bd82205c8ccacc}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!slowWhenNotFacingTarget@{slowWhenNotFacingTarget}}
+\index{slowWhenNotFacingTarget@{slowWhenNotFacingTarget}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{slowWhenNotFacingTarget}{slowWhenNotFacingTarget}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+slow\+When\+Not\+Facing\+Target = true}
+
+
+
+Slow down when not facing the target direction. Incurs at a small performance overhead. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a25c41de8e5f07cadf691cd03060a8974}\label{class_pathfinding_1_1_a_i_path_a25c41de8e5f07cadf691cd03060a8974}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!whenCloseToDestination@{whenCloseToDestination}}
+\index{whenCloseToDestination@{whenCloseToDestination}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{whenCloseToDestination}{whenCloseToDestination}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbb}{Close\+To\+Destination\+Mode}} Pathfinding.\+A\+I\+Path.\+when\+Close\+To\+Destination = \mbox{\hyperlink{namespace_pathfinding_a0b8d5efb46f2604505894e21ee495cbba11a755d598c0c417f9a36758c3da7481}{Close\+To\+Destination\+Mode.\+Stop}}}
+
+
+
+What to do when within \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{end\+Reached\+Distance}} units from the destination. The character can either stop immediately when it comes within that distance, which is useful for e.\+g archers or other ranged units that want to fire on a target. Or the character can continue to try to reach the exact destination point and come to a full stop there. This is useful if you want the character to reach the exact point that you specified. 
+
+Note\+: \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}{reached\+End\+Of\+Path}} will become true when the character is within \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_ae0a95b519a9e41da2b08af2983d1c778}{end\+Reached\+Distance}} units from the destination regardless of what this field is set to.
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a560bb2b92b2966d094bb9071c0865279}\label{class_pathfinding_1_1_a_i_path_a560bb2b92b2966d094bb9071c0865279}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!hasPath@{hasPath}}
+\index{hasPath@{hasPath}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{hasPath}{hasPath}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+has\+Path\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_abc387689843908f652115be3e7400e99}\label{class_pathfinding_1_1_a_i_path_abc387689843908f652115be3e7400e99}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!pathPending@{pathPending}}
+\index{pathPending@{pathPending}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{pathPending}{pathPending}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+path\+Pending\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a33ce2449a28395790b95fc39172601d9}\label{class_pathfinding_1_1_a_i_path_a33ce2449a28395790b95fc39172601d9}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!reachedDestination@{reachedDestination}}
+\index{reachedDestination@{reachedDestination}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{reachedDestination}{reachedDestination}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+reached\+Destination\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}\label{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!reachedEndOfPath@{reachedEndOfPath}}
+\index{reachedEndOfPath@{reachedEndOfPath}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{reachedEndOfPath}{reachedEndOfPath}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+reached\+End\+Of\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a02284c131da2c74634e3f217af7a9fe1}\label{class_pathfinding_1_1_a_i_path_a02284c131da2c74634e3f217af7a9fe1}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!remainingDistance@{remainingDistance}}
+\index{remainingDistance@{remainingDistance}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{remainingDistance}{remainingDistance}}
+{\footnotesize\ttfamily float? Pathfinding.\+A\+I\+Path.\+remaining\+Distance\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a29c6d53922982d64832941d00d52d517}\label{class_pathfinding_1_1_a_i_path_a29c6d53922982d64832941d00d52d517}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!speed@{speed}}
+\index{speed@{speed}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+speed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum speed in world units per second. Deprecated\+: Use max\+Speed instead 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a6317497174b6c9551cfbbec0692f6326}\label{class_pathfinding_1_1_a_i_path_a6317497174b6c9551cfbbec0692f6326}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!steeringTarget@{steeringTarget}}
+\index{steeringTarget@{steeringTarget}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{steeringTarget}{steeringTarget}}
+{\footnotesize\ttfamily Vector3? Pathfinding.\+A\+I\+Path.\+steering\+Target\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a2117fe9777ba13a3546e2ed93e35ee8e}\label{class_pathfinding_1_1_a_i_path_a2117fe9777ba13a3546e2ed93e35ee8e}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!targetDirection@{targetDirection}}
+\index{targetDirection@{targetDirection}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{targetDirection}{targetDirection}}
+{\footnotesize\ttfamily Vector3 Pathfinding.\+A\+I\+Path.\+target\+Direction\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Direction that the agent wants to move in (excluding physics and local avoidance). Deprecated\+: Only exists for compatibility reasons. Use \mbox{\hyperlink{class_pathfinding_1_1_a_i_base_a8ccd3c47fb9acedc0f7dbfce3615470c}{desired\+Velocity}} or \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a6317497174b6c9551cfbbec0692f6326}{steering\+Target}} instead instead. 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_ae12bc82c135a05f2fef21c65e7cdb996}\label{class_pathfinding_1_1_a_i_path_ae12bc82c135a05f2fef21c65e7cdb996}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!TargetReached@{TargetReached}}
+\index{TargetReached@{TargetReached}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{TargetReached}{TargetReached}}
+{\footnotesize\ttfamily bool Pathfinding.\+A\+I\+Path.\+Target\+Reached\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the end of the path has been reached. Deprecated\+: When unifying the interfaces for different movement scripts, this property has been renamed to \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a0cc40aa7da4d460d5ca1ffc390ac79e0}{reached\+End\+Of\+Path}} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_a_i_path_a8317d4e58df83590992509206de72cf4}\label{class_pathfinding_1_1_a_i_path_a8317d4e58df83590992509206de72cf4}} 
+\index{Pathfinding.AIPath@{Pathfinding.AIPath}!turningSpeed@{turningSpeed}}
+\index{turningSpeed@{turningSpeed}!Pathfinding.AIPath@{Pathfinding.AIPath}}
+\doxysubsubsection{\texorpdfstring{turningSpeed}{turningSpeed}}
+{\footnotesize\ttfamily float Pathfinding.\+A\+I\+Path.\+turning\+Speed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Rotation speed. Deprecated\+: This field has been renamed to \mbox{\hyperlink{class_pathfinding_1_1_a_i_path_a7b098446f4a5661897899513e20b233e}{rotation\+Speed}} and is now in degrees per second instead of a damping factor. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Core/\+A\+I/A\+I\+Path.\+cs\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Legacy/Misc\+Legacy.\+cs\end{DoxyCompactItemize}

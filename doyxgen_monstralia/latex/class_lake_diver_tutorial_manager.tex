@@ -1,0 +1,112 @@
+\hypertarget{class_lake_diver_tutorial_manager}{}\doxysection{Lake\+Diver\+Tutorial\+Manager Class Reference}
+\label{class_lake_diver_tutorial_manager}\index{LakeDiverTutorialManager@{LakeDiverTutorialManager}}
+Inheritance diagram for Lake\+Diver\+Tutorial\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_lake_diver_tutorial_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_acb3585e3e1de204a7c1a8d39e79cb237}\label{class_lake_diver_tutorial_manager_acb3585e3e1de204a7c1a8d39e79cb237}} 
+override void {\bfseries Start\+Tutorial} ()
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a3fb99663ab8c279040376069c7b2249a}\label{class_lake_diver_tutorial_manager_a3fb99663ab8c279040376069c7b2249a}} 
+override IEnumerator {\bfseries Run\+Tutorial} ()
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_ab5ee7485d1e7616c99e4a8b33cb01100}\label{class_lake_diver_tutorial_manager_ab5ee7485d1e7616c99e4a8b33cb01100}} 
+override IEnumerator {\bfseries Tutorial\+End} ()
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a02b1456a2ba7b0660f2fb1801379722d}\label{class_lake_diver_tutorial_manager_a02b1456a2ba7b0660f2fb1801379722d}} 
+override IEnumerator {\bfseries Tutorial\+Teardown} ()
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a23027f15241eded620ca89739b944054}\label{class_lake_diver_tutorial_manager_a23027f15241eded620ca89739b944054}} 
+new void {\bfseries Skip\+Tutorial\+Button} (Game\+Object button)
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_abb526e56d02d56b6873178713fcf7fe6}\label{class_lake_diver_tutorial_manager_abb526e56d02d56b6873178713fcf7fe6}} 
+new void {\bfseries Skip\+Tutorial} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_lake_diver_tutorial_manager_a27a1f8b226c8f24452d12dbfeb865aaf}{Spawn\+Now\+You\+Try\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em Pauses the tutorial timeline and readies the player to move for the interactive part of the tutorial \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_lake_diver_tutorial_manager_abb8008270ab6c2e8a297d7ba71a1260d}{Resume\+Tutorial}} ()
+\begin{DoxyCompactList}\small\item\em Changes the displayed tutorial object, return the player to being static, and restarts the tutorial timeline \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lake_diver_tutorial_manager_aaec766e65c2b566ae93e2f667066bb0e}{Monster\+Swim\+Animation\+Start}} ()
+\begin{DoxyCompactList}\small\item\em plays the monster swimming animation during the non-\/interactive parts of the tutorial \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lake_diver_tutorial_manager_afacbf196995a0148c3d95b7b1681ba1a}{Monster\+Swim\+Animation\+End}} ()
+\begin{DoxyCompactList}\small\item\em sets the animator back to using the players velocity during the non-\/interactive parts of the tutorial \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lake_diver_tutorial_manager_a6ff4903b7a40e7836e6d73e6a3017ad5}{Hand\+Appear}} ()
+\begin{DoxyCompactList}\small\item\em makes the hand appear(used to prevent the hand from being in the tutrial animation when it\textquotesingle{}s not suppossed to be \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a692759f0f2c324c05523970c04f459d0}\label{class_lake_diver_tutorial_manager_a692759f0f2c324c05523970c04f459d0}} 
+Cinemachine\+Virtual\+Camera {\bfseries cam}
+\item 
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a8987d1124915c94acfb46703835ee8c7}\label{class_lake_diver_tutorial_manager_a8987d1124915c94acfb46703835ee8c7}} 
+bool {\bfseries now\+You\+Try\+Completed} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a6ff4903b7a40e7836e6d73e6a3017ad5}\label{class_lake_diver_tutorial_manager_a6ff4903b7a40e7836e6d73e6a3017ad5}} 
+\index{LakeDiverTutorialManager@{LakeDiverTutorialManager}!HandAppear@{HandAppear}}
+\index{HandAppear@{HandAppear}!LakeDiverTutorialManager@{LakeDiverTutorialManager}}
+\doxysubsubsection{\texorpdfstring{HandAppear()}{HandAppear()}}
+{\footnotesize\ttfamily void Lake\+Diver\+Tutorial\+Manager.\+Hand\+Appear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+makes the hand appear(used to prevent the hand from being in the tutrial animation when it\textquotesingle{}s not suppossed to be 
+
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_afacbf196995a0148c3d95b7b1681ba1a}\label{class_lake_diver_tutorial_manager_afacbf196995a0148c3d95b7b1681ba1a}} 
+\index{LakeDiverTutorialManager@{LakeDiverTutorialManager}!MonsterSwimAnimationEnd@{MonsterSwimAnimationEnd}}
+\index{MonsterSwimAnimationEnd@{MonsterSwimAnimationEnd}!LakeDiverTutorialManager@{LakeDiverTutorialManager}}
+\doxysubsubsection{\texorpdfstring{MonsterSwimAnimationEnd()}{MonsterSwimAnimationEnd()}}
+{\footnotesize\ttfamily void Lake\+Diver\+Tutorial\+Manager.\+Monster\+Swim\+Animation\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sets the animator back to using the players velocity during the non-\/interactive parts of the tutorial 
+
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_aaec766e65c2b566ae93e2f667066bb0e}\label{class_lake_diver_tutorial_manager_aaec766e65c2b566ae93e2f667066bb0e}} 
+\index{LakeDiverTutorialManager@{LakeDiverTutorialManager}!MonsterSwimAnimationStart@{MonsterSwimAnimationStart}}
+\index{MonsterSwimAnimationStart@{MonsterSwimAnimationStart}!LakeDiverTutorialManager@{LakeDiverTutorialManager}}
+\doxysubsubsection{\texorpdfstring{MonsterSwimAnimationStart()}{MonsterSwimAnimationStart()}}
+{\footnotesize\ttfamily void Lake\+Diver\+Tutorial\+Manager.\+Monster\+Swim\+Animation\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+plays the monster swimming animation during the non-\/interactive parts of the tutorial 
+
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_abb8008270ab6c2e8a297d7ba71a1260d}\label{class_lake_diver_tutorial_manager_abb8008270ab6c2e8a297d7ba71a1260d}} 
+\index{LakeDiverTutorialManager@{LakeDiverTutorialManager}!ResumeTutorial@{ResumeTutorial}}
+\index{ResumeTutorial@{ResumeTutorial}!LakeDiverTutorialManager@{LakeDiverTutorialManager}}
+\doxysubsubsection{\texorpdfstring{ResumeTutorial()}{ResumeTutorial()}}
+{\footnotesize\ttfamily IEnumerator Lake\+Diver\+Tutorial\+Manager.\+Resume\+Tutorial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Changes the displayed tutorial object, return the player to being static, and restarts the tutorial timeline 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lake_diver_tutorial_manager_a27a1f8b226c8f24452d12dbfeb865aaf}\label{class_lake_diver_tutorial_manager_a27a1f8b226c8f24452d12dbfeb865aaf}} 
+\index{LakeDiverTutorialManager@{LakeDiverTutorialManager}!SpawnNowYouTrySequence@{SpawnNowYouTrySequence}}
+\index{SpawnNowYouTrySequence@{SpawnNowYouTrySequence}!LakeDiverTutorialManager@{LakeDiverTutorialManager}}
+\doxysubsubsection{\texorpdfstring{SpawnNowYouTrySequence()}{SpawnNowYouTrySequence()}}
+{\footnotesize\ttfamily IEnumerator Lake\+Diver\+Tutorial\+Manager.\+Spawn\+Now\+You\+Try\+Sequence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pauses the tutorial timeline and readies the player to move for the interactive part of the tutorial 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Monstralia/\+Pump Paradise/\+Lake\+Diver/Lake\+Diver\+Tutorial\+Manager.\+cs\end{DoxyCompactItemize}

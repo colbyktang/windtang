@@ -1,0 +1,4 @@
+<map id="Pathfinding.NNConstraint" name="Pathfinding.NNConstraint">
+<area shape="rect" id="node1" title="Nearest node constraint. Constrains which nodes will be returned by the AstarPath...." alt="" coords="19,5,186,32"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_path_n_n_constraint.html" title="A special NNConstraint which can use different logic for the start node and end node in a path...." alt="" coords="5,80,200,107"/>
+</map>

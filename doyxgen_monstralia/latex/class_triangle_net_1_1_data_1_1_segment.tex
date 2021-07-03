@@ -1,0 +1,111 @@
+\hypertarget{class_triangle_net_1_1_data_1_1_segment}{}\doxysection{Triangle\+Net.\+Data.\+Segment Class Reference}
+\label{class_triangle_net_1_1_data_1_1_segment}\index{TriangleNet.Data.Segment@{TriangleNet.Data.Segment}}
+
+
+The subsegment data structure.  
+
+
+
+
+Inheritance diagram for Triangle\+Net.\+Data.\+Segment\+:
+% FIG 0
+
+
+Collaboration diagram for Triangle\+Net.\+Data.\+Segment\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_segment_ae938a8ab1e1d7424b568fa7471ca21aa}{Get\+Vertex}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the segments endpoint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle}{I\+Triangle}} \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_segment_a18cc5f5da0ce164b87c725cb0f24e6df}{Get\+Triangle}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets an adjoining triangle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_acd0eda104931c19a9839e4933edad1c4}\label{class_triangle_net_1_1_data_1_1_segment_acd0eda104931c19a9839e4933edad1c4}} 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_acbcfb1171f05901175f97c469bdc9414}\label{class_triangle_net_1_1_data_1_1_segment_acbcfb1171f05901175f97c469bdc9414}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_segment_a315c1fda4b5ef5c236b84ab8f237b726}{P0}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the first endpoints vertex id. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_segment_a791498d6d352ed1976b2e01f97168aa0}{P1}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the seconds endpoints vertex id. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_segment_a1fcf4531822126c043a4e607a89ed0c1}{Boundary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the segment boundary mark. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The subsegment data structure. 
+
+Each subsegment contains two pointers to adjoining subsegments, plus four pointers to vertices, plus two pointers to adjoining triangles, plus one boundary marker. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_a18cc5f5da0ce164b87c725cb0f24e6df}\label{class_triangle_net_1_1_data_1_1_segment_a18cc5f5da0ce164b87c725cb0f24e6df}} 
+\index{TriangleNet.Data.Segment@{TriangleNet.Data.Segment}!GetTriangle@{GetTriangle}}
+\index{GetTriangle@{GetTriangle}!TriangleNet.Data.Segment@{TriangleNet.Data.Segment}}
+\doxysubsubsection{\texorpdfstring{GetTriangle()}{GetTriangle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_triangle}{I\+Triangle}} Triangle\+Net.\+Data.\+Segment.\+Get\+Triangle (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets an adjoining triangle. 
+
+
+
+Implements \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_segment_a2d0055b0ed9d2d7b870a30ccc509b128}{Triangle\+Net.\+Geometry.\+I\+Segment}}.
+
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_ae938a8ab1e1d7424b568fa7471ca21aa}\label{class_triangle_net_1_1_data_1_1_segment_ae938a8ab1e1d7424b568fa7471ca21aa}} 
+\index{TriangleNet.Data.Segment@{TriangleNet.Data.Segment}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!TriangleNet.Data.Segment@{TriangleNet.Data.Segment}}
+\doxysubsubsection{\texorpdfstring{GetVertex()}{GetVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle_net_1_1_data_1_1_vertex}{Vertex}} Triangle\+Net.\+Data.\+Segment.\+Get\+Vertex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets the segments endpoint. 
+
+
+
+Implements \mbox{\hyperlink{interface_triangle_net_1_1_geometry_1_1_i_segment_a93d2168944faa94ddc28ccabb1be0a6b}{Triangle\+Net.\+Geometry.\+I\+Segment}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_a1fcf4531822126c043a4e607a89ed0c1}\label{class_triangle_net_1_1_data_1_1_segment_a1fcf4531822126c043a4e607a89ed0c1}} 
+\index{TriangleNet.Data.Segment@{TriangleNet.Data.Segment}!Boundary@{Boundary}}
+\index{Boundary@{Boundary}!TriangleNet.Data.Segment@{TriangleNet.Data.Segment}}
+\doxysubsubsection{\texorpdfstring{Boundary}{Boundary}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Data.\+Segment.\+Boundary\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the segment boundary mark. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_a315c1fda4b5ef5c236b84ab8f237b726}\label{class_triangle_net_1_1_data_1_1_segment_a315c1fda4b5ef5c236b84ab8f237b726}} 
+\index{TriangleNet.Data.Segment@{TriangleNet.Data.Segment}!P0@{P0}}
+\index{P0@{P0}!TriangleNet.Data.Segment@{TriangleNet.Data.Segment}}
+\doxysubsubsection{\texorpdfstring{P0}{P0}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Data.\+Segment.\+P0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the first endpoints vertex id. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_data_1_1_segment_a791498d6d352ed1976b2e01f97168aa0}\label{class_triangle_net_1_1_data_1_1_segment_a791498d6d352ed1976b2e01f97168aa0}} 
+\index{TriangleNet.Data.Segment@{TriangleNet.Data.Segment}!P1@{P1}}
+\index{P1@{P1}!TriangleNet.Data.Segment@{TriangleNet.Data.Segment}}
+\doxysubsubsection{\texorpdfstring{P1}{P1}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Data.\+Segment.\+P1\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the seconds endpoints vertex id. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Data/Segment.\+cs\end{DoxyCompactItemize}

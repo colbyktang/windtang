@@ -1,0 +1,8 @@
+<map id="MazeWall" name="MazeWall">
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,85,184"/>
+<area shape="rect" id="node2" href="$class_maze_cell_edge.html" title=" " alt="" coords="164,81,271,108"/>
+<area shape="rect" id="node5" href="$class_maze_passage.html" title=" " alt="" coords="110,157,215,184"/>
+<area shape="rect" id="node3" title=" " alt="" coords="235,5,346,32"/>
+<area shape="rect" id="node4" href="$class_maze_cell.html" title=" " alt="" coords="257,261,333,288"/>
+<area shape="rect" id="node6" href="$struct_int_vector2.html" title=" " alt="" coords="365,157,446,184"/>
+</map>

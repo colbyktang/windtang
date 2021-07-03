@@ -1,0 +1,15 @@
+<map id="TriangleNet.TriangleLocator" name="TriangleNet.TriangleLocator">
+<area shape="rect" id="node1" title="TODO: Update summary." alt="" coords="5,213,184,240"/>
+<area shape="rect" id="node2" href="$struct_triangle_net_1_1_data_1_1_otri.html" title="An oriented triangle." alt="" coords="259,124,402,151"/>
+<area shape="rect" id="node3" href="$class_triangle_net_1_1_data_1_1_triangle.html" title="The triangle data structure." alt="" coords="366,481,533,508"/>
+<area shape="rect" id="node6" href="$class_triangle_net_1_1_data_1_1_segment.html" title="The subsegment data structure." alt="" coords="421,303,595,329"/>
+<area shape="rect" id="node8" href="$class_triangle_net_1_1_data_1_1_vertex.html" title="The vertex data structure." alt="" coords="571,213,731,240"/>
+<area shape="rect" id="node4" href="$interface_triangle_net_1_1_geometry_1_1_i_triangle.html" title="Triangle interface." alt="" coords="369,392,439,419"/>
+<area shape="rect" id="node5" href="$struct_triangle_net_1_1_data_1_1_osub.html" title="An oriented subsegment." alt="" coords="463,392,617,419"/>
+<area shape="rect" id="node7" href="$interface_triangle_net_1_1_geometry_1_1_i_segment.html" title="Interface for segment geometry." alt="" coords="469,213,547,240"/>
+<area shape="rect" id="node9" href="$class_triangle_net_1_1_geometry_1_1_point.html" title="Represents a 2D point." alt="" coords="622,124,674,151"/>
+<area shape="rect" id="node10" title=" " alt="" coords="405,5,553,32"/>
+<area shape="rect" id="node11" title=" " alt="" coords="577,5,714,32"/>
+<area shape="rect" id="node12" title=" " alt="" coords="738,5,798,32"/>
+<area shape="rect" id="node13" title=" " alt="" coords="303,5,358,32"/>
+</map>

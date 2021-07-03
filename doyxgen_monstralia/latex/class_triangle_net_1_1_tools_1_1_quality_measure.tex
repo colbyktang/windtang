@@ -1,0 +1,211 @@
+\hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure}{}\doxysection{Triangle\+Net.\+Tools.\+Quality\+Measure Class Reference}
+\label{class_triangle_net_1_1_tools_1_1_quality_measure}\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+
+
+Provides mesh quality information.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_aa09d976c64a1db4ec7ea44858b2af5b8}\label{class_triangle_net_1_1_tools_1_1_quality_measure_aa09d976c64a1db4ec7ea44858b2af5b8}} 
+void {\bfseries Update} (\mbox{\hyperlink{class_triangle_net_1_1_mesh}{Mesh}} mesh)
+\item 
+int \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a97544b7cc7865cf9ba26e9ec387e4f84}{Bandwidth}} ()
+\begin{DoxyCompactList}\small\item\em Determines the bandwidth of the coefficient matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_ac27b9f3da96df05cb79ba44583637426}{Area\+Minimum}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum triangle area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_ad65c16824e75d3bbe2d9174240194329}{Area\+Maximum}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum triangle area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a32429860076c688568c230fc7e7c2f3a}{Area\+Ratio}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ratio of maximum and minimum triangle area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_af4dc0fdb66ef4436e1a57fc71a090945}{Alpha\+Minimum}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Smallest angle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a20625f96b6bf4b042600b647b8f02632}{Alpha\+Maximum}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum smallest angle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a523570d013b6d64be9de7816b8e7a7af}{Alpha\+Average}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Average angle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a0da9d8c04649aef49dd8403311ba2e38}{Alpha\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Average angle weighted by area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a93cf239a0ddf80883ffdb5c702328c3b}{Q\+\_\+\+Minimum}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Smallest aspect ratio. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_a5cafe6e30ba8c5ac98c57afd4ce620ca}{Q\+\_\+\+Maximum}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Largest aspect ratio. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_aa180582255fc32c12db6bb9a51012843}{Q\+\_\+\+Average}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Average aspect ratio. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_triangle_net_1_1_tools_1_1_quality_measure_ae36646f5d39cbaba2f7059d020b4381e}{Q\+\_\+\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Average aspect ratio weighted by area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides mesh quality information. 
+
+Given a triangle abc with points A (ax, ay), B (bx, by), C (cx, cy).
+
+The side lengths are given as a = sqrt((cx -\/ bx)$^\wedge$2 + (cy -\/ by)$^\wedge$2) -- side BC opposite of A b = sqrt((cx -\/ ax)$^\wedge$2 + (cy -\/ ay)$^\wedge$2) -- side CA opposite of B c = sqrt((ax -\/ bx)$^\wedge$2 + (ay -\/ by)$^\wedge$2) -- side AB opposite of C
+
+The angles are given as ang\+\_\+a = acos((b$^\wedge$2 + c$^\wedge$2 -\/ a$^\wedge$2) / (2 $\ast$ b $\ast$ c)) -- angle at A ang\+\_\+b = acos((c$^\wedge$2 + a$^\wedge$2 -\/ b$^\wedge$2) / (2 $\ast$ c $\ast$ a)) -- angle at B ang\+\_\+c = acos((a$^\wedge$2 + b$^\wedge$2 -\/ c$^\wedge$2) / (2 $\ast$ a $\ast$ b)) -- angle at C
+
+The semiperimeter is given as s = (a + b + c) / 2
+
+The area is given as D = abs(ax $\ast$ (by -\/ cy) + bx $\ast$ (cy -\/ ay) + cx $\ast$ (ay -\/ by)) / 2 = sqrt(s $\ast$ (s -\/ a) $\ast$ (s -\/ b) $\ast$ (s -\/ c))
+
+The inradius is given as r = D / s
+
+The circumradius is given as R = a $\ast$ b $\ast$ c / (4 $\ast$ D)
+
+The altitudes are given as alt\+\_\+a = 2 $\ast$ D / a -- altitude above side a alt\+\_\+b = 2 $\ast$ D / b -- altitude above side b alt\+\_\+c = 2 $\ast$ D / c -- altitude above side c
+
+The aspect ratio may be given as the ratio of the longest to the shortest edge or, more commonly as the ratio of the circumradius to twice the inradius ar = R / (2 $\ast$ r) = a $\ast$ b $\ast$ c / (8 $\ast$ (s -\/ a) $\ast$ (s -\/ b) $\ast$ (s -\/ c)) = a $\ast$ b $\ast$ c / ((b + c -\/ a) $\ast$ (c + a -\/ b) $\ast$ (a + b -\/ c)) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a97544b7cc7865cf9ba26e9ec387e4f84}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a97544b7cc7865cf9ba26e9ec387e4f84}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!Bandwidth@{Bandwidth}}
+\index{Bandwidth@{Bandwidth}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{Bandwidth()}{Bandwidth()}}
+{\footnotesize\ttfamily int Triangle\+Net.\+Tools.\+Quality\+Measure.\+Bandwidth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines the bandwidth of the coefficient matrix. 
+
+\begin{DoxyReturn}{Returns}
+Bandwidth of the coefficient matrix.
+\end{DoxyReturn}
+
+
+The quantity computed here is the \char`\"{}geometric\char`\"{} bandwidth determined by the finite element mesh alone.
+
+If a single finite element variable is associated with each node of the mesh, and if the nodes and variables are numbered in the same way, then the geometric bandwidth is the same as the bandwidth of a typical finite element matrix.
+
+The bandwidth M is defined in terms of the lower and upper bandwidths\+:
+
+M = ML + 1 + MU
+
+where
+
+ML = maximum distance from any diagonal entry to a nonzero entry in the same row, but earlier column,
+
+MU = maximum distance from any diagonal entry to a nonzero entry in the same row, but later column.
+
+Because the finite element node adjacency relationship is symmetric, we are guaranteed that ML = MU. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a0da9d8c04649aef49dd8403311ba2e38}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a0da9d8c04649aef49dd8403311ba2e38}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AlphaArea@{AlphaArea}}
+\index{AlphaArea@{AlphaArea}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AlphaArea}{AlphaArea}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Alpha\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Average angle weighted by area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a523570d013b6d64be9de7816b8e7a7af}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a523570d013b6d64be9de7816b8e7a7af}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AlphaAverage@{AlphaAverage}}
+\index{AlphaAverage@{AlphaAverage}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AlphaAverage}{AlphaAverage}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Alpha\+Average\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Average angle. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a20625f96b6bf4b042600b647b8f02632}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a20625f96b6bf4b042600b647b8f02632}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AlphaMaximum@{AlphaMaximum}}
+\index{AlphaMaximum@{AlphaMaximum}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AlphaMaximum}{AlphaMaximum}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Alpha\+Maximum\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Maximum smallest angle. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_af4dc0fdb66ef4436e1a57fc71a090945}\label{class_triangle_net_1_1_tools_1_1_quality_measure_af4dc0fdb66ef4436e1a57fc71a090945}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AlphaMinimum@{AlphaMinimum}}
+\index{AlphaMinimum@{AlphaMinimum}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AlphaMinimum}{AlphaMinimum}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Alpha\+Minimum\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Smallest angle. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_ad65c16824e75d3bbe2d9174240194329}\label{class_triangle_net_1_1_tools_1_1_quality_measure_ad65c16824e75d3bbe2d9174240194329}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AreaMaximum@{AreaMaximum}}
+\index{AreaMaximum@{AreaMaximum}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AreaMaximum}{AreaMaximum}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Area\+Maximum\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Maximum triangle area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_ac27b9f3da96df05cb79ba44583637426}\label{class_triangle_net_1_1_tools_1_1_quality_measure_ac27b9f3da96df05cb79ba44583637426}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AreaMinimum@{AreaMinimum}}
+\index{AreaMinimum@{AreaMinimum}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AreaMinimum}{AreaMinimum}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Area\+Minimum\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Minimum triangle area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a32429860076c688568c230fc7e7c2f3a}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a32429860076c688568c230fc7e7c2f3a}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!AreaRatio@{AreaRatio}}
+\index{AreaRatio@{AreaRatio}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{AreaRatio}{AreaRatio}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Area\+Ratio\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Ratio of maximum and minimum triangle area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_ae36646f5d39cbaba2f7059d020b4381e}\label{class_triangle_net_1_1_tools_1_1_quality_measure_ae36646f5d39cbaba2f7059d020b4381e}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!Q\_Area@{Q\_Area}}
+\index{Q\_Area@{Q\_Area}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{Q\_Area}{Q\_Area}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Q\+\_\+\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Average aspect ratio weighted by area. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_aa180582255fc32c12db6bb9a51012843}\label{class_triangle_net_1_1_tools_1_1_quality_measure_aa180582255fc32c12db6bb9a51012843}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!Q\_Average@{Q\_Average}}
+\index{Q\_Average@{Q\_Average}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{Q\_Average}{Q\_Average}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Q\+\_\+\+Average\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Average aspect ratio. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a5cafe6e30ba8c5ac98c57afd4ce620ca}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a5cafe6e30ba8c5ac98c57afd4ce620ca}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!Q\_Maximum@{Q\_Maximum}}
+\index{Q\_Maximum@{Q\_Maximum}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{Q\_Maximum}{Q\_Maximum}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Q\+\_\+\+Maximum\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Largest aspect ratio. 
+
+\mbox{\Hypertarget{class_triangle_net_1_1_tools_1_1_quality_measure_a93cf239a0ddf80883ffdb5c702328c3b}\label{class_triangle_net_1_1_tools_1_1_quality_measure_a93cf239a0ddf80883ffdb5c702328c3b}} 
+\index{TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}!Q\_Minimum@{Q\_Minimum}}
+\index{Q\_Minimum@{Q\_Minimum}!TriangleNet.Tools.QualityMeasure@{TriangleNet.Tools.QualityMeasure}}
+\doxysubsubsection{\texorpdfstring{Q\_Minimum}{Q\_Minimum}}
+{\footnotesize\ttfamily double Triangle\+Net.\+Tools.\+Quality\+Measure.\+Q\+\_\+\+Minimum\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Smallest aspect ratio. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Anima2\+D/\+Scripts/\+Editor/\+Triangle/\+Tools/Quality\+Measure.\+cs\end{DoxyCompactItemize}

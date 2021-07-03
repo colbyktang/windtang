@@ -1,0 +1,141 @@
+\hypertarget{class_pathfinding_1_1_grid_graph_editor}{}\doxysection{Pathfinding.\+Grid\+Graph\+Editor Class Reference}
+\label{class_pathfinding_1_1_grid_graph_editor}\index{Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}}
+
+
+Inheritance diagram for Pathfinding.\+Grid\+Graph\+Editor\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Grid\+Graph\+Editor\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a1936dd1598074df819871414f70aceaa}\label{class_pathfinding_1_1_grid_graph_editor_a1936dd1598074df819871414f70aceaa}} 
+enum {\bfseries Grid\+Pivot} \{ \newline
+{\bfseries Center}, 
+{\bfseries Top\+Left}, 
+{\bfseries Top\+Right}, 
+{\bfseries Bottom\+Left}, 
+\newline
+{\bfseries Bottom\+Right}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_editor_afd7392804d43e7f45a5de9c79ceb2a99}{On\+Inspector\+G\+UI}} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} \mbox{\hyperlink{class_pathfinding_1_1_graph_editor_base_a37b7ace5b71ec34bd089eae747ec9c29}{target}})
+\begin{DoxyCompactList}\small\item\em Override to implement graph inspectors \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_editor_a2460ca3d5fffcc296b275a32957db72d}{On\+Scene\+G\+UI}} (\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}} \mbox{\hyperlink{class_pathfinding_1_1_graph_editor_base_a37b7ace5b71ec34bd089eae747ec9c29}{target}})
+\begin{DoxyCompactList}\small\item\em Override to implement scene G\+UI drawing for the graph \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Vector3 \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_editor_ab5f6f4dd882fb1b0b0538ac45960d444}{Round\+Vector3}} (Vector3 v)
+\begin{DoxyCompactList}\small\item\em Rounds a vector\textquotesingle{}s components to multiples of 0.\+5 (i.\+e 0.\+5, 1.\+0, 1.\+5, etc.) if very close to them \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a7968dd8b9b279dbd33f10a11478cab8e}\label{class_pathfinding_1_1_grid_graph_editor_a7968dd8b9b279dbd33f10a11478cab8e}} 
+static Grid\+Pivot {\bfseries Pivot\+Point\+Selector} (Grid\+Pivot pivot)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a14b70c90b0bb8ccb0afb939339e41bc3}\label{class_pathfinding_1_1_grid_graph_editor_a14b70c90b0bb8ccb0afb939339e41bc3}} 
+bool {\bfseries locked} = true
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a1b5f266c244d2d7e5c5a5bfbf39fae81}\label{class_pathfinding_1_1_grid_graph_editor_a1b5f266c244d2d7e5c5a5bfbf39fae81}} 
+bool {\bfseries show\+Extra}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_acea50b4204b29900bb29665b7a104fb1}\label{class_pathfinding_1_1_grid_graph_editor_acea50b4204b29900bb29665b7a104fb1}} 
+bool {\bfseries is\+Mouse\+Down}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_ada400a7da68541355b54559c67ec69da}\label{class_pathfinding_1_1_grid_graph_editor_ada400a7da68541355b54559c67ec69da}} 
+Grid\+Pivot {\bfseries pivot}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a067a70acba77dfe24e0769f61ffdb412}\label{class_pathfinding_1_1_grid_graph_editor_a067a70acba77dfe24e0769f61ffdb412}} 
+virtual void {\bfseries Draw2\+D\+Mode} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_adfc6d0997e5ac18697ba86606fe1f91a}\label{class_pathfinding_1_1_grid_graph_editor_adfc6d0997e5ac18697ba86606fe1f91a}} 
+virtual void {\bfseries Draw\+Middle\+Section} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_aa74531983271f5e2c410a5686cf7689d}\label{class_pathfinding_1_1_grid_graph_editor_aa74531983271f5e2c410a5686cf7689d}} 
+virtual void {\bfseries Draw\+Cut\+Corners} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_ae4259c55c7696832a717a23b1052e4e3}\label{class_pathfinding_1_1_grid_graph_editor_ae4259c55c7696832a717a23b1052e4e3}} 
+virtual void {\bfseries Draw\+Neighbours} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a4d7a6c00778c927e8feceb61b63389b2}\label{class_pathfinding_1_1_grid_graph_editor_a4d7a6c00778c927e8feceb61b63389b2}} 
+virtual void {\bfseries Draw\+Max\+Climb} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_ab46578f558954b39bfa5fd6717eb761d}\label{class_pathfinding_1_1_grid_graph_editor_ab46578f558954b39bfa5fd6717eb761d}} 
+void {\bfseries Draw\+Max\+Slope} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a00fcfdbc9aa7071d893a48ff0b2dc7bd}\label{class_pathfinding_1_1_grid_graph_editor_a00fcfdbc9aa7071d893a48ff0b2dc7bd}} 
+void {\bfseries Draw\+Erosion} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_afdb2cd22cafe96f0e8d09fc73de85e5c}\label{class_pathfinding_1_1_grid_graph_editor_afdb2cd22cafe96f0e8d09fc73de85e5c}} 
+virtual void {\bfseries Draw\+J\+PS} (\mbox{\hyperlink{class_pathfinding_1_1_grid_graph}{Grid\+Graph}} graph)
+\item 
+virtual void \mbox{\hyperlink{class_pathfinding_1_1_grid_graph_editor_a26b88f0e18f1308cfed24dd81f283c3c}{Draw\+Collision\+Editor}} (\mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision}} collision)
+\begin{DoxyCompactList}\small\item\em Draws the inspector for a \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision class }} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a80fcb8810ce9c79fe622bd8256c5b02a}\label{class_pathfinding_1_1_grid_graph_editor_a80fcb8810ce9c79fe622bd8256c5b02a}} 
+virtual void {\bfseries Draw\+Use2\+D\+Physics} (\mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision}} collision)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a26b88f0e18f1308cfed24dd81f283c3c}\label{class_pathfinding_1_1_grid_graph_editor_a26b88f0e18f1308cfed24dd81f283c3c}} 
+\index{Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}!DrawCollisionEditor@{DrawCollisionEditor}}
+\index{DrawCollisionEditor@{DrawCollisionEditor}!Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}}
+\doxysubsubsection{\texorpdfstring{DrawCollisionEditor()}{DrawCollisionEditor()}}
+{\footnotesize\ttfamily virtual void Pathfinding.\+Grid\+Graph\+Editor.\+Draw\+Collision\+Editor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision}}}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draws the inspector for a \mbox{\hyperlink{class_pathfinding_1_1_graph_collision}{Graph\+Collision class }} 
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_afd7392804d43e7f45a5de9c79ceb2a99}\label{class_pathfinding_1_1_grid_graph_editor_afd7392804d43e7f45a5de9c79ceb2a99}} 
+\index{Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}!OnInspectorGUI@{OnInspectorGUI}}
+\index{OnInspectorGUI@{OnInspectorGUI}!Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}}
+\doxysubsubsection{\texorpdfstring{OnInspectorGUI()}{OnInspectorGUI()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph\+Editor.\+On\+Inspector\+G\+UI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Override to implement graph inspectors 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_editor_a7975b3d1cea1adec98e6719d15aff164}{Pathfinding.\+Graph\+Editor}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_a2460ca3d5fffcc296b275a32957db72d}\label{class_pathfinding_1_1_grid_graph_editor_a2460ca3d5fffcc296b275a32957db72d}} 
+\index{Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}!OnSceneGUI@{OnSceneGUI}}
+\index{OnSceneGUI@{OnSceneGUI}!Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}}
+\doxysubsubsection{\texorpdfstring{OnSceneGUI()}{OnSceneGUI()}}
+{\footnotesize\ttfamily override void Pathfinding.\+Grid\+Graph\+Editor.\+On\+Scene\+G\+UI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pathfinding_1_1_nav_graph}{Nav\+Graph}}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Override to implement scene G\+UI drawing for the graph 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_pathfinding_1_1_graph_editor_a8218c3b1a50e2368c5f6c4ee6be19e6f}{Pathfinding.\+Graph\+Editor}}.
+
+\mbox{\Hypertarget{class_pathfinding_1_1_grid_graph_editor_ab5f6f4dd882fb1b0b0538ac45960d444}\label{class_pathfinding_1_1_grid_graph_editor_ab5f6f4dd882fb1b0b0538ac45960d444}} 
+\index{Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}!RoundVector3@{RoundVector3}}
+\index{RoundVector3@{RoundVector3}!Pathfinding.GridGraphEditor@{Pathfinding.GridGraphEditor}}
+\doxysubsubsection{\texorpdfstring{RoundVector3()}{RoundVector3()}}
+{\footnotesize\ttfamily static Vector3 Pathfinding.\+Grid\+Graph\+Editor.\+Round\+Vector3 (\begin{DoxyParamCaption}\item[{Vector3}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rounds a vector\textquotesingle{}s components to multiples of 0.\+5 (i.\+e 0.\+5, 1.\+0, 1.\+5, etc.) if very close to them 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Editor/\+Graph\+Editors/Grid\+Generator\+Editor.\+cs\end{DoxyCompactItemize}

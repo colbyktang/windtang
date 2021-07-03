@@ -1,0 +1,8 @@
+<map id="Pathfinding.AILerp" name="Pathfinding.AILerp">
+<area shape="rect" id="node1" title="Linearly interpolating movement script. This movement script will follow the path exactly,..." alt="" coords="245,155,372,181"/>
+<area shape="rect" id="node2" href="$class_pathfinding_1_1_versioned_mono_behaviour.html" title="Base class for all components in the package" alt="" coords="154,80,322,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="141,5,335,32"/>
+<area shape="rect" id="node5" href="$interface_pathfinding_1_1_i_versioned_mono_behaviour_internal.html" title="Exposes internal methods from Pathfinding.VersionedMonoBehaviour" alt="" coords="359,5,573,32"/>
+<area shape="rect" id="node6" href="$interface_pathfinding_1_1_i_astar_a_i.html" title="Common interface for all movement scripts in the A* Pathfinding Project. See: Pathfinding...." alt="" coords="347,80,415,107"/>
+</map>

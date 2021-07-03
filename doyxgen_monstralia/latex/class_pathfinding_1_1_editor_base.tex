@@ -1,0 +1,76 @@
+\hypertarget{class_pathfinding_1_1_editor_base}{}\doxysection{Pathfinding.\+Editor\+Base Class Reference}
+\label{class_pathfinding_1_1_editor_base}\index{Pathfinding.EditorBase@{Pathfinding.EditorBase}}
+
+
+Helper for creating editors  
+
+
+
+
+Inheritance diagram for Pathfinding.\+Editor\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for Pathfinding.\+Editor\+Base\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a1889e87c913e4ce37bf33d90a08a1a71}\label{class_pathfinding_1_1_editor_base_a1889e87c913e4ce37bf33d90a08a1a71}} 
+sealed override void {\bfseries On\+Inspector\+G\+UI} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a6789582b5c960e34e4ed3dda5bc4faec}\label{class_pathfinding_1_1_editor_base_a6789582b5c960e34e4ed3dda5bc4faec}} 
+static System.\+Func$<$ string $>$ {\bfseries get\+Documentation\+U\+RL}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_aa0d8d94ccd09092f1ca07f313d3edd8f}\label{class_pathfinding_1_1_editor_base_aa0d8d94ccd09092f1ca07f313d3edd8f}} 
+virtual void {\bfseries On\+Enable} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_adfa16bdb66279e9f72577043b6aa3a73}\label{class_pathfinding_1_1_editor_base_adfa16bdb66279e9f72577043b6aa3a73}} 
+virtual void {\bfseries Inspector} ()
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_af26f751929a967c32f94b26547554f3f}\label{class_pathfinding_1_1_editor_base_af26f751929a967c32f94b26547554f3f}} 
+Serialized\+Property {\bfseries Find\+Property} (string name)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a8d2f55c05df45c257dfcfac942c1f0c8}\label{class_pathfinding_1_1_editor_base_a8d2f55c05df45c257dfcfac942c1f0c8}} 
+void {\bfseries Section} (string label)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_ab89552c2ea1cd0f04c1437cdffe85f19}\label{class_pathfinding_1_1_editor_base_ab89552c2ea1cd0f04c1437cdffe85f19}} 
+void {\bfseries Float\+Field} (string property\+Path, string label=null, string tooltip=null, float min=float.\+Negative\+Infinity, float max=float.\+Positive\+Infinity)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a28bb4d2e6155474849a3f2cb6707ee53}\label{class_pathfinding_1_1_editor_base_a28bb4d2e6155474849a3f2cb6707ee53}} 
+bool {\bfseries Property\+Field} (string property\+Path, string label=null, string tooltip=null)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a50bc61ac3b632e963642ad99225cb7a9}\label{class_pathfinding_1_1_editor_base_a50bc61ac3b632e963642ad99225cb7a9}} 
+bool {\bfseries Property\+Field} (Serialized\+Property prop, string label=null, string tooltip=null)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_aa3a9f2a1bb94e15d1f5dd5300148ddbd}\label{class_pathfinding_1_1_editor_base_aa3a9f2a1bb94e15d1f5dd5300148ddbd}} 
+void {\bfseries Popup} (string property\+Path, G\+U\+I\+Content\mbox{[}$\,$\mbox{]} options, string label=null)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_af38580069d1b54afff4696387b8c6f58}\label{class_pathfinding_1_1_editor_base_af38580069d1b54afff4696387b8c6f58}} 
+void {\bfseries Mask} (string property\+Path, string\mbox{[}$\,$\mbox{]} options, string label=null)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a9ad19d151ee5d536a9d885a6cdc49c2a}\label{class_pathfinding_1_1_editor_base_a9ad19d151ee5d536a9d885a6cdc49c2a}} 
+void {\bfseries Int\+Slider} (string property\+Path, int left, int right)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a0451c45a13814a3999a7146045a3edc4}\label{class_pathfinding_1_1_editor_base_a0451c45a13814a3999a7146045a3edc4}} 
+void {\bfseries Clamp} (string name, float min, float max=float.\+Positive\+Infinity)
+\item 
+\mbox{\Hypertarget{class_pathfinding_1_1_editor_base_a839ca58c0d349741b2f6cf45b6ad9d29}\label{class_pathfinding_1_1_editor_base_a839ca58c0d349741b2f6cf45b6ad9d29}} 
+void {\bfseries Clamp\+Int} (string name, int min, int max=int.\+Max\+Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper for creating editors 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Third Party Addons/\+Astar\+Pathfinding\+Project/\+Package\+Tools/\+Editor/Editor\+Base.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="MonsterPage" name="MonsterPage">
+<area shape="rect" id="node1" title=" " alt="" coords="341,319,439,345"/>
+<area shape="rect" id="node2" href="$class_popup_page.html" title=" " alt="" coords="179,215,268,241"/>
+<area shape="rect" id="node3" href="$class_singleton.html" title=" " alt="" coords="5,81,172,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="196,81,251,108"/>
+<area shape="rect" id="node5" href="$class_monster_creator.html" title=" " alt="" coords="345,215,456,241"/>
+<area shape="rect" id="node6" title=" " alt="" coords="275,81,385,108"/>
+<area shape="rect" id="node7" href="$class_monster_data.html" title=" " alt="" coords="410,81,506,108"/>
+<area shape="rect" id="node8" title=" " alt="" coords="399,5,517,32"/>
+<area shape="rect" id="node9" title=" " alt="" coords="530,81,607,108"/>
+<area shape="rect" id="node10" title=" " alt="" coords="491,215,537,241"/>
+</map>
