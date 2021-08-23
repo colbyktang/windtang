@@ -69,9 +69,7 @@ class CS_Database_Utils:
         self.client.close()
         
     # hash a value
-    def hash(self, value):
-        if "supply" in self.server_type:
-            return value
+    def generate_hashed_password(self, value):
         # Salts make the search space larger in the case of brute forcing and adds difficulty for rainbow tables; 
         # Using a salt only requires you to do a little more work and store an extra random byte sequence.
         # uuid is used to generate a random number
@@ -103,7 +101,7 @@ class CS_Database_Utils:
             dictionary = user.dictionary
             
             # update the dictionary with a hashed password along with a timestamp
-            #dictionary.update( {"password": self.hash(user.password)})
+            dictionary.update( {"password": self.generate_hashed_password(user.password)})
             dictionary.update( {"timestamp": self.get_timestamp()})
             
             # insert the user dictionary into the db
@@ -124,8 +122,8 @@ class CS_Database_Utils:
     def does_credentials_exist(self, username, password):
         find_one_result = self.collection.find_one({'username': username}, {'password': 1})
         if find_one_result != None:
-            return True
-            #return self.check_password (find_one_result["password"], password)
+            #return True
+            return self.check_password (find_one_result["password"], password)
         else:
             return False
     
@@ -138,5 +136,7 @@ class CS_Database_Utils:
 
     # Returns the first and last name of the username
     def get_names_from_username(self, username):
-        entry = self.collection.find_one({'username': username}, {'_id': 0, 'first_name': 1, 'last_name':1})
+        entry = self.collection.find_one({'username': username}, {'_id': 1, 'first_name': 1, 'last_name':1})
+        if entry != None:
+            entry['_id'] = str(entry['_id'])
         return entry

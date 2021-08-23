@@ -8,10 +8,23 @@ def cs_register(self, dictionary, db_utils):
     # Pull all the keys from the dictionary
     username = dictionary["username"]
     password = dictionary["password"]
-    first_name = dictionary["first_name"]
-    last_name = dictionary["last_name"]
+    
+    if ("first_name" in dictionary):
+        first_name = dictionary["first_name"]
+    else:
+        first_name = ""
+        
+    if ("last_name" in dictionary):
+        last_name = dictionary["last_name"]
+    else:
+        last_name = ""
+        
     email = dictionary["email"]
-    phone_number = dictionary["phone_number"]
+    
+    if ("phone_number" in dictionary):
+        phone_number = dictionary["phone_number"]
+    else:
+        phone_number = ""
     
     # Create customer object
     new_customer = Customer(username, password, first_name, last_name, email, phone_number)
