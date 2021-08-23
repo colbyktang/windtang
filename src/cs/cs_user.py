@@ -81,7 +81,7 @@ class User:
     # setter method for phone number
     @phone_number.setter
     def phone_number(self, phone_number):
-        if (len(phone_number) < 10):
+        if (len(phone_number) < 10 and len(phone_number) != 0):
             raise ValueError("Phone number must have 10 digits!")
         else:
             self._phone_number = phone_number

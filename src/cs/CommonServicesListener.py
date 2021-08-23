@@ -6,6 +6,7 @@ import json
 from cs_database_utils import CS_Database_Utils
 import cs_api_login
 import cs_api_register
+import wt_jwt
 
 class CommonServicesListener(BaseHTTPRequestHandler):
     
@@ -52,6 +53,14 @@ class CommonServicesListener(BaseHTTPRequestHandler):
             else:
                 self.respond_code(403, "Credentials were not found! Code 403")
                 
+        elif path == "/api/cs/token":
+            token = wt_jwt.token_required(incoming_dictionary)
+            print ("Return from token required: ", token)
+            if "error" not in token:
+                self.respond_convert_json_object (200, token)
+            else:
+                self.respond_convert_json_object (403, token)
+                
         #Connection error:
         else:
             # If the path did not match any known request
@@ -97,7 +106,16 @@ class CommonServicesListener(BaseHTTPRequestHandler):
         else:
             #Send a 404 Error handling if the route does not exist
             self.respond_code(404, "Route does not exist")
-                
+
+    def do_OPTIONS(self):
+        self.send_response(200, "ok")
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
+        self.send_header("Access-Control-Allow-Headers", "X-Requested-With")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Headers", "Authorization")
+        self.end_headers()
+     
     # Converts python dictionary into a json object and sends it with a code
     def respond_convert_json_object (self, code, dictionary):
         # Define the response code and the headers
@@ -115,6 +133,7 @@ class CommonServicesListener(BaseHTTPRequestHandler):
     # Responds with a simple code and response
     def respond_code (self, code, response):
         self.send_response(code)
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
         bytesStr = response.encode('utf-8')
         self.wfile.write(bytesStr)

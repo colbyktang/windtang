@@ -1,6 +1,7 @@
 import json
 import hashlib
 import os
+import wt_jwt
 
 from cs_database_utils import CS_Database_Utils
 
@@ -17,6 +18,13 @@ def cs_login(self, dictionary, db_utils):
     #if username and password pair is found:
     if doCredentialsMatch:
         names_dictionary = db_utils.get_names_from_username(username)
+        names_dictionary["username"] = username
+        
+        # Create token
+        token = wt_jwt.create_token (names_dictionary)
+        print ("Created token: ", token)
+        names_dictionary["token"] = token
+        
         return names_dictionary
 
     #if an error occurs
