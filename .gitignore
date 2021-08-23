@@ -13,10 +13,6 @@
 
 # misc
 .ssh/
-<<<<<<< HEAD
-=======
-wt-jwt-rsa
->>>>>>> 4ba4c24a0317b84a420942aa24dbbcd47c9cde40
 .DS_Store
 .env.local
 .env.development.local
