@@ -1,3 +1,25 @@
-# Windtang
+# Windtang Website
 
-This is my personal web server hosted on my own Raspberry Pi Server. I'm using this to practice setting up a website, implementing authorization and authentication, familiarizing with Linux, and experimenting with Golang.
+## Description
+
+Colby Tang's personal web server hosted on his own Raspberry Pi 4 Server.
+
+Go to http://windtang.com
+
+## Purpose
+
+Learn to create a front-end and a back-end for a web application.
+
+## Features
+* Browse photo gallery
+* Upload photos to the gallery
+
+
+## Technologies Used
+* ReactJS
+* Apache2
+* Python
+  * PyMongo
+* Java Web Token
+* Google Firestore
+* MongoDB
