@@ -35,7 +35,7 @@ def main():
     print (r.content)
     
     print ("START WAITING")
-    for i in range(10):
+    for i in range(5):
         time.sleep(1)
         print ("WAITING ", i)
     

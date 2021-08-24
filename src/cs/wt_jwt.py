@@ -35,10 +35,18 @@ def test():
     except ExpiredSignatureError as error:
         print ("Unable to decode the token, error: ", error)
 
+def get_private_key ():
+    private_key = open("src/cs/.ssh/wt-jwt", 'r').read()
+    passphrase = open("src/cs/.ssh/wt-pwd", 'r').read()
+    return serialization.load_ssh_private_key(private_key.encode(), password=str.encode(passphrase))
+
+def get_public_key ():
+    public_key = open("src/cs/.ssh/wt-jwt.pub", 'r').read()
+    pub_key = serialization.load_ssh_public_key(public_key.encode())
+
 def create_token(names_dictionary):
     # Read in private key
-    private_key = open("src/cs/wt-jwt", 'r').read()
-    key = serialization.load_ssh_private_key(private_key.encode(), password=b'***REMOVED***')
+    key = get_private_key()
     
     try:
         payload_data = {
@@ -61,8 +69,7 @@ def create_token(names_dictionary):
         return e
     
 def token_required (headers):
-    public_key = open("src/cs/wt-jwt.pub", 'r').read()
-    pub_key = serialization.load_ssh_public_key(public_key.encode())
+    pub_key = get_public_key()
     
     token_passed = headers['token']
     try:
