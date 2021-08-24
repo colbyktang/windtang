@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<script src = "js/utils.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<html>
+    <head>
+        <title>
+            Windtang Login
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/windtang.css"
+    </head>
+    <body>
+        <div class="main">
+            <div class="content">
+                <div class="mainbody" id="my-form">
+                    <button onclick="goToPage('index.html')">Landing Page</button>
+                    <button onclick="goToPage('html/user_register.html')">Register Page</button>
+                    <button onclick="goToPage('doxygen_monstralia/html/index.html')">Monstralia Documentation</button>
+                <h3>Welcome to Windtang!</h3>
+                <h2>This website is being hosted locally by Colby Tang.</h2>
+                    <h3>Login</h3>
+                    <form name="loginForm">
+                        Username: <input type="text" name="user">
+                        <br><br>
+                        Password: <input type="password" name="pass">
+                        <br><br>
+                        <button name="submit" type="button" onclick="validateForm()">Submit</button>
+                    </form>
+                    <br><br>
+                </div>
+                <a href="html/portfolio.html">Portfolio</a>
+                <a href="html/tang_portfolio.html">Personal Portfolio</a>
+                <div id="Request Content">
+                <script src = "js/login_request.js"></script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function enterKey(e) {
+        if (event.key === "Enter") {
+            validateForm();
+        }
+    }
+
+    // Check if form inputs are valid.
+    function validateForm() {
+
+      var name = document.forms["loginForm"]["user"].value;
+      var pass = document.forms["loginForm"]["pass"].value;
+
+      //checks username and password for empty credentials
+      if (name == "" || pass == "") {
+          alert("Invalid Credentials: Please Fill Out All Inputs");
+          return false;
+      }
+
+        // Store username and password inside a dictionary
+        var login_dictionary = {"username": name, "password": pass};
+
+        // Send username and password to the backend to check against values in the DB
+        send_login(login_dictionary);
+        return false;
+    }
+
+    function goToPage(urlToPage) {
+        window.location.href=urlToPage
+    }
+    
+</script>
