@@ -6,11 +6,8 @@ from jwt.exceptions import ExpiredSignatureError
 from cryptography.hazmat.primitives import serialization
 
 def test():
-    private_key = open("wt-jwt", 'r').read()
-    public_key = open("wt-jwt.pub", 'r').read()
-
-    key = serialization.load_ssh_private_key(private_key.encode(), password=b'***REMOVED***')
-    pub_key = serialization.load_ssh_public_key(public_key.encode())
+    key = get_private_key ()
+    pub_key = get_public_key()
 
     payload_data = {
         "sub": "4242",
