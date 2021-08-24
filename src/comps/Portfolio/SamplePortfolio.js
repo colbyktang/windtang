@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../windtang.css';
 import github from '../../images/github.png';
 
 export default function SamplePortfolio() {
