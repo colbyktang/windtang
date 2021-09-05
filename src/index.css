@@ -3,26 +3,40 @@
 :root {
     --primary: #04f137;
     --secondary: #ffffff;
-    --backg: #131938;
+    --backg: #668fbe;
+    --foreg: #7ea7d6;
     --error: #ff4a4a;
+
+    background: url("./images/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* base styles & title */
 body {
+    max-width: 960px;
+    margin: 0 auto;
     font-family: "Noto Serif";
     color: var(--secondary);
     background-color: var(--backg);
 }
+
 .App {
     max-width: 960px;
     margin: 0 auto;
+    /*background-color: var(--foreg);*/
 }
+
 .title h1 {
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 2.0rem;
     letter-spacing: 2px;
     font-weight: normal;
+    text-align: center;
 }
+
 .title h2,
 .title p {
     text-align: center;
@@ -38,13 +52,26 @@ form {
     text-align: center;
 }
 
-label input {
+.home, .dashboard, .preferences {
+    max-width: 960px;
+    font-family: "Noto Serif";
+    /* margin: 30px auto 10px; */
+    margin: 30px auto 30px;
+    padding: 1em;
+    border: 3;
+    border-style: solid;
+    text-align: center;
+    background-color: var(--backg);
+}
+
+.upload label input {
+    display: block;
     height: 0;
     width: 0;
     opacity: 0;
 }
 
-label {
+.upload label {
     display: block;
     width: 30px;
     height: 30px;
@@ -56,14 +83,18 @@ label {
     font-weight: bold;
     font-size: 24px;
 }
-label:hover {
+
+.upload label:hover {
     background: var(--primary);
     color: white;
 }
+
+
 .output {
     height: 60px;
     font-size: 0.8rem;
 }
+
 .error {
     color: var(--error);
 }
@@ -132,12 +163,12 @@ label:hover {
     align-items: center;
 }
 
-.login {
+.login label {
     display: block;
     width: 30px;
     height: 30px;
-    border: 1px solid white;
-    border-radius: 50%;
+    /* border: 1px solid white; */
+    /* border-radius: 50%; */
     margin: 10px auto;
     line-height: 30px;
     color: var(--primary);
@@ -146,7 +177,15 @@ label:hover {
 }
 
 .login input {
-    height: 12px;
+    height: 24px;
     width: 200px;
     opacity: 100%;
+}
+
+.login-box {
+    margin: 10px auto 10px auto;
+}
+
+.logout {
+    text-align: right;
 }

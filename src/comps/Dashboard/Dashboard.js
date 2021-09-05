@@ -1,18 +1,42 @@
 import React from 'react';
 import Login from '../Login/Login';
+import Logout from '../Login/Logout';
 import useToken from '../App/useToken';
+import {Link} from 'react-router-dom';
+import UploadForm from '../UploadForm'
 
 export default function Dashboard() {
     const { token, setToken } = useToken();
 
-    if (!token) {
-        return <Login setToken={setToken} />
+    const getFirstName = () => {
+        const tokenString = localStorage.getItem('token');
+        const userToken = JSON.parse (tokenString);
+        return userToken?.first_name;
     }
-    else {
-        
+
+    const getLastName = () => {
+        const tokenString = localStorage.getItem('token');
+        const userToken = JSON.parse (tokenString);
+        return userToken?.last_name;
+    }
+
+    if (!token) {
+        return (
+            <div className="dashboard">
+                <Login setToken={setToken} />
+            </div>
+        )
     }
 
     return (
-        <h2>Dashboard</h2>
+        <div className="dashboard">
+            <Logout/>
+            <h2>Dashboard</h2>
+            <p>Hello there, {getFirstName()} {getLastName()}!</p>
+            <Link to="/">Home</Link>
+            <br/>
+            <Link to="/preferences">Preferences</Link>
+            <UploadForm />
+        </div>
     );
 }

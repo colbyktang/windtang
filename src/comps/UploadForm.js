@@ -27,14 +27,13 @@ const UploadForm = () => {
 
     return (
         <form>
-            <label>
-                <input type="file" onChange={changeHandler}/>
-                <span>+</span>
+            <label className="upload">
+                <input type="file" onChange={changeHandler}></input>
             </label>
             <div className="output">
                 {error && <div className="error">{error}</div>}
                 {file && <div>{ file.name }</div>}
-                { file && <ProgressBar file={file} setFile={setFile}/>}
+                {file && <ProgressBar file={file} setFile={setFile}/>}
             </div>
         </form>
     )
