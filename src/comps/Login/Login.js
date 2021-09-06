@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
 async function loginUser (credentials) {
-    return fetch('http://localhost:4112/api/cs/login', {
+    return fetch('http://localhost:4112/api/cs/login'
+    .catch(err => console.log("error!")), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
