@@ -13,7 +13,6 @@ function App() {
 
     return (
         <motion.div className="App">
-            <Link to="/"><Button>Home</Button></Link>
             <Title />
             <ImageGrid setSelectedImg={setSelectedImg} />
             {selectedImg && (

@@ -60,6 +60,10 @@ form {
     text-align: center;
 }
 
+.navibar {
+    color: white;
+}
+
 .dashboard, .preferences {
     max-width: 960px;
     font-family: "Noto Serif";
@@ -95,6 +99,22 @@ form {
     /* Then we define how is distributed the remaining space */
     justify-content: space-around;
     list-style: none;
+    color: black;
+}
+
+.cards {
+    padding: 10px;
+    margin: 10px;
+}
+
+.cards-img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%!important;
+}
+
+.cards-body {
+    align-items: flex-end;
 }
 
 .button-row {

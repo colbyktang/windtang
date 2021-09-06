@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import NaviBar from './comps/NaviBar/NaviBar';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './comps/Home/Home';
@@ -9,11 +10,12 @@ import Dashboard from './comps/Dashboard/Dashboard';
 import Preferences from './comps/Preferences/Preferences';
 import FFGallery from './comps/Portfolio/FFGallery';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 ReactDOM.render(
     <React.StrictMode>
             <BrowserRouter>
+                <NaviBar/>
                 <Switch>
                     <Container className="App">
                     <Route exact path="/">
@@ -39,7 +41,6 @@ ReactDOM.render(
                     </Route>
                     <Route path="/FFGallery">
                         <FFGallery/>
-                        <App/>
                     </Route>
                     </Container>
                 </Switch>

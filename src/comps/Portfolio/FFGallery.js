@@ -1,10 +1,15 @@
 import React from 'react';
-import github from '../../images/github.png';
+import App from '../../App';
+import {Link} from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Container } from 'react-bootstrap';
 
 export default function FFGallery() {
     return (
-        <div>
-            <a href='https://github.com/colbyktang'><img src={github} alt="Github"/></a>
-        </div>
+        <Container>
+            <Link to="/"><Button>Home</Button></Link>
+            <App/>
+        </Container>
     )
 }

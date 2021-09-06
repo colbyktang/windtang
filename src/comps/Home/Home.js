@@ -31,14 +31,14 @@ export default function Home() {
                     <Link to="/dashboard"><Button>Login</Button></Link>
                 </Row>
             }
-            <Row style={{ height: '100px'}}>
-                <Col>
-                    <h1>Windtang</h1>
-                </Col>
-            </Row>
+                <Row style={{ height: '100px'}}>
+                    <Col>
+                        <h1>Windtang</h1>
+                    </Col>
+                </Row>
             { 
                 token &&
-                <Row>
+                <Row style={{margin: '10px 10px 40px'}}>
                     <Col className="justify-content-center">
                         <Link to="/dashboard"><Button>Dashboard</Button></Link>
                     </Col>
@@ -46,19 +46,19 @@ export default function Home() {
             }
 
             <Row className="cards-flex">
-                <Card style={{ backgroundColor: 'white', width: '18rem' }}>
-                    <Card.Img variant="top" src={card_github} roundedCircle/>
-                    <Card.Body>
+                <Card className="cards" style={{ backgroundColor: 'white', width: '18rem' }}>
+                    <Card.Img className="cards-img" variant="top" src={card_github} roundedCircle/>
+                    <Card.Body className="cards-body">
                         <Card.Title>Github</Card.Title>
                         <Card.Text>
                             A portfolio of personal software projects I've developed.
                         </Card.Text>
-                        <Button href="https://github.com/colbyktang">Visit <Image src={button_github} rounded/></Button>
+                        <Button  href="https://github.com/colbyktang">Visit <Image src={button_github} rounded/></Button>
                     </Card.Body>
                 </Card>
-                <Card style={{ backgroundColor: 'white', width: '18rem' }}>
-                    <Card.Img variant="top" src={card_portfolio} roundedCircle/>
-                    <Card.Body>
+                <Card className="cards" style={{ backgroundColor: 'white', width: '18rem' }}>
+                    <Card.Img className="cards-img" variant="top" src={card_portfolio} roundedCircle/>
+                    <Card.Body className="cards-body">
                         <Card.Title>Digital Media Gallery</Card.Title>
                         <Card.Text>
                             An HTML webpage designed for my Digital Media course back at St. Edward's University.
@@ -66,9 +66,9 @@ export default function Home() {
                         <Button href="/html/tang_portfolio.html">View <Image style={{height:'32px'}} src={button_portfolio} rounded/></Button>
                     </Card.Body>
                 </Card>
-                <Card style={{ backgroundColor: 'white', width: '18rem' }}>
-                    <Card.Img variant="top" src={card_ffxiv} roundedCircle/>
-                    <Card.Body>
+                <Card className="cards" style={{ backgroundColor: 'white', width: '18rem' }}>
+                    <Card.Img className="cards-img" variant="top" src={card_ffxiv} roundedCircle/>
+                    <Card.Body className="cards-body">
                         <Card.Title>FFXIV Album</Card.Title>
                         <Card.Text>
                             A collection of screenshots from Final Fantasy XIV Online. Taken by Windcat Kirisame.

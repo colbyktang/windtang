@@ -17,6 +17,7 @@ __pycache__/
 /build
 
 # misc
+.meta
 .ssh/
 .swp
 .DS_Store
