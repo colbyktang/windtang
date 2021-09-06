@@ -1,7 +1,7 @@
 import React from 'react';
 import github from '../../images/github.png';
 
-export default function SamplePortfolio() {
+export default function FFGallery() {
     return (
         <div>
             <a href='https://github.com/colbyktang'><img src={github} alt="Github"/></a>

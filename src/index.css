@@ -16,17 +16,25 @@
 
 /* base styles & title */
 body {
-    max-width: 960px;
-    margin: 0 auto;
+    /* max-width: 960px; */
+    /* margin: 0 auto; */
     font-family: "Noto Serif";
     color: var(--secondary);
     background-color: var(--backg);
 }
 
+.background {
+    background: url("./images/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .App {
     max-width: 960px;
     margin: 0 auto;
-    /*background-color: var(--foreg);*/
+    /* background-color: var(--foreg); */
 }
 
 .title h1 {
@@ -52,7 +60,7 @@ form {
     text-align: center;
 }
 
-.home, .dashboard, .preferences {
+.dashboard, .preferences {
     max-width: 960px;
     font-family: "Noto Serif";
     /* margin: 30px auto 10px; */
@@ -62,6 +70,35 @@ form {
     border-style: solid;
     text-align: center;
     background-color: var(--backg);
+}
+
+.home {
+    max-width: 960px;
+    font-family: "Noto Serif";
+    padding: 1em;
+    text-align: center;
+    background-color: var(--foreg);
+}
+
+.cards-flex {
+    /* We first create a flex layout context */
+    display: flex;
+
+    /* Then we define the flow direction 
+        and if we allow the items to wrap 
+    * Remember this is the same as:
+    * flex-direction: row;
+    * flex-wrap: wrap;
+    */
+    flex-flow: row nowrap;
+
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    list-style: none;
+}
+
+.button-row {
+    align-content: space-evenly;
 }
 
 .upload label input {
@@ -129,8 +166,9 @@ form {
     max-width: 200%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: auto;
     right: 0;
+    bottom: 0;
 }
 
 /* modal styles */

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { useHistory } from 'react-router'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 export default function Logout() {
     const history = useHistory();
@@ -8,8 +10,7 @@ export default function Logout() {
     const handleLogOut = () => {
         localStorage.removeItem('token');
         console.log("Token removed!");
-        history.go(0);
-        
+        window.location.href = "/";
     }
 
     const doesTokenExist = () => {
@@ -23,7 +24,7 @@ export default function Logout() {
     return (
         <div className="logout">
             <Link to="/">
-                <button onClick={handleLogOut}>Log Out</button>
+                <Button onClick={handleLogOut}>Log Out</Button>
             </Link>
         </div>
     )

@@ -47,6 +47,10 @@ class CommonServicesListener(BaseHTTPRequestHandler):
         # Handling a login request from POST
         elif path == "/api/cs/login":
             print ("Login API:")
+            if "username" not in incoming_dictionary:
+                self.respond_code(403, "Empty username! Code 403")
+            if "password" not in incoming_dictionary:
+                self.respond_code(403, "Username was not found! Code 403")
             response = cs_api_login.cs_login(self, incoming_dictionary, db_utils)
             if response != None:
                 self.respond_convert_json_object (200, response)

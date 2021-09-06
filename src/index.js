@@ -3,33 +3,47 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './comps/Home/Home';
 import Dashboard from './comps/Dashboard/Dashboard';
 import Preferences from './comps/Preferences/Preferences';
-import SamplePortfolio from './comps/Portfolio/SamplePortfolio';
+import FFGallery from './comps/Portfolio/FFGallery';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Form, Container, Row, Col } from 'react-bootstrap';
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/">
-
-                    <Home />
-                    <App />
-                </Route>
-                <Route path="/dashboard">
-                    <Dashboard/>
-                    <App />
-                </Route>
-                <Route path="/preferences">
-                    <Preferences/>
-                </Route>
-                <Route path="/sampleportfolio">
-                    <SamplePortfolio/>
-                </Route>
-            </Switch>
-        </BrowserRouter>
+            <BrowserRouter>
+                <Switch>
+                    <Container className="App">
+                    <Route exact path="/">
+                        <Row className="justify-content-center">
+                            <Col>
+                            <Home />
+                            </Col>
+                        </Row>
+                    </Route>
+                    <Route path="/dashboard">
+                        <Row className="justify-content-center">
+                            <Col>
+                            <Dashboard/>
+                            </Col>
+                        </Row>
+                    </Route>
+                    <Route path="/preferences">
+                        <Row className="justify-content-center">
+                            <Col>
+                            <Preferences/>
+                            </Col>
+                        </Row>
+                    </Route>
+                    <Route path="/FFGallery">
+                        <FFGallery/>
+                        <App/>
+                    </Route>
+                    </Container>
+                </Switch>
+            </BrowserRouter>
     </React.StrictMode>,
   document.getElementById('root')
 );
