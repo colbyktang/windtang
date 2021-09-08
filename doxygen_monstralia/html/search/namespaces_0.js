@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['datatype_869',['DataType',['../namespace_data_type.html',1,'']]]
+  ['beachbounce_1170',['BeachBounce',['../namespace_beach_bounce.html',1,'']]],
+  ['bellyblast_1171',['BellyBlast',['../namespace_belly_blast.html',1,'']]]
 ];

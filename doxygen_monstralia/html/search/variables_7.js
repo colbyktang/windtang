@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['voiceoversource_951',['voiceOverSource',['../class_sound_manager.html#a18bcf2401072e3c2d3557e62ddb017d2',1,'SoundManager']]],
-  ['voicetestclip_952',['voiceTestClip',['../class_sound_manager.html#abb0d537966f37c15c4b2f77510b33bbc',1,'SoundManager']]]
+  ['tutorial_1277',['tutorial',['../class_d_j_heartthrob_1_1_heart_throb_sound_manager.html#a588a5566144dded1abed081175663209',1,'DJHeartthrob::HeartThrobSoundManager']]]
 ];

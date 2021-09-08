@@ -1,5 +1,7 @@
 var namespaces_dup =
 [
+    [ "BeachBounce", "namespace_beach_bounce.html", "namespace_beach_bounce" ],
+    [ "BellyBlast", "namespace_belly_blast.html", "namespace_belly_blast" ],
     [ "DataType", "namespace_data_type.html", [
       [ "Color", "namespace_data_type.html#a7220c874d463ee9ebcf20a83ee18610d", [
         [ "Red", "namespace_data_type.html#a7220c874d463ee9ebcf20a83ee18610daee38e4d5dd68c4e440825018d549cb47", null ],
@@ -26,7 +28,8 @@ var namespaces_dup =
         [ "IntroSeen", "namespace_data_type.html#a6abfe9cb4a50923bcce01cd322c55d54a7649f8bd89f5207061f930a1964c6a01", null ],
         [ "IntroSlidesSeen", "namespace_data_type.html#a6abfe9cb4a50923bcce01cd322c55d54a8f584b9100fbeab7de6f28931c19dbf9", null ],
         [ "MonsterPageVisited", "namespace_data_type.html#a6abfe9cb4a50923bcce01cd322c55d54adab391405e11c157481cce9edfd8631a", null ],
-        [ "MonsterSelected", "namespace_data_type.html#a6abfe9cb4a50923bcce01cd322c55d54a49c979959f7c911bc8d635ad72680411", null ]
+        [ "MonsterSelected", "namespace_data_type.html#a6abfe9cb4a50923bcce01cd322c55d54a49c979959f7c911bc8d635ad72680411", null ],
+        [ "GardenVisited", "namespace_data_type.html#a6abfe9cb4a50923bcce01cd322c55d54a1008ca3d321b21e8d3df6e4eb7f85358", null ]
       ] ],
       [ "IslandSection", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42", [
         [ "Monstralia", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42aa87c28ea194ff3aaca98104bb63c5dc1", null ],
@@ -35,7 +38,8 @@ var namespaces_dup =
         [ "PumpParadise", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42a3ddc132780c2a4b22aec29b31b6c6ad9", null ],
         [ "MuscleBeach", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42aa34cf8998a893d131d9ab71a6ff30cbf", null ],
         [ "DigestiveJungle", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42a3b8a946d17efa99d1eca41300a98e003", null ],
-        [ "MonsterGarden", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42a02fc29e3c3ff3348750c80d606135c4d", null ]
+        [ "MonsterGarden", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42a02fc29e3c3ff3348750c80d606135c4d", null ],
+        [ "MonsterHome", "namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42ac7d67a75a356bbbc4afd6debeb1b2d61", null ]
       ] ],
       [ "Level", "namespace_data_type.html#af96892f8d92a06461d71c9f4b6aaab8b", [
         [ "LevelOne", "namespace_data_type.html#af96892f8d92a06461d71c9f4b6aaab8ba7b64d8046c8f06e949c839df88af1bba", null ],
@@ -52,7 +56,9 @@ var namespaces_dup =
         [ "MonsterEmotions1", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188a57d03de117971ef5faae88d6b2f9ae84", null ],
         [ "MonsterEmotions3", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188a6e3f6ec7c7c4b082ef97db2f17c5732e", null ],
         [ "MonsterSenses1", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188a2c3fa44d1c91a317b6da86dae9ee3da7", null ],
-        [ "MonsterSenses3", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188a3a00618e8d789e7a948466e52597bb0c", null ]
+        [ "MonsterSenses3", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188a3a00618e8d789e7a948466e52597bb0c", null ],
+        [ "VocalVines1", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188ab524b13546fb5c5a2b8f2c7b1af4ca18", null ],
+        [ "VocalVines3", "namespace_data_type.html#a86fed81e844b135f6f7442756ec5a188a0f4a273e675c74885f38335ab6d66be7", null ]
       ] ],
       [ "Minigame", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276", [
         [ "Brainbow", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a7ec64982a059aa0a32018742a65d0981", null ],
@@ -69,7 +75,18 @@ var namespaces_dup =
         [ "LakeDiver", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a1dd63048e04dc51be0511917efd8bbf7", null ],
         [ "Fireflies", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a3180e05dc4dedd39b4c267cbedd65075", null ],
         [ "FruitFest", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276abf2c0a6a731f0a016eff6b5e144574de", null ],
-        [ "Vines", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a7760465616fabc9ac40726cc8188148b", null ]
+        [ "Vines", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a7760465616fabc9ac40726cc8188148b", null ],
+        [ "BellyBlast", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276aadf7e53736f887a539ba349910ee994f", null ],
+        [ "MonsterMouth", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a4174dc4493a7a2dee5eb8b3d19e01063", null ],
+        [ "FoodRiver", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a2b7678bd593f27786a59b580d9309360", null ],
+        [ "JungleJumpRope", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a5ef2a48ea4be7b303c4e90315411e1bb", null ],
+        [ "VocalVines", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a87b0806242c7c9549c3d66d250234533", null ],
+        [ "BeachBounce", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a83fffb033fe0b1e2e68e3a222ef59334", null ],
+        [ "DJHeartthrob", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276ab60798aeab12faa10814bd4d81c3adf2", null ],
+        [ "RelayRest", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276ad90c385410d3f210bc9c5efb1d1ba313", null ],
+        [ "SeashellSeasaw", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a3483b7f717a868450dfe001731cea899", null ],
+        [ "SurfMonster", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a791106f114857043f367a6397d4914e8", null ],
+        [ "MonsterGarden", "namespace_data_type.html#a07674c8f570b71d6d8336ae568215276a02fc29e3c3ff3348750c80d606135c4d", null ]
       ] ],
       [ "MonsterEmotions", "namespace_data_type.html#a96edbfa6a2ade425b6f32c314948b33b", [
         [ "Happy", "namespace_data_type.html#a96edbfa6a2ade425b6f32c314948b33baef97b40b2245d3690c745cd6e8c663db", null ],
@@ -133,6 +150,10 @@ var namespaces_dup =
         [ "Spine", "namespace_data_type.html#a5ac955f40734acf0442095cdf2ff0ec2a299a20601891812eff26320b63f3b4fe", null ]
       ] ]
     ] ],
+    [ "DJHeartthrob", "namespace_d_j_heartthrob.html", "namespace_d_j_heartthrob" ],
+    [ "MonsterMouth", "namespace_monster_mouth.html", "namespace_monster_mouth" ],
     [ "Monstralia", "namespace_monstralia.html", "namespace_monstralia" ],
-    [ "System", "namespace_system.html", "namespace_system" ]
+    [ "StartMenu", "namespace_start_menu.html", "namespace_start_menu" ],
+    [ "System", "namespace_system.html", "namespace_system" ],
+    [ "Template", "namespace_template.html", "namespace_template" ]
 ];

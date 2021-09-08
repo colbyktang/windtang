@@ -2,6 +2,8 @@ var class_brainbow_game_manager =
 [
     [ "BrainbowLevelConfig", "struct_brainbow_game_manager_1_1_brainbow_level_config.html", "struct_brainbow_game_manager_1_1_brainbow_level_config" ],
     [ "GameAction", "class_brainbow_game_manager.html#aed93fa344244681662d649b0d86c2c36", null ],
+    [ "OnDisable", "class_brainbow_game_manager.html#a05acbed169a32c40a0eaa9b49bb5b66c", null ],
+    [ "OnEnable", "class_brainbow_game_manager.html#a77dcc6d33ab563b86a9ee0b94eb3c6f3", null ],
     [ "OnOutOfTime", "class_brainbow_game_manager.html#aec804649d9a6c9c3930f22eb89517713", null ],
     [ "PregameSetup", "class_brainbow_game_manager.html#affdb5f5b6f1434ed130e1436d5b67b17", null ],
     [ "ScoreAndReplace", "class_brainbow_game_manager.html#a1b4bb32a810752aeeb6b4e460cd54846", null ],

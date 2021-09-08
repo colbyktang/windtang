@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="MonstraliaIcon_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monstralia
-   &#160;<span id="projectnumber">2106.2</span>
+   &#160;<span id="projectnumber">2108.1</span>
    </div>
   </td>
  </tr>
@@ -84,7 +84,9 @@ $(document).ready(function(){initNavTree('class_game_save.html',''); initResizab
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_game_save-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -92,11 +94,29 @@ $(document).ready(function(){initNavTree('class_game_save.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab7ae3f27a2edb9dae2b72332516854a3"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_save.html#ab7ae3f27a2edb9dae2b72332516854a3">toDictionary</a> ()</td></tr>
+<tr class="memdesc:ab7ae3f27a2edb9dae2b72332516854a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">turns the game save object into a dictionary to be sent up to the database  <a href="class_game_save.html#ab7ae3f27a2edb9dae2b72332516854a3">More...</a><br /></td></tr>
+<tr class="separator:ab7ae3f27a2edb9dae2b72332516854a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6526facead0a1de952d709491a03d61d"><td class="memItemLeft" align="right" valign="top"><a id="a6526facead0a1de952d709491a03d61d"></a>
-static <a class="el" href="class_game_save.html">GameSave</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CreateSaveFile</b> ()</td></tr>
-<tr class="separator:a6526facead0a1de952d709491a03d61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b95ca319445ca066acb703af37bd04d"><td class="memItemLeft" align="right" valign="top"><a id="a7b95ca319445ca066acb703af37bd04d"></a>
+static <a class="el" href="class_game_save.html">GameSave</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CreateSaveFile</b> (string saveId=&quot;&quot;)</td></tr>
+<tr class="separator:a7b95ca319445ca066acb703af37bd04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa146079a9544b4b5ab55276d34ebcf0a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game_save.html">GameSave</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_save.html#aa146079a9544b4b5ab55276d34ebcf0a">CreateSaveFileFromDataBase</a> (Dictionary&lt; string, object &gt; data)</td></tr>
+<tr class="memdesc:aa146079a9544b4b5ab55276d34ebcf0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a save file object from the data dictionary captured from the database. This function calls the data conversion methods to convert the data back into the correct format, then creates a game save object  <a href="class_game_save.html#aa146079a9544b4b5ab55276d34ebcf0a">More...</a><br /></td></tr>
+<tr class="separator:aa146079a9544b4b5ab55276d34ebcf0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a0fc31fad93e1b29a26bee424aefda637"><td class="memItemLeft" align="right" valign="top"><a id="a0fc31fad93e1b29a26bee424aefda637"></a>
+Dictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>foodEatenDictionary</b> = new Dictionary&lt;string, int&gt;()</td></tr>
+<tr class="separator:a0fc31fad93e1b29a26bee424aefda637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86239ae302e4d7f3f88feea0f43eec2"><td class="memItemLeft" align="right" valign="top"><a id="af86239ae302e4d7f3f88feea0f43eec2"></a>
+List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>inventory</b> = new List&lt;string&gt;()</td></tr>
+<tr class="separator:af86239ae302e4d7f3f88feea0f43eec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -137,8 +157,64 @@ Dictionary&lt; DataType.Minigame, <a class="el" href="class_review_game.html">Re
 List&lt; DataType.Minigame &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ReviewGamesList</b><code> [get]</code></td></tr>
 <tr class="separator:abf4876bc957a91031b5afccce7d5b95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa146079a9544b4b5ab55276d34ebcf0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa146079a9544b4b5ab55276d34ebcf0a">&#9670;&nbsp;</a></span>CreateSaveFileFromDataBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_game_save.html">GameSave</a> GameSave.CreateSaveFileFromDataBase </td>
+          <td>(</td>
+          <td class="paramtype">Dictionary&lt; string, object &gt;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creates a save file object from the data dictionary captured from the database. This function calls the data conversion methods to convert the data back into the correct format, then creates a game save object </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the game save object</dd></dl>
+
+</div>
+</div>
+<a id="ab7ae3f27a2edb9dae2b72332516854a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ae3f27a2edb9dae2b72332516854a3">&#9670;&nbsp;</a></span>toDictionary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, object&gt; GameSave.toDictionary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>turns the game save object into a dictionary to be sent up to the database </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Scripts/System/GameSave.cs</li>
+<li>Assets/Scripts/System/GameSave.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

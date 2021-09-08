@@ -5,7 +5,7 @@ var class_game_manager =
     [ "ActivateLoadingScreen", "class_game_manager.html#ac86e13aa7d872ef9a32140a202c412c4", null ],
     [ "CompleteTutorial", "class_game_manager.html#a38ccd5e6abee9adfc26229192a37803b", null ],
     [ "CreateNotification", "class_game_manager.html#a66e8f29bbe418d792e579889a79ff40f", null ],
-    [ "DeactivateLoadingScreen", "class_game_manager.html#a9be91e955e336fe9819f1d78cc1c6b60", null ],
+    [ "DeactivateLoadingScreen", "class_game_manager.html#ae553af6236286dd8f2d12940631e2ac4", null ],
     [ "GetAssignedSticker", "class_game_manager.html#a17c90d1865cb7cb0af1d98533973583d", null ],
     [ "GetFoodDictionary", "class_game_manager.html#ab78a051f9482ebea0478e94fc82bd64c", null ],
     [ "GetIslandSection", "class_game_manager.html#a3027b744a243bc17394ef1c03b252f03", null ],

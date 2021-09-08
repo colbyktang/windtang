@@ -1,10 +1,26 @@
 \hypertarget{class_game_save}{}\doxysection{Game\+Save Class Reference}
 \label{class_game_save}\index{GameSave@{GameSave}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, object $>$ \mbox{\hyperlink{class_game_save_ab7ae3f27a2edb9dae2b72332516854a3}{to\+Dictionary}} ()
+\begin{DoxyCompactList}\small\item\em turns the game save object into a dictionary to be sent up to the database \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_game_save_a6526facead0a1de952d709491a03d61d}\label{class_game_save_a6526facead0a1de952d709491a03d61d}} 
-static \mbox{\hyperlink{class_game_save}{Game\+Save}} {\bfseries Create\+Save\+File} ()
+\mbox{\Hypertarget{class_game_save_a7b95ca319445ca066acb703af37bd04d}\label{class_game_save_a7b95ca319445ca066acb703af37bd04d}} 
+static \mbox{\hyperlink{class_game_save}{Game\+Save}} {\bfseries Create\+Save\+File} (string save\+Id=\char`\"{}\char`\"{})
+\item 
+static \mbox{\hyperlink{class_game_save}{Game\+Save}} \mbox{\hyperlink{class_game_save_aa146079a9544b4b5ab55276d34ebcf0a}{Create\+Save\+File\+From\+Data\+Base}} (Dictionary$<$ string, object $>$ data)
+\begin{DoxyCompactList}\small\item\em creates a save file object from the data dictionary captured from the database. This function calls the data conversion methods to convert the data back into the correct format, then creates a game save object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_save_a0fc31fad93e1b29a26bee424aefda637}\label{class_game_save_a0fc31fad93e1b29a26bee424aefda637}} 
+Dictionary$<$ string, int $>$ {\bfseries food\+Eaten\+Dictionary} = new Dictionary$<$string, int$>$()
+\item 
+\mbox{\Hypertarget{class_game_save_af86239ae302e4d7f3f88feea0f43eec2}\label{class_game_save_af86239ae302e4d7f3f88feea0f43eec2}} 
+List$<$ string $>$ {\bfseries inventory} = new List$<$string$>$()
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -47,6 +63,40 @@ List$<$ Data\+Type.\+Minigame $>$ {\bfseries Review\+Games\+List}\hspace{0.3cm}{
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_save_aa146079a9544b4b5ab55276d34ebcf0a}\label{class_game_save_aa146079a9544b4b5ab55276d34ebcf0a}} 
+\index{GameSave@{GameSave}!CreateSaveFileFromDataBase@{CreateSaveFileFromDataBase}}
+\index{CreateSaveFileFromDataBase@{CreateSaveFileFromDataBase}!GameSave@{GameSave}}
+\doxysubsubsection{\texorpdfstring{CreateSaveFileFromDataBase()}{CreateSaveFileFromDataBase()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_game_save}{Game\+Save}} Game\+Save.\+Create\+Save\+File\+From\+Data\+Base (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, object $>$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+creates a save file object from the data dictionary captured from the database. This function calls the data conversion methods to convert the data back into the correct format, then creates a game save object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the game save object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_save_ab7ae3f27a2edb9dae2b72332516854a3}\label{class_game_save_ab7ae3f27a2edb9dae2b72332516854a3}} 
+\index{GameSave@{GameSave}!toDictionary@{toDictionary}}
+\index{toDictionary@{toDictionary}!GameSave@{GameSave}}
+\doxysubsubsection{\texorpdfstring{toDictionary()}{toDictionary()}}
+{\footnotesize\ttfamily Dictionary$<$string, object$>$ Game\+Save.\+to\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+turns the game save object into a dictionary to be sent up to the database 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Scripts/\+System/Game\+Save.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\+System/Game\+Save.\+cs\end{DoxyCompactItemize}

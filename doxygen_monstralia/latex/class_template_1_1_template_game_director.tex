@@ -1,0 +1,143 @@
+\hypertarget{class_template_1_1_template_game_director}{}\doxysection{Template.\+Template\+Game\+Director Class Reference}
+\label{class_template_1_1_template_game_director}\index{Template.TemplateGameDirector@{Template.TemplateGameDirector}}
+Inheritance diagram for Template.\+Template\+Game\+Director\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_template_1_1_template_game_director}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_template_1_1_template_game_director_1_1_template_level}{Template\+Level}}
+\begin{DoxyCompactList}\small\item\em The struct to use to configure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a20102dca671a67dc84e5cef12ba4826b}\label{class_template_1_1_template_game_director_a20102dca671a67dc84e5cef12ba4826b}} 
+delegate void {\bfseries Game\+Action} ()
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_ac19776d976018f54a59b165d151f95a5}\label{class_template_1_1_template_game_director_ac19776d976018f54a59b165d151f95a5}} 
+void {\bfseries On\+Out\+Of\+Time} ()
+\item 
+override void \mbox{\hyperlink{class_template_1_1_template_game_director_ae3ae8f8fcc128deee9c61f18c99e0f7d}{Pregame\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em First function called in the Director scripts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_afa434b0c98c7c17694b51c59a59203fe}\label{class_template_1_1_template_game_director_afa434b0c98c7c17694b51c59a59203fe}} 
+void {\bfseries Start\+Game} ()
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_ae119f0425b26f13bfbb132c7a9d8c486}\label{class_template_1_1_template_game_director_ae119f0425b26f13bfbb132c7a9d8c486}} 
+void {\bfseries Pre\+Countdown\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a31492f0b45fb435939a3492f82f51b9b}\label{class_template_1_1_template_game_director_a31492f0b45fb435939a3492f82f51b9b}} 
+void {\bfseries Post\+Countdown\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a20499650c426d3d69d536a6311bc5665}\label{class_template_1_1_template_game_director_a20499650c426d3d69d536a6311bc5665}} 
+void {\bfseries End\+Game} ()
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a488fd95fc4934d9e1a6888f39070e1c2}\label{class_template_1_1_template_game_director_a488fd95fc4934d9e1a6888f39070e1c2}} 
+void {\bfseries Post\+End\+Game} ()
+\item 
+override void \mbox{\hyperlink{class_template_1_1_template_game_director_a8b398ffef1404834b6bf1a1706aad80e}{Out\+Of\+Time}} ()
+\begin{DoxyCompactList}\small\item\em When the timer runs out, raise an out of time event for any listeners. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_ab175567a8b5163a6bbf16c260ddd7c39}\label{class_template_1_1_template_game_director_ab175567a8b5163a6bbf16c260ddd7c39}} 
+override void {\bfseries On\+Score} (\mbox{\hyperlink{class_monstralia_1_1_events_1_1_player___score___event}{Player\+\_\+\+Score\+\_\+\+Event}} score\+Event)
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a4bc82fe739baf179c1d343855e32f75d}\label{class_template_1_1_template_game_director_a4bc82fe739baf179c1d343855e32f75d}} 
+void {\bfseries On\+Tutorial\+Finish} ()
+\item 
+Game\+Object \mbox{\hyperlink{class_template_1_1_template_game_director_a74c00ad00f168222a126bd22474ac86d}{Spawn\+Random\+Food}} (Transform spawn)
+\begin{DoxyCompactList}\small\item\em Creates a randomly chosen food from the food spawn pool at the specified transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_template_1_1_template_game_director_1_1_template_level}{Template\+Level}} \mbox{\hyperlink{class_template_1_1_template_game_director_a01e29e9e6ffb373fd5cd4eaa8ef57e25}{Level\+Config}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current level configuration depending on Game Manager. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_template_1_1_template_game_director_a1a57e95dbb2058aab6a309fde7cd7409}{Input\+Allowed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allow the player to touch stuff. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_template_1_1_template_game_director_ae601eeb550d7988f681b9a067588ed37}\label{class_template_1_1_template_game_director_ae601eeb550d7988f681b9a067588ed37}} 
+static Game\+Action {\bfseries On\+Game\+Start}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a8b398ffef1404834b6bf1a1706aad80e}\label{class_template_1_1_template_game_director_a8b398ffef1404834b6bf1a1706aad80e}} 
+\index{Template.TemplateGameDirector@{Template.TemplateGameDirector}!OutOfTime@{OutOfTime}}
+\index{OutOfTime@{OutOfTime}!Template.TemplateGameDirector@{Template.TemplateGameDirector}}
+\doxysubsubsection{\texorpdfstring{OutOfTime()}{OutOfTime()}}
+{\footnotesize\ttfamily override void Template.\+Template\+Game\+Director.\+Out\+Of\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+When the timer runs out, raise an out of time event for any listeners. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_abstract_game_director_a673462245d0f10fd1f095d521f20ac12}{Abstract\+Game\+Director$<$ Template\+Game\+Director $>$}}.
+
+\mbox{\Hypertarget{class_template_1_1_template_game_director_ae3ae8f8fcc128deee9c61f18c99e0f7d}\label{class_template_1_1_template_game_director_ae3ae8f8fcc128deee9c61f18c99e0f7d}} 
+\index{Template.TemplateGameDirector@{Template.TemplateGameDirector}!PregameSetup@{PregameSetup}}
+\index{PregameSetup@{PregameSetup}!Template.TemplateGameDirector@{Template.TemplateGameDirector}}
+\doxysubsubsection{\texorpdfstring{PregameSetup()}{PregameSetup()}}
+{\footnotesize\ttfamily override void Template.\+Template\+Game\+Director.\+Pregame\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+First function called in the Director scripts 
+
+
+
+Implements \mbox{\hyperlink{class_abstract_game_director_af768407a9b41acf28c8be25a06b5ea95}{Abstract\+Game\+Director$<$ Template\+Game\+Director $>$}}.
+
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a74c00ad00f168222a126bd22474ac86d}\label{class_template_1_1_template_game_director_a74c00ad00f168222a126bd22474ac86d}} 
+\index{Template.TemplateGameDirector@{Template.TemplateGameDirector}!SpawnRandomFood@{SpawnRandomFood}}
+\index{SpawnRandomFood@{SpawnRandomFood}!Template.TemplateGameDirector@{Template.TemplateGameDirector}}
+\doxysubsubsection{\texorpdfstring{SpawnRandomFood()}{SpawnRandomFood()}}
+{\footnotesize\ttfamily Game\+Object Template.\+Template\+Game\+Director.\+Spawn\+Random\+Food (\begin{DoxyParamCaption}\item[{Transform}]{spawn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates a randomly chosen food from the food spawn pool at the specified transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spawn} & The transform to spawn the food at.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Game\+Object that is created at the specified transform.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a1a57e95dbb2058aab6a309fde7cd7409}\label{class_template_1_1_template_game_director_a1a57e95dbb2058aab6a309fde7cd7409}} 
+\index{Template.TemplateGameDirector@{Template.TemplateGameDirector}!InputAllowed@{InputAllowed}}
+\index{InputAllowed@{InputAllowed}!Template.TemplateGameDirector@{Template.TemplateGameDirector}}
+\doxysubsubsection{\texorpdfstring{InputAllowed}{InputAllowed}}
+{\footnotesize\ttfamily bool Template.\+Template\+Game\+Director.\+Input\+Allowed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allow the player to touch stuff. 
+
+\mbox{\Hypertarget{class_template_1_1_template_game_director_a01e29e9e6ffb373fd5cd4eaa8ef57e25}\label{class_template_1_1_template_game_director_a01e29e9e6ffb373fd5cd4eaa8ef57e25}} 
+\index{Template.TemplateGameDirector@{Template.TemplateGameDirector}!LevelConfig@{LevelConfig}}
+\index{LevelConfig@{LevelConfig}!Template.TemplateGameDirector@{Template.TemplateGameDirector}}
+\doxysubsubsection{\texorpdfstring{LevelConfig}{LevelConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_template_1_1_template_game_director_1_1_template_level}{Template\+Level}} Template.\+Template\+Game\+Director.\+Level\+Config\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the current level configuration depending on Game Manager. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Template/Template\+Game\+Director.\+cs\end{DoxyCompactItemize}

@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="MonstraliaIcon_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monstralia
-   &#160;<span id="projectnumber">2106.2</span>
+   &#160;<span id="projectnumber">2108.1</span>
    </div>
   </td>
  </tr>
@@ -150,9 +150,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 AudioSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a22730e627e8572a15412638f88cf96fd">GetAmbientSource</a> ()</td></tr>
 <tr class="memdesc:a22730e627e8572a15412638f88cf96fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the ambient sound AudioSource. <br /></td></tr>
 <tr class="separator:a22730e627e8572a15412638f88cf96fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a5ba097b7261566eaed9de7807eba1a"><td class="memItemLeft" align="right" valign="top">AudioSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a4a5ba097b7261566eaed9de7807eba1a">PlaySFXClip</a> (AudioClip clip)</td></tr>
-<tr class="memdesc:a4a5ba097b7261566eaed9de7807eba1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates a SFX Source and play a single AudioClip through it. Only allows certain amount of sources.  <a href="class_sound_manager.html#a4a5ba097b7261566eaed9de7807eba1a">More...</a><br /></td></tr>
-<tr class="separator:a4a5ba097b7261566eaed9de7807eba1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e188b95164d5d47f5624752c7c7884"><td class="memItemLeft" align="right" valign="top">AudioSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a35e188b95164d5d47f5624752c7c7884">PlaySFXClip</a> (AudioClip clip, float pitch=1.0f)</td></tr>
+<tr class="memdesc:a35e188b95164d5d47f5624752c7c7884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates a SFX Source and play a single AudioClip through it. Only allows certain amount of sources.  <a href="class_sound_manager.html#a35e188b95164d5d47f5624752c7c7884">More...</a><br /></td></tr>
+<tr class="separator:a35e188b95164d5d47f5624752c7c7884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2875c9a1c9aeb6a97a9d4ab316e87cc"><td class="memItemLeft" align="right" valign="top"><a id="ab2875c9a1c9aeb6a97a9d4ab316e87cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PlaySFXSource</b> (AudioSource source)</td></tr>
 <tr class="separator:ab2875c9a1c9aeb6a97a9d4ab316e87cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -435,8 +435,8 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 
 </div>
 </div>
-<a id="a4a5ba097b7261566eaed9de7807eba1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a5ba097b7261566eaed9de7807eba1a">&#9670;&nbsp;</a></span>PlaySFXClip()</h2>
+<a id="a35e188b95164d5d47f5624752c7c7884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e188b95164d5d47f5624752c7c7884">&#9670;&nbsp;</a></span>PlaySFXClip()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -445,8 +445,18 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
           <td class="memname">AudioSource SoundManager.PlaySFXClip </td>
           <td>(</td>
           <td class="paramtype">AudioClip&#160;</td>
-          <td class="paramname"><em>clip</em></td><td>)</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pitch</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -638,8 +648,9 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Scripts/Managers/SoundManager.cs</li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Assets/Scripts/Managers/SoundManager.cs</li>
+<li>Assets/Scripts/Monstralia/Muscle Beach/DJ Heartthrob/HeartThrobSoundManager.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

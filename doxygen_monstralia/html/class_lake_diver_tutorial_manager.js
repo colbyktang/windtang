@@ -11,6 +11,5 @@ var class_lake_diver_tutorial_manager =
     [ "StartTutorial", "class_lake_diver_tutorial_manager.html#acb3585e3e1de204a7c1a8d39e79cb237", null ],
     [ "TutorialEnd", "class_lake_diver_tutorial_manager.html#ab5ee7485d1e7616c99e4a8b33cb01100", null ],
     [ "TutorialTeardown", "class_lake_diver_tutorial_manager.html#a02b1456a2ba7b0660f2fb1801379722d", null ],
-    [ "cam", "class_lake_diver_tutorial_manager.html#a692759f0f2c324c05523970c04f459d0", null ],
     [ "nowYouTryCompleted", "class_lake_diver_tutorial_manager.html#a8987d1124915c94acfb46703835ee8c7", null ]
 ];

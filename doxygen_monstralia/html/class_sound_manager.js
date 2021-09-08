@@ -28,7 +28,7 @@ var class_sound_manager =
     [ "PlayCorrectSFX", "class_sound_manager.html#aa5fea3446557ab09a53ebfe46f1abc24", null ],
     [ "PlayIncorrectSFX", "class_sound_manager.html#aeaeea396e931c33c2534ef3ba6a4693f", null ],
     [ "PlayReviewVO", "class_sound_manager.html#a868f3f8e17e6daa0ff95aa38d65862e6", null ],
-    [ "PlaySFXClip", "class_sound_manager.html#a4a5ba097b7261566eaed9de7807eba1a", null ],
+    [ "PlaySFXClip", "class_sound_manager.html#a35e188b95164d5d47f5624752c7c7884", null ],
     [ "PlaySFXSource", "class_sound_manager.html#ab2875c9a1c9aeb6a97a9d4ab316e87cc", null ],
     [ "PlayUnlockStickerVO", "class_sound_manager.html#a5db60ae601e1a4b95f0634031a26e78f", null ],
     [ "PlayVoiceOverClip", "class_sound_manager.html#ad6449d807650b44c24f964ff0f019890", null ],

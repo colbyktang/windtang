@@ -45,16 +45,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_bone_bridge_tutorial_manager.html",
-"class_diver_movement.html#a266bddc4a192f0473bedea9baba8a91d",
-"class_food2.html",
-"class_lake_diver_game_manager.html#a52bf2713deff6db5ad9199ce2705d5ef",
-"class_minifarm_tutorial_manager.html#a07591d197aa2ddbcdc10feedcda225b8",
-"class_monstralia_1_1_events_1_1_game___state___event.html#aaec16f0febe211bbefe314c39ba792c6",
-"class_review_brainbow_stripe_collider.html#a6495f6b3a324bbbd7e82a79e0996bfa1",
-"class_senses_level_manager.html#a9805e7e88e97d8816a07eac0425cacb2",
-"class_sticker_slot.html#af3a3cfad164185acfa0d7506705af12e",
-"namespace_data_type.html#a4e1bd2b76cd5f8cddf81e00c90ff2c42afb150baf5da621df85b087b927082988"
+"class_belly_blast_1_1_belly_blast_director.html#aa1761ead86738461d8727d0c813acfb1",
+"class_button_sprite_manager.html#abc01f8fff1e3763ff6a8fcc695930205",
+"class_d_j_heartthrob_1_1_mouse_movement.html#af5b5d34cadd33c920b142e7211d2ad53",
+"class_factory.html#ab84ef40df99f06d88977a3e847f92488",
+"class_fruit_fest_manager.html#aae856d238a827b5c8ec3b19fb1502910",
+"class_listening_game_director.html#af29cca6f2fc7fb7907b7760527e69077",
+"class_monster_balance_game_manager.html#a0fe26470fb21e5e08e920b232da255f8",
+"class_monstralia_1_1_events_1_1_player___score___event.html#a708a3e22e103840ea3419a9d7106ee62",
+"class_registration_manager.html#a61c8dc7379b3cdc61f02818995d5c8cb",
+"class_review_memory_match_dish.html",
+"class_senses_tutorial_manager.html#a654de90c83f9b187a3285acd725e0be5",
+"class_stickerbook.html#a47168ffd7a8df81e60ca605f25537954",
+"class_vocal_vines_game_manager.html#a154cf6b54c11a79f59795c02750bb81b",
+"namespace_data_type.html#af96892f8d92a06461d71c9f4b6aaab8ba206c553766b2bd115083fb29ce0f97ab"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

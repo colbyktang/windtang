@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="MonstraliaIcon_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monstralia
-   &#160;<span id="projectnumber">2106.2</span>
+   &#160;<span id="projectnumber">2108.1</span>
    </div>
   </td>
  </tr>
@@ -132,10 +132,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()<
 <tr class="memdesc:a84dc6945f8cd929a27811d488a30e554 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player did not reach score goal.  <a href="class_abstract_game_director.html#a84dc6945f8cd929a27811d488a30e554">More...</a><br /></td></tr>
 <tr class="separator:a84dc6945f8cd929a27811d488a30e554 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedbc571ff72f7991956f23eabe6a5c6c inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#aedbc571ff72f7991956f23eabe6a5c6c">CompleteGame</a> ()</td></tr>
-<tr class="memdesc:aedbc571ff72f7991956f23eabe6a5c6c inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player reached score goal and will earn a sticker depending on whether or not they have it already.  <a href="class_abstract_game_director.html#aedbc571ff72f7991956f23eabe6a5c6c">More...</a><br /></td></tr>
+<tr class="memdesc:aedbc571ff72f7991956f23eabe6a5c6c inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if player reached the score goal. If so, player will earn a sticker depending on whether or not they have it already. Else, the player failed the level.  <a href="class_abstract_game_director.html#aedbc571ff72f7991956f23eabe6a5c6c">More...</a><br /></td></tr>
 <tr class="separator:aedbc571ff72f7991956f23eabe6a5c6c inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356310d52458cbe6904f68d73714030c inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a356310d52458cbe6904f68d73714030c">FinishGame</a> (DataType.GameEnd typeOfEnd)</td></tr>
-<tr class="memdesc:a356310d52458cbe6904f68d73714030c inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the game and notifies <a class="el" href="class_game_manager.html">GameManager</a> of game completion. Call <a class="el" href="class_abstract_game_director.html#a84dc6945f8cd929a27811d488a30e554" title="Player did not reach score goal.">FailGame()</a> or <a class="el" href="class_abstract_game_director.html#aedbc571ff72f7991956f23eabe6a5c6c" title="Player reached score goal and will earn a sticker depending on whether or not they have it already.">CompleteGame()</a> instead, unless you're looking for more control of the game ending.  <a href="class_abstract_game_director.html#a356310d52458cbe6904f68d73714030c">More...</a><br /></td></tr>
+<tr class="memdesc:a356310d52458cbe6904f68d73714030c inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the game and notifies <a class="el" href="class_game_manager.html">GameManager</a> of game completion. Call <a class="el" href="class_abstract_game_director.html#a84dc6945f8cd929a27811d488a30e554" title="Player did not reach score goal.">FailGame()</a> or <a class="el" href="class_abstract_game_director.html#aedbc571ff72f7991956f23eabe6a5c6c" title="Check if player reached the score goal. If so, player will earn a sticker depending on whether or not...">CompleteGame()</a> instead, unless you're looking for more control of the game ending.  <a href="class_abstract_game_director.html#a356310d52458cbe6904f68d73714030c">More...</a><br /></td></tr>
 <tr class="separator:a356310d52458cbe6904f68d73714030c inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48bbd68c6e7a6b7599ac73ed29fa579b inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a48bbd68c6e7a6b7599ac73ed29fa579b">CompleteTutorial</a> ()</td></tr>
 <tr class="memdesc:a48bbd68c6e7a6b7599ac73ed29fa579b inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells <a class="el" href="class_game_manager.html">GameManager</a> the tutorial for this game is complete.  <a href="class_abstract_game_director.html#a48bbd68c6e7a6b7599ac73ed29fa579b">More...</a><br /></td></tr>
@@ -150,34 +150,38 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()<
 <tr class="memdesc:a989da1744c1a6419c2bf482c1d6ab021 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show an end screen popup based on the current game and current state of the game.  <a href="class_abstract_game_director.html#a989da1744c1a6419c2bf482c1d6ab021">More...</a><br /></td></tr>
 <tr class="separator:a989da1744c1a6419c2bf482c1d6ab021 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0cd7da08cfe07ff911370bc46400788 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#aa0cd7da08cfe07ff911370bc46400788">SetTimeLimit</a> (float timeLimit)</td></tr>
+<tr class="memdesc:aa0cd7da08cfe07ff911370bc46400788 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setting the time limit on the clock.  <a href="class_abstract_game_director.html#aa0cd7da08cfe07ff911370bc46400788">More...</a><br /></td></tr>
 <tr class="separator:aa0cd7da08cfe07ff911370bc46400788 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93198c4a370238845e1f44638bd1c28e inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a93198c4a370238845e1f44638bd1c28e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddTime</b> (float time)</td></tr>
+<tr class="memitem:a93198c4a370238845e1f44638bd1c28e inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a93198c4a370238845e1f44638bd1c28e">AddTime</a> (float time)</td></tr>
+<tr class="memdesc:a93198c4a370238845e1f44638bd1c28e inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add time to the clock.  <a href="class_abstract_game_director.html#a93198c4a370238845e1f44638bd1c28e">More...</a><br /></td></tr>
 <tr class="separator:a93198c4a370238845e1f44638bd1c28e inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac32017639e3b08a1514f3e7967a67616 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ac32017639e3b08a1514f3e7967a67616"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SubtractTime</b> (float time)</td></tr>
+<tr class="memitem:ac32017639e3b08a1514f3e7967a67616 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ac32017639e3b08a1514f3e7967a67616">SubtractTime</a> (float time)</td></tr>
+<tr class="memdesc:ac32017639e3b08a1514f3e7967a67616 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take off time from the clock.  <a href="class_abstract_game_director.html#ac32017639e3b08a1514f3e7967a67616">More...</a><br /></td></tr>
 <tr class="separator:ac32017639e3b08a1514f3e7967a67616 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23a1e6727a8c7032276c8b2d127f10f5 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a23a1e6727a8c7032276c8b2d127f10f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StartTimer</b> ()</td></tr>
+<tr class="memitem:a23a1e6727a8c7032276c8b2d127f10f5 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a23a1e6727a8c7032276c8b2d127f10f5">StartTimer</a> ()</td></tr>
+<tr class="memdesc:a23a1e6727a8c7032276c8b2d127f10f5 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the clock countdown.  <a href="class_abstract_game_director.html#a23a1e6727a8c7032276c8b2d127f10f5">More...</a><br /></td></tr>
 <tr class="separator:a23a1e6727a8c7032276c8b2d127f10f5 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab58372ce7c31d2812090a15b2dd6f110 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ab58372ce7c31d2812090a15b2dd6f110"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StopTimer</b> ()</td></tr>
+<tr class="memitem:ab58372ce7c31d2812090a15b2dd6f110 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ab58372ce7c31d2812090a15b2dd6f110">StopTimer</a> ()</td></tr>
+<tr class="memdesc:ab58372ce7c31d2812090a15b2dd6f110 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the clock countdown.  <a href="class_abstract_game_director.html#ab58372ce7c31d2812090a15b2dd6f110">More...</a><br /></td></tr>
 <tr class="separator:ab58372ce7c31d2812090a15b2dd6f110 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad44da1bb214765d12c3e0ee117d9f91e inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ad44da1bb214765d12c3e0ee117d9f91e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMonsterCreator</b> (<a class="el" href="class_monster_creator.html">MonsterCreator</a> creator)</td></tr>
-<tr class="separator:ad44da1bb214765d12c3e0ee117d9f91e inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a022ac19739cdca747f29c8fd554be8c1 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a022ac19739cdca747f29c8fd554be8c1"></a>
-<a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CreatePlayerMonster</b> ()</td></tr>
-<tr class="separator:a022ac19739cdca747f29c8fd554be8c1 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782cc2008861f3a0474ac67a5cde3749 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a782cc2008861f3a0474ac67a5cde3749"></a>
-<a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CreatePlayerMonster</b> (Transform pos)</td></tr>
-<tr class="separator:a782cc2008861f3a0474ac67a5cde3749 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf15799bbba6c57333948242d97e35b7 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="abf15799bbba6c57333948242d97e35b7"></a>
-<a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CreateMonster</b> (DataType.MonsterType typeOfMonster, Transform pos)</td></tr>
-<tr class="separator:abf15799bbba6c57333948242d97e35b7 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2dfe85a4930bc5532d4b13027e44fc inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a9f2dfe85a4930bc5532d4b13027e44fc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateScore</b> ()</td></tr>
+<tr class="memitem:a9f2dfe85a4930bc5532d4b13027e44fc inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a9f2dfe85a4930bc5532d4b13027e44fc">UpdateScore</a> ()</td></tr>
+<tr class="memdesc:a9f2dfe85a4930bc5532d4b13027e44fc inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the score for the score gauge.  <a href="class_abstract_game_director.html#a9f2dfe85a4930bc5532d4b13027e44fc">More...</a><br /></td></tr>
 <tr class="separator:a9f2dfe85a4930bc5532d4b13027e44fc inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44da1bb214765d12c3e0ee117d9f91e inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ad44da1bb214765d12c3e0ee117d9f91e">SetMonsterCreator</a> (<a class="el" href="class_monster_creator.html">MonsterCreator</a> creator)</td></tr>
+<tr class="memdesc:ad44da1bb214765d12c3e0ee117d9f91e inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="class_monster.html">Monster</a> Creator for the GameDirector to use.  <a href="class_abstract_game_director.html#ad44da1bb214765d12c3e0ee117d9f91e">More...</a><br /></td></tr>
+<tr class="separator:ad44da1bb214765d12c3e0ee117d9f91e inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022ac19739cdca747f29c8fd554be8c1 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a022ac19739cdca747f29c8fd554be8c1">CreatePlayerMonster</a> ()</td></tr>
+<tr class="memdesc:a022ac19739cdca747f29c8fd554be8c1 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a monster based on the selected player monster type and at the <a class="el" href="class_monster.html">Monster</a> Creator position.  <a href="class_abstract_game_director.html#a022ac19739cdca747f29c8fd554be8c1">More...</a><br /></td></tr>
+<tr class="separator:a022ac19739cdca747f29c8fd554be8c1 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36edfbd78ba652ea68fd4a6a05914695 inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a36edfbd78ba652ea68fd4a6a05914695">CreatePlayerMonster</a> (Transform selectedTransform)</td></tr>
+<tr class="memdesc:a36edfbd78ba652ea68fd4a6a05914695 inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a monster based on the selected player monster type at the specified transform.  <a href="class_abstract_game_director.html#a36edfbd78ba652ea68fd4a6a05914695">More...</a><br /></td></tr>
+<tr class="separator:a36edfbd78ba652ea68fd4a6a05914695 inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ee32a8d80d0f1fd36dee9f1573eedb inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ac4ee32a8d80d0f1fd36dee9f1573eedb">CreateMonster</a> (DataType.MonsterType typeOfMonster, Transform selectedTransform)</td></tr>
+<tr class="memdesc:ac4ee32a8d80d0f1fd36dee9f1573eedb inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a monster based on the selected monster type and at the specified transform.  <a href="class_abstract_game_director.html#ac4ee32a8d80d0f1fd36dee9f1573eedb">More...</a><br /></td></tr>
+<tr class="separator:ac4ee32a8d80d0f1fd36dee9f1573eedb inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2866651136c881a2f7bdbed333d19f inherit pub_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ace2866651136c881a2f7bdbed333d19f">PlayVoiceover</a> (string voiceoverName)</td></tr>
+<tr class="memdesc:ace2866651136c881a2f7bdbed333d19f inherit pub_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the specified voiceover from the voiceover data by matching with the string parameter.  <a href="class_abstract_game_director.html#ace2866651136c881a2f7bdbed333d19f">More...</a><br /></td></tr>
+<tr class="separator:ace2866651136c881a2f7bdbed333d19f inherit pub_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -209,6 +213,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
 <tr class="memitem:ab0729484fb015318617ea888f683ef2c inherit pub_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ab0729484fb015318617ea888f683ef2c"></a>
 <a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><b>playerMonster</b></td></tr>
 <tr class="separator:ab0729484fb015318617ea888f683ef2c inherit pub_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8b8fd15fb18b45f926afa212fff60a inherit pub_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="aca8b8fd15fb18b45f926afa212fff60a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTutorialRunning</b></td></tr>
+<tr class="separator:aca8b8fd15fb18b45f926afa212fff60a inherit pub_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc82b488fb21a9e7aa9b6b771f037a2 inherit pub_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a8dc82b488fb21a9e7aa9b6b771f037a2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>inputAllowed</b></td></tr>
 <tr class="separator:a8dc82b488fb21a9e7aa9b6b771f037a2 inherit pub_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,9 +223,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>inputAllowed</b></td>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_abstract_game_director"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_abstract_game_director')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_abstract_game_director.html">AbstractGameDirector&lt; MonsterBasketGameManager &gt;</a></td></tr>
+<tr class="memitem:ace50223ea655c2259c4daf94537995c8 inherit pro_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ace50223ea655c2259c4daf94537995c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnable</b> ()</td></tr>
+<tr class="separator:ace50223ea655c2259c4daf94537995c8 inherit pro_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e85024c346407fe0c7ad7a2577826d inherit pro_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a33e85024c346407fe0c7ad7a2577826d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisable</b> ()</td></tr>
+<tr class="separator:a33e85024c346407fe0c7ad7a2577826d inherit pro_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b161af4334cbd212cc18fff5d4ca5d inherit pro_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a35b161af4334cbd212cc18fff5d4ca5d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
 <tr class="separator:a35b161af4334cbd212cc18fff5d4ca5d inherit pro_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8e9cf077fef45922dfcf20380298ac inherit pro_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a1a8e9cf077fef45922dfcf20380298ac">SetScoreGoal</a> (int score)</td></tr>
+<tr class="memdesc:a1a8e9cf077fef45922dfcf20380298ac inherit pro_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setting the time limit on the clock.  <a href="class_abstract_game_director.html#a1a8e9cf077fef45922dfcf20380298ac">More...</a><br /></td></tr>
+<tr class="separator:a1a8e9cf077fef45922dfcf20380298ac inherit pro_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673462245d0f10fd1f095d521f20ac12 inherit pro_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a673462245d0f10fd1f095d521f20ac12">OutOfTime</a> ()</td></tr>
+<tr class="memdesc:a673462245d0f10fd1f095d521f20ac12 inherit pro_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the timer runs out, raise an out of time event for any listeners.  <a href="class_abstract_game_director.html#a673462245d0f10fd1f095d521f20ac12">More...</a><br /></td></tr>
+<tr class="separator:a673462245d0f10fd1f095d521f20ac12 inherit pro_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfbd70c72cfd4d3a029bf3f96ad1ad3 inherit pro_methods_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a2cfbd70c72cfd4d3a029bf3f96ad1ad3">OnScore</a> (<a class="el" href="class_monstralia_1_1_events_1_1_player___score___event.html">Player_Score_Event</a> scoreEvent)</td></tr>
+<tr class="memdesc:a2cfbd70c72cfd4d3a029bf3f96ad1ad3 inherit pro_methods_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event bound If a script raises a Player_Score_Event anywhere, this function will be executed and any attributes can be accessed in the parameter object.  <a href="class_abstract_game_director.html#a2cfbd70c72cfd4d3a029bf3f96ad1ad3">More...</a><br /></td></tr>
+<tr class="separator:a2cfbd70c72cfd4d3a029bf3f96ad1ad3 inherit pro_methods_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_abstract_game_director"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_abstract_game_director')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_abstract_game_director.html">AbstractGameDirector&lt; MonsterBasketGameManager &gt;</a></td></tr>
 <tr class="memitem:aef8bf5f1ffce790db04529ecbe08d970 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="aef8bf5f1ffce790db04529ecbe08d970"></a>
 DataType.Minigame&#160;</td><td class="memItemRight" valign="bottom"><b>typeOfGame</b></td></tr>
@@ -226,21 +248,33 @@ DataType.Minigame&#160;</td><td class="memItemRight" valign="bottom"><b>typeOfGa
 <tr class="memitem:a4d7ec50299457532742de4e1d183590a inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a4d7ec50299457532742de4e1d183590a"></a>
 DataType.IslandSection&#160;</td><td class="memItemRight" valign="bottom"><b>typeOfIsland</b></td></tr>
 <tr class="separator:a4d7ec50299457532742de4e1d183590a inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b26816706c247ba39de7093ddfd08c inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a25b26816706c247ba39de7093ddfd08c"></a>
+<a class="el" href="class_abstract_tutorial_manager.html">AbstractTutorialManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tutorialManager</b></td></tr>
+<tr class="separator:a25b26816706c247ba39de7093ddfd08c inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad488b1e5911b1baeba02ea46aa03d068 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ad488b1e5911b1baeba02ea46aa03d068"></a>
+<a class="el" href="class_meter.html">Meter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scoreMeter</b></td></tr>
+<tr class="separator:ad488b1e5911b1baeba02ea46aa03d068 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a693382d8baee6d0c9c3049f313570c inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a5a693382d8baee6d0c9c3049f313570c"></a>
 <a class="el" href="class_voice_overs_data.html">VoiceOversData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>voiceOverData</b></td></tr>
 <tr class="separator:a5a693382d8baee6d0c9c3049f313570c inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa36140669ce297c492155b7fae94f474 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="aa36140669ce297c492155b7fae94f474"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>fadeOutLoadingScreenOnStart</b></td></tr>
-<tr class="separator:aa36140669ce297c492155b7fae94f474 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae507e3e0873ce367f614d7584f30dfb1 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ae507e3e0873ce367f614d7584f30dfb1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>randomizeMusic</b></td></tr>
 <tr class="separator:ae507e3e0873ce367f614d7584f30dfb1 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13556d9769bff8d4b173534dfc965b1c inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a13556d9769bff8d4b173534dfc965b1c"></a>
 AudioClip[]&#160;</td><td class="memItemRight" valign="bottom"><b>backgroundMusicArray</b></td></tr>
 <tr class="separator:a13556d9769bff8d4b173534dfc965b1c inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed8770a3ca490d1846229307a33a99c inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a9ed8770a3ca490d1846229307a33a99c"></a>
+AudioClip&#160;</td><td class="memItemRight" valign="bottom"><b>ambientSound</b></td></tr>
+<tr class="separator:a9ed8770a3ca490d1846229307a33a99c inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36140669ce297c492155b7fae94f474 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="aa36140669ce297c492155b7fae94f474"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>fadeOutLoadingScreenOnStart</b></td></tr>
+<tr class="separator:aa36140669ce297c492155b7fae94f474 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae61ec9877f4fc643c4536d26ad46989f inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ae61ec9877f4fc643c4536d26ad46989f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>skipTutorial</b></td></tr>
 <tr class="separator:ae61ec9877f4fc643c4536d26ad46989f inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1c065815674d548f6335cd0f485abd inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a6f1c065815674d548f6335cd0f485abd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>skipCountdown</b></td></tr>
+<tr class="separator:a6f1c065815674d548f6335cd0f485abd inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8734a9d0eaa58fab3b191dfe1dca5a7 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="ad8734a9d0eaa58fab3b191dfe1dca5a7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>selectLevelFromEditorForDebug</b></td></tr>
 <tr class="separator:ad8734a9d0eaa58fab3b191dfe1dca5a7 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,12 +296,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>score</b></td></tr>
 <tr class="memitem:a1aa6accaf21e87603a445e3dfc990dd4 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a1aa6accaf21e87603a445e3dfc990dd4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>scoreGoal</b></td></tr>
 <tr class="separator:a1aa6accaf21e87603a445e3dfc990dd4 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d4cc584d371bf6d3d72a8f5d39657e inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a34d4cc584d371bf6d3d72a8f5d39657e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>timeRemaining</b></td></tr>
+<tr class="separator:a34d4cc584d371bf6d3d72a8f5d39657e inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f1e9986a1e8a1b35eaa79f9599a738a inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a8f1e9986a1e8a1b35eaa79f9599a738a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasGameStarted</b></td></tr>
 <tr class="separator:a8f1e9986a1e8a1b35eaa79f9599a738a inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a417b9a061a30f526f378bdd02a213eb9 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a417b9a061a30f526f378bdd02a213eb9"></a>
 DataType.GameEnd&#160;</td><td class="memItemRight" valign="bottom"><b>typeOfEnd</b></td></tr>
 <tr class="separator:a417b9a061a30f526f378bdd02a213eb9 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b33818ea6afd040e4482dac61ad4baf inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a9b33818ea6afd040e4482dac61ad4baf"></a>
+<a class="el" href="class_monstralia_1_1_events_1_1_time___event.html">Time_Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timeEvent</b></td></tr>
+<tr class="separator:a9b33818ea6afd040e4482dac61ad4baf inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e366342e8df1695696b1f262f3333f9 inherit pro_attribs_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a id="a1e366342e8df1695696b1f262f3333f9"></a>
 <a class="el" href="class_score_gauge.html">ScoreGauge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scoreGauge</b></td></tr>
 <tr class="separator:a1e366342e8df1695696b1f262f3333f9 inherit pro_attribs_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,7 +322,7 @@ TimerClock&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td><
 static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code> [get]</code></td></tr>
 <tr class="separator:a6cbd46498839109887c629fc1e0de60e inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2413fb04268c6922224d087a0e146dcc inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_monster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#a2413fb04268c6922224d087a0e146dcc">PlayerMonster</a><code> [get]</code></td></tr>
-<tr class="memdesc:a2413fb04268c6922224d087a0e146dcc inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the player's monster created from CreatePlayerMonster() or a monster manually set by the programmer.  <a href="class_abstract_game_director.html#a2413fb04268c6922224d087a0e146dcc">More...</a><br /></td></tr>
+<tr class="memdesc:a2413fb04268c6922224d087a0e146dcc inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the player's monster created from <a class="el" href="class_abstract_game_director.html#a022ac19739cdca747f29c8fd554be8c1" title="Creates a monster based on the selected player monster type and at the Monster Creator position.">CreatePlayerMonster()</a> or a monster manually set by the programmer.  <a href="class_abstract_game_director.html#a2413fb04268c6922224d087a0e146dcc">More...</a><br /></td></tr>
 <tr class="separator:a2413fb04268c6922224d087a0e146dcc inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adce27ad137db1ca012ac4f6fd7f5824c inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_voice_overs_data.html">VoiceOversData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#adce27ad137db1ca012ac4f6fd7f5824c">VoiceOverData</a><code> [get]</code></td></tr>
 <tr class="memdesc:adce27ad137db1ca012ac4f6fd7f5824c inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a dictionary-like array of voice over clips that can be referenced by name.  <a href="class_abstract_game_director.html#adce27ad137db1ca012ac4f6fd7f5824c">More...</a><br /></td></tr>
@@ -296,12 +336,15 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 <tr class="memitem:aeb898f964486a04e920a0c1f17bab019 inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#aeb898f964486a04e920a0c1f17bab019">Level</a><code> [get]</code></td></tr>
 <tr class="memdesc:aeb898f964486a04e920a0c1f17bab019 inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current level the current game is on. Only returns 1, 2, or 3.  <a href="class_abstract_game_director.html#aeb898f964486a04e920a0c1f17bab019">More...</a><br /></td></tr>
 <tr class="separator:aeb898f964486a04e920a0c1f17bab019 inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac574ff8d5e97f0edfe7c39b1c26e45f3 inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ac574ff8d5e97f0edfe7c39b1c26e45f3">IsTutorialNeeded</a><code> [get]</code></td></tr>
-<tr class="memdesc:ac574ff8d5e97f0edfe7c39b1c26e45f3 inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks <a class="el" href="class_game_manager.html">GameManager</a> if the player needs a tutorial for the current game.  <a href="class_abstract_game_director.html#ac574ff8d5e97f0edfe7c39b1c26e45f3">More...</a><br /></td></tr>
-<tr class="separator:ac574ff8d5e97f0edfe7c39b1c26e45f3 inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec7c8c622886543512dacd4f0bacfb6e inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#aec7c8c622886543512dacd4f0bacfb6e">DidPlayerReachScoreGoal</a><code> [get]</code></td></tr>
 <tr class="memdesc:aec7c8c622886543512dacd4f0bacfb6e inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns a boolean by checking if the score is greater than or equal to the goal.  <a href="class_abstract_game_director.html#aec7c8c622886543512dacd4f0bacfb6e">More...</a><br /></td></tr>
 <tr class="separator:aec7c8c622886543512dacd4f0bacfb6e inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac574ff8d5e97f0edfe7c39b1c26e45f3 inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ac574ff8d5e97f0edfe7c39b1c26e45f3">IsTutorialNeeded</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac574ff8d5e97f0edfe7c39b1c26e45f3 inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks <a class="el" href="class_game_manager.html">GameManager</a> if the player needs a tutorial for the current game.  <a href="class_abstract_game_director.html#ac574ff8d5e97f0edfe7c39b1c26e45f3">More...</a><br /></td></tr>
+<tr class="separator:ac574ff8d5e97f0edfe7c39b1c26e45f3 inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae189ad8a44a71e39e31627c44be82920 inherit properties_class_abstract_game_director"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_game_director.html#ae189ad8a44a71e39e31627c44be82920">IsTutorialRunning</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae189ad8a44a71e39e31627c44be82920 inherit properties_class_abstract_game_director"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a tutorial is running. This is for reading isTutorialRunning publicly.  <a href="class_abstract_game_director.html#ae189ad8a44a71e39e31627c44be82920">More...</a><br /></td></tr>
+<tr class="separator:ae189ad8a44a71e39e31627c44be82920 inherit properties_class_abstract_game_director"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab6bcfa4877553e24dc4f9bc9ce4c5027"></a>
@@ -334,7 +377,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Scripts/Monstralia/MainframeMountain/MonsterBasket/MonsterBasketGameManager.cs</li>
+<li>Assets/Scripts/Monstralia/MainframeMountain/MonsterBasket/MonsterBasketGameManager.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

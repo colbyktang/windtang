@@ -24,7 +24,7 @@ void \mbox{\hyperlink{class_abstract_game_director_a9267b46fbf6a3d24ddf9c5669b6b
 virtual void \mbox{\hyperlink{class_abstract_game_director_a84dc6945f8cd929a27811d488a30e554}{Fail\+Game}} ()
 \begin{DoxyCompactList}\small\item\em Player did not reach score goal. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_abstract_game_director_aedbc571ff72f7991956f23eabe6a5c6c}{Complete\+Game}} ()
-\begin{DoxyCompactList}\small\item\em Player reached score goal and will earn a sticker depending on whether or not they have it already. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if player reached the score goal. If so, player will earn a sticker depending on whether or not they have it already. Else, the player failed the level. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_abstract_game_director_a356310d52458cbe6904f68d73714030c}{Finish\+Game}} (Data\+Type.\+Game\+End type\+Of\+End)
 \begin{DoxyCompactList}\small\item\em Ends the game and notifies \mbox{\hyperlink{class_game_manager}{Game\+Manager}} of game completion. Call \mbox{\hyperlink{class_abstract_game_director_a84dc6945f8cd929a27811d488a30e554}{Fail\+Game()}} or \mbox{\hyperlink{class_abstract_game_director_aedbc571ff72f7991956f23eabe6a5c6c}{Complete\+Game()}} instead, unless you\textquotesingle{}re looking for more control of the game ending. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_abstract_game_director_a48bbd68c6e7a6b7599ac73ed29fa579b}{Complete\+Tutorial}} ()
@@ -36,39 +36,35 @@ void \mbox{\hyperlink{class_abstract_game_director_a48bbd68c6e7a6b7599ac73ed29fa
 \mbox{\hyperlink{class_end_screen}{End\+Screen}} \mbox{\hyperlink{class_abstract_game_director_a989da1744c1a6419c2bf482c1d6ab021}{Create\+End\+Screen}} ()
 \begin{DoxyCompactList}\small\item\em Show an end screen popup based on the current game and current state of the game. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_abstract_game_director_aa0cd7da08cfe07ff911370bc46400788}{Set\+Time\+Limit}} (float time\+Limit)
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_a93198c4a370238845e1f44638bd1c28e}\label{class_abstract_game_director_a93198c4a370238845e1f44638bd1c28e}} 
-void {\bfseries Add\+Time} (float time)
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_ac32017639e3b08a1514f3e7967a67616}\label{class_abstract_game_director_ac32017639e3b08a1514f3e7967a67616}} 
-void {\bfseries Subtract\+Time} (float time)
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_a23a1e6727a8c7032276c8b2d127f10f5}\label{class_abstract_game_director_a23a1e6727a8c7032276c8b2d127f10f5}} 
-void {\bfseries Start\+Timer} ()
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_ab58372ce7c31d2812090a15b2dd6f110}\label{class_abstract_game_director_ab58372ce7c31d2812090a15b2dd6f110}} 
-void {\bfseries Stop\+Timer} ()
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_ad44da1bb214765d12c3e0ee117d9f91e}\label{class_abstract_game_director_ad44da1bb214765d12c3e0ee117d9f91e}} 
-void {\bfseries Set\+Monster\+Creator} (\mbox{\hyperlink{class_monster_creator}{Monster\+Creator}} creator)
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}\label{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}} 
-\mbox{\hyperlink{class_monster}{Monster}} {\bfseries Create\+Player\+Monster} ()
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_a782cc2008861f3a0474ac67a5cde3749}\label{class_abstract_game_director_a782cc2008861f3a0474ac67a5cde3749}} 
-\mbox{\hyperlink{class_monster}{Monster}} {\bfseries Create\+Player\+Monster} (Transform pos)
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_abf15799bbba6c57333948242d97e35b7}\label{class_abstract_game_director_abf15799bbba6c57333948242d97e35b7}} 
-\mbox{\hyperlink{class_monster}{Monster}} {\bfseries Create\+Monster} (Data\+Type.\+Monster\+Type type\+Of\+Monster, Transform pos)
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_a9f2dfe85a4930bc5532d4b13027e44fc}\label{class_abstract_game_director_a9f2dfe85a4930bc5532d4b13027e44fc}} 
-void {\bfseries Update\+Score} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Setting the time limit on the clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_a93198c4a370238845e1f44638bd1c28e}{Add\+Time}} (float time)
+\begin{DoxyCompactList}\small\item\em Add time to the clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_ac32017639e3b08a1514f3e7967a67616}{Subtract\+Time}} (float time)
+\begin{DoxyCompactList}\small\item\em Take off time from the clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_a23a1e6727a8c7032276c8b2d127f10f5}{Start\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Starts the clock countdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_ab58372ce7c31d2812090a15b2dd6f110}{Stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Stops the clock countdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_a9f2dfe85a4930bc5532d4b13027e44fc}{Update\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Sets the score for the score gauge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_ad44da1bb214765d12c3e0ee117d9f91e}{Set\+Monster\+Creator}} (\mbox{\hyperlink{class_monster_creator}{Monster\+Creator}} creator)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{class_monster}{Monster}} Creator for the Game\+Director to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}{Create\+Player\+Monster}} ()
+\begin{DoxyCompactList}\small\item\em Creates a monster based on the selected player monster type and at the \mbox{\hyperlink{class_monster}{Monster}} Creator position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director_a36edfbd78ba652ea68fd4a6a05914695}{Create\+Player\+Monster}} (Transform selected\+Transform)
+\begin{DoxyCompactList}\small\item\em Creates a monster based on the selected player monster type at the specified transform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director_ac4ee32a8d80d0f1fd36dee9f1573eedb}{Create\+Monster}} (Data\+Type.\+Monster\+Type type\+Of\+Monster, Transform selected\+Transform)
+\begin{DoxyCompactList}\small\item\em Creates a monster based on the selected monster type and at the specified transform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abstract_game_director_ace2866651136c881a2f7bdbed333d19f}{Play\+Voiceover}} (string voiceover\+Name)
+\begin{DoxyCompactList}\small\item\em Plays the specified voiceover from the voiceover data by matching with the string parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_abstract_game_director_ab0729484fb015318617ea888f683ef2c}\label{class_abstract_game_director_ab0729484fb015318617ea888f683ef2c}} 
 \mbox{\hyperlink{class_monster}{Monster}} {\bfseries player\+Monster}
+\item 
+\mbox{\Hypertarget{class_abstract_game_director_aca8b8fd15fb18b45f926afa212fff60a}\label{class_abstract_game_director_aca8b8fd15fb18b45f926afa212fff60a}} 
+bool {\bfseries is\+Tutorial\+Running} = false
 \item 
 \mbox{\Hypertarget{class_abstract_game_director_a8dc82b488fb21a9e7aa9b6b771f037a2}\label{class_abstract_game_director_a8dc82b488fb21a9e7aa9b6b771f037a2}} 
 bool {\bfseries input\+Allowed} = false
@@ -76,9 +72,21 @@ bool {\bfseries input\+Allowed} = false
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_abstract_game_director_ace50223ea655c2259c4daf94537995c8}\label{class_abstract_game_director_ace50223ea655c2259c4daf94537995c8}} 
+void {\bfseries On\+Enable} ()
+\item 
+\mbox{\Hypertarget{class_abstract_game_director_a33e85024c346407fe0c7ad7a2577826d}\label{class_abstract_game_director_a33e85024c346407fe0c7ad7a2577826d}} 
+void {\bfseries On\+Disable} ()
+\item 
 \mbox{\Hypertarget{class_abstract_game_director_a35b161af4334cbd212cc18fff5d4ca5d}\label{class_abstract_game_director_a35b161af4334cbd212cc18fff5d4ca5d}} 
 void {\bfseries Start} ()
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_abstract_game_director_a1a8e9cf077fef45922dfcf20380298ac}{Set\+Score\+Goal}} (int score)
+\begin{DoxyCompactList}\small\item\em Setting the time limit on the clock. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_abstract_game_director_a673462245d0f10fd1f095d521f20ac12}{Out\+Of\+Time}} ()
+\begin{DoxyCompactList}\small\item\em When the timer runs out, raise an out of time event for any listeners. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_abstract_game_director_a2cfbd70c72cfd4d3a029bf3f96ad1ad3}{On\+Score}} (\mbox{\hyperlink{class_monstralia_1_1_events_1_1_player___score___event}{Player\+\_\+\+Score\+\_\+\+Event}} score\+Event)
+\begin{DoxyCompactList}\small\item\em Event bound If a script raises a Player\+\_\+\+Score\+\_\+\+Event anywhere, this function will be executed and any attributes can be accessed in the parameter object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -88,11 +96,14 @@ Data\+Type.\+Minigame {\bfseries type\+Of\+Game}
 \mbox{\Hypertarget{class_abstract_game_director_a4d7ec50299457532742de4e1d183590a}\label{class_abstract_game_director_a4d7ec50299457532742de4e1d183590a}} 
 Data\+Type.\+Island\+Section {\bfseries type\+Of\+Island}
 \item 
+\mbox{\Hypertarget{class_abstract_game_director_a25b26816706c247ba39de7093ddfd08c}\label{class_abstract_game_director_a25b26816706c247ba39de7093ddfd08c}} 
+\mbox{\hyperlink{class_abstract_tutorial_manager}{Abstract\+Tutorial\+Manager}} {\bfseries tutorial\+Manager}
+\item 
+\mbox{\Hypertarget{class_abstract_game_director_ad488b1e5911b1baeba02ea46aa03d068}\label{class_abstract_game_director_ad488b1e5911b1baeba02ea46aa03d068}} 
+\mbox{\hyperlink{class_meter}{Meter}} {\bfseries score\+Meter}
+\item 
 \mbox{\Hypertarget{class_abstract_game_director_a5a693382d8baee6d0c9c3049f313570c}\label{class_abstract_game_director_a5a693382d8baee6d0c9c3049f313570c}} 
 \mbox{\hyperlink{class_voice_overs_data}{Voice\+Overs\+Data}} {\bfseries voice\+Over\+Data}
-\item 
-\mbox{\Hypertarget{class_abstract_game_director_aa36140669ce297c492155b7fae94f474}\label{class_abstract_game_director_aa36140669ce297c492155b7fae94f474}} 
-bool {\bfseries fade\+Out\+Loading\+Screen\+On\+Start} = true
 \item 
 \mbox{\Hypertarget{class_abstract_game_director_ae507e3e0873ce367f614d7584f30dfb1}\label{class_abstract_game_director_ae507e3e0873ce367f614d7584f30dfb1}} 
 bool {\bfseries randomize\+Music} = true
@@ -100,8 +111,17 @@ bool {\bfseries randomize\+Music} = true
 \mbox{\Hypertarget{class_abstract_game_director_a13556d9769bff8d4b173534dfc965b1c}\label{class_abstract_game_director_a13556d9769bff8d4b173534dfc965b1c}} 
 Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries background\+Music\+Array}
 \item 
+\mbox{\Hypertarget{class_abstract_game_director_a9ed8770a3ca490d1846229307a33a99c}\label{class_abstract_game_director_a9ed8770a3ca490d1846229307a33a99c}} 
+Audio\+Clip {\bfseries ambient\+Sound}
+\item 
+\mbox{\Hypertarget{class_abstract_game_director_aa36140669ce297c492155b7fae94f474}\label{class_abstract_game_director_aa36140669ce297c492155b7fae94f474}} 
+bool {\bfseries fade\+Out\+Loading\+Screen\+On\+Start} = true
+\item 
 \mbox{\Hypertarget{class_abstract_game_director_ae61ec9877f4fc643c4536d26ad46989f}\label{class_abstract_game_director_ae61ec9877f4fc643c4536d26ad46989f}} 
 bool {\bfseries skip\+Tutorial} = false
+\item 
+\mbox{\Hypertarget{class_abstract_game_director_a6f1c065815674d548f6335cd0f485abd}\label{class_abstract_game_director_a6f1c065815674d548f6335cd0f485abd}} 
+bool {\bfseries skip\+Countdown} = false
 \item 
 \mbox{\Hypertarget{class_abstract_game_director_ad8734a9d0eaa58fab3b191dfe1dca5a7}\label{class_abstract_game_director_ad8734a9d0eaa58fab3b191dfe1dca5a7}} 
 bool {\bfseries select\+Level\+From\+Editor\+For\+Debug} = false
@@ -124,11 +144,17 @@ int {\bfseries score} = 0
 \mbox{\Hypertarget{class_abstract_game_director_a1aa6accaf21e87603a445e3dfc990dd4}\label{class_abstract_game_director_a1aa6accaf21e87603a445e3dfc990dd4}} 
 int {\bfseries score\+Goal} = 10
 \item 
+\mbox{\Hypertarget{class_abstract_game_director_a34d4cc584d371bf6d3d72a8f5d39657e}\label{class_abstract_game_director_a34d4cc584d371bf6d3d72a8f5d39657e}} 
+float {\bfseries time\+Remaining}
+\item 
 \mbox{\Hypertarget{class_abstract_game_director_a8f1e9986a1e8a1b35eaa79f9599a738a}\label{class_abstract_game_director_a8f1e9986a1e8a1b35eaa79f9599a738a}} 
 bool {\bfseries has\+Game\+Started}
 \item 
 \mbox{\Hypertarget{class_abstract_game_director_a417b9a061a30f526f378bdd02a213eb9}\label{class_abstract_game_director_a417b9a061a30f526f378bdd02a213eb9}} 
 Data\+Type.\+Game\+End {\bfseries type\+Of\+End} = Data\+Type.\+Game\+End.\+Failed\+Level
+\item 
+\mbox{\Hypertarget{class_abstract_game_director_a9b33818ea6afd040e4482dac61ad4baf}\label{class_abstract_game_director_a9b33818ea6afd040e4482dac61ad4baf}} 
+\mbox{\hyperlink{class_monstralia_1_1_events_1_1_time___event}{Time\+\_\+\+Event}} {\bfseries time\+Event} = new \mbox{\hyperlink{class_monstralia_1_1_events_1_1_time___event}{Time\+\_\+\+Event}}()
 \item 
 \mbox{\Hypertarget{class_abstract_game_director_a1e366342e8df1695696b1f262f3333f9}\label{class_abstract_game_director_a1e366342e8df1695696b1f262f3333f9}} 
 \mbox{\hyperlink{class_score_gauge}{Score\+Gauge}} {\bfseries score\+Gauge}
@@ -146,7 +172,7 @@ Timer\+Clock {\bfseries timer}
 static T {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
 \mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director_a2413fb04268c6922224d087a0e146dcc}{Player\+Monster}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s monster created from Create\+Player\+Monster() or a monster manually set by the programmer. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s monster created from \mbox{\hyperlink{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}{Create\+Player\+Monster()}} or a monster manually set by the programmer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_voice_overs_data}{Voice\+Overs\+Data}} \mbox{\hyperlink{class_abstract_game_director_adce27ad137db1ca012ac4f6fd7f5824c}{Voice\+Over\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Contains a dictionary-\/like array of voice over clips that can be referenced by name. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_abstract_game_director_a6042b1aefa01d6b8bd90894395020d59}{Has\+Game\+Started}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
@@ -155,10 +181,12 @@ float \mbox{\hyperlink{class_abstract_game_director_a154a05b8fc65415b468761be472
 \begin{DoxyCompactList}\small\item\em A shortcut getter function that asks the Timer\+Clock script how much time is left in the game. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_abstract_game_director_aeb898f964486a04e920a0c1f17bab019}{Level}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Returns the current level the current game is on. Only returns 1, 2, or 3. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_abstract_game_director_aec7c8c622886543512dacd4f0bacfb6e}{Did\+Player\+Reach\+Score\+Goal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Calculates and returns a boolean by checking if the score is greater than or equal to the goal. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_abstract_game_director_ac574ff8d5e97f0edfe7c39b1c26e45f3}{Is\+Tutorial\+Needed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Asks \mbox{\hyperlink{class_game_manager}{Game\+Manager}} if the player needs a tutorial for the current game. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_abstract_game_director_aec7c8c622886543512dacd4f0bacfb6e}{Did\+Player\+Reach\+Score\+Goal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Calculates and returns a boolean by checking if the score is greater than or equal to the goal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_abstract_game_director_ae189ad8a44a71e39e31627c44be82920}{Is\+Tutorial\+Running}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if a tutorial is running. This is for reading is\+Tutorial\+Running publicly. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -176,6 +204,21 @@ A critical component to inherit from to create Game Directors. Cannot be used by
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abstract_game_director_a93198c4a370238845e1f44638bd1c28e}\label{class_abstract_game_director_a93198c4a370238845e1f44638bd1c28e}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!AddTime@{AddTime}}
+\index{AddTime@{AddTime}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddTime()}{AddTime()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Add\+Time (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+
+
+Add time to the clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_abstract_game_director_aedbc571ff72f7991956f23eabe6a5c6c}\label{class_abstract_game_director_aedbc571ff72f7991956f23eabe6a5c6c}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!CompleteGame@{CompleteGame}}
 \index{CompleteGame@{CompleteGame}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
@@ -184,7 +227,7 @@ A critical component to inherit from to create Game Directors. Cannot be used by
 
 
 
-Player reached score goal and will earn a sticker depending on whether or not they have it already. 
+Check if player reached the score goal. If so, player will earn a sticker depending on whether or not they have it already. Else, the player failed the level. 
 
 \mbox{\Hypertarget{class_abstract_game_director_a48bbd68c6e7a6b7599ac73ed29fa579b}\label{class_abstract_game_director_a48bbd68c6e7a6b7599ac73ed29fa579b}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!CompleteTutorial@{CompleteTutorial}}
@@ -245,7 +288,58 @@ Instantiates an end screen prefab.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+Reference to the Endscreen object.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_abstract_game_director_ac4ee32a8d80d0f1fd36dee9f1573eedb}\label{class_abstract_game_director_ac4ee32a8d80d0f1fd36dee9f1573eedb}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!CreateMonster@{CreateMonster}}
+\index{CreateMonster@{CreateMonster}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateMonster()}{CreateMonster()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Create\+Monster (\begin{DoxyParamCaption}\item[{Data\+Type.\+Monster\+Type}]{type\+Of\+Monster,  }\item[{Transform}]{selected\+Transform }\end{DoxyParamCaption})}
 
+
+
+Creates a monster based on the selected monster type and at the specified transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Of\+Monster} & The position.\\
+\hline
+{\em selected\+Transform} & The transform to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created monster\textquotesingle{}s \mbox{\hyperlink{class_monster}{Monster}} component.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}\label{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!CreatePlayerMonster@{CreatePlayerMonster}}
+\index{CreatePlayerMonster@{CreatePlayerMonster}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreatePlayerMonster()}{CreatePlayerMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Create\+Player\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a monster based on the selected player monster type and at the \mbox{\hyperlink{class_monster}{Monster}} Creator position. 
+
+\begin{DoxyReturn}{Returns}
+The created monster\textquotesingle{}s \mbox{\hyperlink{class_monster}{Monster}} component.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_abstract_game_director_a36edfbd78ba652ea68fd4a6a05914695}\label{class_abstract_game_director_a36edfbd78ba652ea68fd4a6a05914695}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!CreatePlayerMonster@{CreatePlayerMonster}}
+\index{CreatePlayerMonster@{CreatePlayerMonster}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreatePlayerMonster()}{CreatePlayerMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_monster}{Monster}} \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Create\+Player\+Monster (\begin{DoxyParamCaption}\item[{Transform}]{selected\+Transform }\end{DoxyParamCaption})}
+
+
+
+Creates a monster based on the selected player monster type at the specified transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected\+Transform} & The transform to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created monster\textquotesingle{}s \mbox{\hyperlink{class_monster}{Monster}} component.
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_abstract_game_director_a84dc6945f8cd929a27811d488a30e554}\label{class_abstract_game_director_a84dc6945f8cd929a27811d488a30e554}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!FailGame@{FailGame}}
@@ -272,6 +366,51 @@ Ends the game and notifies \mbox{\hyperlink{class_game_manager}{Game\+Manager}} 
 {\em type\+Of\+End} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_abstract_game_director_a2cfbd70c72cfd4d3a029bf3f96ad1ad3}\label{class_abstract_game_director_a2cfbd70c72cfd4d3a029bf3f96ad1ad3}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!OnScore@{OnScore}}
+\index{OnScore@{OnScore}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OnScore()}{OnScore()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.On\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_monstralia_1_1_events_1_1_player___score___event}{Player\+\_\+\+Score\+\_\+\+Event}}}]{score\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Event bound If a script raises a Player\+\_\+\+Score\+\_\+\+Event anywhere, this function will be executed and any attributes can be accessed in the parameter object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Event} & The score event object that was raised.\\
+\hline
+\end{DoxyParams}
+~\newline
+ \mbox{\Hypertarget{class_abstract_game_director_a673462245d0f10fd1f095d521f20ac12}\label{class_abstract_game_director_a673462245d0f10fd1f095d521f20ac12}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!OutOfTime@{OutOfTime}}
+\index{OutOfTime@{OutOfTime}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OutOfTime()}{OutOfTime()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Out\+Of\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+When the timer runs out, raise an out of time event for any listeners. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_template_1_1_template_game_director_a8b398ffef1404834b6bf1a1706aad80e}{Template.\+Template\+Game\+Director}}, and \mbox{\hyperlink{class_belly_blast_1_1_belly_blast_director_ac45fa023646e6596e04c1f5624c9782a}{Belly\+Blast.\+Belly\+Blast\+Director}}.
+
+\mbox{\Hypertarget{class_abstract_game_director_ace2866651136c881a2f7bdbed333d19f}\label{class_abstract_game_director_ace2866651136c881a2f7bdbed333d19f}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!PlayVoiceover@{PlayVoiceover}}
+\index{PlayVoiceover@{PlayVoiceover}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PlayVoiceover()}{PlayVoiceover()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Play\+Voiceover (\begin{DoxyParamCaption}\item[{string}]{voiceover\+Name }\end{DoxyParamCaption})}
+
+
+
+Plays the specified voiceover from the voiceover data by matching with the string parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em voiceover\+Name} & The name of the voiceover to play.\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_abstract_game_director_af768407a9b41acf28c8be25a06b5ea95}\label{class_abstract_game_director_af768407a9b41acf28c8be25a06b5ea95}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!PregameSetup@{PregameSetup}}
 \index{PregameSetup@{PregameSetup}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
@@ -284,8 +423,38 @@ First function called in the Director scripts
 
 
 
-Implemented in \mbox{\hyperlink{class_vines_game_director_a195055c6413c4179f40227b232a7b49f}{Vines\+Game\+Director}}, \mbox{\hyperlink{class_minifarm_manager_a4e8f21dd0ba31b4fac74a1d32d4e0c1d}{Minifarm\+Manager}}, \mbox{\hyperlink{class_lake_diver_game_manager_aeacb3386e5df7d08be97576033941a35}{Lake\+Diver\+Game\+Manager}}, \mbox{\hyperlink{class_fruit_fest_manager_a46dba2f40f33db388140be029f0d83cc}{Fruit\+Fest\+Manager}}, \mbox{\hyperlink{class_firefly_game_manager_a166f912ca504dfb1e763e29d78cc20ee}{Firefly\+Game\+Manager}}, \mbox{\hyperlink{class_catch_toxins_manager_ad8c092f35d047d5c66bcf42f05ae0b0b}{Catch\+Toxins\+Manager}}, \mbox{\hyperlink{class_monster_basket_game_manager_ab6bcfa4877553e24dc4f9bc9ce4c5027}{Monster\+Basket\+Game\+Manager}}, \mbox{\hyperlink{class_monster_balance_game_manager_ab231d1d898a33c306d6ba54fce8078c2}{Monster\+Balance\+Game\+Manager}}, \mbox{\hyperlink{class_listening_game_director_a8b6e74ff563305da0ca8f61c86b7a725}{Listening\+Game\+Director}}, \mbox{\hyperlink{class_bone_bridge_manager_af126eacde3a86b9cc9ddc69fe64584ec}{Bone\+Bridge\+Manager}}, \mbox{\hyperlink{class_senses_game_manager_aafa34da7e325545a60afa56a9ef84859}{Senses\+Game\+Manager}}, \mbox{\hyperlink{class_memory_match_game_manager_ac29bac957335cdd88f41bd1beebb45f9}{Memory\+Match\+Game\+Manager}}, \mbox{\hyperlink{class_emotions_game_manager_af402176c9509d3e970923bb9c817f3c4}{Emotions\+Game\+Manager}}, \mbox{\hyperlink{class_b_maze_manager_ac47247843ca624d58aff7e24c17c8eda}{BMaze\+Manager}}, and \mbox{\hyperlink{class_brainbow_game_manager_affdb5f5b6f1434ed130e1436d5b67b17}{Brainbow\+Game\+Manager}}.
+Implemented in \mbox{\hyperlink{class_template_1_1_template_game_director_ae3ae8f8fcc128deee9c61f18c99e0f7d}{Template.\+Template\+Game\+Director}}, \mbox{\hyperlink{class_vines_game_director_a195055c6413c4179f40227b232a7b49f}{Vines\+Game\+Director}}, \mbox{\hyperlink{class_minifarm_manager_a4e8f21dd0ba31b4fac74a1d32d4e0c1d}{Minifarm\+Manager}}, \mbox{\hyperlink{class_lake_diver_game_manager_aeacb3386e5df7d08be97576033941a35}{Lake\+Diver\+Game\+Manager}}, \mbox{\hyperlink{class_fruit_fest_manager_a46dba2f40f33db388140be029f0d83cc}{Fruit\+Fest\+Manager}}, \mbox{\hyperlink{class_firefly_game_manager_a166f912ca504dfb1e763e29d78cc20ee}{Firefly\+Game\+Manager}}, \mbox{\hyperlink{class_catch_toxins_manager_ad8c092f35d047d5c66bcf42f05ae0b0b}{Catch\+Toxins\+Manager}}, \mbox{\hyperlink{class_seashell_seasaw_director_ac92aaf1639610019e3fd0ecba99ed20d}{Seashell\+Seasaw\+Director}}, \mbox{\hyperlink{class_relay_rest_director_aa286d40ba5624d0875713865fee3cd99}{Relay\+Rest\+Director}}, \mbox{\hyperlink{class_d_j_heartthrob_1_1_d_j_heartthrob_director_a39b1788923083e76cdba4f05dab3237e}{DJHeartthrob.\+DJHeartthrob\+Director}}, \mbox{\hyperlink{class_beach_bounce_1_1_beach_bounce_director_af71043841b898e49e41b9099280956d7}{Beach\+Bounce.\+Beach\+Bounce\+Director}}, \mbox{\hyperlink{class_monster_basket_game_manager_ab6bcfa4877553e24dc4f9bc9ce4c5027}{Monster\+Basket\+Game\+Manager}}, \mbox{\hyperlink{class_monster_balance_game_manager_ab231d1d898a33c306d6ba54fce8078c2}{Monster\+Balance\+Game\+Manager}}, \mbox{\hyperlink{class_listening_game_director_a8b6e74ff563305da0ca8f61c86b7a725}{Listening\+Game\+Director}}, \mbox{\hyperlink{class_bone_bridge_manager_af126eacde3a86b9cc9ddc69fe64584ec}{Bone\+Bridge\+Manager}}, \mbox{\hyperlink{class_vocal_vines_game_manager_ad4a2f66fef78d24b6001fc7282f1b7de}{Vocal\+Vines\+Game\+Manager}}, \mbox{\hyperlink{class_monster_mouth_1_1_monster_mouth_manager_a0b99f45b63636b4d5737cc75e4948984}{Monster\+Mouth.\+Monster\+Mouth\+Manager}}, \mbox{\hyperlink{class_food_river_game_manager_script_aa828fd1d7b994b1502acf9527714f19d}{Food\+River\+Game\+Manager\+Script}}, \mbox{\hyperlink{class_belly_blast_1_1_belly_blast_director_ad52bb116e874a1f17ed788eda0e8535e}{Belly\+Blast.\+Belly\+Blast\+Director}}, \mbox{\hyperlink{class_senses_game_manager_aafa34da7e325545a60afa56a9ef84859}{Senses\+Game\+Manager}}, \mbox{\hyperlink{class_memory_match_game_manager_ac29bac957335cdd88f41bd1beebb45f9}{Memory\+Match\+Game\+Manager}}, \mbox{\hyperlink{class_emotions_game_manager_af402176c9509d3e970923bb9c817f3c4}{Emotions\+Game\+Manager}}, \mbox{\hyperlink{class_b_maze_manager_ac47247843ca624d58aff7e24c17c8eda}{BMaze\+Manager}}, and \mbox{\hyperlink{class_brainbow_game_manager_affdb5f5b6f1434ed130e1436d5b67b17}{Brainbow\+Game\+Manager}}.
 
+\mbox{\Hypertarget{class_abstract_game_director_ad44da1bb214765d12c3e0ee117d9f91e}\label{class_abstract_game_director_ad44da1bb214765d12c3e0ee117d9f91e}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!SetMonsterCreator@{SetMonsterCreator}}
+\index{SetMonsterCreator@{SetMonsterCreator}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetMonsterCreator()}{SetMonsterCreator()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Set\+Monster\+Creator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_monster_creator}{Monster\+Creator}}}]{creator }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{class_monster}{Monster}} Creator for the Game\+Director to use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em creator} & The \mbox{\hyperlink{class_monster_creator}{Monster\+Creator}} the Game\+Director should use.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abstract_game_director_a1a8e9cf077fef45922dfcf20380298ac}\label{class_abstract_game_director_a1a8e9cf077fef45922dfcf20380298ac}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!SetScoreGoal@{SetScoreGoal}}
+\index{SetScoreGoal@{SetScoreGoal}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetScoreGoal()}{SetScoreGoal()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Set\+Score\+Goal (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Setting the time limit on the clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The score goal to reach.\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_abstract_game_director_aa0cd7da08cfe07ff911370bc46400788}\label{class_abstract_game_director_aa0cd7da08cfe07ff911370bc46400788}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!SetTimeLimit@{SetTimeLimit}}
 \index{SetTimeLimit@{SetTimeLimit}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
@@ -294,7 +463,7 @@ Implemented in \mbox{\hyperlink{class_vines_game_director_a195055c6413c4179f4022
 
 
 
-
+Setting the time limit on the clock. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -305,7 +474,7 @@ Implemented in \mbox{\hyperlink{class_vines_game_director_a195055c6413c4179f4022
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!StartCountdown@{StartCountdown}}
 \index{StartCountdown@{StartCountdown}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{StartCountdown()}{StartCountdown()}}
-{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Start\+Countdown (\begin{DoxyParamCaption}\item[{Countdown.\+Countdown\+Callback}]{callback,  }\item[{float}]{wait\+Duration = {\ttfamily 0.5f} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.\mbox{\hyperlink{class_start_countdown}{Start\+Countdown}} (\begin{DoxyParamCaption}\item[{Countdown.\+Countdown\+Callback}]{callback,  }\item[{float}]{wait\+Duration = {\ttfamily 0.5f} }\end{DoxyParamCaption})}
 
 
 
@@ -318,6 +487,51 @@ Creates a countdown canvas and begins to countdown after specified wait duration
 {\em wait\+Duration} & A pause in secs before starting the countdown.\\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_abstract_game_director_a23a1e6727a8c7032276c8b2d127f10f5}\label{class_abstract_game_director_a23a1e6727a8c7032276c8b2d127f10f5}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!StartTimer@{StartTimer}}
+\index{StartTimer@{StartTimer}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{StartTimer()}{StartTimer()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Start\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the clock countdown. 
+
+\mbox{\Hypertarget{class_abstract_game_director_ab58372ce7c31d2812090a15b2dd6f110}\label{class_abstract_game_director_ab58372ce7c31d2812090a15b2dd6f110}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!StopTimer@{StopTimer}}
+\index{StopTimer@{StopTimer}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{StopTimer()}{StopTimer()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Stop\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the clock countdown. 
+
+\mbox{\Hypertarget{class_abstract_game_director_ac32017639e3b08a1514f3e7967a67616}\label{class_abstract_game_director_ac32017639e3b08a1514f3e7967a67616}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!SubtractTime@{SubtractTime}}
+\index{SubtractTime@{SubtractTime}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SubtractTime()}{SubtractTime()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Subtract\+Time (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+
+
+Take off time from the clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abstract_game_director_a9f2dfe85a4930bc5532d4b13027e44fc}\label{class_abstract_game_director_a9f2dfe85a4930bc5532d4b13027e44fc}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!UpdateScore@{UpdateScore}}
+\index{UpdateScore@{UpdateScore}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateScore()}{UpdateScore()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Update\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the score for the score gauge. 
+
 
 
 \doxysubsection{Property Documentation}
@@ -351,6 +565,16 @@ Handled by the derived game director to track whether or not the game is being a
 
 Asks \mbox{\hyperlink{class_game_manager}{Game\+Manager}} if the player needs a tutorial for the current game. 
 
+\mbox{\Hypertarget{class_abstract_game_director_ae189ad8a44a71e39e31627c44be82920}\label{class_abstract_game_director_ae189ad8a44a71e39e31627c44be82920}} 
+\index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!IsTutorialRunning@{IsTutorialRunning}}
+\index{IsTutorialRunning@{IsTutorialRunning}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsTutorialRunning}{IsTutorialRunning}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_abstract_game_director}{Abstract\+Game\+Director}}$<$ T $>$.Is\+Tutorial\+Running\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if a tutorial is running. This is for reading is\+Tutorial\+Running publicly. 
+
 \mbox{\Hypertarget{class_abstract_game_director_aeb898f964486a04e920a0c1f17bab019}\label{class_abstract_game_director_aeb898f964486a04e920a0c1f17bab019}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!Level@{Level}}
 \index{Level@{Level}!AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}}
@@ -369,7 +593,7 @@ Returns the current level the current game is on. Only returns 1, 2, or 3.
 
 
 
-Get the player\textquotesingle{}s monster created from Create\+Player\+Monster() or a monster manually set by the programmer. 
+Get the player\textquotesingle{}s monster created from \mbox{\hyperlink{class_abstract_game_director_a022ac19739cdca747f29c8fd554be8c1}{Create\+Player\+Monster()}} or a monster manually set by the programmer. 
 
 \mbox{\Hypertarget{class_abstract_game_director_a154a05b8fc65415b468761be472fd7f3}\label{class_abstract_game_director_a154a05b8fc65415b468761be472fd7f3}} 
 \index{AbstractGameDirector$<$ T $>$@{AbstractGameDirector$<$ T $>$}!TimeRemaining@{TimeRemaining}}
@@ -395,4 +619,4 @@ Contains a dictionary-\/like array of voice over clips that can be referenced by
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Scripts/\+Managers/Abstract\+Game\+Director.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Managers/Abstract\+Game\+Director.\+cs\end{DoxyCompactItemize}

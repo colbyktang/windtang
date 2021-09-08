@@ -1,5 +1,8 @@
 var class_game_save =
 [
+    [ "toDictionary", "class_game_save.html#ab7ae3f27a2edb9dae2b72332516854a3", null ],
+    [ "foodEatenDictionary", "class_game_save.html#a0fc31fad93e1b29a26bee424aefda637", null ],
+    [ "inventory", "class_game_save.html#af86239ae302e4d7f3f88feea0f43eec2", null ],
     [ "GameFlags", "class_game_save.html#a088f69a4e53f33ba13a7dc9ea3c7cf32", null ],
     [ "GameStats", "class_game_save.html#a35402d034b1bec2d87f2b2613d85e395", null ],
     [ "IsSavingPower", "class_game_save.html#a6694a04b377af9a63e4573eeaf71dff0", null ],

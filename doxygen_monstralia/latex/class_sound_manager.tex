@@ -46,7 +46,7 @@ void \mbox{\hyperlink{class_sound_manager_a093875a5055d92f0fb61d371b00361e6}{Cha
 \mbox{\Hypertarget{class_sound_manager_a22730e627e8572a15412638f88cf96fd}\label{class_sound_manager_a22730e627e8572a15412638f88cf96fd}} 
 Audio\+Source \mbox{\hyperlink{class_sound_manager_a22730e627e8572a15412638f88cf96fd}{Get\+Ambient\+Source}} ()
 \begin{DoxyCompactList}\small\item\em Return the ambient sound Audio\+Source. \end{DoxyCompactList}\item 
-Audio\+Source \mbox{\hyperlink{class_sound_manager_a4a5ba097b7261566eaed9de7807eba1a}{Play\+SFXClip}} (Audio\+Clip clip)
+Audio\+Source \mbox{\hyperlink{class_sound_manager_a35e188b95164d5d47f5624752c7c7884}{Play\+SFXClip}} (Audio\+Clip clip, float pitch=1.\+0f)
 \begin{DoxyCompactList}\small\item\em Activates a SFX Source and play a single Audio\+Clip through it. Only allows certain amount of sources. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sound_manager_ab2875c9a1c9aeb6a97a9d4ab316e87cc}\label{class_sound_manager_ab2875c9a1c9aeb6a97a9d4ab316e87cc}} 
 void {\bfseries Play\+SFXSource} (Audio\+Source source)
@@ -248,11 +248,11 @@ Change the voice over volume.
 {\em new\+Volume} & the float value of the new volume. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_sound_manager_a4a5ba097b7261566eaed9de7807eba1a}\label{class_sound_manager_a4a5ba097b7261566eaed9de7807eba1a}} 
+\mbox{\Hypertarget{class_sound_manager_a35e188b95164d5d47f5624752c7c7884}\label{class_sound_manager_a35e188b95164d5d47f5624752c7c7884}} 
 \index{SoundManager@{SoundManager}!PlaySFXClip@{PlaySFXClip}}
 \index{PlaySFXClip@{PlaySFXClip}!SoundManager@{SoundManager}}
 \doxysubsubsection{\texorpdfstring{PlaySFXClip()}{PlaySFXClip()}}
-{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+Play\+SFXClip (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Audio\+Source Sound\+Manager.\+Play\+SFXClip (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip,  }\item[{float}]{pitch = {\ttfamily 1.0f} }\end{DoxyParamCaption})}
 
 
 
@@ -343,6 +343,7 @@ The Audio\+Source for the voice-\/overs \mbox{\Hypertarget{class_sound_manager_a
 
 Audio\+Clip used to test Change\+Voice\+Over\+Volume 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Scripts/\+Managers/Sound\+Manager.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\+Managers/Sound\+Manager.\+cs\item 
+Assets/\+Scripts/\+Monstralia/\+Muscle Beach/\+DJ Heartthrob/Heart\+Throb\+Sound\+Manager.\+cs\end{DoxyCompactItemize}
