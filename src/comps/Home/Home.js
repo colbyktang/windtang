@@ -19,6 +19,8 @@ export default function Home() {
     const { token } = useToken();
     return (
         <Container className="home">
+            <Row style={{height: '64px'}}>
+            </Row>
             { 
                 token &&                     
                 <Row className="justify-content-end">
@@ -73,7 +75,8 @@ export default function Home() {
                         <Card.Text>
                             A collection of screenshots from Final Fantasy XIV Online. Taken by Windcat Kirisame.
                         </Card.Text>
-                        <Link to="/FFGallery"><Button>View <Image style={{height:'32px'}} src={button_ffxiv} rounded/></Button></Link>
+                        <Link to="/FFGallery"><Button>Gallery<Image style={{height:'32px'}} src={button_ffxiv} rounded/></Button></Link>
+                        {/* <Link to="/FFGallery2"><Button>Gallery 2 <Image style={{height:'32px'}} src={button_ffxiv} rounded/></Button></Link> */}
                     </Card.Body>
                 </Card>
             </Row>

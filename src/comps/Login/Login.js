@@ -41,6 +41,8 @@ export default function Login({setToken}) {
 
     return (
         <Container className="dashboard">
+            <Row style={{height: '64px'}}>
+            </Row>
             <Row>
                 <Col style={{ height: '75px' }}>
                     <Link to="/"><Button>Return to Home</Button></Link>
