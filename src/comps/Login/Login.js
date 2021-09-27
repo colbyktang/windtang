@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Alert, Button, Form, Container, Row, Col } from 'react-bootstrap';
 
 async function loginUser (credentials) {
-    return fetch('http://localhost:4112/api/cs/login', {
+    return fetch('https://windtang.com/api/cs/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -63,17 +63,17 @@ export default function Login({setToken}) {
                 <Form onSubmit={handleSubmit}>
                     <Row>
                         <Col style={{ height: '75px' }}>
-                            <Form.Control placeholder="Username" onChange={e => setUserName(e.target.value)}/>
+                            <Form.Control name="login-box" placeholder="Username" onChange={e => setUserName(e.target.value)}/>
                         </Col>
                     </Row>
                     <Row>
                         <Col style={{ height: '75px' }}>
-                            <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
+                            <Form.Control name="password-box" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
                         </Col>
                     </Row>
                     <Row>
                         <Col style={{ height: '75px' }}>
-                            <Button type="submit" variant="primary">Submit</Button>{' '}
+                            <Button name="submit-button" type="submit" variant="primary">Submit</Button>{' '}
                         </Col>
                     </Row>
                 </Form>

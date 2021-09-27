@@ -30,7 +30,7 @@ export default function Home() {
             {
                 !token &&
                 <Row className="justify-content-md-end">
-                    <Link to="/dashboard"><Button>Login</Button></Link>
+                    <Link to="/dashboard"><Button name="login-button">Login</Button></Link>
                 </Row>
             }
                 <Row style={{ height: '100px'}}>
@@ -49,7 +49,7 @@ export default function Home() {
 
             <Row className="cards-flex">
                 <Card className="cards" style={{ backgroundColor: 'white', width: '18rem' }}>
-                    <Card.Img className="cards-img" variant="top" src={card_github} roundedCircle/>
+                    <Card.Img className="cards-img" variant="top" src={card_github} roundedcircle/>
                     <Card.Body className="cards-body">
                         <Card.Title>Github</Card.Title>
                         <Card.Text>
@@ -59,7 +59,7 @@ export default function Home() {
                     </Card.Body>
                 </Card>
                 <Card className="cards" style={{ backgroundColor: 'white', width: '18rem' }}>
-                    <Card.Img className="cards-img" variant="top" src={card_portfolio} roundedCircle/>
+                    <Card.Img className="cards-img" variant="top" src={card_portfolio} roundedcircle/>
                     <Card.Body className="cards-body">
                         <Card.Title>Digital Media Gallery</Card.Title>
                         <Card.Text>
@@ -69,7 +69,7 @@ export default function Home() {
                     </Card.Body>
                 </Card>
                 <Card className="cards" style={{ backgroundColor: 'white', width: '18rem' }}>
-                    <Card.Img className="cards-img" variant="top" src={card_ffxiv} roundedCircle/>
+                    <Card.Img className="cards-img" variant="top" src={card_ffxiv} roundedcircle/>
                     <Card.Body className="cards-body">
                         <Card.Title>FFXIV Album</Card.Title>
                         <Card.Text>
