@@ -21,13 +21,16 @@ class S(BaseHTTPRequestHandler):
         host = "myPC"
         mydir = os.path.dirname(os.path.abspath(__file__))
         print("POST REQUEST RECEIVED FROM 7070")
-        return
         wol = WakeOnLan(host,mydir)
         conf = wol.loadConfig()
         if host == 'myPC':
             if not wol.wake(): 
                     print('Host not found. Check .ini file')
+                    self.respond_code(404, 'Host not found. Check .ini file')
             else: 
                     print('Magic packet sent')
+                    self.respond_code(200, 'Magic packet sent')
         else: 
             print("Check host variable.")
+            self.respond_code(404, 'Check host variable.')
+            
