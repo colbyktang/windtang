@@ -1,6 +1,0 @@
-<map id="GameManager" name="GameManager">
-<area shape="rect" id="node1" title=" " alt="" coords="65,229,171,256"/>
-<area shape="rect" id="node2" href="$class_singleton_persistent.html" title=" " alt="" coords="5,81,140,123"/>
-<area shape="rect" id="node3" href="$class_monster_data.html" title=" " alt="" coords="165,89,261,115"/>
-<area shape="rect" id="node4" title=" " alt="" coords="153,5,272,32"/>
-</map>

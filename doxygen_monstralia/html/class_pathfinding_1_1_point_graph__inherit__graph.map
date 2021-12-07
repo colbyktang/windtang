@@ -1,5 +1,0 @@
-<map id="Pathfinding.PointGraph" name="Pathfinding.PointGraph">
-<area shape="rect" id="node1" title="Basic point graph." alt="" coords="5,155,160,181"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_nav_graph.html" title="Base class for all graphs" alt="" coords="43,80,122,107"/>
-<area shape="rect" id="node3" href="$interface_pathfinding_1_1_i_graph_internals.html" title="Exposes internal methods for graphs. This is used to hide methods that should not be used by any user..." alt="" coords="28,5,137,32"/>
-</map>

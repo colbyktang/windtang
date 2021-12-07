@@ -1,4 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_pathfinding_1_1_n_n_constraint.html" title="Nearest node constraint. Constrains which nodes will be returned by the AstarPath...." alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_path_n_n_constraint.html" title="A special NNConstraint which can use different logic for the start node and end node in a path...." alt="" coords="220,5,415,32"/>
-</map>

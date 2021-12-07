@@ -1,5 +1,0 @@
-<map id="Pathfinding.GridNodeBase" name="Pathfinding.GridNodeBase">
-<area shape="rect" id="node1" title="Base class for GridNode and LevelGridNode" alt="" coords="5,80,180,107"/>
-<area shape="rect" id="node3" href="$class_pathfinding_1_1_grid_node.html" title="Node used for the GridGraph" alt="" coords="21,155,165,181"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_graph_node.html" title="Base class for all nodes" alt="" coords="49,5,136,32"/>
-</map>

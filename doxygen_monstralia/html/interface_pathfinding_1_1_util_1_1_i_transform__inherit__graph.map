@@ -1,4 +1,0 @@
-<map id="Pathfinding.Util.ITransform" name="Pathfinding.Util.ITransform">
-<area shape="rect" id="node1" title="Generic 3D coordinate transformation" alt="" coords="21,5,195,32"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_util_1_1_graph_transform.html" title="Defines a transformation from graph space to world space. This is essentially just a simple wrapper a..." alt="" coords="5,80,211,107"/>
-</map>

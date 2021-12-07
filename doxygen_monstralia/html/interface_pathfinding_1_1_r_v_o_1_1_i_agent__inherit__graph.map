@@ -1,4 +1,0 @@
-<map id="Pathfinding.RVO.IAgent" name="Pathfinding.RVO.IAgent">
-<area shape="rect" id="node1" title="Exposes properties of an Agent class." alt="" coords="15,5,173,32"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_r_v_o_1_1_sampled_1_1_agent.html" title="Internal agent for the RVO system. Usually you will interface with the IAgent interface instead." alt="" coords="5,80,183,121"/>
-</map>

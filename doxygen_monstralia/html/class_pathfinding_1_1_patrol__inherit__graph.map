@@ -1,7 +1,0 @@
-<map id="Pathfinding.Patrol" name="Pathfinding.Patrol">
-<area shape="rect" id="node1" title="Simple patrol behavior. This will set the destination on the agent so that it moves through the seque..." alt="" coords="176,155,300,181"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_versioned_mono_behaviour.html" title="Base class for all components in the package" alt="" coords="154,80,322,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="141,5,335,32"/>
-<area shape="rect" id="node5" href="$interface_pathfinding_1_1_i_versioned_mono_behaviour_internal.html" title="Exposes internal methods from Pathfinding.VersionedMonoBehaviour" alt="" coords="359,5,573,32"/>
-</map>

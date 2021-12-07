@@ -1,8 +1,0 @@
-<map id="StickerManager" name="StickerManager">
-<area shape="rect" id="node1" title=" " alt="" coords="95,184,208,211"/>
-<area shape="rect" id="node2" href="$class_singleton.html" title=" " alt="" coords="5,95,196,121"/>
-<area shape="rect" id="node3" href="$class_sticker_slot.html" title=" " alt="" coords="220,95,307,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="80,5,191,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="215,5,311,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="335,5,413,32"/>
-</map>

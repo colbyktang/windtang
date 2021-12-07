@@ -1,5 +1,0 @@
-<map id="TriangleNet.IO.TriangleFormat" name="TriangleNet.IO.TriangleFormat">
-<area shape="rect" id="node1" title="Implements geometry and mesh file formats of the the original Triangle code." alt="" coords="36,80,231,107"/>
-<area shape="rect" id="node2" href="$interface_triangle_net_1_1_i_o_1_1_i_geometry_format.html" title="Interface for geometry input." alt="" coords="5,5,128,32"/>
-<area shape="rect" id="node3" href="$interface_triangle_net_1_1_i_o_1_1_i_mesh_format.html" title="Interface for mesh I/O." alt="" coords="152,5,251,32"/>
-</map>

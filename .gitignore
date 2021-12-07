@@ -5,6 +5,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# config
+wol_config.ini
+
 # dependencies
 /node_modules
 /.pnp

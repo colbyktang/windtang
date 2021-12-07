@@ -1,7 +1,0 @@
-<map id="Food" name="Food">
-<area shape="rect" id="node1" title="Abstract class that all Foods inherit from; inherits from Colorable." alt="" coords="310,81,361,108"/>
-<area shape="rect" id="node3" href="$class_food_data.html" title=" " alt="" coords="200,171,279,197"/>
-<area shape="rect" id="node2" title=" " alt="" coords="280,5,391,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,81,124,108"/>
-<area shape="rect" id="node5" title=" " alt="" coords="149,81,226,108"/>
-</map>

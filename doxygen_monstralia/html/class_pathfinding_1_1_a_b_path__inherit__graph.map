@@ -1,5 +1,0 @@
-<map id="Pathfinding.ABPath" name="Pathfinding.ABPath">
-<area shape="rect" id="node1" title="Basic path, finds the shortest path from A to B." alt="" coords="5,155,140,181"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_path.html" title="Base class for all path types" alt="" coords="48,80,97,107"/>
-<area shape="rect" id="node3" title="Used for hiding internal methods of the Path class" alt="" coords="22,5,123,32"/>
-</map>

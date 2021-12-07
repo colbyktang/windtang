@@ -1,9 +1,0 @@
-<map id="ZFoodPanel" name="ZFoodPanel">
-<area shape="rect" id="node1" title=" " alt="" coords="121,275,211,301"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node3" href="$class_brainbow_food_panel.html" title=" " alt="" coords="97,171,235,197"/>
-<area shape="rect" id="node4" href="$class_brainbow_food_slot.html" title=" " alt="" coords="148,81,275,108"/>
-<area shape="rect" id="node5" title=" " alt="" coords="140,5,283,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="307,5,433,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="259,171,399,197"/>
-</map>

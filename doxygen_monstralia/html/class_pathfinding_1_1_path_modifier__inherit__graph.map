@@ -1,5 +1,0 @@
-<map id="Pathfinding.PathModifier" name="Pathfinding.PathModifier">
-<area shape="rect" id="node1" title="Base class for path modifiers which are not attached to GameObjects. See: MonoModifier" alt="" coords="17,80,180,107"/>
-<area shape="rect" id="node3" href="$class_pathfinding_1_1_start_end_modifier.html" title="Adjusts start and end points of a path." alt="" coords="5,155,192,181"/>
-<area shape="rect" id="node2" href="$interface_pathfinding_1_1_i_path_modifier.html" title="Base for all path modifiers. See: MonoModifier Modifier" alt="" coords="50,5,147,32"/>
-</map>

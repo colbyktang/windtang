@@ -1,6 +1,0 @@
-<map id="Pathfinding.VersionedMonoBehaviour" name="Pathfinding.VersionedMonoBehaviour">
-<area shape="rect" id="node1" title="Base class for all components in the package" alt="" coords="148,80,328,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="141,5,335,32"/>
-<area shape="rect" id="node4" href="$interface_pathfinding_1_1_i_versioned_mono_behaviour_internal.html" title="Exposes internal methods from Pathfinding.VersionedMonoBehaviour" alt="" coords="359,5,573,32"/>
-</map>

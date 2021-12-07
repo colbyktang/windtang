@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interface_pathfinding_1_1_util_1_1_i_movement_plane.html" title="Transforms to and from world space to a 2D movement plane. The transformation is guaranteed to be pur..." alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_util_1_1_graph_transform.html" title="Defines a transformation from graph space to world space. This is essentially just a simple wrapper a..." alt="" coords="228,42,433,69"/>
-<area shape="rect" id="node3" href="$interface_pathfinding_1_1_util_1_1_i_transform.html" title="Generic 3D coordinate transformation" alt="" coords="6,71,179,98"/>
-</map>

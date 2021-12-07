@@ -1,8 +1,0 @@
-<map id="FoodLibrary.FoodStats" name="FoodLibrary.FoodStats">
-<area shape="rect" id="node1" title=" " alt="" coords="202,184,357,211"/>
-<area shape="rect" id="node2" href="$class_food_data.html" title=" " alt="" coords="152,95,231,121"/>
-<area shape="rect" id="node5" href="$class_food.html" title="Abstract class that all Foods inherit from; inherits from Colorable." alt="" coords="79,184,130,211"/>
-<area shape="rect" id="node3" title=" " alt="" coords="71,5,189,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="214,5,291,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,95,116,121"/>
-</map>

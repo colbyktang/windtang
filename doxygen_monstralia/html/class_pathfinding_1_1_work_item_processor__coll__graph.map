@@ -1,4 +1,0 @@
-<map id="Pathfinding.WorkItemProcessor" name="Pathfinding.WorkItemProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,211,107"/>
-<area shape="rect" id="node2" href="$interface_pathfinding_1_1_i_work_item_context.html" title="Interface to expose a subset of the WorkItemProcessor functionality" alt="" coords="45,5,171,32"/>
-</map>

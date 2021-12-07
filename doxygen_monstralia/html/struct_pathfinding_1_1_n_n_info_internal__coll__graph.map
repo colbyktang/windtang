@@ -1,6 +1,0 @@
-<map id="Pathfinding.NNInfoInternal" name="Pathfinding.NNInfoInternal">
-<area shape="rect" id="node1" title="Internal result of a nearest node query. See: NNInfo" alt="" coords="5,289,176,316"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_graph_node.html" title="Base class for all nodes" alt="" coords="13,185,168,212"/>
-<area shape="rect" id="node3" href="$struct_pathfinding_1_1_int3.html" title="Holds a coordinate in integers" alt="" coords="35,96,146,123"/>
-<area shape="rect" id="node4" title=" " alt="" coords="23,5,159,47"/>
-</map>

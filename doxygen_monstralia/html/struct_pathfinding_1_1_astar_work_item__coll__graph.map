@@ -1,4 +1,0 @@
-<map id="Pathfinding.AstarWorkItem" name="Pathfinding.AstarWorkItem">
-<area shape="rect" id="node1" title="An item of work that can be executed when graphs are safe to update. See: AstarPath...." alt="" coords="5,139,183,165"/>
-<area shape="rect" id="node2" title=" " alt="" coords="61,5,127,32"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="EndScreen" name="EndScreen">
-<area shape="rect" id="node1" title="Handles the screen that pops up at the end of any game." alt="" coords="17,80,104,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,32"/>
-</map>

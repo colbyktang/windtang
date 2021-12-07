@@ -1,7 +1,0 @@
-<map id="PopupPage" name="PopupPage">
-<area shape="rect" id="node1" title=" " alt="" coords="129,80,218,107"/>
-<area shape="rect" id="node3" href="$class_monster_page.html" title=" " alt="" coords="5,155,104,181"/>
-<area shape="rect" id="node4" href="$class_parent_page.html" title=" " alt="" coords="128,155,219,181"/>
-<area shape="rect" id="node5" href="$class_settings_panel.html" title=" " alt="" coords="243,155,346,181"/>
-<area shape="rect" id="node2" href="$class_singleton.html" title=" " alt="" coords="90,5,257,32"/>
-</map>

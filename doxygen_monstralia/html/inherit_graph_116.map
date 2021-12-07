@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_pathfinding_1_1_graph_node.html" title="Base class for all nodes" alt="" coords="5,56,160,83"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_grid_node_base.html" title="Base class for GridNode and LevelGridNode" alt="" coords="208,5,383,32"/>
-<area shape="rect" id="node4" href="$class_pathfinding_1_1_mesh_node.html" title=" " alt="" coords="219,56,371,83"/>
-<area shape="rect" id="node6" href="$class_pathfinding_1_1_point_node.html" title="Node used for the PointGraph. This is just a simple point with a list of connections (and associated ..." alt="" coords="220,107,371,133"/>
-<area shape="rect" id="node3" href="$class_pathfinding_1_1_grid_node.html" title="Node used for the GridGraph" alt="" coords="457,5,601,32"/>
-<area shape="rect" id="node5" href="$class_pathfinding_1_1_triangle_mesh_node.html" title="Node represented by a triangle" alt="" coords="431,56,628,83"/>
-<area shape="rect" id="node7" href="$class_pathfinding_1_1_node_link3_node.html" title=" " alt="" coords="439,107,620,133"/>
-</map>

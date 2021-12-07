@@ -1,5 +1,0 @@
-<map id="Pathfinding.GridGraphEditor" name="Pathfinding.GridGraphEditor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,188,181"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_graph_editor.html" title=" " alt="" coords="51,80,142,107"/>
-<area shape="rect" id="node3" href="$class_pathfinding_1_1_graph_editor_base.html" title="Defined here only so non&#45;editor classes can use the target field" alt="" coords="36,5,157,32"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Pathfinding.Util.IAstarPooledObject" name="Pathfinding.Util.IAstarPooledObject">
-<area shape="rect" id="node1" title=" " alt="" coords="5,57,192,98"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_b_b_tree.html" title="Axis Aligned Bounding Box Tree. Holds a bounding box tree of triangles." alt="" coords="267,5,400,32"/>
-<area shape="rect" id="node3" href="$class_pathfinding_1_1_util_1_1_graph_gizmo_helper.html" title=" " alt="" coords="240,57,427,98"/>
-<area shape="rect" id="node4" href="$class_pathfinding_1_1_util_1_1_retained_gizmos_1_1_builder.html" title="Helper for drawing gizmos" alt="" coords="251,122,415,163"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Pathfinding.NodeLink3Node" name="Pathfinding.NodeLink3Node">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,187,181"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_point_node.html" title="Node used for the PointGraph. This is just a simple point with a list of connections (and associated ..." alt="" coords="55,80,137,107"/>
-<area shape="rect" id="node3" href="$class_pathfinding_1_1_graph_node.html" title="Base class for all nodes" alt="" coords="53,5,139,32"/>
-</map>

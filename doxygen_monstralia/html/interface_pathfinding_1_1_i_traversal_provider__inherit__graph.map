@@ -1,4 +1,0 @@
-<map id="Pathfinding.ITraversalProvider" name="Pathfinding.ITraversalProvider">
-<area shape="rect" id="node1" title="Provides additional traversal information to a path request. See: turnbased (view in online documenta..." alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_block_manager_1_1_traversal_provider.html" title="Blocks nodes according to a BlockManager" alt="" coords="12,80,189,121"/>
-</map>

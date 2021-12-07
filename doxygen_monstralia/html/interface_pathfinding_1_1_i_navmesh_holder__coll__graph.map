@@ -1,5 +1,0 @@
-<map id="Pathfinding.INavmeshHolder" name="Pathfinding.INavmeshHolder">
-<area shape="rect" id="node1" title="Interface for something that holds a triangle based navmesh" alt="" coords="43,80,226,107"/>
-<area shape="rect" id="node2" href="$interface_pathfinding_1_1_i_transformed_graph.html" title="Graph which has a well defined transformation from graph space to world space" alt="" coords="5,5,136,32"/>
-<area shape="rect" id="node3" href="$interface_pathfinding_1_1_i_navmesh.html" title=" " alt="" coords="161,5,239,32"/>
-</map>

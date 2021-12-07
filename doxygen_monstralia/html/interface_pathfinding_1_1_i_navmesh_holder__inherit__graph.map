@@ -1,8 +1,0 @@
-<map id="Pathfinding.INavmeshHolder" name="Pathfinding.INavmeshHolder">
-<area shape="rect" id="node1" title="Interface for something that holds a triangle based navmesh" alt="" coords="99,80,282,107"/>
-<area shape="rect" id="node4" href="$class_pathfinding_1_1_navmesh_base.html" title="Base class for RecastGraph and NavMeshGraph" alt="" coords="8,155,181,181"/>
-<area shape="rect" id="node6" href="$class_pathfinding_1_1_navmesh_tile.html" title=" " alt="" coords="205,155,368,181"/>
-<area shape="rect" id="node2" href="$interface_pathfinding_1_1_i_transformed_graph.html" title="Graph which has a well defined transformation from graph space to world space" alt="" coords="61,5,192,32"/>
-<area shape="rect" id="node3" href="$interface_pathfinding_1_1_i_navmesh.html" title=" " alt="" coords="217,5,295,32"/>
-<area shape="rect" id="node5" href="$class_pathfinding_1_1_nav_mesh_graph.html" title="Generates graphs based on navmeshes." alt="" coords="5,229,184,256"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="Pathfinding.Serialization.AstarSerializer" name="Pathfinding.Serialization.AstarSerializer">
-<area shape="rect" id="node1" title="Handles low level serialization and deserialization of graph settings and data. Mostly for internal u..." alt="" coords="5,124,171,165"/>
-<area shape="rect" id="node2" title=" " alt="" coords="61,5,115,32"/>
-</map>

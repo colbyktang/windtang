@@ -1,4 +1,0 @@
-<map id="Pathfinding.BBTree" name="Pathfinding.BBTree">
-<area shape="rect" id="node1" title="Axis Aligned Bounding Box Tree. Holds a bounding box tree of triangles." alt="" coords="6,80,139,107"/>
-<area shape="rect" id="node2" href="$interface_pathfinding_1_1_util_1_1_i_astar_pooled_object.html" title=" " alt="" coords="5,5,140,32"/>
-</map>

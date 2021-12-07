@@ -1,4 +1,0 @@
-<map id="Pathfinding.PathProcessor" name="Pathfinding.PathProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,109,181,136"/>
-<area shape="rect" id="node2" href="$class_pathfinding_1_1_thread_control_queue.html" title="Queue of paths to be processed by the system" alt="" coords="8,5,179,47"/>
-</map>

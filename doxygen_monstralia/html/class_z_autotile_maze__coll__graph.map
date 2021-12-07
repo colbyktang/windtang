@@ -1,8 +1,0 @@
-<map id="ZAutotileMaze" name="ZAutotileMaze">
-<area shape="rect" id="node1" title=" " alt="" coords="263,185,368,212"/>
-<area shape="rect" id="node2" title=" " alt="" coords="209,5,320,32"/>
-<area shape="rect" id="node3" href="$class_maze_cell.html" title=" " alt="" coords="93,95,169,121"/>
-<area shape="rect" id="node5" href="$class_maze_cell_edge.html" title=" " alt="" coords="131,185,238,212"/>
-<area shape="rect" id="node4" href="$class_maze_passage.html" title=" " alt="" coords="5,263,111,289"/>
-<area shape="rect" id="node6" href="$struct_int_vector2.html" title=" " alt="" coords="91,5,172,32"/>
-</map>
