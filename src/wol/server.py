@@ -34,3 +34,10 @@ class S(BaseHTTPRequestHandler):
             print("Check host variable.")
             self.respond_code(404, 'Check host variable.')
             
+    def respond_code (self, code, response):
+        self.send_response(code)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+        bytesStr = response.encode('utf-8')
+        self.wfile.write(bytesStr)
+            
