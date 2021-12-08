@@ -1,0 +1,3 @@
+[submodule "monstralia_documentation"]
+	path = monstralia_documentation
+	url = https://github.com/colbyktang/monstralia_documentation.git
