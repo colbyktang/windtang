@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from wol import WakeOnLan
 import os
 import logging
-from wol_database_utils import create_wol_log
+from wol_database_utils import WOL_Database_Utils
 
 class S(BaseHTTPRequestHandler):
     def _set_response(self):
@@ -24,19 +24,20 @@ class S(BaseHTTPRequestHandler):
         print("POST REQUEST RECEIVED FROM 7070")
         wol = WakeOnLan(host,mydir)
         conf = wol.loadConfig()
+        wol_log = WOL_Database_Utils()
         if host == 'myPC':
             if not wol.wake(): 
                     print('Host not found. Check .ini file')
-                    create_wol_log ("Host not found")
+                    wol_log.create_wol_log ("Host not found")
                     self.respond_code(404, 'Host not found. Check .ini file')
                     
             else: 
                     print('Magic packet sent')
-                    create_wol_log ("Sent signal")
+                    wol_log.create_wol_log ("Sent signal")
                     self.respond_code(200, 'Magic packet sent')
         else: 
             print("Check host variable.")
-            create_wol_log ("Host variable not found")
+            wol_log.create_wol_log ("Host variable not found")
             self.respond_code(404, 'Check host variable.')
             
     def respond_code (self, code, response):
